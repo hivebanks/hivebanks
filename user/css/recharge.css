@@ -1,0 +1,128 @@
+.legal{
+    display: none;
+}
+.digital-btn,.legal-btn{
+    width: 100%;
+    line-height: 2.5rem;
+}
+
+.more-recharge.active{
+    display: block!important;
+}
+.digital-inner-box>.more-recharge{
+    display: none;
+}
+.digital-inner-box li {
+    position: relative;
+    display: inline-block;
+    margin:0.3rem;
+    width: 12rem;
+    height: 12rem;
+    border: 1px solid #eeeeee;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.digital-inner-box li>p{
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+}
+.digital-inner-box li>p>i{
+    font-size: 2rem;
+}
+.tab-btn.digital li>span {
+    color: #82ca9c;
+    position: absolute;
+    left: 3rem;
+    font-size: 20px;
+    top: 0.5rem;
+}
+.digital-inner-box li>.mask{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    opacity: 0;
+    background: rgba(0, 173, 62, 0.3);
+    transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transition: .5s;
+    padding-top: 25%;
+}
+.digital-inner-box li:hover{
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+.digital-inner-box li:hover>.mask{
+    opacity: 0.9;
+    transform: translateY(44%);
+    -moz-transform: translateY(44%);
+    -webkit-transform: translateY(44%);
+    -ms-transform: translateY(44%);
+}
+.digital-inner-box li>.mask>p{
+    width: 100%;
+    line-height: 2;
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.digital{
+    position: relative;
+}
+
+.note{
+    padding: 15px 10px;
+}
+.t_title{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.t_text{
+    font-size: 12px;
+    line-height: 2;
+}
+/*l------------------------*/
+/*.legal .pay-img-row{*/
+    /*padding: 1rem 0;*/
+/*}*/
+/*.legal .pay-img-box{*/
+    /*width: 100%;*/
+    /*padding: 0.6rem;*/
+/*}*/
+/*.legal .pay-img-box:hover{*/
+    /*border: 0.1px solid #82ca9c;*/
+    /*transform: scale(1.05);*/
+/*}*/
+/*.legal .pay-img-box img{*/
+    /*width: 100%;*/
+/*}*/
+/*.legal .legal-more-recharge{*/
+    /*display: none;*/
+/*}*/
+/*.legal .legal-more-recharge.active{*/
+    /*display: block!important;*/
+/*}*/
+
+/*.legal .limit{*/
+    /*color:red;*/
+/*}*/
+.btn-danger{
+    margin-left: 1rem;
+}
+.caRechargeCodeRow{
+    display: none;
+}
+.table td, .table th{
+    font-size: 12px;
+}
+/*td.hash_td {
+    background: gold;
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}*/

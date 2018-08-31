@@ -1,0 +1,47 @@
+.hint li{
+    height: 35px;
+    line-height: 35px;
+}
+
+.hint_text{
+    line-height: 2;
+    padding: 1rem;
+    font-size: 12px;
+}
+
+.imgBox:hover img{
+    /*border: 0.1px solid #82ca9c;*/
+    cursor: pointer;
+    -webkit-animation: scale 0.5s linear forwards;
+    -o-animation: scale 0.5s linear forwards;
+    animation: scale 0.5s linear forwards;
+}
+@keyframes scale {
+    0%{}
+    100%{
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+.rechargeTitle{
+    width: 16%;
+}
+.imgBox {
+    padding: 2% 2%;
+}
+.bankItem{
+    position: relative;
+    height: 5rem;
+}
+.rechargeRateText{
+    position: absolute;
+    /* background: rgba(0, 173, 62, 0.3); */
+    width: 100%;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    font-weight: 400;
+}

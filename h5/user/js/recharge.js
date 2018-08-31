@@ -1,0 +1,158 @@
+$(function () {
+    //获取token
+    var token = GetCookie('user_token');
+    GetUsAccount();
+
+    //获取base_type
+    var base_type = GetCookie('benchmark_type');
+
+    // 切换数字货币与法定货币
+    $(".digital-btn").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".digital").fadeIn();
+        $(".legal").fadeOut();
+        $('.baRechargeCodeRow').fadeIn();
+        $('.caRechargeCodeRow').fadeOut();
+    });
+    $(".legal-btn").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".digital").fadeOut();
+        $(".legal").fadeIn();
+        $('.baRechargeCodeRow').fadeOut();
+        $('.caRechargeCodeRow').fadeIn();
+    });
+    //Ba获取充值列表
+    var api_url = 'us_get_recharge_ba_list.php';
+    GetBaRateList(api_url, token, function (response){
+        if(response.errcode == '0'){
+            var data =response.rows, li = '';
+            if(data == false){
+                $('.bitAgentTitle').attr('name', 'noDigitalCurrencyAgent');
+                execI18n();
+                return;
+            }
+
+            $.each(data, function (i, val) {
+                li+='<li>' +
+                    '<p><i class="iconfont icon-'+ data[i].bit_type.toUpperCase() +'"></i></p>' +
+                    '<span>'+ data[i].bit_type +'</span>' +
+                    '<div class="mask">' +
+                    '<p class="parities">1' +
+                    '<span class="base_type">'+ base_type +'</span>=' +
+                    '<span class="base_rate">'+ data[i].base_rate +'</span>' +
+                    '<span class="bit_type">'+ data[i].bit_type +'</span>' +
+                    '</p>' +
+                    '</div>'+
+                    '</li>';
+            });
+            $('#baRechargeList').html(li);
+        }
+    }, function (response){
+        GetErrorCode(response.errcode);
+        return;
+    });
+
+//    点击选择充值
+    $(document).on('click','.digital-inner-box li', function () {
+        var val = $(this).children("span").text().trim();
+            SetCookie('re_bit_type',val);
+            window.location.href = "../ba/BaRecharge.html";
+    });
+
+
+    //CA充值获取平均汇率
+    var recharge_rate = '', api_url = 'average_ca_recharge_rate.php';
+    GetAverageRate(api_url, token, function (response){
+        if(response.errcode == '0'){
+            if(response.recharge_rate == '0'){
+                $('.currentRechargeRateBox, .legalRechargeBox').remove();
+                $('.legalTitle').attr('name', 'noLegalCurrencyAgent');
+                execI18n();
+                return;
+            }
+            $('.recharge_rate').text(response.recharge_rate);
+            recharge_rate = (response.recharge_rate);
+            $('.bit_amount').val(response.recharge_rate);
+        }
+    }, function (response){
+        GetErrorCode(response.errcode);
+    });
+
+    //输入充值金额绑定输入框
+    $('.bit_amount').bind('input porpertychange', function () {
+        $('.base_amount').val($(this).val() / recharge_rate);
+        $('.payRechargeAmount').text($(this).val());
+    });
+    $('.base_amount').bind('input porpertychange', function () {
+        $('.bit_amount').val($(this).val() * recharge_rate);
+        $('.payRechargeAmount').text($('.bit_amount').val());
+    });
+
+    //ca充值下一步操作
+    $('.enableAmount').click(function (){
+       if($('.bit_amount').val().length <= 0){
+           LayerFun('rechargeAmountNotEmpty');
+           return
+       }
+       var base_amount = $('.base_amount').val();
+       var us_recharge_bit_amount = $('.bit_amount').val();
+       window.location.href = '../ca/CaRecharge.html?base_amount=' + base_amount + '&us_recharge_bit_amount=' + us_recharge_bit_amount;
+    });
+
+
+
+    // BA充值记录
+        var limit = 10, offset = 0,
+        ba_api_url = 'log_ba_recharge.php';
+    AllRecord(token, limit, offset, ba_api_url, function (response) {
+        if (response.errcode == '0') {
+            var data = response.rows, tr = '';
+            if(data == false){
+                GetDataEmpty('baRechargeCodeTable', '4');
+                return;
+            }
+            $.each(data, function (i, val) {
+                tr+='<tr>' +
+                    '<td><span>'+ data[i].tx_hash +'</span></td>' +
+                    '<td><span>'+ data[i].asset_id +'</span></td>' +
+                    '<td><span>'+ data[i].base_amount +'</span></td>' +
+                    '<td><span>'+ data[i].tx_time +'</span></td>' +
+                    '</tr>'
+            });
+        }
+    }, function (response) {
+        GetDataFail('baRechargeCodeTable', '4');
+        if(response.errcode == '114'){
+            window.location.href = 'login.html';
+        }
+    });
+    // CA充值记录
+    var ca_api_url = 'log_ca_recharge.php',
+        ca_tx_hash_arr = [];
+    AllRecord(token, limit, offset, ca_api_url, function (response) {
+        if (response.errcode == '0') {
+            var data = response.rows, tr = '';
+            if(data == false){
+                GetDataEmpty('caRechargeCodeTable', '4');
+                return;
+            }
+            $.each(data,function (i,val){
+                ca_tx_hash_arr.push(data[i].tx_hash.substr(0,20)+'...');
+                tr += '<tr>'+
+                    '<td title='+ data[i].tx_hash +'>'+ data[i].tx_hash +'</td>'+
+                    '<td>'+data[i].lgl_amount+'</td>'+
+                    '<td>'+data[i].base_amount+'</td>'+
+                    '<td>'+data[i].tx_time+'</td></tr>';
+            });
+           $('#caRechargeCodeTable').html(tr);
+        }
+    }, function (response) {
+        if(response.errcode == '114'){
+            window.location.href = 'login.html';
+        }
+        GetDataEmpty('caRechargeCodeTable', '4');
+        return;
+
+    });
+
+});

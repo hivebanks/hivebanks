@@ -1,0 +1,28 @@
+.title-row h3{
+    margin-bottom: 0;
+}
+.title-next-row{
+    border-top: 1px solid #eeeeee;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+.account-wrap li{
+    line-height: 2.5rem;
+}
+.account-wrap li>span:first-child{
+    display: inline-block;
+    width:30%;
+}
+.account-wrap li>.rechargeAmount{
+    width: 42%!important;
+}
+.lv{
+    font-weight: 500;
+}
+.setRecharge, .setWithdraw, .rechargeRate, .withdrawRate{
+    display: none;
+}
+.accountTable tr{
+    line-height: 3;
+
+}

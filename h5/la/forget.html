@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HiveBanks</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+
+    <!-- Custom Styles-->
+    <link href="assets/css/common.css" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+<section>
+    <div class="container">
+        <div class="row padding-top-5 align-center">
+            <div class="col-md-12 col-sm-12">
+                <h1>HiveBanks Backend Forget</h1>
+            </div>
+        </div>
+        <!--form-->
+        <div class="row margin-top-5">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+                <form class="padding-5 align-center">
+                <div class="input-field">
+                    <input id="email" type="email" class="color-white" autocomplete="off">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field margin-top-5">
+                    <input id="userName" type="text" class="" autocomplete="off">
+                    <label for="userName">User</label>
+                </div>
+                <a href="javascript:;" class="waves-effect waves-light btn forgetPassBtn width-50 margin-top-5">Confirm Reset</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Small modal -->
+<div id="forgetSuccess" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+     data-backdrop="false" data-keyboard="false">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="pcTitle i18n" name="goEmailVerify">修改成功，新密码以发送至邮箱</h3>
+                <h5 class="phoneTitle i18n" name="goEmailVerify">修改成功，新密码以发送至邮箱</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success i18n" name="cancel"
+                        data-dismiss="modal">取消
+                </button>
+                <button type="button" class="btn btn-primary goEmailBtn i18n" name="goTo">
+                    前往邮箱
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--loading-->
+<div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/materialize/js/materialize.min.js"></script>
+<script src="assets/js/layer/layer.js"></script>
+<!--language-->
+<script src="assets/language/jquery.i18n.properties.js"></script>
+<script src="assets/language/language.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/sha.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/forget.js"></script>
+</body>
+
+</html>

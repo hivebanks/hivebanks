@@ -1,0 +1,35 @@
+body,html{
+    background-image: linear-gradient(to bottom, #020e28 0%, #07234e 10%, #020e28 100%);
+}
+.navbar-default,.footer{
+    background: transparent;
+}
+.navbar-default{
+    border-bottom: 0.1px solid #4cc2e41c;;
+}
+
+/*===*/
+
+.login-wrap .input-box>input{
+    width: 100%;
+    background: transparent;
+    color: #ffffff;
+    border: unset;
+    border-bottom: 0.1px solid #4cc2e4;
+    opacity: 0.5;
+}
+.login-wrap .btn-box>a:hover{
+    background: #4cc2e4;
+}
+
+.tips-box a:hover{
+    color: #4CC2E4;
+    text-decoration: none;
+}
+.form-box {
+    padding: 5% 0%;
+}
+.input_tips{
+    white-space: unset;
+    line-height: 1.5;
+}

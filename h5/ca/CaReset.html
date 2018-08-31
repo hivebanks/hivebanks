@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title class="i18n" name="reset">Reset</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/intlTelInput.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)" href="mobile-css/common.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)" href="mobile-css/CaReset.css">
+    <link rel="stylesheet" href="css/CaReset.css">
+</head>
+<body>
+<!-- loading -->
+<iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+        scrolling="no"></iframe>
+<!--导航-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">LOGO</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="CaLogin.html" class="i18n" name="login">Login</a></li>
+                <li class="active"><a href="CaRegister.html" class="i18n" name="register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--修改密码表单-->
+<section class="sections" id="content">
+    <div class="container">
+        <div class="row sec-row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+                <div class="form-box">
+                    <div class="form-header fadeInLeft">
+                        <span class="f24 i18n" name="noAccount">User&nbsp;Have no account? &nbsp;</span><a href="CaRegister.html" class="c-login i18n" name="createNow">Create one now!</a>
+                    </div>
+                    <div class="resetToggleBox">
+                        <ul class="flex center space-around">
+                            <li class="active resetToggle emailReset">
+                                <i class="iconfont icon-youxiang"></i>
+                                <span class="emailResetTitle i18n" name="emailResetTitle">Reset(Email)</span></li>
+                            <li class="resetToggle phoneReset">
+                                <i class="iconfont icon-shouji"></i>
+                                <span class="phoneResetTitle i18n" name="phoneResetTitle">Reset(Phone)</span></li>
+                        </ul>
+                    </div>
+                    <!-- email reset -->
+                    <div class="emailResetBox form-inner-content fadeInRight">
+                        <ul class="mess-ul">
+                            <li>
+                                <input type="email" class="form-control email i18n-input" name="email" value="" selectname="emailInput" selectattr="placeholder">
+                                <span class='ty-color input_tips email_tips i18n' name="emailNotEmpty">* 邮箱不能为空</span>
+                                <span class='ty-color input_tips emailErrorTips i18n' name="emailBad">* 邮箱格式错误</span>
+                                <span class='ty-color input_tips noEmailTips i18n' name="userNotExist">* 用户不存在</span>
+                            </li>
+                            <li class="flex">
+                                <input type="text" class="form-control emailcfmCode i18n-input" name="emailcfmCode" value="" selectname="cfmCodeInput" selectattr="placeholder">
+                                <span class='ty-color input_tips emailCode_tips i18n' name="codeNotEmpty">* 验证码不能为空</span>
+                                <button class="btn btn-success btn-sm emailCodeBtn i18n" name="getCode">Get Code</button>
+                            </li>
+                            <li>
+                                <input type="password" class="form-control emailPassword i18n-input" name="emailPassword" value="" selectname="newPasswordInput" selectattr="placeholder">
+                                <span class='ty-color input_tips password_tips i18n' name="passwordNotEmpty">* 密码不能为空</span>
+                                <span class='ty-color input_tips errEmailPass_tips i18n' name="PasswordStructure">* 8-16位 由字母(区分大小写),数字，符号组成</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:;" class="btn btn-lg btn-success register emailResetBtn login i18n" name="reset">Reset</a>
+                    </div>
+                    <!-- phone reset -->
+                    <div class="phoneResetBox form-inner-content fadeInRight">
+                        <ul class="mess-ul">
+                            <li>
+                                <input type="tel" class="form-control phone" name="phone" id="phone" value="" selectname="phoneInput" selectattr="placeholder">
+                                <span class='ty-color input_tips phone_tips i18n' name="accountNotEmpty">* 账号不能为空</span>
+                                <span class='ty-color input_tips phoneErrorTips i18n' name="phoneBad">* 手机格式错误</span>
+                                <span class='ty-color input_tips noPhonelTips i18n' name="userNotExist">* 用户不存在</span>
+                            </li>
+                            <!--图形验证码-->
+                            <li class="flex">
+                                <input type="text" class="form-control i18n-input phoneCfmCode" name="cfmCode" value=""
+                                       selectname="cfmCodeInput" selectattr="placeholder">
+                                <img src="" id="phone_imgCode" alt="">
+                                <span class='ty-color input_tips phoneImgCode_tips i18n'
+                                      name="codeNotEmpty">* 验证码不能为空</span>
+                                <span class='ty-color input_tips errPhoneImgCode_tips i18n'
+                                      name="codeBad">* 图形验证码错误,请重新输入</span>
+                            </li>
+                            <li class="flex">
+                                <input type="text" class="form-control i18n-input phoneSmsCode" name="cfmCode" value="" selectname="cfmCodeInput" selectattr="placeholder">
+                                <span class='ty-color input_tips phoneCode_tips i18n' name="codeNotEmpty">* 验证码不能为空</span>
+                                <button class="btn btn-success btn-sm phoneCodeBtn"><span class="sixty"></span>&nbsp;&nbsp;
+                                    <span class="getCodeText i18n" name="getCode">Get Code</span>
+                                </button>
+                            </li>
+                            <li>
+                                <input type="password" class="form-control i18n-input phonePassword" name="phonePassword" value="" selectname="newPasswordInput" selectattr="placeholder">
+                                <span class='ty-color input_tips Phonepassword_tips i18n' name="passwordNotEmpty">* 密码不能为空</span>
+                                <span class='ty-color input_tips errPhonePass_tips i18n' name="PasswordStructure">* 8-16位 由字母(区分大小写),数字，符号组成</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:;" class="btn btn-lg btn-success register phoneResetBtn login i18n" name="reset">Reset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--页脚-->
+<section class="sections footer">
+    <div class="container">
+
+        <div class="row left-row">
+            <div class="col-md-7 col-sm-12">
+                <div class="footerTL">
+                    <ul class="flex center">
+                        <li><a href="/" class="i18n" name="introduction">Introduction</a></li>
+                        <li><a href="/" class="i18n" name="cashAgency">Cash Agency</a></li>
+                        <li><a href="/" class="i18n" name="bitcoinAgency">Bitcoin Agency</a></li>
+                        <li><a href="/" class="i18n" name="news">News</a></li>
+                        <li><a href="/" class="i18n" name="partners">Partners</a></li>
+                        <li><a href="/" class="i18n" name="about">About</a></li>
+                        <li><a href="/" class="i18n" name="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="footerTR flex space-between center">
+                    <i class="iconfont icon-twitter"></i>
+                    <i class="iconfont icon-facebook"></i>
+                    <i class="iconfont icon-reddit"></i>
+                    <i class="iconfont icon-telegram"></i>
+                    <i class="iconfont icon-instagram"></i>
+                    <i class="iconfont icon-medium"></i>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <p class="i18n" name="allRightsReserved">©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="language/jquery.i18n.properties.js"></script>
+<script src="language/language.js"></script>
+<script src="../assets/js/intlTelInput.js"></script>
+<script src="../assets/js/sha.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/common.js"></script>
+<script src="js/CaReset.js"></script>
+<script type="text/javascript">
+    $("#phone").intlTelInput({
+        separateDialCode: true,
+    });
+</script>
+</body>
+</html>

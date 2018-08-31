@@ -1,0 +1,61 @@
+.title-row h3{
+    margin-bottom: 0;
+}
+.title-next-row{
+    border-top: 1px solid #eeeeee;
+    margin-top: 1rem;
+    padding: 2% 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.addImgHtml{
+    width: 20%;
+}
+.account-wrap li{
+    line-height: 3rem;
+}
+.account-wrap li>span:first-child{
+    display: inline-block;
+    width:30%;
+}
+/*.account-wrap li>.rechargeAmount{*/
+    /*width: 43%!important;*/
+/*}*/
+.newAddHtml img{
+    width: 15%;
+    padding: 0.5rem;
+}
+/*layer--------------*/
+.changePay li{
+    position: relative;
+    width: 33%;
+    display: inline-block;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+.changePay li.active{
+    border:0.1px solid red;
+}
+.changePay li.active>span{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background: green;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+}
+
+.layui-layer .table-responsive{
+    display: none;
+    width: 100%;
+}
+.layui-layer table>tbody>tr>td{
+    border-top: 0 solid #ffffff!important;
+}
+.font-size-14{
+    font-size: 14px;
+}

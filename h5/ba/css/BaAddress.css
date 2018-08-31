@@ -1,0 +1,94 @@
+.address-box li {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    list-style: none;
+}
+
+.address-box:not(.address1) {
+    display: none;
+}
+
+.address-box li > span:first-child {
+    margin-right: 10%;
+}
+
+.used {
+    color: red;
+    margin-right: 10%;
+}
+
+.unused {
+    color: green;
+}
+
+.address-box table {
+    width: 100%;
+}
+
+.addAddressInputBox {
+    display: none;
+}
+
+.addressInput {
+    width: 50%;
+    resize: none;
+}
+
+/*分页按钮*/
+/*nav[aria-label="Page navigation"] {
+    display: flex;
+    align-items: center;
+}*/
+nav[aria-label="Page navigation"] > button, nav[aria-label="Page navigation"] > .total {
+    margin-right: 1%;
+}
+
+/*import-btn*/
+/*.file {*/
+    /*height: auto;*/
+    /*position: relative;*/
+/*}*/
+
+
+/*.file:hover {*/
+    /*!*background: #AADFFD;*!*/
+    /*!*border-color: #78C3F3;*!*/
+    /*!*color: #004974;*!*/
+    /*cursor: pointer;*/
+    /*text-decoration: none;*/
+/*}*/
+
+.pagination li {
+    margin-left: 5px;
+}
+
+.list.active {
+    background: #82ca9c;
+    color: #ffffff;
+}
+
+/*File input*/
+#fileBtn{
+    position: relative;
+    cursor: pointer;
+}
+#file{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+input[type='file'] {
+    float: unset !important;
+    margin: unset !important;
+    line-height: unset !important;
+    text-align: unset !important;
+    background: unset !important;
+    border: unset !important;
+    outline: unset !important;
+    color: unset !important;
+    font-size: 14px;
+}

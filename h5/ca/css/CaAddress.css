@@ -1,0 +1,36 @@
+.address-box li{
+    height: 2.5rem;
+    line-height:2.5rem;
+    list-style: none;
+}
+.address-box:not(.address1){
+    display: none;
+}
+.address-box li>span:first-child{
+    margin-right: 10%;
+}
+.used{
+    color:red;
+    margin-right: 10%;
+}
+.unused{
+    color: green;
+}
+.address-box table{
+    width: 100%;
+}
+tr{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-bottom: 0.1px solid #eeeeee;
+}
+th,td{
+
+}
+nav[aria-label="Page navigation"] {
+    display: flex;
+    align-items: center;
+}
+nav[aria-label="Page navigation"]>button,nav[aria-label="Page navigation"]>.total{
+    margin-right: 1%;
+}

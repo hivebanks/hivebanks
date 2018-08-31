@@ -1,0 +1,93 @@
+.personInfo{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 40px 0;
+    margin-left: 0;
+}
+
+.innerInfo{
+    /*margin-left: 3rem;*/
+}
+.innerInfo li{
+    line-height: 35px;
+}
+.passUpdate .pass_ul_box{
+    margin-bottom: 0;
+}
+.passUpdate .pass_ul_box>li{
+    line-height: 35px;
+}
+.changePass{
+    margin-left: 15px;
+}
+.two-btn-row{
+    padding:15px 0;
+}
+i.iconfont.icon-zhanghu{
+    font-size: 3rem;
+}
+i.iconfont.icon-anquanshezhi,i.iconfont.icon-yinhangqia,i.iconfont.icon-alipay,i.iconfont.icon-weixin{
+    font-size: 1.5rem;
+}
+/*payMent*/
+
+.paymentBox .form-group>lable{
+    width: 35%;
+}
+.paymentBox .bank-top{
+    margin-bottom: 2rem;
+}
+.paymentBox .btn-bank{
+    text-align: right;
+}
+.paymentBox,.passwordList{
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+.bindBank,.bindAlipay,.bindWechat{
+    display: none;
+    margin-bottom: 2rem;
+}
+.payNote{
+    color: #9e9e9e;
+}
+.paymentBox .bank-top > span:first-child {
+    width: 10%;
+}
+.level progress{
+    margin-right: 5%
+}
+.level .levelText{
+    font-weight: bold;
+}
+.progress{
+    width: 13rem;
+    height: 15px;
+    margin-bottom: 0;
+}
+.btn.modifyFunPass{
+    display: none;
+}
+/*历史记录*/
+.withdraw-history{
+    display: none;
+}
+
+/*交易状态*/
+.tradingTab{
+    padding: 1% 0;
+    font-size: 18px;
+}
+.tradingItem{
+    cursor: pointer;
+}
+.tradingItem.active{
+    font-weight: 400;
+    border-bottom: 2px solid #82ca9c;
+}
+.bankItem{
+    background: #eeeeee;
+    padding: 1%;
+}

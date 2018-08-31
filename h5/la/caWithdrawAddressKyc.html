@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HiveBanks</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <!-- common Styles-->
+    <link href="assets/css/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="assets/css/common_mobile.css">
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand waves-effect waves-dark flex center" href="userList.html">
+                <img src="assets/img/logo-3.png" alt="" class="width-15 margin-right-5">
+                <strong>HiveBanks</strong>
+            </a>
+
+            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48">toc</i></div>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i-->
+                    <!--class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
+            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i-->
+                    <!--class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
+            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i-->
+                    <!--class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
+            <!--语言切换-->
+            <li>
+                <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="language">
+                    <i class="fa fa-user fa-fw"></i> <b class="languageText">English</b> <i
+                        class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
+            <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                    class="fa fa-user fa-fw"></i> <b>Edwin</b> <i
+                    class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </nav>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
+        </li>
+        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+        </li>
+        <li><a href="javascript:;" class="logOut"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+    </ul>
+    <!--语言列表-->
+    <ul id="language" class="dropdown-content">
+        <li class="flex center">
+            <i class="iconfont icon-en"></i>
+            <a href="#" value="en" class="margin-left-5">English</a></li>
+        <li class="flex center">
+            <i class="iconfont icon-ch"></i>
+            <a href="#" value="zh-CN" class="margin-left-5">简体中文</a>
+        </li>
+        <!--<li><a href="#"><i class="fa fa-globe"></i>简体中文</a></li>-->
+    </ul>
+
+    <!--/. NAV Left  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                <!--config-->
+                <li>
+                    <a href="config.html" class="waves-effect waves-dark">
+                        <i class="fa fa-dashboard"></i>
+                        <span class="i18n" name="config">配置</span>
+                    </a>
+                </li>
+                <!--charts-->
+                <li>
+                    <a href="report.html" class="waves-effect waves-dark">
+                        <i class="fa fa-dashboard"></i>
+                        <span class="i18n" name="charts">报表</span>
+                    </a>
+                </li>
+                <!--management-->
+                <li>
+                    <a href="javascript:;" class="waves-effect waves-dark">
+                        <i class="fa fa-sitemap"></i>
+                        <span class="i18n" name="management">管理</span>
+                        <span
+                            class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="userList.html" class="i18n" name="userList">USER List</a>
+                        </li>
+                        <li>
+                            <a href="baList.html" class="i18n" name="bitCoinAgencyList">BA List</a>
+                        </li>
+                        <li>
+                            <a href="caList.html" class="i18n" name="cashAgencyList">CA List</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--transaction-->
+                <li>
+                    <a href="javascript:;" class="waves-effect waves-dark">
+                        <i class="fa fa-sitemap"></i>
+                        <span class="i18n" name="transaction">交易</span>
+                        <span
+                                class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode">USER 交易记录</a>
+                        </li>
+                        <li>
+                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord">BA 充值记录</a>
+                        </li>
+                        <li>
+                            <a href="baWithdrawList.html" class="i18n" name="bitCoinAgencyWithdrawRecord">BA 提现记录</a>
+                        </li>
+                        <li>
+                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord">CA 充值记录</a>
+                        </li>
+                        <li>
+                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord">CA 提现记录</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--kyc审核-->
+                <li>
+                    <a href="javascript:;" class="active-menu waves-effect waves-dark"><i class="fa fa-lock"></i>
+                        <span class="i18n" name="kyc">KYC 审核</span>
+                        <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="userKyc.html" class="i18n" name="userKyc">User审核列表</a>
+                        </li>
+                        <li>
+                            <a class="childMenu" name="" href="#!">
+                                <span class="i18n" name="baKyc">Ba审核列表</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-third-level none">
+                                <li>
+                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">绑定信息审核列表</a>
+                                </li>
+                                <li>
+                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList">注册审核列表</a>
+                                </li>
+                                <li>
+                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">提现地址审核列表</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="childMenu active-menu" name="" href="#!">
+                                <span class="i18n" name="caKyc">Ca审核列表</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-third-level none">
+                                <li>
+                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">绑定信息审核列表</a>
+                                </li>
+                                <li>
+                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList">注册审核列表</a>
+                                </li>
+                                <li>
+                                    <a href="caWithdrawAddressKyc.html" class="active-menu i18n" name="withdrawAddressReviewList">提现地址审核列表</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!--fault Report-->
+                <li>
+                    <a href="failureReport.html" class="waves-effect waves-dark">
+                        <i class="fa fa-dashboard"></i>
+                        <span class="i18n" name="declarationList">申报列表</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper">
+        <div class="header">
+            <h1 class="page-header i18n" name="withdrawAddressReviewList">BA KYC</h1>
+            <ol class="breadcrumb">
+                <li><a href="#" class="i18n" name="kyc">KYC</a></li>
+                <li class="active i18n" name="withdrawAddressReviewList">BA KYC</li>
+            </ol>
+
+        </div>
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-content table-responsive">
+                            <table class="bordered striped centered highlight">
+                                <thead>
+                                <tr>
+                                    <th><span class="i18n" name="ca_id">ca_id</span></th>
+                                    <th><span class="i18n" name="withdrawAddress">withdrawAddress</span></th>
+                                    <th><span class="i18n" name="bind_flag">bind_flag</span></th>
+                                    <th><span class="i18n" name="ctime">ctime</span></th>
+                                    <th><span class="i18n" name="operating">operating</span></th>
+                                </tr>
+                                </thead>
+                                <tbody id="caWithdrawAddressKyc">
+                                <tr>
+                                    <td colspan="5"><span class="i18n" name="loading">正在努力的加载数据，请稍后......</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--loading-->
+<div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="assets/js/jquery-1.10.2.js"></script>
+
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/materialize/js/materialize.min.js"></script>
+
+<!-- Metis Menu Js -->
+<script src="assets/js/jquery.metisMenu.js"></script>
+
+<!--layer-->
+<script src="assets/js/layer/layer.js"></script>
+
+<!--language-->
+<script src="assets/language/jquery.i18n.properties.js"></script>
+<script src="assets/language/language.js"></script>
+
+<!--common-->
+<script src="assets/js/common.js"></script>
+
+<!-- Custom Js -->
+<script src="assets/js/main.js"></script>
+
+<!--baRecharge.js-->
+<script src="assets/js/caWithdrawAddressKyc.js"></script>
+<!--<script src="assets/js/custom-scripts.js"></script>-->
+
+
+</body>
+
+</html>

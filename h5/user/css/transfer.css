@@ -1,0 +1,23 @@
+.transfer li{
+    margin-bottom: 15px;
+}
+.transfer input{
+    width: 60%;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+}
+.transfer>ul>li>span{
+    width: 20%;
+    display: inline-block;
+}
+.transferInfo{
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    padding: 2rem;
+}
+
+.history-title{
+    background: #eeeeee;
+    line-height: 35px;
+    padding-left: 1rem;
+}

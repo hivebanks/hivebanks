@@ -1,0 +1,39 @@
+.bindBox{
+    border-bottom: 1px solid #9e9e9e;
+}
+.bindStatus{
+    color: #9e9e9e;
+}
+.uploadBtn{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    margin-top: 5%;
+}
+.positive,.negative{
+    text-align: center;
+    width: 265px;
+    height: 177px;
+    padding: 5px;
+    border:0.1px solid #999;
+}
+#idPositive,#idNegative{
+    width: 100%;
+    height: 100%;
+}
+.uploadCol{
+    padding: 5% 0;
+}
+.imgBox{
+    height: 100%;
+}
+.uploadFile{
+    position: absolute;
+    display: block;
+    opacity: 0;
+}
+.filePassText{
+    width: 20%;
+}

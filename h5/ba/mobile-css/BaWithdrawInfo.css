@@ -1,0 +1,5 @@
+.orderInfoInner>li:first-child{
+    width: 30%;
+    text-align: left;
+    float: left;
+}

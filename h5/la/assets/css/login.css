@@ -1,0 +1,22 @@
+body,html{
+    background:#000;
+}
+input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label{
+    color: #ffffff;
+}
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]){
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+    color: #ffffff;
+}
+h1{
+    color: white;
+}
+.loginBtn, .forgetBtn{
+    background: transparent;
+}
+.loginBtn:hover, .forgetBtn:hover{
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+}

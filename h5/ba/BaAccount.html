@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../assets/css/pagination.css">
+    <link rel="stylesheet" href="css/BaAccount.css">
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="mobile-css/common.css">
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="mobile-css/BaAccount.css">
+    <title class="i18n" name="baAccount">Bitcoin Agency Account</title>
+</head>
+<body>
+<!-- loading -->
+<iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+        scrolling="no"></iframe>
+<!--导航-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="BaAccount.html">Bitcoin Agency</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="BaRechargePending.html" class="i18n" name="rechargePending">Recharge Pending</a></li>
+                <li><a href="BaWithdrawPending.html" class="i18n" name="withdrawPending">Withdraw Pending</a></li>
+                <li><a href="BaAddress.html" class="i18n" name="address">Address</a></li>
+                <li><a href="BaRate.html" class="i18n" name="rate">Rate</a></li>
+                <li>
+                    <a href="BaAccount.html">
+                        <span><i class="iconfont icon-account"></i></span>
+                        <span class="ba_account" name=""></span>
+                    </a>
+                </li>
+                <li><a href="javascript:;" class="logout i18n" name="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--个人账户信息-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="row title-row">
+                    <div class="col-md-12 col-sm-12">
+                        <h3 class="pcTitle i18n" name="accountTitle">Account Information</h3>
+                        <h5 class="phoneTitle i18n" name="accountTitle">Account Information</h5>
+                    </div>
+                </div>
+                <div class="row title-next-row">
+                    <!--one col-->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="account-wrap account-wrap-col1">
+                            <ul>
+                                <li class="font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="accountNum">Account</span>:
+                                    </span>
+                                    <span>
+                                        <span class="accNum ba_id font-size-14 ba_account"></span>
+                                        <a href="" data-toggle="modal" data-target="#modifyName"
+                                           class="modify_ba_id i18n font-size-14" name="modify">修改</a>
+                                    </span>
+                                </li>
+                                <li class="phone-flex font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="lastLoginTime">Last Login Time
+                                        </span>:&nbsp;
+                                    </span>
+                                    <span class="time ctime font-size-14"></span>
+                                </li>
+
+                                <li class="phone-flex font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="securityCenter">Security Center
+                                        </span>:
+                                    </span>
+                                    <a href="BaSecurity.html" class="btn btn-sm btn-success i18n" name="enter">Enter
+                                    </a>
+                                </li>
+                                <li class="phone-flex font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="rechargePending">Recharge Pending
+                                        </span>:
+                                    </span>
+                                    <span>
+                                        <a href="BaRechargePending.html" class="btn btn-success btn-sm">
+                                            <span class="i18n" name="handle">Handle</span>&nbsp;&nbsp;
+                                            <span class="badge rechargeNum"></span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="phone-flex font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="withdrawPending">Withdraw Pending</span>:
+                                    </span>
+                                    <span>
+                                        <a href="BaWithdrawPending.html" class="btn btn-success btn-sm">
+                                            <span class="i18n" name="handle">Handle</span>&nbsp;&nbsp;
+                                            <span class="badge withdrawNum"></span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="phone-flex BaMarginRechargePendingBox font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="marginRechargePending">Margin Recharge Pending</span>:
+                                    </span>
+                                    <span>
+                                        <a href="BaMarginRechargePending.html" class="btn btn-success btn-sm">
+                                            <span class="i18n" name="handle">Handle</span>&nbsp;&nbsp;
+                                            <span class="badge marginRechargeAmount count_base_recharge"></span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="phone-flex BaMarginWithdrawPendingBox font-weight-400">
+                                    <span>
+                                        <span class="i18n" name="marginWithdrawPending">Margin Withdraw Pending</span>:
+                                    </span>
+                                    <span>
+                                        <a href="BaMarginWithdrawPending.html" class="btn btn-success btn-sm">
+                                            <span class="i18n" name="handle">Handle</span>&nbsp;&nbsp;
+                                            <span class="badge marginRechargeAmount count_base_withdraw"></span>
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--two col-->
+                    <div class="col-md-6 col-sm-12">
+                        <div class="account-wrap account-wrap-col2">
+                            <ul>
+                                <li class="phone-flex font-weight-400">
+                                    <span class="rechargeAmount"><span class="i18n"
+                                                                       name="securityLevel">Security Level</span>:</span>
+                                    <span class="lv">Lv<span class="levelNum security_level">0</span></span>
+                                </li>
+                                <li class="phone-flex font-weight-400">
+                                    <span class="rechargeAmount">
+                                    <span class="i18n" name="agencyType">Agency Type</span>:</span>
+                                    <span class="font-size-14 bit_type"></span>
+                                </li>
+                                <li class="phone-flex font-weight-400">
+                                    <span class="rechargeAmount">
+                                        <span class="i18n" name="rest_amount">保证金余额</span>:&nbsp;
+                                    </span>
+                                    <span class="ty-color font-size-14 rest_amount"></span>
+                                    <span class="base_type"></span>
+                                    <a href="BaRechargeMargin.html" class="recharge_amount i18n font-size-14"
+                                       name="recharge">充值</a>
+                                    <a href="javascript:;" class="withdraw_amount i18n font-size-14"
+                                       name="withdraw">提现</a>
+                                </li>
+                                <li class="phone-flex base_ba_address font-weight-400">
+                                    <span class="rechargeAmount">
+                                        <span class="i18n" name="marginRechargeAddress">保证金充值地址</span>:&nbsp;
+                                    </span>
+                                    <a href="BaMarginRechargeAddress.html"
+                                       class="addMarginRechargeAddress font-size-14 i18n" name="add">添加</a>
+                                    <!--<a href="javascript:;" class="manageMarginRechargeAddress font-size-14">管理</a>-->
+                                </li>
+                                <li class="phone-flex marginWithdrawAddressBox font-weight-400">
+                                    <span class="rechargeAmount">
+                                        <span class="i18n" name="marginWithdrawAddress">保证金提现地址</span>:&nbsp;
+                                    </span>
+                                    <a href="BaMarginWithdrawAddress.html"
+                                       class="addMarginRechargeAddress font-size-14 i18n" name="add">添加</a>
+                                    <!--<a href="javascript:;" class="manageMarginRechargeAddress font-size-14">管理</a>-->
+                                </li>
+                                <li class="phone-flex">
+                                    <span class="rechargeAmount font-weight-400">
+                                        <span class="i18n" name="lockBalance">Lock Balance</span>:&nbsp;
+                                    </span>
+                                    <span class="ty-color font-size-14 lock_amount">200</span><span
+                                        class="base_type"></span>
+                                </li>
+                                <li class='phone-flex setRateItem font-weight-400'>
+                                    <span class="rechargeAmount">
+                                        <span class='i18n' name='rechargeRate'>Recharge Rate</span>:&nbsp;
+                                    </span>
+                                    <span class="setRecharge">
+                                        <a href="BaRate.html" class="i18n" name="set">设置</a>
+                                    </span>
+                                    <span class="rechargeRate">
+                                        <span>1</span>
+                                        <span class="base_type"></span>=
+                                        <span class='ty_color font-size-14 recharge_rate ty-color'></span>
+                                        <span class="bit_type"></span>
+                                    </span>
+                                </li>
+                                <li class='phone-flex setRateItem font-weight-400'>
+                                    <span class="rechargeAmount">
+                                        <span class='i18n' name='withdrawRate'>Withdraw Rate</span>:&nbsp;
+                                    </span>
+                                    <span class="setWithdraw">
+                                        <a href="BaRate.html" class="i18n" name="set">设置</a>
+                                    </span>
+                                    <span class="withdrawRate">
+                                        <span>1</span>
+                                        <span class="bit_type"></span>=
+                                        <span class='ty_color font-size-14 withdraw_rate ty-color'></span>
+                                        <span class="base_type"></span>
+                                    </span>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 账户变动记录查询 -->
+<section id='changeRecode'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col col-md-12 col-sm-12'>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h3 class="pcTitle i18n" name="changeCode">Account Change Code</h3>
+                        <h5 class="phoneTitle margin-top-5 i18n" name="changeCode">Account Change Code</h5>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col col-md-12 col-sm-12'>
+                        <div class='table-responsive'>
+                            <table class='table table-hover'>
+                                <thead>
+                                <tr>
+                                    <th class="i18n" name="tradingHash">Trading Hash</th>
+                                    <th class="i18n" name="changeType">Change Type</th>
+                                    <th class="i18n" name="changeAmount">Change Amount</th>
+                                    <th class="i18n" name="changeBalance">Changed Balance</th>
+                                    <th class="i18n" name="changeTime">Change Time</th>
+                                </tr>
+                                </thead>
+                                <tbody id="accountChangeTable" class='accountChange'>
+
+                                </tbody>
+                            </table>
+                            <div class="eg">
+                                <span class="font-size-14 i18n" name="total">总共</span>:
+                                <span class="font-size-14 font-weight-400 totalPage"></span>
+                                <span class="font-size-14 i18n" name="page">页</span>&nbsp;|
+                                <span class="font-size-14 i18n" name="current">当前第</span>
+                                <span class="currentPage font-size-14 font-weight-400">1</span>
+                                <span class="font-size-14 i18n" name="page">页</span>
+                                <div class="m-style M-box4 change_log_code"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--modal-->
+<!-- Small modal -->
+<div id="phoneBind" class="modal fade bs-example-modal" tabindex="-1" role="dialog"
+     data-backdrop="false" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="pcTitle i18n" name="notBindPhone">手机号码未绑定</h3>
+                <h5 class="phoneTitle i18n" name="notBindPhone">手机号码未绑定</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger i18n" name="cancel"
+                        data-dismiss="modal">取消
+                </button>
+                <a href="BaPhoneBind.html" type="button" class="btn btn-primary goPhoneBtn i18n" name="goTo">前往</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 资金密码未绑定Modal -->
+<div class="modal fade" id="goBindFundPass" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h3 class="modal-title pcTitle i18n" name="notBindFundPass">资金密码未绑定</h3>
+                <h5 class="modal-title phoneTitle i18n" name="notBindFundPass">资金密码未绑定</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger i18n" name="cancel"
+                        data-dismiss="modal">取消
+                </button>
+                <a href="BaFundPasswordBind.html"
+                   class="btn btn-success bingPhoneBtn i18n"
+                   name="bind">绑定</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页脚-->
+<!--modal-->
+<!--modify name-->
+<div class="modal fade " id="modifyName" tabindex="-1" role="dialog" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</span></button>
+                <h4 class="modal-title i18n" name="changeUsername" id="modifyNameTitle">修改昵称</h4>
+            </div>
+            <div class="modal-body margin-bottom-10">
+                <form>
+                    <div class="form-group">
+                        <label for="nickName" class="control-label i18n" name="nickName">Nick Name</label>:
+                        <input type="text" class="form-control" id="nickName">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer  margin-top-5">
+                <button type="button" class="btn btn-danger i18n" data-dismiss="modal" name="cancel">取消</button>
+                <button type="button" class="btn btn-success modifyNameBtn i18n" name="determine">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="sections footer">
+    <div class="container">
+
+        <div class="row left-row">
+            <div class="col-md-7 col-sm-12">
+                <div class="footerTL">
+                    <ul class="flex center">
+                        <li><a href="/" class="i18n" name="introduction">Introduction</a></li>
+                        <li><a href="/" class="i18n" name="news">News</a></li>
+                        <li><a href="/" class="i18n" name="cashAgency">CA</a></li>
+                        <li><a href="/" class="i18n" name="bitcoinAgency">BA</a></li>
+                        <li><a href="/" class="i18n" name="partners">Partners</a></li>
+                        <li><a href="/" class="i18n" name="about">About</a></li>
+                        <li><a href="/" class="i18n" name="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="footerTR flex end center">
+                    <i class="iconfont icon-twitter"></i>
+                    <i class="iconfont icon-facebook"></i>
+                    <i class="iconfont icon-reddit"></i>
+                    <i class="iconfont icon-telegram"></i>
+                    <i class="iconfont icon-instagram"></i>
+                    <i class="iconfont icon-medium"></i>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <p class="i18n" name="allRightsReserved">©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+<!--Top-->
+<div class="scrollup">
+    <a href="#"><i class="iconfont icon-top"></i></a>
+</div>
+
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/layer/layer.js"></script>
+<script src="language/jquery.i18n.properties.js"></script>
+<script src="language/language.js"></script>
+<script src="../assets/js/pagination.js"></script>
+<script src="js/main.js"></script>
+<script src="js/common.js"></script>
+<script src="js/BaAccount.js"></script>
+</body>
+</html>
