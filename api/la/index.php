@@ -7,8 +7,8 @@
  *
  *  index.php
  */
-//require_once 'db/la_db_mysql.php';
-//require_once '../inc/db_connect.php';
+
+
 require_once 'db/la_func_config.php';
 
 /**
