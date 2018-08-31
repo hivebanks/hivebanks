@@ -82,43 +82,36 @@ function db_connect_check($server, $user, $password, $database)
         exit;
     }
 
-//    $result = $conn->query('show databases;');
-//    While ($row = mysqli_fetch_assoc($result)) {
-//        $data[] = $row['Database'];
-//    }
-//    unset($result, $row);
-//
-//    if (in_array(strtolower($database), $data))
-//        return true;
-//    else{
+
         // 创建数据库
-        $sql = "CREATE DATABASE " . $database . ' CHARACTER SET utf8 COLLATE utf8_general_ci';
-        if ($conn->query($sql)) {
-            $str_tmp = "<?php\r\n"; //得到php的起始符。$str_tmp将累加
-            $str_end = "?>";
-            $str_tmp .= "class DB_COM extends Mysql {\n";
-            $str_tmp .= "public $" . "schema = '$database';\n";
-            $str_tmp .= "protected $" . "server = '$server';\n";
-            $str_tmp .= "protected $" . "user = '$user';\n";
-            $str_tmp .= "protected $" . "password = '$password';\n";
-            $str_tmp .= "protected $" . "database = '$database';\n";
-            $str_tmp .= "protected $" . "character = 'utf8mb4';\n";
-            $str_tmp .= "}";
-            $str_tmp .= $str_end; //加入结束符
+    $sql = "CREATE DATABASE " . $database . ' CHARACTER SET utf8 COLLATE utf8_general_ci';
+    if ($conn->query($sql)) {
+        $str_tmp = "<?php\r\n"; //得到php的起始符。$str_tmp将累加
+        $str_end = "?>";
+        $str_tmp .= "class DB_COM extends Mysql {\n";
+        $str_tmp .= "public $" . "schema = '$database';\n";
+        $str_tmp .= "protected $" . "server = '$server';\n";
+        $str_tmp .= "protected $" . "user = '$user';\n";
+        $str_tmp .= "protected $" . "password = '$password';\n";
+        $str_tmp .= "protected $" . "database = '$database';\n";
+        $str_tmp .= "protected $" . "character = 'utf8mb4';\n";
+        $str_tmp .= "}";
+        $str_tmp .= $str_end; //加入结束符
 
-            $dir_path = dirname(dirname(dirname(__FILE__)))."";
-            $sf = $dir_path."/inc/db_connect.php"; //文件名
-            $fp = fopen($sf, "w+"); //写方式打开文件
+        $dir_path = dirname(dirname(dirname(__FILE__)))."";
+        $sf = $dir_path."/inc/db_connect.php"; //文件名
 
-            fwrite($fp, $str_tmp); //存入内容
-            fclose($fp); //关闭文件
-            return true;
-        } else {
-            header('location:la_error_db_connect.php');
-//        echo "创建失败,该数据库可能已存在";
-            exit;
-        }
-//    }
+        $fp = fopen($sf, "w+"); //写方式打开文件
+
+        fwrite($fp, $str_tmp); //存入内容
+        fclose($fp); //关闭文件
+        return true;
+    } else {
+        header('location:la_error_db_connect.php');
+
+        exit;
+    }
+
 }
 
 
