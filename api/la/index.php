@@ -11,7 +11,6 @@
 //require_once '../inc/db_connect.php';
 require_once 'db/la_func_config.php';
 
-
 /**
  * 检查La是否安装，如果已安装则进入重装确认页面，否则进入安装页面；
  */
@@ -24,5 +23,5 @@ if(!install_check()){
 }else{
     
     header('location:la_setting.php?step=reinstall');
-    
+
 }
