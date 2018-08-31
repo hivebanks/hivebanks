@@ -1,0 +1,108 @@
+body,html{
+    background: #080808!important;
+    color: #ffffff!important;
+}
+h1{
+    font-size: 3rem!important;
+}
+li{
+    line-height: 2;
+}
+
+label{
+    color: #ffffff!important;
+}
+td.padding-left-5, .tips{
+    color: #9e9e9e!important;
+}
+input[type=text]{
+    height: 1.5rem!important;
+}
+.flex{
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+}
+.flex.end{
+    justify-content: flex-end;
+}
+
+/*margin*/
+.margin-top-10{
+    margin-top: 10%!important;
+}
+.margin-top-5{
+    margin-top: 5%!important;
+}
+.margin-top-3{
+    margin-top: 3%!important;
+}
+.margin-bottom-0{
+    margin-bottom: 0!important;
+}
+.margin-left-2{
+    margin-left: 2%;
+}
+/*padding*/
+.padding-left-5{
+    padding-left: 5%;
+}
+.padding-bottom-1{
+    padding-bottom: 1%;
+}
+.align-center{
+    text-align: center;
+}
+
+
+/*one.css*/
+.startBtn{
+    background: transparent!important;
+}
+.startBtn:hover{
+    border: 1px solid #ffffff;
+    color: #ffffff!important;
+}
+.languageText{
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 0px 8px;
+}
+.languageText.languageActive{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+.languageText:hover{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*three*/
+textarea.materialize-textarea {
+    overflow-y: auto;
+    padding: 0.4rem 0 0.4rem 0!important;
+    resize: none;
+    min-height: 16rem!important;
+}
+textarea.materialize-textarea{
+    border: 1px solid #ffffff!important;
+}
+
+/*four*/
+.needInfo{
+    border-bottom: 1px dashed #ffffff;
+}
+.width-65{
+    width: 65%;
+}
+.width-100{
+    width: 100%;
+}
+/*five*/
+.loginInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
