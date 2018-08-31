@@ -1,0 +1,14 @@
+.digital-inner-box li {
+    margin-right: 0 !important;
+    width: 6rem !important;
+    height: 6rem !important;
+}
+.tab-btn.digital li > span {
+    font-size: 14px !important;
+    left: 55% !important;
+    color: #4cc2e4!important;
+}
+
+.digital-inner-box li{
+    margin: 0!important;
+}

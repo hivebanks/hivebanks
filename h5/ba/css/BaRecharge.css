@@ -1,0 +1,25 @@
+.hint li{
+    height: 35px;
+    line-height: 35px;
+}
+.pay-row{
+    line-height: 6rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+    padding: 1%;
+}
+
+.hint_text{
+    line-height: 2;
+    padding: 1rem;
+    font-size: 12px;
+}
+.parities{
+    padding-top: 1rem;
+}
+.confirmReadingBtn{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 90%!important;
+}

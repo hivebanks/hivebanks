@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title class="i18n" name="rate">Bitcoin Agency Rate</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/BaRate.css">
+    <link rel="stylesheet" media="only screen and (max-width:768px)" href="mobile-css/common.css">
+    <link rel="stylesheet" media="only screen and (max-width:768px)" href="mobile-css/BaRate.css">
+</head>
+<body>
+<!-- loading -->
+<iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+        scrolling="no"></iframe>
+<!--导航-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="BaAccount.html">Bitcoin Agency</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="BaRechargePending.html" class="i18n" name="rechargePending">Recharge Pending</a></li>
+                <li><a href="BaWithdrawPending.html" class="i18n" name="withdrawPending">Withdraw Pending</a></li>
+                <li><a href="BaAddress.html" class="i18n" name="address">Address</a></li>
+                <li class="active"><a href="BaRate.html" class="i18n" name="rate">Rate</a></li>
+                <li>
+                    <a href="BaAccount.html">
+                        <span><i class="iconfont icon-account"></i></span>
+                        <span class="ba_account" name=""></span>
+                    </a>
+                </li>
+                <li><a href="javascript:;" class="logout i18n" name="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--面包屑-->
+<div class='container margin-top-1'>
+    <div class='row'>
+        <div class='col-md-12 col-sm-12'>
+            <ol class="breadcrumb">
+                <li><a href="BaAccount.html" class="i18n" name="account">Account</a></li>
+                <li class="active i18n" name="rateSetting">Rate</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--汇率设定-->
+<section id="rate" class="section-top-2 content">
+    <div class="container">
+        <!--标题-->
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h3 class="pcTitle i18n" name="rateSetting">Exchange rate setting</h3>
+                <h5 class="phoneTitle i18n" name="rateSetting">Exchange rate setting</h5>
+            </div>
+        </div>
+        <!--可处理额度-->
+        <div class="row canHandleAmount">
+            <div class="col-md-12 col-sm-12">
+                <div class="canHandleInnerBox flex space-between center">
+                    <p class="pendingBalance"><span><span class="i18n font-weight-400" name="marginBalance">Margin Balance</span>:</span>
+                        <span class="ty-color base_amount"></span><span class="base_type">BTC</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--内容-->
+        <!--设置充值和提现汇率-->
+        <div class="row inputRate">
+            <!--充值汇率设定-->
+            <div class="col-md-6 col-sm-12">
+                <!--当前充值汇率-->
+                <div class="currentRechargeRate currentRechargeRateBox flex space-around font-size-14 phone-font-size-12">
+                    <ul>
+                        <li>
+                            <span class="i18n" name="currentRechargeRate">当前充值汇率</span>:&nbsp;&nbsp;
+                            <span>1<span>BTC</span>=<span class="recharge_rate">10</span><span
+                                    class="bit_type"></span></span>
+                        </li>
+                        <li>
+                            <span class="i18n" name="effectiveTime">有效时间</span>:&nbsp;&nbsp;
+                            <span class="recharge_set_time"></span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span class="i18n" name="rechargeMaxAmount">当前最大额度</span>:&nbsp;&nbsp;
+                            <span class="recharge_max_amount"></span>
+                            <span class="bit_type"></span>
+                        </li>
+                        <li>
+                            <span class="i18n" name="rechargeMinAmount">当前最小额度</span>:&nbsp;&nbsp;
+                            <span class="recharge_min_amount"></span>
+                            <span class="bit_type"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rechargeNotSet margin-bottom-5">
+                    <span class="rechargeRateNotSet i18n" name="rechargeRateNotSet">充值汇率未设置</span>
+                </div>
+                <div class="BOCRateChannel bocRechargeBox">
+                    <h5 class="i18n" name="rechargeRate">Recharge Rate</h5>
+                    <!--汇率-->
+                    <!--<p class="showRate rechargeShowRate none">-->
+                        <!--<span>1</span>-->
+                        <!--<span class="base_type"></span>=-->
+                        <!--<span class="rechargeRateText"></span>-->
+                        <!--<span class="bit_type"></span>-->
+                    <!--</p>-->
+                    <div class="startRate margin-bottom-5">
+                        <div class="flex center form-group form-group-sm">
+                            <div class="defaultRate flex center">
+                                <p class="margin-right-15">1<span class="base_type"></span></p>
+                                <span><i class="iconfont icon-transfer"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control inputRateVal rechargeRateInput" placeholder="Please input Number">
+                                <span class="input-group-addon bit_type"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--额度-->
+                    <div class="limit margin-bottom-5">
+                        <div class="minimumLimit flex center">
+                            <h6><span class="i18n" name="minLimit">mini limit</span>:</h6>
+                            <div class="flex wrap center form-group form-group-sm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control minimumVal rechargeMinVal">
+                                    <span class="input-group-addon bit_type"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="limit margin-bottom-5">
+                        <div class="minimumLimit flex center">
+                            <h6><span class="i18n" name="maxLimit">max limit</span>:</h6>
+                            <div class="flex center form-group form-group-sm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control maximumVal rechargeMaxVal">
+                                    <span class="input-group-addon bit_type"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--密码-->
+                    <div class="Period flex center margin-bottom-5">
+                        <h6><span class="i18n" name="loginPassword">password</span>:</h6>
+                        <div class="flex center form-group form-group-sm">
+                            <div class="input-group width-100">
+                                <input type="password" class="password form-control width-100" id="rechargePassword"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user_level_box margin-bottom-5">
+                        <div class="user_level flex center">
+                            <h6 class="i18n" name="setLevel">等级设置</h6>
+                            <div class="form-group form-group-sm">
+                                <input type="text" class="form-control rechargeLevel">
+                            </div>
+                        </div>
+                    </div>
+                    <!--有效期时间-->
+                    <div class="Period flex center">
+                        <h6><span class="i18n" name="deadline">Deadline</span>:</h6>
+                        <input type="text" class="timeInput" id="rechargeRateTime"/>
+                    </div>
+                    <a href="javascript:;" class="btn btn-success rateConfirm rechargeRateBtn i18n" name="confirm">Confirm</a>
+                </div>
+            </div>
+            <!--提现汇率设定-->
+            <div class="phone-margin-top-10 col-md-6 col-sm-12">
+                <div class="currentRechargeRate currentWithdrawRateBox flex space-around font-size-14 phone-font-size-12">
+                    <ul>
+                        <li>
+                            <span class="i18n" name="currentWithdrawRate">当前提现汇率</span>:&nbsp;&nbsp;
+                            <span>1<span class="bit_type"></span>=<span class="withdraw_rate">0.001</span><span
+                                    class="base_type"></span></span>
+                        </li>
+                        <li>
+                            <span class="i18n" name="effectiveTime">有效时间</span>:&nbsp;&nbsp;
+                            <span class="withdraw_set_time"></span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span class="i18n" name="withdrawMaxAmount">当前最大额度</span>:&nbsp;&nbsp;
+                            <span class="withdraw_max_amount"></span>
+                            <span class="bit_type"></span>
+                        </li>
+                        <li>
+                            <span class="i18n" name="withdrawMinAmount">当前最小额度</span>:&nbsp;&nbsp;
+                            <span class="withdraw_min_amount"></span>
+                            <span class="bit_type"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="withdrawNotSet margin-bottom-5">
+                    <span class="withdrawRateNotSet i18n" name="withdrawRateNotSet">提现汇率未设置</span>
+                </div>
+                <div class="BOCRateChannel bocRechargeBox">
+                    <h5 class="i18n" name="withdrawRate">Withdraw Rate</h5>
+                    <!--汇率-->
+                    <!--<p class="showRate withdrawShowRate none">-->
+                        <!--<span>1</span>-->
+                        <!--<span class="bit_type"></span>=-->
+                        <!--<span class='withdrawRateText'></span>-->
+                        <!--<span class="base_type"></span>-->
+                    <!--</p>-->
+                    <div class="startRate margin-bottom-5">
+                        <div class="flex center form-group form-group-sm">
+                            <div class="defaultRate flex center">
+                                <p class="margin-right-15">1<span class="bit_type"></span></p>
+                                <span><i class="iconfont icon-transfer"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control inputRateVal withdrawRateInput" placeholder="Please input Number">
+                                <span class="input-group-addon base_type"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--额度-->
+                    <div class="limit margin-bottom-5">
+                        <div class="minimumLimit flex center">
+                            <h6><span class="i18n" name="minLimit">The minimum limit</span>:</h6>
+                            <div class="flex center form-group form-group-sm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control minimumVal withdrawMinVal">
+                                    <span class="input-group-addon bit_type"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="limit margin-bottom-5">
+                        <div class="minimumLimit flex center">
+                            <h6><span class="i18n" name="maxLimit">The biggest limit</span>:</h6>
+                            <div class="flex center form-group form-group-sm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control maximumVal withdrawMaxVal">
+                                    <span class="input-group-addon bit_type"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--密码-->
+                    <div class="Period flex center margin-bottom-5">
+                        <h6><span class="i18n" name="loginPassword">password</span>:</h6>
+                        <div class="flex center form-group form-group-sm">
+                            <div class="input-group width-100">
+                                <input type="password" class="password form-control" id="withdrawPassword"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user_level_box margin-bottom-5">
+                        <div class="user_level flex center">
+                            <h6 class="i18n" name="setLevel">等级设置</h6>
+                            <div class="form-group form-group-sm">
+                                <input type="text" class="form-control withdrawLevel">
+                            </div>
+                        </div>
+                    </div>
+                    <!--有效期时间-->
+                    <div class="Period flex center">
+                        <h6><span class="i18n" name="deadline">Deadline</span>:</h6>
+                        <input type="text" class="timeInput" id="withdrawRateTime"/>
+                    </div>
+                    <button class="btn btn-success rateConfirm withdrawRateBtn i18n" name="confirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--页脚-->
+<section class="sections footer">
+    <div class="container">
+
+        <div class="row left-row">
+            <div class="col-md-7 col-sm-12">
+                <div class="footerTL">
+                    <ul class="flex center">
+                        <li><a href="/" class="i18n" name="introduction">Introduction</a></li>
+                        <li><a href="/" class="i18n" name="news">News</a></li>
+                        <li><a href="/" class="i18n" name="cashAgency">CA</a></li>
+                        <li><a href="/" class="i18n" name="bitcoinAgency">BA</a></li>
+                        <li><a href="/" class="i18n" name="partners">Partners</a></li>
+                        <li><a href="/" class="i18n" name="about">About</a></li>
+                        <li><a href="/" class="i18n" name="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="footerTR flex end center">
+                    <i class="iconfont icon-twitter"></i>
+                    <i class="iconfont icon-facebook"></i>
+                    <i class="iconfont icon-reddit"></i>
+                    <i class="iconfont icon-telegram"></i>
+                    <i class="iconfont icon-instagram"></i>
+                    <i class="iconfont icon-medium"></i>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <p class="i18n" name="allRightsReserved">©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+<!--top-->
+<div class="scrollup">
+    <a href="#"><i class="iconfont icon-top"></i></a>
+</div>
+
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="language/jquery.i18n.properties.js"></script>
+<script src="language/language.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery.datetimepicker.full.js"></script>
+<script src="../assets/js/layer/layer.js"></script>
+<script src="../assets/js/sha.js"></script>
+<script src="js/main.js"></script>
+<script src="js/common.js"></script>
+<script src="js/BaRate.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.orderInfoBox{
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    padding: 5%;
+}
+.orderInfoInner{
+    padding: 1%;
+}
+.orderInfoInner>li{
+    letter-spacing: 0.5px;
+}
+.orderInfoInner>li:first-child{
+    width: 30%;
+    text-align: right;
+    float: left;
+}
+.orderInfoInner>li:last-child{
+    font-weight: 400;
+}
+.cancelSub{
+    width: 100%;
+}

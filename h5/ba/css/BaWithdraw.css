@@ -1,0 +1,89 @@
+.address-box{
+    margin: 15px 0;
+}
+.enable{
+    font-size: 20px;
+    line-height: 38px;
+}
+
+
+/*payMoney*/
+.withdrawRow, .ba_row{
+    line-height: 4rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+.width-23{
+    width: 23%;
+}
+.width-27{
+    width: 27%;
+}
+.pay-row .inline-block{
+    display: inline-block;
+}
+.pay-row .inline-block:first-child{
+    width:40%;
+}
+.pay-row .inline-block:first-child>input{
+    width:85%;
+}
+.pay-row .inline-block:first-child>span{
+    padding:0 0 0 2%;
+}
+.unableWithdraw{
+    background: #fcf8e5;
+    padding: 1rem;
+    display: none;
+}
+.pay-row input{
+    display: inline-block;
+    width: 40%;
+    height: 35px;
+    line-height: 35px;
+}
+
+.hint_text{
+    line-height: 2;
+    padding: 1rem;
+    font-size: 12px;
+}
+.margin-left-1{
+    margin-left: 1%;
+}
+/*layer-phone-verify*/
+.verifyBox>button{
+    width: 40%!important;
+
+}
+/*shade*/
+.shade{
+    display: none;
+    position: absolute;
+    background: rgba(0,12,34,0.5);
+    top: 0;
+    left: 0;
+}
+.input-box{
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 48%;
+    margin-left: -24%;
+    height: auto;
+    background: #fff;
+    padding: 3% 1%;
+    border-radius: 20px;
+}
+.input-box.phoneVerifyBox{
+    padding: 3% 10%;
+    top: 70%;
+}
+.input-box>input{
+    border-radius: 10px;
+}
+.input-box>.btn-box{
+    text-align: right;
+}

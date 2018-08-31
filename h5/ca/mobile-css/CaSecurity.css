@@ -1,0 +1,31 @@
+.payMoney {
+    font-size: 14px;
+}
+
+.pay-row input {
+    font-size: 12px;
+}
+
+.address-box input {
+    width: 100%;
+}
+
+.orderInformation {
+    font-size: 12px;
+    line-height: 2rem;
+}
+.btn.baRecharge-btn{
+    background: #4CC2E41c;
+}
+.btn.baRecharge-btn:hover{
+    background: #4CC2E4;
+    color: #ffffff;
+}
+#addressIn {
+    width: 100%;
+}
+.layui-layer.layui-layer-page{
+    width: 350px!important;
+    height: 350px!important;
+    left: 3.5%!important;
+}

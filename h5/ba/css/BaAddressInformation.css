@@ -1,0 +1,49 @@
+.addressInfo-title{
+    display: flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    align-items: center;
+}
+
+.table a{
+    font-weight: bold;
+}
+.margin-top-5{
+    margin-top: 5%;
+}
+.withdrawer{
+    margin-left: 6%;
+}
+.withdraw-title-row,.withdraw-content-row{
+    line-height: 2;
+    border-top: 0.1px solid #dddddd;
+    padding: 1% 0;
+    font-size: 14px;
+}
+.withdraw-title-row{
+    background: #f9f9f9;
+}
+.withdraw-title-row>div:last-child,.withdraw-content-row>div:last-child{
+    text-align: right;
+}
+
+.arrow-right-address{
+    display: flex;
+    display: -moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow-right-address img{
+    width: 5%;
+}
+.unify-green{
+    color: green;
+}
+.oldestFirst{
+    font-size: 16px;
+}

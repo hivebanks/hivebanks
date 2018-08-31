@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../assets/css/intlTelInput.css">
+    <link rel="stylesheet" href="css/CaRegister.css">
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="mobile-css/common.css">
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="mobile-css/CaRegister.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_626151_0cg91lh4tb7qfr.css">
+    <title class="i18n" name="caRegister">Cash Agency Register</title>
+</head>
+<body>
+<!-- loading -->
+<iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+        scrolling="no"></iframe>
+<!--导航-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Cash Agency</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="CaLogin.html" class="i18n" name="login">Login</a></li>
+                <li class="active"><a href="CaRegister.html" class="i18n" name="register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--注册表单-->
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="login-wrap">
+                    <h3 class="pcTitle legalTitle i18n" name="caRegister">Legal currency agent Register</h3>
+                    <h5 class="phoneTitle legalTitle i18n" name="caRegister">Legal currency agent Register</h5>
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-sm-12 form_col">
+                    <div class="form-box">
+                        <div class="registerToggleBox">
+                            <ul class="flex center space-around">
+                                <li class="active registerToggle emailRegister">
+                                    <i class="iconfont icon-youxiang"></i>
+                                    <span class="emailRegisterTitle i18n" name="emailRegisterTitle">Email Register</span></li>
+                                <li class="registerToggle phoneRegister">
+                                    <i class="iconfont icon-shouji"></i>
+                                    <span class="phoneRegisterTitle i18n" name="phoneRegisterTitle">Phone Register</span></li>
+                            </ul>
+                        </div>
+                        <!-- email register -->
+                        <div class="emailRegisterBox form-inner-content fadeInRight">
+                            <ul class="mess-ul">
+                                <li>
+                                    <input type="email" class="form-control email i18n-input" name="username" value="" selectname="emailInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips email_tips i18n' name="emailNotEmpty">* 邮箱不能为空</span>
+                                    <span class='ty-color input_tips emailErrorTips i18n' name="emailBad">* 邮箱格式错误</span>
+                                    <span class='ty-color input_tips emailLoginTips i18n' name="accountAlready">* 账号已存在，请登录</span>
+                                </li>
+                                <li>
+                                    <input type="password" id='emailPass' class="form-control emailPassword i18n-input" name="emailPassword" value="" selectname="passwordInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips password_tips i18n' name="passwordNotEmpty">* 密码不能为空</span>
+                                    <span class='ty-color input_tips errEmailPass_tips i18n' name="PasswordStructure">* 8-16位 由字母(区分大小写),数字，符号组成</span>
+                                    <div id="emailLevel" class="email-pw-strength pw-strength">
+                                        <div class="pw-bar"></div>
+                                        <div class="pw-bar-on"></div>
+                                        <div class="pw-txt">
+                                            <span class="weak">弱</span>
+                                            <span class="medium">中</span>
+                                            <span class="strong">强</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="password" class="form-control againEmailPassword i18n-input" name="againEmailPassword" value="" selectname="againPasswordInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips emailAgainPassword_tips i18n' name="confirmPasswordNotEmpty">* 确认密码不能为空</span>
+                                    <span class='ty-color input_tips emailSamePassword_tips i18n' name="TwoPassword">* 两次密码必须相同</span>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-lg btn-success register emailRegisterBtn login i18n" name="register">Register</a>
+                        </div>
+
+                        <!--  modal -->
+                        <div id="registerSuccess" class="modal fade" tabindex="-1" role="dialog"
+                             data-backdrop="false" data-keyboard="false">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="pcTitle i18n" name="goEmailVerify">注册成功，请前往邮箱验证</h3>
+                                        <h5 class="phoneTitle i18n" name="goEmailVerify">注册成功，请前往邮箱验证</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success i18n" name="cancel"
+                                                data-dismiss="modal">取消
+                                        </button>
+                                        <button type="button" class="btn btn-primary goEmailBtn i18n" name="goTo">
+                                            前往
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  modal -->
+                        <div id="alreadyRegister" class="modal fade" tabindex="-1" role="dialog"
+                             data-backdrop="false" data-keyboard="false">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="pcTitle i18n" name="alreadyRegister">已注册，请前往邮箱验证</h3>
+                                        <h5 class="phoneTitle i18n" name="alreadyRegister">已注册，请前往邮箱验证</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success i18n" name="cancel"
+                                                data-dismiss="modal">取消
+                                        </button>
+                                        <button type="button" class="btn btn-primary goEmailBtn i18n" name="goTo">
+                                            前往
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- phone register -->
+                        <div class="phoneRegisterBox form-inner-content fadeInRight">
+                            <ul class="mess-ul">
+                                <li>
+                                    <input type="tel" class="form-control phone i18n-input" name="phone" id="phone" value="" selectname="phoneInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips phone_tips i18n' name="accountNotEmpty">* 账号不能为空</span>
+                                    <span class='ty-color input_tips phoneErrorTips i18n' name="phoneBad">* 手机格式错误</span>
+                                    <span class='ty-color input_tips phoneLoginTips i18n' name="accountAlready">* 账号已存在，请登录</span>
+                                </li>
+
+                                <!--图形验证码-->
+                                <li class="flex">
+                                    <input type="text" class="form-control i18n-input phoneCfmCode" name="cfmCode" value=""
+                                           selectname="cfmCodeInput" selectattr="placeholder">
+                                    <img src="" id="phone_imgCode" alt="">
+                                    <span class='ty-color input_tips phoneImgCode_tips i18n'
+                                          name="codeNotEmpty">* 验证码不能为空</span>
+                                    <span class='ty-color input_tips errPhoneImgCode_tips i18n'
+                                          name="codeBad">* 图形验证码错误,请重新输入</span>
+                                </li>
+
+                                <li class="flex">
+                                    <input type="text" class="form-control i18n-input sms_code phoneSmsCode" name="cfmCode" value="" selectname="cfmCodeInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips phoneSmsCode_tips i18n' name="codeNotEmpty">* 验证码不能为空</span>
+                                    <span class='ty-color input_tips phoneCode_expired i18n'
+                                          name="codeBad">* 图形验证码错误,请重新输入</span>
+                                    <button class="btn btn-success btn-sm phoneCodeBtn"><span class="sixty">60</span>&nbsp;&nbsp;
+                                        <span class="getCodeText i18n" name="getCode">Get Code</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <input type="password" id='phonePass' class="form-control i18n-input phonePassword" name="phonePassword" value="" selectname="passwordInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips PhonePassword_tips i18n' name="passwordNotEmpty">* 密码不能为空</span>
+                                    <span class='ty-color input_tips errPhonePass_tips i18n' name="PasswordStructure">* 8-16位 由字母(区分大小写),数字，符号组成</span>
+                                    <div id="phoneLevel" class="phone-pw-strength pw-strength">
+                                        <div class="pw-bar"></div>
+                                        <div class="pw-bar-on"></div>
+                                        <div class="pw-txt">
+                                            <span>弱</span>
+                                            <span>中</span>
+                                            <span>强</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="password" class="form-control i18n-input againPhonePassword" name="againPhonePassword" value="" selectname="againPasswordInput" selectattr="placeholder">
+                                    <span class='ty-color input_tips phoneAgainPassword_tips i18n' name="confirmPasswordNotEmpty">* 确认密码不能为空</span>
+                                    <span class='ty-color input_tips phoneSamePassword_tips i18n' name="TwoPassword">* 两次密码必须相同</span>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-lg btn-success register phoneRegisterBtn login i18n" name="register">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--页脚-->
+<section class="sections footer">
+    <div class="container">
+
+        <div class="row left-row">
+            <div class="col-md-7 col-sm-12">
+                <div class="footerTL">
+                    <ul class="flex center">
+                        <li><a href="/" class="i18n" name="introduction">Introduction</a></li>
+                        <li><a href="/" class="i18n" name="news">News</a></li>
+                        <li><a href="/" class="i18n" name="cashAgency">CA</a></li>
+                        <li><a href="/" class="i18n" name="bitcoinAgency">BA</a></li>
+                        <li><a href="/" class="i18n" name="partners">Partners</a></li>
+                        <li><a href="/" class="i18n" name="about">About</a></li>
+                        <li><a href="/" class="i18n" name="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="footerTR flex end center">
+                    <i class="iconfont icon-twitter"></i>
+                    <i class="iconfont icon-facebook"></i>
+                    <i class="iconfont icon-reddit"></i>
+                    <i class="iconfont icon-telegram"></i>
+                    <i class="iconfont icon-instagram"></i>
+                    <i class="iconfont icon-medium"></i>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <p class="i18n" name="allRightsReserved">©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="language/jquery.i18n.properties.js"></script>
+<script src="language/language.js"></script>
+<script src="../assets/js/intlTelInput.js"></script>
+<script src="../assets/js/layer/layer.js"></script>
+<script src='../assets/js/sha.js'></script>
+<script src="js/main.js"></script>
+<script src="js/common.js"></script>
+<script src="js/CaRegister.js"></script>
+<script type="text/javascript">
+    $("#phone").intlTelInput({
+        separateDialCode: true,
+    });
+</script>
+</body>
+</html>

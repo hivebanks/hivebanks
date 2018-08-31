@@ -1,0 +1,41 @@
+.canHandleAmount,.margin-top-2 {
+    margin-top: 2%;
+}
+.row p{
+    margin-bottom: 0;
+}
+.transactionsContent .margin-top-5{
+    margin-top: 5%;
+}
+.transactionsContent .recharge-title-row,.transactionsContent .recharge-content-row{
+    line-height: 2;
+    border-top: 0.1px solid #dddddd;
+    padding: 1% 0;
+    font-size: 14px;
+}
+.transactionsContent .recharge-title-row{
+    background: #f9f9f9;
+}
+.transactionsContent .recharge-title-row>div:last-child,.transactionsContent .recharge-content-row>div:last-child{
+    text-align: right;
+}
+
+.transactionsContent .unify-green{
+    color: green;
+}
+.transactionsContent .unify-red{
+    color: red;
+}
+.h3-row{
+    margin-top: 3%;
+}
+.balanceBox{
+    padding:1%;
+}
+.balanceRow{
+    background: #82ca9c1c;
+}
+
+.balanceBox p{
+    font-size: 14px;
+}

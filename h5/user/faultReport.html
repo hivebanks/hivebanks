@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title class="i18n" name="faultReport">faultReport</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/faultReport.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)"
+          href="mobile-css/common.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)"
+          href="mobile-css/faultReport.css">
+    <link rel="stylesheet" type="text/css" href="css/pagination.css" media="screen">
+</head>
+<body>
+<!-- loading -->
+<iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+        scrolling="no"></iframe>
+<!--导航-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">LOGO</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="recharge.html" class="i18n" name="recharge">Recharge</a></li>
+                <li><a href="withdraw.html" class="i18n" name="withdraw">Withdraw</a></li>
+                <!--<li><a href="transfer.html" class="i18n" name="transfer">Transfer</a></li>-->
+                <li>
+                    <a href="account.html">
+                        <span><i class="iconfont icon-account"></i></span>
+                        <span class="us_account" name=""></span>
+                    </a>
+                </li>
+                <li><a href="javascript:;" class="logout i18n" name="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--安全提示信息-->
+<section class="msg">
+    <div class="container">
+        <div class="row msg-row">
+            <div class="col-md-12 col-sm-12 msg-col">
+                <p class="msgText i18n" name="informationTitle">Safety Phrases：Check the visit url to open the secondary
+                    verification.</p>
+                <i class="iconfont icon-xialajiantou jt"></i>
+            </div>
+        </div>
+        <div class="row msg-content">
+            <div class="col-md-12 col-sm-12">
+                <p><i class="iconfont icon-iconset0211"></i><span class="i18n" name="informationOne">Do not install any browser plug-ins that are claimed and
+                    related.</span></p>
+                <p><i class="iconfont icon-iconset0211"></i><span class="i18n" name="informationTwo">Don’t reveal password information and Google verification codes and Google keys to anyone.</span>
+                </p>
+                <p><i class="iconfont icon-iconset0211"></i><span class="i18n" name="informationThree">Don't transfer money to anyone who claims to be a staff member.</span>
+                </p>
+                <p><i class="iconfont icon-iconset0211"></i><span class="i18n" name="informationFour">Be sure to pay attention to safety and protect yourself.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--面包屑-->
+<div class='container margin-top-1'>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <ol class="breadcrumb">
+                <li><a href="account.html" class="i18n" name="account">Account</a></li>
+                <li class="i18n" name="faultReport">faultReport</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!--账户信息-->
+<section class="sections content">
+    <div class="container">
+        <h3 class="pcTitle i18n" name="faultReport">faultReport</h3>
+        <h5 class="phoneTitle i18n" name="faultReport">faultReport</h5>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+                <div>
+                    <p class="font-size-14 margin-bottom-1 i18n" name="faultReportTips">请详细填写声报的具体信息，以便于工作人员及时解决，我们将在收到声报信息后，第一时间处理您的问题。</p>
+                    <textarea id="faultReportInfo" required autofocus class="form-control faultReportInfo"></textarea>
+                    <button class="btn btn-success faultReportBtn width-100 i18n margin-top-5" name="submit">提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-5">
+            <h5 class="font-weight-400">申报结果</h5>
+            <div>
+                <ul class="faultReportList">
+                    <li>
+                        <span class="i18n noInformation none" name="noInformation">暂无信息</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--页脚-->
+<section class="sections footer">
+    <div class="container">
+
+        <div class="row left-row">
+            <div class="col-md-7 col-sm-12">
+                <div class="footerTL">
+                    <ul class="flex center">
+                        <li><a href="/" class="i18n" name="introduction">Introduction</a></li>
+                        <li><a href="/" class="i18n" name="cashAgency">Cash Agency</a></li>
+                        <li><a href="/" class="i18n" name="bitcoinAgency">Bitcoin Agency</a></li>
+                        <li><a href="/" class="i18n" name="partners">Partners</a></li>
+                        <li><a href="/" class="i18n" name="about">About</a></li>
+                        <li><a href="/" class="i18n" name="contact">Contact</a></li>
+                        <li><a href="faultReport.html" class="i18n" name="faultReport">fault report</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="footerTR flex space-between center">
+                    <i class="iconfont icon-twitter"></i>
+                    <i class="iconfont icon-facebook"></i>
+                    <i class="iconfont icon-reddit"></i>
+                    <i class="iconfont icon-telegram"></i>
+                    <i class="iconfont icon-instagram"></i>
+                    <i class="iconfont icon-medium"></i>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <p class="i18n" name="allRightsReserved">©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+
+<!--返回顶部-->
+<div class="scrollup">
+    <a href="#"><i class="iconfont icon-top"></i></a>
+</div>
+
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/layer/layer.js"></script>
+<script src="language/jquery.i18n.properties.js"></script>
+<script src="language/language.js"></script>
+<script src="../assets/js/pagination.js"></script>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+<script src="js/faultReport.js"></script>
+
+</body>
+</html>

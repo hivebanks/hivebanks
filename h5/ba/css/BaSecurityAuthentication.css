@@ -1,0 +1,31 @@
+/*authentication information*/
+.securityAuthenticationFlex{
+    border-bottom: 0.1px solid #c6dacd;
+    padding: 1% 0;
+}
+.securityAuthenticationFlex,.innerAuthenticationFlexBox,.codeBox{
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    justify-content: space-between;
+}
+.securityAuthenticationFlex,.innerAuthenticationFlexBox{
+    align-items: center;
+}
+.securityAuthenticationFlex>span{
+    color:#999999;
+    font-size: 14px;
+}
+.formInfo{
+    display: none;
+}
+
+.authenticationForm>button{
+    width: 100%;
+    margin-top: 5%;
+}
+.codeBox button{
+    margin-left: 1%;
+}

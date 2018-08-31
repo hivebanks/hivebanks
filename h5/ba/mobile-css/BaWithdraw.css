@@ -1,0 +1,20 @@
+.pay-row {
+    padding: 0;
+}
+.withdrawRow, .ba_row{
+    padding: 1rem;
+}
+.hint_text {
+    padding: 0;
+}
+.withdrawAmountInput{
+    margin-right: 0;
+}
+.unableWithdraw{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+

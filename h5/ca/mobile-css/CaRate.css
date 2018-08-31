@@ -1,0 +1,22 @@
+.canHandleAmount .canHandleInnerBox{
+   display: block;
+}
+.canHandleAmount p{
+    font-size:12px;
+}
+.canHandleAmount .canHandleInnerBox{
+    background: #4CC2E41c;
+}
+.margin-bottom-5,.limit{
+    margin-bottom: 5%;
+}
+.form-group{
+	margin-bottom:0!important;
+}
+.margin-right-15{
+    margin-right: 0%;
+    margin-bottom: 0;
+}
+.defaultRate{
+	justify-content:space-around
+}

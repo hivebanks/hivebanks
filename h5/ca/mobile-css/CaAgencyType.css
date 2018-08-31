@@ -1,0 +1,17 @@
+.account-wrap li > span {
+    display: inline-block;
+}
+
+.account-wrap li > span:first-child {
+    width: 40%;
+}
+.account-wrap li>.rechargeAmount{
+    width: 60%!important;
+}
+.layui-layer.layui-layer-page{
+    width: 100%!important;
+    left: 0!important;
+}
+.layui-layer-page .layui-layer-content{
+    padding:0 5%
+}
