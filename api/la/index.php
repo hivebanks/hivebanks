@@ -8,6 +8,7 @@
  *  index.php
  */
 
+
 require_once 'db/la_func_config.php';
 
 /**
