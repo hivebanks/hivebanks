@@ -20,6 +20,7 @@ require_once 'db/la_func_config.php';
 if(!install_check()){
     
     header('location:la_setting.php?step=1');
+
 }else{
     
     header('location:la_setting.php?step=reinstall');
