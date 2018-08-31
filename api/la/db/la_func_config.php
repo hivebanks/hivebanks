@@ -13,6 +13,9 @@ error_reporting(E_ALL | E_STRICT);
  * 执行建表语句
  */
 
+set_ba_asset_unit(1,"47.254.40.100","admin","l422ly8hgd4cluk8s7","hive006");
+
+
 
 function excute_sql_file($sql, $server, $user, $password, $dbname)
 {
@@ -144,46 +147,48 @@ function admin_create($data, $server, $user, $password, $dbname)
 function set_ba_asset_unit($data, $server, $user, $password, $dbname)
 {
 
-    $conn = new mysqli($server, $user, $password, $dbname);
-    if ($conn->connect_error) {
-        header('location:la_error_db_connect.php');
-        exit;
-    }
-
-    $sql = "INSERT INTO la_base (base_currency,unit,h5_url,api_url,ca_currency) VALUES ('{$data['benchmark_type']}','{$data['digital_unit']}','{$data['h5_url']}','{$data['api_url']}','{$data['ca_currency']}')";
-    $q_id = $conn->query($sql);
-    if ($q_id == 0)
-        echo "发生错误";
-
-    $api_url = $data["api_url"];
-    $h5_url = $data["h5_url"];
-    $benchmark_type = $data["benchmark_type"];
-    $userLanguage = $data["userLanguage"];
-    $ca_currency = $data["ca_currency"];
-
-    $str_tmp = "{\r\n"; //得到php的起始符。$str_tmp将累加
-
-
-    $str_tmp .= '"api_url" : "';
-    $str_tmp .= $api_url . '",';
-
-    $str_tmp .= '"benchmark_type" : "';
-    $str_tmp .= $benchmark_type . '",';
-
-    $str_tmp .= '"ca_currency" : "';
-    $str_tmp .= $ca_currency . '",';
-
-
-    $str_tmp .= '"userLanguage" : "';
-    $str_tmp .= $userLanguage . '",';
-
-    $str_tmp .= '"h5_url" : "';
-    $str_tmp .= $h5_url . '"';
-
-    $str_tmp .= '}';
+//    $conn = new mysqli($server, $user, $password, $dbname);
+//    if ($conn->connect_error) {
+//        header('location:la_error_db_connect.php');
+//        exit;
+//    }
+//
+//    $sql = "INSERT INTO la_base (base_currency,unit,h5_url,api_url,ca_currency) VALUES ('{$data['benchmark_type']}','{$data['digital_unit']}','{$data['h5_url']}','{$data['api_url']}','{$data['ca_currency']}')";
+//    $q_id = $conn->query($sql);
+//    if ($q_id == 0)
+//        echo "发生错误";
+//
+//    $api_url = $data["api_url"];
+//    $h5_url = $data["h5_url"];
+//    $benchmark_type = $data["benchmark_type"];
+//    $userLanguage = $data["userLanguage"];
+//    $ca_currency = $data["ca_currency"];
+//
+//    $str_tmp = "{\r\n"; //得到php的起始符。$str_tmp将累加
+//
+//
+//    $str_tmp .= '"api_url" : "';
+//    $str_tmp .= $api_url . '",';
+//
+//    $str_tmp .= '"benchmark_type" : "';
+//    $str_tmp .= $benchmark_type . '",';
+//
+//    $str_tmp .= '"ca_currency" : "';
+//    $str_tmp .= $ca_currency . '",';
+//
+//
+//    $str_tmp .= '"userLanguage" : "';
+//    $str_tmp .= $userLanguage . '",';
+//
+//    $str_tmp .= '"h5_url" : "';
+//    $str_tmp .= $h5_url . '"';
+//
+//    $str_tmp .= '}';
 
 
     $dir_path = dirname(dirname(dirname(dirname(__FILE__)))) . "/h5_hivebanks/";
+
+    print_r($dir_path);die;
 
 
     $sf = $dir_path . "/assets/json/config_url.json"; //文件名
