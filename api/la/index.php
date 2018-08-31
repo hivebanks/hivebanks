@@ -24,4 +24,5 @@ if(!install_check()){
 }else{
     
     header('location:la_setting.php?step=reinstall');
+    
 }
