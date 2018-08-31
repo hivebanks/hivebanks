@@ -1,1 +1,1 @@
-syctest
+test
