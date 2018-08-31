@@ -1,0 +1,66 @@
+.note{
+    font-size: 12px;
+}
+.leave-box>p{
+    display: inline-block;
+    margin-bottom: 0;
+}
+.leave>progress{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.levelText{
+    font-weight: bold;
+}
+
+.verify{
+    /*display: none;*/
+    padding: 25px 15px;
+    border: 1px solid #81cb9b54;
+    margin-top: 1.5rem;
+}
+.verify p:first-child{
+    font-weight: bold;
+}
+.verify p,.verify span{
+    font-size: 12px;
+}
+
+.verify>div{
+    padding-right: 10px;
+    text-align: right;
+    vertical-align: sub;
+}
+.t_right{
+    text-align: right;
+}
+.google_li input{
+    background: url("../img/googleQR.png")no-repeat left center;
+}
+.iconfontRow .iconfont{
+    font-size: 40px;
+}
+.iconfontRow .iconfont.symbol{
+    font-size: 16px;
+    /*color: red;*/
+}
+.iconfontRow .iconfont.greenIcon{
+    font-size: 16px;
+    /*color: green;*/
+}
+.isTime{
+    color:#999;
+}
+.securitylevelNum{
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+}
+.progress{
+    margin-bottom: 0;
+    width: 13rem;
+    height: 15px;
+}
+.modify{
+    display: none;
+}

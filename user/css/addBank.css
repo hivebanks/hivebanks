@@ -1,0 +1,46 @@
+.bankTypeBox li{
+    padding: 2% 2%;
+    cursor: pointer;
+}
+.bankTypeBox li{
+    padding: 1% 2%;
+    cursor: pointer;
+    position: relative;
+}
+.bankTypeBox li:hover{
+    border: 0.1px solid #82ca9c;
+}
+.border{
+    border: 0.1px solid #82ca9c;
+}
+/*.bankTypeBox li:hover img{*/
+    /*-webkit-animation: scale .5s linear;*/
+    /*-o-animation: scale .5s linear;*/
+    /*animation: scale .5s linear;*/
+    /*animation-fill-mode: forwards;*/
+/*}*/
+/*@keyframes scale {*/
+    /*0%{*/
+        /*-webkit-transform: scale(1.0);*/
+        /*-moz-transform: scale(1.0);*/
+        /*-ms-transform: scale(1.0);*/
+        /*-o-transform: scale(1.0);*/
+        /*transform: scale(1.0);*/
+    /*}*/
+    /*100%{*/
+        /*-webkit-transform: scale(1.2);*/
+        /*-moz-transform: scale(1.2);*/
+        /*-ms-transform: scale(1.2);*/
+        /*-o-transform: scale(1.2);*/
+        /*transform: scale(1.2);*/
+    /*}*/
+/*}*/
+.icon-duihao{
+    color: green;
+    font-size: 20px;
+    position: absolute;
+    display: none;
+}
+.next{
+    display: none;
+}
