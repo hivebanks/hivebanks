@@ -1,0 +1,6 @@
+#textarea1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-height: 10rem;
+    overflow: auto !important;
+}

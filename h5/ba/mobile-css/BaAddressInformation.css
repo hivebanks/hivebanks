@@ -1,0 +1,17 @@
+.addressInfo-title{
+    display: block;
+}
+.withdraw-title-row, .withdraw-content-row {
+    font-size: 12px;
+}
+
+.withdraw-title-row > div:last-child {
+    text-align: left;
+}
+
+.withdraw-content-row .btn-group {
+    justify-content: flex-end;
+}
+.titleInfo{
+    font-size: 14px;
+}

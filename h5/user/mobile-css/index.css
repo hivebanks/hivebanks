@@ -1,0 +1,61 @@
+section.banner {
+    padding: 0;
+}
+
+.banner-row {
+    height: 640px;
+    position: relative;
+}
+
+.banner-row h1, .banner-row .create_btn {
+    position: absolute;
+}
+
+.banner-row h1 {
+    background: linear-gradient(to right, #82ca9c, #ffffff, #eecf7c);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 36px;
+    top: 15%;
+    left: 40%;
+    margin-left: -390px;
+}
+
+.create_btn {
+    font-size: 20px;
+    top: 30%;
+    left: 17%;
+    margin-left: -75px;
+    background: transparent;
+    border: 1px solid #4CC2E4;
+    color: #fff;
+}
+
+.create_btn:hover {
+    background: #4CC2E4;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.banner-row img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-row h1 {
+    font-size: 20px!important;
+    top: 2%!important;
+    left: 5%!important;
+    line-height: 2.5;
+    margin-left: 0!important;
+}
+
+.create_btn {
+    top: 22%!important;
+    left: 25%!important;;
+    margin-left: -75px!important;
+    background: transparent!important;
+    border: 1px solid #4CC2E4!important;
+    color: #fff!important;
+    font-size: 16px!important;
+}

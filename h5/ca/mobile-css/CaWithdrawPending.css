@@ -1,0 +1,24 @@
+.transactionsContent .withdraw-title-row, .transactionsContent .withdraw-content-row {
+    font-size: 12px;
+}
+
+.transactionsContent .withdraw-title-row > div:last-child {
+    text-align: left;
+}
+
+.transactionsContent .withdraw-content-row .btn-group {
+    justify-content: flex-end;
+}
+.balanceBox {
+    display: block;
+    background: #4CC2E41c;
+}
+
+.balanceBox p {
+    font-size: 12px;
+    margin-left: 0!important;
+}
+.end-group .form-group{
+    width: 100%;
+}
+

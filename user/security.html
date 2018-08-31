@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta id='i18n_pagename' content='index-common'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+    <title class='i18n' name='security'>security</title>
+    <link rel='stylesheet' href='../assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/pagination.css'>
+    <link rel='stylesheet' href='css/common.css'>
+    <link rel='stylesheet' type='text/css' media='only screen and (max-device-width:767px)'
+          href='mobile-css/common.css'>
+    <link rel='stylesheet' type='text/css' media='only screen and (max-device-width:767px)'
+          href='mobile-css/security.css'>
+    <link rel='stylesheet' href='css/security.css'>
+</head>
+<body>
+<!-- loading -->
+<iframe src='loading.html' class='loading' width='100%' height='100%' frameborder='0' marginheight='0' marginwidth='0'
+        scrolling='no'></iframe>
+<!--导航-->
+<nav class='navbar navbar-default' role='navigation'>
+    <div class='container'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse'
+                    data-target='#example-navbar-collapse'>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' href='../index.html'>LOGO</a>
+        </div>
+        <div class='collapse navbar-collapse' id='example-navbar-collapse'>
+            <ul class='nav navbar-nav navbar-right'>
+                <li><a href='recharge.html' class='i18n' name='recharge'>Recharge</a></li>
+                <li><a href='withdraw.html' class='i18n' name='withdraw'>Withdraw</a></li>
+                <!--<li><a href='transfer.html' class='i18n' name='transfer'>Transfer</a></li>-->
+                <li>
+                    <a href="account.html">
+                        <span><i class="iconfont icon-account"></i></span>
+                        <span class="us_account" name=""></span>
+                    </a>
+                </li>
+                <li><a href="javascript:;" class="logout i18n" name="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--安全提示信息-->
+<section class='msg'>
+    <div class='container'>
+        <div class='row msg-row'>
+            <div class='col-md-12 col-sm-12 msg-col'>
+                <p class='msgText i18n' name='informationTitle'>Safety Phrases：Check the visit url to open the secondary
+                    verification.</p>
+                <i class='iconfont icon-xialajiantou jt'></i>
+            </div>
+        </div>
+        <div class='row msg-content'>
+            <div class='col-md-12 col-sm-12'>
+                <p><i class='iconfont icon-iconset0211'></i><span class='i18n' name='informationOne'>Do not install any browser plug-ins that are claimed and
+                    related.</span></p>
+                <p><i class='iconfont icon-iconset0211'></i><span class='i18n' name='informationTwo'>Don’t reveal password information and Google verification codes and Google keys to anyone.</span>
+                </p>
+                <p><i class='iconfont icon-iconset0211'></i><span class='i18n' name='informationThree'>Don't transfer money to anyone who claims to be a staff member.</span>
+                </p>
+                <p><i class='iconfont icon-iconset0211'></i><span class='i18n' name='informationFour'>Be sure to pay attention to safety and protect yourself.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--面包屑-->
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-12 col-sm-12'>
+            <ol class='breadcrumb'>
+                <li><a href='account.html' class='i18n' name='account'>Account</a></li>
+                <li class='active i18n' name='security'>Security</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--安全信息-->
+<section class='sections content section-top-2'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12'>
+                <h3 class='pcTitle i18n' name='security'>Security</h3>
+                <h5 class='phoneTitle i18n' name='security'>Security</h5>
+                <p class='note i18n' name='note'>Please do not disclose SMS and verification code to anyone, including
+                    customer service.</p>
+                <div class='leave-box flex center ty-color'>
+                    <p class='i18n font-weight-400' name='securityLevel'>Security Level</p>:
+                    <div class='leave'>
+                        <span class='levelText'>Lv.<span class='levelNum'>0</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row iconfontRow verifyRow'>
+            <div class='col-md-6 col-sm-12'>
+                <div class='verify phoneBox flex space-between center'>
+                    <div>
+                        <i class='iconfont icon-iphone'></i>
+                        <i class='iconfont icon-gantanhao symbol redIcon phoneIcon'></i>
+                    </div>
+                    <div class='thisInfoBox'>
+                        <p class='thisInfoP i18n' name="phoneBind">PHONE</p><span class='ty-color i18n phoneTime' name='notBind'>Not Bind</span>
+                        <p class='i18n' name='securityBindInfo'>Used for withdrawals and security modifications</p>
+                    </div>
+                    <a href='phoneBind.html' class='btn btn-success bind-btn phoneBind i18n' name='bind' id='phoneNum'>Bind</a>
+                    <a href='phoneModify.html' class='btn btn-success phoneModify modify bind-btn i18n' name='modify'
+                       id='phone'>Modify</a>
+                </div>
+                <div class='verify fundPasswordBox flex space-between center'>
+                    <div>
+                        <i class='iconfont icon-hash'></i>
+                        <i class='iconfont icon-gantanhao symbol redIcon fundPasswordIcon'></i>
+                    </div>
+                    <div class='thisInfoBox'>
+                        <p class='thisInfoP i18n' name="fundPassword">Fund Password</p><span class='ty-color i18n fundPasswordTime' name='notBind'>Not Bind</span>
+                        <p class='i18n' name='securityBindInfo'>Used for withdrawals and security modifications</p>
+                    </div>
+                    <a href='javascript:;' class='btn btn-success bind-btn fundPasswordBind i18n' name='bind'
+                       id='hashNum'>Bind</a>
+                    <a href='javascript:;' class='btn btn-success fundPasswordModify modify bind-btn i18n' name='modify'
+                       id='hash'>Modify</a>
+                </div>
+
+                <div class='verify googleBox flex space-between center'>
+                    <div>
+                        <i class='iconfont icon-Google'></i>
+                        <i class='iconfont icon-gantanhao symbol redIcon googleIcon'></i>
+                    </div>
+                    <div class='thisInfoBox'>
+                        <p class='thisInfoP'>Google</p><span class='ty-color i18n googleTime' name='notBind'>Not Bind</span>
+                        <p class='i18n' name='securityBindInfo'>Used for withdrawals and security modifications</p>
+                    </div>
+                    <a href='googleBind.html' class='btn btn-success bind-btn googleBind i18n' name='bind' id='modifyBind'>Bind</a>
+                    <!--<a href='javascript:;' class='btn btn-success googleModify modify bind-btn i18n' name='modify'-->
+                       <!--id='googleModify'>Modify</a>-->
+                </div>
+            </div>
+
+            <div class='col-md-6 col-sm-12'>
+                <div class='verify authenticationBox flex space-between center'>
+                    <div>
+                        <i class='iconfont icon-digital'></i>
+                        <i class='iconfont icon-gantanhao symbol redIcon authenticationIcon'></i>
+                    </div>
+                    <div class='thisInfoBox'>
+                        <p class='thisInfoP i18n' name="authentication">Authentication</p><span class='authenticationTime ty-color i18n' name='notAuthentication'>Not Authentication</span>
+                        <p class='i18n' name='securityBindInfo'>Used for withdrawals and security modifications</p>
+                    </div>
+                    <a href='authentication.html' class='btn btn-success bind-btn authenticationBind i18n' name='bind'>Authentication</a>
+                    <a href='javascript:;' class='btn btn-success digitalModify authentication modify bind-btn i18n' name='modify'
+                       id='digital'>Modify</a>
+                </div>
+                <div class='verify emailBox flex space-between center'>
+                    <div>
+                        <i class='iconfont icon-1'></i>
+                        <i class='iconfont icon-gantanhao symbol redIcon emailIcon'></i>
+                    </div>
+                    <div class='thisInfoBox'>
+                        <p class='thisInfoP i18n' name="emailBind">Email</p><span
+                            class='ty-color i18n emailTime' name='notBind'>Not Bind</span>
+                        <p class='i18n' name='securityBindInfo'>Used for withdrawals and security modifications</p>
+                    </div>
+                    <a href='emailBind.html' class='btn btn-success emailBind bind-btn i18n' name='bind' id='emailBind'>Bind</a>
+                    <a href='emailModify.html' class='btn btn-success emailModify modify bind-btn i18n' name='modify'
+                       id='emailModify'>Modify</a>
+                </div>
+
+                <div class='verify ipBox flex space-between center'>
+                    <div>
+                        <i class='iconfont icon-ip'></i>
+                        <i class='iconfont icon-gantanhao symbol redIcon'></i>
+                    </div>
+                    <div class='thisInfoBox'>
+                        <p class='thisInfoP'>IP</p><span class='ty-color i18n' name='notBind'>Not Bind</span>
+                        <p class='i18n' name='securityBindInfo'>Used for withdrawals and security modifications</p>
+                    </div>
+                    <a href='javascript:;' class='btn btn-success bind-btn ipBind i18n' name='bind'>Bind</a>
+                    <a href='javascript:;' class='btn btn-success ipModify modify bind-btn i18n' name='modify' id='ip'>Modify</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 手机号码未绑定 -->
+<div class="modal fade" id="goBindCellPhone" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h3 class="modal-title pcTitle i18n" name="pleaseBindPhone">手机号码未绑定</h3>
+                <h5 class="modal-title phoneTitle i18n" name="pleaseBindPhone">手机号码未绑定</h5>
+            </div>
+            <div class="modal-footer">
+                <a href="phoneBind.html"
+                   class="btn btn-success bingPhoneBtn i18n"
+                   name="bind">绑定</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--历史记录-->
+<section class='sections'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12'>
+                <h3 class='pcTitle i18n' name='loginRecord'>Login Record</h3>
+                <h5 class='phoneTitle i18n' name='loginRecord'>Login Record</h5>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12'>
+                <div class='log-box table-responsive'>
+                    <table class='tab table table-hover table-condensed'>
+                        <thead>
+                        <tr>
+                            <th class='i18n' name='loginType'>Login Type</th>
+                            <th class='i18n' name='time'>Time</th>
+                            <th class='i18n' name='ipAddress'>IP Address</th>
+                            <th class='i18n' name='location'>Location</th>
+                        </tr>
+                        </thead>
+                        <tbody id='loginCode'>
+
+                        </tbody>
+                    </table>
+                    <div class="eg">
+                        <span class="font-size-14 i18n" name="total">总共</span>:
+                        <span class="font-size-14 font-weight-400 totalPage"></span>
+                        <span class="font-size-14 i18n" name="page">页</span>&nbsp;|
+                        <span class="font-size-14 i18n" name="current">当前第</span>
+                        <span class="currentPage font-size-14 font-weight-400">1</span>
+                        <span class="font-size-14 i18n" name="page">页</span>
+                        <div class="m-style M-box4 login_log_code"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--页脚-->
+<section class='sections footer'>
+    <div class='container'>
+
+        <div class='row left-row'>
+            <div class='col-md-7 col-sm-12'>
+                <div class='footerTL'>
+                    <ul class='flex center'>
+                        <li><a href='/' class='i18n' name='introduction'>Introduction</a></li>
+                        <li><a href='/' class='i18n' name='cashAgency'>Cash Agency</a></li>
+                        <li><a href='/' class='i18n' name='bitcoinAgency'>Bitcoin Agency</a></li>
+                        <li><a href='/' class='i18n' name='partners'>Partners</a></li>
+                        <li><a href='/' class='i18n' name='about'>About</a></li>
+                        <li><a href='/' class='i18n' name='contact'>Contact</a></li>
+                        <li><a href="faultReport.html" class="i18n" name="faultReport">fault report</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='col-md-5 col-sm-12'>
+                <div class='footerTR flex space-between center'>
+                    <i class='iconfont icon-twitter'></i>
+                    <i class='iconfont icon-facebook'></i>
+                    <i class='iconfont icon-reddit'></i>
+                    <i class='iconfont icon-telegram'></i>
+                    <i class='iconfont icon-instagram'></i>
+                    <i class='iconfont icon-medium'></i>
+                    <i class='iconfont icon-weibo'></i>
+                    <i class='iconfont icon-qq'></i>
+                    <i class='iconfont icon-weixin'></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row footer-copyright'>
+            <p class='i18n' name='allRightsReserved'>©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+
+<div class='scrollup'>
+    <a href='#'><i class='iconfont icon-top'></i></a>
+</div>
+
+<script src='../assets/js/jquery-3.2.1.min.js'></script>
+<script src='language/jquery.i18n.properties.js'></script>
+<script src='language/language.js'></script>
+<script src='../assets/js/bootstrap.min.js'></script>
+<script src='../assets/js/layer/layer.js'></script>
+<script src='../assets/js/pagination.js'></script>
+<script src='js/main.js'></script>
+<script src='js/common.js'></script>
+<script src='js/security.js'></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.transfer > ul > li > span {
+    width: 100%!important;
+}
+
+.transfer > ul > li > .payer {
+    width: 20%!important;
+}
+
+.orderInformation {
+    font-size: 12px;
+    line-height: 2rem;
+}
+.transferInfo {
+    padding: 2rem 0!important;
+}
+.transfer input {
+     width: 100%!important;;
+}
+

@@ -1,0 +1,30 @@
+.payMoney{
+    font-size: 14px;
+}
+.pay-row input{
+    font-size:12px;
+}
+.form-box>ul>li{
+    height: auto;
+}
+.address-box input{
+    width: 100%;
+}
+.form-box>ul>li>span{
+    width: 100%;
+}
+.form-box>ul>li>input{
+    width: 100%;
+}
+.caRecharge-row{
+    padding: 0;
+    box-shadow: unset;
+}
+.orderInformation{
+    font-size: 12px;
+    line-height: 2rem;
+}
+.RechargeWay {
+    width: 30%;
+    margin-bottom: 1rem;
+}

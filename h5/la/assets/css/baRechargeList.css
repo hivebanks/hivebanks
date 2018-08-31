@@ -1,0 +1,19 @@
+input[type=text] {
+    margin: 0 !important;
+}
+
+.dropdown-content {
+    min-width: 165px !important;
+    left: -0px !important;
+    /*top: 0px !important;*/
+}
+.input-field{
+    margin-top: 0;
+}
+.input-field input {
+    height: 2.5rem !important;
+}
+
+h5 {
+    margin-bottom: 0
+}

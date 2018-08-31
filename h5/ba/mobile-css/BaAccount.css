@@ -1,0 +1,20 @@
+
+.account-wrap li > span {
+    display: inline-block;
+}
+
+.account-wrap li > span:first-child {
+    width: 60%!important;
+}
+.phone-flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+}
+.phone-flex {
+    justify-content: space-between;
+    align-items: center;
+}
+

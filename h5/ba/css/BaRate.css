@@ -1,0 +1,50 @@
+.canHandleAmount{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.canHandleAmount p{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.canHandleAmount .canHandleInnerBox{
+    background: #82ca9c1c;
+    padding: 1%;
+    border-radius: 0.5rem;
+}
+.BOCRateChannel{
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    padding: 5%;
+    border-radius: 1rem;
+}
+
+.BOCRateChannel .form-group .cny{
+    border: 0.1px solid #999999;
+    padding: 0.7% 5%;
+}
+.BOCRateChannel .form-group .icon-transfer{
+    font-size: 20px;
+}
+.icbc{
+    margin-top: 5%;
+}
+
+.minimumLimit h6,.Period h6,.defaultRate,.user_level h6{
+    width: 29%;
+    font-weight: unset;
+}
+.minimumLimit .form-group,.Period .form-group,.startRate .input-group{
+    width: 71%;
+}
+.showRate{
+    margin-bottom: 5%;
+}
+.margin-right-15{
+    margin-right: 15%;
+    margin-bottom: 0;
+}
+.setAmount{
+    color: #9e9e9e;
+}
+.currentRechargeRate, .rechargeNotSet, .currentRechargeRate, .withdrawNotSet{
+    display: none;
+}

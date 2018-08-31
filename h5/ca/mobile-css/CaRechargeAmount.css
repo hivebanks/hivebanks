@@ -1,0 +1,10 @@
+.rechargeInput,.rechargeInputSum{
+    width: 100%;
+    border: 0.1px solid #999999;
+}
+.icon{
+    display: none;
+}
+.rechargeInfoRow{
+    display: block;
+}

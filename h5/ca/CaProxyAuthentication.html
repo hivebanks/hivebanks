@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="index-common">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/CaProxyAuthentication.css">
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="mobile-css/common.css">
+    <link rel="stylesheet" media="only screen and (max-width:767px)" href="mobile-css/CaProxyAuthentication.css">
+    <title>Cash Agency Account</title>
+</head>
+<body>
+<!-- loading -->
+<iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+        scrolling="no"></iframe>
+<!--导航-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="CaAccount.html">Cash Agency</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="CaRechargePending.html" class="i18n" name="rechargePending">Recharge Processing</a></li>
+                <li><a href="CaWithdrawPending.html" class="i18n" name="withdrawPending">Withdraw Processing</a></li>
+                <li><a href="CaRate.html" class="i18n" name="rate">Rate</a></li>
+                <li>
+                    <a href="CaAccount.html">
+                        <span><i class="iconfont icon-account"></i></span>
+                        <span class="ca_account" name=""></span>
+                    </a>
+                </li>
+                <li><a href="javascript:;" class="logout i18n" name="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--认证表单-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!--<h3>Bank Of China Authentication</h3>-->
+                <div class="newImgBox">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row BankAuthenticationRow">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+                <div class="form-group-box">
+                    <form class="form-horizontal">
+                        <div class="form-group flex center">
+                            <lable for="BankCard" class="col-md-3 col-sm-12">
+                                <span class="i18n" name="bankCard">Bank Card</span>:
+                            </lable>
+                            <div class="col-md-9 col-sm-12">
+                                <input type="text" id="BankCard" class="form-control">
+                            </div>
+
+                        </div>
+                        <div class="form-group flex center margin-top-5">
+                            <lable for="Name" class="col-md-3 col-sm-12">
+                                <span class="i18n" name="name">Name</span>:
+                            </lable>
+                            <div class="col-md-9 col-sm-12">
+                                <input type="text" id="Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group flex center margin-top-5">
+                            <lable for="IDCard" class="col-md-3 col-sm-12">
+                                <span class="i18n" name="idNumber">ID Number</span>:
+                            </lable>
+                            <div class="col-md-9 col-sm-12">
+                                <input type="text" id="IDCard" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group flex center margin-top-5">
+                            <lable for="Password" class="col-md-3 col-sm-12">
+                                <span class="i18n" name="password">Password</span>:
+                            </lable>
+                            <div class="col-md-9 col-sm-12">
+                                <input type="password" id="Password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-md-offset-3 col-sm-12 margin-top-5">
+                            <a href="javascript:;" class="btn authenticationEnable addBankBtn btn-success i18n" name="enable"></a>
+                            <!--<button class="btn btn-success authenticationEnable addBankBtn i18n" name="enable">Enable</button>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--页脚-->
+<section class="sections footer">
+    <div class="container">
+
+        <div class="row left-row">
+            <div class="col-md-7 col-sm-12">
+                <div class="footerTL">
+                    <ul class="flex center">
+                        <li><a href="/" class="i18n" name="introduction">Introduction</a></li>
+                        <li><a href="/" class="i18n" name="news">News</a></li>
+                        <li><a href="/" class="i18n" name="cashAgency">CA</a></li>
+                        <li><a href="/" class="i18n" name="bitcoinAgency">BA</a></li>
+                        <li><a href="/" class="i18n" name="partners">Partners</a></li>
+                        <li><a href="/" class="i18n" name="about">About</a></li>
+                        <li><a href="/" class="i18n" name="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="footerTR flex end center">
+                    <i class="iconfont icon-twitter"></i>
+                    <i class="iconfont icon-facebook"></i>
+                    <i class="iconfont icon-reddit"></i>
+                    <i class="iconfont icon-telegram"></i>
+                    <i class="iconfont icon-instagram"></i>
+                    <i class="iconfont icon-medium"></i>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                    <div>
+                        <select class="form-control input-sm" id="language">
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文简体</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <p class="i18n" name="allRightsReserved">©2017-2018 Fc.com All Rights Reserved</p>
+        </div>
+    </div>
+</section>
+<!--🔝-->
+<div class="scrollup">
+    <a href="#"><i class="iconfont icon-top"></i></a>
+</div>
+
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
+<script src="language/jquery.i18n.properties.js"></script>
+<script src="language/language.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/layer/layer.js"></script>
+<script src="js/main.js"></script>
+<script src="../assets/js/sha.js"></script>
+<script src="js/common.js"></script>
+<script src="js/CaProxyAuthentication.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+.transactionsContent .recharge-title-row, .transactionsContent .recharge-content-row {
+    font-size: 12px;
+}
+
+.transactionsContent .recharge-title-row > div:last-child {
+    text-align: left;
+}
+
+.transactionsContent .recharge-content-row > div:first-child {
+    float: left;
+}
+.phone-col-12{
+    width: 100%;
+}
+.phone-line-height{
+    line-height: 3rem;
+}
+.balanceBox {
+    display: block;
+    background: #4CC2E41c;
+}
+
+.balanceBox p {
+    font-size: 12px;
+    margin-left: 0!important;
+}
