@@ -5,7 +5,7 @@
  * Date: 2018/8/27
  * Time: 下午3:56
  */
-namespace Qiniu;
+namespace Qiniu\Auth;
 ini_set("display_errors", "On");
 
 error_reporting(E_ALL | E_STRICT);
