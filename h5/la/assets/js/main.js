@@ -25,12 +25,6 @@ $(function () {
     });
 });
 
-//获取基准类型
-// function BaseCurrency() {
-//     var base_currency = GetCookie('base_currency');
-//     $('.base_currency').text(base_currency);
-// }
-
 // 图标链接
 var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_814072_a7eq7eitjun.css">');
 link.appendTo($('head')[0]);
@@ -50,6 +44,16 @@ window.onload = function () {
         loading.classList.remove('active');
     }
 };
+
+function GetLaNameCookie(name) {
+    var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+    if (arr != null){
+        return unescape(arr[2]);
+    }else {
+        return null;
+    }
+}
+GetLaNameCookie('la_name');
 
 //email地址
 function EmailList() {
