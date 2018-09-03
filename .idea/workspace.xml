@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/api/user/reg_email.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/reg_email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/inc/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/inc/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/inc/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/inc/upload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reg_email.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reg_email.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+            <state relative-caret-position="483">
+              <caret line="196" column="12" selection-start-line="196" selection-start-column="9" selection-end-line="196" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/la/admin/admin/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -41,8 +51,20 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/inc/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="270">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/inc/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#240#255#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,8 +83,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/api/la/db/la_func_config.php" />
-        <option value="$PROJECT_DIR$/api/inc/config.php" />
         <option value="$PROJECT_DIR$/api/user/reg_email.php" />
+        <option value="$PROJECT_DIR$/api/inc/config.php" />
+        <option value="$PROJECT_DIR$/api/inc/upload.php" />
       </list>
     </option>
   </component>
@@ -101,6 +124,12 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="la" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -108,7 +137,68 @@
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="la" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Qiniu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Qiniu" type="462c0819:PsiDirectoryNode" />
+              <item name="Cdn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Qiniu" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Qiniu" type="462c0819:PsiDirectoryNode" />
+              <item name="Processing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Qiniu" type="462c0819:PsiDirectoryNode" />
+              <item name="Rtc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Qiniu" type="462c0819:PsiDirectoryNode" />
+              <item name="Storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
@@ -150,12 +240,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535698033077</updated>
-      <workItem from="1535698034382" duration="1339000" />
+      <workItem from="1535698034382" duration="2812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1339000" />
+    <option name="totallyTimeSpent" value="2812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -201,17 +291,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/inc/config.php">
+    <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="483">
+          <caret line="196" column="12" selection-start-line="196" selection-start-column="9" selection-end-line="196" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
+    <entry file="file://$PROJECT_DIR$/api/la/admin/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+        <state relative-caret-position="420">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/inc/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/inc/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#240#255#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

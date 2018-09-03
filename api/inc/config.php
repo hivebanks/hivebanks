@@ -17,7 +17,6 @@ define('BASE_CURRENCY',get_base_currency());
 // 配置信息类
 class Config
 {
-
     const OSS_DOMAIN = "http://hbapi.fnying.com";
     const OSS_FILE_DOMAIN = "http://hbapi.fnying.com";
     const OSS_BUCKET_NAME = 'hivebanks';
