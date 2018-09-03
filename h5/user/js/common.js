@@ -51,8 +51,7 @@ function getRootPath() {
     var localhostPath = curWwwPath.substring(0, pos);
     //获取带"/"的项目名
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
-    return(localhostPath + projectName);
-    console.log(localhostPath);
+    return localhostPath;
 }
 var url = getRootPath();
 console.log(url);
