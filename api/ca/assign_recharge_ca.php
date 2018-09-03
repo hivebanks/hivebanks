@@ -20,7 +20,6 @@ GET参数
   base_rate       汇率
   set_time        有效时间
   us_level        用户等级要求
-
 说明
 */
 
