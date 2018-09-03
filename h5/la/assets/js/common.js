@@ -57,7 +57,7 @@ var url = getRootPath();
 
 //获取失败错误码提示
 function GetErrorCode(code) {
-    $.getJSON(url+"/h5/assets/json/errcode.json", function (response) {
+    $.getJSON(url+"/assets/json/errcode.json", function (response) {
         $.each(response, function (i, val) {
             if (response[i].code_key == code) {
                 layer.msg('<p class="i18n" name="'+ code +'">' + response[i].code_value + '</p>');
