@@ -27,6 +27,7 @@ $(function () {
             if(response.errcode == '0'){
                 console.log(response.rows);
                 console.log(response.rows.user_info.user);
+                return;
                 ActiveClick(_this, _text);
                 LayerFun('loginSuccessful');
                 SetCookie('la_token', response.token);
