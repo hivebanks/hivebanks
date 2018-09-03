@@ -56,7 +56,7 @@ echo '<!DOCTYPE html>
                                 <tr>
                                     <th scope="row"><label for="pwd" class="i18n" name="pwd"></label></th>
                                     <td>
-                                        <input id="pwd" name="pwd" type="text" size="25" class="validate">
+                                        <input id="pwd" name="pwd" type="password" size="25" class="validate">
                                     </td>
                                     <td class="padding-left-5 i18n" name="yourPwd"></td>
                                 </tr>
