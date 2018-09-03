@@ -176,9 +176,10 @@ $(function () {
 
     //身份证上传绑定
     //获取配置文件
+    var url = getRootPath();
     var config_api_url = '';
     $.ajax({
-        url: '../../assets/json/config_url.json',
+        url: url+"/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -194,7 +195,7 @@ $(function () {
     function UpLoadImg(formData) {
         var objData = new Object();
         $.ajax({
-            url: config_api_url + 'api/upload/upload_file.php',
+            url: config_api_url + '/api/upload/upload_file.php',
             header: {"Access-Control-Allow-Origin": "*"},
             type: 'POST',
             data: formData,

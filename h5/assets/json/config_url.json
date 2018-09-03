@@ -1,0 +1,7 @@
+{
+  "api_url": "http://hbapi.fnying.com",
+  "benchmark_type": "BTC",
+  "ca_currency": "RMB",
+  "userLanguage": "en",
+  "h5_url": "http://hb.fnying.com"
+}

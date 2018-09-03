@@ -9,6 +9,7 @@ require_once '../inc/judge_format.php';
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
+
 /*
 ========================== 文本绑定 ==========================
 GET参数

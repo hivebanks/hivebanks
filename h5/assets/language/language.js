@@ -154,7 +154,6 @@ $(function () {
     /* 选择语言 */
     $("#language").on('change', function () {
         var language = $(this).children('option:selected').val();
-        console.log("language" + language);
         getCookie("userLanguage", language, {
             expires: 30,
             path: '/'

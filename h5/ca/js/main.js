@@ -225,14 +225,3 @@ function LayerFun(type) {
     layer.msg('<span class="i18n" name="'+ type +'"></span>');
     execI18n();
 }
-
-function GetErrorCode(code) {
-    $.getJSON('../../assets/json/errcode.json', function (response){
-        $.each(response, function (i, val){
-            if(response[i].code == code){
-                layer.msg('<p class="" name="">'+ response[i].message +'</p>');
-                // execI18n();
-            }
-        })
-    })
-}

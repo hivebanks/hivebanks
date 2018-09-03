@@ -25,9 +25,12 @@ $(function () {
         if(DisableClick(_this)) return;
         LaLogin(user, password, pass_word_hash, function (response) {
             if(response.errcode == '0'){
+                console.log(response.rows);
+                console.log(response.rows.user_info.user);
                 ActiveClick(_this, _text);
                 LayerFun('loginSuccessful');
                 SetCookie('la_token', response.token);
+                SetCookie('la_name', response.rows.user_info.user);
                 window.location.href = 'config.html';
             }
         }, function (response) {

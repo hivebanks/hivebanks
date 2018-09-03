@@ -1,8 +1,8 @@
 $(function () {
-    //获取token
+    //Get token
     var token = GetCookie('la_token');
 
-    //获取提现地址审核列表
+    //Get the withdrawal address review list
     var api_url = 'kyc_la_ba_address_list.php';
     GetWithdrawAddressKyc(api_url, token, function (response) {
         if (response.errcode == '0') {
@@ -23,8 +23,8 @@ $(function () {
                     '<td>' +
                     '<span class="bind_id none">'+ data[i].bind_id +'</span>' +
                     '<div>' +
-                    '<button class="btn btn-success btn-sm withdrawAddressConfirmBtn i18n" name="pass">通过</button>' +
-                    '<button class="btn btn-danger btn-sm margin-left-5 withdrawAddressRefusesBtn i18n" name="refuse">拒绝</button>' +
+                    '<button class="btn btn-success btn-sm withdrawAddressConfirmBtn i18n" name="pass">pass</button>' +
+                    '<button class="btn btn-danger btn-sm margin-left-5 withdrawAddressRefusesBtn i18n" name="refuse">refuse</button>' +
                     '</div>' +
                     '</td>' +
                     '</tr>'
@@ -38,7 +38,7 @@ $(function () {
         return;
     });
 
-    //通过ba提现地址
+    //Cash ba withdrawal address
     $(document).on('click', '.withdrawAddressConfirmBtn', function () {
         var _this = $(this);
         var ba_id = $(this).parents('.withdrawAddressItem').find('.ba_id').text();
@@ -56,7 +56,7 @@ $(function () {
         })
     });
 
-    //拒绝ba提现地址
+    //Reject ba withdrawal address
     $(document).on('click', '.withdrawAddressRefusesBtn', function () {
         var _this = $(this);
         var ba_id = $(this).parents('.withdrawAddressItem').find('.ba_id').text();

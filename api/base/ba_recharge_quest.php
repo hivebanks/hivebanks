@@ -17,7 +17,6 @@ GET参数
 返回
   errcode = 0     请求成功
   bit_address     充值地址
-
 说明
 */
 

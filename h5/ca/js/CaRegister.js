@@ -7,7 +7,7 @@ $(function () {
             if(data[0].option_name == 'ca_lock' && data[0].is_open == '0'){
                 $('.form-box').remove();
                 $('.login-wrap').remove();
-                $('.form_col').html('<h2 style="color: #fff" class="i18n" name="unableRegister">暂时无法注册，请等待管理员开启注册权限...</h2>');
+                $('.form_col').html('<h2 style="color: #fff" class="i18n font-weight-400" name="unableRegister">暂时无法注册，请等待管理员开启注册权限...</h2>');
                 execI18n();
                 return;
             }

@@ -7,9 +7,10 @@ $(function () {
 
     //下载订单
     //获取配置文件
+    var url = getRootPath();
     var config_api_url = '', config_h5_url = '';
     $.ajax({
-        url: '../../assets/json/config_url.json',
+        url: url+"/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -22,7 +23,7 @@ $(function () {
     });
 
     $('.download').click(function () {
-        window.location.href = config_api_url + 'api/ba/transaction_order_download.php?token=' + encodeURIComponent(token);
+        window.location.href = config_api_url + '/api/ba/transaction_order_download.php?token=' + encodeURIComponent(token);
     });
 
     // 获取用户基本信息

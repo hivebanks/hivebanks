@@ -1,21 +1,18 @@
 $(function () {
-    // $('select').material_select();
     var token = GetCookie('la_token');
-
     var base_currency = GetCookie('base_currency');
-    // $('.base_currency').text(base_currency);
 
-    //获取ba信息
+    //Get ba information
     var limit = 10, offset = 0, n = 0;
     var ba_id = GetQueryString('ba_id'), ba_type = GetQueryString('ba_type'), tr = '';
     $('.ba_id').text(ba_id);
 
-    //判断是否为基准ba
+    //Determine whether it is the benchmark ba
     if(ba_type != base_currency){
         $('.edit').remove();
         $('.reviseAmount').remove();
     }
-
+    //Get basic information
     GetBaInfo(ba_id, function (response) {
         if (response.errcode == '0') {
             var data = response.rows, bind_type = '', bind_name = '';
@@ -31,6 +28,7 @@ $(function () {
             }
             $.each(data, function (i, val) {
                 if (typeof data[i] != 'object') return;
+
                 //bind_type
                 if (data[i].bind_type == 'hash') {
                     bind_type = 'hashBind';
@@ -61,7 +59,6 @@ $(function () {
                 if (data[i].bind_name == 'name') {
                     bind_name = 'name';
                 }
-
                 tr += '<tr>' +
                     '<td><span>' + data[i].bind_id + '</span></td>' +
                     '<td><span class="i18n" name="' + bind_name + '">' + data[i].bind_name + '</span></td>' +
@@ -82,13 +79,12 @@ $(function () {
         }
     });
 
-
-    //调整保证金
+    //Adjustment margin
     $('.edit').click(function () {
         $('.reviseAmount').show();
     });
 
-    //确认调整保证金
+    //Confirm adjustment margin
     $('.reviseAmountBtn').click(function () {
         var base_amount = $('#reviseAmount').val(), pass_word_hash = hex_sha1($('#password').val());
         if (base_amount.length <= 0) {
@@ -114,10 +110,8 @@ $(function () {
         })
     });
 
-    //取消调整保证金
+    //Cancel adjustment margin
     $('.cancelReviseAmountBtn').click(function () {
         $('.reviseAmount').hide();
     });
-
-
 });

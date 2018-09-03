@@ -1,14 +1,14 @@
-// 设置cookies函数
+// Set the cookies function
 function SetCookie(name, value) {
     var now = new Date();
     var time = now.getTime();
-    // 有效期2小时
+    // Valid for 2 hours
     time += 3600 * 1000 * 2;
     now.setTime(time);
     document.cookie = name + "=" + escape(value) + '; expires=' + now.toUTCString() + ';path=/';
 }
 
-// 取cookies函数
+// Take the cookies function
 function GetCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
@@ -18,7 +18,7 @@ function GetCookie(name) {
     }
 }
 
-// 删除cookie函数
+// Delete cookie function
 function DelCookie(name) {
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
@@ -27,7 +27,7 @@ function DelCookie(name) {
 }
 
 
-// 取得URL参数
+// Get URL parameters
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
@@ -35,22 +35,50 @@ function GetQueryString(name) {
     return null;
 }
 
-// Email格式检查
+// Email format check
 function IsEmail(s) {
     var patrn = /^(?:\w+\.?)*\w+@(?:\w+\.)*\w+$/;
     return patrn.exec(s);
 }
 
+function getRootPath() {
+    //获取当前网址
+    var curWwwPath = window.document.location.href;
+    //获取主机地址之后的目录
+    var pathName = window.document.location.pathname;
+    var pos = curWwwPath.indexOf(pathName);
+    //获取主机地址
+    var localhostPath = curWwwPath.substring(0, pos);
+    //获取带"/"的项目名
+    var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+    return localhostPath;
+}
+var url = getRootPath();
+
+//获取失败错误码提示
+function GetErrorCode(code) {
+    $.getJSON(url+"/assets/json/errcode.json", function (response) {
+        $.each(response, function (i, val) {
+            if (response[i].code_key == code) {
+                layer.msg('<p class="i18n" name="'+ code +'">' + response[i].code_value + '</p>');
+                execI18n();
+                return;
+            }
+        })
+    })
+}
+
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: '../../../assets/json/config_url.json',
+    url: url+"/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
     success: function (data) {
         config_api_url = data.api_url;
         config_h5_url = data.h5_url;
-        $('.base_currency').text(data.benchmark_type);
+        var benchmark_type = data.benchmark_type.toUpperCase();
+        $('.base_currency').text(benchmark_type);
         if(!userLanguage){
             SetCookie('userLanguage', data.userLanguage);
         }else {
@@ -64,7 +92,7 @@ $.ajax({
 
 // 调用API LA配置函数
 function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/configure/';
+    var api_site = config_api_url + '/api/la/admin/configure/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -75,18 +103,18 @@ function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -94,7 +122,7 @@ function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
 
 // 调用API LA函数
 function CallLaInfoApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/';
+    var api_site = config_api_url + '/api/la/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -124,7 +152,7 @@ function CallLaInfoApi(api_url, post_data, suc_func, error_func) {
 
 // 调用API 报表函数
 function CallReportApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/report_form/';
+    var api_site = config_api_url + '/api/la/admin/report_form/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -154,7 +182,7 @@ function CallReportApi(api_url, post_data, suc_func, error_func) {
 
 // 调用API管理函数
 function CallApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/manage/';
+    var api_site = config_api_url + '/api/la/admin/manage/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -184,7 +212,7 @@ function CallApi(api_url, post_data, suc_func, error_func) {
 
 // 调用API Admin函数
 function CallLaAdminApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/admin/';
+    var api_site = config_api_url + '/api/la/admin/admin/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -214,7 +242,7 @@ function CallLaAdminApi(api_url, post_data, suc_func, error_func) {
 
 // 调用API查询交易共通函数
 function CallTransactionApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/transaction/';
+    var api_site = config_api_url + '/api/la/admin/transaction/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -244,7 +272,7 @@ function CallTransactionApi(api_url, post_data, suc_func, error_func) {
 
 // 调用API查询KYC审核列表函数
 function CallKycApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/kyc/';
+    var api_site = config_api_url + '/api/la/admin/kyc/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };

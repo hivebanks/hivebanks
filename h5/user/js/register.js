@@ -6,7 +6,7 @@ $(function () {
             var data = response.rows;
             if (data[0].option_name == 'user_lock' && data[0].is_open == '0') {
                 $('.form_col').remove();
-                $('.sec-row').html('<h2 style="color: #fff" class="i18n" name="unableRegister"></h2>');
+                $('.sec-row').html('<h2 style="color: #fff" class="i18n font-weight-400" name="unableRegister"></h2>');
                 execI18n();
                 return;
             }
