@@ -18,6 +18,7 @@ GET参数
 说明
 */
 
+
 php_begin();
 
 $args = array('token','sub_id','end_type','submit_name','submit_info');
