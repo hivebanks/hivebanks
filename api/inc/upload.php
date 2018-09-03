@@ -5,7 +5,7 @@
  * Date: 2018/8/27
  * Time: 下午3:56
  */
-//namespace plugin\Qiniu;
+namespace inc;
 ini_set("display_errors", "On");
 
 error_reporting(E_ALL | E_STRICT);
@@ -14,12 +14,12 @@ error_reporting(E_ALL | E_STRICT);
 // 引入鉴权类
 
 
+require_once "../plugin/Qiniu";
 
-
-use \Qiniu\Auth;
+use Qiniu\Auth;
 //use Qiniu\Storage\BucketManager;
 //// 引入上传类
-use \Qiniu\Storage\UploadManager;
+//use \Qiniu\Storage\UploadManager;
 // 需要填写你的 Access Key 和 Secret Key
 $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
