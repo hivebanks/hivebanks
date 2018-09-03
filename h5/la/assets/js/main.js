@@ -53,7 +53,7 @@ function GetLaNameCookie(name) {
         return null;
     }
 }
-GetLaNameCookie('la_name');
+$('.la_name').text(GetLaNameCookie('la_name'));
 
 //email地址
 function EmailList() {
