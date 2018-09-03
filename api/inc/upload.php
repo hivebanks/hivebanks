@@ -5,7 +5,7 @@
  * Date: 2018/8/27
  * Time: 下午3:56
  */
-//namespace ;
+namespace Qiniu;
 ini_set("display_errors", "On");
 
 error_reporting(E_ALL | E_STRICT);
@@ -26,7 +26,7 @@ $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
 
 // 构建鉴权对象
-$auth = new Qiniu\Auth($accessKey, $secretKey);
+$auth = new Auth($accessKey, $secretKey);
 
 
 
