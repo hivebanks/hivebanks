@@ -54,6 +54,7 @@ function getRootPath() {
     return(localhostPath + projectName);
 }
 var url = getRootPath();
+console.log(url);
 
 //获取数据失败提示
 function GetErrorCode(code) {
