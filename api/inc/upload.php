@@ -14,10 +14,10 @@ error_reporting(E_ALL | E_STRICT);
 // 引入鉴权类
 
 
-require_once "../plugin/Qiniu/Auth.php";
-require_once "../plugin/Qiniu/Storage/UploadManager.php";
+//require_once "../plugin/Qiniu/Auth.php";
+//require_once "../plugin/Qiniu/Storage/UploadManager.php";
 
-//use Qiniu\Auth;
+use Qiniu\Auth;
 //use Qiniu\Storage\BucketManager;
 //// 引入上传类
 //use \Qiniu\Storage\UploadManager;
