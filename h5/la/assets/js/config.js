@@ -1,8 +1,8 @@
 $(function () {
-    //获取token
+    //Get token
     var token = GetCookie('la_token');
 
-    // 配置url
+    // Config url
     $('.setApiBtn').click(function () {
         var api_key = $('#api_key').val();
         if (api_key.length <= 0) {
@@ -24,7 +24,7 @@ $(function () {
         })
     });
 
-    //获取la基本信息
+    //Get la base information
     GetLaBaseInfo(token, function (response) {
         if (response.errcode == '0') {
             var data = response.row;
@@ -40,12 +40,9 @@ $(function () {
         return;
     });
 
-    // setTimeout(BaseCurrency(), 2000);
-
-
-    //获取短信接口SetEmailInterface
+    //Get SMS interface
     GetSmsInterface(token, function (response) {
-        if(response.errcode == '0'){
+        if (response.errcode == '0') {
             var data = response.row;
             $('#accessKeyId').val(data.accessKeyId);
             $('#accessKeySecret').val(data.accessKeySecret);
@@ -57,14 +54,14 @@ $(function () {
         return;
     });
 
-    //配置短信接口
+    //Configure SMS interface
     $('.smsInterfaceBtn').click(function () {
         var accessKeyId = $('#accessKeyId').val(), accessKeySecret = $('#accessKeySecret').val(),
             SignName = $('#SignName').val(), TemplateCode = $('#TemplateCode').val();
         var $this = $(this), btnText = $(this).text();
-        if(DisableClick($this)) return;
+        if (DisableClick($this)) return;
         SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, TemplateCode, function (response) {
-            if(response.errcode == '0'){
+            if (response.errcode == '0') {
                 LayerFun('successfullyModified');
                 ActiveClick($this, btnText);
             }
@@ -75,9 +72,9 @@ $(function () {
         });
     });
 
-    //获取邮箱接口配置信息
+    //Get the mailbox interface configuration information
     GetEmailInterface(token, function (response) {
-        if(response.errcode == '0'){
+        if (response.errcode == '0') {
             var data = response.row;
             $('#email_Host').val(data.Host);
             $('#email_username').val(data.Username);
@@ -90,14 +87,14 @@ $(function () {
         return;
     });
 
-    //配置邮箱接口
+    //Configure the mailbox interface
     $('.emailInterfaceBtn').click(function () {
         var Host = $('#email_Host').val(), Username = $('#email_username').val(),
             Password = $('#email_password').val(), address = $('#email_address').val(), name = $('#email_name').val();
         var $this = $(this), btnText = $(this).text();
-        if(DisableClick($this)) return;
+        if (DisableClick($this)) return;
         SetEmailInterface(token, Host, Username, Password, address, name, function (response) {
-            if(response.errcode == '0'){
+            if (response.errcode == '0') {
                 LayerFun('successfullyModified');
                 ActiveClick($this, btnText);
             }
@@ -108,7 +105,7 @@ $(function () {
         });
     });
 
-    //获取注册权限显示
+    //Get registration permission display
     function optionName(option_name, _switch) {
         if (_switch == '1') {
             $('.' + option_name + '_on').css('color', '#26a69a');
@@ -122,7 +119,7 @@ $(function () {
 
     }
 
-    //获取us/ba/ca注册权限
+    //Get us/ba/ca registration permission
     GetSwitch(token, function (response) {
         if (response.errcode == '0') {
             var data = response.rows, _switch = '';
@@ -156,7 +153,7 @@ $(function () {
 
     });
 
-    //ba/ca/us注册权限开启成功(关闭失败)函数
+    //ba/ca/us Registration permission opened successfully (closed failure) function
     function SetSwitchStyleSuc(_this) {
         _this.prop('checked', true);
         _this.siblings('.setOn').css('color', '#26a69a');
@@ -164,7 +161,7 @@ $(function () {
         _this.parents('.switchBox').find('.setType').text(_this.siblings('.setOn').text());
     }
 
-    //ba/ca/us注册权限开启失败(关闭成功)函数
+    //ba/ca/us Registration permission failed to open (closed successfully) function
     function SetSwitchStyleFail(_this) {
         _this.prop('checked', false);
         _this.siblings('.setOff').css('color', '#26a69a');
@@ -172,7 +169,7 @@ $(function () {
         _this.parents('.switchBox').find('.setType').text(_this.siblings('.setOff').text());
     }
 
-    //设置us/ba/ca注册权限
+    //Set us/ba/ca registration permission
     function SetSwitchFun(type, status, _this, typeSwitch) {
         SetSwitch(token, type, status, function (response) {
             if (response.errcode == '0') {
@@ -201,7 +198,7 @@ $(function () {
         });
     }
 
-    //设置允许ba注册
+    //Set to allow ba registration
     $('.bitRegister').change(function () {
         var _this = $(this), type = '', status = '', typeSwitch = '';
         if ($(this).is(':checked') == true) {
@@ -217,7 +214,7 @@ $(function () {
         }
     });
 
-    //设置允许ca注册
+    //Set to allow ca registration
     $('.cashRegister').change(function () {
         var _this = $(this), type = '', status = '', typeSwitch = '';
         if ($(this).is(':checked') == true) {
@@ -233,7 +230,7 @@ $(function () {
         }
     });
 
-    //设置允许user注册
+    //Set to allow user registration
     $('.userRegister').change(function () {
         var _this = $(this), type = '', status = '', typeSwitch = '';
         if ($(this).is(':checked') == true) {
@@ -249,7 +246,7 @@ $(function () {
         }
     });
 
-    //设置管理员
+    //Setup administrator
     $('.permissionBtn').click(function () {
         var pinList = '', checkedArr = $("input[type='checkbox']:checked");
         $.each(checkedArr, function (i, val) {
@@ -269,7 +266,7 @@ $(function () {
         })
     });
 
-    //获取已经设置的BA代理类型
+    //Get the BA proxy type that has been set
     function GetBaTypeFun() {
         var api_url = 'get_ba_bit_type.php', li = '';
         GetAgentType(api_url, token, function (response) {
@@ -294,14 +291,14 @@ $(function () {
 
     GetBaTypeFun();
 
-    //选择Ba代理类型
+    //Select Ba proxy type
     $('.baseBaTypeBox li').click(function () {
         var liVal = $(this).text();
         $('.baseBaTypeInput').val(liVal);
         $(this).addClass('baseLiActive').siblings().removeClass('baseLiActive');
     });
 
-    //设置BA代理类型
+    //Set the BA proxy type
     var option_key = '', option_value = '', option_src = '';
     $('.baseBaTypeBtn').click(function () {
         option_key = $('.baseBaTypeInput').val();
@@ -314,7 +311,7 @@ $(function () {
         $('.baseBaTypeBtnConfirm').removeClass('ca');
     });
 
-    //删除BA代理类型
+    //Delete BA proxy type
     $(document).on('click', ' .ba_bit_type', function () {
         var _this = $(this);
         var api_url = 'del_ba_bit_type.php';
@@ -333,7 +330,7 @@ $(function () {
         })
     });
 
-    //获取已经设置的CA代理类型
+    //Get the CA proxy type that has been set
     function GetCaTypeFun() {
         var api_url = 'get_ca_channel.php', li = '';
         GetAgentType(api_url, token, function (response) {
@@ -354,10 +351,9 @@ $(function () {
             GetErrorCode(response.errcode);
         });
     }
-
     GetCaTypeFun();
 
-    //选择Ca代理类型
+    //Select CA proxy type
     $('.baseCaTypeBox li').click(function () {
         var liVal = $(this).text(), name = $(this).attr('title');
         $('.baseCaTypeInput').val(liVal);
@@ -365,20 +361,9 @@ $(function () {
         $(this).addClass('baseLiActive').siblings().removeClass('baseLiActive');
     });
 
-    //设置CA代理类型
-    // $('.baseCaTypeInput').keydown(function () {
-    //     if (event.keyCode == '8') {
-    //         $(this).attr('name', '');
-    //     }
-    // });
+    //Set the CA proxy type
     $('.baseCaTypeBtn').click(function () {
-        // var option_key = '';
-        // if ($('.baseCaTypeInput').attr('name') != null) {
-        //     option_key = $('.baseCaTypeInput').attr('name');
-        // } else {
         option_key = $('.baseCaTypeInput').val();
-        // }
-
         option_value = $('.baseCaTypeInput').val();
         if (option_key.length <= 0) {
             LayerFun('pleaseSelectOrManuallyEnterTheAllowedDigitalCurrencyProxyType');
@@ -388,7 +373,7 @@ $(function () {
         $('.baseBaTypeBtnConfirm').addClass('ca');
     });
 
-    //删除CA代理类型
+    //Delete the CA proxy type
     $(document).on('click', '.alreadyAddCaTypeBox .ca_bit_type', function () {
         var _this = $(this);
         var api_url = 'del_ca_channel.php';
@@ -406,14 +391,14 @@ $(function () {
         })
     });
 
-    //上传图片确定BA/CA
+    //Upload image to determine BA/CA
     $('.baseBaTypeBtnConfirm').click(function () {
         var api_url = '';
-        $('#uploadImgModal').modal('close');
         if ($(this).hasClass('ca')) {
             api_url = 'set_ca_channel.php';
             SetAgentType(api_url, token, option_key, option_value, option_src, function (response) {
                 if (response.errcode == '0') {
+                    $('#uploadImgModal').modal('close');
                     LayerFun('setSuccessfully');
                     GetCaTypeFun();
                 }
@@ -425,6 +410,7 @@ $(function () {
             api_url = 'set_ba_bit_type.php';
             SetAgentType(api_url, token, option_key, option_value, option_src, function (response) {
                 if (response.errcode == '0') {
+                    $('#uploadImgModal').modal('close');
                     LayerFun('setSuccessfully');
                     GetBaTypeFun();
                 }
@@ -435,25 +421,16 @@ $(function () {
         }
     });
 
-    //上传图片确定CA
-    // $('.ca').click(function () {
-    //     $('#uploadImgModal').modal('close');
-    //     var api_url = 'set_ca_channel.php';
-    //     console.log(api_url);return;
-    //
-    // });
-
-    //上传图片取消
+    //Upload image cancel
     $('.uploadImgRow .cancel').click(function () {
         $('#uploadImgModal').modal('close');
     });
 
-    //上传图片
-    // var option_src = '';
+    //Upload image
     $('#uploadFile').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
+            // Modify the address attribute of the picture here
             $(".uploadImgSrc").attr("src", objUrl);
         }
 
@@ -461,7 +438,7 @@ $(function () {
         option_src = UpLoadImg(formData).src;
     });
 
-    //选择图片进行显示
+    //Select an image to display
     function getObjectURL(file) {
         var url = null;
         if (window.createObjectURL != undefined) { // basic
@@ -474,11 +451,11 @@ $(function () {
         return url;
     }
 
-    //返回图片信息
+    //Return image information
     var url = getRootPath();
     var config_api_url = '', config_h5_url = '';
     $.ajax({
-        url: url+"/h5/assets/json/config_url.json",
+        url: url + "/h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -515,7 +492,7 @@ $(function () {
         return objData;
     }
 
-    //初始化modal
+    //init modal
     $('#uploadImgModal').modal({
         dismissible: true,
         opacity: .5,
