@@ -14,7 +14,7 @@ error_reporting(E_ALL | E_STRICT);
 // 引入鉴权类
 
 
-require_once "../plugin/Qiniu";
+//require_once "../plugin/Qiniu";
 
 use Qiniu\Auth;
 //use Qiniu\Storage\BucketManager;
