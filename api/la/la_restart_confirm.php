@@ -25,6 +25,7 @@ echo '<!DOCTYPE html>
     <script src="admin/includes/language/jquery.i18n.properties.js"></script>
     <script src="admin/includes/language/language.js"></script>
 </head>
+
 <body>
     <section>
         <div class="container">
