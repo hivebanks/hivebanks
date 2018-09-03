@@ -50,20 +50,48 @@ function IsEmail(s) {
     return patrn.exec(s);
 }
 
+function getRootPath() {
+    //获取当前网址
+    var curWwwPath = window.document.location.href;
+    //获取主机地址之后的目录
+    var pathName = window.document.location.pathname;
+    var pos = curWwwPath.indexOf(pathName);
+    //获取主机地址
+    var localhostPath = curWwwPath.substring(0, pos);
+    //获取带"/"的项目名
+    var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+    return(localhostPath + projectName);
+}
+var url = getRootPath();
+
+//获取失败错误码提示
+function GetErrorCode(code) {
+    $.getJSON( url+"/h5/assets/json/errcode.json", function (response){
+        $.each(response, function (i, val){
+            if(response[i].code == code){
+                layer.msg('<p class="i18n" name="'+ code +'">'+ response[i].code_value +'</p>');
+                execI18n();
+            }
+        })
+    })
+}
+
 //获取配置文件
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: '../../assets/json/config_url.json',
+    url: url+"/h5/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
     success: function (data) {
         config_api_url = data.api_url;
         config_h5_url = data.h5_url;
-        $('.base_type').text(data.benchmark_type.toUpperCase());
-        $('.ca_currency').text(data.ca_currency.toUpperCase());
-        SetCookie('ca_currency', data.ca_currency.toUpperCase());
-        SetCookie('benchmark_type', data.benchmark_type.toUpperCase());
+        var benchmark_type = data.benchmark_type.toUpperCase();
+        var ca_currency = data.ca_currency.toUpperCase();
+        $('.base_type').text(benchmark_type);
+        $('.ca_currency').text(ca_currency);
+        SetCookie('ca_currency', ca_currency);
+        SetCookie('benchmark_type', benchmark_type);
         if(!userLanguage){
             SetCookie('userLanguage', data.userLanguage);
         }else {
@@ -78,7 +106,7 @@ $.ajax({
 // 调用API共通函数
 function CallApi(api_url, post_data, suc_func, error_func) {
 
-    var api_site = config_api_url + 'api/ca/';
+    var api_site = config_api_url + '/api/ca/';
 
     post_data = post_data || {};
     suc_func = suc_func || function () {
@@ -111,7 +139,7 @@ function CallApi(api_url, post_data, suc_func, error_func) {
 // 调用USER API共通函数
 function CallUserApi(api_url, post_data, suc_func, error_func) {
 
-    var api_site = config_api_url + 'api/user/';
+    var api_site = config_api_url + '/api/user/';
 
     post_data = post_data || {};
     suc_func = suc_func || function () {
@@ -144,7 +172,7 @@ function CallUserApi(api_url, post_data, suc_func, error_func) {
 
 // 调用la API注册函数
 function CallLaApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/la/admin/admin/';
+    var api_site = config_api_url + '/api/la/admin/admin/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -174,7 +202,7 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
 
 //ca充值保证金la函数
 function CallLaBase(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + 'api/base/';
+    var api_site = config_api_url + '/api/base/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -213,7 +241,7 @@ function RegisterSwitch(type, suc_func, error_func) {
 
 //获取图形验证码
 function GetImgCode() {
-    var src = config_api_url + 'api/inc/code.php';
+    var src = config_api_url + '/api/inc/code.php';
     $('#email_imgCode').attr("src", src);
     $('#phone_imgCode').attr("src", src);
 }

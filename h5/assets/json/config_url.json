@@ -1,0 +1,194 @@
+[{
+  "code_key": "100",
+  "code_value": "Information input format is incorrect"
+},
+
+  {
+    "code_key": "101",
+    "code_value": "Information entry or update failed"
+  },
+
+
+
+  {
+    "code_key": "102",
+    "code_value": "Authentication password failed"
+  },
+  {
+    "code_key": "103",
+    "code_value": "User add account address duplicate"
+  },
+  {
+    "code_key": "104",
+    "code_value": "Text message detection failed"
+  },
+  {
+    "code_key": "105",
+    "code_value": "User information binding already exists"
+  },
+  {
+    "code_key": "106",
+    "code_value": "Pre-validation bindings are required"
+  },
+  {
+    "code_key": "107",
+    "code_value": "The detection information does not match the user database information"
+  },
+  {
+    "code_key": "108",
+    "code_value": "Information transmission reaches maximum"
+  },
+  {
+    "code_key": "109",
+    "code_value": "New input information cannot be the same as source information"
+  },
+  {
+    "code_key": "110",
+    "code_value": "The verification code is not correct"
+  },
+  {
+    "code_key": "111",
+    "code_value": "Verify the timeout"
+  },
+  {
+    "code_key": "112",
+    "code_value": "The user does not exist"
+  },
+  {
+    "code_key": "113",
+    "code_value": "No matching authentication information"
+  },
+  {
+    "code_key": "114",
+    "code_value": "Token timeout"
+  },
+  {
+    "code_key": "115",
+    "code_value": "Authentication information changes"
+  },
+  {
+    "code_key": "116",
+    "code_value": "Waiting time (seconds) to return to login"
+  },
+  {
+    "code_key": "117",
+    "code_value": "User binding information does not exist"
+  },
+  {
+    "code_key": "118",
+    "code_value": "Audit failed"
+  },
+  {
+    "code_key": "119",
+    "code_value": "Too simple a password"
+  },
+  {
+    "code_key": "120",
+    "code_value": "La has not opened the channel"
+  },
+  {
+    "code_key": "121",
+    "code_value": "The detection information already exists and is to be confirmed"
+  },
+  {
+    "code_key": "122",
+    "code_value": "Proxy types are not supported"
+  },
+  {
+    "code_key": "123",
+    "code_value": "The amount is not allowed"
+  },
+  {
+    "code_key": "124",
+    "code_value": "Message sending failed"
+  },
+  {
+    "code_key": "125",
+    "code_value": "Levels are not allowed"
+  },
+  {
+    "code_key": "126",
+    "code_value": "Insufficient security"
+  },
+  {
+    "code_key": "127",
+    "code_value": "The address is insufficient"
+  },
+  {
+    "code_key": "128",
+    "code_value": "This order does not exist"
+  },
+  {
+    "code_key": "129",
+    "code_value": "Process the completion of the order"
+  },
+  {
+    "code_key": "130",
+    "code_value": "Reject the order"
+  },
+  {
+    "code_key": "131",
+    "code_value": "Illegal parameter"
+  },
+  {
+    "code_key": "132",
+    "code_value": "Transaction failure"
+  },
+  {
+    "code_key": "133",
+    "code_value": "Order information creation failed"
+  },
+  {
+    "code_key": "134",
+    "code_value": "Abnormal orders"
+  },
+  {
+    "code_key": "135",
+    "code_value": "Unconfirmed transaction"
+
+  }, {
+  "code_key": "136",
+  "code_value": "Audit failure"
+
+}, {
+  "code_key": "137",
+  "code_value": "The account was rejected"
+
+}, {
+  "code_key": "138",
+  "code_value": "Audit failure"
+
+}, {
+  "code_key": "139",
+  "code_value": "Wrong graphic verification code"
+
+},{
+  "code_key": "140",
+  "code_value": "There is no record of complaint at the moment"
+
+},{
+  "code_key": "141",
+  "code_value": "Processing result writes failed"
+
+},{
+  "code_key": "142",
+  "code_value": "No address record"
+
+},{
+  "code_key": "143",
+  "code_value": "address exist"
+
+},{
+  "code_key": "144",
+  "code_value": "The period of validity must be greater than the la setting"
+
+},{
+  "code_key": "145",
+  "code_value": "Transaction less than 2"
+
+},{
+  "code_key": "146",
+  "code_value": "Transaction time is less than order time"
+
+}
+]

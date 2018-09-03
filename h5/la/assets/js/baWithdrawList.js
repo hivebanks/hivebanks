@@ -1,8 +1,8 @@
 $(function () {
-    //获取token
+    //Get token
     var token = GetCookie('la_token');
 
-    //获取ba交易记录
+    //Get ba transaction history
     var tr = '', ba_id_arr = [], us_id_arr = [], tx_hash_arr = [], qa_flag_span = '';
     GetBaTransaction(token, function (response) {
         if(response.errcode == '0'){
@@ -12,13 +12,13 @@ $(function () {
                 us_id_arr.push(withdrawList[i].us_id.substring(0,10) + '...');
                 tx_hash_arr.push(withdrawList[i].tx_hash.substring(0,10) + '...');
                 if (withdrawList[i].qa_flag == '0') {
-                    qa_flag_span = '<span class="i18n" name="unprocessed">未处理</span>';
+                    qa_flag_span = '<span class="i18n" name="unprocessed"></span>';
                 }
                 if (withdrawList[i].qa_flag == '1') {
-                    qa_flag_span = '<span class="i18n" name="processed">已处理</span>';
+                    qa_flag_span = '<span class="i18n" name="processed"></span>';
                 }
                 if (withdrawList[i].qa_flag == '2') {
-                    qa_flag_span = '<span class="i18n" name="notRejected">已拒绝</span>';
+                    qa_flag_span = '<span class="i18n" name="notRejected"></span>';
                 }
                 tr+='<tr>' +
                     '<td><a href="javascript:;" class="ba_id" title="'+ withdrawList[i].ba_id +'">'+ ba_id_arr[i] +'</a></td>' +
@@ -39,18 +39,18 @@ $(function () {
         return;
     });
 
-    //进入ba详情
+    //Jump ba details
     $(document).on('click', '.ba_id', function () {
         var ba_id = $(this).attr('title');
         window.location.href = 'baInfo.html?ba_id=' + ba_id;
     });
-    //进入user详情
+    //Jump user details
     $(document).on('click', '.us_id', function () {
         var us_id = $(this).attr('title');
         window.location.href = 'userInfo.html?us_id=' + us_id;
     });
 
-    //条件筛选
+    //Conditional screening
     $("input[type=checkbox]").click(function () {
         var className = $(this).val();
         if ($(this).prop('checked')) {
@@ -61,7 +61,7 @@ $(function () {
         }
     });
 
-    //点击搜索按钮进行筛选
+    //Click the search button to filter
     $('.searchBtn').click(function () {
         var from_time = $('#from_time').val(), to_time = $('#to_time').val(), tx_time = $('#tx_time').val(),
             qa_id = $('#qa_id').val(), us_id = $('#us_id').val(), us_account_id = $('#us_account_id').val(),
@@ -80,22 +80,23 @@ $(function () {
             })
     });
 
-    //设置开始时间
+    //Set start time
     $('#from_time').datetimepicker({
         format: 'Y/m/d H:i',
         value: new Date(),
-        // minDate: new Date(),//设置最小日期
-        // minTime: new Date(),//设置最小时间
-        // yearStart: 2018,//设置最小年份
-        yearEnd: 2050 //设置最大年份
+        // minDate: new Date(),//Set minimum date
+        // minTime: new Date(),//Set minimum time
+        // yearStart: 2018,//Set the minimum year
+        yearEnd: 3000 //Set the maximum year
     });
-    //设置结束时间
+
+    //Set end time
     $('#to_time, #tx_time').datetimepicker({
         format: 'Y/m/d H:i',
         value: new Date(),
-        // minDate: new Date(),//设置最小日期
-        // minTime: new Date(),//设置最小时间
-        // yearStart: 2018,//设置最小年份
-        yearEnd: 2050 //设置最大年份
+        // minDate: new Date(),//Set minimum date
+        // minTime: new Date(),//Set minimum time
+        // yearStart: 2018,//Set the minimum year
+        yearEnd: 3000 //Set the maximum year
     });
 });

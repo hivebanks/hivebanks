@@ -221,16 +221,8 @@ function EmailList() {
     return emailList;
 }
 
-function GetErrorCode(code) {
-    $.getJSON('../../assets/json/errcode.json', function (response) {
-        $.each(response, function (i, val) {
-            if (response[i].code_key == code) {
-                layer.msg('<p class="" name="">' + response[i].code_value + '</p>');
-                // execI18n();
-            }
-        })
-    })
-}
+// var url = getRootPath();
+
 
 //输入为空是提示
 function LayerFun(type) {

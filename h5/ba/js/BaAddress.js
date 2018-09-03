@@ -83,9 +83,10 @@ $(function () {
 
     //上传文件
     //获取配置文件
+    var url = getRootPath();
     var config_api_url = '';
     $.ajax({
-        url: '../../assets/json/config_url.json',
+        url: url+"/h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -117,7 +118,7 @@ $(function () {
         formData.append('token', token);
         $.ajax({
             type: 'POST',
-            url: config_api_url + 'api/ba/upload_ba_bit_address_csv.php',
+            url: config_api_url + '/api/ba/upload_ba_bit_address_csv.php',
             data: formData,
             cache:false,
             processData:false,

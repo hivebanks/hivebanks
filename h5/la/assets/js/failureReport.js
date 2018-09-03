@@ -11,44 +11,28 @@ $(function () {
             if (response.errcode == '0') {
                 var data = response.rows, div = '', tr = '', li = '', dealLi = '';
                 if (data == false) {
-                    // GetDataEmpty('declareTable', '6');
                     div = '<div><span class="i18n" name="noData"></span></div>';
                     $('.faultBox').html(div);
                     execI18n();
                     return;
                 }
-                // $.each(data, function (i, val) {
-                //     tr+='<tr class="declareItem">' +
-                //         '<td><span>'+ data[i].submit_id +'</span></td>' +
-                //         '<td><span>'+ data[i].submit_name +'</span></td>' +
-                //         '<td><span>'+ data[i].submit_info +'</span></td>' +
-                //         '<td><span>'+ data[i].end_type +'</span></td>' +
-                //         '<td><span>'+ data[i].submit_time +'</span></td>' +
-                //         '<td>' +
-                //         '<a href="javascript:;" class="i18n" name="pending">pending</a>' +
-                //         '<a href="javascript:;" class="i18n" name="pendingProcess">pendingProcess</a>' +
-                //         '</td>' +
-                //         '</tr>'
-                // });
-                // $('#declareTable').html(tr);
-                // execI18n();
 
                 $.each(data, function (i, val) {
                     if (is_deal == '2') {//未处理
                         dealLi == '';
                         li = '<li class="btnBox align-right">' +
                             '<span class="log_id none">' + data[i].log_id + '</span>' +
-                            '<a href="javascript:;" class="i18n pendingAccept margin-right-2" name="pending">待受理</a>' +
-                            '<a href="javascript:;" class="i18n pendingProcess" name="pendingProcess">待处理</a>' +
+                            '<a href="javascript:;" class="i18n pendingAccept margin-right-2" name="pending">pending</a>' +
+                            '<a href="javascript:;" class="i18n pendingProcess" name="pendingProcess">pendingProcess</a>' +
                             '</li>'
                     } else if (is_deal == '1') {//已处理
                         li = '';
                         dealLi = '<li>' +
-                            '<span class="bold i18n" name="processInfo">处理结果</span>:' +
+                            '<span class="bold i18n" name="processInfo">Process Info</span>:' +
                             '<span>' + data[i].deal_info + '</span>' +
                             '</li>' +
                             '<li>' +
-                            '<span class="bold i18n" name="deal_name">处理者</span>:' +
+                            '<span class="bold i18n" name="deal_name">Deal Name</span>:' +
                             '<span>' + data[i].deal_name + '</span>' +
                             '</li>'
                     }
@@ -75,11 +59,6 @@ $(function () {
                         '<li><span class="i18n bold" name="submit_info"></span>:</li>' +
                         '<li><span class="submit_info" name="">' + data[i].submit_info + '</span></li>' +
                         li +
-                        // '<li class="btnBox align-right">' +
-                        // '<span class="log_id none">' + data[i].log_id + '</span>' +
-                        // '<a href="javascript:;" class="i18n pendingAccept margin-right-2" name="pending">待受理</a>' +
-                        // '<a href="javascript:;" class="i18n pendingProcess" name="pendingProcess">待处理</a>' +
-                        // '</li>' +
                         '</ul>' +
                         dealLi +
                         '</div>';
@@ -142,7 +121,6 @@ $(function () {
             if (response.errcode == '0') {
                 LayerFun('successfulProcessing');
                 GetDeclareListFun();
-                // _this.closest('.faultItem').remove();
             }
         }, function (response) {
             LayerFun('processingFailure');

@@ -35,19 +35,6 @@ $(function () {
 var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_814072_a7eq7eitjun.css">');
 link.appendTo($('head')[0]);
 
-//获取错误码
-function GetErrorCode(code) {
-    $.getJSON('../../../assets/json/errcode.json', function (response) {
-        $.each(response, function (i, val) {
-            if (response[i].code_key == code) {
-                layer.msg('<p class="i18n" name="'+ code +'">' + response[i].code_value + '</p>');
-                execI18n();
-                return;
-            }
-        })
-    })
-}
-
 //layer提示
 function LayerFun(type) {
     layer.msg('<span class="i18n" name="'+ type +'"></span>');

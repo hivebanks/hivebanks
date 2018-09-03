@@ -233,15 +233,3 @@ function LayerFun(type) {
     layer.msg('<span class="i18n" name="'+ type +'"></span>');
     execI18n();
 }
-
-//获取错误码
-function GetErrorCode(code) {
-    $.getJSON('../../assets/json/errcode.json', function (response) {
-        $.each(response, function (i, val) {
-            if (response[i].code_key == code) {
-                layer.msg('<p class="i18n" name="'+ code +'"></p>');
-                execI18n();
-            }
-        })
-    })
-}
