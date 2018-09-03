@@ -394,6 +394,9 @@ $(function () {
     //Upload image to determine BA/CA
     $('.baseBaTypeBtnConfirm').click(function () {
         var api_url = '';
+        if(option_src == ''){
+            LayerFun('pleaseUploadAnImageOfTheSelectedType');
+        }
         if ($(this).hasClass('ca')) {
             api_url = 'set_ca_channel.php';
             SetAgentType(api_url, token, option_key, option_value, option_src, function (response) {
