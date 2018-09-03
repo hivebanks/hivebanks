@@ -5,7 +5,7 @@
  * Date: 2018/8/27
  * Time: 下午3:56
  */
-namespace inc;
+//namespace ;
 ini_set("display_errors", "On");
 
 error_reporting(E_ALL | E_STRICT);
@@ -14,9 +14,9 @@ error_reporting(E_ALL | E_STRICT);
 // 引入鉴权类
 
 
-//require_once "../plugin/Qiniu";
+require_once "../plugin/Qiniu/Auth.php";
 
-use Qiniu\Auth;
+//use Qiniu\Auth;
 //use Qiniu\Storage\BucketManager;
 //// 引入上传类
 //use \Qiniu\Storage\UploadManager;
@@ -25,7 +25,7 @@ $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
 
 // 构建鉴权对象
-$auth = new Auth($accessKey, $secretKey);
+$auth = new Qiniu\Auth($accessKey, $secretKey);
 
 
 
