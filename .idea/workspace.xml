@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/config.js" afterDir="false" />
-    </list>
+    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +14,8 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
-              <caret line="302" column="42" selection-start-line="302" selection-start-column="42" selection-end-line="302" selection-end-column="42" />
+            <state relative-caret-position="364">
+              <caret line="401" column="44" lean-forward="true" selection-start-line="401" selection-start-column="44" selection-end-line="401" selection-end-column="44" />
               <folding>
                 <element signature="e#8883#9641#0" />
                 <element signature="e#9693#10465#0" />
@@ -28,11 +25,19 @@
                 <element signature="e#12710#12956#0" />
                 <element signature="e#13172#13722#0" />
                 <element signature="e#13818#14347#0" />
-                <element signature="e#14418#15434#0" />
                 <element signature="e#15705#15757#0" />
                 <element signature="e#15846#16120#0" />
                 <element signature="e#16171#16588#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="76" column="36" selection-start-line="76" selection-end-line="76" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -45,6 +50,7 @@
       <find>indexTitle</find>
       <find>资源文件名称</find>
       <find>option_src</find>
+      <find>图片</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,8 +84,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="794" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -120,6 +127,33 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+              <item name="zh-CN" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -155,12 +189,12 @@
       <option name="presentableId" value="Default" />
       <updated>1535698033077</updated>
       <workItem from="1535698034382" duration="4358000" />
-      <workItem from="1535946830431" duration="1957000" />
+      <workItem from="1535946830431" duration="2713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6315000" />
+    <option name="totallyTimeSpent" value="7071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -171,8 +205,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32969698" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32969698" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -199,13 +233,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/la/db/la_func_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4094">
-          <caret line="178" column="69" selection-start-line="178" selection-start-column="69" selection-end-line="178" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4508">
@@ -501,10 +528,17 @@
         <state relative-caret-position="-1357" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="76" column="36" selection-start-line="76" selection-end-line="76" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="302" column="42" selection-start-line="302" selection-start-column="42" selection-end-line="302" selection-end-column="42" />
+        <state relative-caret-position="364">
+          <caret line="401" column="44" lean-forward="true" selection-start-line="401" selection-start-column="44" selection-end-line="401" selection-end-column="44" />
           <folding>
             <element signature="e#8883#9641#0" />
             <element signature="e#9693#10465#0" />
@@ -514,7 +548,6 @@
             <element signature="e#12710#12956#0" />
             <element signature="e#13172#13722#0" />
             <element signature="e#13818#14347#0" />
-            <element signature="e#14418#15434#0" />
             <element signature="e#15705#15757#0" />
             <element signature="e#15846#16120#0" />
             <element signature="e#16171#16588#0" />

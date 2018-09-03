@@ -75,6 +75,7 @@ var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLangu
         type: "GET",
         dataType: "json",
         success: function (data) {
+            console.log(data);
             config_api_url = data.api_url;
             config_h5_url = data.h5_url;
             var benchmark_type = data.benchmark_type.toUpperCase();
