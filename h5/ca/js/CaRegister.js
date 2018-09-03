@@ -279,7 +279,7 @@ $(function () {
                 $('#phonePass').val('');
                 $('.againPhonePassword').val('');
 
-                window.location.href = 'BaRegisterSuccess.html';
+                window.location.href = 'CaRegisterSuccess.html';
             }
         }, function (response) {
             ActiveClick($this, btnText);
