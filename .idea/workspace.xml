@@ -1,52 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/css/BaRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/css/BaRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaAddress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaAuthentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaAuthentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/language/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/language/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/css/CaLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/css/CaLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/css/CaRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/css/CaRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaAuthentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaAuthentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/language/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/language/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baBindKyc.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baBindKyc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baRechargeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baRechargeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baRegisterKyc.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baRegisterKyc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baWithdrawAddressKyc.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baWithdrawAddressKyc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/baWithdrawList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/baWithdrawList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caBindKyc.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caBindKyc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caRechargeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caRechargeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caRegisterKyc.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caRegisterKyc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caWithdrawAddressKyc.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caWithdrawAddressKyc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/caWithdrawList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/caWithdrawList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/failureReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/failureReport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/language/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/language/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/language/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +10,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="50" column="56" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_zh-CN.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_en.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -77,6 +60,7 @@
         <option value="$PROJECT_DIR$/h5/ba/js/common.js" />
         <option value="$PROJECT_DIR$/h5/user/js/common.js" />
         <option value="$PROJECT_DIR$/h5/la/assets/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/assets/json/config_url.json" />
       </list>
     </option>
   </component>
@@ -110,27 +94,6 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="la" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="la" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="la" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,17 +130,17 @@
       <option name="presentableId" value="Default" />
       <updated>1535698033077</updated>
       <workItem from="1535698034382" duration="4358000" />
-      <workItem from="1535946830431" duration="364000" />
+      <workItem from="1535946830431" duration="640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4722000" />
+    <option name="totallyTimeSpent" value="4998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -186,7 +149,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -389,6 +352,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/la/assets/js/baWithdrawAddressKyc.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/json/errcode.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/json/config_url.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/common.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/index.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/index.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/index_zh.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="50" column="56" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/index_en.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
