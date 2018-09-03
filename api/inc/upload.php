@@ -5,7 +5,7 @@
  * Date: 2018/8/27
  * Time: 下午3:56
  */
-namespace Qiniu\liangyi;
+namespace Qiniu\Auth;
 ini_set("display_errors", "On");
 
 error_reporting(E_ALL | E_STRICT);
@@ -17,7 +17,7 @@ error_reporting(E_ALL | E_STRICT);
 //require_once "../plugin/Qiniu/Auth.php";
 //require_once "../plugin/Qiniu/Storage/UploadManager.php";
 
-use Qiniu\liangyi\Auth;
+use Qiniu\Auth;
 //use Qiniu\Storage\BucketManager;
 //// 引入上传类
 //use \Qiniu\Storage\UploadManager;
