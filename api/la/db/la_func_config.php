@@ -217,6 +217,11 @@ function set_ba_asset_unit($user,$data, $server, $user, $password, $dbname)
 
 }
 
+/**
+ * @param $data
+ * @return bool
+ * 检查用户是否修改config_url.json
+ */
 function config_json_check($data){
 
     $dir_path = dirname(dirname(dirname(dirname(__FILE__)))) . "/h5/";
