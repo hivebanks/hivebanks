@@ -46,7 +46,7 @@ $policy = array(
 $expires = 3600;
 
 // 生成上传 Token
-$token = Auth::uploadToken($bucket, null, $expires, $policy, true);
+$token = $auth->uploadToken($bucket, null, $expires, $policy, true);
 //
 //// 要上传文件的本地路径
 //$filePath = './img-08.jpg'; // 上传到七牛后保存的文件名，可拼接
