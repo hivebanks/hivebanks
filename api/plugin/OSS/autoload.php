@@ -3,6 +3,7 @@
 function classLoader($class)
 {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+    print_r($path."\n");
     $file = __DIR__  . DIRECTORY_SEPARATOR . $path . '.php';
     print_r($file);
     if (file_exists($file)) {
