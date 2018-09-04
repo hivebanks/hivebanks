@@ -53,6 +53,9 @@ $ext = explode('.', basename($filename));
 $target = dirname(dirname(__FILE__))."/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 
 
+move_uploaded_file($_FILES["file"]["tmp_name"], "..".$target);
+print_r($_FILES["file"]["tmp_name"]);
+
 // 移动文件至新文件夹
 
 if(move_uploaded_file($_FILES["file"]["tmp_name"], "..".$target)) {
@@ -75,14 +78,14 @@ if ($success == 2) {
     callback('-1', '文件上传失败');
 }
 $url_r = Config::CONFORM_URL_file;
-//
-////文件hsah
-//if($target)
-//  $file_hash = md5_file($url_r . $target);
-//
-//if(!$file_hash)
-//    callback('-1','文件hash获取失败');
 
-// 输出内容
+//文件hsah
+if($target)
+  $file_hash = md5_file($url_r . $target);
+
+if(!$file_hash)
+    callback('-1','文件hash获取失败');
+
+ 输出内容
 callback(0, '', $url_r  . $target);
 ?>
