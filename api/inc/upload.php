@@ -18,6 +18,7 @@ $bucket = "hivebanks";
 //$object = "example.jpg";
 //$content = "/example.jpg";
 $file = $_FILES["file"];
+print_r($file);
 $file_path = dirname(__FILE__);
 
 print_r($file_path);
