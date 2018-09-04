@@ -13,7 +13,6 @@
 //
 use Qiniu\Auth;
 //use Qiniu\Storage\UploadManager;
-print_r(222);
 require_once   '../plugin/Qiniu/functions.php';
 print_r(111);
 
@@ -22,7 +21,6 @@ require_once   '../plugin/Qiniu/Storage/UploadManager.php';
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 
-print_r(1);
 
 //require_once "../plugin/Qiniu/Auth.php";
 //use Qiniu\Storage\BucketManager;

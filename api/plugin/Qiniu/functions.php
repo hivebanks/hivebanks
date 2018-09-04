@@ -5,10 +5,8 @@ namespace Qiniu;
 use Qiniu\Config;
 
 
-print_r(33);
 //if (!defined('QINIU_FUNCTIONS_VERSION')) {
 define('QINIU_FUNCTIONS_VERSION', '7.2.5');
-print_r(44);
 /**
  * 计算文件的crc32检验码:
  *
