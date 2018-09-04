@@ -53,8 +53,8 @@ $dst = md5(time()).'-'.$scr.'.'.$ext;
 
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
-    $ossClient->uploadFile($bucket, $dst, $scr);
-    print_r("上传成功");
+    $data = $ossClient->uploadFile($bucket, $dst, $scr);
+    print_r($data);
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
 
