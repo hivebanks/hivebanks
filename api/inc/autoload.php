@@ -4,7 +4,7 @@ function classLoader($class)
 {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
     $file = __DIR__ . DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR . $path . '.php';
-    print_r($file);
+    print_r(__DIR__);
     if (file_exists($file)) {
         require_once $file;
     }
