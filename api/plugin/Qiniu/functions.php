@@ -4,6 +4,8 @@ namespace Qiniu;
 
 use Qiniu\Config;
 
+
+print_r(33);
 if (!defined('QINIU_FUNCTIONS_VERSION')) {
     define('QINIU_FUNCTIONS_VERSION', Config::SDK_VER);
 
