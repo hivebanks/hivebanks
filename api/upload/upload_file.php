@@ -53,12 +53,12 @@ $ext = explode('.', basename($filename));
 $target = dirname(dirname(__FILE__))."/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 print_r(dirname(dirname(__FILE__))."/public/img/");
 
-move_uploaded_file($_FILES["file"]["tmp_name"], dirname(dirname(__FILE__))."/public/img/");
-print_r($_FILES["file"]["tmp_name"]);
+//move_uploaded_file($_FILES["file"]["tmp_name"], dirname(dirname(__FILE__))."/public/img/");
+//print_r($_FILES["file"]["tmp_name"]);
 
 // 移动文件至新文件夹
 
-if(move_uploaded_file($_FILES["file"]["tmp_name"], "..".$target)) {
+if(move_uploaded_file($_FILES["file"]["tmp_name"], dirname(dirname(__FILE__))."/public/img/")) {
     $success = 1;
     $paths[] = "..".$target;
 } else {
