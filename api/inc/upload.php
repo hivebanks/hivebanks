@@ -19,6 +19,8 @@ $content = "Hi, OSS.";
 try {
     $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $object, $content);
+    print_r(22);
 } catch (OssException $e) {
     print $e->getMessage();
+    print_r(11);
 }
