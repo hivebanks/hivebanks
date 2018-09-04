@@ -42,6 +42,6 @@ $(function () {
     //选择充值方式
     $(document).on('click', '.bankItem', function () {
         var ca_channel = $(this).find('img').attr('title');
-        window.location.href = 'CaRechargeAmount.html?ca_channel=' + ca_channel + 'us_recharge_bit_amount=' + us_recharge_bit_amount;
+        window.location.href = 'CaRechargeAmount.html?ca_channel=' + ca_channel + '&us_recharge_bit_amount=' + us_recharge_bit_amount;
     })
 });
