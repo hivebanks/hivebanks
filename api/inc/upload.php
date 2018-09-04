@@ -16,6 +16,7 @@ print_r(555);
 $object = "img";
 $content = "Hi, OSS.";
 try {
+    print_r(66);
     $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $object, $content);
     print_r(22);
