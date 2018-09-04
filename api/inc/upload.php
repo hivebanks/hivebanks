@@ -26,8 +26,8 @@ $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
 
 // 构建鉴权对象
-$auth = new Auth($accessKey, $secretKey);
-
+//$auth = new Auth($accessKey, $secretKey);
+//Auth::getAccessKey();
 
 
 /* 上传 */
@@ -46,7 +46,7 @@ $policy = array(
 $expires = 3600;
 
 // 生成上传 Token
-$token = $auth->uploadToken($bucket, null, $expires, $policy, true);
+$token = Auth::uploadToken($bucket, null, $expires, $policy, true);
 //
 //// 要上传文件的本地路径
 //$filePath = './img-08.jpg'; // 上传到七牛后保存的文件名，可拼接
