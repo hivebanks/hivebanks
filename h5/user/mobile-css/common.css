@@ -486,6 +486,7 @@ table tbody{
 .table td,.table th{
     border-bottom: 0.1px solid #c5f2ff;
     line-height: 25px!important;
+    font-size: 12px;
 }
 .table>thead>tr>th {
     border-bottom: 2px solid #c5f2ff;
