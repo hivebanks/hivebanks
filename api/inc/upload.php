@@ -1,4 +1,6 @@
 <?php
+
+require_once "common.php";
 //namespace Aliyun;
 if (is_file( '../plugin/OSS/autoload.php')) {
     require_once '../plugin/OSS/autoload.php';
