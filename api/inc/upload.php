@@ -9,7 +9,7 @@
 
 
 
-namespace hivebanks\inc;
+//namespace hivebanks\inc;
 
 //use Qiniu\Auth;
 //use Qiniu\Storage\UploadManager;
