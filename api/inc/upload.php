@@ -23,7 +23,7 @@ try {
     print_r(66);
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     print_r($ossClient);
-    $ossClient->putObject($bucket, $object, $content);
+//    $ossClient->putObject($bucket, $object, $content);
     print_r(22);
 } catch (OssException $e) {
     print $e->getMessage();
