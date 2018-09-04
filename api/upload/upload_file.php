@@ -50,7 +50,7 @@ if ($_FILES["file"]["size"] > $sizeLimit)
 // 定义新文件名
 $ext = explode('.', basename($filename));
 
-$target = "/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+$target = "../public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 print_r($target);
 
 
