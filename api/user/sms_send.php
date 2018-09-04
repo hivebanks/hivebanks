@@ -15,7 +15,7 @@ GET参数
 返回
   errcode = 0     发送成功
 */
-
+session_start();
 php_begin();
 $args = array('cellphone','country_code','bind_type');
 chk_empty_args('GET', $args);
