@@ -1,5 +1,6 @@
 <?php
 
+namespace OSS;
 require_once 'autoload.php';
 
 
