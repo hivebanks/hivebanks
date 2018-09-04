@@ -17,18 +17,16 @@ $endpoint = "oss-cn-beijing.aliyuncs.com";
 $bucket = "hivebanks";
 //$object = "example.jpg";
 //$content = "/example.jpg";
-$file = $_FILES;
+$file = $_FILES["file"];
 //print_r($file['file']);
 //$file_path = dirname(__FILE__);
 $filename = $_FILES["file"]["name"];
-print_r($filename."\n");
 $ext = explode('.', basename($filename));
 $target = "images" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 print_r($target);
-//print_r($file_path);
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
-    $ossClient->putObject($bucket, $object, $content);
+    $ossClient->putObject($bucket, $target, $file);
     print_r("上传成功");
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
