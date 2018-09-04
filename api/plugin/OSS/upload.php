@@ -2,7 +2,7 @@
 //namespace Aliyun;
 if (is_file( 'autoload.php')) {
     print_r(44);
-    require_once  'autoload.php';
+    require_once 'autoload.php';
     print_r(33);
 }
 
