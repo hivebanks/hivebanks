@@ -43,8 +43,8 @@ class DB_COM extends Mysql {
      public $schema = "';echo $_REQUEST['dn'];echo '";
      protected $server = "';echo $_REQUEST['s'];echo '";
      protected $user = "';  echo $_REQUEST['u'];echo '";
-     protected $password = "'; ?><? echo $_REQUEST['p'];echo '";
-     protected $database = "';?><?echo $_REQUEST['dn'];echo '";
+     protected $password = "'; echo $_REQUEST['p'];echo '";
+     protected $database = "';echo $_REQUEST['dn'];echo '";
      protected $character = "utf8mb4";
             
 }
