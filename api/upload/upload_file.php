@@ -86,6 +86,6 @@ if($target)
 if(!$file_hash)
     callback('-1','文件hash获取失败');
 
- 输出内容
+ //输出内容
 callback(0, '', $url_r  . $target);
 ?>
