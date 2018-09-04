@@ -17,7 +17,7 @@ $accessKeySecret = "OTETap8a971xgfYdNCawWuHTkbR5dj";
 $endpoint = "oss-cn-beijing.aliyuncs.com";
 // 存储空间名称
 $bucket = "hivebanks";
-$object = "img";
+$object = "im3g";
 $content = "Hi, OSS.";
 try {
     print_r(66);
