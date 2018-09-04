@@ -11,7 +11,7 @@
 //
 //namespace hivebanks\inc;
 //
-//use Qiniu\Auth;
+use Qiniu\Auth;
 //use Qiniu\Storage\UploadManager;
 print_r(222);
 require_once   '../plugin/Qiniu/functions.php';
