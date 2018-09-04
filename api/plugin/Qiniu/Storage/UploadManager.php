@@ -14,12 +14,13 @@ require_once "../Config.php";
 final class UploadManager
 {
     private $config;
-
     public function __construct(Config $config = null)
     {
         if ($config === null) {
             $config = new Config();
         }
+
+        print_r("2ss");
         $this->config = $config;
     }
 
