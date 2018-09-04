@@ -5,7 +5,7 @@ use Qiniu\Config;
 use Qiniu\Http\HttpClient;
 use Qiniu\Storage\ResumeUploader;
 use Qiniu\Storage\FormUploader;
-require_once "../Config.php";
+
 /**
  * 主要涉及了资源上传接口的实现
  *
@@ -14,14 +14,12 @@ require_once "../Config.php";
 final class UploadManager
 {
     private $config;
+
     public function __construct(Config $config = null)
     {
-        print_r("2ss");
         if ($config === null) {
             $config = new Config();
         }
-
-        print_r("2ss");
         $this->config = $config;
     }
 
