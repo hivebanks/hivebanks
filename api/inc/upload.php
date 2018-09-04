@@ -55,9 +55,9 @@ $filePath = './img-08.jpg'; // 上传到七牛后保存的文件名，可拼接
 $key = 'img-08.jpg'; // 初始化 UploadManager 对象并进行文件的上传。
 
 $uploadMgr = new UploadManager(); // 调用 UploadManager 的 putFile 方法进行文件的上传。
-
+print_r(11);
 list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
-
+print_r(22);
  echo "\n====> putFile result: \n";
 
 if ($err !== null) {
