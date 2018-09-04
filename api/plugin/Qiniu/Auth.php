@@ -2,7 +2,7 @@
 namespace Qiniu;
 
 use Qiniu\Zone;
-
+require_once   'functions.php';
 final class Auth
 {
     private $accessKey;
