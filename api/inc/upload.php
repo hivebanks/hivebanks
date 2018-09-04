@@ -1,7 +1,8 @@
 <?php
 
 require_once  'autoload.php';
-
+ini_set("display_errors", "On");
+error_reporting(E_ALL | E_STRICT);
 print_r(333);
 use OSS\OssClient;
 use OSS\Core\OssException;
