@@ -45,7 +45,7 @@ try {
 function save_image_upload($upd_file, $key = '', $dir = 'temp', $whs = array(), $is_water = false, $need_return = true)
 {
     $image = new es_imagecls();
-    $image->max_size = intval(app_conf("MAX_IMAGE_SIZE"));
+    $image->max_size = intval(10000000);
 
     $list = array();
 
