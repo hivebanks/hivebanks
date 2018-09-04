@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/api/inc/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/inc/upload.php" afterDir="false" />
-    </list>
+    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,12 +196,12 @@
       <updated>1535698033077</updated>
       <workItem from="1535698034382" duration="8535000" />
       <workItem from="1536043003323" duration="926000" />
-      <workItem from="1536044059599" duration="6902000" />
+      <workItem from="1536044059599" duration="7279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16607000" />
+    <option name="totallyTimeSpent" value="16984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />

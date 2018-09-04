@@ -15,8 +15,8 @@ $accessKeySecret = "OTETap8a971xgfYdNCawWuHTkbR5dj";
 $endpoint = "oss-cn-beijing.aliyuncs.com";
 // 存储空间名称
 $bucket = "hivebanks";
-$object = "im1g";
-$content = "Hi, O2122SS444.";
+$object = "example.jpg";
+$content = "example.jpg";
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $object, $content);
