@@ -18,6 +18,7 @@ $content = "Hi, OSS.";
 try {
     print_r(66);
     $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
+    print_r($ossClient);
     $ossClient->putObject($bucket, $object, $content);
     print_r(22);
 } catch (OssException $e) {
