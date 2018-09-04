@@ -1,9 +1,7 @@
 <?php
 //namespace Aliyun;
 if (is_file( '../plugin/OSS/autoload.php')) {
-    print_r(44);
     require_once '../plugin/OSS/autoload.php';
-    print_r(33);
 }
 
 ini_set("display_errors", "On");
@@ -20,12 +18,10 @@ $bucket = "hivebanks";
 $object = "img";
 $content = "Hi, O2122SS444.";
 try {
-    print_r(66);
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $object, $content);
     print_r(22);
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
-    print_r(11);
 
 }
