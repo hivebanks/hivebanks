@@ -14,11 +14,11 @@ $endpoint = "http://oss-cn-hangzhou.aliyuncs.com";
 // 存储空间名称
 $bucket = "<yourBucketName>";
 print_r(555);
+$object = " <yourObjectName>";
+$content = "Hi, OSS.";
 try {
     $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
-    $ossClient->createBucket($bucket);
-    print_r(111);
+    $ossClient->putObject($bucket, $object, $content);
 } catch (OssException $e) {
     print $e->getMessage();
-    print_r(222);
 }
