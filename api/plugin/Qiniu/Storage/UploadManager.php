@@ -5,7 +5,7 @@ use Qiniu\Config;
 use Qiniu\Http\HttpClient;
 use Qiniu\Storage\ResumeUploader;
 use Qiniu\Storage\FormUploader;
-
+require_once "../Config.php";
 /**
  * 主要涉及了资源上传接口的实现
  *
