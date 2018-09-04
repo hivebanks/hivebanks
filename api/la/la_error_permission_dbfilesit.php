@@ -34,7 +34,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
                 </div>
             </div>
         <p>抱歉，我不能创建';echo $_REQUEST['dn'];echo '数据库；请手动创建之，或将现有库重命名。</p>
-        <p>并手工创建<code>inc/db_connect.ph</code>文件，并将以下文字粘贴于其中。</p>
+        <p>并手工创建<code>inc/db_connect.php</code>文件，并将以下文字粘贴于其中。</p>
         <textarea  cols="980" rows="150" style="height:300px" readonly="readonly">
 <?php
 
