@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/ArgusManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Cdn/CdnManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Cdn/CdnManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Etag.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Etag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Error.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Error.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Http/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Processing/ImageUrlBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Processing/ImageUrlBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Processing/Operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Processing/Operation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Processing/PersistentFop.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Processing/PersistentFop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Rtc/AppClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Rtc/AppClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/BucketManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/BucketManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/FormUploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/FormUploader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/ResumeUploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/ResumeUploader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/UploadManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Storage/UploadManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/Zone.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/Zone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/plugin/Qiniu/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin/Qiniu/functions.php" afterDir="false" />
-    </list>
+    <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +22,11 @@
       </file>
       <file leaf-file-name="CdnManager.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/plugin/Qiniu/Cdn/CdnManager.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -92,6 +76,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -134,6 +119,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/plugin" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -157,12 +147,12 @@
       <option name="presentableId" value="Default" />
       <updated>1535698033077</updated>
       <workItem from="1535698034382" duration="8535000" />
-      <workItem from="1536043003323" duration="887000" />
+      <workItem from="1536043003323" duration="926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9666000" />
+    <option name="totallyTimeSpent" value="9705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -404,7 +394,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/plugin/Qiniu/Cdn/CdnManager.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
