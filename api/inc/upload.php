@@ -1,14 +1,14 @@
 <?php
-
+namespace OSS;
 require_once 'autoload.php';
 
 //require_once "../plugin/OSS/OssClient.php";
 //require_once "../plugin/OSS/Core/OssException.php";
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
-use \OSS\OssClient;
+use OSS\OssClient;
 
-use \OSS\Core\OssException;
+use OSS\Core\OssException;
 $accessKeyId = "LTAIuTfkvjnNg54j";
 $accessKeySecret = "OTETap8a971xgfYdNCawWuHTkbR5dj";
 // Endpoint以杭州为例，其它Region请按实际情况填写。
