@@ -1,7 +1,7 @@
 <?php
 //namespace Aliyun;
-if (is_file(__DIR__ . 'autoload.php')) {
-    require_once __DIR__ . 'autoload.php';
+if (is_file( 'autoload.php')) {
+    require_once  'autoload.php';
     print_r(33);
 }
 if (is_file(__DIR__ . '/../vendor/autoload.php')) {
