@@ -8,9 +8,9 @@ if (is_file( '../plugin/OSS/autoload.php')) {
 
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
-use \OSS\OssClient;
+use OSS\OssClient;
 
-//use OSS\Core\OssException;
+use OSS\Core\OssException;
 $accessKeyId = "LTAIuTfkvjnNg54j";
 $accessKeySecret = "OTETap8a971xgfYdNCawWuHTkbR5dj";
 // Endpoint以杭州为例，其它Region请按实际情况填写。
@@ -25,7 +25,7 @@ try {
     $ossClient->putObject($bucket, $object, $content);
     print_r(22);
 } catch (\OSS\Core\OssException $e) {
-//    print $e->getMessage();
+    print $e->getMessage();
     print_r(11);
 
 }
