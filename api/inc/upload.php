@@ -58,7 +58,7 @@ $uploadMgr = new UploadManager(); // 调用 UploadManager 的 putFile 方法进�
 
 list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
 
-// echo "\n====> putFile result: \n";
+ echo "\n====> putFile result: \n";
 
 if ($err !== null) {
 
