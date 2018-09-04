@@ -19,7 +19,7 @@ $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
 
 // 构建鉴权对象
-$auth = new Qiniu\Auth($accessKey, $secretKey);
+$auth = new \Qiniu\Auth($accessKey, $secretKey);
 
 
 //
