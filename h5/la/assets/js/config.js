@@ -484,6 +484,10 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
+                if(data.code == '-1'){
+                    LayerFun('imgUploadFail');
+                    return;
+                }
                 objData.src = data.data.src;
                 objData.file_hash = data.file_hash;
             },
