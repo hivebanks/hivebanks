@@ -25,7 +25,7 @@ try {
     print_r($ossClient);
 //    $ossClient->putObject($bucket, $object, $content);
     print_r(22);
-} catch (OssException $e) {
+} catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
     print_r(11);
 }
