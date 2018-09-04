@@ -30,12 +30,25 @@ $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
 $target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 $key = "file";
-$img_result = save_image_upload($_FILES, $key, "temp");
-print_r($img_result);
-die;
+//$img_result = save_image_upload($_FILES, $key, "temp");
+//print_r($img_result);
+
+//$scr = $_FILES['file']['tmp_name'];
+//
+//$ext = substr($_FILES['file']['name'],strrpos($_FILES['file']['name'],'.')+1); // 上传文件后缀
+//
+//$dst = md5(time()).'-'.$scr.'.'.$ext;     //上传文件名称
+//
+//
+//
+//$data = array('url' =>$url);
+//
+//$this->response(0,'上传成功',$data);
+
+
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
-    $ossClient->putObject($bucket, $target, $file);
+    $ossClient->uploadFile($bucket, $target, $file);
     print_r("上传成功");
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
