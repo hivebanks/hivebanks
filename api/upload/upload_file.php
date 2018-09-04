@@ -52,6 +52,9 @@ $ext = explode('.', basename($filename));
 
 $target = "/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 print_r($target);
+
+
+die;
 // 移动文件至新文件夹
 
 if(move_uploaded_file($_FILES["file"]["tmp_name"], "..".$target)) {
