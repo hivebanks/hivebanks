@@ -22,6 +22,7 @@ $file = $_FILES;
 //$file_path = dirname(__FILE__);
 $filename = $_FILES["file"]["name"];
 print_r($filename."\n");
+$ext = explode('.', basename($filename));
 $target = "images" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 print_r($target);
 //print_r($file_path);
