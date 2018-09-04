@@ -18,11 +18,13 @@ $bucket = "hivebanks";
 //$object = "example.jpg";
 //$content = "/example.jpg";
 $file = $_FILES;
-print_r($file);
-$file_path = dirname(__FILE__);
-
-print_r($file_path);
-die;
+//print_r($file['file']);
+//$file_path = dirname(__FILE__);
+$filename = $_FILES["file"]["name"];
+print_r($filename."\n");
+$target = "images" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+print_r($target);
+//print_r($file_path);
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $object, $content);
