@@ -55,6 +55,7 @@
     <findStrings>
       <find>h5_hiv</find>
       <find>_SESSION</find>
+      <find>us_recharge_bit_amount</find>
     </findStrings>
     <replaceStrings>
       <replace />
