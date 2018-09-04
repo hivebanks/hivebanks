@@ -1,12 +1,18 @@
 <?php
-namespace Aliyun;
-require_once 'autoload.php';
+//namespace Aliyun;
+if (is_file(__DIR__ . 'autoload.php')) {
+    require_once __DIR__ . 'autoload.php';
+    print_r(33);
+}
+if (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+}
 
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
-use Aliyun\OSS\OssClient;
+use OSS\OssClient;
 
-use Aliyun\OSS\Core\OssException;
+use OSS\Core\OssException;
 $accessKeyId = "LTAIuTfkvjnNg54j";
 $accessKeySecret = "OTETap8a971xgfYdNCawWuHTkbR5dj";
 // Endpoint以杭州为例，其它Region请按实际情况填写。
