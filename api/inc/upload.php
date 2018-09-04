@@ -13,7 +13,7 @@ namespace hivebanks\inc;
 
 use Qiniu\Auth;
 use Qiniu\Storage\UploadManager;
-require_once   '../plugin/Qiniu/functions.php';
+//require_once   '../plugin/Qiniu/functions.php';
 
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
