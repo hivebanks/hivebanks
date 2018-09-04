@@ -4,6 +4,7 @@ require_once 'autoload.php';
 
 
 require_once "../plugin/OSS/OssClient.php";
+require_once "../plugin/OSS/Core/OssException.php";
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 use OSS\OssClient;
