@@ -3,10 +3,11 @@
 require_once 'autoload.php';
 
 
-
+require_once "../plugin/OSS/OssClient.php";
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 use OSS\OssClient;
+
 use OSS\Core\OssException;
 $accessKeyId = "LTAIuTfkvjnNg54j";
 $accessKeySecret = "OTETap8a971xgfYdNCawWuHTkbR5dj";
