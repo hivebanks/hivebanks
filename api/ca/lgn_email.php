@@ -23,6 +23,9 @@ GET参数
 */
 
 php_begin();
+if (!isset($_SESSION)) {
+    session_start();
+}
 $args = array('email', 'pass_word_hash');
 chk_empty_args('GET', $args);
 

@@ -24,8 +24,10 @@ GET参数
   登录成功返回用户TOKEN,有效期2小时
 */
 
-
 php_begin();
+if (!isset($_SESSION)) {
+    session_start();
+}
 $args = array('email', 'pass_word_hash');
 chk_empty_args('GET', $args);
 

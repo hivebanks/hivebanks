@@ -16,6 +16,9 @@ GET参数
 */
 
 php_begin();
+if (!isset($_SESSION)) {
+    session_start();
+}
 $args = array('cellphone','country_code','bind_type');
 chk_empty_args('GET', $args);
 

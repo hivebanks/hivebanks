@@ -413,30 +413,30 @@ function exit_succress($data,$msg = '')
 //======================================
 function php_begin($log_level = Config::DEBUG_LEVEL)
 {
-  // LOG日志是否执行判定
-  if (Config::PHP_LOG_LEVEL > 0) {
-    // 初始化PHP运行日志
-      $log_file =  Config::PHP_LOG_FILE_PREFIX . date('Y-m-d') . '.log';
-
-    $logHandler = new LogFileHandler($log_file);
-    $log = Log::Init($logHandler, Config::PHP_LOG_LEVEL);
-    // 记录信息，调用程序，用户IP，调用参数
-    $msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Get:" . get_log_msg_str($_GET) . " Post:" . get_log_msg_str($_POST);
-
-    switch($log_level)
-    {
-      // 记录正常日志
-      case Config::INFO_LEVEL:
-        // 日志记录正常日志
-        Log::INFO($msg);
-        break;
-      // 记录跟踪日志
-      default:
-        // 日志记录跟踪日志
-        Log::DEBUG($msg);
-        break;
-    }
-  }
+//  // LOG日志是否执行判定
+//  if (Config::PHP_LOG_LEVEL > 0) {
+//    // 初始化PHP运行日志
+//      $log_file =  Config::PHP_LOG_FILE_PREFIX . date('Y-m-d') . '.log';
+//
+//    $logHandler = new LogFileHandler($log_file);
+//    $log = Log::Init($logHandler, Config::PHP_LOG_LEVEL);
+//    // 记录信息，调用程序，用户IP，调用参数
+//    $msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Get:" . get_log_msg_str($_GET) . " Post:" . get_log_msg_str($_POST);
+//
+//    switch($log_level)
+//    {
+//      // 记录正常日志
+//      case Config::INFO_LEVEL:
+//        // 日志记录正常日志
+//        Log::INFO($msg);
+//        break;
+//      // 记录跟踪日志
+//      default:
+//        // 日志记录跟踪日志
+//        Log::DEBUG($msg);
+//        break;
+//    }
+//  }
   return;
 }
 
@@ -450,39 +450,39 @@ function php_begin($log_level = Config::DEBUG_LEVEL)
 function php_end($rtn_data, $log_level = Config::DEBUG_LEVEL)
 {
 
-    // LOG日志是否执行判定
-  if (Config::PHP_LOG_LEVEL > 0) {
-    // 初始化PHP运行日志
-      $log_file =  Config::PHP_LOG_FILE_PREFIX . date('Y-m-d') . '.log';
-    $logHandler = new LogFileHandler($log_file);
-    $log = Log::Init($logHandler, Config::PHP_LOG_LEVEL);
-    // 记录信息，调用程序，用户IP，返回数据
-    $msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Rtn:" . get_log_msg_str($rtn_data);
-
-    switch($log_level)
-    {
-      // 记录异常日志
-      case Config::ERROR_LEVEL:
-        $beg_msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Get:" . get_log_msg_str($_GET) . " Post:" . get_log_msg_str($_POST);
-        Log::ERROR($beg_msg);
-        Log::ERROR($msg);
-        break;
-      // 记录警告日志
-      case Config::WARN_LEVEL:
-        $beg_msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Get:" . get_log_msg_str($_GET) . " Post:" . get_log_msg_str($_POST);
-        Log::WARN($beg_msg);
-        Log::WARN($msg);
-        break;
-      // 记录正常日志
-      case Config::INFO_LEVEL:
-        Log::INFO($msg);
-        break;
-      // 记录跟踪日志
-      default:
-        Log::DEBUG($msg);
-        break;
-    }
-  }
+//    // LOG日志是否执行判定
+//  if (Config::PHP_LOG_LEVEL > 0) {
+//    // 初始化PHP运行日志
+//      $log_file =  Config::PHP_LOG_FILE_PREFIX . date('Y-m-d') . '.log';
+//    $logHandler = new LogFileHandler($log_file);
+//    $log = Log::Init($logHandler, Config::PHP_LOG_LEVEL);
+//    // 记录信息，调用程序，用户IP，返回数据
+//    $msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Rtn:" . get_log_msg_str($rtn_data);
+//
+//    switch($log_level)
+//    {
+//      // 记录异常日志
+//      case Config::ERROR_LEVEL:
+//        $beg_msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Get:" . get_log_msg_str($_GET) . " Post:" . get_log_msg_str($_POST);
+//        Log::ERROR($beg_msg);
+//        Log::ERROR($msg);
+//        break;
+//      // 记录警告日志
+//      case Config::WARN_LEVEL:
+//        $beg_msg = $_SERVER['PHP_SELF'] . " IP:" . get_ip() . " Get:" . get_log_msg_str($_GET) . " Post:" . get_log_msg_str($_POST);
+//        Log::WARN($beg_msg);
+//        Log::WARN($msg);
+//        break;
+//      // 记录正常日志
+//      case Config::INFO_LEVEL:
+//        Log::INFO($msg);
+//        break;
+//      // 记录跟踪日志
+//      default:
+//        Log::DEBUG($msg);
+//        break;
+//    }
+//  }
 
   if (isset($_GET['callback'])) {
     $callback = $_GET['callback'];

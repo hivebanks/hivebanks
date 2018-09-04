@@ -23,7 +23,9 @@ GET参数
   登录成功返回用户TOKEN,有效期2小时
 */
 php_begin();
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 $args = array('email', 'pass_word_hash');
 chk_empty_args('GET', $args);
 
@@ -40,66 +42,66 @@ $salt = rand(10000000, 99999999);
 $key = Config::TOKEN_KEY;
 // 判断email地址是否有效
 $is_email = isEmail($email);
-if(!$is_email){
-    exit_error('109','Email format not correct!');
+if (!$is_email) {
+    exit_error('109', 'Email format not correct!');
 }
 if ($cfm_code != $_SESSION["authcode"])
-    exit_error("139","图形验证码有误");
+    exit_error("139", "图形验证码有误");
 
 // 记录数组
 $row_fail = array();
 $variable = 'email';
 $pass = "password_login";
 // 判断该邮箱用户是否存在
-$row = get_us_id_by_variable($variable,$email);
+$row = get_us_id_by_variable($variable, $email);
 
 // 判断用户是否注册
-if(empty($row['us_id']) || $row['bind_flag'] == 9){
-  exit_error('112','This email address is not registered');
-} elseif ($row['bind_flag'] == 2){
-    exit_error('118','该账号暂未审核通过');
-}elseif ($row['bind_flag'] == 3){
-    exit_error('137','该账号被拒绝');
+if (empty($row['us_id']) || $row['bind_flag'] == 9) {
+    exit_error('112', 'This email address is not registered');
+} elseif ($row['bind_flag'] == 2) {
+    exit_error('118', '该账号暂未审核通过');
+} elseif ($row['bind_flag'] == 3) {
+    exit_error('137', '该账号被拒绝');
 }
 // 获取最新登录失败信息
 $row_f = get_row_by_us_id($row['us_id']);
-if($row_f){
-  $count_error = $row_f['count_error'];
-  $limit_time = $row_f['limt_time'];
-  if($limit_time > $timestamp){
-    $time_difference = $limit_time - $timestamp;
-    exit_error('116',$time_difference);
+if ($row_f) {
+    $count_error = $row_f['count_error'];
+    $limit_time = $row_f['limt_time'];
+    if ($limit_time > $timestamp) {
+        $time_difference = $limit_time - $timestamp;
+        exit_error('116', $time_difference);
     }
 }
 // 判断密码是否正确
-$check_pass = check_pass($row['us_id'],$pass_word_hash,$pass);
-if(!$check_pass){
+$check_pass = check_pass($row['us_id'], $pass_word_hash, $pass);
+if (!$check_pass) {
     // 是否存在失败数据,登录失败数据记录
-    if($row_f){
-      $row_fail = $row_f;
-      $row_fail['count_error'] = $row_f['count_error'] + 1;
-      $row_fail['limt_time'] = $timestamp + pow(2,$row_fail['count_error']);
-      unset($row_fail['log_id']);
-      $ins_log_login_fail = creat_us_log_login_fail($row_fail);
-      exit_error('116', pow(2,$row_fail['count_error']));
-    }else{
-      $row_fail['us_id'] =$row['us_id'];
-      $row_fail['us_ip'] = ip2long(get_ip());
-      $row_fail['lgn_type'] = 'eamil';
-      $row_fail['count_error'] = 1;
-      $row_fail['limt_time'] = $timestamp + pow(2,$row_fail['count_error']);
-      $row_fail['ctime'] = date('Y-m-d H:i:s');
-      $creat_log_fail = creat_us_log_login_fail($row_fail);
-      exit_error('116',pow(2,$row_fail['count_error']));
+    if ($row_f) {
+        $row_fail = $row_f;
+        $row_fail['count_error'] = $row_f['count_error'] + 1;
+        $row_fail['limt_time'] = $timestamp + pow(2, $row_fail['count_error']);
+        unset($row_fail['log_id']);
+        $ins_log_login_fail = creat_us_log_login_fail($row_fail);
+        exit_error('116', pow(2, $row_fail['count_error']));
+    } else {
+        $row_fail['us_id'] = $row['us_id'];
+        $row_fail['us_ip'] = ip2long(get_ip());
+        $row_fail['lgn_type'] = 'eamil';
+        $row_fail['count_error'] = 1;
+        $row_fail['limt_time'] = $timestamp + pow(2, $row_fail['count_error']);
+        $row_fail['ctime'] = date('Y-m-d H:i:s');
+        $creat_log_fail = creat_us_log_login_fail($row_fail);
+        exit_error('116', pow(2, $row_fail['count_error']));
     }
 }
 // 登陆密码正确删除log_fail表中该用户的所有数据
 $delect_us_log_fail = delect_us_log_login_fail($row['us_id']);
 // 生成token
-$timestamp += 2*60*60;
+$timestamp += 2 * 60 * 60;
 $des = new Des();
-$encryption_code = $row['us_id'] .',' . $timestamp . ',' . $salt;
-$token = $des -> encrypt($encryption_code, $key);
+$encryption_code = $row['us_id'] . ',' . $timestamp . ',' . $salt;
+$token = $des->encrypt($encryption_code, $key);
 
 //记录参数整理
 $lgn_type = 'email';
@@ -112,7 +114,7 @@ $salt = rand(10000000, 99999999);
 // 创建登录记录
 $log_data = array();
 $log_data['prvs_hash'] = get_pre_hash($row['us_id']);
-$log_data['hash_id'] = hash('md5',$row['us_id'] . $lgn_type . $us_ip .  $utime . $ctime . $salt);
+$log_data['hash_id'] = hash('md5', $row['us_id'] . $lgn_type . $us_ip . $utime . $ctime . $salt);
 $log_data['lgn_type'] = $lgn_type;
 $log_data['us_ip'] = get_int_ip($us_ip);
 $log_data['us_id'] = $row['us_id'];
@@ -121,7 +123,7 @@ $log_data['utime'] = $utime;
 $log_data['ctime'] = $ctime;
 
 // 写入登录数据
-$ret = ins_us_lgn_login($log_data); 
+$ret = ins_us_lgn_login($log_data);
 
 // 返回数据做成
 $rtn_ary = array();
