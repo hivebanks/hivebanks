@@ -16,6 +16,7 @@ final class UploadManager
     private $config;
     public function __construct(Config $config = null)
     {
+        print_r("2ss");
         if ($config === null) {
             $config = new Config();
         }
