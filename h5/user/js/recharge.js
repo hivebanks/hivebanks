@@ -96,7 +96,7 @@ $(function () {
        }
        var base_amount = $('.base_amount').val();
        var us_recharge_bit_amount = $('.bit_amount').val();
-       window.location.href = '../ca/CaRecharge.html?base_amount=' + base_amount + '&us_recharge_bit_amount=' + us_recharge_bit_amount;
+       window.location.href = '../ca/CaRecharge.html?base_amount=' + base_amount + '&bit_amount=' + us_recharge_bit_amount;
     });
 
 

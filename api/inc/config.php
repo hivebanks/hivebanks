@@ -13,7 +13,8 @@ define('H5_URL', $url_config['h5_url']);
 define('BASE_UNIT', get_base_unit());
 
 define('BASE_CURRENCY',get_base_currency());
-
+if(!defined('APP_ROOT_PATH'))
+    define('APP_ROOT_PATH', str_replace('inc/config.php', '', str_replace('\\', '/', __FILE__)));
 // 配置信息类
 class Config
 {

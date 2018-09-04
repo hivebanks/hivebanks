@@ -15,7 +15,7 @@ $(function () {
         if(response.errcode == '0'){
             var data = response.rows, srcArr = [], div = '';
             if(data == false){
-                $('.bankBox').html('<h5 class="i18n" name="noData">暂无数据</h5>').css('justify-content', 'center');
+                $('.bankBox').html('<h5 class="i18n" name="noData">noData</h5>').css('justify-content', 'center');
                 execI18n();
                 return;
             }
@@ -42,6 +42,6 @@ $(function () {
     //选择充值方式
     $(document).on('click', '.bankItem', function () {
         var ca_channel = $(this).find('img').attr('title');
-        window.location.href = 'CaRechargeAmount.html?ca_channel=' + ca_channel + 'us_recharge_bit_amount=' + us_recharge_bit_amount;
+        window.location.href = 'CaRechargeAmount.html?ca_channel=' + ca_channel + '&us_recharge_bit_amount=' + us_recharge_bit_amount;
     })
 });
