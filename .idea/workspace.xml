@@ -46,8 +46,8 @@
       <file leaf-file-name="upload_file.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/upload/upload_file.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+            <state relative-caret-position="379">
+              <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -80,6 +80,7 @@
       <find>pub</find>
       <find>upload_i</find>
       <find>dirname</find>
+      <find>publi</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -217,12 +218,12 @@
       <updated>1535698033077</updated>
       <workItem from="1535698034382" duration="8535000" />
       <workItem from="1536043003323" duration="926000" />
-      <workItem from="1536044059599" duration="11080000" />
+      <workItem from="1536044059599" duration="11326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20785000" />
+    <option name="totallyTimeSpent" value="21031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -582,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/upload/upload_file.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        <state relative-caret-position="379">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
         </state>
       </provider>
     </entry>

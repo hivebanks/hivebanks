@@ -50,8 +50,8 @@ if ($_FILES["file"]["size"] > $sizeLimit)
 // 定义新文件名
 $ext = explode('.', basename($filename));
 
-$target = "/api/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-print_r($_FILES);
+$target = dirname(dirname(__FILE__))."/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+print_r(dirname(dirname(__FILE__))."/public/img/");
 
 move_uploaded_file($_FILES["file"]["tmp_name"], "..".$target);
 print_r($_FILES["file"]["tmp_name"]);
