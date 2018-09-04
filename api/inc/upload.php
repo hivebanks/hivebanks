@@ -9,12 +9,12 @@
 
 
 
-//namespace hivebanks\inc;
+namespace hivebanks\inc;
 
-//use Qiniu\Auth;
-//use Qiniu\Storage\UploadManager;
-
-require_once   '../plugin/Qiniu/Auth.php';
+use Qiniu\Auth;
+use Qiniu\Storage\UploadManager;
+//require_once   '../plugin/Qiniu/functions.php';
+//require_once   '../plugin/Qiniu/Auth.php';
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 
@@ -27,7 +27,7 @@ print_r(1);
 // 需要填写你的 Access Key 和 Secret Key
 $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
-print_r(2);
+print_r(1);
 // 构建鉴权对象
 $auth = new \Qiniu\Auth($accessKey, $secretKey);
 //Auth::getAccessKey();
