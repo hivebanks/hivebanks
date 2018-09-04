@@ -1,5 +1,5 @@
 <?php
-namespace Aliyun\OSS;
+namespace Aliyun;
 require_once 'autoload.php';
 
 //require_once "../plugin/OSS/OssClient.php";
