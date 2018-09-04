@@ -11,10 +11,10 @@
 
 namespace hivebanks\inc;
 
-use Qiniu\Auth;
-use Qiniu\Storage\UploadManager;
-//require_once   '../plugin/Qiniu/functions.php';
-
+//use Qiniu\Auth;
+//use Qiniu\Storage\UploadManager;
+require_once   '../plugin/Qiniu/functions.php';
+require_once   '../plugin/Qiniu/Auth.php';
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 
@@ -27,7 +27,7 @@ $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
 
 // 构建鉴权对象
-$auth = new Auth($accessKey, $secretKey);
+$auth = new \Qiniu\Auth($accessKey, $secretKey);
 //Auth::getAccessKey();
 
 
