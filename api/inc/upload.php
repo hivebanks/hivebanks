@@ -25,7 +25,9 @@ $file = $_FILES["file"];
 $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
 $target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-$file = "111";
+print_r(fileToBase64($file));
+
+die;
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $target, $file);
@@ -33,4 +35,17 @@ try {
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
 
+}
+
+
+
+
+function fileToBase64($file){
+    $base64_file = '';
+    if(file_exists($file)){
+        $mime_type= mime_content_type($file);
+        $base64_data = base64_encode(file_get_contents($file));
+        $base64_file = 'data:'.$mime_type.';base64,'.$base64_data;
+    }
+    return $base64_file;
 }
