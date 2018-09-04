@@ -2,7 +2,6 @@
 namespace Qiniu;
 
 use Qiniu\Zone;
-use Qiniu\functions;
 final class Auth
 {
     private $accessKey;
