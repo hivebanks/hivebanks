@@ -1,5 +1,5 @@
 <?php
-require_once 'la_db_mysql.php';
+
 class DB_COM extends Mysql {
     public $schema = 'rols161';
     protected $server = '47.254.40.100';

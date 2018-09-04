@@ -76,14 +76,14 @@ function install_file_check($file_name)
  */
 function db_connect_check($server, $user, $password, $database)
 {
-    $conn = mysqli_connect($server, $user, $password);
-    if ($conn->connect_error) {
+    $conn = @mysqli_connect($server, $user, $password);
+    if ($conn->connect_error||!@$conn) {
         header('location:la_error_db_connect.php');
         exit;
     }
 
 
-        // 创建数据库
+    // 创建数据库,创建失败则提示手动创建库后上传db文件；创建成功但写入文件失败则提示上传db文件；
     $sql = "CREATE DATABASE " . $database . ' CHARACTER SET utf8 COLLATE utf8_general_ci';
     if ($conn->query($sql)) {
         $str_tmp = "<?php\r\n"; //得到php的起始符。$str_tmp将累加
@@ -101,15 +101,23 @@ function db_connect_check($server, $user, $password, $database)
         $dir_path = dirname(dirname(dirname(__FILE__)))."";
         $sf = $dir_path."/inc/db_connect.php"; //文件名
 
-        $fp = fopen($sf, "w+"); //写方式打开文件
+        $fp = @fopen($sf, "w+");
+        if(!$fp){//写方式打开文件
+            header("location:la_error_permission_dbfile.php?dn=$database&s=$server&u=$user&p=$password&dn=$database");
+            exit;
+        }
+        if(!@fwrite($fp, $str_tmp)){
+            header("location:la_error_permission_dbfile.php?dn=$database&s=$server&u=$user&p=$password&dn=$database");
+            exit;
+        }
 
-        fwrite($fp, $str_tmp); //存入内容
-        fclose($fp); //关闭文件
+        fclose($fp);
         return true;
-    } else {
-        header('location:la_error_db_connect.php');
+    } else {//如果建库失败，进入提示页面
 
+        header("location:la_error_permission_dbfile.php?dn=$database&s=$server&u=$user&p=$password&dn=$database");
         exit;
+
     }
 
 }
@@ -134,20 +142,32 @@ function admin_create($data, $server, $user, $password, $dbname)
 
 }
 
-function set_ba_asset_unit($data, $server, $user, $password, $dbname)
+/**
+ * @param $user
+ * @param $data
+ * @param $server
+ * @param $user
+ * @param $password
+ * @param $dbname
+ * 设定la初始化配置
+ */
+function set_ba_asset_unit($user,$data, $server, $user, $password, $dbname)
 {
 
     $conn = new mysqli($server, $user, $password, $dbname);
     if ($conn->connect_error) {
+
         header('location:la_error_db_connect.php');
         exit;
     }
 
     $sql = "INSERT INTO la_base (base_currency,unit,h5_url,api_url,ca_currency) VALUES ('{$data['benchmark_type']}','{$data['digital_unit']}','{$data['h5_url']}','{$data['api_url']}','{$data['ca_currency']}')";
     $q_id = $conn->query($sql);
-    if ($q_id == 0)
-        echo "发生错误";
+    if ($q_id == 0){
 
+        header('location:la_error_db_connect.php');
+        exit;
+    }
     $api_url = $data["api_url"];
     $h5_url = $data["h5_url"];
     $benchmark_type = $data["benchmark_type"];
@@ -166,7 +186,6 @@ function set_ba_asset_unit($data, $server, $user, $password, $dbname)
     $str_tmp .= '"ca_currency" : "';
     $str_tmp .= $ca_currency . '",';
 
-
     $str_tmp .= '"userLanguage" : "';
     $str_tmp .= $userLanguage . '",';
 
@@ -180,13 +199,67 @@ function set_ba_asset_unit($data, $server, $user, $password, $dbname)
 
 
     $sf = $dir_path . "/assets/json/config_url.json"; //文件名
-    $fp = fopen($sf, "w+"); //写方式打开文件
-    fwrite($fp, $str_tmp); //存入内容
+    $fp = @fopen($sf, "w+"); //写方式打开文件
+
+    if(!$fp) {
+
+        header("location:la_error_permission_conf.php?u=$user&au=$api_url&hu=$h5_url&bt=$benchmark_type&cc=$ca_currency&ul=$userLanguage");
+        exit();
+
+    }
+    if(!@fwrite($fp, $str_tmp)){
+
+        header("location:la_error_permission_conf.php?u=$user&au=$api_url&hu=$h5_url&bt=$benchmark_type&cc=$ca_currency&ul=$userLanguage");
+        exit();
+
+    }
     fclose($fp); //关闭文件
 
-    return true;
 }
 
+function config_json_check($data){
+
+    $dir_path = dirname(dirname(dirname(dirname(__FILE__)))) . "/h5/";
+
+    $sf = $dir_path . "assets/json/config_url.json"; //文件名
+
+
+    $content = file_get_contents($sf);
+    //如果文件不存在，提示重新上传
+    if(!$content)
+        return false;
+
+    $content = json_decode($content,1);
+
+    //判断json文件内配置是否完整
+
+    //如果文件内容与填写不一致，提示重新上传
+    foreach($content as $k=>$v){
+        if($k=='api_url'){
+            if($data['au']!=$v)
+                return false;
+        }
+        if($k=='h5_url'){
+            if($data['hu']!=$v)
+                return false;
+        }
+        if($k=='benchmark_type'){
+            if($data['bt']!=$v)
+                return false;
+        }
+        if($k=='ca_currency'){
+            if($data['cc']!=$v)
+                return false;
+        }
+        if($k=='userLanguage'){
+            if($data['ul']!=$v)
+                return false;
+        }
+    }
+
+    return true;
+
+}
 /**
  * @return void()
  * 最后一次检查数据库连接，确认用户是否已经将配置文件写入la_db_connect.php
@@ -371,6 +444,16 @@ function is_exist_database()
                 $database = '';
             continue;
         }
+
+        $dbMatched = preg_match("/schema/",$content[$i],$matches);
+        if($matches){
+            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            if(isset($matches[0])&&!empty($matches[0]))
+                $schema = $matches[0];
+            else
+                $schema = '';
+            continue;
+        }
     }
 
 //检查数据库连接情况
@@ -393,8 +476,95 @@ function is_exist_database()
     if($db_flag)
         return false;
 
+    //检查表是否存在
+    $conn = new mysqli($server, $user, $password,$database);
+
+    $table_exist = $conn->query("SELECT * FROM INFORMATION_SCHEMA.TABLES
+            WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME in ('la_base','com_option_config','com_base_balance'
+            ,'la_admin')")->fetch_all(MYSQLI_ASSOC);
+
+    if(count($table_exist)<4)
+        return false;
     return true;
 
+}
+
+/**
+ * @param $host
+ * @param $dbu
+ * @param $pwd
+ * @param $db
+ * @return bool
+ * 检查db文件
+ */
+function before_install_check($host, $dbu, $pwd,$db){
+
+    $file = '../inc/db_connect.php';
+    $content = file($file);
+
+    $length = count($content);
+    //读取db配置文件，并获取server，user，password，database
+    for ($i = 0;$i<$length;$i++)
+    {
+
+        $dbMatched = preg_match("/server/",$content[$i],$matches);
+        if($matches){
+            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            if(isset($matches[0])&&!empty($matches[0]))
+                $server = $matches[0];
+            else
+                $server = '';
+            continue;
+        }
+
+        $dbMatched = preg_match("/user/",$content[$i],$matches);
+        if($matches){
+            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            if(isset($matches[0])&&!empty($matches[0]))
+                $user = $matches[0];
+            else
+                $user = '';
+            continue;
+        }
+
+        $dbMatched = preg_match("/password/",$content[$i],$matches);
+        if($matches){
+            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            if(isset($matches[0])&&!empty($matches[0]))
+                $password = $matches[0];
+            else
+                $password = '';
+            continue;
+        }
+
+        $dbMatched = preg_match("/database/",$content[$i],$matches);
+        if($matches){
+            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            if(isset($matches[0])&&!empty($matches[0]))
+                $database = $matches[0];
+            else
+                $database = '';
+            continue;
+        }
+
+        $dbMatched = preg_match("/schema/",$content[$i],$matches);
+        if($matches){
+            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            if(isset($matches[0])&&!empty($matches[0]))
+                $schema = $matches[0];
+            else
+                $schema = '';
+            continue;
+        }
+    }
+    if($db!=$database||$host!=$server||$dbu!=$user||$password!=$pwd)
+        return false;
+
+    $conn = new mysqli($server, $user, $password, $database);
+
+    if ($conn->connect_error)
+        return false;
+    return true;
 }
 
 /**

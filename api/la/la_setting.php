@@ -79,13 +79,21 @@ switch ($step) {
 
     break;
 
-//    case '4':
-//        //安装前确认数据库连接
-//        db_connect_check_final();
-//
-//        header('location:la_setting_step_three.php');
-//
-//    break;
+    case '4':
+        $reinstall_flag = $_REQUEST['reinstall_flag'];
+        $db_name = $_REQUEST['db'];
+        $DB_COMer = $_REQUEST['u'];
+        $db_pwd  = $_REQUEST['p'];
+        $db_host = $_REQUEST['s'];
+
+        $db_check = before_install_check($db_host, $DB_COMer, $db_pwd,$db_name);
+        //安装前确认数据库连接
+        if($db_check) {
+            header("location:la_setting_step_three.php?dbname=$db_name&uname=$DB_COMer&pwd=$db_pwd&dbhost=$db_host&reinstall=$reinstall_flag");
+        }else{
+            header('location:la_error_db_connect.php');
+        }
+    break;
 
     case '5':
         $reinstall_flag = $_REQUEST['reinstall_flag'];
@@ -140,19 +148,32 @@ switch ($step) {
         require_once '../inc/config.php';
 
         $key = Config::TOKEN_KEY;
+        $user = $_REQUEST['uname'];
         $data['benchmark_type'] = $_REQUEST['benchmark_type'];
         $data['api_url'] = $_REQUEST['api_url'];
         $data['h5_url'] = $_REQUEST['h5_url'];
         $data['digital_unit']  =$_REQUEST['digital_unit'];
         $data['ca_currency'] = $_REQUEST['ca_currency'];
         $data['userLanguage'] = isset($_COOKIE['userLanguage'])?(empty($_COOKIE['userLanguage'])?'en':$_COOKIE['userLanguage']):'en';
-        set_ba_asset_unit($data,$_REQUEST['dbhost'], $_REQUEST['uname'], $_REQUEST['pwd'],$_REQUEST['dbname']);
-        $user = $_REQUEST['uname'];
-
+        set_ba_asset_unit($user,$data,$_REQUEST['dbhost'], $_REQUEST['uname'], $_REQUEST['pwd'],$_REQUEST['dbname']);
 
         header("location:la_give_me_five.php?u=$user&reinstall_flag=$reinstall_flag");
     break;
 
+    case '7':
+        $res = config_json_check($_REQUEST);
+        $u = $_REQUEST['u'];
+        if(!$res){
+            $bt = $_REQUEST['bt'];
+            $au = $_REQUEST['au'];
+            $hu = $_REQUEST['hu'];
+            $cc = $_REQUEST['cc'];
+            $ul = $_REQUEST['ul'];
+            header("location:la_error_permission_conf.php?au=$au&u=$u&bt=$bt&hu=$hu&cc=$cc&ul=$ul");
+            exit;
+        }
+        header("location:la_give_me_five.php?u=$u&reinstall_flag=$reinstall_flag");
+    break;
 }
 
 
