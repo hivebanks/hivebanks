@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 require_once "common.php";
 require_once "es_imagecls.php";
 //namespace Aliyun;
@@ -27,6 +30,9 @@ $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
 $target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 $key = "file";
+print_r(APP_ROOT_PATH);
+
+die;
 $img_result = save_image_upload($_FILES, $key, "temp");
 print_r($img_result);
 die;
