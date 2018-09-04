@@ -17,7 +17,6 @@ print_r(222);
 require_once   '../plugin/Qiniu/functions.php';
 print_r(111);
 
-die;
 //require_once   '../plugin/Qiniu/Auth.php';
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
