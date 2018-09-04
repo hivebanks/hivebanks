@@ -1,6 +1,7 @@
 <?php
 
 require_once "common.php";
+require_once "es_imagecls.php";
 //namespace Aliyun;
 if (is_file( '../plugin/OSS/autoload.php')) {
     require_once '../plugin/OSS/autoload.php';
@@ -25,8 +26,9 @@ $file = $_FILES["file"];
 $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
 $target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-print_r(fileToBase64($file));
-
+$key = "img";
+$img_result = $this->save_image_upload($_FILES, $key, "temp");
+print_r($img_result);
 die;
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
@@ -40,12 +42,45 @@ try {
 
 
 
-function fileToBase64($file){
-    $base64_file = '';
-    if(file_exists($file)){
-        $mime_type= mime_content_type($file);
-        $base64_data = base64_encode(file_get_contents($file));
-        $base64_file = 'data:'.$mime_type.';base64,'.$base64_data;
+function save_image_upload($upd_file, $key = '', $dir = 'temp', $whs = array(), $is_water = false, $need_return = true)
+{
+    $image = new es_imagecls();
+    $image->max_size = intval(app_conf("MAX_IMAGE_SIZE"));
+
+    $list = array();
+
+    if (empty($key)) {
+        foreach ($upd_file as $fkey => $file) {
+            $list[$fkey] = false;
+            $image->init($file, $dir);
+            if ($image->save()) {
+                $list[$fkey] = array();
+                $list[$fkey]['url'] = $image->file['target'];
+                $list[$fkey]['path'] = $image->file['local_target'];
+                $list[$fkey]['name'] = $image->file['prefix'];
+            } else {
+                if ($image->error_code == -105) {
+                    return array('status' => 0, 'error' => '上传的图片太大');
+                } elseif ($image->error_code == -104 || $image->error_code == -103 || $image->error_code == -102 || $image->error_code == -101) {
+                    return array('status' => 0, 'error' => '非法图像' . $image->error_code);
+                }
+            }
+        }
+    } else {
+        $list[$key] = false;
+        $image->init($upd_file[$key], $dir);
+        if ($image->save()) {
+            $list[$key] = array();
+            $list[$key]['url'] = $image->file['target'];
+            $list[$key]['path'] = $image->file['local_target'];
+            $list[$key]['name'] = $image->file['prefix'];
+        } else {
+            if ($image->error_code == -105) {
+                return array('status' => 0, 'error' => '上传的图片太大');
+            } elseif ($image->error_code == -104 || $image->error_code == -103 || $image->error_code == -102 || $image->error_code == -101) {
+                return array('status' => 0, 'error' => '非法图像' . $image->error_code);
+            }
+        }
     }
-    return $base64_file;
+    return $list;
 }
