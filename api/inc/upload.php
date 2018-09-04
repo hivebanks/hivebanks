@@ -18,6 +18,7 @@ require_once   '../plugin/Qiniu/functions.php';
 print_r(111);
 
 require_once   '../plugin/Qiniu/Auth.php';
+require_once   '../plugin/Qiniu/Storage/UploadManager.php';
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 
@@ -59,7 +60,7 @@ $filePath = './img-08.jpg'; // 上传到七牛后保存的文件名，可拼接
 
 $key = 'img-08.jpg'; // 初始化 UploadManager 对象并进行文件的上传。
 
-$uploadMgr = new UploadManager(); // 调用 UploadManager 的 putFile 方法进行文件的上传。
+$uploadMgr = new \Qiniu\Storage\UploadManager(); // 调用 UploadManager 的 putFile 方法进行文件的上传。
 print_r(11);
 list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
 print_r(22);
