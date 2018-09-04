@@ -23,13 +23,13 @@ $endpoint = "oss-cn-beijing.aliyuncs.com";
 $bucket = "hivebanks";
 //$object = "example.jpg";
 //$content = "/example.jpg";
-$file = $_FILES["file"];
+//$file = $_FILES["file"];
 //print_r($file['file']);
 //$file_path = dirname(__FILE__);
-$filename = $_FILES["file"]["name"];
-$ext = explode('.', basename($filename));
-$target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-$key = "file";
+//$filename = $_FILES["file"]["name"];
+//$ext = explode('.', basename($filename));
+//$target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+//$key = "file";
 //$img_result = save_image_upload($_FILES, $key, "temp");
 //print_r($img_result);
 
@@ -45,10 +45,15 @@ $key = "file";
 //
 //$this->response(0,'上传成功',$data);
 
+$scr = $_FILES['file']['tmp_name'];
+
+$ext = substr($_FILES['file']['name'],strrpos($_FILES['file']['name'],'.')+1); // 上传文件后缀
+
+$dst = md5(time()).'-'.$scr.'.'.$ext;
 
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
-    $ossClient->uploadFile($bucket, $target, $file);
+    $ossClient->uploadFile($bucket, $dst, $scr);
     print_r("上传成功");
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
