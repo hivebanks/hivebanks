@@ -1,8 +1,8 @@
 <?php
 //namespace Aliyun;
-if (is_file( 'autoload.php')) {
+if (is_file( '../../plugin/OSS/upload.php')) {
     print_r(44);
-    require_once 'autoload.php';
+    require_once '../../plugin/OSS/upload.php';
     print_r(33);
 }
 
