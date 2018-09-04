@@ -29,7 +29,7 @@ error_reporting(E_ALL | E_STRICT);
 // 需要填写你的 Access Key 和 Secret Key
 $accessKey = 'aegJ45Kcg4mVUTvpzGTA20SCF_gl2A-pONGTEyYb';
 $secretKey = 'mYzXiGuWtfLVsqyyowW0rUjh3IIczb2GzoTmFelT';
-print_r(1);
+print_r("aa");
 // 构建鉴权对象
 $auth = new \Qiniu\Auth($accessKey, $secretKey);
 //Auth::getAccessKey();
