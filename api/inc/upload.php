@@ -15,6 +15,8 @@ $bucket = "<yourBucketName>";
 try {
     $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->createBucket($bucket);
+    print_r(111);
 } catch (OssException $e) {
     print $e->getMessage();
+    print_r(222);
 }
