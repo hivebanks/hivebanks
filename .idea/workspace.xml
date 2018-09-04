@@ -71,6 +71,11 @@
       <find>h5_hiv</find>
       <find>_SESSION</find>
       <find>us_recharge_bit_amount</find>
+      <find>getUpHost</find>
+      <find>getUpBackupHost</find>
+      <find>Config</find>
+      <find>FormUploader</find>
+      <find>Zone</find>
     </findStrings>
     <replaceStrings>
       <replace />
