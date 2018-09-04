@@ -1,6 +1,12 @@
 <?php
 
-require_once  'autoload.php';
+if (is_file(__DIR__ . '/autoload.php')) {
+    require_once __DIR__ . '/autoload.php';
+}
+if (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+}
+
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
 print_r(333);
