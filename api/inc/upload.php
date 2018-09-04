@@ -26,7 +26,7 @@ $file = $_FILES["file"];
 $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
 $target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-$key = "img";
+$key = "file";
 $img_result = save_image_upload($_FILES, $key, "temp");
 print_r($img_result);
 die;
