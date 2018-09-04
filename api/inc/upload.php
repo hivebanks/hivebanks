@@ -54,9 +54,8 @@ $dst = md5(time()).'-'.$scr.'.'.$ext;
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $data = $ossClient->uploadFile($bucket, $dst, $scr);
-    $url = array('url' =>$data);
+    print_r($data);
 
-    print_r($url);
 } catch (\OSS\Core\OssException $e) {
     print $e->getMessage();
 
