@@ -18,10 +18,9 @@ $bucket = "hivebanks";
 //$object = "example.jpg";
 //$content = "/example.jpg";
 $file = $_FILES["file"];
-if (strstr($file, "./")) {
-    $file = str_replace("./", "", $file);
-}
-print_r($file);
+$file_path = dirname(__FILE__);
+
+print_r($file_path);
 die;
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
