@@ -17,7 +17,7 @@ $endpoint = "oss-cn-beijing.aliyuncs.com";
 $bucket = "hivebanks";
 //$object = "example.jpg";
 //$content = "/example.jpg";
-$file = $_FILES["file"];
+$file = $_FILES;
 print_r($file);
 $file_path = dirname(__FILE__);
 
