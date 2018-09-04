@@ -5,17 +5,10 @@
  * Date: 2018/8/27
  * Time: 下午3:56
  */
-namespace Qiniu\Auth;
+namespace inc;
 ini_set("display_errors", "On");
-
 error_reporting(E_ALL | E_STRICT);
 
-//require_once "../plugin/Qiniu/Auth.php";
-// 引入鉴权类
-
-
-//require_once "../plugin/Qiniu/Auth.php";
-//require_once "../plugin/Qiniu/Storage/UploadManager.php";
 
 use Qiniu\Auth;
 //use Qiniu\Storage\BucketManager;
