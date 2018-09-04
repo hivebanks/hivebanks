@@ -83,7 +83,7 @@ function db_connect_check($server, $user, $password, $database)
     }
 
 
-    // 创建数据库,创建失败则提示手动创建库后上传db文件；创建成功但写入文件失败则提示上传db文件；
+
     $sql = "CREATE DATABASE " . $database . ' CHARACTER SET utf8 COLLATE utf8_general_ci';
     if ($conn->query($sql)) {
         $str_tmp = "<?php\r\n"; //得到php的起始符。$str_tmp将累加
@@ -102,7 +102,7 @@ function db_connect_check($server, $user, $password, $database)
         $sf = $dir_path."/inc/db_connect.php"; //文件名
 
         $fp = @fopen($sf, "w+");
-        if(!$fp){//写方式打开文件
+        if(!$fp){//建库成功，写入失败，进入提示页面=>手动创建db文件
             header("location:la_error_permission_dbfile.php?dn=$database&s=$server&u=$user&p=$password&dn=$database");
             exit;
         }
@@ -113,9 +113,9 @@ function db_connect_check($server, $user, $password, $database)
 
         fclose($fp);
         return true;
-    } else {//如果建库失败，进入提示页面
+    } else {//如果建库失败，进入提示页面=>手动建库，手动创建db文件
 
-        header("location:la_error_permission_dbfile.php?dn=$database&s=$server&u=$user&p=$password&dn=$database");
+        header("location:la_error_permission_dbfilesit.php?dn=$database&s=$server&u=$user&p=$password&dn=$database");
         exit;
 
     }
