@@ -25,7 +25,7 @@ $file = $_FILES["file"];
 $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
 $target = "images" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-print_r($target);
+$file = "111";
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->putObject($bucket, $target, $file);
