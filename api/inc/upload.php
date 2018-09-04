@@ -8,7 +8,7 @@ if (is_file( 'autoload.php')) {
 
 ini_set("display_errors", "On");
 error_reporting(E_ALL | E_STRICT);
-use OSS\OssClient;
+use \OSS\OssClient;
 
 //use OSS\Core\OssException;
 $accessKeyId = "LTAIuTfkvjnNg54j";
