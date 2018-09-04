@@ -24,7 +24,7 @@ $file = $_FILES["file"];
 //$file_path = dirname(__FILE__);
 $filename = $_FILES["file"]["name"];
 $ext = explode('.', basename($filename));
-$target = "images" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+$target = "img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
 $file = "111";
 try {
     $ossClient = new \OSS\OssClient($accessKeyId, $accessKeySecret, $endpoint);
