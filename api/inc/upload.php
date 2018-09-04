@@ -60,6 +60,7 @@ $key = 'img-08.jpg'; // 初始化 UploadManager 对象并进行文件的上传�
 
 $uploadMgr = new \Qiniu\Storage\UploadManager(); // 调用 UploadManager 的 putFile 方法进行文件的上传。
 print_r(11);
+print_r("333");
 list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
 print_r(22);
  echo "\n====> putFile result: \n";
