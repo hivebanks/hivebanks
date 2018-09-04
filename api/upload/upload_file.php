@@ -51,7 +51,7 @@ if ($_FILES["file"]["size"] > $sizeLimit)
 $ext = explode('.', basename($filename));
 
 $target = dirname(dirname(__FILE__))."/public/img" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-
+print_r($_FILES);
 
 move_uploaded_file($_FILES["file"]["tmp_name"], "..".$target);
 print_r($_FILES["file"]["tmp_name"]);
