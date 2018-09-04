@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/api/inc/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/inc/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/inc/es_imagecls.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/inc/es_imagecls.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +16,8 @@
       <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/inc/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="268">
+              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding>
                 <element signature="e#224#243#0#PHP" expanded="true" />
               </folding>
@@ -25,18 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="es_imagecls.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="es_imagecls.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/inc/es_imagecls.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3345" />
+            <state relative-caret-position="753">
+              <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/inc/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+            <state relative-caret-position="225">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -103,8 +105,9 @@
         <option value="$PROJECT_DIR$/api/inc/autoload.php" />
         <option value="$PROJECT_DIR$/api/plugin/OSS/upload.php" />
         <option value="$PROJECT_DIR$/api/plugin/OSS/autoload.php" />
-        <option value="$PROJECT_DIR$/api/inc/upload.php" />
         <option value="$PROJECT_DIR$/api/inc/config.php" />
+        <option value="$PROJECT_DIR$/api/inc/upload.php" />
+        <option value="$PROJECT_DIR$/api/inc/es_imagecls.php" />
       </list>
     </option>
   </component>
@@ -211,12 +214,12 @@
       <updated>1535698033077</updated>
       <workItem from="1535698034382" duration="8535000" />
       <workItem from="1536043003323" duration="926000" />
-      <workItem from="1536044059599" duration="9637000" />
+      <workItem from="1536044059599" duration="10211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19342000" />
+    <option name="totallyTimeSpent" value="19916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -555,10 +558,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/inc/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/inc/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="268">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="e#224#243#0#PHP" expanded="true" />
           </folding>
@@ -567,13 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/inc/es_imagecls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/inc/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        <state relative-caret-position="753">
+          <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
         </state>
       </provider>
     </entry>

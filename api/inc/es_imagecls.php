@@ -182,7 +182,6 @@ class es_imagecls
 	 */
 	private function saveFile($source, $target)
 	{
-        $succeed = false;
 		if(!es_imagecls::isUploadFile($source)){
 			$succeed = false;
         } elseif(@copy($source, $target)){
