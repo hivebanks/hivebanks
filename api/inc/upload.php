@@ -13,6 +13,7 @@ $accessKeySecret = "<yourAccessKeySecret>";
 $endpoint = "http://oss-cn-hangzhou.aliyuncs.com";
 // 存储空间名称
 $bucket = "<yourBucketName>";
+print_r(555);
 try {
     $ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
     $ossClient->createBucket($bucket);
