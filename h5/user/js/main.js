@@ -118,7 +118,7 @@ $(function () {
 });
 
 //GetUsAccount
-function GetUsAccount (){
+function GetUsAccount() {
     var us_account = GetCookie('us_account');
     $(".us_account").text(us_account);
 }
@@ -172,6 +172,10 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     }, function (response) {
         GetImgCode();
         GetErrorCode(response.errcode);
+        $this.attr("disabled", false);
+        $('.sixty').fadeOut('fast');
+        $('.getCodeText').attr('name', 'getCode');
+        execI18n();
         return;
     });
 };

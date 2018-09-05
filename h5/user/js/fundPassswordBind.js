@@ -17,6 +17,7 @@ $(function () {
     });
     //获取url参数
     var wi_funPass = GetQueryString('wi_funPass');
+
     //绑定资金密码
     $('.fundPasswordEnable').click(function () {
         var hash_type = 'pass_hash',
