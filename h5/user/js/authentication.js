@@ -239,7 +239,7 @@ $(function () {
         }
 
         var formData = new FormData($("#form0")[0]);
-        formData.append(la_id);
+        formData.append("la_id", la_id);
         fileObj0 = UpLoadImg(formData);
     });
     //上传背面
@@ -250,7 +250,7 @@ $(function () {
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
-        formData.append(la_id);
+        formData.append("la_id", la_id);
         fileObj1 = UpLoadImg(formData);
     });
 
