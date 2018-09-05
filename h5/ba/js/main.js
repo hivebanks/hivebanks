@@ -7,7 +7,7 @@ $(function () {
 
     //back index
     $('.toIndexBtn').click(function () {
-        window.location.href = '../index.html?ba';
+        window.location.href = '../index.html?ba=ba';
     });
 
 //    get time
