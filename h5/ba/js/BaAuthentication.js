@@ -196,7 +196,6 @@ $(function () {
         var objData = new Object();
         $.ajax({
             url: config_api_url + '/api/upload/upload_file.php',
-            header: {"Access-Control-Allow-Origin": "*"},
             type: 'POST',
             data: formData,
             async: false,
@@ -207,6 +206,10 @@ $(function () {
                 var data = JSON.parse(response);
                 if(data.code == '-1'){
                     LayerFun('fileUploadFail');
+                    return;
+                }
+                if(data.errcode == '1'){
+                    LayerFun("notOpenFileUpload");
                     return;
                 }
                 objData.src = data.data.src;
