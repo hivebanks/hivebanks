@@ -333,6 +333,20 @@ textarea::-ms-input-placeholder
 .dropdown-menu>li:hover a{
     color: #4CC2E4;
 }
+.navbar-header{
+    width: 100%;
+}
+.navbar-brand{
+    width: 40%;
+    padding-top: 8px!important;
+}
+.container>.navbar-header{
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+.navbar-toggle{
+    margin-right: 0;
+}
 /*.navbar-collapse{*/
     /*position: absolute;*/
     /*width: 100%;*/
