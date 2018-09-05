@@ -13,6 +13,11 @@ function GetCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
     if (arr == null) {
+        DelCookie('user_token');
+        DelCookie('user_account');
+        DelCookie('re_bit_type');
+        DelCookie('user_id');
+        DelCookie('user_level');
         window.location.href = 'login.html';
     }
     return null;
