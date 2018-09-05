@@ -85,7 +85,7 @@ if($ret_bind){
 }
 
 // 信息绑定
-$ret = bind_info($ca_id,$data_bind);
+$ret =  bind_info_ca_bind($ca_id,$data_bind);
 if(!$ret){
     exit_error('101','Binding failed, please try again!');
 }
