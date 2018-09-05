@@ -24,7 +24,7 @@ GET参数
 */
 
 
-    $ret = send_email($name='ssh', '18321709102@163.com', 'syc', 'test');
+    $ret = send_email($name='ssh', '1176932572@qq.com', 'syc', 'test');
     if($ret){
     exit_ok('Please verify email as soon as possible!');
   }else{
