@@ -23,7 +23,10 @@
     cursor: pointer;
     overflow: hidden;
 }
-.digital-inner-box li>img{
+.digital-inner-box li>p>i{
+    font-size: 2rem;
+}
+.digital-inner-box li>p{
     position: absolute;
     left: 0.5rem;
     top: 0.5rem;
