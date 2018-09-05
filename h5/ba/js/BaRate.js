@@ -42,7 +42,6 @@ $(function () {
             is_void = 0;
         var currentTime = CurrentTimeFun();
         console.log(recharge_rate);
-        return;
         if(recharge_rate <= 0 || recharge_rate.length <= 0){
             LayerFun("pleaseEnterValidRate");
             return;
