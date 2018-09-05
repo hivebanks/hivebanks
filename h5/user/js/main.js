@@ -20,11 +20,11 @@ $(function () {
     $('.toIndexBtn').click(function () {
         var type = getCurrentPath();
         if(type == '/user'){
-            window.location.href = 'index.html?user';
+            window.location.href = '../index.html?user';
         }else if(type == '/ba'){
-            window.location.href = 'index.html?ba';
+            window.location.href = '../index.html?ba';
         }else if(type == '/ca'){
-            window.location.href = 'index.html?ca';
+            window.location.href = '../index.html?ca';
         }
     });
 //    get time
