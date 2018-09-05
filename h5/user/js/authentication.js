@@ -216,8 +216,10 @@ $(function () {
                     LayerFun('fileUploadFail');
                     return;
                 }
-                console.log(response);
-                console.log(data);
+                if(data.errcode == '1'){
+                    LayerFun("notOpenFileUpload");
+                    return;
+                }
                 objData.src = data.data.src;
                 objData.file_hash = data.file_hash;
             },
