@@ -40,6 +40,7 @@ echo $base_amount;
 echo get_la_base_unit();
 //判断金额，以及其他参数是否正确
 $rate_row = get_ca_settting_recharge_rate_ca_id($ca_id);
+print_r($rate_row);
 if (($rate_row["min_amount"]  > $base_amount * get_la_base_unit() || $base_amount  * get_la_base_unit() > $rate_row["max_amount"]))
     exit_error('123',"充值金额必须要在ca允许的金额以内");
 //if (bccomp($rate_row["base_rate"] * $base_amount , $bit_amount,16))
