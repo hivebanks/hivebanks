@@ -13,7 +13,9 @@ $(function () {
                 $('.rechargeAddressRow').show();
                 $('.addressInput').val(response.lgl_address);
             }
+            console.log(response.errcode);
         }, function (response) {
+            console.log(response.errcode);
             LayerFun("submissionFailed");
             GetErrorCode(response.errcode);
             return;
