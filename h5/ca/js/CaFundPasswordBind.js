@@ -18,7 +18,7 @@ $(function () {
     });
 
     //获取绑定信息
-    GetBindInformation(token, function (response) {
+    GetCaBindInformation(token, function (response) {
         if(response.errcode == '0'){
             var data = response.rows;
             $.each(data, function (i, val) {
