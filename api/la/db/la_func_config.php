@@ -404,7 +404,6 @@ function is_exist_database()
 
     $file = '../inc/db_connect.php';
     $content = file($file);
-
     $length = count($content);
     //读取db配置文件，并获取server，user，password，database
     for ($i = 0;$i<$length;$i++)
@@ -412,7 +411,7 @@ function is_exist_database()
 
         $dbMatched = preg_match("/server/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $server = $matches[0];
             else
@@ -422,7 +421,7 @@ function is_exist_database()
 
         $dbMatched = preg_match("/user/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $user = $matches[0];
             else
@@ -432,7 +431,7 @@ function is_exist_database()
 
         $dbMatched = preg_match("/password/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $password = $matches[0];
             else
@@ -442,7 +441,7 @@ function is_exist_database()
 
         $dbMatched = preg_match("/database/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $database = $matches[0];
             else
@@ -452,7 +451,7 @@ function is_exist_database()
 
         $dbMatched = preg_match("/schema/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $schema = $matches[0];
             else
@@ -514,7 +513,7 @@ function before_install_check($host, $dbu, $pwd,$db){
 
         $dbMatched = preg_match("/server/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $server = $matches[0];
             else
@@ -524,7 +523,7 @@ function before_install_check($host, $dbu, $pwd,$db){
 
         $dbMatched = preg_match("/user/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $user = $matches[0];
             else
@@ -534,7 +533,7 @@ function before_install_check($host, $dbu, $pwd,$db){
 
         $dbMatched = preg_match("/password/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $password = $matches[0];
             else
@@ -544,7 +543,7 @@ function before_install_check($host, $dbu, $pwd,$db){
 
         $dbMatched = preg_match("/database/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $database = $matches[0];
             else
@@ -554,7 +553,7 @@ function before_install_check($host, $dbu, $pwd,$db){
 
         $dbMatched = preg_match("/schema/",$content[$i],$matches);
         if($matches){
-            $serverMatched = preg_match("/(?<=').*?(?=')/", $content[$i], $matches);
+            $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $schema = $matches[0];
             else
