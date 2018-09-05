@@ -485,9 +485,11 @@ function is_exist_database()
 
     $table_exist = $conn->query("SELECT * FROM INFORMATION_SCHEMA.TABLES
             WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME in ('la_base','com_option_config','com_base_balance'
-            ,'la_admin')")->fetch_all(MYSQLI_ASSOC);
+            ,'la_admin')");
 
-    if(count($table_exist)<4)
+    while($row = $table_exist->fetch_assoc()){  $rows[]=$row;}
+    
+    if(count($rows)<4)
         return false;
     return true;
 
