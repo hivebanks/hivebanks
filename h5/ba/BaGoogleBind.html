@@ -89,8 +89,8 @@
             <!-- 绑定信息 -->
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <h3 class="pcTitle"><span class="phoneBind" name="">Google Bind</span></h3>
-                    <h5 class="phoneTitle"><span class="phoneBind" name="">Google Bind</span></h5>
+                    <h3 class="pcTitle"><span class="phoneBind" name="googleBind">Google Bind</span></h3>
+                    <h5 class="phoneTitle"><span class="phoneBind" name="googleBind">Google Bind</span></h5>
                 </div>
             </div>
             <!--information authentication-->
@@ -117,7 +117,7 @@
                             <div class='col-md-3 col-sm-12'></div>
                             <div class='col-md-9 col-sm-12'>
                                 <div class=''>
-                                    <button class='btn btn-success phoneEnable i18n width-100' name='enable'>Enable</button>
+                                    <button class='btn btn-success phoneEnable i18n width-100' name='determine'>determine</button>
                                 </div>
                             </div>
                         </div>
@@ -131,12 +131,14 @@
                         <div class="flex center justify-center font-weight-400">
                             <p>Google 密钥</p>:
                             <p class="secret"></p>
-                            <p class="font-size-14 margin-left-2"><a href="BaGoogleVerification.html">去验证</a></p>
+                            <p class="font-size-14 margin-left-2">
+                                <a href="BaGoogleVerification.html" class="i18n" name="toVerify">toVerify</a>
+                            </p>
                         </div>
                         <div class="margin-left-2 margin-top-2">
                             <p class="font-size-14">
-                                <span>请在Google身份验证器中进行验证</span>
-                                <a class="lookBtn" href="javascript:;">查看认证流程</a>
+                                <span class="i18n" name="googleAuthenticator">Please verify in Google Authenticator</span>
+                                <a class="lookBtn i18n" name="viewProcess" href="javascript:;">View the certification process</a>
                             </p>
                         </div>
                     </div>
@@ -146,7 +148,7 @@
             <div class="row margin-top-5 none circuit">
                 <div class="col-md-6 col-sm-12">
                     <div class="googleOne align-center">
-                        <p class="margin-bottom-5 font-weight-400">第一步</p>
+                        <p class="margin-bottom-5 font-weight-400 i18n" name="firstStep">firstStep</p>
                         <div>
                             <img src="../assets/img/google-1.jpg" alt="">
                         </div>
@@ -154,7 +156,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="googleTwo align-center">
-                        <p class="margin-bottom-5 font-weight-400">第二步</p>
+                        <p class="margin-bottom-5 font-weight-400 i18n" name="secondStep">secondStep</p>
                         <div>
                             <img src="../assets/img/google-2.jpg" alt="">
                         </div>
