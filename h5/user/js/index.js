@@ -5,32 +5,44 @@ $(function () {
 
     function GetIndexCookie(name) {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
-        if (arr != null) return unescape(arr[2]);
+        if (arr != null) {
+            return unescape(arr[2]);
+        }else {
+            return null;
+        }
     }
 
     var user_token = GetIndexCookie('user_token');
     var ba_token = GetIndexCookie('ba_token');
     var ca_token = GetIndexCookie('ca_token');
+
     if (user_token) {
-        $('.usLogin, .create_btn').remove();
-        $('.alreadyLogin, .create_btn').removeClass('none');
-    }
-    if (ba_token) {
-        $('.baLogin').remove();
+        $('.create_btn').remove();
         $('.alreadyLogin').removeClass('none');
     }
-    if (ca_token) {
-        $('.caLogin').remove();
-        $('.alreadyLogin').removeClass('none');
-    }
+    $('.baLogin').click(function () {
+        if (ba_token || login_ba) {
+            window.location.href = 'ba/BaAccount.html';
+            }else {
+            window.location.href = 'ba/BaLogin.html';
+        }
+    });
+    $('.caLogin').click(function () {
+        if (ca_token || login_ca) {
+            window.location.href = 'ca/CaAccount.html';
+        }else {
+            window.location.href = 'ca/CaLogin.html';
+        }
+    });
+
     $('.toAccountBtn').click(function () {
-        if (login_us || user_token) {
+        if (login_us && user_token) {
             window.location.href = 'user/account.html';
         }
-        if (login_ba || ba_token) {
+        if (login_ba && ba_token) {
             window.location.href = 'ba/BaAccount.html';
         }
-        if (login_ca || ca_token) {
+        if (login_ca && ca_token) {
             window.location.href = 'ca/CaAccount.html';
         }
     });
