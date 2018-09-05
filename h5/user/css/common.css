@@ -15,6 +15,12 @@ body {
     font-family: 'Roboto', "微软雅黑", sans-serif;
     font-weight: 300;
 }
+.navbar-header{
+    width: 20%;
+}
+.navbar-brand{
+    padding: 0!important;
+}
 .content{
     min-height: 80%;
 }
