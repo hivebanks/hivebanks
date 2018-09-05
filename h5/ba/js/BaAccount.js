@@ -69,19 +69,23 @@ $(function () {
         GetErrorCode(response.errcode);
         return;
     });
-    //提现保证金
-    $('.withdraw_amount').click(function () {
-        // if(cellphone != 'cellphone'){
-        //     $('#phoneBind').modal('show');
-        //     return;
-        // }
+
+    //add margin withdraw address
+    $('.addMarginWithdrawAddress').click(function () {
         if(funPass != 'pass_hash'){
             $('#goBindFundPass').modal('show');
             return;
         }
+        window.location.href = 'BaMarginWithdrawAddress.html';
+    });
 
+    //提现保证金
+    $('.withdraw_amount').click(function () {
+        if(funPass != 'pass_hash'){
+            $('#goBindFundPass').modal('show');
+            return;
+        }
         window.location.href = 'BaWithdrawMargin.html';
-
     });
 
     //修改昵称
