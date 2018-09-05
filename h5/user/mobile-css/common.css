@@ -320,7 +320,8 @@ textarea::-ms-input-placeholder
     position: absolute;
     width: 100%;
     z-index: 1;
-    background-image: linear-gradient(to right, #041636, #0b2758);
+    background: #000000;
+    /*background-image: linear-gradient(to right, #041636, #0b2758);*/
     border-color: transparent;
 }
 .dropdown-menu>li>a{
@@ -332,14 +333,15 @@ textarea::-ms-input-placeholder
 .dropdown-menu>li:hover a{
     color: #4CC2E4;
 }
-.navbar-collapse{
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    border: unset;
-    background-image: linear-gradient(to right, #041636, #0b2758);
-    border-color: transparent;
-}
+/*.navbar-collapse{*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*z-index: 1;*/
+    /*border: unset;*/
+    /*background: #000000;*/
+    /*!*background-image: linear-gradient(to right, #041636, #0b2758);*!*/
+    /*border-color: transparent;*/
+/*}*/
 .personal{
     position: relative;
 }

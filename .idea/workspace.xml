@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/h5/assets/js/waterpipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/mobile-css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/mobile-css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/authentication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/mobile-css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/mobile-css/common.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +20,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="96">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authentication.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/authentication.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1515">
+              <caret line="264" column="13" selection-start-line="264" selection-start-column="13" selection-end-line="264" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -45,11 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/mobile-css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="410">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/mobile-css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="340" column="20" selection-start-line="340" selection-start-column="20" selection-end-line="340" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -76,6 +93,7 @@
       <find>publi</find>
       <find>uploadf</find>
       <find>th</find>
+      <find>formData</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -108,9 +126,11 @@
         <option value="$PROJECT_DIR$/api/upload/upload_file.php" />
         <option value="$PROJECT_DIR$/api/inc/upload.php" />
         <option value="$PROJECT_DIR$/h5/user/js/index.js" />
-        <option value="$PROJECT_DIR$/h5/index.html" />
         <option value="$PROJECT_DIR$/h5/user/css/index.css" />
         <option value="$PROJECT_DIR$/h5/user/mobile-css/index.css" />
+        <option value="$PROJECT_DIR$/h5/user/mobile-css/common.css" />
+        <option value="$PROJECT_DIR$/h5/index.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/authentication.js" />
       </list>
     </option>
   </component>
@@ -150,7 +170,27 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
@@ -173,6 +213,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/h5/assets/img" />
       <recent name="$PROJECT_DIR$/h5/assets/js" />
       <recent name="$PROJECT_DIR$/api/inc" />
       <recent name="$PROJECT_DIR$/api/plugin" />
@@ -211,7 +252,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23972000" />
+    <option name="totallyTimeSpent" value="25029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -263,14 +304,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/plugin/Qiniu/Cdn/CdnManager.php" />
-    <entry file="file://$PROJECT_DIR$/h5/user/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7875">
-          <caret line="525" column="10" lean-forward="true" selection-start-line="525" selection-start-column="10" selection-end-line="525" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10620">
@@ -529,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -545,8 +571,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/mobile-css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        <state relative-caret-position="410">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/mobile-css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="340" column="20" selection-start-line="340" selection-start-column="20" selection-end-line="340" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="264" column="13" selection-start-line="264" selection-start-column="13" selection-end-line="264" selection-end-column="13" />
         </state>
       </provider>
     </entry>
