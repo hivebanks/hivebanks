@@ -1,29 +1,95 @@
-/*body{*/
+nav, .footer {
     /*background-image: url("../img/banner.png");*/
     /*background-repeat: no-repeat;*/
     /*background-size: 100%;*/
-/*}*/
-section.banner{
+    background: #000!important;
+}
+.smoky {
+     position: absolute;
+    left: 0;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -1;
+}
+.smoky canvas {
+    height: 100% !important;
+}
+.hero {
+    height: 100vh;
+    padding: 0;
+    text-align: center;
+}
+/*button*/
+.a-btn {
+    line-height: normal;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    position: relative;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-right: 20px;
+    display: inline-block;
+    overflow: visible;
+    border: 2px solid #fff;
+    transform: perspective(1px) translateZ(0);
+    transition: all .3s ease 0s;
+    overflow: hidden;
+}
+
+.a-btn:before {
+    content: "";
+    background: #049f40;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition: transform .4s ease-out;
+    z-index: -1;
+}
+
+.a-btn:hover {
+    border-color: #049f40;
+    color: #fff;
+}
+
+.a-btn:hover:before {
+    transform: scaleX(1);
+}
+
+
+
+section.banner {
     padding: 0;
 }
-.banner-row{
-    height: 640px;
+
+.banner-row {
+    height: 100vh;
     position: relative;
 }
-.banner-row h1,.banner-row .create_btn{
+
+.banner-row h1, .banner-row .create_btn {
     position: absolute;
 }
-.banner-row h1{
-    background: linear-gradient(to right,#82ca9c,#ffffff,#eecf7c);
+
+.banner-row h1 {
+    /*background: linear-gradient(to right, #82ca9c, #ffffff, #eecf7c);*/
     -webkit-background-clip: text;
-    color: transparent;
+    /*color: transparent;*/
+    color: #ffffff;
     font-size: 36px;
     font-weight: 400;
     top: 15%;
     left: 40%;
     margin-left: -390px;
 }
-.create_btn{
+
+.create_btn {
     font-size: 20px;
     top: 30%;
     left: 18%;
@@ -32,12 +98,14 @@ section.banner{
     border: 1px solid #82ca9c;
     color: #fff;
 }
-.create_btn:hover{
+
+.create_btn:hover {
     background: #82ca9c;
     border: 1px solid #ffffff;
     color: #ffffff;
 }
-.banner-row img{
+
+.banner-row img {
     width: 100%;
     height: 100%;
 }
