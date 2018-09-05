@@ -148,7 +148,7 @@ switch ($step) {
         require_once '../inc/config.php';
 
         $key = Config::TOKEN_KEY;
-        $user = $_REQUEST['uname'];
+        $user = $_REQUEST['u'];
         $data['benchmark_type'] = $_REQUEST['benchmark_type'];
         $data['api_url'] = $_REQUEST['api_url'];
         $data['h5_url'] = $_REQUEST['h5_url'];
