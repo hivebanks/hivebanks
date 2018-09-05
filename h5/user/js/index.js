@@ -12,7 +12,7 @@ $(function () {
     var ba_token = GetIndexCookie('ba_token');
     var ca_token = GetIndexCookie('ca_token');
     if (user_token) {
-        $('.usLogin').remove();
+        $('.usLogin, .create_btn').remove();
         $('.alreadyLogin, .create_btn').removeClass('none');
     }
     if (ba_token) {
