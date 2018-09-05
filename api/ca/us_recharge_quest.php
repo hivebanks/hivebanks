@@ -36,8 +36,8 @@ $ca_channel = get_arg_str('GET', 'ca_channel');
 $us_level = get_arg_str('GET', 'us_level');
 ///验证token
 $us_id = check_token($token);
-echo $base_amount;
-echo get_la_base_unit();
+//echo $base_amount;
+//echo get_la_base_unit();
 //判断金额，以及其他参数是否正确
 $rate_row = get_ca_settting_recharge_rate_ca_id($ca_id);
 if (($rate_row["min_amount"]  > $base_amount * get_la_base_unit() || $base_amount  * get_la_base_unit() > $rate_row["max_amount"]))
