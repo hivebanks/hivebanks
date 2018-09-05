@@ -5,6 +5,11 @@ $(function () {
         $(".msg-content").slideToggle();
     });
 
+    //back index
+    $('.toIndexBtn').click(function () {
+        window.location.href = '../index.html?ba';
+    });
+
 //    get time
     var time = new Date().toLocaleString('chinese', {hour12: false});
     $(".time").text(time);
@@ -115,12 +120,13 @@ function CurrentTimeFun() {
 }
 
 //GetUsAccount
-function GetUsAccount (){
-    var us_account = GetCookie('us_account');
-    $(".us_account").text(us_account);
-}
+// function GetUsAccount() {
+//     var us_account = GetCookie('us_account');
+//     $(".us_account").text(us_account);
+// }
+
 //GetBaAccount
-function GetBaAccount (){
+function GetBaAccount() {
     var ba_account = GetCookie('ba_account');
     $(".ba_account").text(ba_account);
 }
@@ -129,7 +135,7 @@ function GetBaAccount (){
 function GetDataEmpty(element, num) {
     var tr = '';
     tr = '<tr>' +
-        '<td colspan="'+ num +'" style="line-height: unset!important;"><i class="iconfont icon-noData" style="font-size: 10rem"></i></td>' +
+        '<td colspan="' + num + '" style="line-height: unset!important;"><i class="iconfont icon-noData" style="font-size: 10rem"></i></td>' +
         '</tr>';
     $('#' + element).html(tr);
     return;
@@ -139,7 +145,7 @@ function GetDataEmpty(element, num) {
 function GetDataFail(element, num) {
     var tr = '';
     tr = '<tr>' +
-        '<td colspan="'+ num +'" style="line-height: unset!important;"><i class="iconfont icon-loadFai" style="font-size: 10rem"></i></td>' +
+        '<td colspan="' + num + '" style="line-height: unset!important;"><i class="iconfont icon-loadFai" style="font-size: 10rem"></i></td>' +
         '</tr>';
     $('#' + element).html(tr);
 }
@@ -230,6 +236,6 @@ function EmailList() {
 
 //layer提示
 function LayerFun(type) {
-    layer.msg('<span class="i18n" name="'+ type +'"></span>');
+    layer.msg('<span class="i18n" name="' + type + '"></span>');
     execI18n();
 }
