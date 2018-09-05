@@ -17,6 +17,22 @@ $(function () {
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
+    //获取绑定信息
+    GetBindInformation(token, function (response) {
+        if(response.errcode == '0'){
+            var data = response.rows;
+            $.each(data, function (i, val) {
+                if(data[i].bind_name != 'pass_hash' &&  data[i].bind_flag == '1'){
+                    $("#goBindCellPhone").modal('show');
+                    return;
+                }
+            })
+        }
+    }, function (response) {
+        GetErrorCode(response.errcode);
+        return;
+    });
+
     //绑定资金密码
     $('.fundPasswordEnable').click(function () {
         var hash_type = 'pass_hash',
