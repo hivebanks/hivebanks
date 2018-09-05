@@ -17,8 +17,8 @@ $(function () {
     var ca_token = GetIndexCookie('ca_token');
 
     if (user_token) {
-        $('.create_btn').remove();
-        $('.alreadyLogin').removeClass('none');
+        $('.create_btn, .usLogin').remove();
+        $('.accountNone').removeClass('accountNone');
     }
     $('.baLogin').click(function () {
         if (ba_token || login_ba) {
