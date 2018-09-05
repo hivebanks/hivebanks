@@ -1,9 +1,9 @@
 
 {
-  "api_url" :  "http://localhost/1016/hivebanks/api",
+  "api_url" :  "http://hbapi.fnying.com",
   "benchmark_type" : "BTC",
   "ca_currency" : "RMB",
   "userLanguage" :  "zh-CN",
-  "h5_url" :  "http://localhost/1016/hivebanks/h5"
+  "h5_url" :  "http://hb.fnying.com"
 }
                         
