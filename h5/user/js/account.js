@@ -28,7 +28,7 @@ $(function () {
     });
 
     //提现
-    $('.withdrawBtn').click(function () {
+    $('.withdrawBtn, .navWithdraw').click(function () {
         if(base_amount <= 0){
             $('#noBalanceModal').modal('show');
             return;
