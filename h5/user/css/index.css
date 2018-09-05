@@ -4,6 +4,9 @@ nav, .footer {
     /*background-size: 100%;*/
     background: #000!important;
 }
+.accountNone{
+    display: none;
+}
 .smoky {
      position: absolute;
     left: 0;
