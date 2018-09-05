@@ -334,6 +334,16 @@ textarea::-ms-input-placeholder
 .dropdown-menu>li:hover a{
     color: #4CC2E4;
 }
+.navbar-header{
+    width: 100%;
+}
+.navbar-brand{
+    width: 40%;
+    padding-top: 8px!important;
+}
+.navbar-brand>img{
+    height: unset;
+}
 .personal{
     position: relative;
 }

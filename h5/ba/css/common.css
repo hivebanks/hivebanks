@@ -394,7 +394,15 @@ textarea::-ms-input-placeholder {
 .dropdown-menu > li:hover a {
     color: #82ca9c;
 }
-
+.navbar-header{
+    width: 20%;
+}
+.navbar-brand{
+    padding: 0!important;
+}
+.navbar-brand>img{
+    height: 100%;
+}
 .personal {
     position: relative;
 }

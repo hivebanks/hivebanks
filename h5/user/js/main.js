@@ -19,7 +19,13 @@ $(function () {
     }
     $('.toIndexBtn').click(function () {
         var type = getCurrentPath();
-        console.log(type);
+        if(type == '/user'){
+            window.location.href = 'index.html?user';
+        }else if(type == '/ba'){
+            window.location.href = 'index.html?ba';
+        }else if(type == '/ca'){
+            window.location.href = 'index.html?ca';
+        }
     });
 //    get time
     var time = new Date().toLocaleString('chinese', {hour12: false});

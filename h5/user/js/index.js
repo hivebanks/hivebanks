@@ -1,7 +1,7 @@
 $(function () {
-    var login_us_token = GetQueryString('user_token');
-    var login_ba_token = GetQueryString('ba_token');
-    var login_ca_token = GetQueryString('ca_token');
+    var login_us = GetQueryString('user');
+    var login_ba = GetQueryString('ba');
+    var login_ca = GetQueryString('ca');
 
     function GetIndexCookie(name) {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
@@ -24,13 +24,13 @@ $(function () {
         $('.alreadyLogin').removeClass('none');
     }
     $('.toAccountBtn').click(function () {
-        if (login_us_token || user_token) {
+        if (login_us || user_token) {
             window.location.href = 'user/account.html';
         }
-        if (login_ba_token || ba_token) {
+        if (login_ba || ba_token) {
             window.location.href = 'user/BaAccount.html';
         }
-        if (login_ca_token || ca_token) {
+        if (login_ca || ca_token) {
             window.location.href = 'user/CaAccount.html';
         }
     });

@@ -335,6 +335,16 @@ textarea::-ms-input-placeholder
 .personal{
     position: relative;
 }
+.navbar-header{
+    width: 100%;
+}
+.navbar-brand{
+    width: 40%;
+    padding-top: 8px!important;
+}
+.navbar-brand>img{
+    height: unset;
+}
 /*=========register-login-reset============*/
 .registerToggleBox li:hover,.loginToggleBox li:hover,.resetToggleBox li:hover{
     color:#4CC2E4;
