@@ -13,6 +13,8 @@ function us_recharge_quest($data,$us_id,$utime) {
     $sql = "SELECT base_amount,lock_amount FROM ca_base WHERE ca_id = '{$data["ca_id"]}' limit 1";
     $db -> query($sql);
     $rows = $db -> fetchRow();
+    print_r($rows);
+    print_r($data);
     if ($rows["base_amount"] < $data["base_amount"]) {
         exit_error("132","无法达成交易，ca的保证金不足");
     }
