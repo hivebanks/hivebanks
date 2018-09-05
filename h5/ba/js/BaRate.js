@@ -74,6 +74,11 @@ $(function () {
                 $('.rechargeRateNotSet').hide();
                 LayerFun('setSuccess');
                 GetRechargeRateFun();
+                $('.rechargeRateInput').val("");
+                $('.rechargeMinVal').val("");
+                $('.rechargeMaxVal').val("");
+                $('.rechargeLevel').val("");
+                $('#rechargePassword').val("");
             }
         }, function (response) {
             ActiveClick(_this, btnText);
@@ -159,7 +164,11 @@ $(function () {
                 $('.withdrawRateNotSet').hide();
                 LayerFun('setSuccess');
                 GetWithdrawRateFun();
-                return;
+                $('.withdrawRateInput').val("");
+                $('.withdrawMinVal').val("");
+                $('.withdrawMaxVal').val("");
+                $('.withdrawLevel').val("");
+                $('#withdrawPassword').val("");
             }
         }, function (response) {
             ActiveClick(_this, btnText);
