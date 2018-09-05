@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04ee2314-827d-4d8c-bb1c-1bcf808f246a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/h5/ba/BaRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRegister.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/user/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+            <state relative-caret-position="163">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaRegister.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ba/BaRegister.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -124,12 +134,12 @@
         <option value="$PROJECT_DIR$/h5/ca/CaRegister.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaReset.html" />
         <option value="$PROJECT_DIR$/h5/ba/BaLogin.html" />
-        <option value="$PROJECT_DIR$/h5/ba/BaRegister.html" />
         <option value="$PROJECT_DIR$/h5/ba/BaReset.html" />
         <option value="$PROJECT_DIR$/h5/user/register.html" />
         <option value="$PROJECT_DIR$/h5/user/reset.html" />
         <option value="$PROJECT_DIR$/api/ca/us_recharge_quest.php" />
         <option value="$PROJECT_DIR$/h5/user/js/index.js" />
+        <option value="$PROJECT_DIR$/h5/ba/BaRegister.html" />
       </list>
     </option>
   </component>
@@ -168,7 +178,7 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="ba" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,7 +235,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33263000" />
+    <option name="totallyTimeSpent" value="33576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -237,7 +247,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -539,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/BaRegister.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/BaReset.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -583,8 +586,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="163">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaRegister.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
         </state>
       </provider>
     </entry>
