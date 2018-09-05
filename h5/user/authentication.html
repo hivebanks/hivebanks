@@ -100,27 +100,27 @@
         <div class="row nameBinRow phone-margin-top-10">
             <div class="col-md-12 col-sm-12">
                 <div class="flex center space-between bindBox padding-1">
-                    <span class="font-size-14 phone-font-size-12 i18n" name="nameBind">姓名绑定</span>
+                    <span class="font-size-14 phone-font-size-12 i18n" name="nameBind">nameBind</span>
                     <div>
                         <i class='iconfont icon-gantanhao redIcon nameIcon'></i>
-                        <span class="font-size-14 phone-font-size-12 nameBindStatus nameBindNot i18n"  name="unbound">未绑定</span>
-                        <span class="font-size-14 phone-font-size-12 bindStatus nameBindRefuse none"  name="">审核已拒绝，重新绑定</span>
+                        <span class="font-size-14 phone-font-size-12 nameBindStatus nameBindNot i18n"  name="unbound">unbound</span>
+                        <span class="font-size-14 phone-font-size-12 bindStatus nameBindRefuse none i18n"  name="review">审核已拒绝，重新绑定</span>
                     </div>
 
-                    <span class="font-size-14 phone-font-size-12 nameBindStatus nameBindAlready i18n none" name="alreadyBind">已绑定</span>
-                    <span class="font-size-14 phone-font-size-12 nameBindStatus nameUnderReview none" name="">审核中</span>
-                    <a href="javascript:;" class="font-size-14 phone-font-size-12 nameBindBtn i18n"  name="bind">绑定</a>
+                    <span class="font-size-14 phone-font-size-12 nameBindStatus nameBindAlready i18n none" name="alreadyBind">alreadyBind</span>
+                    <span class="font-size-14 phone-font-size-12 nameBindStatus nameUnderReview none" name="underReview">underReview</span>
+                    <a href="javascript:;" class="font-size-14 phone-font-size-12 nameBindBtn i18n"  name="bind">bind</a>
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-3 col-sm-12 margin-top-5 nameFormBox none">
                 <div class="">
                     <ul class="flex center space-between">
-                        <li><span class="i18n" name="name">姓名</span></li>
+                        <li><span class="i18n" name="name">name</span></li>
                         <li class="width-75">
                             <input type="text" id="name" class="form-control">
                         </li>
                         <li>
-                            <button class="btn btn-success nameBindEnable i18n" name="enable">确定</button>
+                            <button class="btn btn-success nameBindEnable i18n" name="determine">determine</button>
                         </li>
                     </ul>
                 </div>
@@ -131,27 +131,27 @@
         <div class="row margin-top-5 phone-margin-top-10">
             <div class="col-md-12 col-sm-12">
                 <div class="flex center space-between bindBox padding-1">
-                    <span class="font-size-14 phone-font-size-12 i18n" name="IDCardBind">身份证绑定</span>
+                    <span class="font-size-14 phone-font-size-12 i18n" name="IDCardBind">IDCardBind</span>
                     <div>
                         <i class='iconfont icon-gantanhao redIcon idNumIcon'></i>
-                        <span class="font-size-14 phone-font-size-12 bindStatus idNumBindNot i18n" name="unbound">未绑定</span>
-                        <span class="font-size-14 phone-font-size-12 bindStatus idNumBindRefuse none" name="">审核已拒绝，重新绑定</span>
+                        <span class="font-size-14 phone-font-size-12 bindStatus idNumBindNot i18n" name="unbound">unbound</span>
+                        <span class="font-size-14 phone-font-size-12 bindStatus idNumBindRefuse none i18n" name="review">Review rejected, re-bind</span>
                     </div>
 
-                    <span class="font-size-14 phone-font-size-12 bindStatus idNumBindAlready i18n none" name="alreadyBind">已绑定</span>
-                    <span class="font-size-14 phone-font-size-12 nameBindStatus idNumUnderReview none" name="">审核中</span>
-                    <a href="javascript:;" class="font-size-14 phone-font-size-12 idNumBindBtn i18n" name="bind">绑定</a>
+                    <span class="font-size-14 phone-font-size-12 bindStatus idNumBindAlready i18n none" name="alreadyBind">alreadyBind</span>
+                    <span class="font-size-14 phone-font-size-12 nameBindStatus idNumUnderReview none i18n" name="underReview">underReview</span>
+                    <a href="javascript:;" class="font-size-14 phone-font-size-12 idNumBindBtn i18n" name="bind">bind</a>
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-3 col-sm-12 margin-top-5 idNumFormBox none">
                 <div class="">
                     <ul class="flex center space-between phone-block">
-                        <li><span class="i18n" name="idNumber">身份证号码</span></li>
+                        <li><span class="i18n" name="idNumber">idNumber</span></li>
                         <li class="width-75 phone-width-100">
                             <input type="text" id="idNum" class="form-control">
                         </li>
                         <li class="phone-margin-top-5">
-                            <button class="btn btn-success idNumBindEnable i18n" name="bind">确定</button>
+                            <button class="btn btn-success idNumBindEnable i18n" name="bind">bind</button>
                         </li>
                     </ul>
                 </div>
@@ -162,16 +162,16 @@
         <div class="row margin-top-5 phone-margin-top-10">
             <div class="col-md-12 col-sm-12">
                 <div class="flex center space-between bindBox padding-1">
-                    <span class="font-size-14 phone-font-size-12">身份证上传</span>
+                    <span class="font-size-14 phone-font-size-12 i18n" name="IDCardUpload">ID Card Upload</span>
                     <div>
                         <i class='iconfont icon-gantanhao redIcon idPhotoIcon'></i>
-                        <span class="font-size-14 phone-font-size-12 bindStatus uploadBindNot">未绑定</span>
-                        <span class="font-size-14 phone-font-size-12 bindStatus uploadBindRefuse none" name="">审核已拒绝，重新绑定</span>
+                        <span class="font-size-14 phone-font-size-12 bindStatus uploadBindNot">not bind</span>
+                        <span class="font-size-14 phone-font-size-12 bindStatus uploadBindRefuse none i18n" name="review">Review rejected, re-bind</span>
                     </div>
 
-                    <span class="font-size-14 phone-font-size-12 bindStatus uploadBindAlready none">已绑定</span>
-                    <span class="font-size-14 phone-font-size-12 nameBindStatus uploadUnderReview none" name="">审核中</span>
-                    <a href="javascript:;" class="font-size-14 phone-font-size-12 idPhotoBindBtn">绑定</a>
+                    <span class="font-size-14 phone-font-size-12 bindStatus uploadBindAlready none i18n" name="alreadyBind">alreadyBind</span>
+                    <span class="font-size-14 phone-font-size-12 nameBindStatus uploadUnderReview none i18n" name="underReview">underReview</span>
+                    <a href="javascript:;" class="font-size-14 phone-font-size-12 idPhotoBindBtn i18n" name="bind">bind</a>
                 </div>
             </div>
             <div class="row uploadImgBox none idPhotoFormBox">
