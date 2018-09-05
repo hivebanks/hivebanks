@@ -36,7 +36,7 @@ $(function () {
 
             $.each(data, function (i, val) {
                 li+='<li>' +
-                    '<p><i class="iconfont icon-\'+ data[i].bit_type.toUpperCase() +\'"></i></p>'+
+                    '<p><i class="iconfont icon-'+ data[i].bit_type.toUpperCase() +'"></i></p>'+
                     '<span>'+ data[i].bit_type +'</span>' +
                     '<div class="mask">' +
                     '<p class="parities">1' +
