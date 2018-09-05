@@ -36,7 +36,7 @@ $(function () {
     });
 
     $('.toAccountBtn').click(function () {
-        if (login_us && user_token) {
+        if (login_us || user_token) {
             window.location.href = 'user/account.html';
         }
         if (login_ba && ba_token) {
