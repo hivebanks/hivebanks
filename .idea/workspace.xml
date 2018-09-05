@@ -53,6 +53,7 @@
       <find>LOGO</find>
       <find>&lt;a class=&quot;navbar-brand&quot; href=&quot;../index.html&quot;&gt;Cash Agency&lt;/a&gt;</find>
       <find>withdraw_amount</find>
+      <find>&lt;a class='navbar-brand' href='../index.html'&gt;LOGO&lt;/a&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace />
