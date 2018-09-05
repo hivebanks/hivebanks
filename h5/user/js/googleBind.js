@@ -14,14 +14,19 @@ $(function () {
            LayerFun('emailBad');
            return;
        }
-
+        var $this = $(this), btnText = $(this).text();
+       if(DisableClick($this)) return;
        GoogleBind(token, email, function (response) {
            if(response.errcode == '0'){
+               ActiveClick($this, btnText);
+               LayerFun("submitSuccess");
                $('.secret').text(response.secret);
                $('.googleInfo').show('fast');
                return;
            }
        }, function (response) {
+           ActiveClick($this, btnText);
+           LayerFun("submitFail");
            GetErrorCode(response.errcode);
        })
     });
