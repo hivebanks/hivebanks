@@ -70,23 +70,23 @@ $(function () {
         return;
     });
 
-    //add margin withdraw address
-    $('.addMarginWithdrawAddress').click(function () {
+    //add margin withdraw address or withdraw margin
+    $('.withdraw_amount, .addMarginWithdrawAddress').click(function () {
         if(funPass != 'pass_hash'){
             $('#goBindFundPass').modal('show');
             return;
         }
         window.location.href = 'BaMarginWithdrawAddress.html';
     });
-
-    //提现保证金
-    $('.withdraw_amount').click(function () {
-        if(funPass != 'pass_hash'){
-            $('#goBindFundPass').modal('show');
-            return;
-        }
-        window.location.href = 'BaWithdrawMargin.html';
-    });
+    //
+    // //提现保证金
+    // $('.withdraw_amount').click(function () {
+    //     if(funPass != 'pass_hash'){
+    //         $('#goBindFundPass').modal('show');
+    //         return;
+    //     }
+    //     window.location.href = 'BaWithdrawMargin.html';
+    // });
 
     //修改昵称
     $('.modifyNameBtn').click(function () {

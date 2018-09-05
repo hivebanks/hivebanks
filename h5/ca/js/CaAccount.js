@@ -60,19 +60,14 @@ $(function(){
         GetErrorCode(response.errcode);
         return;
     });
-    //提现保证金
-    $('.withdraw_amount').click(function () {
-        // if(cellphone != 'cellphone'){
-        //     $('#phoneBind').modal('show');
-        //     return;
-        // }
+
+    //add margin withdraw address or withdraw margin
+    $('.withdraw_amount, .addMarginWithdrawAddress').click(function () {
         if(funPass != 'pass_hash'){
             $('#goBindFundPass').modal('show');
             return;
         }
-
-        window.location.href = 'CaWithdrawMargin.html';
-
+        window.location.href = 'BaMarginWithdrawAddress.html';
     });
 
     //账户变动记录
