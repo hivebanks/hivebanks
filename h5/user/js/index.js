@@ -28,10 +28,10 @@ $(function () {
             window.location.href = 'user/account.html';
         }
         if (login_ba || ba_token) {
-            window.location.href = 'user/BaAccount.html';
+            window.location.href = 'ba/BaAccount.html';
         }
         if (login_ca || ca_token) {
-            window.location.href = 'user/CaAccount.html';
+            window.location.href = 'ca/CaAccount.html';
         }
     });
     var smokyBG = $('#smoky-bg').waterpipe({
