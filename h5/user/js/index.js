@@ -12,15 +12,15 @@ $(function () {
     var ba_token = GetIndexCookie('ba_token');
     var ca_token = GetIndexCookie('ca_token');
     if (user_token) {
-        $('.noLogin').remove();
+        $('.usLogin').remove();
         $('.alreadyLogin, .create_btn').removeClass('none');
     }
     if (ba_token) {
-        $('.noLogin').remove();
+        $('.baLogin').remove();
         $('.alreadyLogin').removeClass('none');
     }
     if (ca_token) {
-        $('.noLogin').remove();
+        $('.caLogin').remove();
         $('.alreadyLogin').removeClass('none');
     }
     $('.toAccountBtn').click(function () {

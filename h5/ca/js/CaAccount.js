@@ -71,7 +71,7 @@ $(function(){
             return;
         }
 
-        window.location.href = 'BaWithdrawMargin.html';
+        window.location.href = 'CaWithdrawMargin.html';
 
     });
 
