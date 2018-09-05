@@ -5,6 +5,11 @@ $(function () {
         $(".msg-content").slideToggle();
     });
 
+    //back index
+    $('.toIndexBtn').click(function () {
+        window.location.href = '../index.html?ca=ca';
+    });
+
 //    get time
     var time = new Date().toLocaleString('chinese', {hour12: false});
     $(".time").text(time);
