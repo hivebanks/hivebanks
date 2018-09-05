@@ -5,7 +5,7 @@ nav, .footer {
     background: #000!important;
 }
 .accountNone{
-    display: none;
+    display: none!important;
 }
 .smoky {
      position: absolute;
