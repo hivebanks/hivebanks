@@ -342,7 +342,7 @@
                             <div>
                                 <div class="configServerItem flex center space-between">
                                     <p>
-                                        <input class="with-gap" name="group1" type="radio" value="1"
+                                        <input class="with-gap radioFile" name="group1" type="radio" value="1"
                                                id="uploadFileInput"/>
                                         <label for="uploadFileInput" class="i18n configServerText" name="uploadFiles">Upload
                                             File</label>
@@ -353,28 +353,35 @@
                                         <span class="none openStatus alreadyOpenFile i18n" name="alreadyOpen">alreadyOpen</span>
                                         <span class="none openStatus i18n underReviewFile" name="underReview">underReview</span>
                                     </p>
-                                    <!--<p class="openStatus noOpenFile i18n" name="noOpen">nonactivated</p>-->
-                                    <!--<p class="none openStatus alreadyOpenFile i18n" name="alreadyOpen">alreadyOpen</p>-->
-                                    <!--<p class="none openStatus i18n underReviewFile" name="underReview">underReview</p>-->
                                 </div>
                                 <div class="configServerItem flex center space-between">
                                     <p>
-                                        <input class="with-gap" name="group1" type="radio" value="2" id="smsConfig"/>
+                                        <input class="with-gap radioSms" name="group1" type="radio" value="2"
+                                               id="smsConfig"/>
                                         <label for="smsConfig" class="i18n configServerText" name="sms">SMS</label>
                                     </p>
-                                    <p class="openStatus noOpenSms i18n" name="noOpen">nonactivated</p>
-                                    <p class="none openStatus alreadyOpenSms i18n" name="alreadyOpen">alreadyOpen</p>
-                                    <p class="none openStatus i18n underReviewSms" name="underReview">underReview</p>
+                                    <p>
+                                        <span><i class="iconfont icon-gantanhao color-red iconFile"></i></span>
+                                        <span class="openStatus noOpenSms i18n" name="noOpen">nonactivated</span>
+                                        <span class="none openStatus alreadyOpenSms i18n"
+                                              name="alreadyOpen">alreadyOpen</span>
+                                        <span class="none openStatus i18n underReviewSms"
+                                              name="underReview">underReview</span>
+                                    </p>
                                 </div>
                                 <div class="configServerItem flex center space-between">
                                     <p>
-                                        <input class="with-gap" name="group1" type="radio" value="3" id="emailConfig"/>
+                                        <input class="with-gap radioEmail" name="group1" type="radio" value="3"
+                                               id="emailConfig"/>
                                         <label for="emailConfig" class="i18n configServerText"
                                                name="email">Email</label>
                                     </p>
-                                    <p class="openStatus noOpen Email i18n" name="noOpen">nonactivated</p>
-                                    <p class="none openStatus alreadyOpenEmail i18n" name="alreadyOpen">alreadyOpen</p>
-                                    <p class="none openStatus i18n underReviewEmail" name="underReview">underReview</p>
+                                    <p>
+                                        <span><i class="iconfont icon-gantanhao color-red iconFile"></i></span>
+                                        <span class="openStatus noOpen Email i18n" name="noOpen">nonactivated</span>
+                                        <span class="none openStatus alreadyOpenEmail i18n" name="alreadyOpen">alreadyOpen</span>
+                                        <span class="none openStatus i18n underReviewEmail" name="underReview">underReview</span>
+                                    </p>
                                 </div>
                                 <div class="align-right margin-top-2">
                                     <button class="uploadFileBtn configServeBtn btn btn-success i18n" name="open">Open
