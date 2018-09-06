@@ -50,6 +50,9 @@ $(function () {
             $.post(get_url, data, function (_response) {
                 if(_response.errcode == '0'){
                     var data = _response.rows;
+                    if(data == false){
+                        return;
+                    }
                     $.each(data, function () {
                         if(data[i].type == '1'){
                             $('.radioFile').attr("disabled", true);
