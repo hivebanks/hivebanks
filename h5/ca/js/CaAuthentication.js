@@ -207,11 +207,10 @@ $(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                console.log(response);
-                console.log(JSON.parse(response));
-                console.log(response.url);
+                var data = JSON.parse(response);
+                console.log(data.url);
                 if(response.errcode == '0'){
-                    objData.src = response.url;
+                    objData.src = data.url;
                 }
             },
             error: function (response) {
