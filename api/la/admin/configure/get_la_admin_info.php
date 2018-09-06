@@ -6,7 +6,7 @@
  * Time: 上午11:18
  */
 
-require_once "db/la_admin.php";
+require_once "../../db/la_admin.php";
 require_once "../../../inc/common.php";
 
 php_begin();
