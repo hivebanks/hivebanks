@@ -198,21 +198,7 @@ $body = $url . "?cfm_hash=";
 $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
-$url = "http://agent_service.fnying.com/email/send_email.php";
-
-$post_data = array("email" => $email, "title" => $title,'body' => $body);
-
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
-
-$output = curl_exec($ch);
-curl_close($ch);
-
-$output_array = json_decode($output, true);
+$output_array = send_email_by_agent_service($email,$title,$body);
 
 if($output_array["errcode"] == "0"){
     $bind_email = ins_bind_user_reg_bind_log($data_log_bind);
