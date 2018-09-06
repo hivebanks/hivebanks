@@ -21,7 +21,7 @@ GET参数
 */
 
 php_begin();
-$args = array('token','file_type','file_url','file_hash');
+$args = array('token','file_type','file_url');
 chk_empty_args('GET', $args);
 
 // 用户token
@@ -33,17 +33,16 @@ $file_type = get_arg_str('GET', 'file_type');
 // 文件url
 $file_url = get_arg_str('GET', 'file_url',255);
 // 文件hash
-$file_hash = get_arg_str('GET','file_hash');
 //验证token
 $ba_id = check_token($token);
 
-if($file_hash=='undefined,undefined' || $file_url == 'undefined,undefined')
+if( $file_url == 'undefined,undefined')
     exit_error('104','文件内容获取失败');
 // 参数整理
 $data_bind = array();
 $data_bind['bind_type']  = 'file';
 $data_bind['bind_name'] = $file_type;
-$data_bind['bind_info'] = $file_url . $file_hash;
+$data_bind['bind_info'] = $file_url ;
 
 //获取当前用户的绑定信息
 $bind_info_us = get_ba_bind_info_by_token($ba_id);
