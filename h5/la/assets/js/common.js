@@ -53,14 +53,15 @@ function getRootPath() {
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
     return localhostPath;
 }
+
 var url = getRootPath();
 
 //获取失败错误码提示
 function GetErrorCode(code) {
-    $.getJSON(url+"/assets/json/errcode.json", function (response) {
+    $.getJSON(url + "/assets/json/errcode.json", function (response) {
         $.each(response, function (i, val) {
             if (response[i].code_key == code) {
-                layer.msg('<p class="i18n" name="'+ code +'">' + response[i].code_value + '</p>');
+                layer.msg('<p class="i18n" name="' + code + '">' + response[i].code_value + '</p>');
                 execI18n();
                 return;
             }
@@ -70,7 +71,7 @@ function GetErrorCode(code) {
 
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: url+"/assets/json/config_url.json",
+    url: url + "/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
@@ -79,9 +80,9 @@ $.ajax({
         config_h5_url = data.h5_url;
         var benchmark_type = data.benchmark_type.toUpperCase();
         $('.base_currency').text(benchmark_type);
-        if(!userLanguage){
+        if (!userLanguage) {
             SetCookie('userLanguage', data.userLanguage);
-        }else {
+        } else {
             return;
         }
     },
@@ -526,10 +527,11 @@ function GetBaTransaction(token, suc_func, error_func) {
 }
 
 //筛选ba交易记录
-function SearchBaTransaction(from_time, to_time, tx_time, qa_id, us_id, us_account_id, asset_id, ba_account_id, tx_hash,
+function SearchBaTransaction(token, from_time, to_time, tx_time, qa_id, us_id, us_account_id, asset_id, ba_account_id, tx_hash,
                              base_amount, bit_amount, tx_detail, tx_fee, tx_type, qa_flag, ba_id, suc_func, error_func) {
     var api_url = 'transaction_select_ba.php',
         post_data = {
+            'token': token,
             'from_time': from_time, 'to_time': to_time, 'tx_time': tx_time, 'qa_id': qa_id, 'us_id': us_id,
             'us_account_id': us_account_id, 'asset_id': asset_id, 'ba_account_id': ba_account_id,
             'tx_hash': tx_hash, 'base_amount': base_amount, 'bit_amount': bit_amount, 'tx_detail': tx_detail,
