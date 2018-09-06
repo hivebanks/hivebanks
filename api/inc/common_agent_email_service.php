@@ -8,7 +8,6 @@
 
 function send_email_by_agent_service($email,$title,$body){
     $url = "http://agent_service.fnying.com/email/send_email.php";
-    print_r(3);
     $post_data = array();
     $post_data["email"] = $email;
     $post_data["title"] = $title;
@@ -23,7 +22,7 @@ function send_email_by_agent_service($email,$title,$body){
     print_r(4);
     $output = curl_exec($ch);
     curl_close($ch);
-
+    print_r($output);
     $output_array = json_decode($output, true);
 
     return $output_array;
