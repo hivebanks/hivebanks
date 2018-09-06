@@ -1,6 +1,6 @@
 <?php
 require_once '../inc/common.php';
-require_once '../plugin/email/send_email.php';
+
 require_once 'db/us_bind.php';
 require_once 'db/us_base.php';
 require_once 'db/us_log_bind.php';

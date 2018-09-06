@@ -3,7 +3,7 @@ require_once '../inc/common.php';
 require_once '../inc/judge_format.php';
 require_once 'db/ca_base.php';
 require_once 'db/ca_bind.php';
-require_once '../plugin/email/send_email.php';
+require_once "../inc/common_agent_email_service.php";
 require_once  'db/ca_log_bind.php';
 
 header("cache-control:no-cache,must-revalidate");
@@ -71,19 +71,25 @@ if($email_code_last_time['limt_time'] > time())
 $title = '邮箱验证';
 // $des = new Des();
 $body = "您的验证码是:".$salt ."，如果非本人操作无需理会！";
-$ret = send_email($name='', $email, $title, $body);
+$output_array = send_email_by_agent_service($email,$title,$body);
 
-$time_limit = time() + 60 ;
-$data = array();
-$data['ca_id']  = get_guid();
-$data['bind_name']  = 'email';
-$data['bind_info']  = $email;
-$data['count_error'] = 0;
-$data['limt_time']  = $time_limit;
-$data['bind_type']  = 'text';
-$data['bind_salt']  = $salt;
-$res = ins_ca_verification_code($data);
-if($res) {
-    exit_ok('Please verify email as soon as possible!');
+if($output_array["errcode"] == "0"){
+    $time_limit = time() + 60 ;
+    $data = array();
+    $data['ca_id']  = get_guid();
+    $data['bind_name']  = 'email';
+    $data['bind_info']  = $email;
+    $data['count_error'] = 0;
+    $data['limt_time']  = $time_limit;
+    $data['bind_type']  = 'text';
+    $data['bind_salt']  = $salt;
+    $res = ins_ca_verification_code($data);
+    if($res) {
+        exit_ok('Please verify email as soon as possible!');
+    }
+    exit_error('124', 'Create failed! Please try again!');
+
+}else{
+    exit_error('124', '邮件发送失败请稍后重试！');
 }
-exit_error('124', 'Create failed! Please try again!');
+

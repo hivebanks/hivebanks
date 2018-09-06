@@ -2,7 +2,6 @@
 require_once "../../../inc/common.php";
 require_once  "db/la_admin.php";
 require_once "../../db/la_func_common.php";
-require_once '../../../plugin/email/send_email.php';
 
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
@@ -36,7 +35,7 @@ if(!update_password($user,$password,$email))
     exit_error('101','更新密码失败');
 
 //发送邮件，告知新密码
-if(!email_password($password_origin,$email))
+if(email_password($password_origin,$email)["errcode"] == '0')
     exit_error('124','发送邮件失败');
 
 exit_ok();

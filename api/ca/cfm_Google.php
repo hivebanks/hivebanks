@@ -1,6 +1,5 @@
 <?php
 require_once '../inc/common.php';
-require_once '../plugin/email/send_email.php';
 require_once 'db/ca_bind.php';
 require_once 'db/ca_log_bind.php';
 require_once '../inc/judge_format.php';

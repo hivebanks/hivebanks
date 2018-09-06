@@ -3,9 +3,8 @@ require_once '../inc/common.php';
 require_once '../inc/judge_format.php';
 require_once 'db/us_base.php';
 require_once 'db/us_bind.php';
-require_once '../plugin/email/send_email.php';
+require_once "../inc/common_agent_email_service.php";
 require_once  'db/us_log_bind.php';
-
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
@@ -78,8 +77,9 @@ $url = Config::CONFORM_URL;
     $title = '邮箱验证';
     // $des = new Des();
     $body = "您的验证码是:".$salt ."，如果非本人操作无需理会！";
-    $ret = send_email($name='', $email, $title, $body);
+$output_array = send_email_by_agent_service($email,$title,$body);
 
+if($output_array["errcode"] == "0"){
     $time_limit = time() + 60 ;
     $data = array();
     $data['us_id']  = get_guid();
@@ -94,3 +94,8 @@ $url = Config::CONFORM_URL;
         exit_ok('Please verify email as soon as possible!');
     }
     exit_error('101', 'Create failed! Please try again!');
+
+}else{
+    exit_error('124', '邮件发送失败请稍后重试！');
+}
+

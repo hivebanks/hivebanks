@@ -1,11 +1,10 @@
 <?php
 require_once '../inc/common.php';
-require_once '../plugin/email/send_email.php';
 require_once 'db/us_base.php';
 require_once 'db/us_bind.php';
 require_once  'db/us_log_bind.php';
 require_once '../inc/judge_format.php';
-
+require_once "../inc/common_agent_email_service.php";
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
@@ -117,20 +116,25 @@ $des = new Des();
 $now_time +=15*60;
 $body = $url . "?cfm_hash=";
 $encryption_code = $us_id.','.$email.',' . $now_time .',' .$salt;
-$body .=urlencode($des -> encrypt($encryption_code, $key)); 
-$ret = send_email($name='', $email, $title, $body);
-if(!$ret)
-    exit_error('101','邮件发送失败，请重试');
-header('Content-Type:text/html;charset=utf-8');
-header("Location: ". Config::H5_URL ."user/defeated.html");
-//$bind_id = get_guid();
-$data_bind =array();
+$body .=urlencode($des -> encrypt($encryption_code, $key));
 
-$data_log_bind= $rec;
-$data_log_bind['count_error'] = $rec['count_error']+1;
-$data_log_bind['limt_time'] = ($now_time - 15*60) + pow(2,$data_log_bind['count_error']);
-unset($data_log_bind['log_id']);
-$rer_p = ins_bind_user_reg_bind_log($data_log_bind);
-if(!$rer_p)
-    exit_error('101','记录日志创建失败，请重试');
-exit_error();
+$output_array = send_email_by_agent_service($email,$title,$body);
+if($output_array["errcode"] == "0"){
+    header('Content-Type:text/html;charset=utf-8');
+    header("Location: ". Config::H5_URL ."user/defeated.html");
+//$bind_id = get_guid();
+    $data_bind =array();
+
+    $data_log_bind= $rec;
+    $data_log_bind['count_error'] = $rec['count_error']+1;
+    $data_log_bind['limt_time'] = ($now_time - 15*60) + pow(2,$data_log_bind['count_error']);
+    unset($data_log_bind['log_id']);
+    $rer_p = ins_bind_user_reg_bind_log($data_log_bind);
+    if(!$rer_p)
+        exit_error('101','记录日志创建失败，请重试');
+    exit_error();
+
+}else{
+    exit_error('101','邮件发送失败，请重试');
+}
+

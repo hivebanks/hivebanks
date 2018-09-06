@@ -3,10 +3,9 @@ require_once '../inc/common.php';
 require_once 'db/us_base.php';
 require_once 'db/us_bind.php';
 require_once '../inc/judge_format.php';
-require_once '../plugin/email/send_email.php';
 require_once 'db/us_log_bind.php';
 require_once "db/com_option_config.php";
-
+require_once "../inc/common_agent_email_service.php";
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 

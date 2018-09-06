@@ -1,6 +1,6 @@
 <?php
 require_once '../inc/common.php';
-require_once '../plugin/email/send_email.php';
+require_once "../inc/common_agent_email_service.php";
 require_once 'db/ba_bind.php';
 require_once 'db/ba_base.php';
 require_once 'db/ba_log_bind.php';
@@ -87,12 +87,14 @@ if($text_type == 'email'){
     $body = $url . "?cfm_hash=";
     $encryption_code = $ba_id.','.$text.',' . $timestamp .','. 'email' .','.$salt;
     $body .=urlencode($des -> encrypt($encryption_code, $key));
-    $ret = send_email($name='', $text, $title, $body);
-    if($ret){
+    $output_array = send_email_by_agent_service($email,$title,$body);
+
+    if($output_array["errcode"] == "0"){
         exit_ok('Please verify email as soon as possible!');
     }else{
         exit_error('124', 'Create failed! Please try again!');
     }
+
 }
 //绑定身份证号2
 if($text_type == 'idNum'){
