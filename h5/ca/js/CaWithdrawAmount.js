@@ -45,7 +45,7 @@ $(function () {
             rate = response.base_rate;
             ca_id = response.ca_id;
             withdraw_max_amount = response.max_amount;
-            withdraw_min_amount = response.max_amount;
+            withdraw_min_amount = response.min_amount;
             $('.withdraw_max_amount').text(response.max_amount);
             $('.withdraw_min_amount').text(response.min_amount);
             $('.withdraw_ctime').text(response.set_time);
@@ -76,7 +76,6 @@ $(function () {
         var bit_amount = $('.bit_amount_input').val(),
             base_amount = $('.base_amount_input').val(),
             us_account_id = $('.us_account_id').val();
-        console.log(withdraw_min_amount);
         if (base_amount.length <= 0) {
             LayerFun('pleaseEnterWithdrawAmount');
             return;
