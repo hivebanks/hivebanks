@@ -40,6 +40,12 @@ $(function () {
         return;
     });
 
+    //config serve
+    $('.configServeBtn').click(function () {
+        var selected = $("input[type=radio]:checked");
+        console.log(selected);
+    });
+
     //Get SMS interface
     // GetSmsInterface(token, function (response) {
     //     if (response.errcode == '0') {
