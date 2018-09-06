@@ -44,29 +44,29 @@ $(function () {
     var la_id = '';
     GetLaId(token, function (response) {
         if (response.errcode == '0') {
-            la_id = response.la_id
+            la_id = response.la_id;
+            //get config server
+            var data = {"la_id" : response.la_id}, get_url = "http://agent_service.fnying.com/upload_file/get_upload_file_service.php";
+            $.post(get_url, data, function (_response) {
+                if(_response.errcode == '0'){
+                    var data = _response.rows;
+                    console.log(data);
+                    $.each(data, function () {
+                        if(data[i].type == '1'){
+                            $('.noOpenFile, .underReviewFile').remove();
+                        }
+                        if(data[i].type == '2'){
+                            $('.noOpenSms, .underReviewSms').remove();
+                        }
+                        if(data[i].type == '3'){
+                            $('.noOpenEmail, .underReviewEmail').remove();
+                        }
+                    })
+                }
+            });
         }
     }, function (response) {
         GetErrorCode(response.errcode);
-    });
-
-    //get config server
-    var data = {"la_id" : la_id}, get_url = "http://agent_service.fnying.com/upload_file/get_upload_file_service.php";
-    $.post(get_url, data, function (response) {
-        if(response.errcode == '0'){
-            var data = response.rows;
-            $.each(data, function () {
-                if(data[i].type == '1'){
-                    $('.noOpenFile, .underReviewFile').remove();
-                }
-                if(data[i].type == '2'){
-                    $('.noOpenSms, .underReviewSms').remove();
-                }
-                if(data[i].type == '3'){
-                    $('.noOpenEmail, .underReviewEmail').remove();
-                }
-            })
-        }
     });
 
     //set config serve
