@@ -215,13 +215,13 @@ $(function () {
                 console.log(data.url);
                 if (response.errcode == '0') {
                     src = data.url;
-                    return src;
                 }
             },
             error: function (response) {
                 layer.msg(response.msg);
             }
         });
+        return src;
     }
 
     //get la_id
