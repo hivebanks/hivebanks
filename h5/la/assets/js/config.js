@@ -58,8 +58,8 @@ $(function () {
             "type": type
         };
         $.ajax({
-            url: "http://agent_service.fnying.com/upload_file/set_upload_file_service.php",
             type: "POST",
+            url: "http://agent_service.fnying.com/upload_file/set_upload_file_service.php",
             dataType: "jsonp",
             data: data,
             success: function (response) {
