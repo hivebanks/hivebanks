@@ -78,7 +78,7 @@ $(function () {
     $('.searchBtn').click(function () {
         var from_time = $('#from_time').val(), to_time = $('#to_time').val(), tx_time = $('#tx_time').val();
 
-        if()
+        // if()
 
         var qa_id = $('#qa_id').val(), us_id = $('#us_id').val(), us_account_id = $('#us_account_id').val(),
             asset_id = $('#asset_id').val(), ba_account_id = $('#ba_account_id').val(), tx_hash = $('#tx_hash').val(),
