@@ -42,7 +42,7 @@ $(function () {
 
     //config serve
     $('.configServeBtn').click(function () {
-        var selected = $("input[type='radio']:checked");
+        var selected = $("input[type='radio']:checked").value();
         console.log(selected);
     });
 
