@@ -29,7 +29,7 @@ $(function () {
 
     //提现
     $('.withdrawBtn, .navWithdraw').click(function () {
-        if(base_amount <= 0){
+        if (base_amount <= 0) {
             $('#noBalanceModal').modal('show');
             return;
         }
@@ -38,14 +38,14 @@ $(function () {
 
     //修改昵称
     $('.modifyNameBtn').click(function () {
-       var us_account = $('#nickName').val();
-       if(us_account.length <= 0){
-           LayerFun('pleaseEnterNickname');
-           return;
-       }
+        var us_account = $('#nickName').val();
+        if (us_account.length <= 0) {
+            LayerFun('pleaseEnterNickname');
+            return;
+        }
         $('#modifyName').modal('hide');
         ModifyNickName(token, us_account, function (response) {
-            if(response.errcode == '0'){
+            if (response.errcode == '0') {
                 LayerFun('modifySuccess');
                 $('.us_account').text(response.us_account);
                 SetCookie('us_account', response.us_account);
@@ -61,7 +61,7 @@ $(function () {
     var limit = 10, offset = 0, n = 0, type = '2';
     //交易状态
     TradingStatus(token, limit, offset, type, function (response) {
-        if(response.errcode == '0'){
+        if (response.errcode == '0') {
 
         }
     }, function (response) {
@@ -78,8 +78,9 @@ $(function () {
                 var pageCount = Math.ceil(response.total / limit);
                 $('.totalPage').text(Math.ceil(response.total / limit));
                 var data = response.rows;
-                if(data.length <= 0){
+                if (data == false) {
                     $('.eg').hide();
+                    GetDataEmpty('accountChange', '5');
                     return;
                 }
                 $.each(data, function (i, val) {
@@ -93,13 +94,13 @@ $(function () {
                 });
                 $('.accountChange').html(tr);
                 execI18n();
-                if(n == 0){
+                if (n == 0) {
                     Page(pageCount);
                 }
                 n++;
             }
         }, function (response) {
-            console.log(response);
+            GetDataFail('accountChange', '5');
         });
     };
     GetAccountChange(token, limit, offset, account_change_url);
