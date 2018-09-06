@@ -70,7 +70,7 @@ $(function () {
                         }
                     })
                 }
-            });
+            }, "json");
         }
     }, function (response) {
         GetErrorCode(response.errcode);
