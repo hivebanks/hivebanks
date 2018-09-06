@@ -156,21 +156,19 @@ $title = '邮箱验证链接';
 $des = new Des();
 $body = $url . "?cfm_hash=";
 $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
-//print_r($encryption_code."\n");
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
-//print_r($body);
 $output_array = send_email_by_agent_service($email,$title,$body);
-//
-//if($output_array["errcode"] == "0"){
-//    $bind_email = ins_bind_ba_reg_bind_log($data_log_bind);
-//    $bind_pass = ins_bind_ba_reg_bind_info($data_bind_pass);
-//    $ret = ins_base_ba_reg_base_info($data_base);
-//    if ($bind_pass && $bind_email && $ret) {
-//        exit_ok('Please verify email as soon as possible!');
-//    } else {
-//        exit_error('101', 'Create failed! Please try again!');
-//    }
-//}else {
-//    exit_error('124', '邮件发送失败请稍后重试！');
-//}
+
+if($output_array["errcode"] == "0"){
+    $bind_email = ins_bind_ba_reg_bind_log($data_log_bind);
+    $bind_pass = ins_bind_ba_reg_bind_info($data_bind_pass);
+    $ret = ins_base_ba_reg_base_info($data_base);
+    if ($bind_pass && $bind_email && $ret) {
+        exit_ok('Please verify email as soon as possible!');
+    } else {
+        exit_error('101', 'Create failed! Please try again!');
+    }
+}else {
+    exit_error('124', '邮件发送失败请稍后重试！');
+}

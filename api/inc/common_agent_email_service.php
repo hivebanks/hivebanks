@@ -19,7 +19,6 @@ function send_email_by_agent_service($email,$title,$body){
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
-    print_r(4);
     $output = curl_exec($ch);
     curl_close($ch);
     print_r($output);
