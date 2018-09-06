@@ -84,6 +84,9 @@ if($text_type == '1'){
     $body = $url . "?cfm_hash=";
     $encryption_code = $ba_id.','.$text.',' . $timestamp .','. 'email' .','.$salt;
     $body .=urlencode($des -> encrypt($encryption_code, $key));
+
+
+
     $ret = send_email($name='', $text, $title, $body);
     if($ret){
         exit_ok('Please verify email as soon as possible!');
