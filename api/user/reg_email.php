@@ -2,6 +2,7 @@
 require_once '../inc/common.php';
 require_once 'db/us_base.php';
 require_once 'db/us_bind.php';
+
 require_once '../inc/judge_format.php';
 require_once 'db/us_log_bind.php';
 require_once "db/com_option_config.php";
@@ -196,8 +197,9 @@ $des = new Des();
 $body = $url . "?cfm_hash=";
 $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
-
-$output_array = send_email_by_agent_service($email,$title,$body);
+require_once "db/la_admin.php";
+$la_id = get_la_admin_info()["id"];
+$output_array = send_email_by_agent_service($email,$title,$body,$la_id);
 
 if($output_array["errcode"] == "0"){
     $bind_email = ins_bind_user_reg_bind_log($data_log_bind);

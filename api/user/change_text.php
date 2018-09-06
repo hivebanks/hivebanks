@@ -5,7 +5,6 @@ require_once 'db/us_bind.php';
 require_once 'db/us_base.php';
 require_once 'db/us_log_bind.php';
 require_once '../inc/judge_format.php';
-
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
@@ -110,7 +109,9 @@ if ($text_type == 'email') {
     $encryption_code = $us_id . ',' . $text . ',' . $timestamp . ',' . 'email' . ',' . $salt;
     $body .= urlencode($des->encrypt($encryption_code, $key));
 
-    $output_array = send_email_by_agent_service($email, $title, $body);
+    require_once "db/la_admin.php";
+    $la_id = get_la_admin_info()["id"];
+    $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
 
     if ($output_array["errcode"] == "0") {
         exit_ok('Please verify email as soon as possible!');
