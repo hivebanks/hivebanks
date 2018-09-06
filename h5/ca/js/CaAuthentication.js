@@ -4,11 +4,12 @@ $(function () {
     GetCaAccount();
 
     //获取绑定信息，是否绑定
-    var name = '', idNum = '', idPhoto = '';
+    var name = '', idNum = '', idPhoto = '', id = '';
     function GetBindInfo(){
         GetCaBindInformation(token, function (response) {
             if (response.errcode == '0') {
                 var data = response.rows;
+                id = response.security_level.ca_id;
                 //count_error==0审核中 1拒绝
                 $.each(data, function (i, val) {
 
@@ -116,7 +117,6 @@ $(function () {
         var text_type = '3',
             text = $('#name').val(),
             text_hash = hex_sha1(text);
-
         if (text == '') {
             LayerFun('pleaseEnterName');
             return;
@@ -251,6 +251,7 @@ $(function () {
 
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
+        formData.append("id", id);
         fileObj0 = UpLoadImg(formData);
         console.log(fileObj0);
     });
@@ -263,6 +264,7 @@ $(function () {
         }
         var formData = new FormData($("#form1")[0]);
         formData.append("la_id", la_id);
+        formData.append("id", id);
         fileObj1 = UpLoadImg(formData);
     });
 
