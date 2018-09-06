@@ -36,7 +36,6 @@ $decryption_code = $des -> decrypt($hash_code, $key);
 $code_conf =  explode(',',$decryption_code);
 
 
-print_r($code_conf);die;
 
 // 获取token中的需求信息
 $ba_id = $code_conf[0];
