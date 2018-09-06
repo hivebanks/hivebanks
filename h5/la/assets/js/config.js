@@ -50,7 +50,6 @@ $(function () {
             $.post(url, data, function (_response) {
                 if(_response.errcode == '0'){
                     var data = _response.rows;
-                    console.log(data);
                     if(data == false){
                         return;
                     }
@@ -58,14 +57,17 @@ $(function () {
                         if(data[i].type == '1'){
                             $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .underReviewFile').remove();
+                            $('.alreadyOpenFile').show();
                             $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
                         if(data[i].type == '2' && data[i].status == '1'){
                             $('.noOpenSms, .underReviewSms').remove();
+                            $('.alreadyOpenSms').show();
                             $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
                         if(data[i].type == '3' && data[i].status == '1'){
                             $('.noOpenEmail, .underReviewEmail').remove();
+                            $('.alreadyOpenEmail').show();
                             $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
                     })
