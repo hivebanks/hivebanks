@@ -48,3 +48,6 @@ input[type=text], input[type=password]{
 .permission p{
     margin-right: 5%!important;
 }
+.configServerText{
+    color: #000000;
+}
