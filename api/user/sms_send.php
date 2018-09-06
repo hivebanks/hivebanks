@@ -50,23 +50,13 @@ if($phone_code_last_time['limt_time'] > time())
     exit_error('116',$phone_code_last_time['limt_time'] - time());
 
 
+require_once "db/la_admin.php";
+require_once "../inc/common_agent_sms_service.php";
+$la_id = get_la_admin_info()["id"];
+$output_array = send_sms_by_agent_service($cellphone,$code,$la_id);
 // 验证发送短信(SendSms)接口
-$sms = new \Aliyun\DySDKLite\Sms\SMS();
-$res_obj = $sms->send_sms($cellphone,$code);
-$res_arr = (array) $res_obj;
-$res_code = $res_arr['Code'];
-
-if($res_code == 'OK'){
-    $time_limit = time() + 60 ;
-    $data = array();
-    $data['us_id']  = get_guid();
-    $data['bind_name']  = 'phone_code';
-    $data['bind_info']  = $phone_strict;
-    $data['count_error'] = 0;
-    $data['limt_time']  = $time_limit;
-    $data['bind_type']  = $bind_type;
-    $data['bind_salt']  = $code;
-    $res = ins_user_verification_code($data);
+if($output_array["errcode"] == "0"){
     exit_ok();
+}else{
+    exit_error('124','发送失败,请稍后再试');
 }
-exit_error('124','发送失败:'.$res_arr['Message']);

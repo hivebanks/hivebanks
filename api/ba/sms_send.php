@@ -58,17 +58,15 @@ $data['bind_type']  = $bind_type;
 $data['bind_salt']  = $code;
 $res = ins_ba_verification_code($data);
 
-// 验证发送短信(SendSms)接口
-$sms = new \Aliyun\DySDKLite\Sms\SMS();
-$res_obj = $sms->send_sms($cellphone,$code);
-$res_arr = (array) $res_obj;
-$res_code = $res_arr['Code'];
 
-switch ($res_code){
-    case 'OK':
-        exit_ok();
-        break;
-    default ;
-        exit_error('124','发送失败:'.$res_arr['Message']);
-        break;
+require_once "db/la_admin.php";
+require_once "../inc/common_agent_sms_service.php";
+$la_id = get_la_admin_info()["id"];
+$output_array = send_sms_by_agent_service($cellphone,$code,$la_id);
+// 验证发送短信(SendSms)接口
+if($output_array["errcode"] == "0"){
+    exit_ok();
+}else{
+    exit_error('124','发送失败,请稍后再试');
 }
+
