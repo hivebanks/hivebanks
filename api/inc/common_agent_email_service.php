@@ -9,7 +9,10 @@
 function send_email_by_agent_service($email,$title,$body){
     $url = "http://agent_service.fnying.com/email/send_email.php";
 
-    $post_data = array("email" => $email, "title" => $title,'body' => $body);
+    $post_data = array();
+    $post_data["email"] = $email;
+    $post_data["title"] = $title;
+    $post_data['body'] = $body;
 
     $ch = curl_init();
 
