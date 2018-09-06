@@ -207,6 +207,8 @@ $(function () {
             contentType: false,
             processData: false,
             success: function (response) {
+                console.log(response);
+                console.log(JSON.parse(response));
                 console.log(response.url);
                 if(response.errcode == '0'){
                     objData.src = response.url;
