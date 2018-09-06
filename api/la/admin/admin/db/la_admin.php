@@ -211,6 +211,8 @@ function update_password($user,$password,$email)
  */
 function email_password($password,$email,$title = 'LA密码重置')
 {
+    require_once "../../../../inc/common_agent_email_service.php";
+    
     $body = '您的新密码为：'.$password.'。请妥善保管！';
     $output_array = send_email_by_agent_service($email,$title,$body);
     return $output_array;
