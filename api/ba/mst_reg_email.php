@@ -173,6 +173,7 @@ $output = curl_exec($ch);
 curl_close($ch);
 
 $output_array = json_decode($output, true);
+print_r($output_array);
 die;
 
     $ret = send_email($name = '', $email, $title, $body);
