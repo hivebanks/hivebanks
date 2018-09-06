@@ -59,11 +59,11 @@ $(function () {
                             $('.noOpenFile, .underReviewFile').remove();
                             $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
-                        if(data[i].type == '2'){
+                        if(data[i].type == '2' && data[i].status == '1'){
                             $('.noOpenSms, .underReviewSms').remove();
                             $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
-                        if(data[i].type == '3'){
+                        if(data[i].type == '3' && data[i].status == '1'){
                             $('.noOpenEmail, .underReviewEmail').remove();
                             $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
