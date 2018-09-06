@@ -55,13 +55,11 @@ $(function () {
         var type = $("input[type='radio']:checked").val();
         var data = {"la_id": la_id, "type": type}, url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php";
         $.post(url, data, function (response){
-            LayerFun("setSuccessfully");
             console.log(response);
-            return;
-        }, function (response){
-            LayerFun("setupFailed");
-            return;
-        })
+            // LayerFun("setSuccessfully");
+            // console.log(response);
+            // return;
+        }, "json")
     });
 
     //Get SMS interface
