@@ -43,9 +43,8 @@ $(function () {
     //get la_id
     var la_id = '';
     GetLaId(token, function (response) {
-        if(response.errcode == '0'){
-            console.log(response);
-            // la_id = response.la_id
+        if (response.errcode == '0') {
+            la_id = response.la_id
         }
     }, function (response) {
         GetErrorCode(response.errcode);
@@ -54,10 +53,22 @@ $(function () {
     //config serve
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val();
-        ConfigServer(la_id, type, function (response) {
-
-        }, function (respon) {
-
+        var data = {
+            "la_id": la_id,
+            "type": type
+        };
+        $.ajax({
+            url: "http://agent_service.fnying.com/upload_file/set_upload_file_service.php",
+            type: "POST",
+            dataType: "jsonp",
+            data: data,
+            success: function () {
+                LayerFun("setSuccessfully");
+            },
+            error: function () {
+                LayerFun("setupFailed");
+                return;
+            }
         })
     });
 
@@ -372,6 +383,7 @@ $(function () {
             GetErrorCode(response.errcode);
         });
     }
+
     GetCaTypeFun();
 
     //Select CA proxy type
@@ -415,7 +427,7 @@ $(function () {
     //Upload image to determine BA/CA
     $('.baseBaTypeBtnConfirm').click(function () {
         var api_url = '';
-        if(option_src == ''){
+        if (option_src == '') {
             LayerFun('pleaseUploadAnImageOfTheSelectedType');
         }
         if ($(this).hasClass('ca')) {
@@ -505,7 +517,7 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                if(data.code == '-1'){
+                if (data.code == '-1') {
                     LayerFun('imgUploadFail');
                     return;
                 }
