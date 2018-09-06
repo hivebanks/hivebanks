@@ -159,7 +159,6 @@ $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 //print_r($encryption_code."\n");
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
-
 //print_r($body);
 
 $output_array = send_email_by_agent_service($email,$title,$body);
