@@ -77,8 +77,17 @@ $(function () {
 
     //set config serve
     $('.configServeBtn').click(function () {
-        var type = $("input[type='radio']:checked").val();
-        var data = {"la_id": la_id, "type": type}, url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php";
+        var type = $("input[type='radio']:checked").val(), url = '';
+        if(type == '1'){
+            url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php"
+        }
+        if(type == '2'){
+            url = "http://agent_service.fnying.com/sms/set_sms_service.php"
+        }
+        if (type == '3') {
+            url = "http://agent_service.fnying.com/email/set_email_service.php"
+        }
+        var data = {"la_id": la_id, "type": type};
         $.post(url, data, function (response){
             if(response.errcode == '0'){
                 LayerFun("submitSuccess");
