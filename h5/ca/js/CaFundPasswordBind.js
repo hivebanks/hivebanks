@@ -20,13 +20,16 @@ $(function () {
     //获取绑定信息
     GetCaBindInformation(token, function (response) {
         if(response.errcode == '0'){
-            var data = response.rows;
+            var data = response.rows, cellphone = "";
             $.each(data, function (i, val) {
-                if(data[i].bind_name != 'cellphone' &&  data[i].bind_flag != '1'){
-                    $("#goBindCellPhone").modal('show');
+                if(data[i].bind_name == 'cellphone' &&  data[i].bind_flag == '1'){
+                    cellphone = data[i].bind_name;
                     return;
                 }
-            })
+            });
+            if(cellphone != "cellphone"){
+                $("#goBindCellPhone").modal('show');
+            }
         }
     }, function (response) {
         GetErrorCode(response.errcode);
