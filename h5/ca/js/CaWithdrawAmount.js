@@ -76,7 +76,7 @@ $(function () {
         var bit_amount = $('.bit_amount_input').val(),
             base_amount = $('.base_amount_input').val(),
             us_account_id = $('.us_account_id').val();
-
+        console.log(withdraw_min_amount);
         if (base_amount.length <= 0) {
             LayerFun('pleaseEnterWithdrawAmount');
             return;

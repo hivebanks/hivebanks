@@ -235,7 +235,7 @@ $(function () {
      *获取选择文件
      * 身份证上传验证
      */
-    var fileObj0 = '', fileObj1 = '';
+    var src0 = '', src1 = '';
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
@@ -246,8 +246,8 @@ $(function () {
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
         formData.append("id", id);
-        fileObj0 = UpLoadImg(formData);
-        console.log(fileObj0);
+        src0 = UpLoadImg(formData);
+        console.log(src0);
     });
     //上传背面
     $('#file1').on('change', function () {
@@ -259,7 +259,8 @@ $(function () {
         var formData = new FormData($("#form1")[0]);
         formData.append("la_id", la_id);
         formData.append("id", id);
-        fileObj1 = UpLoadImg(formData);
+        src1 = UpLoadImg(formData);
+        console.log(src1);
     });
 
     // 身份证上传验证
