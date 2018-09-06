@@ -240,8 +240,6 @@ $(function () {
         }
 
         var formData = new FormData($("#form0")[0]);
-        console.log(formData);
-        return;
         formData.append("la_id", la_id);
         fileObj0 = UpLoadImg(formData);
     });
@@ -253,7 +251,7 @@ $(function () {
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
-        formData.append("la_id", la_id);
+        // formData.append("la_id", la_id);
         fileObj1 = UpLoadImg(formData);
     });
 
