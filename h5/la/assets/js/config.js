@@ -53,7 +53,7 @@ $(function () {
                     $.each(data, function () {
                         if(data[i].type == '1'){
                             $('.noOpenFile, .underReviewFile').remove();
-                            $('.iconFile').removeClass("icon-gantanhao red").addClass("icon-duihao green");
+                            $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
                         if(data[i].type == '2'){
                             $('.noOpenSms, .underReviewSms').remove();
