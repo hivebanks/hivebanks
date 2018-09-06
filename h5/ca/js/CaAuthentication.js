@@ -201,28 +201,32 @@ $(function () {
     //返回图片信息
     var src1 = '', src2 = '';
     function UpLoadImg(formData, srcType) {
-        var src = '';
-        $.ajax({
-            url: 'http://agent_service.fnying.com/upload_file/upload.php',
-            type: 'POST',
-            data: formData,
-            async: false,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                var data = JSON.parse(response);
-                console.log(data.url);
-                if (response.errcode == '0') {
-                    if(srcType == 'src1'){
-                        src1 = data.url;
-                    }
-                }
-            },
-            error: function (response) {
-                layer.msg(response.msg);
-            }
-        });
+        var url = 'http://agent_service.fnying.com/upload_file/upload.php',
+            data = formData;
+        $.post(url, data, function (response) {
+            console.log(response);
+        }, "json");
+        // $.ajax({
+        //     url: 'http://agent_service.fnying.com/upload_file/upload.php',
+        //     type: 'POST',
+        //     data: formData,
+        //     async: false,
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (response) {
+        //         var data = JSON.parse(response);
+        //         console.log(data.url);
+        //         if (response.errcode == '0') {
+        //             if(srcType == 'src1'){
+        //                 src1 = data.url;
+        //             }
+        //         }
+        //     },
+        //     error: function (response) {
+        //         layer.msg(response.msg);
+        //     }
+        // });
     }
 
     //get la_id
