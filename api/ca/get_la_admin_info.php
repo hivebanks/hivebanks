@@ -17,7 +17,7 @@ $token = get_arg_str('GET', 'token', 128);
 //验证token
 $ba_id = check_token($token);
 
-$row = get_la_admin_info()["la_id"];
+$la_id = get_la_admin_info()["id"];
 
 $rtn_ary = array();
 $rtn_ary['errcode'] = '0';
