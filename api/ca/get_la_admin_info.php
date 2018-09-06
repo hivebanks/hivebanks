@@ -17,12 +17,12 @@ $token = get_arg_str('GET', 'token', 128);
 //验证token
 $ba_id = check_token($token);
 
-$row = get_la_admin_info();
+$row = get_la_admin_info()["la_id"];
 
 $rtn_ary = array();
 $rtn_ary['errcode'] = '0';
 $rtn_ary['errmsg'] = '';
-$rtn_ary['row'] = $row;
+$rtn_ary['la_id'] = la_id;
 
 $rtn_str = json_encode($rtn_ary);
 php_end($rtn_str);
