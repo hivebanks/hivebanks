@@ -173,13 +173,8 @@ $output = curl_exec($ch);
 curl_close($ch);
 
 $output_array = json_decode($output, true);
-print_r($output_array);
-die;
 
-    $ret = send_email($name = '', $email, $title, $body);
-    if (!$ret) {
-        exit_error('124', '邮件发送失败请稍后重试！');
-    }
+if($output_array["errcode"] == "0"){
     $bind_email = ins_bind_ba_reg_bind_log($data_log_bind);
     $bind_pass = ins_bind_ba_reg_bind_info($data_bind_pass);
     $ret = ins_base_ba_reg_base_info($data_base);
@@ -188,3 +183,6 @@ die;
     } else {
         exit_error('101', 'Create failed! Please try again!');
     }
+}else {
+    exit_error('124', '邮件发送失败请稍后重试！');
+}
