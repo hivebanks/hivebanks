@@ -197,7 +197,7 @@ $(function () {
     });
     //返回图片信息
     function UpLoadImg(formData) {
-        var objData = new Object();
+        var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
             type: 'POST',
@@ -210,14 +210,16 @@ $(function () {
                 var data = JSON.parse(response);
                 console.log(data.url);
                 if(response.errcode == '0'){
-                    objData.src = data.url;
+                    src = data.url;
+                    console.log(src);
                 }
             },
             error: function (response) {
                 layer.msg(response.msg);
             }
         });
-        return objData;
+        return src;
+        console.log(src);
     }
 
     //get la_id
