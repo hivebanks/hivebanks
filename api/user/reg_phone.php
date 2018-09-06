@@ -1,6 +1,5 @@
 <?php
 require_once '../inc/common.php';
-require_once "../plugin/sms/sendSms.php";
 require_once 'db/us_base.php';
 require_once 'db/us_bind.php';
 require_once '../inc/judge_format.php';
