@@ -81,7 +81,9 @@ $(function () {
         SearchBaTransaction(token, from_time, to_time, tx_time, qa_id, us_id, us_account_id, asset_id, ba_account_id, tx_hash,
             base_amount, bit_amount, tx_detail, tx_fee, tx_type, qa_flag, ba_id, function (response) {
                 if (response.errcode == '0') {
-                    console.log(response);
+                    console.log(response.rows);
+                    console.log(response.rows.recharge);
+                    console.log(response.rows.withdraw);
                 }
             }, function (response) {
                 GetErrorCode(response.errcode);
