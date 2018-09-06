@@ -21,6 +21,10 @@ GET参数
 说明
 */
 
+
+echo 1111;
+
+die;
 php_begin();
 $args = array('email', 'pass_word_hash', 'pass_word', 'bit_type');
 chk_empty_args('GET', $args);
