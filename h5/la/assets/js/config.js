@@ -42,7 +42,7 @@ $(function () {
 
     //get la_id
     var la_id = '';
-    GetLaId(la_id, type, function (response) {
+    GetLaId(token, function (response) {
         if(response.errcode == '0'){
             console.log(response);
             // la_id = response.la_id
