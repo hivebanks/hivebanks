@@ -50,15 +50,48 @@ $(function () {
         GetErrorCode(response.errcode);
     });
 
-    //config serve
+    //get config server
+    var data = {"la_id" : la_id}, url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php";
+    $.post(url, data, function (response) {
+        if(response.errcode == '0'){
+            var data = response.rows;
+            $.each(data, function () {
+                if(data[i].type == '1'){
+                    $('.noOpenFile, .underReviewFile').remove();
+                }
+                if(data[i].type == '2'){
+                    $('.noOpenSms, .underReviewSms').remove();
+                }
+                if(data[i].type == '3'){
+                    $('.noOpenEmail, .underReviewEmail').remove();
+                }
+            })
+        }
+    });
+
+    //set config serve
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val();
         var data = {"la_id": la_id, "type": type}, url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php";
         $.post(url, data, function (response){
-            console.log(response);
-            // LayerFun("setSuccessfully");
-            // console.log(response);
-            // return;
+            if(response.errcode == '0'){
+                LayerFun("submitSuccess");
+                if(type == '1'){
+                    $('.noOpenFile').fadeOut();
+                    $('.underReviewFile').fadeIn();
+                }
+                if(type == '2'){
+                    $('.noOpenSms').fadeOut();
+                    $('.underReviewSms').fadeIn();
+                }
+                if(type == '3'){
+                    $('.noOpenEmail').fadeOut();
+                    $('.underReviewEmail').fadeIn();
+                }
+            }else {
+                LayerFun("submitFail");
+                return;
+            }
         }, "json")
     });
 
