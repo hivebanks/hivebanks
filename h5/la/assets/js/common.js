@@ -320,6 +320,15 @@ function SetSwitch(token, type, status, suc_func, error_func) {
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
+//get la_id
+function GetLaId(token, suc_func, error_func) {
+    var api_url = 'get_la_admin_info.php',
+        post_data = {
+            'token': token
+        };
+    CallLaConfigApi(api_url, post_data, suc_func, error_func);
+}
+
 //获取短信接口
 function GetSmsInterface(token, suc_func, error_func) {
     var api_url = 'get_sms_config.php',

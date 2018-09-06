@@ -40,10 +40,25 @@ $(function () {
         return;
     });
 
+    //get la_id
+    var la_id = '';
+    GetLaId(la_id, type, function (response) {
+        if(response.errcode == '0'){
+            console.log(response);
+            // la_id = response.la_id
+        }
+    }, function (response) {
+        GetErrorCode(response.errcode);
+    });
+
     //config serve
     $('.configServeBtn').click(function () {
-        var selected = $("input[type='radio']:checked").val();
-        console.log(selected);
+        var type = $("input[type='radio']:checked").val();
+        ConfigServer(la_id, type, function (response) {
+
+        }, function (respon) {
+
+        })
     });
 
     //Get SMS interface
