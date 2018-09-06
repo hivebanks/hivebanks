@@ -57,9 +57,11 @@ $(function () {
                         }
                         if(data[i].type == '2'){
                             $('.noOpenSms, .underReviewSms').remove();
+                            $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
                         if(data[i].type == '3'){
                             $('.noOpenEmail, .underReviewEmail').remove();
+                            $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
                     })
                 }
