@@ -172,10 +172,6 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 $output = curl_exec($ch);
 curl_close($ch);
 
-print_r($output);
-
-
-
 $output_array = json_decode($output, true);
 print_r($output_array);
 die;
