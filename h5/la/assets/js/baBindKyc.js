@@ -18,7 +18,7 @@ $(function () {
                         '<td style="display: none"><span class="log_id">' + data[i].log_id + '</span></td>' +
                         '<td><span>' + data[i].bind_type + '</span></td>' +
                         '<td><span class="bind_name">' + data[i].bind_name + '</span></td>' +
-                        '<td><a class="look i18n" name="look">' + bind_info + '</a><span class="none idPhotoSrc bind_info">' + data[i].bind_info + '</span></td>' +
+                        '<td><a href="javascript:;" class="look i18n" name="look">' + bind_info + '</a><span class="none idPhotoSrc bind_info">' + data[i].bind_info + '</span></td>' +
                         '<td><span>' + data[i].ctime + '</span></td>' +
                         '<td><button class="btn btn-success btn-sm passBtn i18n" name="pass">pass</button></td>' +
                         '<td><button class="btn btn-danger btn-sm refuseBtn i18n" name="refuse">refuse</button></td>' +
