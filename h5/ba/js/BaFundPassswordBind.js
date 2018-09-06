@@ -13,7 +13,7 @@ $(function () {
         if(response.errcode == '0'){
             var data = response.rows;
             $.each(data, function (i, val) {
-                if(data[i].bind_name != 'pass_hash' &&  data[i].bind_flag == '1'){
+                if(data[i].bind_name != 'cellphone' &&  data[i].bind_flag != '1'){
                     $("#goBindCellPhone").modal('show');
                     return;
                 }
