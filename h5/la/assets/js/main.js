@@ -26,7 +26,7 @@ $(function () {
 });
 
 // 图标链接
-var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_814072_a7eq7eitjun.css">');
+var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
 link.appendTo($('head')[0]);
 
 //layer提示
