@@ -62,10 +62,11 @@ $(function () {
             type: "POST",
             dataType: "jsonp",
             data: data,
-            success: function () {
+            success: function (response) {
                 LayerFun("setSuccessfully");
+                console.log(response);
             },
-            error: function () {
+            error: function (response) {
                 LayerFun("setupFailed");
                 return;
             }
