@@ -160,18 +160,18 @@ $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
 //print_r($body);
-
+print_r(222);
 $output_array = send_email_by_agent_service($email,$title,$body);
-
-if($output_array["errcode"] == "0"){
-    $bind_email = ins_bind_ba_reg_bind_log($data_log_bind);
-    $bind_pass = ins_bind_ba_reg_bind_info($data_bind_pass);
-    $ret = ins_base_ba_reg_base_info($data_base);
-    if ($bind_pass && $bind_email && $ret) {
-        exit_ok('Please verify email as soon as possible!');
-    } else {
-        exit_error('101', 'Create failed! Please try again!');
-    }
-}else {
-    exit_error('124', '邮件发送失败请稍后重试！');
-}
+//
+//if($output_array["errcode"] == "0"){
+//    $bind_email = ins_bind_ba_reg_bind_log($data_log_bind);
+//    $bind_pass = ins_bind_ba_reg_bind_info($data_bind_pass);
+//    $ret = ins_base_ba_reg_base_info($data_base);
+//    if ($bind_pass && $bind_email && $ret) {
+//        exit_ok('Please verify email as soon as possible!');
+//    } else {
+//        exit_error('101', 'Create failed! Please try again!');
+//    }
+//}else {
+//    exit_error('124', '邮件发送失败请稍后重试！');
+//}
