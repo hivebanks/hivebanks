@@ -20,7 +20,7 @@ $(function () {
     var wi_funPass = GetQueryString('wi_funPass');
 
     //获取绑定信息
-    GetBindInformation(token, function (response) {
+    BindingInformation(token, function (response) {
         if(response.errcode == '0'){
             var data = response.rows;
             $.each(data, function (i, val) {
