@@ -200,7 +200,7 @@ $(function () {
 
     //返回图片信息
     var src1 = '', src2 = '';
-    function UpLoadImg(formData) {
+    function UpLoadImg(formData, srcType) {
         var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
@@ -214,14 +214,15 @@ $(function () {
                 var data = JSON.parse(response);
                 console.log(data.url);
                 if (response.errcode == '0') {
-                    src = data.url;
+                    if(srcType == 'src1'){
+                        src1 = data.url;
+                    }
                 }
             },
             error: function (response) {
                 layer.msg(response.msg);
             }
         });
-        return src;
     }
 
     //get la_id
@@ -247,8 +248,8 @@ $(function () {
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
         formData.append("id", id);
-        src1 = UpLoadImg(formData);
-        console.log(src1);
+        UpLoadImg(formData, 'src1');
+        // console.log(src1);
     });
     //上传背面
     $('#file1').on('change', function () {
@@ -265,6 +266,8 @@ $(function () {
 
     // 身份证上传验证
     $('#submit').click(function () {
+        console.log(src1);
+        return;
         var file_type = 'idPhoto',
             file_url = fileObj0.src + ',' + fileObj1.src,
             file_hash = fileObj0.file_hash + ',' + fileObj1.file_hash;
