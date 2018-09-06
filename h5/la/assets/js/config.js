@@ -52,8 +52,6 @@ $(function () {
 
     //config serve
     $('.configServeBtn').click(function () {
-        console.log(la_id);
-        return;
         var type = $("input[type='radio']:checked").val();
         var data = {
             "la_id": la_id,
@@ -67,6 +65,7 @@ $(function () {
             success: function (response) {
                 LayerFun("setSuccessfully");
                 console.log(response);
+                return;
             },
             error: function (response) {
                 LayerFun("setupFailed");
