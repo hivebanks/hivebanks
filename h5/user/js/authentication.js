@@ -200,10 +200,9 @@ $(function () {
 
     //返回图片信息
     function UpLoadImg(formData) {
-        var objData = new Object();
+        var src = '';
         $.ajax({
-            // url: config_api_url + '/api/upload/upload_file.php',
-            url: "http://agent_service.fnying.com/upload_file/upload.php",
+            url: 'http://agent_service.fnying.com/upload_file/upload.php',
             type: 'POST',
             data: formData,
             async: false,
@@ -212,22 +211,15 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                if (data.code == '-1') {
-                    LayerFun('fileUploadFail');
-                    return;
+                if (data.errcode == '0') {
+                    src = data.url;
                 }
-                if(data.errcode == '1'){
-                    LayerFun("notOpenFileUpload");
-                    return;
-                }
-                objData.src = data.data.src;
-                objData.file_hash = data.file_hash;
             },
             error: function (response) {
                 layer.msg(response.msg);
             }
         });
-        return objData;
+        return src;
     }
 
     //get la_id
@@ -244,7 +236,7 @@ $(function () {
      *获取选择文件
      * 身份证上传验证
      */
-    var fileObj0 = '', fileObj1 = '';
+    var src1 = '', src2 = '';
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
@@ -254,7 +246,7 @@ $(function () {
 
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
-        fileObj0 = UpLoadImg(formData);
+        src1 = UpLoadImg(formData);
     });
     //上传背面
     $('#file1').on('change', function () {
@@ -265,20 +257,15 @@ $(function () {
         }
         var formData = new FormData($("#form1")[0]);
         formData.append("la_id", la_id);
-        fileObj1 = UpLoadImg(formData);
+        src2 = UpLoadImg(formData);
     });
 
     // 身份证上传验证
     $('#submit').click(function () {
         var file_type = 'idPhoto',
-            file_url = fileObj0.src + ',' + fileObj1.src,
-            file_hash = fileObj0.file_hash + ',' + fileObj1.file_hash;
-        if (file_hash == 'undefined,undefined' || file_url == 'undefined,undefined') {
-            LayerFun('bindFail');
-            return;
-        }
+            file_url = src1 + ',' + src2;
         //调用文件绑定
-        FileBind(token, file_type, file_url, file_hash, function (response) {
+        FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
                 LayerFun('submitSuccess');
                 GetBindInfo();

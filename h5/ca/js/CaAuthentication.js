@@ -199,8 +199,7 @@ $(function () {
     });
 
     //返回图片信息
-    var src1 = '', src2 = '';
-    function UpLoadImg(formData, srcType) {
+    function UpLoadImg(formData) {
         var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
@@ -212,13 +211,8 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                console.log(data.url);
                 if (data.errcode == '0') {
-                    console.log(srcType);
                     src = data.url;
-                    // if(srcType == 'src1'){
-                    //     src1 = data.url;
-                    // }
                 }
             },
             error: function (response) {
@@ -237,10 +231,12 @@ $(function () {
     }, function (response) {
         GetErrorCode(response.errcode);
     });
+
     /** 上传图片-正面
      *获取选择文件
      * 身份证上传验证
      */
+    var src1 = '', src2 = '';
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
@@ -251,9 +247,9 @@ $(function () {
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
         formData.append("id", id);
-        src1 = UpLoadImg(formData, 'src1');
-        console.log(src1);
+        src1 = UpLoadImg(formData);
     });
+
     //上传背面
     $('#file1').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
@@ -264,27 +260,20 @@ $(function () {
         var formData = new FormData($("#form1")[0]);
         formData.append("la_id", la_id);
         formData.append("id", id);
-        UpLoadImg(formData);
+        src2 = UpLoadImg(formData);
     });
 
     // 身份证上传验证
     $('#submit').click(function () {
-        console.log(src1);
-        return;
         var file_type = 'idPhoto',
-            file_url = fileObj0.src + ',' + fileObj1.src,
-            file_hash = fileObj0.file_hash + ',' + fileObj1.file_hash;
-        if (file_hash == 'undefined,undefined' || file_url == 'undefined,undefined') {
-            LayerFun('bindFail');
-            return;
-        }
+            file_url = src1 + ',' + src2;
+
         //调用文件绑定
-        FileBind(token, file_type, file_url, file_hash, function (response) {
+        FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
-
         }, function (response) {
             GetErrorCode(response.errcode);
         })

@@ -450,15 +450,13 @@ function GetLaId(token, suc_func, error_func) {
 }
 
 // 文件绑定
-function FileBind(token, file_type, file_url, file_hash, suc_func, error_func) {
+function FileBind(token, file_type, file_url, suc_func, error_func) {
     var api_url = 'bnd_file.php',
         post_data = {
             'token': token,
             'file_type': file_type,
-            'file_url': file_url,
-            'file_hash': file_hash,
-            // 'pass_word_hash': pass_word_hash
-        };
+            'file_url': file_url
+    };
     CallApi(api_url, post_data, suc_func, error_func);
 }
 //HASH绑定
