@@ -72,7 +72,7 @@ GET参数
 */
 
 php_begin();
-$args = array('email', 'pass_word_hash','pass_word');
+$args = array('email', 'pass_word_hash', 'pass_word');
 chk_empty_args('GET', $args);
 
 
@@ -87,18 +87,18 @@ $pass_word = get_arg_str('GET', 'pass_word');
 // 验证码
 $cfm_code = get_arg_str('GET', 'cfm_code');
 $is_email = isEmail($email);
-if(!$is_email){
-    exit_error('109','Email format not correct!');
+if (!$is_email) {
+    exit_error('109', 'Email format not correct!');
 }
 //判断密码强度
 $score = Determine_password_strength($pass_word);
-if($score <= 3){
-    exit_error('119','密码过于简单请重新设置!');
+if ($score <= 3) {
+    exit_error('119', '密码过于简单请重新设置!');
 }
-if(us_can_reg_or_not()["option_value"] != 1)
-    exit_error("120","当前la未开通注册");
+if (us_can_reg_or_not()["option_value"] != 1)
+    exit_error("120", "当前la未开通注册");
 // 创建用户us_id
-$us_id =get_guid();
+$us_id = get_guid();
 // 创建用户bind_id
 $bind_id = get_guid();
 // 用户基本信息数组
@@ -109,21 +109,21 @@ $variable = 'email';
 // 当前时间戳
 $timestamp = time();
 // 判断邮箱是否已存在
-$row = get_us_id_by_variable($variable,$email);
+$row = get_us_id_by_variable($variable, $email);
 // 获取绑定信息日志表该用户最新的数据
 $teltime = 1;
-$rec = get_us_log_bind_by_variable($variable , $email);
-if(!$rec){
+$rec = get_us_log_bind_by_variable($variable, $email);
+if (!$rec) {
     $teltime = 0;
 }
-if($teltime != 0){
-    $teltime = strtotime($rec['ctime']) +15*60 ;
-    if($teltime > $timestamp ){
+if ($teltime != 0) {
+    $teltime = strtotime($rec['ctime']) + 15 * 60;
+    if ($teltime > $timestamp) {
         //判断是否可以进行注册
-        if($rec && $rec['bind_info'] == $email){
-            exit_error('121','待确认，请前往邮箱验证');
+        if ($rec && $rec['bind_info'] == $email) {
+            exit_error('121', '待确认，请前往邮箱验证');
         }
-    }else{
+    } else {
         //把本次的绑定的数据进行无效操作
         $email_used = upd_us_log_bind_info($us_id);
     }
@@ -152,61 +152,79 @@ $data_log_bind['bind_type'] = 'text';
 // 绑定登录密码参数整理
 $data_bind_pass = array();
 $data_bind_pass['bind_id'] = get_guid();
-$data_bind_pass['us_id'] =$us_id;
-$data_bind_pass['bind_type']  = 'hash';
+$data_bind_pass['us_id'] = $us_id;
+$data_bind_pass['bind_type'] = 'hash';
 $data_bind_pass['bind_name'] = 'password_login';
 $data_bind_pass['bind_info'] = $pass_word_hash;
 $data_bind_pass['bind_flag'] = 1;
 
 // 加盐加密
-$salt = rand(10000000, 99999999); 
+$salt = rand(10000000, 99999999);
 // 邮件地址已经存在
-if($row['us_id']){
-  //是否注册验证完成
-  switch ($row['bind_flag'])
-  {
-    case 1:
-      exit_error('105','Registered users please login directly!');
-      break;
-    case 9:
-       break;
-  }
+if ($row['us_id']) {
+    //是否注册验证完成
+    switch ($row['bind_flag']) {
+        case 1:
+            exit_error('105', 'Registered users please login directly!');
+            break;
+        case 9:
+            break;
+    }
 }
 
 //判断是否可以验证
-if($rec['limt_time'] > $timestamp){
-   exit_error('116',$rec['limt_time'] - $timestamp);
+if ($rec['limt_time'] > $timestamp) {
+    exit_error('116', $rec['limt_time'] - $timestamp);
 }
-if($rec){
-  // 绑定参数设定
-  $data_log_bind = $rec;
-  $data_log_bind['count_error'] = $rec['count_error']+1;
-  $data_log_bind['limt_time'] = $timestamp + pow(2,$data_log_bind['count_error']);
-  unset($data_log_bind['log_id']);
+if ($rec) {
+    // 绑定参数设定
+    $data_log_bind = $rec;
+    $data_log_bind['count_error'] = $rec['count_error'] + 1;
+    $data_log_bind['limt_time'] = $timestamp + pow(2, $data_log_bind['count_error']);
+    unset($data_log_bind['log_id']);
 }
 $key = Config::TOKEN_KEY;
-$data_base['us_account'] = "hivebanks_".$email;
+$data_base['us_account'] = "hivebanks_" . $email;
 //$bind_email = ins_bind_user_reg_bind_log($data_log_bind);
 
 $url = Config::CONFORM_URL;
 
 //绑定成功发送验证信息
 //if($bind_email){
-  $timestamp +=15*60;
-  $title = '邮箱验证链接';
-  $des = new Des();
-  $body = $url . "?cfm_hash=";
-  $encryption_code = $us_id.','.$email.',' . $timestamp .',' .$salt;
-  $body .=urlencode($des -> encrypt($encryption_code, $key)); 
-  $ret = send_email($name='', $email, $title, $body);
-  if(!$ret){
-      exit_error('124','邮件发送失败请稍后重试！');
-  }
-  $bind_email = ins_bind_user_reg_bind_log($data_log_bind);
-  $ret = ins_base_user_reg_base_info($data_base);
-  $bind_pass = ins_bind_user_reg_bind_info($data_bind_pass);
-  if($bind_email && $ret && $bind_pass){
-      exit_ok('Please verify email as soon as possible!');
-  }else{
-    exit_error('101', 'Create failed! Please try again!');
+$timestamp += 15 * 60;
+$title = '邮箱验证链接';
+$des = new Des();
+$body = $url . "?cfm_hash=";
+$encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
+$body .= urlencode($des->encrypt($encryption_code, $key));
+
+$url = "http://agent_service.fnying.com/email/send_email.php";
+
+$post_data = array("email" => $email, "title" => $title,'body' => $body);
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+
+$output = curl_exec($ch);
+curl_close($ch);
+
+$output_array = json_decode($output, true);
+
+if($output_array["errcode"] == "0"){
+    $bind_email = ins_bind_user_reg_bind_log($data_log_bind);
+    $ret = ins_base_user_reg_base_info($data_base);
+    $bind_pass = ins_bind_user_reg_bind_info($data_bind_pass);
+    if ($bind_email && $ret && $bind_pass) {
+        exit_ok('Please verify email as soon as possible!');
+    } else {
+        exit_error('101', 'Create failed! Please try again!');
+    }
+
+
+}else{
+    exit_error('124', '邮件发送失败请稍后重试！');
 }
