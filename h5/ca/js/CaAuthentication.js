@@ -207,13 +207,12 @@ $(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                console.log(response);
+                console.log(response.url);
                 if(response.errcode == '0'){
                     objData.src = response.url;
                 }
             },
             error: function (response) {
-                console.log(response);
                 layer.msg(response.msg);
             }
         });
