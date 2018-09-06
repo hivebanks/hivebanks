@@ -52,6 +52,7 @@ $(function () {
                     var data = _response.rows;
                     $.each(data, function () {
                         if(data[i].type == '1'){
+                            $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .underReviewFile').remove();
                             $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
                         }
