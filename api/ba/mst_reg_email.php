@@ -158,11 +158,10 @@ $body = $url . "?cfm_hash=";
 $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
-echo 1111;
 
-$url = "http://agent_service.fnying.com/email/sms_email.php";
+$url = "http://agent_service.fnying.com/email/send_email.php";
 
-$post_data = array("$email" => $email, "$title" => $title,'' => $body);
+$post_data = array("email" => $email, "title" => $title,'body' => $body);
 
 $ch = curl_init();
 
