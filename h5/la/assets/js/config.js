@@ -41,69 +41,69 @@ $(function () {
     });
 
     //Get SMS interface
-    GetSmsInterface(token, function (response) {
-        if (response.errcode == '0') {
-            var data = response.row;
-            $('#accessKeyId').val(data.accessKeyId);
-            $('#accessKeySecret').val(data.accessKeySecret);
-            $('#SignName').val(data.SignName);
-            $('#TemplateCode').val(data.TemplateCode);
-        }
-    }, function (response) {
-        GetErrorCode(response.errcode);
-        return;
-    });
+    // GetSmsInterface(token, function (response) {
+    //     if (response.errcode == '0') {
+    //         var data = response.row;
+    //         $('#accessKeyId').val(data.accessKeyId);
+    //         $('#accessKeySecret').val(data.accessKeySecret);
+    //         $('#SignName').val(data.SignName);
+    //         $('#TemplateCode').val(data.TemplateCode);
+    //     }
+    // }, function (response) {
+    //     GetErrorCode(response.errcode);
+    //     return;
+    // });
 
     //Configure SMS interface
-    $('.smsInterfaceBtn').click(function () {
-        var accessKeyId = $('#accessKeyId').val(), accessKeySecret = $('#accessKeySecret').val(),
-            SignName = $('#SignName').val(), TemplateCode = $('#TemplateCode').val();
-        var $this = $(this), btnText = $(this).text();
-        if (DisableClick($this)) return;
-        SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, TemplateCode, function (response) {
-            if (response.errcode == '0') {
-                LayerFun('successfullyModified');
-                ActiveClick($this, btnText);
-            }
-        }, function (response) {
-            ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
-            return;
-        });
-    });
+    // $('.smsInterfaceBtn').click(function () {
+    //     var accessKeyId = $('#accessKeyId').val(), accessKeySecret = $('#accessKeySecret').val(),
+    //         SignName = $('#SignName').val(), TemplateCode = $('#TemplateCode').val();
+    //     var $this = $(this), btnText = $(this).text();
+    //     if (DisableClick($this)) return;
+    //     SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, TemplateCode, function (response) {
+    //         if (response.errcode == '0') {
+    //             LayerFun('successfullyModified');
+    //             ActiveClick($this, btnText);
+    //         }
+    //     }, function (response) {
+    //         ActiveClick($this, btnText);
+    //         GetErrorCode(response.errcode);
+    //         return;
+    //     });
+    // });
 
     //Get the mailbox interface configuration information
-    GetEmailInterface(token, function (response) {
-        if (response.errcode == '0') {
-            var data = response.row;
-            $('#email_Host').val(data.Host);
-            $('#email_username').val(data.Username);
-            $('#email_password').val(data.Password);
-            $('#email_address').val(data.address);
-            $('#email_name').val(data.name);
-        }
-    }, function (response) {
-        GetErrorCode(response.errcode);
-        return;
-    });
+    // GetEmailInterface(token, function (response) {
+    //     if (response.errcode == '0') {
+    //         var data = response.row;
+    //         $('#email_Host').val(data.Host);
+    //         $('#email_username').val(data.Username);
+    //         $('#email_password').val(data.Password);
+    //         $('#email_address').val(data.address);
+    //         $('#email_name').val(data.name);
+    //     }
+    // }, function (response) {
+    //     GetErrorCode(response.errcode);
+    //     return;
+    // });
 
     //Configure the mailbox interface
-    $('.emailInterfaceBtn').click(function () {
-        var Host = $('#email_Host').val(), Username = $('#email_username').val(),
-            Password = $('#email_password').val(), address = $('#email_address').val(), name = $('#email_name').val();
-        var $this = $(this), btnText = $(this).text();
-        if (DisableClick($this)) return;
-        SetEmailInterface(token, Host, Username, Password, address, name, function (response) {
-            if (response.errcode == '0') {
-                LayerFun('successfullyModified');
-                ActiveClick($this, btnText);
-            }
-        }, function (response) {
-            ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
-            return;
-        });
-    });
+    // $('.emailInterfaceBtn').click(function () {
+    //     var Host = $('#email_Host').val(), Username = $('#email_username').val(),
+    //         Password = $('#email_password').val(), address = $('#email_address').val(), name = $('#email_name').val();
+    //     var $this = $(this), btnText = $(this).text();
+    //     if (DisableClick($this)) return;
+    //     SetEmailInterface(token, Host, Username, Password, address, name, function (response) {
+    //         if (response.errcode == '0') {
+    //             LayerFun('successfullyModified');
+    //             ActiveClick($this, btnText);
+    //         }
+    //     }, function (response) {
+    //         ActiveClick($this, btnText);
+    //         GetErrorCode(response.errcode);
+    //         return;
+    //     });
+    // });
 
     //Get registration permission display
     function optionName(option_name, _switch) {

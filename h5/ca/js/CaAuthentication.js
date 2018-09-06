@@ -231,7 +231,7 @@ $(function () {
      *获取选择文件
      * 身份证上传验证
      */
-    var fileObj0, fileObj1, la_id = "131325423534";
+    var fileObj0, fileObj1, la_id = "0F842E10-45AB-5071-645F-60536755A503";
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
@@ -240,6 +240,8 @@ $(function () {
         }
 
         var formData = new FormData($("#form0")[0]);
+        console.log(formData);
+        return;
         formData.append("la_id", la_id);
         fileObj0 = UpLoadImg(formData);
     });
