@@ -158,7 +158,6 @@ $body = $url . "?cfm_hash=";
 $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
-
 $url = "http://agent_service.fnying.com/email/send_email.php";
 
 $post_data = array("email" => $email, "title" => $title,'body' => $body);
@@ -173,11 +172,8 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 $output = curl_exec($ch);
 curl_close($ch);
 
-print_r($output);
-
-die;
 $output_array = json_decode($output, true);
-
+die;
 
     $ret = send_email($name = '', $email, $title, $body);
     if (!$ret) {
