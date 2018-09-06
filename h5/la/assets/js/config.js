@@ -46,8 +46,8 @@ $(function () {
         if (response.errcode == '0') {
             la_id = response.la_id;
             //get config server
-            var data = {"la_id" : response.la_id}, get_url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
-            $.post(get_url, data, function (_response) {
+            var data = {"la_id" : response.la_id}, url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
+            $.post(url, data, function (_response) {
                 if(_response.errcode == '0'){
                     var data = _response.rows;
                     console.log(data);
