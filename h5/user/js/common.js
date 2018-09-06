@@ -392,6 +392,15 @@ function TextModify(token, text_type, text, text_hash, pass_word_hash, suc_func,
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
+//get la_id
+function GetLaId(token, suc_func, error_func) {
+    var api_url = 'get_la_admin_info.php',
+        post_data = {
+            'token': token
+        };
+    CallApi(api_url, post_data, suc_func, error_func);
+}
+
 // 文件绑定
 function FileBind(token, file_type, file_url, file_hash, suc_func, error_func) {
     var api_url = 'bnd_file.php',

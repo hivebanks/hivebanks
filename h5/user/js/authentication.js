@@ -230,11 +230,21 @@ $(function () {
         return objData;
     }
 
+    //get la_id
+    var la_id = "";
+    GetLaId(token, function (response) {
+        if(response.errcode == '0'){
+            la_id = response.la_id;
+        }
+    }, function (response) {
+        GetErrorCode(response.errcode);
+    });
+
     /** 上传图片-正面
      *获取选择文件
      * 身份证上传验证
      */
-    var fileObj0, fileObj1, la_id = '4132431243241312412341';
+    var fileObj0 = '', fileObj1 = '';
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {

@@ -209,14 +209,14 @@ $(function () {
             success: function (response) {
                 console.log(response);
                 // var data = JSON.parse(response);
-                // if(data.code == '-1'){
-                //     LayerFun('fileUploadFail');
-                //     return;
-                // }
-                // if(data.errcode == '1'){
-                //     LayerFun("notOpenFileUpload");
-                //     return;
-                // }
+                if(data.code == '-1'){
+                    LayerFun('fileUploadFail');
+                    return;
+                }
+                if(data.errcode == '1'){
+                    LayerFun("notOpenFileUpload");
+                    return;
+                }
                 // objData.src = data.data.src;
                 // objData.file_hash = data.file_hash;
             },
@@ -241,7 +241,7 @@ $(function () {
      *获取选择文件
      * 身份证上传验证
      */
-    var fileObj0, fileObj1;
+    var fileObj0 = '', fileObj1 = '';
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
