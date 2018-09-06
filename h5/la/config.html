@@ -335,28 +335,29 @@
 
             <!--短信接口配置/邮箱接口配置/文件上传接口配置-->
             <div class="row">
-                <div class="col col-md-6 col-sm-12">
+                <div class="col col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            <div>服务配置</div>
-                            <!--<div>-->
-                            <!--<select class="form-control input-sm" id="configServer">-->
-                            <!--<option value="1">Upload File</option>-->
-                            <!--<option value="2">SMS</option>-->
-                            <!--<option value="3">Email</option>-->
-                            <!--</select>-->
-                            <!--</div>-->
+                            <h5 class="i18n" name="configServer">配置服务</h5>
                             <div>
-                                <div class="flex center space-between">
+                                <div class="configServerItem flex center space-between">
                                     <p>
-                                        <input class="with-gap" name="group1" type="radio" value="1" id="uploadFileInput"/>
-                                        <label for="uploadFileInput" class="i18n configServerText" name="uploadFiles">Upload File</label>
+                                        <input class="with-gap" name="group1" type="radio" value="1"
+                                               id="uploadFileInput"/>
+                                        <label for="uploadFileInput" class="i18n configServerText" name="uploadFiles">Upload
+                                            File</label>
                                     </p>
-                                    <p class="openStatus noOpenFile i18n" name="noOpen">nonactivated</p>
-                                    <p class="none openStatus alreadyOpenFile i18n" name="alreadyOpen">alreadyOpen</p>
-                                    <p class="none openStatus i18n underReviewFile" name="underReview">underReview</p>
+                                    <p>
+                                        <span><i class="iconfont icon-gantanhao red iconFile"></i></span>
+                                        <span class="openStatus noOpenFile i18n" name="noOpen">nonactivated</span>
+                                        <span class="none openStatus alreadyOpenFile i18n" name="alreadyOpen">alreadyOpen</span>
+                                        <span class="none openStatus i18n underReviewFile" name="underReview">underReview</span>
+                                    </p>
+                                    <!--<p class="openStatus noOpenFile i18n" name="noOpen">nonactivated</p>-->
+                                    <!--<p class="none openStatus alreadyOpenFile i18n" name="alreadyOpen">alreadyOpen</p>-->
+                                    <!--<p class="none openStatus i18n underReviewFile" name="underReview">underReview</p>-->
                                 </div>
-                                <div class="flex center space-between">
+                                <div class="configServerItem flex center space-between">
                                     <p>
                                         <input class="with-gap" name="group1" type="radio" value="2" id="smsConfig"/>
                                         <label for="smsConfig" class="i18n configServerText" name="sms">SMS</label>
@@ -365,16 +366,17 @@
                                     <p class="none openStatus alreadyOpenSms i18n" name="alreadyOpen">alreadyOpen</p>
                                     <p class="none openStatus i18n underReviewSms" name="underReview">underReview</p>
                                 </div>
-                                <div class="flex center space-between">
+                                <div class="configServerItem flex center space-between">
                                     <p>
                                         <input class="with-gap" name="group1" type="radio" value="3" id="emailConfig"/>
-                                        <label for="emailConfig" class="i18n configServerText" name="email">Email</label>
+                                        <label for="emailConfig" class="i18n configServerText"
+                                               name="email">Email</label>
                                     </p>
                                     <p class="openStatus noOpen Email i18n" name="noOpen">nonactivated</p>
                                     <p class="none openStatus alreadyOpenEmail i18n" name="alreadyOpen">alreadyOpen</p>
                                     <p class="none openStatus i18n underReviewEmail" name="underReview">underReview</p>
                                 </div>
-                                <div class="align-right">
+                                <div class="align-right margin-top-2">
                                     <button class="uploadFileBtn configServeBtn btn btn-success i18n" name="open">Open
                                     </button>
                                 </div>

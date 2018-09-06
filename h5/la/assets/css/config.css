@@ -54,3 +54,13 @@ input[type=text], input[type=password]{
 .openStatus{
     color: #9e9e9e!important;
 }
+.configServerItem{
+    border-bottom: 1px dashed #9e9e9e;
+    padding: 6px 0;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}

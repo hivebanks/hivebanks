@@ -50,10 +50,10 @@ $(function () {
             $.post(get_url, data, function (_response) {
                 if(_response.errcode == '0'){
                     var data = _response.rows;
-                    console.log(data);
                     $.each(data, function () {
                         if(data[i].type == '1'){
                             $('.noOpenFile, .underReviewFile').remove();
+                            $('.iconFile').removeClass("icon-gantanhao red").addClass("icon-duihao green");
                         }
                         if(data[i].type == '2'){
                             $('.noOpenSms, .underReviewSms').remove();
