@@ -46,10 +46,11 @@ $(function () {
         if (response.errcode == '0') {
             la_id = response.la_id;
             //get config server
-            var data = {"la_id" : response.la_id}, get_url = "http://agent_service.fnying.com/upload_file/get_upload_file_service.php";
+            var data = {"la_id" : response.la_id}, get_url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
             $.post(get_url, data, function (_response) {
                 if(_response.errcode == '0'){
                     var data = _response.rows;
+                    console.log(data);
                     if(data == false){
                         return;
                     }
