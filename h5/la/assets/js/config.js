@@ -53,7 +53,7 @@ $(function () {
                     if(data == false){
                         return;
                     }
-                    $.each(data, function () {
+                    $.each(data, function (i, val) {
                         if(data[i].type == '1'){
                             $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .underReviewFile').remove();
