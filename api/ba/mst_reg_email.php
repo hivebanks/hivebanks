@@ -22,9 +22,8 @@ GET参数
 */
 
 
-echo 1111;
 
-die;
+
 php_begin();
 $args = array('email', 'pass_word_hash', 'pass_word', 'bit_type');
 chk_empty_args('GET', $args);
@@ -159,6 +158,7 @@ $body = $url . "?cfm_hash=";
 $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
+echo 1111;
 
 $url = "http://agent_service.fnying.com/email/sms_email.php";
 
