@@ -200,7 +200,6 @@ $(function () {
         var objData = new Object();
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
-            header: {"Access-Control-Allow-Origin": "*"},
             type: 'POST',
             data: formData,
             async: false,
@@ -229,11 +228,20 @@ $(function () {
         return objData;
     }
 
+    //get la_id
+    var la_id = "";
+    GetLaId(token, function (response) {
+        if(response.errcode == '0'){
+            la_id = response.la_id;
+        }
+    }, function (response) {
+        GetErrorCode(response.errcode);
+    });
     /** 上传图片-正面
      *获取选择文件
      * 身份证上传验证
      */
-    var fileObj0, fileObj1, la_id = "0F842E10-45AB-5071-645F-60536755A503";
+    var fileObj0, fileObj1;
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
@@ -244,6 +252,7 @@ $(function () {
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
         fileObj0 = UpLoadImg(formData);
+        console.log(fileObj0);
     });
     //上传背面
     $('#file1').on('change', function () {
@@ -253,7 +262,7 @@ $(function () {
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
-        // formData.append("la_id", la_id);
+        formData.append("la_id", la_id);
         fileObj1 = UpLoadImg(formData);
     });
 
