@@ -201,6 +201,7 @@ $(function () {
     //返回图片信息
     var src1 = '', src2 = '';
     function UpLoadImg(formData, srcType) {
+        var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
             type: 'POST',
@@ -212,17 +213,19 @@ $(function () {
             success: function (response) {
                 var data = JSON.parse(response);
                 console.log(data.url);
-                if (response.errcode == '0') {
+                if (data.errcode == '0') {
                     console.log(srcType);
-                    if(srcType == 'src1'){
-                        src1 = data.url;
-                    }
+                    src = data.url;
+                    // if(srcType == 'src1'){
+                    //     src1 = data.url;
+                    // }
                 }
             },
             error: function (response) {
                 layer.msg(response.msg);
             }
         });
+        return src;
     }
 
     //get la_id
@@ -248,8 +251,8 @@ $(function () {
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
         formData.append("id", id);
-        UpLoadImg(formData, 'src1');
-        // console.log(src1);
+        src1 = UpLoadImg(formData, 'src1');
+        console.log(src1);
     });
     //上传背面
     $('#file1').on('change', function () {
