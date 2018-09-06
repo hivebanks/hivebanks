@@ -51,7 +51,7 @@ $(function () {
     });
 
     //get config server
-    var data = {"la_id" : la_id}, get_url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php";
+    var data = {"la_id" : la_id}, get_url = "http://agent_service.fnying.com/upload_file/get_upload_file_service.php";
     $.post(get_url, data, function (response) {
         if(response.errcode == '0'){
             var data = response.rows;
