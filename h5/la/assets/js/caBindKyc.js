@@ -87,7 +87,6 @@ $(function () {
     //view image
     $(document).on('click', '.look', function () {
         var idPhotoSrc = $(this).parents('.caKycItem').find('.idPhotoSrc').text();
-        console.log(idPhotoSrc);
         var idPhotoSrcOne = idPhotoSrc.split(',')[0];
         var idPhotoSrcTwo = idPhotoSrc.split(',')[1];
         $('.idPhotoSrcOne').attr('src', idPhotoSrcOne);
