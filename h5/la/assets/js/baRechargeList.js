@@ -76,9 +76,23 @@ $(function () {
 
     //Click the search button to filter
     $('.searchBtn').click(function () {
-        var from_time = $('#from_time').val(), to_time = $('#to_time').val(), tx_time = $('#tx_time').val();
+        var from_time = "", to_time = "", tx_time = "";
 
-        // if()
+        if ($('.from_time').hasClass('none')) {
+            from_time = "";
+        } else {
+            from_time = $('#from_time').val()
+        }
+        if ($('.to_time').hasClass('none')) {
+            to_time = "";
+        } else {
+            to_time = $('#to_time').val()
+        }
+        if ($('.tx_time').hasClass('none')) {
+            tx_time = "";
+        } else {
+            tx_time = $('#tx_time').val()
+        }
 
         var qa_id = $('#qa_id').val(), us_id = $('#us_id').val(), us_account_id = $('#us_account_id').val(),
             asset_id = $('#asset_id').val(), ba_account_id = $('#ba_account_id').val(), tx_hash = $('#tx_hash').val(),
@@ -90,7 +104,7 @@ $(function () {
             base_amount, bit_amount, tx_detail, tx_fee, tx_type, qa_flag, ba_id, function (response) {
                 if (response.errcode == '0') {
                     var rechargeList = response.rows.recharge;
-                    if(rechargeList == false){
+                    if (rechargeList == false) {
                         GetDataEmpty('baRecharge', '8');
                         return;
                     }
