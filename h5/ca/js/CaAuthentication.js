@@ -199,7 +199,7 @@ $(function () {
     function UpLoadImg(formData) {
         var objData = new Object();
         $.ajax({
-            url: config_api_url + '/api/upload/upload_file.php',
+            url: 'http://agent_service.fnying.com/upload_file/upload.php',
             header: {"Access-Control-Allow-Origin": "*"},
             type: 'POST',
             data: formData,
