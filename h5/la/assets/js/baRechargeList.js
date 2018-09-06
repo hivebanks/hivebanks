@@ -44,32 +44,6 @@ $(function () {
                 return;
             }
             ShowDataFun(rechargeList);
-            // $.each(rechargeList, function (i, val) {
-            //     ba_id_arr.push(rechargeList[i].ba_id.substring(0, 10) + '...');
-            //     us_id_arr.push(rechargeList[i].us_id.substring(0, 10) + '...');
-            //     tx_hash_arr.push(rechargeList[i].tx_hash.substring(0, 10) + '...');
-            //     if (rechargeList[i].qa_flag == '0') {
-            //         qa_flag_span = '<span class="i18n" name="unprocessed"></span>';
-            //     }
-            //     if (rechargeList[i].qa_flag == '1') {
-            //         qa_flag_span = '<span class="i18n" name="processed"></span>';
-            //     }
-            //     if (rechargeList[i].qa_flag == '2') {
-            //         qa_flag_span = '<span class="i18n" name="notRejected"></span>';
-            //     }
-            //     tr += '<tr>' +
-            //         '<td><a href="javascript:;" class="ba_id" title="' + rechargeList[i].ba_id + '">' + ba_id_arr[i] + '</a></td>' +
-            //         '<td><a href="javascript:;" class="us_id" title="' + rechargeList[i].us_id + '">' + us_id_arr[i] + '</a></td>' +
-            //         '<td><span class="asset_id">' + rechargeList[i].asset_id + '</span></td>' +
-            //         '<td><span class="base_amount">' + rechargeList[i].base_amount + '</span></td>' +
-            //         '<td><span class="bit_amount">' + rechargeList[i].bit_amount + '</span></td>' +
-            //         '<td><span class="tx_hash" title="' + rechargeList[i].tx_hash + '">' + tx_hash_arr[i] + '</span></td>' +
-            //         '<td><span class="tx_time">' + rechargeList[i].tx_time + '</span></td>' +
-            //         '<td>' + qa_flag_span + '</td>' +
-            //         '</tr>'
-            // });
-            // $('#baRecharge').html(tr);
-            // execI18n();
         }
     }, function (response) {
         GetDataFail('baRecharge', '8');
@@ -93,17 +67,20 @@ $(function () {
     $("input[type=checkbox]").click(function () {
         var className = $(this).val();
         if ($(this).prop('checked')) {
-            $('.' + className).fadeIn();
+            $('.' + className).removeClass('none');
             $('.' + className).children('div').css('display', 'flex');
         } else {
-            $('.' + className).fadeOut();
+            $('.' + className).addClass('none');
         }
     });
 
     //Click the search button to filter
     $('.searchBtn').click(function () {
-        var from_time = $('#from_time').val(), to_time = $('#to_time').val(), tx_time = $('#tx_time').val(),
-            qa_id = $('#qa_id').val(), us_id = $('#us_id').val(), us_account_id = $('#us_account_id').val(),
+        var from_time = $('#from_time').val(), to_time = $('#to_time').val(), tx_time = $('#tx_time').val();
+
+        if()
+
+        var qa_id = $('#qa_id').val(), us_id = $('#us_id').val(), us_account_id = $('#us_account_id').val(),
             asset_id = $('#asset_id').val(), ba_account_id = $('#ba_account_id').val(), tx_hash = $('#tx_hash').val(),
             base_amount = $('#base_amount').val(), bit_amount = $('#bit_amount').val(),
             tx_detail = $('#tx_detail').val(),
