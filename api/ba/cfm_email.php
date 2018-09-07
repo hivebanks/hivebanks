@@ -61,7 +61,7 @@ $row = get_ba_id_by_variable($variable,$email);
 $rec = get_ba_log_bind_by_variable($variable,$email);
 if($row){
     // 判断是否注册完成
-    if ($row['us_id'] && $row['bind_flag'] == 1) {
+    if ($row['ba_id'] && $row['bind_flag'] == 1) {
         exit_error('105','已注册用户，请登陆！');
     }
 }
