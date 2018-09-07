@@ -60,7 +60,7 @@ class Config
 
   const AUTO_TEST_FLAG = false;
 
-  const LA_LOGIN_URL = H5_URL.'/la/login.html';
+  const LA_LOGIN_URL = H5_URL.'/h5/la/login.html';
   // 跟踪日志等级
   const DEBUG_LEVEL = 1;
   // 信息日志等级
