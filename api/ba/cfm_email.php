@@ -94,13 +94,13 @@ if($now_time < $timestamp)
    $bind_email = ins_bind_ba_reg_bind_info($data_bind);
       $email_used = upd_ba_log_bind_info($ba_id);
       //获取当前绑定数
-      $savf_level = get_bind_acount($us_id);
+      $savf_level = get_bind_acount($ba_id);
       //安全等级提升
-      $upd_us_level = upd_savf_level($us_id,$savf_level);
+      $upd_us_level = upd_savf_level($ba_id,$savf_level);
    if($bind_email && ($email_confirm =='注册')){
     header('Content-Type:text/html;charset=utf-8');
        $url_r = Config::H5_BA_URL_R ;
-    header("Location:".$url_);
+    header("Location:".$url_r);
       exit_ok();
     }
       if($bind_email && ($email_confirm =='绑定')){
