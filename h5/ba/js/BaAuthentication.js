@@ -1,19 +1,20 @@
 $(function () {
-    //获取用户token
+    //get user token
     var token = GetCookie('ba_token');
     GetBaAccount();
 
-    //获取绑定信息，是否绑定
+    //Get binding information，Whether to bind
     var name = '', idNum = '', idPhoto = '';
-    function GetBindInfo(){
+
+    function GetBindInfo() {
         GetBindInformation(token, function (response) {
             if (response.errcode == '0') {
                 var data = response.rows;
-                //count_error==0审核中 1拒绝
+                //count_error==0 under review 1 Refuse
                 $.each(data, function (i, val) {
 
-                    //姓名绑定
-                    if (data[i].bind_name == 'name' && data[i].bind_flag == '1') {//姓名绑定成功
+                    //bind name
+                    if (data[i].bind_name == 'name' && data[i].bind_flag == '1') {//Name binding succeeded
                         name = data[i].bind_name;
                         $('.nameBindNot').removeClass('i18n').text(data[i].bind_info).show();
                         $('.nameFormBox').remove();
@@ -23,7 +24,7 @@ $(function () {
                         $('.nameBindAlready').show('fast');
                         $('.nameIcon').addClass('greenIcon icon-duihao').removeClass('icon-gantanhao');
                         return;
-                    }else if(data[i].bind_name == 'name' && data[i].count_error == '0'){//姓名审核中
+                    } else if (data[i].bind_name == 'name' && data[i].count_error == '0') {//Name review
                         name = data[i].bind_name;
                         $('.nameFormBox').remove();
                         $('.nameBindBtn').remove();
@@ -31,9 +32,9 @@ $(function () {
                         $('.nameBindAlready').remove();
                         $('.nameBindRefuse').remove();
                         $('.nameUnderReview').show('fast');
-                        $('.nameIcon').css('color','#9e9e9e');
+                        $('.nameIcon').css('color', '#9e9e9e');
                         return;
-                    }else if(data[i].bind_name == 'name' && data[i].count_error == '1'){//姓名审核拒绝
+                    } else if (data[i].bind_name == 'name' && data[i].count_error == '1') {//Name review rejection
                         $('.nameBindNot').remove();
                         $('.nameBindAlready').remove();
                         $('.nameUnderReview').remove();
@@ -42,8 +43,8 @@ $(function () {
                         return;
                     }
 
-                    //绑定身份证号码
-                    if (data[i].bind_name == 'idNum' && data[i].bind_flag == '1') {//身份证号码绑定成功
+                    //Bind ID number
+                    if (data[i].bind_name == 'idNum' && data[i].bind_flag == '1') {//ID card number binding success
                         idNum = data[i].bind_name;
                         $('.idNumBindNot').text(data[i].bind_info).removeClass('i18n').show();
                         $('.idNumFormBox').remove();
@@ -53,7 +54,7 @@ $(function () {
                         $('.idNumBindAlready').show('fast');
                         $('.idNumIcon').addClass('greenIcon icon-duihao').removeClass('icon-gantanhao');
                         return;
-                    }else if(data[i].bind_name == 'idNum' && data[i].count_error == '0'){//身份证号码审核中
+                    } else if (data[i].bind_name == 'idNum' && data[i].count_error == '0') {//ID card number review
                         idNum = data[i].bind_name;
                         $('.idNumFormBox').remove();
                         $('.idNumBindBtn').remove();
@@ -61,9 +62,9 @@ $(function () {
                         $('.idNumBindRefuse').remove();
                         $('.idNumBindAlready').remove();
                         $('.idNumUnderReview').show('fast');
-                        $('.idNumIcon').css('color','#9e9e9e');
+                        $('.idNumIcon').css('color', '#9e9e9e');
                         return;
-                    }else if(data[i].bind_name == 'idNum' && data[i].count_error == '1'){//身份证号码审核拒绝
+                    } else if (data[i].bind_name == 'idNum' && data[i].count_error == '1') {//ID card number review rejection
                         $('.idNumBindNot').remove();
                         $('.idNumBindAlready').remove();
                         $('.idNumUnderReview').remove();
@@ -72,8 +73,8 @@ $(function () {
                         return;
                     }
 
-                    //上传身份证
-                    if (data[i].bind_name == 'idPhoto' && data[i].bind_flag == '1') {//身份证上传成功
+                    //Upload ID card
+                    if (data[i].bind_name == 'idPhoto' && data[i].bind_flag == '1') {//Successful ID card upload
                         idPhoto = data[i].bind_name;
                         $('.uploadBindNot').attr('name', 'uploadAlreadyIdCard').show();
                         $('.idPhotoFormBox').remove();
@@ -83,7 +84,7 @@ $(function () {
                         $('.uploadBindAlready').show('fast');
                         $('.idPhotoIcon').addClass('greenIcon icon-duihao').removeClass('icon-gantanhao');
                         return;
-                    }else if(data[i].bind_name == 'idPhoto' && data[i].count_error == '0'){//上传身份证审核中
+                    } else if (data[i].bind_name == 'idPhoto' && data[i].count_error == '0') {//Upload ID card review
                         idPhoto = data[i].bind_name;
                         $('.idPhotoFormBox').remove();
                         $('.idPhotoBindBtn').remove();
@@ -91,9 +92,9 @@ $(function () {
                         $('.uploadBindRefuse').remove();
                         $('.uploadBindAlready').remove();
                         $('.uploadUnderReview').show('fast');
-                        $('.idPhotoIcon').css('color','#9e9e9e');
+                        $('.idPhotoIcon').css('color', '#9e9e9e');
                         return;
-                    }else if(data[i].bind_name == 'idPhoto' && data[i].count_error == '1'){//上传身份证审核拒绝
+                    } else if (data[i].bind_name == 'idPhoto' && data[i].count_error == '1') {//Upload ID card review rejection
                         $('.idNumBindNot').remove();
                         $('.idNumBindAlready').remove();
                         $('.idNumUnderReview').remove();
@@ -105,13 +106,14 @@ $(function () {
             GetErrorCode(response.errcode);
         });
     }
+
     GetBindInfo();
 
-    //显示姓名绑定
+    //show bind name
     $('.nameBindBtn').click(function () {
         $('.nameFormBox').fadeToggle('fast');
     });
-    //姓名绑定
+    //bind name
     $('.nameBindEnable').click(function () {
         var text_type = '3',
             text = $('#name').val(),
@@ -132,15 +134,15 @@ $(function () {
         })
     });
 
-    //显示身份证号码绑定
+    //show ID card number binding
     $('.idNumBindBtn').click(function () {
-        if(name != 'name'){
+        if (name != 'name') {
             LayerFun('firstBindName');
         }
         $('.idNumFormBox').fadeToggle('fast');
     });
 
-    //绑定身份证号码
+    //Bind ID number
     $('.idNumBindEnable').click(function () {
         var text_type = '2',
             text = $('#idNum').val(),
@@ -162,24 +164,24 @@ $(function () {
     });
 
 
-    //显示身份证上传绑定
+    //show ID upload binding
     $('.idPhotoBindBtn').click(function () {
-        if(name != 'name'){
+        if (name != 'name') {
             LayerFun('firstBindName');
         }
-        if(idNum != 'idNum'){
+        if (idNum != 'idNum') {
             LayerFun('firstIdNum');
         }
 
         $('.idPhotoFormBox').fadeToggle('fast');
     });
 
-    //身份证上传绑定
-    //获取配置文件
+    //ID upload binding
+    //Get configuration file
     var url = getRootPath();
     var config_api_url = '';
     $.ajax({
-        url: url+"/assets/json/config_url.json",
+        url: url + "h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -191,7 +193,8 @@ $(function () {
 
         }
     });
-    //返回图片信息
+
+    //Return image information
     function UpLoadImg(formData) {
         var src = '';
         $.ajax({
@@ -218,22 +221,21 @@ $(function () {
     //get la_id
     var la_id = "";
     GetLaId(token, function (response) {
-        if(response.errcode == '0'){
+        if (response.errcode == '0') {
             la_id = response.la_id;
         }
     }, function (response) {
         GetErrorCode(response.errcode);
     });
 
-    /** 上传图片-正面
-     *获取选择文件
-     * 身份证上传验证
+    /** Upload picture - front
+     *Get the selection file
+     * ID card upload verification
      */
     var src1 = '', src2 = '';
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
             $("#idPositive").attr("src", objUrl);
         }
 
@@ -241,11 +243,10 @@ $(function () {
         formData.append("la_id", la_id);
         src1 = UpLoadImg(formData);
     });
-    //上传背面
+    //Upload back
     $('#file1').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
@@ -253,12 +254,12 @@ $(function () {
         src2 = UpLoadImg(formData);
     });
 
-    // 身份证上传验证
+    // ID card upload verification
     $('#submit').click(function () {
         var file_type = 'idPhoto',
             file_url = src1 + ',' + src2;
 
-        //调用文件绑定
+        //File binding
         FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
                 LayerFun('submittedSuccessfully');
@@ -270,7 +271,7 @@ $(function () {
         })
     });
 
-    //选择图片进行显示
+    //Display when selecting a picture
     function getObjectURL(file) {
         var url = null;
         if (window.createObjectURL != undefined) { // basic

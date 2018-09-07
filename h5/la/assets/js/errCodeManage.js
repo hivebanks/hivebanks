@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('la_token');
 
     //获取错误码列表
@@ -19,11 +19,11 @@ $(function () {
                     "<span class='errorMsg'>"+ data[i].code_value +"</span>" +
                     "<div class='errorMsgBox none flex baseline'>" +
                     "<input type='text'  class='form-control errorMsgInput'>" +
-                    "<button class='confirmModifyErrorMsg btn btn-success btn-sm'>确定</button>" +
+                    "<button class='confirmModifyErrorMsg btn btn-success btn-sm'>determine</button>" +
                     "</div>" +
                     "</div>" +
                     "</td>" +
-                    "<td><a href='javascript:;' class='editTableText'>编辑</a><a href='javascript:;' class='none cancelEdit'>取消</a></td>" +
+                    "<td><a href='javascript:;' class='editTableText'>编辑</a><a href='javascript:;' class='none cancelEdit'>cancel</a></td>" +
                     "</tr>";
             });
             $('#errorCodeTable').html(tr);

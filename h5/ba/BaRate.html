@@ -18,7 +18,7 @@
 <!-- loading -->
 <iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
         scrolling="no"></iframe>
-<!--导航-->
+<!--nav-->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -49,7 +49,7 @@
         </div>
     </div>
 </nav>
-<!--面包屑-->
+<!--Bread crumbs-->
 <div class='container margin-top-1'>
     <div class='row'>
         <div class='col-md-12 col-sm-12'>
@@ -60,17 +60,17 @@
         </div>
     </div>
 </div>
-<!--汇率设定-->
+<!--exchange rate setting-->
 <section id="rate" class="section-top-2 content">
     <div class="container">
-        <!--标题-->
+        <!--title-->
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <h3 class="pcTitle i18n" name="rateSetting">Exchange rate setting</h3>
                 <h5 class="phoneTitle i18n" name="rateSetting">Exchange rate setting</h5>
             </div>
         </div>
-        <!--可处理额度-->
+        <!--Processing quota-->
         <div class="row canHandleAmount">
             <div class="col-md-12 col-sm-12">
                 <div class="canHandleInnerBox flex space-between center">
@@ -81,39 +81,39 @@
             </div>
         </div>
 
-        <!--内容-->
-        <!--设置充值和提现汇率-->
+        <!--content-->
+        <!--Set up recharge and withdrawal rates-->
         <div class="row inputRate">
-            <!--充值汇率设定-->
+            <!--Recharge exchange rate setting-->
             <div class="col-md-6 col-sm-12">
-                <!--当前充值汇率-->
+                <!--Current Recharge Rate-->
                 <div class="currentRechargeRate currentRechargeRateBox flex space-around font-size-14 phone-font-size-12">
                     <ul>
                         <li>
-                            <span class="i18n" name="currentRechargeRate">当前充值汇率</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="currentRechargeRate">Current Recharge Rate</span>:&nbsp;&nbsp;
                             <span>1<span>BTC</span>=<span class="recharge_rate">10</span><span
                                     class="bit_type"></span></span>
                         </li>
                         <li>
-                            <span class="i18n" name="effectiveTime">有效时间</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="effectiveTime">Effective Time</span>:&nbsp;&nbsp;
                             <span class="recharge_set_time"></span>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <span class="i18n" name="rechargeMaxAmount">当前最大额度</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="rechargeMaxAmount">Maximum Recharge Amount</span>:&nbsp;&nbsp;
                             <span class="recharge_max_amount"></span>
                             <span class="bit_type"></span>
                         </li>
                         <li>
-                            <span class="i18n" name="rechargeMinAmount">当前最小额度</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="rechargeMinAmount">Minimum Recharge Amount</span>:&nbsp;&nbsp;
                             <span class="recharge_min_amount"></span>
                             <span class="bit_type"></span>
                         </li>
                     </ul>
                 </div>
                 <div class="rechargeNotSet margin-bottom-5">
-                    <span class="rechargeRateNotSet i18n" name="rechargeRateNotSet">充值汇率未设置</span>
+                    <span class="rechargeRateNotSet i18n" name="rechargeRateNotSet">Recharge Rate Is Not Set</span>
                 </div>
                 <div class="BOCRateChannel bocRechargeBox">
                     <h5 class="i18n" name="rechargeRate">Recharge Rate</h5>
@@ -161,7 +161,7 @@
                         </div>
                     </div>
 
-                    <!--密码-->
+                    <!--password-->
                     <div class="Period flex center margin-bottom-5">
                         <h6><span class="i18n" name="loginPassword">password</span>:</h6>
                         <div class="flex center form-group form-group-sm">
@@ -173,13 +173,13 @@
 
                     <div class="user_level_box margin-bottom-5">
                         <div class="user_level flex center">
-                            <h6 class="i18n" name="setLevel">等级设置</h6>
+                            <h6 class="i18n" name="setLevel">setLevel</h6>
                             <div class="form-group form-group-sm">
                                 <input type="text" class="form-control rechargeLevel">
                             </div>
                         </div>
                     </div>
-                    <!--有效期时间-->
+                    <!--Validity time-->
                     <div class="Period flex center">
                         <h6><span class="i18n" name="deadline">Deadline</span>:</h6>
                         <input type="text" class="timeInput" id="rechargeRateTime"/>
@@ -187,35 +187,35 @@
                     <a href="javascript:;" class="btn btn-success rateConfirm rechargeRateBtn i18n" name="confirm">Confirm</a>
                 </div>
             </div>
-            <!--提现汇率设定-->
+            <!--withtraw exchange rate setting-->
             <div class="phone-margin-top-10 col-md-6 col-sm-12">
                 <div class="currentRechargeRate currentWithdrawRateBox flex space-around font-size-14 phone-font-size-12">
                     <ul>
                         <li>
-                            <span class="i18n" name="currentWithdrawRate">当前提现汇率</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="currentWithdrawRate">Current Withdraw Rate</span>:&nbsp;&nbsp;
                             <span>1<span class="bit_type"></span>=<span class="withdraw_rate">0.001</span><span
                                     class="base_type"></span></span>
                         </li>
                         <li>
-                            <span class="i18n" name="effectiveTime">有效时间</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="effectiveTime">Effective Time</span>:&nbsp;&nbsp;
                             <span class="withdraw_set_time"></span>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <span class="i18n" name="withdrawMaxAmount">当前最大额度</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="withdrawMaxAmount">Maximum Withdrawal Amount</span>:&nbsp;&nbsp;
                             <span class="withdraw_max_amount"></span>
                             <span class="bit_type"></span>
                         </li>
                         <li>
-                            <span class="i18n" name="withdrawMinAmount">当前最小额度</span>:&nbsp;&nbsp;
+                            <span class="i18n" name="withdrawMinAmount">Minimum Withdrawal Amount</span>:&nbsp;&nbsp;
                             <span class="withdraw_min_amount"></span>
                             <span class="bit_type"></span>
                         </li>
                     </ul>
                 </div>
                 <div class="withdrawNotSet margin-bottom-5">
-                    <span class="withdrawRateNotSet i18n" name="withdrawRateNotSet">提现汇率未设置</span>
+                    <span class="withdrawRateNotSet i18n" name="withdrawRateNotSet">Withdraw Rate Is Not Set</span>
                 </div>
                 <div class="BOCRateChannel bocRechargeBox">
                     <h5 class="i18n" name="withdrawRate">Withdraw Rate</h5>
@@ -238,7 +238,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--额度-->
+                    <!--Amount-->
                     <div class="limit margin-bottom-5">
                         <div class="minimumLimit flex center">
                             <h6><span class="i18n" name="minLimit">The minimum limit</span>:</h6>
@@ -262,7 +262,7 @@
                         </div>
                     </div>
 
-                    <!--密码-->
+                    <!--password-->
                     <div class="Period flex center margin-bottom-5">
                         <h6><span class="i18n" name="loginPassword">password</span>:</h6>
                         <div class="flex center form-group form-group-sm">
@@ -274,13 +274,13 @@
 
                     <div class="user_level_box margin-bottom-5">
                         <div class="user_level flex center">
-                            <h6 class="i18n" name="setLevel">等级设置</h6>
+                            <h6 class="i18n" name="setLevel">setLevel</h6>
                             <div class="form-group form-group-sm">
                                 <input type="text" class="form-control withdrawLevel">
                             </div>
                         </div>
                     </div>
-                    <!--有效期时间-->
+                    <!--Validity time-->
                     <div class="Period flex center">
                         <h6><span class="i18n" name="deadline">Deadline</span>:</h6>
                         <input type="text" class="timeInput" id="withdrawRateTime"/>
@@ -291,7 +291,7 @@
         </div>
     </div>
 </section>
-<!--页脚-->
+<!--footer-->
 <section class="sections footer">
     <div class="container">
 

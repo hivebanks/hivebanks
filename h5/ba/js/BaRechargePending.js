@@ -2,10 +2,10 @@ $(function () {
     var token = GetCookie('ba_token'), limit = 10, offset = 0;
     GetBaAccount();
 
-    //获取基准类型
+    //Get the baseline type
     var base_type = GetCookie('benchmark_type');
 
-    // 获取用户基本信息
+    // get Basic user information
     GetBasicInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -15,7 +15,7 @@ $(function () {
     }, function (response) {
         return;
     });
-    //获取用户充值待处理订单列表
+    //Get a list of user refill pending orders
     var api_url = 'log_us_recharge.php', type = '1', tr = '', bit_address = [], tx_hash = [];
     RechargeWithdrawCodeQuery(token, api_url, type, function (response) {
         if (response.errcode == '0') {
@@ -48,7 +48,7 @@ $(function () {
         return;
     });
 
-    //提现确认处理
+    //Cash withdrawal confirmation processing
     var qa_id = '', _this = '';
     $(document).on('click', '.confirmBtn', function () {
         $('#confirmModal').modal('show');

@@ -1,12 +1,12 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取base_type
+    //get base_type
     var base_type = GetCookie('benchmark_type');
 
-    // 切换数字货币与法定货币
+    // Switch between digital currency and legal tender
     $(".digital-btn").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
         $(".digital").fadeIn();
@@ -21,7 +21,7 @@ $(function () {
         $('.baRechargeCodeRow').fadeOut();
         $('.caRechargeCodeRow').fadeIn();
     });
-    //Ba获取充值列表
+    //get ba recharge list
     var api_url = 'us_get_recharge_ba_list.php';
     GetBaRateList(api_url, token, function (response){
         if(response.errcode == '0'){
@@ -31,7 +31,6 @@ $(function () {
                 execI18n();
                 return;
             }
-
             $.each(data, function (i, val) {
                 li+='<li>' +
                     '<p><i class="iconfont icon-'+ data[i].bit_type.toUpperCase() +'"></i></p>' +
@@ -52,15 +51,14 @@ $(function () {
         return;
     });
 
-//    点击选择充值
+    //Click to select recharge
     $(document).on('click','.digital-inner-box li', function () {
         var val = $(this).children("span").text().trim();
             SetCookie('re_bit_type',val);
             window.location.href = "../ba/BaRecharge.html";
     });
 
-
-    //CA充值获取平均汇率
+    //CA recharge to get the average exchange rate
     var recharge_rate = '', api_url = 'average_ca_recharge_rate.php';
     GetAverageRate(api_url, token, function (response){
         if(response.errcode == '0'){
@@ -78,7 +76,7 @@ $(function () {
         GetErrorCode(response.errcode);
     });
 
-    //输入充值金额绑定输入框
+    //Enter the recharge amount binding input box
     $('.bit_amount').bind('input porpertychange', function () {
         $('.base_amount').val($(this).val() / recharge_rate);
         $('.payRechargeAmount').text($(this).val());
@@ -88,7 +86,7 @@ $(function () {
         $('.payRechargeAmount').text($('.bit_amount').val());
     });
 
-    //ca充值下一步操作
+    //Ca recharge the next step
     $('.enableAmount').click(function (){
        if($('.bit_amount').val().length <= 0){
            LayerFun('rechargeAmountNotEmpty');
@@ -99,9 +97,7 @@ $(function () {
        window.location.href = '../ca/CaRecharge.html?base_amount=' + base_amount + '&bit_amount=' + us_recharge_bit_amount;
     });
 
-
-
-    // BA充值记录
+    // BA recharge recode
         var limit = 10, offset = 0,
         ba_api_url = 'log_ba_recharge.php';
     AllRecord(token, limit, offset, ba_api_url, function (response) {
@@ -126,7 +122,7 @@ $(function () {
             window.location.href = 'login.html';
         }
     });
-    // CA充值记录
+    // CA recharge recode
     var ca_api_url = 'log_ca_recharge.php',
         ca_tx_hash_arr = [];
     AllRecord(token, limit, offset, ca_api_url, function (response) {
@@ -151,8 +147,5 @@ $(function () {
             window.location.href = 'login.html';
         }
         GetDataEmpty('caRechargeCodeTable', '4');
-        return;
-
     });
-
 });

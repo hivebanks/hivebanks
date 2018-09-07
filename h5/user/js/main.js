@@ -14,11 +14,11 @@ $(function () {
     var time = new Date().toLocaleString('chinese', {hour12: false});
     $(".time").text(time);
 
-// 图标链接
+// Icon link
     var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
     link.appendTo($('head')[0]);
 
-// 密码强度验证
+// Password strength verification
     $('#emailPass').keyup(function () {
         $('.email-pw-strength').css('display', 'block');
         var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
@@ -30,28 +30,28 @@ $(function () {
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass(' pw-defule');
-            //密码小于六位的时候，密码强度图片都为灰色
+            //When the password is less than six digits, the password strength picture is gray.
         }
         else if (strongRegex.test($(this).val())) {
             $('.emailRegisterBox #emailLevel').removeClass('pw-weak');
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass(' pw-strong');
-            //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强
+            //The password is eight or more and the alphanumeric special characters are included, the strongest
         }
         else if (mediumRegex.test($(this).val())) {
             $('.emailRegisterBox #emailLevel').removeClass('pw-weak');
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass('pw-medium');
-            //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等
+            //The password is seven or more and there are two of the letters, numbers, and special characters. The intensity is medium.
         }
         else {
             $('.emailRegisterBox #emailLevel').removeClass('pw-weak');
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass('pw-weak');
-            //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的
+            //If the password is 6 or less, even if the letters, numbers, and special characters are included, the strength is weak.
         }
         return true;
     });
@@ -67,33 +67,33 @@ $(function () {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass(' pw-defule');
-            //密码小于六位的时候，密码强度图片都为灰色
+            //When the password is less than six digits, the password strength picture is gray.
         }
         else if (strongRegex.test($(this).val())) {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-weak');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass(' pw-strong');
-            //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强
+            //The password is eight or more and the alphanumeric special characters are included, the strongest
         }
         else if (mediumRegex.test($(this).val())) {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-weak');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass(' pw-medium');
-            //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等
+            //The password is seven or more and there are two of the letters, numbers, and special characters. The intensity is medium.
         }
         else {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-weak');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass('pw-weak');
-            //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的
+            //If the password is 6 or less, even if the letters, numbers, and special characters are included, the strength is weak.
         }
         return true;
     });
 
-//退出登录清楚cookie
+//Logout to clear cookies
     $('.logout').click(function () {
         DelCookie('user_token');
         DelCookie('us_id');
@@ -117,13 +117,13 @@ $(function () {
     });
 });
 
-//GetUsAccount
+//Get User Account
 function GetUsAccount() {
     var us_account = GetCookie('us_account');
     $(".us_account").text(us_account);
 }
 
-//数据获取为空
+//Data acquisition is empty
 function GetDataEmpty(element, num) {
     var tr = '';
     tr = '<tr>' +
@@ -133,7 +133,7 @@ function GetDataEmpty(element, num) {
     return;
 }
 
-//数据获取失败
+//Data acquisition failed
 function GetDataFail(element, num) {
     var tr = '';
     tr = '<tr>' +
@@ -142,22 +142,22 @@ function GetDataFail(element, num) {
     $('#' + element).html(tr);
 }
 
-//格式化金额
+//Formatted amount
 function fmoney(s, n) {
     n = n > 0 && n <= 20 ? n : 2;
-    s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";//更改这里n数也可确定要保留的小数位
+    s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";//Change the number of n here to determine the decimal place to keep.
     var l = s.split(".")[0].split("").reverse(),
         r = s.split(".")[1];
     var t = "";
     for (var i = 0; i < l.length; i++) {
         t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? "," : "");
     }
-    return t.split("").reverse().join("") + "." + r.substring(0, 2);//保留2位小数  如果要改动 把substring 最后一位数改动就可
+    return t.split("").reverse().join("") + "." + r.substring(0, 2);//Keep 2 decimal places. If you want to change, change the last digit of substring.
 };
 
-//获取手机验证码
+//Get phone verification code
 function GetPhoneCodeFun(bind_type, $this, cfm_code) {
-    //获取国家代码
+    //Get country code
     var country_code = $('.selected-dial-code').text().split("+")[1];
     var cellphone = $('#phone').val();
     if (cellphone == '') {
@@ -202,7 +202,7 @@ function setTime($this) {
     }, 1000);
 }
 
-//email地址
+//email address
 function EmailList() {
     var emailList = {
         'qq.com': 'http://mail.qq.com',
@@ -233,7 +233,7 @@ function EmailList() {
 // var url = getRootPath();
 
 
-//输入为空是提示
+//Popup message
 function LayerFun(type) {
     layer.msg('<span class="i18n" name="' + type + '"></span>');
     execI18n();
@@ -244,34 +244,33 @@ function GetUserAgent() {
     var browser = {
         versions: function () {
             var u = navigator.userAgent, app = navigator.appVersion;
-            return {   //移动终端浏览器版本信息
-                trident: u.indexOf('Trident') > -1, //IE内核
-                presto: u.indexOf('Presto') > -1, //opera内核
-                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
-                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
-                iPad: u.indexOf('iPad') > -1, //是否iPad
-                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            return {   //Mobile terminal browser version information
+                trident: u.indexOf('Trident') > -1, //IE kernel
+                presto: u.indexOf('Presto') > -1, //opera kernel
+                webKit: u.indexOf('AppleWebKit') > -1, //Apple, Google kernel
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //Firefox kernel
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //Whether it is a mobile terminal
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //Ios terminal
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //Android terminal or uc browser
+                iPhone: u.indexOf('iPhone') > -1, //Whether it is an iPhone or QQHD browser
+                iPad: u.indexOf('iPad') > -1, //Whether iPad
+                webApp: u.indexOf('Safari') == -1 //Whether the web should be a program, no head and bottom
             };
         }(),
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
     };
-    if (browser.versions.mobile) {//判断是否是移动设备打开
-        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+    if (browser.versions.mobile) {//Determine if the mobile device is open
+        var ua = navigator.userAgent.toLowerCase();//Get the object for judgment
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
-            //在微信中打开
-            // alert("在微信中打开");
+            //Open on WeChat
             return 'wx';
         }
         if (browser.versions.webApp) {
-            // alert("是否webapp")
+            // alert("webapp")
             return 'app';
         }
     } else {
-        //否则就是PC浏览器
+        //Otherwise it is a PC browser
         return 'H5';
     }
 }

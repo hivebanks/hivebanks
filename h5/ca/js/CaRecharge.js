@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetUsCookie('user_token');
     GetUsAccount();
     var benchmark_type = GetUsCookie('benchmark_type');

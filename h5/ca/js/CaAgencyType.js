@@ -1,5 +1,5 @@
 $(function(){
-    //获取token
+    //get token
     var token = getCookie('ca_token');
     GetCaAccount();
 

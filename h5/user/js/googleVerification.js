@@ -1,5 +1,5 @@
 $(function () {
-    //获取用户token
+    //get user token
     var token = GetCookie('user_token');
     GetUsAccount();
 

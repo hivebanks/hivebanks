@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('ca_token');
     GetCaAccount();
 
@@ -7,7 +7,7 @@ $(function () {
     $('#phone_imgCode').click(function () {
         GetImgCode();
     });
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '4', $this = $(this), cfm_code = $('#phoneCfmCode').val();
         if(cfm_code <= 0){
@@ -17,7 +17,7 @@ $(function () {
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
-    //获取绑定信息
+    //Get binding information
     GetCaBindInformation(token, function (response) {
         if(response.errcode == '0'){
             var data = response.rows, cellphone = "";
@@ -36,10 +36,10 @@ $(function () {
         return;
     });
 
-    //绑定资金密码
+    //Binding fund password
     $('.fundPasswordEnable').click(function () {
         var hash_type = 'pass_hash',
-            // 获取国家代码
+            // Get country code
             country_code = $('.selected-dial-code').text().split("+")[1],
             phone = country_code + '-' + $('#phone').val(),
             phoneCode = $('#phoneCode').val(),
@@ -65,7 +65,7 @@ $(function () {
             LayerFun('passwordNotEmpty');
             return;
         }
-        //hash资金密码绑定
+        //hashFund password binding
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {

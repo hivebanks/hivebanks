@@ -1,12 +1,12 @@
 $(function () {
-    //获取token；
+    //get token；
     var token = GetCookie('ba_token');
     GetBaAccount();
 
-    //获取基准类型
+    //Get the baseline type
     var benchmark_type = GetCookie('benchmark_type');
 
-    // 获取用户基本信息
+    // get Basic user information
     GetBasicInformation(token, function (response) {
         $('.base_amount').text(response.base_amount);
         $('.bit_type').text(response.bit_type);
@@ -31,7 +31,7 @@ $(function () {
     //     $('.withdrawRateText').text($(this).val());
     // });
 
-    //充值汇率设定
+    //Recharge exchange rate setting
     $(".rechargeRateBtn").click(function () {
         var recharge_rate = $('.rechargeRateInput').val(),
             recharge_min_amount = $('.rechargeMinVal').val(),
@@ -92,7 +92,7 @@ $(function () {
         })
     });
 
-    //获取充值汇率
+    //Get recharge rate
     function GetRechargeRateFun(){
         GetRechargeRate(token, function (response){
             if(response.errcode == '0'){
@@ -122,7 +122,7 @@ $(function () {
     }
     GetRechargeRateFun();
 
-    //提现汇率设定
+    //withtraw exchange rate setting
     $(".withdrawRateBtn").click(function () {
         var withdraw_rate = $('.withdrawRateInput').val(),
             withdraw_min_amount = $('.withdrawMinVal').val(),
@@ -182,7 +182,7 @@ $(function () {
         })
     });
 
-    //获取提现汇率
+    //Get the withdrawal rate
     function GetWithdrawRateFun(){
         GetWithdrawRate(token, function (response){
             if(response.errcode == '0'){
@@ -211,14 +211,14 @@ $(function () {
     }
     GetWithdrawRateFun();
 
-    //设置时间
+    //Set time
     $('#withdrawRateTime,#rechargeRateTime').datetimepicker({
         initTime: new Date(),
         format: 'Y/m/d H:i',
         value: new Date(),
-        minDate: new Date(),//设置最小日期
-        minTime: new Date(),//设置最小时间
-        yearStart: 2018,//设置最小年份
-        yearEnd: 2050 //设置最大年份
+        minDate: new Date(),//Set minimum date
+        minTime: new Date(),//Set minimum time
+        yearStart: 2018,//Set the minimum year
+        yearEnd: 2050 //Set the maximum year
     });
 });

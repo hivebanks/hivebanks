@@ -18,7 +18,7 @@ $(function(){
         GetErrorCode(response.errcode);
     });
 
-    //修改昵称
+    //change username
     $('.modifyNameBtn').click(function () {
         var ca_account = $('#nickName').val();
         if(ca_account.length <= 0){
@@ -42,7 +42,7 @@ $(function(){
         })
     });
 
-    //获取绑定信息
+    //Get binding information
     var cellphone = '', funPass = '';
     GetCaBindInformation(token, function (response) {
         if(response.errcode == '0'){
@@ -70,7 +70,7 @@ $(function(){
         window.location.href = 'BaMarginWithdrawAddress.html';
     });
 
-    //账户变动记录
+    //Account change record
     var limit = 10, offset = 0, n = 0;
     var api_url = 'log_balance.php';
 
@@ -107,7 +107,7 @@ $(function(){
     };
     GetAccountChange(token, limit, offset, api_url);
 
-    //    分页
+    //    Pagination
     function Page(pageCount) {
         $('.account_log_code').pagination({
             pageCount: pageCount,

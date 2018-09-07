@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('la_token');
 
     Date.prototype.Format = function (fmt) { //author: meizz

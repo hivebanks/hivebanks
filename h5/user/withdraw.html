@@ -19,7 +19,7 @@
 <!-- loading -->
 <iframe src='loading.html' class='loading' width='100%' height='100%' frameborder='0' marginheight='0' marginwidth='0'
         scrolling='no'></iframe>
-<!--导航-->
+<!--nav-->
 <nav class='navbar navbar-default' role='navigation'>
     <div class='container'>
         <div class='navbar-header'>
@@ -50,7 +50,7 @@
     </div>
 </nav>
 
-<!--安全提示信息-->
+<!--Security message-->
 <section class='msg'>
     <div class='container'>
         <div class='row msg-row'>
@@ -75,7 +75,7 @@
     </div>
 </section>
 
-<!--面包屑-->
+<!--Bread crumbs-->
 <div class='container'>
     <div class='row'>
         <div class='col-md-12 col-sm-12'>
@@ -87,7 +87,7 @@
     </div>
 </div>
 
-<!--提现-->
+<!--withdraw-->
 <section class='sections'>
     <div class='container'>
         <div class='row'>
@@ -100,7 +100,7 @@
             </div>
 
             <div class='col-md-9 col-sm-12'>
-                <!--数字货币充值-->
+                <!--Digital currency recharge-->
                 <div class='tab-btn digital'>
                     <h3 class='pcTitle bitAgentTitle i18n' name='digitalCurrencyWithdraw'>Digital Currency withdraw</h3>
                     <h5 class='phoneTitle bitAgentTitle margin-top-5 i18n' name='digitalCurrencyWithdraw'>Digital
@@ -123,20 +123,19 @@
                     <!--</p>-->
                     <!--</div>-->
                 </div>
-                <!--法定货币充值-->
-                <!--法定货币充值-->
+                <!--Legal currency recharge-->
                 <div class="tab-btn legal">
                     <h3 class="pcTitle i18n" name="legalCurrencyWithdraw">Legal Currency Withdraw</h3>
                     <h5 class="phoneTitle i18n" name="legalCurrencyWithdraw">Legal Currency Withdraw</h5>
 
                     <div class="currentRechargeRateBox font-weight-400 margin-top-2 margin-bottom-2">
-                        <span class="i18n" name="currentWithdrawRate">当前提现汇率</span>
+                        <span class="i18n" name="currentWithdrawRate">Current Withdraw Rate</span>
                         <span class="rechargeRate">1BTC = <span class="withdraw_rate"></span><span class="ca_currency">CNY</span></span>
                     </div>
 
                     <div class="legalRechargeBox">
                         <div class="legalRechargeInnerBox">
-                            <label for="payAmount" class="payAmount i18n" name="withdrawAmount">提现金额</label>
+                            <label for="payAmount" class="payAmount i18n" name="withdrawAmount">Withdraw Amounts</label>
                             <div class="flex center rechargeInfoRow">
                                 <div class="form-group">
                                     <div class="input-group">
@@ -163,9 +162,9 @@
                                     <!--</li>-->
                                     <!--<li><span class="payWithdrawAmount ty-color margin-left-5">1</span><span class="base_type margin-left-5"></span>-->
                                     </li>
-                                    <li class=""><span>账户余额</span>:</li>
+                                    <li class=""><span class="i18n" name="accountBalance">accountBalance</span>:</li>
                                     <li><span class="us_base_amount ty-color margin-left-5">0</span><span class="base_type margin-left-5"></span></li>
-                                    <li class="margin-left-1"><a href="javascript:;" class="i18n fullWithdrawal none" name="fullWithdrawal">全部提现</a><span class="i18n insufficientBalance ty-color none" name="insufficientBalance">余额不足</span></li>
+                                    <li class="margin-left-1"><a href="javascript:;" class="i18n fullWithdrawal none" name="fullWithdrawal">fullWithdrawal</a><span class="i18n insufficientBalance ty-color none" name="insufficientBalance">余额不足</span></li>
                                 </ul>
                             </div>
                             <a href="javascript:;" class="btn btn-success enableAmount i18n" name="next"></a>
@@ -177,12 +176,12 @@
     </div>
 </section>
 
-<!--提现记录-->
+<!--withdraw recode-->
 <section class='withdraw-row'>
     <div class='container' id='baWithdrawCodes'>
         <h3 class='pcTitle i18n' name='withdrawRecord'>Withdraw Record</h3>
         <h5 class='phoneTitle i18n' name='withdrawRecord'>Withdraw Record</h5>
-        <!--BA提现记录-->
+        <!--BA withdraw recode-->
         <div class='row baWithdrawCodeRow'>
             <div class='col-md-12 col-sm-12 deposit-col-right'>
                 <div class='record-bg'>
@@ -206,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <!--CA提现记录-->
+        <!--CA withdraw recode-->
         <div class='row caWithdrawCodeRow'>
             <div class='col-md-12 col-sm-12 deposit-col-right'>
                 <div class='record-bg'>
@@ -240,19 +239,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                <h3 class="modal-title pcTitle">使用提现功能必须进行身份认证</h3>
-                <h5 class="modal-title phoneTitle">使用提现功能必须进行身份认证</h5>
+                <h3 class="modal-title pcTitle i18n" name="withdrawalAuthenticate">Use the withdrawal feature to authenticate</h3>
+                <h5 class="modal-title phoneTitle i18n" name="withdrawalAuthenticate">Use the withdrawal feature to authenticate</h5>
             </div>
-            <!--<div class="modal-body">-->
-
-            <!--</div>-->
             <div class="modal-footer">
-                <a href="authentication.html?withdraw" type="button" class="btn btn-primary width-100">前往身份认证</a>
+                <a href="authentication.html?withdraw" type="button" class="btn btn-primary width-100 i18n" name="authentication">authentication</a>
             </div>
         </div>
     </div>
 </div>
-<!--页脚-->
+<!--footer-->
 <section class='sections footer'>
     <div class='container'>
 
@@ -296,7 +292,7 @@
     </div>
 </section>
 
-<!--返回顶部-->
+<!--Back to top-->
 <div class='scrollup'>
     <a href='#'><i class='iconfont icon-top'></i></a>
 </div>

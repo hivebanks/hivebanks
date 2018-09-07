@@ -1,9 +1,9 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    // 用户基本信息
+    // Basic user information
     var submit_name = '';
     UserInformation(token, function (response) {
         if (response.errcode == '0') {
@@ -15,18 +15,18 @@ $(function () {
         }
     });
 
-    //获取申报列表
+    //Get the declaration list
     var _li = '';
     function FaultProcess(submit_info, log_status) {
 
         if(log_status == 'unProcessed' || log_status == 'processing'){
             _li = '<li class="margin-bottom-2 faultLi">' +
                 '<p>' +
-                '<span class="font-weight-400 i18n" name="declarationInformation">申报信息</span>:' +
+                '<span class="font-weight-400 i18n" name="declarationInformation">Declaration Information</span>:' +
                 '<span class="BackFaultReportInfo margin-left-1">'+ submit_info +'</span>' +
                 '</p>' +
                 '<p>' +
-                '<span class="font-weight-400 i18n" name="currentProgress">当前进度</span>:' +
+                '<span class="font-weight-400 i18n" name="currentProgress">Current Progress</span>:' +
                 '<span class="i18n margin-left-1" name="'+ log_status +'"></span>' +
                 '</p>' +
                 '</li>';
@@ -50,23 +50,23 @@ $(function () {
                         var log_status = 'processed';
                             li += '<li class="margin-bottom-2 faultLi">' +
                                 '<p>' +
-                                '<span class="font-weight-400 i18n" name="declarationInformation">申报信息</span>:' +
+                                '<span class="font-weight-400 i18n" name="declarationInformation">Declaration Information</span>:' +
                                 '<span class="BackFaultReportInfo margin-left-1">'+ data[i].submit_info +'</span>' +
                                 '</p>' +
                                 '<p>' +
-                                '<span class="font-weight-400 i18n" name="currentProgress">当前进度</span>:' +
+                                '<span class="font-weight-400 i18n" name="currentProgress">Current Progress</span>:' +
                                 '<span class="i18n margin-left-1" name="'+ log_status +'"></span>' +
                                 '</p>' +
                                 '<p>' +
-                                '<span class="font-weight-400 i18n" name="processingTime">处理时间</span>:' +
+                                '<span class="font-weight-400 i18n" name="processingTime">Processing Time</span>:' +
                                 '<span class="margin-left-1">'+ data[i].deal_time +'</span>' +
                                 '</p>' +
                                 '<p>' +
-                                '<span class="font-weight-400 i18n" name="processor">处理人</span>' +
+                                '<span class="font-weight-400 i18n" name="processor">Processing person</span>' +
                                 '<span class="margin-left-1">'+ data[i].deal_name +'</span>' +
                                 '</p>' +
                                 '<p>' +
-                                '<span class="font-weight-400 i18n" name="processingOpinions">处理意见</span>:' +
+                                '<span class="font-weight-400 i18n" name="processingOpinions">Processing opinions</span>:' +
                                 '<span class="margin-left-1">'+ data[i].deal_info +'</span>' +
                                 '</p>' +
                                 '</li>';
@@ -90,7 +90,7 @@ $(function () {
 
     GetFaultReportFun();
 
-    //判断在什么设备打开
+    //Determine what device is on
     var end_type = GetUserAgent();
 
     var sub_id = 'us';

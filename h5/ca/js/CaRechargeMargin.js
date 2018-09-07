@@ -1,9 +1,9 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('ca_token');
     GetCaAccount();
 
-    //充值保证金
+    //Recharge deposit
     $('.rechargeMarginBtn').click(function () {
         var base_amount = $('#rechargeMargin').val();
         RechargeManage(token, base_amount, function (response) {
@@ -18,7 +18,7 @@ $(function () {
         })
     });
 
-    //复制地址
+    //copy address
     $('.copy_address').click(function(){
         new ClipboardJS('.copy_address');
         LayerFun('copySuccess');

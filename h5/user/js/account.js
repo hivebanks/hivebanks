@@ -2,7 +2,7 @@ $(function () {
     // token
     var token = GetCookie('user_token');
 
-    // 用户基本信息
+    // Basic user information
     var base_amount = '';
     UserInformation(token, function (response) {
         if (response.errcode == '0') {
@@ -27,7 +27,7 @@ $(function () {
         }
     });
 
-    //提现
+    //withdraw
     $('.withdrawBtn, .navWithdraw').click(function () {
         if (base_amount <= 0) {
             $('#noBalanceModal').modal('show');
@@ -36,7 +36,7 @@ $(function () {
         window.location.href = "withdraw.html";
     });
 
-    //修改昵称
+    //change username
     $('.modifyNameBtn').click(function () {
         var us_account = $('#nickName').val();
         if (us_account.length <= 0) {
@@ -59,7 +59,7 @@ $(function () {
     });
 
     var limit = 10, offset = 0, n = 0, type = '2';
-    //交易状态
+    //trading status
     TradingStatus(token, limit, offset, type, function (response) {
         if (response.errcode == '0') {
 
@@ -68,7 +68,7 @@ $(function () {
         // GetErrorCode(response.errcode);
     });
 
-    //账户变动记录
+    //Account change record
     var account_change_url = 'log_balance.php';
 
     function GetAccountChange(token, limit, offset, account_change_url) {
@@ -105,7 +105,7 @@ $(function () {
     };
     GetAccountChange(token, limit, offset, account_change_url);
 
-    //    分页
+    //    Pagination
     function Page(pageCount) {
         $('.account_log_code').pagination({
             pageCount: pageCount,

@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetUsCookie('user_token');
     GetUsAccount();
 
@@ -34,7 +34,7 @@ $(function () {
         return;
     });
 
-    //锁定充值金额
+    //lockRechargeAmount
     var card_nm = '', name = '', bit_amount = '', base_amount = '';
     $('.lockAmountBtn').click(function () {
             bit_amount = $('.bit_amount').val();

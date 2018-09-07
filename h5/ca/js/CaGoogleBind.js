@@ -1,5 +1,5 @@
 $(function () {
-    //获取用户token
+    //get user token
     var token = GetCookie('ca_token');
     GetCaAccount();
 
@@ -30,7 +30,7 @@ $(function () {
         })
     });
 
-    //查看流程
+    //View process
     $('.lookBtn').click(function () {
         $('.circuit').show('fast');
         return;

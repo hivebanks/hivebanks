@@ -70,14 +70,14 @@ $(function () {
         // console.log(response);
     });
 
-    //设置时间
+    //Set time
     $('#effectiveTime').datetimepicker({
         format: 'Y/m/d H:i',
         value: new Date(),
-        minDate: new Date(),//设置最小日期
-        minTime: new Date(),//设置最小时间
-        yearStart: 2018,//设置最小年份
-        yearEnd: 2050 //设置最大年份
+        minDate: new Date(),//Set minimum date
+        minTime: new Date(),//Set minimum time
+        yearStart: 2018,//Set the minimum year
+        yearEnd: 2050 //Set the maximum year
     });
 
     //获取添加的黑名单列表
@@ -165,13 +165,13 @@ $(function () {
         })
     });
 
-    //设置时间
+    //Set time
     $('#effectiveTime').datetimepicker({
         format: 'Y/m/d H:i',
         value: new Date(),
-        minDate: new Date(),//设置最小日期
-        minTime: new Date(),//设置最小时间
-        yearStart: 2018,//设置最小年份
-        yearEnd: 2050 //设置最大年份
+        minDate: new Date(),//Set minimum date
+        minTime: new Date(),//Set minimum time
+        yearStart: 2018,//Set the minimum year
+        yearEnd: 2050 //Set the maximum year
     });
 });

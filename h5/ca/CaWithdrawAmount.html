@@ -17,7 +17,7 @@
 <!-- loading -->
 <iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
         scrolling="no"></iframe>
-<!--导航-->
+<!--nav-->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -47,7 +47,7 @@
         </div>
     </div>
 </nav>
-<!--安全提示信息-->
+<!--Security message-->
 <section class="msg">
     <div class="container">
         <div class="row msg-row">
@@ -72,7 +72,7 @@
     </div>
 </section>
 
-<!--面包屑-->
+<!--Bread crumbs-->
 <div class="container margin-top-1">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -105,7 +105,7 @@
                 <!--<h5 class="parities phoneTitle"></h5>-->
                 <div class="baInfoBox">
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="currRate">当前汇率</span>:
+                        <span class="i18n" name="currRate">Current Exchange Rate</span>:
                         <span class="curr_withdraw_rate">
                             1<span class="base_type"></span>=
                             <span class="base_rate"></span>
@@ -113,18 +113,18 @@
                         </span>
                     </p>
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="withdrawMaxAmount">提现最大额度</span>:
+                        <span class="i18n" name="withdrawMaxAmount">Maximum Withdrawal Amount</span>:
                         <span class="withdraw_max_amount"></span>
                         <span class="base_type"></span>
                     </p>
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="withdrawMinAmount">提现最小额度</span>:
+                        <span class="i18n" name="withdrawMinAmount">Minimum Withdrawal Amount</span>:
                         <span class="withdraw_min_amount"></span>
                         <span class="base_type"></span>
                     </p>
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="effectiveTime">有效汇率时间</span>:
-                        <span class="withdraw_ctime">2018/7/7 12:00</span>
+                        <span class="i18n" name="effectiveTime">Effective Time</span>:
+                        <span class="withdraw_ctime"></span>
                     </p>
                 </div>
             </div>
@@ -132,13 +132,13 @@
 
         <div class="row">
             <div class="col col-md-12 col-sm-12">
-                <label for="payAmount" class="payAmount i18n" name="withdrawAmount">提现金额</label>
+                <label for="payAmount" class="payAmount i18n" name="withdrawAmount">Locked Up Cash Amount</label>
                 <div class="flex center rechargeInfoRow">
                     <div class="form-group">
                         <div class="input-group">
                             <input id="payAmount" type="text"
                                    class="form-control base_amount_input rechargeInput font-size-14">
-                            <span class="pay_bit_type margin-left-1 font-weight-400 base_type input-group-addon">BTC</span>
+                            <span class="pay_bit_type margin-left-1 font-weight-400 base_type input-group-addon"></span>
                         </div>
                     </div>
                     <span class="icon margin-left-1 margin-right-1"><i class="iconfont icon-transfer"></i></span>
@@ -146,17 +146,17 @@
                         <div class="input-group">
                             <input type="text" id="withdrawAmount"
                                    class="form-control bit_amount_input rechargeInputSum chg_amount font-size-14">
-                            <span class="margin-left-1 font-weight-400 bit_type input-group-addon ca_currency">CNY</span>
+                            <span class="margin-left-1 font-weight-400 bit_type input-group-addon ca_currency"></span>
                         </div>
                     </div>
                 </div>
                 <div>
                     <p class="font-size-14 margin-top-1">
-                        <span>账户余额</span>:
+                        <span class="i18n" name="accountBalance">accountBalance</span>:
                         <span class="base_amount"></span>
-                        <span class="base_type">BTC</span>
-                        <a href="javascript:;" class="allWithdraw">全部提现</a>
-                        <a href="javascript:;" class="ty-color no_base_amount none">余额不足</a>
+                        <span class="base_type"></span>
+                        <a href="javascript:;" class="allWithdraw i18n" name="allWithdraw">allWithdraw</a>
+                        <a href="javascript:;" class="ty-color no_base_amount none">Insufficient balance</a>
                     </p>
                 </div>
             </div>
@@ -165,7 +165,7 @@
         <div class="row margin-top-2 margin-bottom-2">
             <div class="col-md-6 col-sm-12">
                 <div class="">
-                    <p>选择提现地址</p>
+                    <p class="i18n" name="chooseWithdrawAddress">chooseWithdrawAddress</p>
                     <select class="selectAddress us_account_id form-control">
 
                     </select>
@@ -176,9 +176,9 @@
         <div class="row">
             <div class="col col-md-12 col-sm-12">
                 <a class="btn btn-success lockAmountBtn margin-bottom-2 i18n" data-toggle="modal"
-                   name="lockRechargeAmount">锁定充值金额</a>
-                <p class="font-size-12">(<span class="ty-color i18n" name="transferBefore">转账之前,务必进行此操作</span> <span
-                        class="i18n" name="lockAfter">对订单进行锁定后，无法手动取消</span>)</p>
+                   name="lockRechargeAmount">Lock The Amount Of Recharge</a>
+                <p class="font-size-12">(<span class="ty-color i18n" name="transferBefore">Be sure to do this before transferring funds,</span> <span
+                        class="i18n" name="lockAfter">After the order is locked, it cannot be canceled manually</span>)</p>
             </div>
         </div>
         <!--<div class="hint">-->
@@ -201,26 +201,23 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                <h4 class="modal-title pcTitle i18n" name="beforeConfirm">确认前请认真阅读</h4>
-                <h4 class="modal-title phoneTitle i18n" name="beforeConfirm">确认前请认真阅读</h4>
+                <h4 class="modal-title pcTitle i18n" name="beforeConfirm">Please read carefully before you confirm</h4>
+                <h4 class="modal-title phoneTitle i18n" name="beforeConfirm">Please read carefully before you confirm</h4>
             </div>
             <div class="modal-body">
                 <div class="confirmReadingBox">
-                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsOne">1
-                        锁定充值金额后请务必在30分钟内支付完成。</p>
-                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsTwo">2
-                        如果没有在规定时间内完成充值交易，您的信誉度将会收到影响，系统将会记录为您的不良信誉记录。</p>
-                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsThree">3
-                        多次出现不良信誉记录，您的后期交易操作将会受到限制。</p>
+                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsOne">1, After locking the recharge amount, be sure to pay within 30 minutes.</p>
+                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsTwo">2, If you do not complete the recharge transaction within the specified time, your credit will be affected and the system will record your bad credit record.</p>
+                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsThree">3, Your late trading operation will be restricted due to multiple bad credit records.</p>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" disabled class="btn btn-success i18n width-100 ruleBtn" name="enable">确定</button>
+                <button type="button" disabled class="btn btn-success i18n width-100 ruleBtn" name="determine">determine</button>
             </div>
         </div>
     </div>
 </div>
-<!--页脚-->
+<!--footer-->
 <section class="sections footer">
     <div class="container">
 

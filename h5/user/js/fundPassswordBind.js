@@ -1,35 +1,35 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取图形验证码
+    //Get graphic verification code
     GetImgCode();
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '4', $this = $(this), cfm_code = $('#phoneCfmCode').val();
-        if(cfm_code <= 0){
+        if (cfm_code <= 0) {
             LayerFun('pleaseImgCode');
             return;
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
-    //获取url参数
+    //Get url parameter
     var wi_funPass = GetQueryString('wi_funPass');
 
-    //获取绑定信息
+    //Get binding information
     BindingInformation(token, function (response) {
-        if(response.errcode == '0'){
+        if (response.errcode == '0') {
             var data = response.rows, cellphone = "";
             $.each(data, function (i, val) {
-                if(data[i].bind_name == 'cellphone' &&  data[i].bind_flag == '1'){
+                if (data[i].bind_name == 'cellphone' && data[i].bind_flag == '1') {
                     cellphone = data[i].bind_name;
                     return;
                 }
             });
-            if(cellphone != "cellphone"){
+            if (cellphone != "cellphone") {
                 $("#goBindCellPhone").modal('show');
             }
         }
@@ -38,10 +38,10 @@ $(function () {
         return;
     });
 
-    //绑定资金密码
+    //Binding fund password
     $('.fundPasswordEnable').click(function () {
         var hash_type = 'pass_hash',
-            // 获取国家代码
+            // Get country code
             country_code = $('.selected-dial-code').text().split("+")[1],
             phone = country_code + '-' + $('#phone').val(),
             phoneCode = $('#phoneCode').val(),
@@ -67,7 +67,7 @@ $(function () {
             LayerFun('passNotEmpty');
             return;
         }
-        //hash资金密码绑定
+        //hashFund password binding
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {

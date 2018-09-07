@@ -1,6 +1,6 @@
 $(function(){
     GetUsAccount();
-    // 转入/转出记录
+    // Transfer in/out record
     var token = GetCookie('user_token'),
     limit = 0,offset = 5,
     trans_api_url = 'log_balance.php',
@@ -8,7 +8,7 @@ $(function(){
     AllRecord(token,limit,offset,trans_api_url,function (response){
         if(response.errcode == '0'){
             var data = response.rows;
-            // 循环结果进行筛选
+            // Cycle results for screening
             $.each(data,function (i,val){
                 if(data[i].chg_type == 'us_in' || data[i].chg_type == 'us_out'){
                     us_in_out_arr.push($(this)[0]);
@@ -32,17 +32,5 @@ $(function(){
             window.location.href = 'login.html';
         }
     });
-
-
-
-
-
-
-
-
-
-
-
-
     $("#payNumber").val("622021718011398167")
 });

@@ -1,8 +1,8 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('la_token');
 
-    //获取申报列表
+    //Get the declaration list
     var limit = 0, offset = 10;
 
     function GetDeclareListFun(is_deal) {

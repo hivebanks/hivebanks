@@ -1,9 +1,9 @@
 $(function () {
-   //获取用户token
+   //token
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取添加的银行列表
+    //Get the list of added banks
     GetBankList(token, function (response) {
         if(response.errcode == '0'){
             var data = response.rows, li = '';
@@ -25,13 +25,14 @@ $(function () {
         GetErrorCode(response.errcode);
     });
 
-    //选择银行卡类型
+    //Select bank card type
     $(document).on('click', '.bankTypeBox li', function(){
         $(this).addClass('border').siblings().removeClass('border').siblings().find('.icon-duihao').hide();
         $(this).find('.icon-duihao').show();
         $('.next').show();
         var imgHtml = $(this).find('img').attr('src');
-        //选择代理方式下一步操作
+
+        //Select proxy mode next step
         $('.next').click(function(){
             window.location.href = 'addBankInfo.html?img=' + encodeURIComponent(imgHtml);
         })

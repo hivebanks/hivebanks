@@ -1,18 +1,18 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetUsCookie('user_token');
     var us_level = GetUsCookie('us_level');
     GetUsAccount();
 
-    //获取us_id
+    //get us_id
     var us_id = GetUsCookie('us_id');
 
-    //获取参数
+    //Get parameters
     var bit_type = GetUsCookie('re_bit_type');
 
     $('.bit_type').text(bit_type);
 
-    //选择ba
+    //choose ba
     var api_url = 'assign_recharge_ba.php', ba_id = '', bit_type = bit_type, base_rate='', min_amount='', max_amount='';
     GetBaItem(api_url, token, bit_type, function (response) {
         if (response.errcode == '0') {
@@ -38,8 +38,7 @@ $(function () {
         return;
     });
 
-    //绑定输入框
-
+    //bind input
     $('.bit_amount').bind('input porpertychange', function () {
         if(base_rate <= 0){
             $('.base_amount').val(0);
@@ -55,7 +54,7 @@ $(function () {
         }
     });
 
-    //锁定充值金额（客户充值请求）
+    //lockRechargeAmount（Customer recharge request）
     $('.lockAmountBtn').click(function () {
         var base_amount = $('.base_amount').val(),
             bit_amount = $('.bit_amount').val();
@@ -67,7 +66,7 @@ $(function () {
             LayerFun('notLagAmount');
             return;
         }
-        //锁定判断
+        //Lock judgment
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
         LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, function (response){//锁定

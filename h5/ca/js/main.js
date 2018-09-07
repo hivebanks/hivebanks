@@ -14,11 +14,11 @@ $(function () {
     var time = new Date().toLocaleString('chinese', {hour12: false});
     $(".time").text(time);
 
-// 图标链接
+// Icon link
     var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
     link.appendTo($('head')[0]);
 
-// 密码强度验证
+// Password strength verification
     $('#emailPass').keyup(function () {
         $('.email-pw-strength').css('display', 'block');
         var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
@@ -30,28 +30,28 @@ $(function () {
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass(' pw-defule');
-            //密码小于六位的时候，密码强度图片都为灰色
+            //When the password is less than six digits, the password strength picture is gray.
         }
         else if (strongRegex.test($(this).val())) {
             $('.emailRegisterBox #emailLevel').removeClass('pw-weak');
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass(' pw-strong');
-            //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强
+            //The password is eight or more and the alphanumeric special characters are included, the strongest
         }
         else if (mediumRegex.test($(this).val())) {
             $('.emailRegisterBox #emailLevel').removeClass('pw-weak');
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass('pw-medium');
-            //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等
+            //The password is seven or more and there are two of the letters, numbers, and special characters. The intensity is medium.
         }
         else {
             $('.emailRegisterBox #emailLevel').removeClass('pw-weak');
             $('.emailRegisterBox #emailLevel').removeClass('pw-medium');
             $('.emailRegisterBox #emailLevel').removeClass('pw-strong');
             $('.emailRegisterBox #emailLevel').addClass('pw-weak');
-            //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的
+            //If the password is 6 or less, even if the letters, numbers, and special characters are included, the strength is weak.
         }
         return true;
     });
@@ -67,33 +67,33 @@ $(function () {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass(' pw-defule');
-            //密码小于六位的时候，密码强度图片都为灰色
+            //When the password is less than six digits, the password strength picture is gray.
         }
         else if (strongRegex.test($(this).val())) {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-weak');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass(' pw-strong');
-            //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强
+            //The password is eight or more and the alphanumeric special characters are included, the strongest
         }
         else if (mediumRegex.test($(this).val())) {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-weak');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass(' pw-medium');
-            //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等
+            //The password is seven or more and there are two of the letters, numbers, and special characters. The intensity is medium.
         }
         else {
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-weak');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-medium');
             $('.phoneRegisterBox #phoneLevel').removeClass('pw-strong');
             $('.phoneRegisterBox #phoneLevel').addClass('pw-weak');
-            //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的
+            //If the password is 6 or less, even if the letters, numbers, and special characters are included, the strength is weak.
         }
         return true;
     });
 
-//退出登录清楚cookie
+//Logout to clear cookies
     $('.logout').click(function () {
         DelCookie('ca_token');
         window.location.href = '../index.html'
@@ -124,7 +124,7 @@ function GetCaAccount (){
     $(".ca_account").text(ca_account);
 }
 
-//数据获取为空
+//Data acquisition is empty
 function GetDataEmpty(element, num) {
     var tr = '';
     tr = '<tr>' +
@@ -134,7 +134,7 @@ function GetDataEmpty(element, num) {
     return;
 }
 
-//数据获取失败
+//Data acquisition failed
 function GetDataFail(element, num) {
     var tr = '';
     tr = '<tr>' +
@@ -143,22 +143,22 @@ function GetDataFail(element, num) {
     $('#' + element).html(tr);
 }
 
-//格式化金额
+//Formatted amount
 function fmoney(s, n) {
     n = n > 0 && n <= 20 ? n : 2;
-    s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";//更改这里n数也可确定要保留的小数位
+    s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";//Change the number of n here to determine the decimal place to keep.
     var l = s.split(".")[0].split("").reverse(),
         r = s.split(".")[1];
     var t = "";
     for (var i = 0; i < l.length; i++) {
         t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? "," : "");
     }
-    return t.split("").reverse().join("") + "." + r.substring(0, 2);//保留2位小数  如果要改动 把substring 最后一位数改动就可
+    return t.split("").reverse().join("") + "." + r.substring(0, 2);//Keep 2 decimal places. If you want to change, change the last digit of substring.
 };
 
-//获取手机验证码
+//Get phone verification code
 function GetPhoneCodeFun(bind_type, $this, cfm_code) {
-    //获取国家代码
+    //Get country code
     var country_code = $('.selected-dial-code').text().split("+")[1];
     var cellphone = $('#phone').val();
     if (cellphone == '') {
@@ -197,7 +197,7 @@ function setTime($this) {
     }, 1000);
 }
 
-//email地址
+//email address
 function EmailList() {
     var emailList = {
         'qq.com': 'http://mail.qq.com',

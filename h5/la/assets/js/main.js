@@ -1,5 +1,5 @@
 $(function () {
-    //导航切换样式
+    //nav切换样式
     $('#main-menu .waves-dark').click(function () {
         $(this).addClass('active-menu').parent().siblings().children('a').removeClass('active-menu');
         $(this).siblings('.nav-second-level').slideToggle();
@@ -9,7 +9,7 @@ $(function () {
         $(this).siblings('.nav-third-level').slideToggle('fast');
     });
 
-    //隐藏导航
+    //隐藏nav
     $(".dropdown-button").dropdown();
     $("#sideNav").click(function () {
         if ($(this).hasClass('closed')) {
@@ -25,7 +25,7 @@ $(function () {
     });
 });
 
-// 图标链接
+// Icon link
 var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
 link.appendTo($('head')[0]);
 
@@ -36,7 +36,7 @@ function LayerFun(type) {
 }
 
 /**
- * 初始化页面loading加载
+ * Initialization page loading loading
  * */
 window.onload = function () {
     if (document.readyState === 'complete') {
@@ -55,7 +55,7 @@ function GetLaNameCookie(name) {
 }
 $('.la_name').text(GetLaNameCookie('la_name'));
 
-//email地址
+//email address
 function EmailList() {
     var emailList = {
         'qq.com': 'http://mail.qq.com',
@@ -83,7 +83,7 @@ function EmailList() {
     return emailList;
 }
 
-//数据获取为空
+//Data acquisition is empty
 function GetDataEmpty(element, num) {
     var tr = '';
     tr = '<tr>' +
@@ -93,7 +93,7 @@ function GetDataEmpty(element, num) {
     return;
 }
 
-//数据获取失败
+//Data acquisition failed
 function GetDataFail(element, num) {
     var tr = '';
     tr = '<tr>' +

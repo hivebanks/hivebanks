@@ -1,14 +1,14 @@
-// 设置cookies函数
+// Set the cookies function
 function SetCookie(name, value) {
     var now = new Date();
     var time = now.getTime();
-    // 有效期2小时
+    // Valid for 2 hours
     time += 3600 * 1000 * 2;
     now.setTime(time);
     document.cookie = name + "=" + escape(value) + '; expires=' + now.toUTCString() + ';path=/';
 }
 
-// 取cookies函数
+// Take the cookies function
 function GetCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
@@ -18,7 +18,7 @@ function GetCookie(name) {
     }
 }
 
-// 取us_cookies函数
+// Take the us_cookies function
 function GetUsCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
@@ -28,7 +28,7 @@ function GetUsCookie(name) {
     }
 }
 
-// 删除cookie函数
+// Delete cookie function
 function DelCookie(name) {
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
@@ -36,7 +36,7 @@ function DelCookie(name) {
     if (cookieVal != null) document.cookie = name + "=" + cookieVal + ";expires=" + exp.toGMTString() + ';path=/';
 }
 
-// 取得URL参数
+// Get URL parameters
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
@@ -46,27 +46,27 @@ function GetQueryString(name) {
     // console.log(r);
 }
 
-// Email格式检查
+// Email format check
 function IsEmail(s) {
     var patrn = /^(?:\w+\.?)*\w+@(?:\w+\.)*\w+$/;
     return patrn.exec(s);
 }
 
 function getRootPath() {
-    //获取当前网址
+    //Get current URL
     var curWwwPath = window.document.location.href;
-    //获取主机地址之后的目录
+    //Get the directory after the host address
     var pathName = window.document.location.pathname;
     var pos = curWwwPath.indexOf(pathName);
-    //获取主机地址
+    //Get the host address
     var localhostPath = curWwwPath.substring(0, pos);
-    //获取带"/"的项目名
+    //Get the project name with "/"
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
     return localhostPath;
 }
 var url = getRootPath();
 
-//获取失败错误码提示
+//Get failed error code prompt
 function GetErrorCode(code) {
     $.getJSON( url+"/assets/json/errcode.json", function (response){
         $.each(response, function (i, val){
@@ -78,10 +78,10 @@ function GetErrorCode(code) {
     })
 }
 
-//获取配置文件
+//Get configuration file
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: url+"/assets/json/config_url.json",
+    url: url+"h5/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
@@ -102,7 +102,7 @@ $.ajax({
     }
 });
 
-// 调用API共通函数
+// Call API common function
 function CallApi(api_url, post_data, suc_func, error_func) {
 
     var api_site = config_api_url + '/api/ba/';
@@ -118,24 +118,24 @@ function CallApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 };
 
-// 调用USER API共通函数
+// Call the USER API common function
 function CallUserApi(api_url, post_data, suc_func, error_func) {
 
     var api_site = config_api_url + '/api/user/';
@@ -151,24 +151,24 @@ function CallUserApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 };
 
-// 调用la API注册函数
+// Call the la API registration function
 function CallLaApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/admin/';
     post_data = post_data || {};
@@ -181,24 +181,24 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 }
 
-//一般ba充值保证金la函数
+//General ba recharge margin la function
 function CallLaBase(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/base/';
     post_data = post_data || {};
@@ -211,31 +211,31 @@ function CallLaBase(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 }
 
-//获取图形验证码
+//Get graphic verification code
 function GetImgCode() {
     var src = config_api_url + '/api/inc/code.php';
     $('#email_imgCode').attr("src", src);
     $('#phone_imgCode').attr("src", src);
 }
 
-//获取代理类型
+//Get proxy type
 function GetAgentMode(suc_func, error_func) {
     var api_url = 'get_ba_bit_type.php',
         post_data = {
@@ -244,7 +244,7 @@ function GetAgentMode(suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
-//检查是否允许注册
+//Check if registration is allowed
 function RegisterSwitch(type, suc_func, error_func) {
     var api_url = 'reg_lock.php',
         post_data = {
@@ -253,7 +253,7 @@ function RegisterSwitch(type, suc_func, error_func) {
     CallLaApi(api_url, post_data, suc_func, error_func);
 }
 
-//邮箱注册
+//email registration
 function EmailRegister(email, pass_word, pass_word_hash, bit_type, suc_func, error_func) {
     var api_url = 'mst_reg_email.php',
         post_data = {
@@ -265,7 +265,7 @@ function EmailRegister(email, pass_word, pass_word_hash, bit_type, suc_func, err
     CallApi(api_url, post_data, suc_func, error_func)
 };
 
-//手机注册
+//Register your phone
 function PhoneRegister(country_code, cellphone, bit_type, pass_word, pass_word_hash, sms_code, suc_func, error_func) {
     var api_url = 'mst_reg_phone.php',
         post_data = {
@@ -278,7 +278,7 @@ function PhoneRegister(country_code, cellphone, bit_type, pass_word, pass_word_h
         };
     CallApi(api_url, post_data, suc_func, error_func);
 };
-//获取手机验证码
+//Get phone verification code
 function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func){
     var api_url = 'sms_send.php',
         post_data = {
@@ -289,7 +289,7 @@ function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, er
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }
-//邮箱登录
+//email login
 function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_email.php',
         post_data = {
@@ -300,7 +300,7 @@ function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//手机登录
+//Log in with phone
 function PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_phone.php',
         post_data = {
@@ -313,7 +313,7 @@ function PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code,
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//重置邮箱密码--获取验证码
+//Reset Email Password - Get Verification Code
 function GetEmailCode(email, suc_func, error_func) {
     var api_url = 'cfm_email_preform.php',
         post_data = {
@@ -322,7 +322,7 @@ function GetEmailCode(email, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
-// 重置密码(邮箱)
+// Reset password (mailbox)
 function ResetEmailPassword(email, cfm_code, pass_word_hash, suc_func, error_func) {
     var api_url = 'rst_pw_email.php',
         post_data = {
@@ -333,7 +333,7 @@ function ResetEmailPassword(email, cfm_code, pass_word_hash, suc_func, error_fun
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 重置密码(手机)
+// Reset password (phone)
 function ResetPhonePassword(country_code, cellphone, sms_code, pass_word_hash, suc_func, error_func) {
     var api_url = 'rst_pw_phone.php',
         post_data = {
@@ -345,7 +345,7 @@ function ResetPhonePassword(country_code, cellphone, sms_code, pass_word_hash, s
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ba基本信息
+//get ba base information
 function GetBasicInformation(token, suc_func, error_func) {
     var api_url = 'mst_info_base.php',
         post_data = {
@@ -354,7 +354,7 @@ function GetBasicInformation(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//一般ba充值保证金
+//General ba recharge deposit
 function RechargeManage(token, base_amount, suc_func, error_func) {
     var api_url = 'ba_recharge_quest.php',
         post_data = {
@@ -364,7 +364,7 @@ function RechargeManage(token, base_amount, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//一般ba提现保证金
+//General baWithdrawal margin
 function WithdrawManage(token, base_amount, fun_pass, suc_func, error_func) {
     var api_url = 'ba_withdraw_quest.php',
         post_data = {
@@ -375,7 +375,7 @@ function WithdrawManage(token, base_amount, fun_pass, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//修改ba昵称
+//modify ba nickname
 function ModifyNickName(token, ba_account, suc_func, error_func) {
     var api_url = 'alter_ba_account.php',
         post_data = {
@@ -385,7 +385,7 @@ function ModifyNickName(token, ba_account, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//获取ba绑定信息
+//get ba bind information
 function GetBindInformation(token, suc_func, error_func) {
     var api_url = 'mst_info_bind.php',
         post_data = {
@@ -394,7 +394,7 @@ function GetBindInformation(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//google绑定
+//Google binding
 function GoogleBind(token, email, suc_func, error_func) {
     var api_url = 'bnd_Google.php',
         post_data = {
@@ -404,7 +404,7 @@ function GoogleBind(token, email, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//google验证
+//Google verification
 function GoogleVerify(token, code, suc_func, error_func) {
     var api_url = 'cfm_Google.php',
         post_data = {
@@ -414,7 +414,7 @@ function GoogleVerify(token, code, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//文本绑定
+//Text binding
 function TextBind(token, text_type, text, text_hash, suc_func, error_func) {
     var api_url = 'bnd_text.php',
         post_data = {
@@ -427,7 +427,7 @@ function TextBind(token, text_type, text, text_hash, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 文本修改
+// Text modification
 function TextModify(token, text_type, text, text_hash, pass_word_hash, suc_func, error_func) {
     var api_url = 'change_text.php',
         post_data = {
@@ -449,7 +449,7 @@ function GetLaId(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 文件绑定
+// File binding
 function FileBind(token, file_type, file_url, suc_func, error_func) {
     var api_url = 'bnd_file.php',
         post_data = {
@@ -459,7 +459,7 @@ function FileBind(token, file_type, file_url, suc_func, error_func) {
     };
     CallApi(api_url, post_data, suc_func, error_func);
 }
-//HASH绑定
+//hash binding
 function Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, suc_func, error_func) {
     var api_url = 'bnd_hash.php',
         post_data = {
@@ -473,7 +473,7 @@ function Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, suc_func
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//账户变动记录/登录记录查询
+//Account change record/Login record query
 function ChangeCode(token, limit, offset, api_url, suc_func, error_func) {
     // var api_url = 'log_balance.php',
     var post_data = {
@@ -484,7 +484,7 @@ function ChangeCode(token, limit, offset, api_url, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取保证金充值地址GetMarginWithdrawAddress
+//Get Margin Recharge Address/GetMarginWithdrawAddress
 function GetMarginAddress(token, suc_func, error_func) {
     var api_url = 'get_bit_address_recharge.php',
         post_data = {
@@ -493,7 +493,7 @@ function GetMarginAddress(token, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//添加保证金充值地址
+//Add margin recharge address
 function AddMarginRechargeAddress(token, bit_address, suc_func, error_func) {
     var api_url = 'bit_address_recharge_add.php',
         post_data = {
@@ -503,7 +503,7 @@ function AddMarginRechargeAddress(token, bit_address, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//获取保证金提现地址
+//Get the margin withdrawal address
 function GetMarginWithdrawAddress(token, suc_func, error_func) {
     var api_url = 'get_bit_address_withdraw.php',
         post_data = {
@@ -512,7 +512,7 @@ function GetMarginWithdrawAddress(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//添加保证金提现地址
+//Add margin withdrawal address
 function AddMarginWithdrawAddress(token, bit_address, fun_pass, suc_func, error_func) {
     var api_url = 'bit_address_withdraw_add.php',
         post_data = {
@@ -523,7 +523,7 @@ function AddMarginWithdrawAddress(token, bit_address, fun_pass, suc_func, error_
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//保证金充值待处理列表
+//Margin recharge pending list
 function GetMarginRechargePending(token, type, suc_func, error_func) {
     var api_url = 'log_base_recharge.php',
         post_data = {
@@ -533,7 +533,7 @@ function GetMarginRechargePending(token, type, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//确认处理保证金充值
+//Confirm processing margin recharge
 function MarginRechargeConfirm(token, type, qa_id, suc_func, error_func) {
     var api_url = 'base_recharge_confirm.php',
         post_data = {
@@ -544,7 +544,7 @@ function MarginRechargeConfirm(token, type, qa_id, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//保证金充值已处理
+//Margin recharge has been processed
 function GetRechargeAlready(token, suc_func, error_func) {
     var api_url = '',
         post_data = {
@@ -553,7 +553,7 @@ function GetRechargeAlready(token, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//保证金提现待处理列表
+//Margin withdrawal pending list
 function GetMarginWithdrawPending(token, type, suc_func, error_func) {
     var api_url = 'log_base_withdraw.php',
         post_data = {
@@ -563,7 +563,7 @@ function GetMarginWithdrawPending(token, type, suc_func, error_func) {
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//确认处理保证金提现
+//Confirm processing margin withdrawal
 function MarginWithdrawConfirm(token, type, qa_id, transfer_tx_hash, suc_func, error_func) {
     var api_url = 'base_withdraw_confirm.php',
         post_data = {
@@ -575,7 +575,7 @@ function MarginWithdrawConfirm(token, type, qa_id, transfer_tx_hash, suc_func, e
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
-//登录记录查询
+//Login record query
 // function LoginRecordQuery(token, limit, offset, suc_func, error_func){
 //     var api_url = 'log_login.php',
 //         post_data = {
@@ -585,7 +585,7 @@ function MarginWithdrawConfirm(token, type, qa_id, transfer_tx_hash, suc_func, e
 //         };
 //     CallApi(api_url, post_data, suc_func, error_func);
 // };
-//充值汇率设定
+//Recharge exchange rate setting
 function rechargeRate(token, recharge_rate, recharge_min_amount, recharge_max_amount, limit_time, is_void, recharge_us_level, pass_word_hash, suc_func, error_func) {
     var api_url = 'set_recharge_rate.php',
         post_data = {
@@ -601,7 +601,7 @@ function rechargeRate(token, recharge_rate, recharge_min_amount, recharge_max_am
     CallApi(api_url, post_data, suc_func, error_func)
 };
 
-//获取充值汇率
+//Get recharge rate
 function GetRechargeRate(token, suc_func, error_func) {
     var api_url = 'get_recharge_rate.php',
         post_data = {
@@ -610,7 +610,7 @@ function GetRechargeRate(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//提现汇率设定
+//withtraw exchange rate setting
 function withdrawRate(token, withdraw_rate, withdraw_min_amount, withdraw_max_amount, limit_time, is_void, withdraw_us_level, pass_word_hash, suc_func, error_func) {
     var api_url = 'set_withdraw_rate.php',
         post_data = {
@@ -626,7 +626,7 @@ function withdrawRate(token, withdraw_rate, withdraw_min_amount, withdraw_max_am
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//获取提现汇率
+//Get the withdrawal rate
 function GetWithdrawRate(token, suc_func, error_func) {
     var api_url = 'get_withdraw_rate.php',
         post_data = {
@@ -635,7 +635,7 @@ function GetWithdrawRate(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//添加地址
+//add address
 function AddAddress(token, bit_address, is_void, suc_fun, error_fun) {
     var api_url = 'bit_address_add.php',
         post_data = {
@@ -646,7 +646,7 @@ function AddAddress(token, bit_address, is_void, suc_fun, error_fun) {
     CallApi(api_url, post_data, suc_fun, error_fun);
 }
 
-//获取添加的地址
+//Get the added address
 function QueryAddress(token, limit, offset, suc_func, error_func) {
     var api_url = 'get_ba_asset_bit_account.php',
         post_data = {
@@ -657,7 +657,7 @@ function QueryAddress(token, limit, offset, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//客户充值请求
+//Customer recharge request
 function RechargeQuest(token, ba_id, bit_type, bit_address, bit_amount, chg_amount, tx_hash, tx_id, suc_func, error_func) {
     var api_url = 'us_recharge_quest.php',
         post_data = {
@@ -673,7 +673,7 @@ function RechargeQuest(token, ba_id, bit_type, bit_address, bit_amount, chg_amou
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//客户提现请求
+//Customer withdrawal request
 function WithdrawQuest(token, ba_id, bit_type, bit_address, bit_amount, chg_amount, suc_func, error_func) {
     var api_url = 'us_withdraw_quest.php',
         post_data = {
@@ -687,7 +687,7 @@ function WithdrawQuest(token, ba_id, bit_type, bit_address, bit_amount, chg_amou
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//代理用户充值提现记录查询
+//Proxy user recharge withdrawal record query
 function RechargeWithdrawCodeQuery(token, api_url, type, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -696,7 +696,7 @@ function RechargeWithdrawCodeQuery(token, api_url, type, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//充值请求确认处理
+//Recharge request confirmation processing
 function RechargeConfirm(token, qa_id, type, suc_func, error_func) {
     var api_url = 'recharge_confirm.php',
         post_data = {
@@ -707,7 +707,7 @@ function RechargeConfirm(token, qa_id, type, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//提现请求确认处理
+//Withdrawal request confirmation processing
 function WithdrawConfirm(token, qa_id, type, transfer_tx_hash, suc_func, error_func) {
     var api_url = 'withdraw_confirm.php',
         post_data = {
@@ -719,7 +719,7 @@ function WithdrawConfirm(token, qa_id, type, transfer_tx_hash, suc_func, error_f
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ba
+//get ba
 function GetBaItem(api_url, token, bit_type, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -728,7 +728,7 @@ function GetBaItem(api_url, token, bit_type, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//锁定充值金额提交
+//Lock recharge amount submission
 function LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, suc_func, error_func) {
     var api_url = 'us_recharge_quest.php',
         post_data = {
@@ -742,7 +742,7 @@ function LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, s
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//锁定提现发送请求
+//Lock withdrawal request
 function LockWithdraw(token, ba_id, base_amount, bit_type, bit_amount, us_level, bit_address, suc_func, error_func) {
     var api_url = 'us_withdraw_quest.php',
         post_data = {
@@ -757,7 +757,7 @@ function LockWithdraw(token, ba_id, base_amount, bit_type, bit_amount, us_level,
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//登录失败倒计时
+//Login failure countdown
 function CountDown(count, ErrorNum, LoginBtn, input, LoginError) {
     var counts = count;
     if (counts != 0) {
@@ -779,7 +779,7 @@ function CountDown(count, ErrorNum, LoginBtn, input, LoginError) {
     }, 1000)
 };
 
-//获取手机验证码
+//Get phone verification code
 function BaGetPhoneCode(cellphone, country_code, bind_type, suc_func, error_func) {
     var api_url = 'sms_send.php',
         post_data = {
@@ -790,7 +790,7 @@ function BaGetPhoneCode(cellphone, country_code, bind_type, suc_func, error_func
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取user基本信息
+//get user base information
 function GetUserBaseInfo(token, suc_func, error_func) {
     var api_url = 'info_base.php',
         post_data = {
@@ -799,7 +799,7 @@ function GetUserBaseInfo(token, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//检查user绑定信息
+//check user bind information
 function CheckUserBindInfo(token, suc_func, error_func) {
     var api_url = 'info_bind.php',
         post_data = {
@@ -808,7 +808,7 @@ function CheckUserBindInfo(token, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//user添加提现地址
+//userAdd withdrawal address
 function ConfirmAddAddress(token, bit_type, bit_address, pass_word_hash, suc_func, error_func) {
     var api_url = 'bit_address_add.php',
     post_data = {
@@ -820,7 +820,7 @@ function ConfirmAddAddress(token, bit_type, bit_address, pass_word_hash, suc_fun
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//user提现订单详情
+//User withdrawal order details
 function GetWithdrawInfo(token, suc_func, error_func) {
     var api_url = 'order_ba_withdraw_list.php',
         post_data = {
@@ -829,7 +829,7 @@ function GetWithdrawInfo(token, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//验证资金密码
+//Verify the fund password
 function CfmFundPass(token, cfm_fundPass, suc_func, error_func) {
     var api_url = 'cfm_fundpass.php',
         post_data = {
@@ -839,7 +839,7 @@ function CfmFundPass(token, cfm_fundPass, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 };
 
-//验证手机短信码
+//Verify mobile phone SMS code
 function CfmPhone(sms_code, country_code, cellphone, suc_func, error_func) {
     var api_url = 'cfm_phone.php',
         post_data = {
@@ -850,24 +850,15 @@ function CfmPhone(sms_code, country_code, cellphone, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//下载订单
-
-// function Download(token, suc_func, error_func) {
-//     var api_url = 'transaction_order_download.php',
-//         post_data = {
-//             'token': token
-//         };
-//     CallDownloadApi(api_url, post_data, suc_func, error_func);
-// }
 /**
- * 禁用按钮
- * @param $this 按钮对象
- * @param btnText 按钮文本内容 默认为"处理中"
+ * Disable button
+ * @param $this Button object
+ * @param btnText Button text content defaults to "in process"
  * @return {boolean}
  */
 function DisableClick($this, btnText) {
     if (!$this) {
-        // console.warn("$this 不能为空");
+        // console.warn("$this Can not be empty");
         return true;
     }
     var status = Number($this.attr('data-clickStatus') || 1);
@@ -882,22 +873,22 @@ function DisableClick($this, btnText) {
 }
 
 /**
- * 激活按钮
- * @param $this 按钮对象
- * @param btnText 按钮文本内容 默认为"处理中"
+ * Activation button
+ * @param $this Button object
+ * @param btnText Button text content defaults to "in process"
  */
 function ActiveClick($this, btnText) {
     if (!$this) {
-        console.warn("$this 不能为空");
+        console.warn("$this Can not be empty");
         return;
     }
-    btnText = btnText ? btnText : "确认";
+    btnText = btnText ? btnText : "confirm";
     $this.attr('data-clickStatus', 1);
     $this.html(btnText);
 }
 
 /**
- * 初始化页面loading加载
+ * Initialization page loading loading
  * */
 window.onload = function () {
     if (document.readyState === 'complete') {

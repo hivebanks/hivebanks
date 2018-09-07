@@ -1,9 +1,9 @@
 $(function () {
-   //获取token
+   //get token
    var token = GetCookie('ba_token');
     GetBaAccount();
 
-    // 获取用户基本信息
+    // get Basic user information
     GetBasicInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -14,7 +14,7 @@ $(function () {
         return;
     });
 
-   //获取保证金提现待处理
+   //Get margin withdrawal pending
     var type = '1', tr = '';
     GetMarginWithdrawPending(token, type, function (response) {
         if(response.errcode == '0'){
@@ -46,7 +46,7 @@ $(function () {
         return;
     });
 
-    //确认处理保证金提现
+    //Confirm processing margin withdrawal
     $(document).on('click', '.confirmBtn', function () {
         var type = '1', qa_id = $(this).parents('.marginWithdrawItem').find('.qa_id').text(),
             transfer_tx_hash = $(this).parents('.marginWithdrawItem').find('.tradingHash').val();

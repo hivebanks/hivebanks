@@ -1,9 +1,9 @@
 $(function () {
-   //获取token
+   //get token
    var token = GetCookie('ba_token');
     GetBaAccount();
 
-    // 获取用户基本信息
+    // get Basic user information
     GetBasicInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -14,7 +14,7 @@ $(function () {
         return;
     });
 
-   //获取保证金充值待处理
+   //Get margin recharge pending
     var type = '1', tr = '';
     GetMarginRechargePending(token, type, function (response) {
         if(response.errcode == '0'){
@@ -45,7 +45,7 @@ $(function () {
         return;
     });
 
-    //确认处理保证金充值
+    //Confirm processing margin recharge
     $(document).on('click', '.confirmBtn', function () {
         var type = '1', qa_id = $(this).parents('.marginRechargeItem').find('.qa_id').text();
         var $this = $(this), btnText = $this.text();

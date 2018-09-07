@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('la_token');
 
     var api_url = 'kyc_user_list.php', tr = '';

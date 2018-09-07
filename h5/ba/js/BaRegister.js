@@ -1,5 +1,5 @@
 $(function () {
-    //是否允许注册
+    //Whether to allow registration
     var type = 'ba';
     RegisterSwitch(type, function (response) {
         if(response.errcode == '0'){
@@ -17,7 +17,7 @@ $(function () {
         return;
     });
 
-    //获取代理方式
+    //Get proxy mode
     GetAgentMode(function (response) {
         var li = '';
         if(response.errcode == '0'){
@@ -37,7 +37,8 @@ $(function () {
     }, function (response) {
 
     });
-    //选择代理方式
+
+    //Choose proxy mode
     $('.emailSelectInput').click(function(){
         $('.emailSelect').slideDown('fast');
     });
@@ -51,41 +52,41 @@ $(function () {
         GetImgCode();
     });
 
-    // 切换邮箱和手机注册
+    // Switch mailbox and mobile registration
     $('.registerToggle').click(function(){
         $(this).addClass('active').siblings().removeClass('active');
     });
-    // 切换邮箱注册
+    // Switch mailbox registration
     $('.emailRegister').click(function(){
         $('.phoneRegisterBox').fadeOut();
         $('.emailRegisterBox').fadeIn();
     });
-    // 切换手机注册
+    // Switch phone registration
     $('.phoneRegister').click(function(){
         $('.emailRegisterBox').fadeOut();
         $('.phoneRegisterBox').fadeIn();
     });
-    //邮箱选择代理商
+    //Mailbox selection agent
     $(document).on('click', '.emailSelect li', function(){
         $('.emailSelectInput').val($(this).text());
         $('.emailSelect').slideUp('fast');
     });
-    //手机选择代理商
+    //Phone selection agent
     $(document).on('click','.phoneSelect li', function(){
         $('.phoneSelectInput').val($(this).text());
         $('.phoneSelect').slideUp('fast');
     });
 
-    // 监听邮箱注册输入
+    // Monitor mailbox registration input
     //emailInput
     $('.email').blur(function () {
         var email = $('.email').val();
-        if (email.length <= 0) {//是否为空
+        if (email.length <= 0) {//Is it empty?
             $('.email_tips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else {
             $('.email_tips').fadeOut('fast');
         }
-        if (!IsEmail(email)) {//邮箱格式错误
+        if (!IsEmail(email)) {//Bad Mailbox Format
             $('.emailErrorTips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else {
             $('.emailErrorTips').fadeOut('fast');
@@ -95,7 +96,7 @@ $(function () {
     //emailPassInput
     $('#emailPass').blur(function () {
         var emailPass = $('#emailPass').val();
-        if (emailPass.length <= 0) {//是否为空
+        if (emailPass.length <= 0) {//Is it empty?
             $('.password_tips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else if (emailPass.length < 8) {
             $('.errEmailPass_tips').fadeIn('fast').siblings('span').fadeOut('fast');
@@ -108,7 +109,7 @@ $(function () {
     //againEmailPasswordInput
     $('.againEmailPassword').blur(function () {
         var againEmailPassword = $('.againEmailPassword').val();
-        if (againEmailPassword.length <= 0) {//是否为空
+        if (againEmailPassword.length <= 0) {//Is it empty?
             $('.emailAgainPassword_tips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else if (againEmailPassword != $('#emailPass').val()) {
             $('.emailSamePassword_tips').fadeIn('fast').siblings('span').fadeOut('fast');
@@ -118,7 +119,7 @@ $(function () {
         }
     });
 
-    // ========邮箱注册========
+    // ========email registration========
     var _email = '', emailList = '';
     $('.emailRegisterBtn').click(function () {
         var email = $('.email').val(),
@@ -165,7 +166,7 @@ $(function () {
                 $('.emailPassword').val('');
                 $('.againEmailPassword').val('');
                 $('.emailInvitCode').val('');
-                $('#registerSuccess').modal('show');//注册成功过显示提示
+                $('#registerSuccess').modal('show');//Registration successfully displayed prompt
             }
         }, function (response) {
             ActiveClick($this, btnText);
@@ -183,7 +184,7 @@ $(function () {
             return;
         });
     });
-    //前往邮箱验证
+    //Go to the mailbox to verify
     $('.goEmailBtn').click(function () {
         window.location.href = 'BaLogin.html';
         window.open(emailList[_email]);
@@ -259,7 +260,7 @@ $(function () {
         }
     });
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '1', $this = $(this), cfm_code = $('.phoneCfmCode').val();
         if (cfm_code.length <= 0) {
@@ -270,12 +271,12 @@ $(function () {
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
     /**
-     /* ========手机注册========
-     * 点击注册提交
+     /* ========Register your phone========
+     * Click to register to submit
      */
     $('.phoneRegisterBtn').click(function () {
         var country_code = $('.selected-dial-code').text().split("+")[1];
-        // 获取用户输入的内容---判断
+        // Get user input---判断
         var cellphone = $('.phone').val(),
             sms_code = $('.phoneSmsCode').val(),
             phoneCfmCode = $('.phoneCfmCode').val(),

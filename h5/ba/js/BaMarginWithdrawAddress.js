@@ -1,5 +1,5 @@
 $(function () {
-//    //获取token
+//    //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
 //
@@ -7,7 +7,7 @@ $(function () {
 //     $('#phone_imgCode').click(function () {
 //         GetImgCode();
 //     });
-//     //获取手机验证码
+//     //Get phone verification code
 //     $('.phoneCodeBtn').click(function () {
 //         var bind_type = '5', $this = $(this), cfm_code = $('#phoneCfmCode').val();
 //         if(cfm_code <= 0){
@@ -44,7 +44,7 @@ $(function () {
     }
     GetWithdrawFun();
 
-    //添加提现地址
+    //Add withdrawal address
     $('.addWithdrawAddressBtn').click(function () {
         var bit_address = $('#withdrawAddress').val(), fun_pass = $('#fundPassword').val();
         if(bit_address.length <= 0){
@@ -65,6 +65,4 @@ $(function () {
             GetErrorCode(response.errcode);
         })
     })
-//
-//
 });

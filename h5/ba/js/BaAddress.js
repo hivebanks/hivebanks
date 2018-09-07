@@ -1,8 +1,9 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
-    //获取添加的地址
+
+    //Get the added address
     var limit = 10, offset = 0, n = 0;
 
     function GetAddress(token, limit, offset) {
@@ -45,7 +46,7 @@ $(function () {
 
     GetAddress(token, limit, offset);
 
-    //    分页
+    //    Pagination
     function Page(pageCount) {
         $('.address_code').pagination({
             pageCount: pageCount,
@@ -57,7 +58,7 @@ $(function () {
         });
     }
 
-    //添加充值地址
+    //Add recharge address
     $('#confirmAddAddressBtn').click(function () {
         var bit_address = $('.addressInput').val().trim(), is_void = '1';
         if (bit_address.length <= 0) {
@@ -67,7 +68,7 @@ $(function () {
             if (response.errcode == '0') {
                 $('.addressInput').val('');
                 GetAddress(token, limit, offset);
-                layer.msg('<p class="addAddressSuccess i18n" name="addAddressSuccess">添加成功</p>');
+                layer.msg('<p class="addAddressSuccess i18n" name="addAddressSuccess">addAddressSuccess</p>');
                 execI18n();
             }
         }, function (response) {
@@ -76,17 +77,17 @@ $(function () {
         });
     });
 
-    //显示添加地址框
+    //Show add address box
     $('.addAddressBtn').click(function () {
         $('.addAddressInputBox').fadeToggle('fast');
     });
 
-    //上传文件
-    //获取配置文件
+    //upload files
+    //Get configuration file
     var url = getRootPath();
     var config_api_url = '';
     $.ajax({
-        url: url+"/assets/json/config_url.json",
+        url: url + "h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -100,15 +101,15 @@ $(function () {
     });
 
     $('#file').on('change', function () {
-       $('#fileText').text($(this).val())
+        $('#fileText').text($(this).val())
     });
     $('.uploadFileBtn').click(function () {
         var file = $('#file').val(), name = file.substr(file.indexOf('.'));
-        if(file == ''){
+        if (file == '') {
             LayerFun('pleaseSelectFile');
             return;
         }
-        if(name != '.csv'){
+        if (name != '.csv') {
             LayerFun('uploadCsv');
             return;
         }
@@ -120,17 +121,17 @@ $(function () {
             type: 'POST',
             url: config_api_url + '/api/ba/upload_ba_bit_address_csv.php',
             data: formData,
-            cache:false,
-            processData:false,
-            contentType:false,
-            enctype:'multipart/form-data',
+            cache: false,
+            processData: false,
+            contentType: false,
+            enctype: 'multipart/form-data',
             success: function (data) {
                 GetAddress(token, limit, offset);
-                if(data.errcode == '0'){
+                if (data.errcode == '0') {
                     LayerFun('addAddressSuccess');
                     return;
                 }
-                if(data.errcode == '1'){
+                if (data.errcode == '1') {
                     LayerFun('duplicateAddress');
                     return;
                 }

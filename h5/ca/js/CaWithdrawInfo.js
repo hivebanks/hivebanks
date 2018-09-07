@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('user_token');
     GetUsAccount();
     GetWithdrawInfo(token, function (response) {

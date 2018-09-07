@@ -7,7 +7,7 @@ $(function () {
     $('#phone_imgCode').click(function () {
         GetImgCode();
     });
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '4', $this = $(this), cfm_code = $('#phoneCfmCode').val();
         if(cfm_code <= 0){
@@ -18,7 +18,7 @@ $(function () {
     });
 
     $('.phoneEnable').click(function () {
-        // 获取国家代码
+        // Get country code
         var country_code = $('.selected-dial-code').text().split("+")[1];
         var text_type = '4',
             phone = $('#phone').val(),

@@ -3,7 +3,7 @@ $(function () {
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取添加的银行卡列表
+    //Get the list of added bank cards
     GetAddBankList(token, function (response) {
         if(response.errcode == '0'){
             var data =response.rows, tr = '';
@@ -18,7 +18,7 @@ $(function () {
                     '<td>'+ data[i].lgl_address.idNum +'</td>' +
                     '<td>'+ data[i].ctime +'</td>' +
                     '<td>' +
-                    '<a href="javascript:;" class="delete btn btn-success btn-sm i18n" name="delete">删除</a>' +
+                    '<a href="javascript:;" class="delete btn btn-success btn-sm i18n" name="delete">delete</a>' +
                     '<span class="none account_id">'+ data[i].account_id +'</span>' +
                     '</td>' +
                     '</tr>'
@@ -36,7 +36,7 @@ $(function () {
         return;
     });
 
-    //删除绑定的银行卡
+    //Delete the bound bank card
     $(document).on('click', '.delete', function () {
         var _this = $(this), btnText = $(this).text();
         var account_id = $(this).parents('.bankItem').find('.account_id').text();

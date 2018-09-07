@@ -1,17 +1,17 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
 
-    //获取图形验证码
+    //Get graphic verification code
     GetImgCode();
 
-    //    切换验证码
+    //    Switch verification code
     $('#email_imgCode, #phone_imgCode').click(function () {
         GetImgCode();
     });
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
         if ($('.phoneCfmCode').val().length <= 0) {
@@ -21,7 +21,7 @@ $(function () {
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
-    //提现保证金
+    //Withdrawal margin
     $('.withdrawManageBtn').click(function () {
         var base_amount = $('#withdrawMargin').val(), fun_pass = $('#funPassword').val();
         WithdrawManage(token, base_amount, fun_pass, function (response) {

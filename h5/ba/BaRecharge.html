@@ -17,7 +17,7 @@
 <!-- loading -->
 <iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
         scrolling="no"></iframe>
-<!--导航-->
+<!--nav-->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -47,7 +47,7 @@
         </div>
     </div>
 </nav>
-<!--安全提示信息-->
+<!--Security message-->
 <section class="msg">
     <div class="container">
         <div class="row msg-row">
@@ -72,7 +72,7 @@
     </div>
 </section>
 
-<!--面包屑-->
+<!--Bread crumbs-->
 <div class="container margin-top-1">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -84,7 +84,7 @@
         </div>
     </div>
 </div>
-<!--充值详情-->
+<!--Recharge details-->
 <section class="sections section-top-2">
     <div class="container">
         <div class="row">
@@ -100,7 +100,7 @@
                 <!--<h5 class="parities phoneTitle"></h5>-->
                 <div class="baInfoBox">
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="currRate">当前汇率</span>:
+                        <span class="i18n" name="currRate">Current Exchange Rate</span>:
                         <span class="curr_recharge_rate">
                             1<span class="base_type"></span>=
                             <span class="base_rate"></span>
@@ -108,17 +108,17 @@
                         </span>
                     </p>
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="rechargeMaxAmount">充值最大额度</span>:
+                        <span class="i18n" name="rechargeMaxAmount">rechargeMaxAmount</span>:
                         <span class="recharge_max_amount"></span>
                         <span class="bit_type"></span>
                     </p>
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="rechargeMinAmount">充值最小额度</span>:
+                        <span class="i18n" name="rechargeMinAmount">rechargeMinAmount</span>:
                         <span class="recharge_min_amount">10</span>
                         <span class="bit_type"></span>
                     </p>
                     <p class="font-size-14 font-weight-400">
-                        <span class="i18n" name="effectiveTime">有效汇率时间</span>:
+                        <span class="i18n" name="effectiveTime">effectiveTime</span>:
                         <span class="recharge_ctime">2018/7/7 12:00</span>
                     </p>
                 </div>
@@ -126,7 +126,7 @@
         </div>
         <div class="row">
             <div class="col col-md-12 col-sm-12">
-                <label for="payAmount" class="payAmount i18n" name="rechargeAmount">充值金额</label>
+                <label for="payAmount" class="payAmount i18n" name="rechargeAmount">Recharge Amounts</label>
                 <div class="flex center rechargeInfoRow">
                     <div class="form-group">
                         <div class="input-group">
@@ -150,10 +150,10 @@
         <div class="row">
             <div class="col col-md-4 col-sm-12">
                 <a class="btn btn-success lockAmountBtn margin-bottom-2 margin-top-5 i18n" data-toggle="modal"
-                   name="lockRechargeAmount">锁定充值金额</a>
+                   name="lockRechargeAmount">lockRechargeAmount</a>
                 <p class="font-size-12">(<span class="ty-color i18n font-size-12"
-                                               name="transferBefore">转账之前,务必进行此操作</span> <span class="i18n font-size-12"
-                                                                                               name="lockAfter">对订单进行锁定后，无法手动取消</span>)
+                                               name="transferBefore">Be sure to do this before transferring funds,</span> <span class="i18n font-size-12"
+                                                                                               name="lockAfter">After the order is locked, it cannot be canceled manually</span>)
                 </p>
             </div>
         </div>
@@ -177,26 +177,23 @@
         <div class="modal-content">
             <div class="modal-header">
                 <!--<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>-->
-                <h4 class="modal-title pcTitle i18n" name="beforeConfirm">确认前请认真阅读</h4>
-                <h4 class="modal-title phoneTitle i18n" name="beforeConfirm">确认前请认真阅读</h4>
+                <h4 class="modal-title pcTitle i18n" name="beforeConfirm">Please read carefully before you confirm</h4>
+                <h4 class="modal-title phoneTitle i18n" name="beforeConfirm">Please read carefully before you confirm</h4>
             </div>
             <div class="modal-body">
                 <div class="confirmReadingBox">
-                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsOne">1
-                        锁定充值金额后请务必在30分钟内支付完成。</p>
-                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsTwo">2
-                        如果没有在规定时间内完成充值交易，您的信誉度将会收到影响，系统将会记录为您的不良信誉记录。</p>
-                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsThree">3
-                        多次出现不良信誉记录，您的后期交易操作将会受到限制。</p>
+                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsOne">1, After locking the recharge amount, be sure to pay within 30 minutes.</p>
+                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsTwo">2, If you do not complete the recharge transaction within the specified time, your credit will be affected and the system will record your bad credit record.</p>
+                    <p class="font-size-14 line-height-2 phone-font-size-12 i18n" name="lockTipsThree">3, Your late trading operation will be restricted due to multiple bad credit records.</p>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" disabled class="btn btn-success i18n width-100 ruleBtn" name="enable">确定</button>
+                <button type="button" disabled class="btn btn-success i18n width-100 ruleBtn" name="determine">determine</button>
             </div>
         </div>
     </div>
 </div>
-<!--页脚-->
+<!--footer-->
 <section class="sections footer">
     <div class="container">
 

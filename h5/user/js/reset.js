@@ -1,56 +1,59 @@
 $(function () {
-    //获取图形验证码
+    //Get graphic verification code
     GetImgCode();
-    //    切换验证码
+    //    Switch verification code
     $('#phone_imgCode').click(function () {
         GetImgCode();
     });
 
-    // 切换邮箱和手机重置密码
+    // Switch mailbox and phone reset password
     $('.resetToggle').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
-    // 切换邮箱密码重置
+
+    // Switch mailbox password reset
     $('.emailReset').click(function () {
         $('.phoneResetBox').fadeOut();
         $('.emailResetBox').fadeIn();
     });
-    // 切换手机密码重置
+
+    // Switch phone password reset
     $('.phoneReset').click(function () {
         $('.emailResetBox').fadeOut();
         $('.phoneResetBox').fadeIn();
         GetImgCode();
     });
-    // 重置邮箱监听
-    //邮箱账号
+
+    // Reset mailbox listener
+    //email address
     $('.email').focus(function () {
         $(this).siblings('span').hide();
     });
     $('.email').blur(function () {
         var email = $(this).val();
-        if (email.length <= 0) {//邮箱账号为空
+        if (email.length <= 0) {//Email account is empty
             $('.email_tips').fadeIn().siblings('span').fadeOut();
             return;
         }
-        if (!IsEmail(email)) {//邮箱格式错误
+        if (!IsEmail(email)) {//Bad Mailbox Format
             $('.emailErrorTips').fadeIn().siblings('span').fadeOut();
             return;
         }
     });
 
-    //邮箱验证码
+    //E-mail verification code
     $('.emailcfmCode').focus(function () {
         $('.emailCode_tips').hide();
     });
     $('.emailcfmCode').blur(function () {
         var emailcfmCode = $(this).val();
-        if (emailcfmCode.length <= 0) {//邮箱验证码为空
+        if (emailcfmCode.length <= 0) {//Email verification code is empty
             $('.emailCode_tips').fadeIn();
             return;
         }
     });
 
-    //邮箱新密码
+    //Mailbox new password
     $(".emailPassword").focus(function () {
         $(this).siblings('span').hide();
     });
@@ -66,7 +69,7 @@ $(function () {
         }
     });
 
-    // 重置邮箱获取验证码
+    // Reset email to get verification code
     $('.emailCodeBtn').click(function () {
         var email = $('.email').val();
         if (email.length <= 0) {
@@ -86,7 +89,8 @@ $(function () {
         });
 
     });
-    // 密码重置(邮箱)
+
+    // Password reset (mailbox)
     $('.emailResetBtn').click(function () {
         var email = $('.email').val(),
             cfm_code = $('.emailcfmCode').val(),
@@ -140,8 +144,8 @@ $(function () {
             }
         })
     });
-    //重置手机监听
-    //手机账号
+    //Reset phone monitoring
+    //phone account
     $('#phone').focus(function () {
         $(this).siblings('span').hide();
     });
@@ -157,7 +161,7 @@ $(function () {
         }
     });
 
-    //图形验证码
+    //Captcha
     $('.phoneCfmCode').focus(function () {
         $(this).siblings('span').hide();
     });
@@ -169,7 +173,7 @@ $(function () {
         }
     });
 
-    //手机验证码
+    //phone code
     $('.phoneSmsCode').focus(function () {
         $(this).siblings('span').hide();
     });
@@ -181,7 +185,7 @@ $(function () {
         }
     });
 
-    //新密码
+    //new password
     $('.phonePassword').focus(function () {
         $(this).siblings('span').hide();
     });
@@ -197,7 +201,7 @@ $(function () {
         }
     });
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '3', $this = $(this), cfm_code = $('.phoneCfmCode').val();
         if ($('.phoneCfmCode').val().length <= 0) {
@@ -206,9 +210,9 @@ $(function () {
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
-    // 密码重置(手机)
+    // Password reset (mobile phone)
     $('.phoneResetBtn').click(function () {
-        // 获取国家代码
+        // Get country code
         var country_code = $('.selected-dial-code').text().split("+")[1];
         var cellphone = $('.phone').val(),
             cfm_code = $('.phoneCfmCode').val(),

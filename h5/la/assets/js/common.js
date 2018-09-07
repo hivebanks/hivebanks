@@ -42,21 +42,21 @@ function IsEmail(s) {
 }
 
 function getRootPath() {
-    //获取当前网址
+    //Get current URL
     var curWwwPath = window.document.location.href;
-    //获取主机地址之后的目录
+    //Get the directory after the host address
     var pathName = window.document.location.pathname;
     var pos = curWwwPath.indexOf(pathName);
-    //获取主机地址
+    //Get the host address
     var localhostPath = curWwwPath.substring(0, pos);
-    //获取带"/"的项目名
+    //Get the project name with "/"
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
     return localhostPath;
 }
 
 var url = getRootPath();
 
-//获取失败错误码提示
+//Get failed error code prompt
 function GetErrorCode(code) {
     $.getJSON(url + "/assets/json/errcode.json", function (response) {
         $.each(response, function (i, val) {
@@ -71,7 +71,7 @@ function GetErrorCode(code) {
 
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: url + "/assets/json/config_url.json",
+    url: url + "h5/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
@@ -134,18 +134,18 @@ function CallLaInfoApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -164,18 +164,18 @@ function CallReportApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -194,18 +194,18 @@ function CallApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -224,18 +224,18 @@ function CallLaAdminApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -254,18 +254,18 @@ function CallTransactionApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -284,18 +284,18 @@ function CallKycApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
@@ -775,14 +775,14 @@ function GetAssetsReport(token, suc_func, error_func) {
 }
 
 /**
- * 禁用按钮
- * @param $this 按钮对象
- * @param btnText 按钮文本内容 默认为"处理中"
+ * Disable button
+ * @param $this Button object
+ * @param btnText Button text content defaults to "in process"
  * @return {boolean}
  */
 function DisableClick($this, btnText) {
     if (!$this) {
-        console.warn("$this 不能为空");
+        console.warn("$this Can not be empty");
         return true;
     }
     var status = Number($this.attr('data-clickStatus') || 1);
@@ -797,16 +797,16 @@ function DisableClick($this, btnText) {
 }
 
 /**
- * 激活按钮
- * @param $this 按钮对象
- * @param btnText 按钮文本内容 默认为"处理中"
+ * Activation button
+ * @param $this Button object
+ * @param btnText Button text content defaults to "in process"
  */
 function ActiveClick($this, btnText) {
     if (!$this) {
-        console.warn("$this 不能为空");
+        console.warn("$this Can not be empty");
         return;
     }
-    btnText = btnText ? btnText : "确认";
+    btnText = btnText ? btnText : "confirm";
     $this.attr('data-clickStatus', 1);
     $this.html(btnText);
 }

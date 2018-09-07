@@ -1,16 +1,17 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取图形验证码
+    //Get graphic verification code
     GetImgCode();
-    //切换图形验证码
+
+    //Switch graphic verification code
     $('#phone_imgCode').click(function () {
         GetImgCode();
     });
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function(){
         var bind_type = '2', $this = $(this), cfm_code = $('#phoneCfmCode').val();
         if(cfm_code <= 0){
@@ -20,10 +21,10 @@ $(function () {
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
-    //绑定资金密码
+    //Binding fund password
     $('.fundPasswordEnable').click(function () {
         var hash_type = 'pass_hash',
-            // 获取国家代码
+            // Get country code
             country_code = $(".selected-flag").attr("title").split("+")[1],
             phone = country_code + '-' + $('#phone').val(),
             phoneCode = $('#phoneCode').val(),
@@ -49,7 +50,7 @@ $(function () {
             LayerFun('passNotEmpty');
             return;
         }
-        //hash资金密码绑定
+        //hashFund password binding
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {

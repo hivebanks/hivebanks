@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = getCookie('ca_token');
     GetCaAccount();
 
@@ -102,10 +102,10 @@ $(function () {
             initTime: new Date(),
             format: 'Y/m/d H:i',
             value: new Date(),
-            minDate: new Date(),//设置最小日期
-            minTime: new Date(),//设置最小时间
-            yearStart: 2018,//设置最小年份
-            yearEnd: 2050 //设置最大年份
+            minDate: new Date(),//Set minimum date
+            minTime: new Date(),//Set minimum time
+            yearStart: 2018,//Set the minimum year
+            yearEnd: 2050 //Set the maximum year
         });
     }
 

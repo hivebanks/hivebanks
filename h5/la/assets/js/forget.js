@@ -25,7 +25,7 @@ $(function () {
 
     });
 
-    //前往邮箱验证
+    //Go to the mailbox to verify
     $('.goEmailBtn').click(function () {
         window.open(emailList[_email]);
         window.location.href = 'login.html';

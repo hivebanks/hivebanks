@@ -1,14 +1,15 @@
-// 设置cookies函数
+// Set the cookies function
 function SetCookie(name, value) {
     var now = new Date();
     var time = now.getTime();
-    // 有效期2小时
+
+    // Valid for 2 hours
     time += 3600 * 1000 * 2;
     now.setTime(time);
     document.cookie = name + "=" + escape(value) + '; expires=' + now.toUTCString() + ';path=/';
 }
 
-// 取cookies函数
+// Take the cookies function
 function GetCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
@@ -23,7 +24,7 @@ function GetCookie(name) {
     return null;
 }
 
-// 删除cookie函数
+// Delete cookie function
 function DelCookie(name) {
     var exp = new Date();
     exp.setTime(exp.getTime() - 1);
@@ -32,7 +33,7 @@ function DelCookie(name) {
 }
 
 
-// 取得URL参数
+// Get URL parameters
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
@@ -40,27 +41,27 @@ function GetQueryString(name) {
     return null;
 }
 
-// Email格式检查
+// Email format check
 function IsEmail(s) {
     var patrn = /^(?:\w+\.?)*\w+@(?:\w+\.)*\w+$/;
     return patrn.exec(s);
 }
 
 function getRootPath() {
-    //获取当前网址
+    //Get current URL
     var curWwwPath = window.document.location.href;
-    //获取主机地址之后的目录
+    //Get the directory after the host address
     var pathName = window.document.location.pathname;
     var pos = curWwwPath.indexOf(pathName);
-    //获取主机地址
+    //Get the host address
     var localhostPath = curWwwPath.substring(0, pos);
-    //获取带"/"的项目名
+    //Get the project name with "/"
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
     return localhostPath;
 }
 var url = getRootPath();
 
-//获取数据失败提示
+//Get data failure prompt
 function GetErrorCode(code) {
     $.getJSON(url+"/assets/json/errcode.json", function (response) {
         $.each(response, function (i, val) {
@@ -72,10 +73,10 @@ function GetErrorCode(code) {
     })
 }
 
-//获取配置文件/基准货币类型
+//Get configuration file/Base currency type
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
     $.ajax({
-        url: url+"/assets/json/config_url.json",
+        url: url+"h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -99,7 +100,7 @@ var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLangu
         }
     });
 
-// 调用API共通函数
+// Call API common function
 function CallApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/user/';
     post_data = post_data || {};
@@ -112,24 +113,24 @@ function CallApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 }
 
-// 调用Ba API共通函数
+// Call Ba API common function
 function CallBaApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/ba/';
     post_data = post_data || {};
@@ -142,24 +143,24 @@ function CallBaApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 }
 
-// 调用ca API共通函数
+// Call Ca API common function
 function CallCaApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/ca/';
     post_data = post_data || {};
@@ -172,24 +173,24 @@ function CallCaApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 }
 
-// 调用la API注册函数
+// Call the la API registration function
 function CallLaApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/admin/';
     post_data = post_data || {};
@@ -202,24 +203,24 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
         dataType: "jsonp",
         data: post_data,
         success: function (response) {
-            // API返回失败
+            // API return failed
             if (response.errcode != 0) {
                 error_func(response);
             } else {
-                // 成功处理数据
+                // Successfully process data
                 suc_func(response);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // API错误异常
+            // API error exception
             var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
-            // 异常处理
+            // Exception handling
             error_func(response);
         }
     });
 }
 
-//检查是否允许注册
+//Check if registration is allowed
 function RegisterSwitch(type, suc_func, error_func) {
     var api_url = 'reg_lock.php',
         post_data = {
@@ -228,14 +229,14 @@ function RegisterSwitch(type, suc_func, error_func) {
     CallLaApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取图形验证码
+//Get graphic verification code
 function GetImgCode() {
     var src = config_api_url + '/api/inc/code.php';
     $('#email_imgCode').attr("src", src);
     $('#phone_imgCode').attr("src", src);
 }
 
-// 邮箱注册
+// email registration
 function EmailRegister(email, pass_word, pass_word_hash, invit_code, suc_func, error_func) {
     var api_url = 'reg_email.php',
         post_data = {
@@ -247,7 +248,7 @@ function EmailRegister(email, pass_word, pass_word_hash, invit_code, suc_func, e
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//手机注册处理
+//Mobile phone registration processing
 function PhoneRegister(country_code, cellphone, sms_code, pass_word, pass_word_hash, invit_code, suc_func, error_func) {
     var api_url = 'reg_phone.php',
         post_data = {
@@ -261,7 +262,7 @@ function PhoneRegister(country_code, cellphone, sms_code, pass_word, pass_word_h
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//邮箱登录处理
+//Mailbox login processing
 function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_email.php',
         post_data = {
@@ -272,7 +273,7 @@ function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//手机登录处理
+//Mobile phone login processing
 function PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_phone.php',
         post_data = {
@@ -285,7 +286,7 @@ function PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code,
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 重置密码(邮箱)
+// Reset password (mailbox)
 function ResetEmailPassword(email, cfm_code, pass_word_hash, suc_func, error_func) {
     var api_url = 'rst_pw_email.php',
         post_data = {
@@ -296,7 +297,7 @@ function ResetEmailPassword(email, cfm_code, pass_word_hash, suc_func, error_fun
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//重置邮箱密码--获取验证码
+//Reset Email Password--Get Email Authentication Code
 function GetEmailCode(email, suc_func, error_func) {
     var api_url = 'cfm_email_preform.php',
         post_data = {
@@ -305,7 +306,7 @@ function GetEmailCode(email, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
-// 重置密码(手机)
+// Reset password (phone)
 function ResetPhonePassword(country_code, cellphone, sms_code, pass_word_hash, suc_func, error_func) {
     var api_url = 'rst_pw_phone.php',
         post_data = {
@@ -317,7 +318,7 @@ function ResetPhonePassword(country_code, cellphone, sms_code, pass_word_hash, s
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 用户绑定信息
+// Get user binding information
 function BindingInformation(token, suc_func, error_func) {
     var api_url = 'info_bind.php',
         post_data = {
@@ -326,7 +327,7 @@ function BindingInformation(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//修改us昵称
+//Modify user nickname
 function ModifyNickName(token, us_account, suc_func, error_func) {
     var api_url = 'alter_us_account.php',
         post_data = {
@@ -336,7 +337,7 @@ function ModifyNickName(token, us_account, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-// 用户信息
+// user information
 function UserInformation(token, suc_func, error_func) {
     var api_url = 'info_base.php',
         post_data = {
@@ -345,7 +346,7 @@ function UserInformation(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-// 用户变动记录-登录记录-转账-BA/CA-充值/提现-记录
+// User Change Record - Login Record - Transfer - BA / CA - Recharge / Withdrawal - Record
 function AllRecord(token, limit, offset, api_url, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -355,7 +356,7 @@ function AllRecord(token, limit, offset, api_url, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取订单交易状态
+//Get order transaction status
 function TradingStatus(token, limit, offset, type, suc_func, error_func) {
     var api_url = 'log_balance.php',
         post_data = {
@@ -367,7 +368,7 @@ function TradingStatus(token, limit, offset, type, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 文本绑定
+// Text binding
 function TextBind(token, text_type, text, text_hash, suc_func, error_func) {
     var api_url = 'bnd_text.php',
         post_data = {
@@ -379,7 +380,7 @@ function TextBind(token, text_type, text, text_hash, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 文本修改
+// Text modification
 function TextModify(token, text_type, text, text_hash, pass_word_hash, suc_func, error_func) {
     var api_url = 'change_text.php',
         post_data = {
@@ -401,7 +402,7 @@ function GetLaId(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// 文件绑定
+// File binding
 function FileBind(token, file_type, file_url, suc_func, error_func) {
     var api_url = 'bnd_file.php',
         post_data = {
@@ -412,7 +413,7 @@ function FileBind(token, file_type, file_url, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//HASH绑定
+//hash binding
 function Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, suc_func, error_func) {
     var api_url = 'bnd_hash.php',
         post_data = {
@@ -426,7 +427,7 @@ function Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, suc_func
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//google绑定
+//Google binding
 function GoogleBind(token, email, suc_func, error_func) {
     var api_url = 'bnd_Google.php',
         post_data = {
@@ -436,7 +437,7 @@ function GoogleBind(token, email, suc_func, error_func) {
         CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//google验证
+//Google verification
 function GoogleVerify(token, code, suc_func, error_func) {
     var api_url = 'cfm_Google.php',
         post_data = {
@@ -446,7 +447,7 @@ function GoogleVerify(token, code, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ba充值提现列表
+//get ba recharge withdraw recode
 function GetBaRateList(api_url, token, suc_func, error_func) {
     var post_data = {
         'token': token
@@ -454,7 +455,7 @@ function GetBaRateList(api_url, token, suc_func, error_func) {
     CallBaApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ca充值提现汇率的平均值
+//Get the average value of the CA recharge cash withdrawal rate
 function GetAverageRate(api_url, token, suc_func, error_func) {
     var post_data = {
         'token': token
@@ -462,7 +463,7 @@ function GetAverageRate(api_url, token, suc_func, error_func) {
     CallCaApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取手机验证码
+//get phone code
 function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func) {
     var api_url = 'sms_send.php',
         post_data = {
@@ -474,7 +475,7 @@ function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, er
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取申报列表
+//Get the declaration list
 function GetFaultReportList(token, suc_func, error_func) {
     var api_url = 'feedback_list.php',
         post_data = {
@@ -483,7 +484,7 @@ function GetFaultReportList(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//提交故障申报
+//Submit a failure report
 function SubmitFaultReportInfo(token, sub_id, end_type, submit_name, submit_info, suc_func, error_func) {
     var api_url = 'feedback_submit.php',
         post_data = {
@@ -496,7 +497,7 @@ function SubmitFaultReportInfo(token, sub_id, end_type, submit_name, submit_info
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取用户需要添加的银行卡列表
+//Get the list of bank cards that users need to add
 function GetBankList(token, suc_func, error_func) {
     var api_url = 'us_channel_list.php',
         post_data = {
@@ -505,7 +506,7 @@ function GetBankList(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
-//确认添加银行卡
+//Confirm adding a bank card
 function AddBank(token, cash_channel, cash_type, cash_address, name, idNum, pass_word_hash, suc_func, error_func) {
     var api_url = 'bank_card_business.php',
         post_data = {
@@ -520,7 +521,7 @@ function AddBank(token, cash_channel, cash_type, cash_address, name, idNum, pass
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取添加的银行卡列表
+//Get the list of added bank cards
 function GetAddBankList(token, suc_func, error_func) {
     var api_url = 'get_bank_card_list.php',
         post_data = {
@@ -529,7 +530,7 @@ function GetAddBankList(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//删除绑定的银行卡
+//Delete the bound bank card
 function DeleteBank(token, account_id, suc_func, error_func) {
     var api_url = 'del_us_bank_card.php',
         post_data = {
@@ -539,7 +540,7 @@ function DeleteBank(token, account_id, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//登录失败倒计时
+//Login failure countdown
 function CountDown(count, ErrorNum, LoginBtn, input, LoginError) {
     var counts = count;
     if (counts != 0) {
@@ -561,14 +562,14 @@ function CountDown(count, ErrorNum, LoginBtn, input, LoginError) {
 };
 
 /**
- * 禁用按钮
- * @param $this 按钮对象
- * @param btnText 按钮文本内容 默认为"处理中"
+ * Disable button
+ * @param $this Button object
+ * @param btnText Button text content defaults to "in process"
  * @return {boolean}
  */
 function DisableClick($this, btnText) {
     if (!$this) {
-        console.warn("$this 不能为空");
+        console.warn("$this Can not be empty");
         return true;
     }
     var status = Number($this.attr('data-clickStatus') || 1);
@@ -583,13 +584,13 @@ function DisableClick($this, btnText) {
 }
 
 /**
- * 激活按钮
- * @param $this 按钮对象
- * @param btnText 按钮文本内容 默认为"处理中"
+ * Activation button
+ * @param $this Button object
+ * @param btnText Button text content defaults to "in process"
  */
 function ActiveClick($this, btnText) {
     if (!$this) {
-        console.warn("$this 不能为空");
+        console.warn("$this Can not be empty");
         return;
     }
     btnText = btnText ? btnText : "确认";
@@ -598,7 +599,7 @@ function ActiveClick($this, btnText) {
 }
 
 /**
- * 初始化页面loading加载
+ * Initialization page loading loading
  */
 window.onload = function () {
     if (document.readyState === 'complete') {

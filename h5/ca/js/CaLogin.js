@@ -3,36 +3,36 @@ $(document).ready(function () {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
         if (arr != null) return unescape(arr[2]);
     }
-    //获取图形验证码
+    //Get graphic verification code
     GetImgCode();
-    //    切换验证码
+    //    Switch verification code
     $('#email_imgCode, #phone_imgCode').click(function () {
         GetImgCode();
     });
 
-    // 切换邮箱和手机登录样式
+    // Switch mailbox and phone login styles
     $(".loginToggle").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
     });
-    // 切换邮箱登录
+    // Switch mailbox login
     $(".emailLogin").click(function () {
         $(".phoneLoginBox").fadeOut();
         $(".emailLoginBox").fadeIn();
         $('.phonePassword').removeClass('.pass');
         GetImgCode();
     });
-    // 切换手机登录
+    // Switch phone login
     $(".phoneLogin").click(function () {
         $(".emailLoginBox").fadeOut();
         $(".phoneLoginBox").fadeIn();
         $('.emailPassword').removeClass('.pass');
         GetImgCode();
     });
-    // ========邮箱登录========
-    $('.emailCanvas').click(function () {//点击更换验证码
+    // ========email login========
+    $('.emailCanvas').click(function () {//Click to replace the verification code
         GetImgCode();
     });
-    // email表单change判断
+    // Email form change judgment
     //email判断
     $('.email').focus(function () {
         $('.email_tips').fadeOut('fast');
@@ -41,8 +41,8 @@ $(document).ready(function () {
         $('.emailAuditFail').fadeOut('fast');
     });
     $('.email').blur(function () {
-        var emailVal = $('.email').val();//获取邮箱内容
-        if (emailVal.length <= 0) {//是否为空
+        var emailVal = $('.email').val();//Get mailbox content
+        if (emailVal.length <= 0) {//Is it empty?
             $('.email_tips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else if (!IsEmail(emailVal)) {
             $('.emailErrorTips').fadeIn('fast').siblings('span').fadeOut('fast');
@@ -55,8 +55,8 @@ $(document).ready(function () {
 
     //email password判断
     $('.emailPassword').blur(function () {
-        var emailPassword = $('.emailPassword').val();//获取邮箱内容
-        if (emailPassword.length <= 0) {//是否为空
+        var emailPassword = $('.emailPassword').val();//Get mailbox content
+        if (emailPassword.length <= 0) {//Is it empty?
             $('.password_tips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else {
             $('.password_tips').fadeOut('fast')
@@ -69,8 +69,8 @@ $(document).ready(function () {
         $('.errEmailImgCode_tips').fadeOut('fast');
     });
     $('.emailCfmCode').blur(function () {
-        var emailCfmCode = $('.emailCfmCode').val();//获取邮箱内容
-        if (emailCfmCode.length <= 0) {//是否为空
+        var emailCfmCode = $('.emailCfmCode').val();//Get mailbox content
+        if (emailCfmCode.length <= 0) {//Is it empty?
             $('.emailImgCode_tips').fadeIn('fast').siblings('span').fadeOut('fast');
         } else {
             $('.emailImgCode_tips').fadeOut('fast');
@@ -78,7 +78,7 @@ $(document).ready(function () {
         }
     });
 
-    // email提交判断
+    // emailSubmit judgment
     var _email = '', emailList = '';
     $(".emailLoginBtn").click(function () {
         var ca_token = GetLoginCookie('ca_token');
@@ -121,7 +121,7 @@ $(document).ready(function () {
             }
         }, function (response) {
             ActiveClick($this, _text);
-            if (response.errcode == '116') {//登录失败
+            if (response.errcode == '116') {//login fail
                 $('.emailLoginError').fadeIn('fast');
                 var count = response.errmsg,
                     emailErrorNum = $('.emailErrorNum'),
@@ -130,15 +130,15 @@ $(document).ready(function () {
                     emailInput = $('.emailLoginBox input');
                 CountDown(count, emailErrorNum, emailLoginBtn, emailInput, emailLoginError);
             } else if (response.errcode == '112') {
-                $('.emailAccountNot').fadeIn('fast');//用户不存在
-            } else if (response.errcode == '113') {//未验证
+                $('.emailAccountNot').fadeIn('fast');//User Does Not Exist
+            } else if (response.errcode == '113') {//Unverified
                 $('#accountNotVerify').modal('show');
             }
             if (response.errcode == '139') {
-                $('.errEmailImgCode_tips').fadeIn('fast');//图形验证码错误
+                $('.errEmailImgCode_tips').fadeIn('fast');//Graphic verification code error
             }
             if (response.errcode == '118') {
-                $('.emailAuditFail').fadeIn('fast');//未通过审核
+                $('.emailAuditFail').fadeIn('fast');//not approved
             }
             GetImgCode();
             GetErrorCode(response.errcode);
@@ -146,13 +146,13 @@ $(document).ready(function () {
         });
     });
 
-    //前往邮箱验证
+    //Go to the mailbox to verify
     $('.goEmailBtn').click(function () {
         window.location.href = 'CaLogin.html';
         window.open(emailList[_email]);
     });
 
-    //手机注册返回登录显示
+    //Phone registration returns to login display
     var url = GetQueryString('name');
     if (url == 'phone') {
         $('.emailLogin').removeClass('active');
@@ -161,7 +161,7 @@ $(document).ready(function () {
     }
     GetImgCode();
 
-    //phoneForm 输入监听
+    //phoneForm Input monitor
     //phone
     $('#phone').focus(function () {
         $('.phone_tips').fadeOut('fast');
@@ -217,7 +217,7 @@ $(document).ready(function () {
         }
     });
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
         if ($('.phoneCfmCode').val().length <= 0) {
@@ -226,12 +226,12 @@ $(document).ready(function () {
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
-    // ========手机登录========
-    $(".phoneLoginBtn").click(function () {//点击登录提交
+    // ========Log in with phone========
+    $(".phoneLoginBtn").click(function () {//Click Login to submit
         var ca_token = GetLoginCookie('ca_token');
-        // 获取国家代码
+        // Get country code
         var country_code = $('.selected-dial-code').text().split("+")[1];
-        // 获取用户输入的内容---判断
+        // Get user input---判断
         var cellphone = $(".phone").val(),
             cfm_code = $(".phoneCfmCode").val(),
             sms_code = $("#phoneSmsCode").val(),
@@ -284,12 +284,12 @@ $(document).ready(function () {
                 window.location.href = 'CaAccount.html';
             }
             if (response.errcode == "118") {
-                $('.phoneAuditFail').fadeIn('fast');//未通过审核
+                $('.phoneAuditFail').fadeIn('fast');//not approved
             }
         }, function (response) {
             GetImgCode();
             ActiveClick($this, _text);
-            if (response.errcode == '116') {//登录失败
+            if (response.errcode == '116') {//login fail
                 $('.phoneLoginError').fadeIn('fast');
                 var count = response.errmsg,
                     phoneErrorNum = $('.phoneErrorNum'),
@@ -298,10 +298,10 @@ $(document).ready(function () {
                     phoneInput = $('.phoneLoginBox input');
                 CountDown(count, phoneErrorNum, phoneLoginBtn, phoneInput, phoneLoginError);
             } else if (response.errcode == '112') {
-                $('.phoneAccountNot').fadeIn('fast');//用户不存在
+                $('.phoneAccountNot').fadeIn('fast');//User Does Not Exist
             }
             if (response.errcode == '139') {
-                $('.errPhoneImgCode_tips').fadeIn('fast');//图形验证码错误
+                $('.errPhoneImgCode_tips').fadeIn('fast');//Graphic verification code error
             }
 
             GetErrorCode(response.errcode);

@@ -1,12 +1,12 @@
 $(function () {
-    //获取token;
+    //get token;
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取base_type
+    //get base_type
     var base_type = GetCookie('benchmark_type');
 
-    // 点击切换数字货币和法定货币
+    // Click to switch between digital currency and legal currency
     $('.digital-btn').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
         $('.digital').fadeIn();
@@ -22,7 +22,7 @@ $(function () {
         $('.caWithdrawCodeRow').fadeIn();
     });
 
-    //获取ba提现列表
+    //Get ba withdrawal list
     var api_url = 'us_get_withdraw_ba_list.php';
     GetBaRateList(api_url, token, function (response) {
         if (response.errcode == '0') {
@@ -33,7 +33,6 @@ $(function () {
                 execI18n();
                 return;
             }
-
             $.each(data, function (i, val) {
                 li+='<li>' +
                     '<p><i class="iconfont icon-'+ data[i].bit_type.toUpperCase() +'"></i></p>'+
@@ -54,7 +53,7 @@ $(function () {
         return;
     });
 
-    //获取用户绑定信息
+    //Get user binding information
     var us_bind_type_name = '', us_bind_type_idNum = '', us_bind_type_file = '', us_bind_name_idPhoto = '';
     BindingInformation(token, function (response) {
         if (response.errcode == '0') {
@@ -72,7 +71,7 @@ $(function () {
         GetErrorCode(response.errcode);
     });
 
-    //点击选择提现
+    //Click to select cash
     $(document).on('click', '.digital-inner-box li', function () {
         if (us_bind_type_name != 'name' || us_bind_type_idNum !='idNum' || us_bind_name_idPhoto != 'idPhoto') {
             $('#notAuthentication').modal('show');
@@ -84,8 +83,7 @@ $(function () {
         }
     });
 
-
-    //获取Ca提现平均汇率
+    //Get the average exchange rate of Ca withdrawal
     var withdraw_rate = '', api_url = 'average_ca_withdraw_rate.php';
     GetAverageRate(api_url, token, function (response){
         if(response.errcode == '0'){
@@ -97,7 +95,7 @@ $(function () {
         GetErrorCode(response.errcode);
     });
 
-    //获取用户账户余额显示
+    //Get user account balance display
     var us_base_amount = '';
     UserInformation(token, function (response) {
         if (response.errcode == '0') {
@@ -116,7 +114,7 @@ $(function () {
         }
     });
 
-    //输入充值金额绑定输入框
+    //Enter the recharge amount binding input box
     $('.base_amount').bind('input porpertychange', function () {
         $('.bit_amount').val($(this).val() * withdraw_rate);
         $('.payWithdrawAmount').text($(this).val());
@@ -126,13 +124,13 @@ $(function () {
         $('.payWithdrawAmount').text($('.base_amount').val());
     });
 
-    //全部提现
+    //fullWithdrawal
     $('.fullWithdrawal').click(function () {
         $('.base_amount').val(us_base_amount);
         $('.bit_amount').val(us_base_amount * withdraw_rate);
     });
     
-    //ca充值下一步操作
+    //Ca recharge the next step
     $('.enableAmount').click(function (){
         if (us_bind_type_name != 'name' || us_bind_type_idNum !='idNum' || us_bind_name_idPhoto != 'idPhoto') {
             $('#notAuthentication').modal('show');
@@ -159,7 +157,7 @@ $(function () {
         }
         window.location.href = '../ca/CaWithdraw.html?us_ca_withdraw_amount=' + base_amount;
     });
-    // BA提现记录
+    // BA withdrawal record
     var limit = 0, offset = 5,
         ba_api_url = 'log_ba_withdraw.php',
         tr = '', ba_tx_hash_arr = [];
@@ -185,7 +183,7 @@ $(function () {
             window.location.href = 'login.html';
         }
     });
-    // CA提现记录
+    // CA withdrawal record
     var ca_api_url = 'log_ca_withdraw.php', ca_tr = '';
     AllRecord(token, limit, offset, ca_api_url, function (response) {
         if (response.errcode == '0') {

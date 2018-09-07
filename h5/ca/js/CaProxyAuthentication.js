@@ -1,9 +1,9 @@
 $(function () {
-    //获取token
+    //get token
     var token = getCookie('ca_token');
     GetCaAccount();
 
-    //获取URL参数-图片地址
+    //Get url parameter-图片地址
     var href = window.location.search.split("?")[1];
     var newImgHtml = decodeURIComponent(href);
     $(".newImgBox>img").attr("src", newImgHtml);

@@ -50,7 +50,7 @@
 
 </nav>
 <div class="container margin-top-1">
-    <!--面包屑-->
+    <!--Bread crumbs-->
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <ol class="breadcrumb">
@@ -60,10 +60,10 @@
         </div>
     </div>
 </div>
-<!--提现处理-->
+<!--withdraw process-->
 <section id="rechargePending" class="content section-top-2">
     <div class="container">
-        <!--提现待处理标题-->
+        <!--withdraw process title-->
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="pending-title">
@@ -72,25 +72,25 @@
                 </div>
                 <div>
                     <p class="font-size-14 align-right">
-                        <a href="CaWithdrawAlready.html">查看已处理详情</a>
+                        <a href="CaWithdrawAlready.html" class="i18n" name="ViewProcessedDetails">View Processed Details</a>
                     </p>
                 </div>
             </div>
         </div>
-        <!--可处理额度-->
+        <!--Processing quota-->
         <div class="row canHandleAmount">
             <div class="col-md-12 col-sm-12">
                 <div class="balanceBox flex center">
                     <p class="pendingBalance">
                         <span><span class="i18n" name="marginBalance">Margin Balance</span>:</span>
                         <span class="ty-color base_amount">0</span>
-                        <span class="base_type">BTC</span>
+                        <span class="base_type"></span>
                     </p>
                     <p>
                         <span class="rechargeAmount">
                             <span class="i18n" name="lockBalance">Lock Amount</span>:&nbsp;</span>
                         <span class="ty-color lock_amount">0</span>
-                        <span class="base_type">BTC</span>
+                        <span class="base_type"></span>
                     </p>
                 </div>
             </div>
@@ -102,20 +102,20 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th><span class="i18n" name="recharger">充值者</span></th>
-                            <th><span class="i18n" name="amount">数量</span></th>
-                            <th><span class="i18n" name="pairs">交易对</span></th>
-                            <!--<th><span class="i18n" name="address">地址</span></th>-->
-                            <th><span class="i18n" name="date">时间</span></th>
-                            <th><span class="" name="">交易流水号</span></th>
-                            <th><span class="i18n" name="operating">操作</span></th>
+                            <th><span class="i18n" name="recharger">recharger</span></th>
+                            <th><span class="i18n" name="amount">amount</span></th>
+                            <th><span class="i18n" name="pairs">pairs</span></th>
+                            <!--<th><span class="i18n" name="address">address</span></th>-->
+                            <th><span class="i18n" name="date">date</span></th>
+                            <th><span class="i18n" name="transactionFlowNumber">transactionFlowNumber</span></th>
+                            <th><span class="i18n" name="operating">operating</span></th>
                         </tr>
                         </thead>
                         <tbody id="withdrawPendingTable">
                         <tr>
                             <td colspan="7">
                                 <img src="../assets/img/loading.gif" alt="">
-                                <span class="i18n" name="tryingToLoad">努力加载中...</span>
+                                <span class="i18n" name="tryingToLoad">Trying To Load...</span>
                             </td>
                         </tr>
                         </tbody>
@@ -133,11 +133,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">确定处理此交易</h4>
+                <h4 class="modal-title i18n" name="makeSureTransaction" id="myModalLabel">Make sure to process this transaction</h4>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger i18n" name="cancel" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-success i18n againConfirmBtn" name="enable">确定</button>
+                <button type="button" class="btn btn-danger i18n" name="cancel" data-dismiss="modal">cancel</button>
+                <button type="button" class="btn btn-success i18n againConfirmBtn" name="determine">determine</button>
             </div>
         </div>
     </div>
@@ -186,7 +186,7 @@
         </div>
     </div>
 </section>
-
+<!--Back to top-->
 <div class="scrollup">
     <a href="#"><i class="iconfont icon-top"></i></a>
 </div>

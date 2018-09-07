@@ -1,18 +1,18 @@
 $(function () {
-    //获取用户token
+    //get user token
     var token = GetCookie('user_token');
     GetUsAccount();
 
     var wi_bindPhone = GetQueryString('wi_bindPhone');
 
-    //获取图形验证码
+    //Get graphic verification code
     GetImgCode();
-    //切换图形验证码
+    //Switch graphic verification code
     $('#phone_imgCode').click(function () {
         GetImgCode();
     });
 
-    //获取手机验证码
+    //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '4', $this = $(this), cfm_code = $('#phoneCfmCode').val();
         if(cfm_code <= 0){
@@ -23,7 +23,7 @@ $(function () {
     });
 
     $('.phoneEnable').click(function () {
-        // 获取国家代码
+        // Get country code
         var country_code = $('.selected-dial-code').text().split("+")[1],
             text_type = '4',
             text = country_code + '-' + $('#phone').val(),

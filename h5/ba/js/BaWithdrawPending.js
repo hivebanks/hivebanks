@@ -2,15 +2,15 @@ $(function () {
     var token = GetCookie('ba_token'), limit = 10, offset = 0;
     GetBaAccount();
 
-    //获取基准类型
+    //Get the baseline type
     var base_type = GetCookie('benchmark_type');
 
-    //下载订单
-    //获取配置文件
+    //Download order
+    //Get configuration file
     var url = getRootPath();
     var config_api_url = '', config_h5_url = '';
     $.ajax({
-        url: url+"/assets/json/config_url.json",
+        url: url+"h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
@@ -26,7 +26,7 @@ $(function () {
         window.location.href = config_api_url + '/api/ba/transaction_order_download.php?token=' + encodeURIComponent(token);
     });
 
-    // 获取用户基本信息
+    // get Basic user information
     GetBasicInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -38,7 +38,7 @@ $(function () {
         return;
     });
 
-    //获取用户提现待处理订单列表
+    //Get a list of user withdrawal pending orders
     var api_url = 'log_us_withdraw.php', type = '1', bit_address = [], tr = '';
     RechargeWithdrawCodeQuery(token, api_url, type, function (response) {
         if (response.errcode == '0') {
@@ -71,7 +71,8 @@ $(function () {
         GetErrorCode(response.errcode);
         return;
     });
-    //提现请求确认处理
+
+    //Withdrawal request confirmation processing
     var qa_id = '', _this = '', transfer_tx_hash = '';
     $(document).on('click', '.confirmBtn', function () {
         transfer_tx_hash = $(this).parents('.withdrawPendingList').find('.transfer_tx_hash').val();
@@ -85,7 +86,7 @@ $(function () {
         $('#confirmModal').modal('show');
     });
 
-    //再次确认
+    //again confirm
     $('.againConfirmBtn').click(function () {
         var type = '1';
         var $this = $(this), btnText = $this.text();

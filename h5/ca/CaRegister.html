@@ -19,7 +19,7 @@
 <!-- loading -->
 <iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
         scrolling="no"></iframe>
-<!--导航-->
+<!--nav-->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -41,7 +41,7 @@
         </div>
     </div>
 </nav>
-<!--注册表单-->
+<!--register form-->
 <section class="content">
     <div class="container">
         <div class="row">
@@ -67,28 +67,28 @@
                             <ul class="mess-ul">
                                 <li>
                                     <input type="email" class="form-control email i18n-input" name="username" value="" selectname="emailInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips email_tips i18n' name="emailNotEmpty">* 邮箱不能为空</span>
-                                    <span class='ty-color input_tips emailErrorTips i18n' name="emailBad">* 邮箱格式错误</span>
-                                    <span class='ty-color input_tips emailLoginTips i18n' name="accountAlready">* 账号已存在，请登录</span>
+                                    <span class='ty-color input_tips email_tips i18n' name="emailNotEmpty">* E-mail Can Not Be Empty</span>
+                                    <span class='ty-color input_tips emailErrorTips i18n' name="emailBad">* Bad Mailbox Format</span>
+                                    <span class='ty-color input_tips emailLoginTips i18n' name="accountAlready">* Account Already Exists, Please Login</span>
                                 </li>
                                 <li>
                                     <input type="password" id='emailPass' class="form-control emailPassword i18n-input" name="emailPassword" value="" selectname="passwordInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips password_tips i18n' name="passwordNotEmpty">* 密码不能为空</span>
-                                    <span class='ty-color input_tips errEmailPass_tips i18n' name="PasswordStructure">* 8-16位 由字母(区分大小写),数字，符号组成</span>
+                                    <span class='ty-color input_tips password_tips i18n' name="passwordNotEmpty">* Password Can Not Be Blank</span>
+                                    <span class='ty-color input_tips errEmailPass_tips i18n' name="PasswordStructure">* 8-16 Bits are composed of letters (case-sensitive),numbers,symbols</span>
                                     <div id="emailLevel" class="email-pw-strength pw-strength">
                                         <div class="pw-bar"></div>
                                         <div class="pw-bar-on"></div>
                                         <div class="pw-txt">
-                                            <span class="weak">弱</span>
-                                            <span class="medium">中</span>
-                                            <span class="strong">强</span>
+                                            <span class="weak i18n" name="weak">weak</span>
+                                            <span class="medium i18n" name="medium">medium</span>
+                                            <span class="strong i18n" name="strong">strong</span>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <input type="password" class="form-control againEmailPassword i18n-input" name="againEmailPassword" value="" selectname="againPasswordInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips emailAgainPassword_tips i18n' name="confirmPasswordNotEmpty">* 确认密码不能为空</span>
-                                    <span class='ty-color input_tips emailSamePassword_tips i18n' name="TwoPassword">* 两次密码必须相同</span>
+                                    <span class='ty-color input_tips emailAgainPassword_tips i18n' name="confirmPasswordNotEmpty">* Confirm Password Can Not Be Blank</span>
+                                    <span class='ty-color input_tips emailSamePassword_tips i18n' name="TwoPassword">* Two Passwords Must Be The Same</span>
                                 </li>
                             </ul>
                             <a href="javascript:;" class="btn btn-lg btn-success register emailRegisterBtn login i18n" name="register">Register</a>
@@ -100,15 +100,15 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h3 class="pcTitle i18n" name="goEmailVerify">注册成功，请前往邮箱验证</h3>
-                                        <h5 class="phoneTitle i18n" name="goEmailVerify">注册成功，请前往邮箱验证</h5>
+                                        <h3 class="pcTitle i18n" name="goEmailVerify">Please go to email for verification</h3>
+                                        <h5 class="phoneTitle i18n" name="goEmailVerify">Please go to email for verification</h5>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-success i18n" name="cancel"
-                                                data-dismiss="modal">取消
+                                                data-dismiss="modal">cancel
                                         </button>
                                         <button type="button" class="btn btn-primary goEmailBtn i18n" name="goTo">
-                                            前往
+                                            goTo
                                         </button>
                                     </div>
                                 </div>
@@ -121,15 +121,15 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h3 class="pcTitle i18n" name="alreadyRegister">已注册，请前往邮箱验证</h3>
-                                        <h5 class="phoneTitle i18n" name="alreadyRegister">已注册，请前往邮箱验证</h5>
+                                        <h3 class="pcTitle i18n" name="alreadyRegister">Registration is not verified, please go to the email to verify</h3>
+                                        <h5 class="phoneTitle i18n" name="alreadyRegister">Registration is not verified, please go to the email to verify</h5>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-success i18n" name="cancel"
-                                                data-dismiss="modal">取消
+                                                data-dismiss="modal">cancel
                                         </button>
                                         <button type="button" class="btn btn-primary goEmailBtn i18n" name="goTo">
-                                            前往
+                                            goTo
                                         </button>
                                     </div>
                                 </div>
@@ -141,35 +141,35 @@
                             <ul class="mess-ul">
                                 <li>
                                     <input type="tel" class="form-control phone i18n-input" name="phone" id="phone" value="" selectname="phoneInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips phone_tips i18n' name="accountNotEmpty">* 账号不能为空</span>
-                                    <span class='ty-color input_tips phoneErrorTips i18n' name="phoneBad">* 手机格式错误</span>
-                                    <span class='ty-color input_tips phoneLoginTips i18n' name="accountAlready">* 账号已存在，请登录</span>
+                                    <span class='ty-color input_tips phone_tips i18n' name="accountNotEmpty">* Account Cannot Be Empty</span>
+                                    <span class='ty-color input_tips phoneErrorTips i18n' name="phoneBad">* Bad Cell Phone Format</span>
+                                    <span class='ty-color input_tips phoneLoginTips i18n' name="accountAlready">* Account Already Exists, Please Login</span>
                                 </li>
 
-                                <!--图形验证码-->
+                                <!--img code-->
                                 <li class="flex">
                                     <input type="text" class="form-control i18n-input phoneCfmCode" name="cfmCode" value=""
                                            selectname="cfmCodeInput" selectattr="placeholder">
                                     <img src="" id="phone_imgCode" alt="">
                                     <span class='ty-color input_tips phoneImgCode_tips i18n'
-                                          name="codeNotEmpty">* 验证码不能为空</span>
+                                          name="codeNotEmpty">* Verification Code Must Be Filled</span>
                                     <span class='ty-color input_tips errPhoneImgCode_tips i18n'
-                                          name="codeBad">* 图形验证码错误,请重新输入</span>
+                                          name="codeBad">* Verification Code Error, Please Re-enter</span>
                                 </li>
 
                                 <li class="flex">
                                     <input type="text" class="form-control i18n-input sms_code phoneSmsCode" name="cfmCode" value="" selectname="cfmCodeInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips phoneSmsCode_tips i18n' name="codeNotEmpty">* 验证码不能为空</span>
+                                    <span class='ty-color input_tips phoneSmsCode_tips i18n' name="codeNotEmpty">* Verification Code Must Be Filled</span>
                                     <span class='ty-color input_tips phoneCode_expired i18n'
-                                          name="codeBad">* 图形验证码错误,请重新输入</span>
+                                          name="codeBad">* Verification Code Error, Please Re-enter</span>
                                     <button class="btn btn-success btn-sm phoneCodeBtn"><span class="sixty">60</span>&nbsp;&nbsp;
                                         <span class="getCodeText i18n" name="getCode">Get Code</span>
                                     </button>
                                 </li>
                                 <li>
                                     <input type="password" id='phonePass' class="form-control i18n-input phonePassword" name="phonePassword" value="" selectname="passwordInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips PhonePassword_tips i18n' name="passwordNotEmpty">* 密码不能为空</span>
-                                    <span class='ty-color input_tips errPhonePass_tips i18n' name="PasswordStructure">* 8-16位 由字母(区分大小写),数字，符号组成</span>
+                                    <span class='ty-color input_tips PhonePassword_tips i18n' name="passwordNotEmpty">* Confirm Password Can Not Be Blank</span>
+                                    <span class='ty-color input_tips errPhonePass_tips i18n' name="PasswordStructure">* 8-16 Bits are composed of letters (case-sensitive),numbers,symbols</span>
                                     <div id="phoneLevel" class="phone-pw-strength pw-strength">
                                         <div class="pw-bar"></div>
                                         <div class="pw-bar-on"></div>
@@ -182,8 +182,8 @@
                                 </li>
                                 <li>
                                     <input type="password" class="form-control i18n-input againPhonePassword" name="againPhonePassword" value="" selectname="againPasswordInput" selectattr="placeholder">
-                                    <span class='ty-color input_tips phoneAgainPassword_tips i18n' name="confirmPasswordNotEmpty">* 确认密码不能为空</span>
-                                    <span class='ty-color input_tips phoneSamePassword_tips i18n' name="TwoPassword">* 两次密码必须相同</span>
+                                    <span class='ty-color input_tips phoneAgainPassword_tips i18n' name="confirmPasswordNotEmpty">* Confirm Password Can Not Be Blank</span>
+                                    <span class='ty-color input_tips phoneSamePassword_tips i18n' name="TwoPassword">* Two Passwords Must Be The Same</span>
                                 </li>
                             </ul>
                             <a href="javascript:;" class="btn btn-lg btn-success register phoneRegisterBtn login i18n" name="register">Register</a>
@@ -194,7 +194,7 @@
         </div>
     </div>
 </section>
-<!--页脚-->
+<!--footer-->
 <section class="sections footer">
     <div class="container">
 

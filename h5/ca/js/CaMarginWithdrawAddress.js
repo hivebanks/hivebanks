@@ -1,5 +1,5 @@
 $(function () {
-//    //获取token
+//    //get token
     var token = GetCookie('ca_token');
     GetCaAccount();
 
@@ -33,7 +33,7 @@ $(function () {
     }
     GetWithdrawFun();
 
-    //添加提现地址
+    //Add withdrawal address
     $('.addWithdrawAddressBtn').click(function () {
         var bit_address = $('#withdrawAddress').val(), fun_pass = $('#fundPassword').val();
         if(bit_address.length <= 0){

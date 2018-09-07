@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetUsCookie('user_token');
     GetUsAccount();
 
@@ -23,7 +23,7 @@ $(function () {
         return;
     });
 
-    //全部提现
+    //fullWithdrawal
     $('.allWithdraw').click(function () {
         $('.base_amount_input').val(us_base_amount);
         $('.bit_amount_input').val(us_base_amount * rate);
@@ -71,7 +71,7 @@ $(function () {
         return;
     });
 
-    //锁定充值金额
+    //lockRechargeAmount
     $('.lockAmountBtn').click(function () {
         var bit_amount = $('.bit_amount_input').val(),
             base_amount = $('.base_amount_input').val(),

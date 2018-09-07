@@ -1,12 +1,12 @@
 $(function(){
-    //获取token
+    //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
 
-    //获取基准类型
+    //Get the baseline type
     var base_type = GetCookie('benchmark_type');
 
-    //获取用户充值已处理订单列表
+    //Get user recharged processed order list
     var api_url = 'log_us_withdraw.php', type = '2', tr = '', tx_hash = [], limit = 10, offst = 0;
     RechargeWithdrawCodeQuery(token, api_url, type, function (response){
 
@@ -24,7 +24,7 @@ $(function(){
                     '<td><span>' + data[i].bit_address + '</span></td>' +
                     '<td><span>' + data[i].tx_time + '</span></td>' +
                     '<td><input type="text" class="form-control tx_hash"></td>' +
-                    '<td><span class="i18n" name="processed">已处理</span></td>' +
+                    '<td><span class="i18n" name="processed">processed</span></td>' +
                     '</tr>'
             });
             $('#withdrawPendingTable').html(tr);

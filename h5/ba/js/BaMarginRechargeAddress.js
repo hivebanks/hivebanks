@@ -1,9 +1,9 @@
 $(function () {
-   //获取token
+   //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
 
-    //获取充值地址get_bit_address_recharge.php
+    //get recharge address
     function GetRechargeFun(){
         var tr = '', bind_agent_id = '', utime = '';
         GetMarginAddress(token, function (response) {

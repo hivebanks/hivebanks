@@ -1,11 +1,11 @@
 $(function () {
-// 获取用户token
+// get user token
     var token = GetCookie('ba_token');
 
-    //获取基准类型
+    //Get the baseline type
     var benchmark_type = GetCookie('benchmark_type');
 
-// 获取用户基本信息
+// get Basic user information
     GetBasicInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -51,7 +51,7 @@ $(function () {
         return;
     });
 
-    //获取绑定信息
+    //Get binding information
     var cellphone = '', funPass = '';
     GetBindInformation(token, function (response) {
         if(response.errcode == '0'){
@@ -79,7 +79,7 @@ $(function () {
         window.location.href = 'BaMarginWithdrawAddress.html';
     });
     //
-    // //提现保证金
+    // //Withdrawal margin
     // $('.withdraw_amount').click(function () {
     //     if(funPass != 'pass_hash'){
     //         $('#goBindFundPass').modal('show');
@@ -88,7 +88,7 @@ $(function () {
     //     window.location.href = 'BaWithdrawMargin.html';
     // });
 
-    //修改昵称
+    //change username
     $('.modifyNameBtn').click(function () {
         var ba_account = $('#nickName').val();
         if (ba_account.length <= 0) {
@@ -109,7 +109,7 @@ $(function () {
         })
     });
 
-// 账户变动记录查询
+// Account change record inquiry
     var api_url = 'log_balance.php', limit = 10, offset = 0, n = 0;
 
     function AccountChange(token, limit, offset, api_url) {
@@ -152,7 +152,7 @@ $(function () {
 
     AccountChange(token, limit, offset, api_url);
 
-    //    分页
+    //Pagination
     function Page(pageCount) {
         $('.change_log_code').pagination({
             pageCount: pageCount,

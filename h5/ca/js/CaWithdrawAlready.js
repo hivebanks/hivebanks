@@ -4,7 +4,7 @@ $(function(){
     var ca_currency = GetUsCookie('ca_currency');
     GetCaAccount();
 
-    //获取用户充值已处理订单列表
+    //Get user recharged processed order list
     var api_url = 'log_us_withdraw.php', type = '2', tr = '', bit_address=[], tx_hash = [], limit = 10, offst = 0;
     GetRechargeWithdrawList(api_url, token, type, function (response){
 

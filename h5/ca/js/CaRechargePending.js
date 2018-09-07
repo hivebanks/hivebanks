@@ -1,7 +1,7 @@
 $(function () {
     var token = GetCookie('ca_token'), limit = 10, offset = 0;
     GetCaAccount();
-    // 获取用户基本信息
+    // get Basic user information
     GetCaInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -11,7 +11,7 @@ $(function () {
     }, function (response) {
         return;
     });
-    //获取用户充值待处理订单列表
+    //Get a list of user refill pending orders
     var api_url = 'log_us_recharge.php', type = '1', tr = '', bit_address = [], tx_hash = [];
     GetRechargeWithdrawList(api_url, token, type, function (response) {
         if (response.errcode == '0') {

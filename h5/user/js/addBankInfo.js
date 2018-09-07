@@ -1,13 +1,14 @@
 $(function () {
-    //获取用户token
+    //token
     var token = GetCookie('user_token');
     GetUsAccount();
 
-    //获取图片
+    //Get image
     var img = decodeURIComponent(window.location.search.split('=')[1]);
     $('.bankImg').attr('src', img);
     var start = img.indexOf('/'), end = img.indexOf('.');
-    //确认信息添加银行卡
+
+    //Confirmation information to add a bank card
     var cash_type = GetCookie('ca_currency');
     $('.addBankBtn').click(function () {
         var cash_channel = img.substring(start + 1, end), cash_address = $('#BankCard').val(),

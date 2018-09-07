@@ -4,7 +4,7 @@ $(function () {
     var ca_currency = GetUsCookie('ca_currency');
     GetCaAccount();
 
-    // 获取用户基本信息
+    // get Basic user information
     GetCaInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.bit_type').text(response.bit_type);
@@ -16,7 +16,7 @@ $(function () {
         return;
     });
 
-    //获取用户提现待处理订单列表
+    //Get a list of user withdrawal pending orders
     var api_url = 'log_us_withdraw.php', type = '1', bit_address = [], tr = '';
     GetRechargeWithdrawList(api_url, token, type, function (response) {
         if (response.errcode == '0') {
@@ -49,7 +49,7 @@ $(function () {
         GetErrorCode(response.errcode);
         return;
     });
-    //提现请求确认处理
+    //Withdrawal request confirmation processing
     var qa_id = '', _this = '', transfer_tx_hash = '';
     $(document).on('click', '.confirmBtn', function () {
         transfer_tx_hash = $(this).parents('.withdrawPendingList').find('.transfer_tx_hash').val();

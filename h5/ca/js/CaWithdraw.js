@@ -1,5 +1,5 @@
 $(function () {
-    //获取token
+    //get token
     var token = GetUsCookie('user_token');
     GetUsAccount();
     var benchmark_type = GetUsCookie('benchmark_type');
@@ -14,7 +14,7 @@ $(function () {
         if(response.errcode == '0'){
             var data = response.rows, srcArr = [], div = '';
             if(data == false){
-                $('.bankBox').html('<h5 class="i18n" name="noData">暂无数据</h5>').css('justify-content', 'center');
+                $('.bankBox').html('<h5 class="i18n" name="noData">noData</h5>').css('justify-content', 'center');
                 execI18n();
                 return;
             }
@@ -42,7 +42,7 @@ $(function () {
     $(document).on('click', '.bankItem', function () {
         var ca_channel = $(this).find('img').attr('title');
 
-        //获取us_account_id
+        //get us_account_id
         var us_account_id = '';
         GetUsAccountId(token, ca_channel, function (response){
             if(response.errcode == '0'){

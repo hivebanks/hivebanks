@@ -17,7 +17,7 @@
 <!-- loading -->
 <iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
         scrolling="no"></iframe>
-<!--导航-->
+<!--nav-->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -49,7 +49,7 @@
         </div>
     </div>
 </nav>
-<!--面包屑-->
+<!--Bread crumbs-->
 <div class="container margin-top-1">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -60,25 +60,26 @@
         </div>
     </div>
 </div>
-<!--充值处理-->
+<!--recharge progress-->
 <section id="rechargePending" class="content section-top-2">
     <div class="container">
-        <!--充值待处理标题-->
+
+        <!--Recharge pending title-->
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="pending-title">
-                    <h3 class="pcTitle i18n" name="alreadyProcessed">Recharge Pending</h3>
-                    <h5 class="phoneTitle i18n" name="alreadyProcessed">Recharge Pending</h5>
+                    <h3 class="pcTitle i18n" name="processed">processed</h3>
+                    <h5 class="phoneTitle i18n" name="processed">processed</h5>
                 </div>
                 <div>
                     <p class="font-size-14 align-right">
-                        <a href="BaMarginRechargePending.html" class="i18n" name="ReturnPending">返回待处理</a>
+                        <a href="BaMarginRechargePending.html" class="i18n" name="ReturnPending">ReturnPending</a>
                     </p>
                 </div>
             </div>
         </div>
 
-        <!--充值待处理内容-->
+        <!--Recharge pending content-->
 
         <div class="row margin-top-2">
             <div class="col-md-12 col-sm-12">
@@ -86,18 +87,18 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th><span class="i18n" name="recharger">充值者</span></th>
-                            <th><span class="i18n" name="amount">数量</span></th>
-                            <th><span class="i18n" name="tradingHash">交易hash</span></th>
-                            <th><span class="i18n" name="date">时间</span></th>
-                            <th><span class="i18n" name="operating">操作</span></th>
+                            <th><span class="i18n" name="recharger">recharger</span></th>
+                            <th><span class="i18n" name="amount">amount</span></th>
+                            <th><span class="i18n" name="tradingHash">tradingHash</span></th>
+                            <th><span class="i18n" name="date">date</span></th>
+                            <th><span class="i18n" name="operating">operating</span></th>
                         </tr>
                         </thead>
                         <tbody id="marginRechargeAlreadyTable">
                         <tr>
                             <td colspan="6">
                                 <img src="../assets/img/loading.gif" alt="">
-                                <span class="i18n" name="tryingToLoad">努力加载中...</span>
+                                <span class="i18n" name="tryingToLoad">Trying To Load...</span>
                             </td>
                         </tr>
                         </tbody>
@@ -115,17 +116,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">确定处理此交易</h4>
+                <h4 class="modal-title i18n" name="makeSureTransaction" id="myModalLabel">makeSureTransaction</h4>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger i18n" name="cancel" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-success i18n againConfirmBtn" name="enable">确定</button>
+                <button type="button" class="btn btn-danger i18n" name="cancel" data-dismiss="modal">cancel</button>
+                <button type="button" class="btn btn-success i18n againConfirmBtn" name="determine">determine</button>
             </div>
         </div>
     </div>
 </div>
 
-<!--页脚-->
+<!--footer-->
 <section class="sections footer">
     <div class="container">
 

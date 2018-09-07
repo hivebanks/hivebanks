@@ -9,9 +9,9 @@ $(function () {
             $('.leave .progress-bar').css('width', security_level * 10 + '%');
             $('.levelNum').text(security_level);
 
-            // 安全等级
+            // Security Level
             $.each(data, function (i, val) {
-                //手机是否绑定
+                //Whether the phone is bound
                 if (data[i].bind_name == 'cellphone' && data[i].bind_flag == '1') {
                     cellphone = 'cellphone';
                     $('.phoneTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
@@ -20,7 +20,7 @@ $(function () {
                     $('.phoneIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
-                //邮箱是否绑定
+                //Whether the email is bound
                 if (data[i].bind_name == 'email' && data[i].bind_flag == '1') {
                     $('.emailTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.emailBind').fadeOut('fast');
@@ -28,7 +28,7 @@ $(function () {
                     $('.emailIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
-                //google是否认证
+                //Whether google is certified
                 if (data[i].bind_name == 'GoogleAuthenticator' && data[i].bind_flag == '1') {
                     $('.googleTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.googleBind').fadeOut('fast');
@@ -36,7 +36,7 @@ $(function () {
                     $('.googleIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
-                //密码hash是否绑定
+                //Whether the password hash is bound
                 if (data[i].bind_name == 'pass_hash' && data[i].bind_flag == '1') {
                     $('.fundPasswordTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.fundPasswordBind').fadeOut('fast');
@@ -44,7 +44,7 @@ $(function () {
                     $('.fundPasswordIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
-                //身份认证是否绑定
+                //Whether identity authentication is bound
                 if (data[i].bind_name == 'idPhoto' && data[i].bind_flag == '1') {
                     $('.authenticationTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.authenticationBind').fadeOut('fast');
@@ -61,7 +61,7 @@ $(function () {
         return;
     });
 
-    //前往资金密码绑定
+    //前往Fund password binding
     $('.fundPasswordBind, .fundPasswordModify').click(function () {
         if (cellphone != 'cellphone') {
             $('#goBindCellPhone').modal('show');
@@ -79,7 +79,7 @@ $(function () {
         }
     });
 
-    // 登录记录查询
+    // Login record query
     var login_api_url = 'log_login.php', limit = 10, offset = 0, n = 0;
 
     function GetLoginCode(token, limit, offset, login_api_url) {
@@ -119,7 +119,7 @@ $(function () {
     };
     GetLoginCode(token, limit, offset, login_api_url);
 
-//    分页
+//    Pagination
     function Page(pageCount) {
         $('.login_log_code').pagination({
             pageCount: pageCount,
