@@ -10,14 +10,18 @@ $(function () {
             LayerFun("pleaseEnterRechargeAmount");
             return;
         }
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
         RechargeManage(token, base_amount, function (response) {
             if(response.errcode == '0'){
+                ActiveClick($this, btnText);
                 LayerFun('submitSuccess');
                 $('.rechargeFormRow').hide();
                 $('.rechargeAddressRow').show();
                 $('.addressInput').val(response.bit_address);
             }
         }, function (response) {
+            ActiveClick($this, btnText);
             GetErrorCode(response.errcode);
         })
     });
