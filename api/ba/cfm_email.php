@@ -100,7 +100,7 @@ if($now_time < $timestamp)
    if($bind_email && ($email_confirm =='注册')){
     header('Content-Type:text/html;charset=utf-8');
        $url_r = Config::H5_BA_URL_R ;
-    header("Location:".$url_r);
+    header("Location:".$url_);
       exit_ok();
     }
       if($bind_email && ($email_confirm =='绑定')){
