@@ -1,6 +1,7 @@
 $(function () {
     //get user token
     var token = GetCookie('ba_token');
+    var id = GetCookie("ba_id");
     GetBaAccount();
 
     //Get binding information，Whether to bind
@@ -241,6 +242,7 @@ $(function () {
 
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
+        formData.append("id", id);
         src1 = UpLoadImg(formData);
     });
     //Upload back
@@ -251,6 +253,7 @@ $(function () {
         }
         var formData = new FormData($("#form1")[0]);
         formData.append("la_id", la_id);
+        formData.append("id", id);
         src2 = UpLoadImg(formData);
     });
 

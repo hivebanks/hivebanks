@@ -182,21 +182,21 @@ $(function () {
 
     //ID upload binding
     //Get configuration file
-    var url = getRootPath();
-    var config_api_url = '';
-    $.ajax({
-        url: url + "/h5/assets/json/config_url.json",
-        async: false,
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            config_api_url = data.api_url;
-            config_h5_url = data.h5_url;
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-        }
-    });
+    // var url = getRootPath();
+    // var config_api_url = '';
+    // $.ajax({
+    //     url: url + "/h5/assets/json/config_url.json",
+    //     async: false,
+    //     type: "GET",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         config_api_url = data.api_url;
+    //         config_h5_url = data.h5_url;
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //
+    //     }
+    // });
 
     //Return image information
     function UpLoadImg(formData) {

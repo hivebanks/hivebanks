@@ -19,6 +19,7 @@ $(function () {
             $('.count_base_recharge').text(response.count_base_recharge);
             $('.count_base_withdraw').text(response.count_base_withdraw);
             SetCookie('ba_account', response.ba_account);
+            SetCookie('ba_id', response.ba_id);
             if(benchmark_type == response.bit_type) {
                 $('.recharge_amount').remove();
                 $('.withdraw_amount').remove();
