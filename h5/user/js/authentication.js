@@ -77,7 +77,7 @@ $(function () {
                     //Upload ID card
                     if (data[i].bind_name == 'idPhoto' && data[i].bind_flag == '1') {//Successful ID card upload
                         idPhoto = data[i].bind_name;
-                        // $('.uploadBindNot').text('身份证已上传').show();
+                        $('.uploadBindNot').remove();
                         $('.idPhotoFormBox').remove();
                         $('.idPhotoBindBtn').remove();
                         $('.uploadUnderReview').remove();
