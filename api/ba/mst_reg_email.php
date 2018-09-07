@@ -85,16 +85,16 @@ if ($teltime != 0) {
         $email_used = upd_ba_log_bind_info($ba_id);
     }
 }
-//$teltime = strtotime($rec['ctime']) +15*60 ;
-//if($teltime > $timestamp ){
-//    //判断是否可以进行注册
-//    if($rec && $rec['bind_info'] == $email){
-//        exit_error('121','待确认，请前往邮箱验证');
-//    }
-//}else{
-//    //把本次的绑定的数据进行无效操作
-//    $email_used = upd_ba_log_bind_info($ba_id);
-//}
+$teltime = strtotime($rec['ctime']) +15*60 ;
+if($teltime > $timestamp ){
+    //判断是否可以进行注册
+    if($rec && $rec['bind_info'] == $email){
+        exit_error('121','待确认，请前往邮箱验证');
+    }
+}else{
+    //把本次的绑定的数据进行无效操作
+    $email_used = upd_ba_log_bind_info($ba_id);
+}
 
 // 绑定参数设定
 $data_log_bind['ba_id'] = $ba_id;
