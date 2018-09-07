@@ -9,7 +9,7 @@ $(function () {
             $.each(data, function (i, val) {
                 if (data[i].bind_type == 'file' && data[i].bind_name == 'idPhoto') {
                     bind_type = "<td><span class='i18n' name='fileBind'></span></td>";
-                    bind_name = "<td><span class='bind_name i18n' name='idPhoto'>" + data[i].bind_name + "</span></td>";
+                    bind_name = "<td><span class='i18n' name='idPhoto'>" + data[i].bind_name + "</span></td>";
                     bind_info = "<td>" +
                         "<a href='javascript:;' class='look i18n' name='look'>" + bind_info + "</a>" +
                         "<span class='none idPhotoSrc bind_info'>" + data[i].bind_info + "</span>" +
