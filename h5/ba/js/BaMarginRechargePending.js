@@ -52,12 +52,13 @@ $(function () {
         if (DisableClick($this)) return;
         MarginRechargeConfirm(token, type, qa_id, function (response) {
             if(response.errcode == '0'){
+                LayerFun("suc_processing");
                 ActiveClick($this, btnText);
                 $this.closest('.marginRechargeItem').remove();
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            LayerFun(response.errcode);
+            LayerFun("err_processing");
         })
     })
 });
