@@ -66,7 +66,7 @@ var url = getRootPath();
 
 //Get failed error code prompt
 function GetErrorCode(code) {
-    $.getJSON( url+"/assets/json/errcode.json", function (response){
+    $.getJSON( url+"/h5/assets/json/errcode.json", function (response){
         $.each(response, function (i, val){
             if(response[i].code == code){
                 layer.msg('<p class="i18n" name="'+ code +'">'+ response[i].code_value +'</p>');

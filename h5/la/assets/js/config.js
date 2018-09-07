@@ -54,7 +54,7 @@ $(function () {
                         return;
                     }
                     $.each(data, function (i, val) {
-                        if(data[i].type == '1'){
+                        if(data[i].type == '1' && data[i].status == '1'){
                             $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .underReviewFile').remove();
                             $('.alreadyOpenFile').show();
