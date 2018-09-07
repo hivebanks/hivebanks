@@ -536,7 +536,7 @@ $(function () {
     var url = getRootPath();
     var config_api_url = '', config_h5_url = '';
     $.ajax({
-        url: url + "h5/assets/json/config_url.json",
+        url: url + "/h5/assets/json/config_url.json",
         async: false,
         type: "GET",
         dataType: "json",
