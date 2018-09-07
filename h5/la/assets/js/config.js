@@ -595,8 +595,7 @@ $(function () {
                 }
             },
             error: function (response) {
-                LayerFun('imgUploadFail');
-                return;
+                layer.msg(response.msg);
             }
         });
         return src;
