@@ -527,6 +527,7 @@ $(function () {
     GetLaId(token, function (response) {
         if (response.errcode == '0') {
             la_id = response.la_id;
+            console.log(la_id);
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -534,6 +535,7 @@ $(function () {
 
     //Upload image
     $('#uploadFile').on('change', function () {
+        console.log(la_id);
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
             // Modify the address attribute of the picture here
@@ -560,7 +562,7 @@ $(function () {
     }
 
     //Return image information
-    var url = getRootPath();
+    // var url = getRootPath();
     // var config_api_url = '', config_h5_url = '';
     // $.ajax({
     //     url: url + "/h5/assets/json/config_url.json",
