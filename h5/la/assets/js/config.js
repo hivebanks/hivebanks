@@ -488,6 +488,7 @@ $(function () {
         var api_url = '';
         if (option_src == '') {
             LayerFun('pleaseUploadAnImageOfTheSelectedType');
+            return;
         }
         if ($(this).hasClass('ca')) {
             api_url = 'set_ca_channel.php';
