@@ -42,7 +42,7 @@ $(function () {
             GetDataEmpty('userKyc', '6');
             return;
         }
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         GetDataFail('userKyc', '6');
         return;
     });
@@ -64,7 +64,7 @@ $(function () {
         }, function (response) {
             layer.msg('<span class="i18n" name="processingFailure"></span>');
             execI18n();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -82,7 +82,7 @@ $(function () {
         }, function (response) {
             layer.msg('<span class="i18n" name="processingFailure"></span>');
             execI18n();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 

@@ -15,7 +15,7 @@ $(function () {
             $('.time').text(data[0].tx_time);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     })
 
 });

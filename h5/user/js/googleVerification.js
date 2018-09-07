@@ -16,7 +16,7 @@ $(function () {
               window.location.href = 'security.html';
            }
        }, function (response) {
-           GetErrorCode(response.errcode);
+           LayerFun(response.errcode);
        })
     });
 });

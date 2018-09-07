@@ -54,7 +54,7 @@ $(function () {
             })
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         if (response.errcode == '114') {
             window.location.href = 'CaLogin.html';
         }
@@ -111,7 +111,7 @@ $(function () {
 
         }, function (response) {
             execI18n();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             if (response.errcode == '114') {
                 window.location.href = 'CaLogin.html';
             }

@@ -47,7 +47,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('baRecharge', '8');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -111,7 +111,7 @@ $(function () {
                     ShowDataFun(rechargeList);
                 }
             }, function (response) {
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
                 GetDataFail('baRecharge', '8');
                 return;
             })

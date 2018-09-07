@@ -44,7 +44,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         if(response.errcode == '114'){
             window.location.href = 'BaLogin.html';
         }
@@ -66,7 +66,7 @@ $(function () {
             })
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -104,7 +104,7 @@ $(function () {
                 return;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -144,7 +144,7 @@ $(function () {
                 n++;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             GetDataFail('accountChangeTable', '5');
             return;
         })

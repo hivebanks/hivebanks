@@ -39,7 +39,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('rechargePendingTable', '5');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -67,7 +67,7 @@ $(function () {
             ActiveClick($this, btnText);
             layer.msg('<p class="i18n" name="err_processing">处理失败</p>');
             execI18n();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     })

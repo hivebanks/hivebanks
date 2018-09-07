@@ -46,7 +46,7 @@ $(function () {
                 $('#phone').val('');
                 $('#phoneCode').val('');
                 $('#password').val('');
-                GetErrorCode('bindSuccess');
+                LayerFun('bindSuccess');
                 if(wi_bindPhone != 'wi_bindPhone'){
                     window.location.href = 'security.html';
                 }else {
@@ -55,7 +55,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             GetImgCode();
         })
     })

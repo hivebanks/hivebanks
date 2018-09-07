@@ -60,7 +60,7 @@ $(function () {
             $("#userBindInfo").html(tr);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         GetDataEmpty('userBindInfo', '5');
         return;
         // tr += '<tr>' +
@@ -131,7 +131,7 @@ $(function () {
                 execI18n();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     }
     GetBlackListFun();
@@ -161,7 +161,7 @@ $(function () {
         }, function (response) {
             layer.msg('<span class="i18n" name="setupFailed"></span>');
             execI18n();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 

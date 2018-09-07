@@ -173,7 +173,7 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         }
     }, function (response) {
         GetImgCode();
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 };

@@ -17,7 +17,7 @@ $(function () {
                 $('.api_key_value').text(response.option_value);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             LayerFun('updateFailed');
             execI18n();
             return;
@@ -36,7 +36,7 @@ $(function () {
             $('.api_key_value').text(data.api_key);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -89,7 +89,7 @@ $(function () {
             }, "json");
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //set config serve
@@ -141,7 +141,7 @@ $(function () {
     //         $('#TemplateCode').val(data.TemplateCode);
     //     }
     // }, function (response) {
-    //     GetErrorCode(response.errcode);
+    //     LayerFun(response.errcode);
     //     return;
     // });
 
@@ -158,7 +158,7 @@ $(function () {
     //         }
     //     }, function (response) {
     //         ActiveClick($this, btnText);
-    //         GetErrorCode(response.errcode);
+    //         LayerFun(response.errcode);
     //         return;
     //     });
     // });
@@ -174,7 +174,7 @@ $(function () {
     //         $('#email_name').val(data.name);
     //     }
     // }, function (response) {
-    //     GetErrorCode(response.errcode);
+    //     LayerFun(response.errcode);
     //     return;
     // });
 
@@ -191,7 +191,7 @@ $(function () {
     //         }
     //     }, function (response) {
     //         ActiveClick($this, btnText);
-    //         GetErrorCode(response.errcode);
+    //         LayerFun(response.errcode);
     //         return;
     //     });
     // });
@@ -284,7 +284,7 @@ $(function () {
                 SetSwitchStyleSuc(_this);
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -352,7 +352,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('setupFailed');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -375,7 +375,7 @@ $(function () {
                 $('.alreadyAddBaTypeBox').html(li);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -416,7 +416,7 @@ $(function () {
         }, function (response) {
             LayerFun('failedToDelete');
             return;
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -439,7 +439,7 @@ $(function () {
                 $('.alreadyAddCaTypeBox').html(li);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
 
@@ -479,7 +479,7 @@ $(function () {
         }, function (response) {
             LayerFun('failedToDelete');
             return;
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -499,7 +499,7 @@ $(function () {
                 }
             }, function (response) {
                 LayerFun('setupFailed');
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
             })
         } else {
             api_url = 'set_ba_bit_type.php';
@@ -511,7 +511,7 @@ $(function () {
                 }
             }, function (response) {
                 LayerFun('setupFailed');
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
             })
         }
     });

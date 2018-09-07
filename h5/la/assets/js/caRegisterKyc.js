@@ -33,7 +33,7 @@ $(function () {
             GetDataEmpty('caRegisterKyc', '5');
             return;
         }
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -49,7 +49,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('processingFailure');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -65,7 +65,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('processingFailure');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

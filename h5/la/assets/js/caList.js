@@ -18,7 +18,7 @@ $(function () {
             $('#caList').html(tr);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 

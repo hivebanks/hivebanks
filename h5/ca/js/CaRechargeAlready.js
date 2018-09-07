@@ -24,7 +24,7 @@ $(function(){
         }
     },function (response){
         GetDataFail('rechargePendingTable');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
         // tr += '<tr>' +
         //     '<td colspan="6">' + '数据加载失败' + '</td>' +

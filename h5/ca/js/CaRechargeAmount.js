@@ -30,7 +30,7 @@ $(function () {
             $('.base_amount').val(us_recharge_bit_amount / rate);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -64,7 +64,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

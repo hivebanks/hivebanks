@@ -26,7 +26,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('userList', '4');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //跳转用户详情信息

@@ -103,7 +103,7 @@ $(function () {
                 dataChart.push(dataChartObj);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
     GetAssetsReportFun();

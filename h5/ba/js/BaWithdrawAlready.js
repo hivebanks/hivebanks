@@ -32,7 +32,7 @@ $(function(){
         }
     },function (response){
         GetDataFail('withdrawPendingTable');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 });

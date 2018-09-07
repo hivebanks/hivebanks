@@ -83,7 +83,7 @@ $(function () {
             if(response.errcode == '0'){
                 window.location.href = 'login.html';
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -111,7 +111,7 @@ $(function () {
             if(response.errcode == '0'){
                 window.location.href = 'login.html';
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     })

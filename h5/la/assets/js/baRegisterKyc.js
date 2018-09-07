@@ -34,7 +34,7 @@ $(function () {
         if (response.errcode == '101') {
             GetDataEmpty('baRegisterKyc', '5');
         }
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -50,7 +50,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('processingFailure');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -67,7 +67,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('processingFailure');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

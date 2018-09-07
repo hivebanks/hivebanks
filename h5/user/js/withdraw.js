@@ -49,7 +49,7 @@ $(function () {
             $('#baWithdrawList').html(li);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -68,7 +68,7 @@ $(function () {
             });
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //Click to select cash
@@ -92,7 +92,7 @@ $(function () {
             $('.bit_amount').val(response.withdraw_rate);
         }
     }, function (response){
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //Get user account balance display
@@ -108,7 +108,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         if (response.errcode == '114') {
             window.location.href = 'login.html';
         }

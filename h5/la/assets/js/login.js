@@ -34,7 +34,7 @@ $(function () {
         }, function (response) {
             ActiveClick(_this, _text);
             LayerFun('loginFailed');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     })
 });

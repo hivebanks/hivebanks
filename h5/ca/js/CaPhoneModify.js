@@ -48,7 +48,7 @@ $(function () {
         }, function (response) {
             ActiveClick($this, btnText);
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });

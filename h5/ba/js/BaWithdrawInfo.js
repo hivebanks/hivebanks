@@ -15,7 +15,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     })
 

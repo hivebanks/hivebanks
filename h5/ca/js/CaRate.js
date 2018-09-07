@@ -32,7 +32,7 @@ $(function () {
                 })
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
 
@@ -72,7 +72,7 @@ $(function () {
                 }
             }, function (response) {
                 ActiveClick($this, btnText);
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
                 return;
             });
             return;
@@ -90,7 +90,7 @@ $(function () {
                 }
             }, function (response) {
                 ActiveClick($this, btnText);
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
                 return;
             });
         }

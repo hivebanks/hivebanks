@@ -23,7 +23,7 @@ $(function () {
         }, function (response) {
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
-            // GetErrorCode(response.errcode);
+            // LayerFun(response.errcode);
         })
     });
 

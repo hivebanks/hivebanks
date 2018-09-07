@@ -25,7 +25,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

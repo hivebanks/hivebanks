@@ -32,7 +32,7 @@ $(function () {
                 window.location.href = 'BaAccount.html';
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 });

@@ -171,7 +171,7 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         }
     }, function (response) {
         GetImgCode();
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         $this.attr("disabled", false);
         $('.sixty').fadeOut('fast');
         $('.getCodeText').attr('name', 'getCode');

@@ -20,7 +20,7 @@ $(function(){
             $('.changePay').append(li);
         }
     }, function (response){
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
     //选择代理类型

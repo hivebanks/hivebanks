@@ -16,7 +16,7 @@ $(function () {
             if (response.errcode == '114') {
                 window.location.href = 'CaLogin.html';
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

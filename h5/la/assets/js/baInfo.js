@@ -73,7 +73,7 @@ $(function () {
         }
     }, function (response) {
         if (response.errcode == '-1') {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             GetDataFail('baBindInfo', '5');
             return;
         }
@@ -105,7 +105,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('setupFailed');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

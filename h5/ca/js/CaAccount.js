@@ -15,7 +15,7 @@ $(function(){
             SetCookie('ca_account', response.ca_account);
         }
     }, function (response){
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //change username
@@ -37,7 +37,7 @@ $(function(){
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -57,7 +57,7 @@ $(function(){
             })
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -101,7 +101,7 @@ $(function(){
                 }
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     };

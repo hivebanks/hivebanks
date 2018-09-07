@@ -104,7 +104,7 @@ $(function () {
                 });
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
 
@@ -130,7 +130,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -161,7 +161,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -229,7 +229,7 @@ $(function () {
             la_id = response.la_id;
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     /** Upload picture - front
@@ -275,7 +275,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 

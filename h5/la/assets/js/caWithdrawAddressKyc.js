@@ -34,7 +34,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('caWithdrawAddressKyc', '5');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -51,7 +51,7 @@ $(function () {
                 return;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -69,7 +69,7 @@ $(function () {
                 return;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

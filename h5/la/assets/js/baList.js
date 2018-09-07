@@ -25,7 +25,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('baList', '4');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 

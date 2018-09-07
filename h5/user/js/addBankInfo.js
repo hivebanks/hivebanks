@@ -40,7 +40,7 @@ $(function () {
                 window.location.href = 'manageBankList.html';
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     })
 });

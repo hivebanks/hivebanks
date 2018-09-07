@@ -26,7 +26,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('marginRechargePendingTable', '4');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 

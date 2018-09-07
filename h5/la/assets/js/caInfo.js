@@ -63,7 +63,7 @@ $(function () {
         }
     }, function (response) {
         if (response.errcode == '-1') {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             GetDataFail('caBindInfo', '5');
             return;
         }
@@ -94,7 +94,7 @@ $(function () {
                 return;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             LayerFun('setupFailed');
             return;
         })

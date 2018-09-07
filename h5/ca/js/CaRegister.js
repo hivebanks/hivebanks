@@ -131,7 +131,7 @@ $(function () {
             }
 
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
@@ -293,7 +293,7 @@ $(function () {
                 $('.phoneCode_expired').fadeIn('fast');
             }
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });

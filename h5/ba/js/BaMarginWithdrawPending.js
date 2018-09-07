@@ -42,7 +42,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('marginRechargePendingTable', '5');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -63,7 +63,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     })
 });
