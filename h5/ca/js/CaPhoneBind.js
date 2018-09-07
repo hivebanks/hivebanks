@@ -52,7 +52,7 @@ $(function () {
                 window.location.href = 'login.html';
             }
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     })

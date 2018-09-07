@@ -79,7 +79,7 @@ $(function () {
                 LayerFun('sendSuccess');
             }, function (response) {
                 LayerFun('sendFail');
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
                 return;
             });
         }
@@ -127,7 +127,7 @@ $(function () {
                 $('.noEmailTips').fadeIn('fast');
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -252,7 +252,7 @@ $(function () {
             if(response.errcode == '112'){
                 $('.noPhonelTips').fadeIn();
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });

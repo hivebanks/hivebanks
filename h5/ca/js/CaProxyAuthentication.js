@@ -15,11 +15,11 @@ $(function () {
             idNum = $('#IDCard').val(), pass_word_hash = hex_sha1($('#Password').val());
         AddAgencyType(token, ca_channel, card_nm, name, idNum, pass_word_hash, function (response) {
             if(response.errcode == '0'){
-                GetErrorCode('addBank');
+                LayerFun('setSuccess');
                 window.location.href = 'CaLookAgencyType.html';
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

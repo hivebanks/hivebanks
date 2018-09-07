@@ -162,7 +162,7 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     var country_code = $('.selected-dial-code').text().split("+")[1];
     var cellphone = $('#phone').val();
     if (cellphone == '') {
-        // GetErrorCode('phone');
+        // LayerFun('phone');
         return;
     }
     setTime($this);
@@ -171,7 +171,7 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
             LayerFun('sendSuccess');
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 };
 

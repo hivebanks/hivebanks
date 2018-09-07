@@ -27,7 +27,7 @@ $(function () {
        }, function (response) {
            ActiveClick($this, btnText);
            LayerFun("submitFail");
-           GetErrorCode(response.errcode);
+           LayerFun(response.errcode);
        })
     });
 

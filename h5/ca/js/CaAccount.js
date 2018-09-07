@@ -5,7 +5,6 @@ $(function(){
     //获取CA基本信息
     GetCaInformation(token, function (response){
         if(response.errcode == '0'){
-            // $('.ca_id').text(response.ca_id);
             $('.base_amount').text(response.base_amount);
             $('.ca_account').text(response.ca_account);
             $('.lock_amount').text(response.lock_amount);
@@ -13,9 +12,10 @@ $(function(){
             $('.count_recharge').text(response.count_recharge);
             $('.count_withdraw').text(response.count_withdraw);
             SetCookie('ca_account', response.ca_account);
+            SetCookie('ca_id', response.ca_id);
         }
     }, function (response){
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //change username
@@ -37,7 +37,7 @@ $(function(){
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -57,7 +57,7 @@ $(function(){
             })
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -101,7 +101,7 @@ $(function(){
                 }
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     };

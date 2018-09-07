@@ -61,14 +61,14 @@ $row = get_ba_id_by_variable($variable,$email);
 $rec = get_ba_log_bind_by_variable($variable,$email);
 if($row){
     // 判断是否注册完成
-    if ($row['us_id'] && $row['bind_flag'] == 1) {
+    if ($row['ba_id'] && $row['bind_flag'] == 1) {
         exit_error('105','已注册用户，请登陆！');
     }
 }
 
 // 判断是否注册
 if(!$rec['ba_id'] && ($email_confirm =='注册')){
-  exit_error('1112','This email address is not registered');
+  exit_error('112','This email address is not registered');
 }
 //判断是否可以进行验证
 if($rec['limt_time'] > $now_time){
@@ -94,9 +94,9 @@ if($now_time < $timestamp)
    $bind_email = ins_bind_ba_reg_bind_info($data_bind);
       $email_used = upd_ba_log_bind_info($ba_id);
       //获取当前绑定数
-      $savf_level = get_bind_acount($us_id);
+      $savf_level = get_bind_acount($ba_id);
       //安全等级提升
-      $upd_us_level = upd_savf_level($us_id,$savf_level);
+      $upd_us_level = upd_savf_level($ba_id,$savf_level);
    if($bind_email && ($email_confirm =='注册')){
     header('Content-Type:text/html;charset=utf-8');
        $url_r = Config::H5_BA_URL_R ;

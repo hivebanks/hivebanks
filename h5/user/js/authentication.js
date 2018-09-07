@@ -1,6 +1,7 @@
 $(function () {
     //token
     var token = GetCookie('user_token');
+    var id = getCookie('us_id');
     GetUsAccount();
 
     //Get binding information, whether to bind
@@ -103,7 +104,7 @@ $(function () {
                 });
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
 
@@ -130,7 +131,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -161,7 +162,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -182,21 +183,21 @@ $(function () {
 
     //ID upload binding
     //Get configuration file
-    var url = getRootPath();
-    var config_api_url = '';
-    $.ajax({
-        url: url + "/h5/assets/json/config_url.json",
-        async: false,
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            config_api_url = data.api_url;
-            config_h5_url = data.h5_url;
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-        }
-    });
+    // var url = getRootPath();
+    // var config_api_url = '';
+    // $.ajax({
+    //     url: url + "/h5/assets/json/config_url.json",
+    //     async: false,
+    //     type: "GET",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         config_api_url = data.api_url;
+    //         config_h5_url = data.h5_url;
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //
+    //     }
+    // });
 
     //Return image information
     function UpLoadImg(formData) {
@@ -229,7 +230,7 @@ $(function () {
             la_id = response.la_id;
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     /** Upload picture - front
@@ -246,6 +247,7 @@ $(function () {
 
         var formData = new FormData($("#form0")[0]);
         formData.append("la_id", la_id);
+        formData.append("id", id);
         src1 = UpLoadImg(formData);
     });
     //Upload back
@@ -257,6 +259,7 @@ $(function () {
         }
         var formData = new FormData($("#form1")[0]);
         formData.append("la_id", la_id);
+        formData.append("id", id);
         src2 = UpLoadImg(formData);
     });
 
@@ -271,7 +274,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 

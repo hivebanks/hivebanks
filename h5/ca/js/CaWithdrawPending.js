@@ -12,7 +12,7 @@ $(function () {
             $('.lock_amount').text(response.lock_amount);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -46,7 +46,7 @@ $(function () {
         }
     }, function (response) {
         GetDataFail('withdrawPendingTable', '5');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
     //Withdrawal request confirmation processing
@@ -77,7 +77,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     })

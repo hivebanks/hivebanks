@@ -41,7 +41,7 @@ $(function () {
         if (response.errcode == '404') {
             GetDataEmpty('baKyc', '5');
         }
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -58,7 +58,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('processingFailure');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -75,7 +75,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('processingFailure');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

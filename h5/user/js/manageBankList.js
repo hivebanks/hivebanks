@@ -32,7 +32,7 @@ $(function () {
             return;
         }
         GetDataFail('manageBankTable', '4');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -47,7 +47,7 @@ $(function () {
                 _this.closest('.bankItem').remove();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     })

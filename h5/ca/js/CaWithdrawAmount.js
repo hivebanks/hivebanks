@@ -19,7 +19,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -52,7 +52,7 @@ $(function () {
             $('.bit_amount_input').val(base_amount * rate);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //获取us_account_id
@@ -67,7 +67,7 @@ $(function () {
             return;
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -102,7 +102,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

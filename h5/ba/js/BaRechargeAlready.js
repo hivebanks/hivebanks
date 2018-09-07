@@ -30,7 +30,7 @@ $(function(){
         }
     },function (response){
         GetDataFail('rechargePendingTable', '6');
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 });

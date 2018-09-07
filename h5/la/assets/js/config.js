@@ -17,7 +17,7 @@ $(function () {
                 $('.api_key_value').text(response.option_value);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             LayerFun('updateFailed');
             execI18n();
             return;
@@ -36,7 +36,7 @@ $(function () {
             $('.api_key_value').text(data.api_key);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -54,28 +54,42 @@ $(function () {
                         return;
                     }
                     $.each(data, function (i, val) {
-                        if(data[i].type == '1'){
+                        if(data[i].type == '1' && data[i].status == '1'){
                             $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .underReviewFile').remove();
                             $('.alreadyOpenFile').show();
                             $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
+                        }else if(data[i].type == '1' && data[i].status == '0'){
+                            $('.radioFile').attr("disabled", true);
+                            $('.noOpenFile, .alreadyOpenFile').remove();
+                            $('.underReviewFile').show();
                         }
                         if(data[i].type == '2' && data[i].status == '1'){
+                            $('.radioSms').attr("disabled", true);
                             $('.noOpenSms, .underReviewSms').remove();
                             $('.alreadyOpenSms').show();
                             $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
+                        }else if(data[i].type == '2' && data[i].status == '0'){
+                            $('.radioSms').attr("disabled", true);
+                            $('.noOpenSms, .alreadyOpenSms').remove();
+                            $('.underReviewSms').show();
                         }
                         if(data[i].type == '3' && data[i].status == '1'){
+                            $('.radioEmail').attr("disabled", true);
                             $('.noOpenEmail, .underReviewEmail').remove();
                             $('.alreadyOpenEmail').show();
                             $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
+                        }else if(data[i].type == '3' && data[i].status == '0'){
+                            $('.radioEmail').attr("disabled", true);
+                            $('.noOpenEmail, .alreadyOpenEmail').remove();
+                            $('.underReviewEmail').show();
                         }
                     })
                 }
             }, "json");
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //set config serve
@@ -127,7 +141,7 @@ $(function () {
     //         $('#TemplateCode').val(data.TemplateCode);
     //     }
     // }, function (response) {
-    //     GetErrorCode(response.errcode);
+    //     LayerFun(response.errcode);
     //     return;
     // });
 
@@ -144,7 +158,7 @@ $(function () {
     //         }
     //     }, function (response) {
     //         ActiveClick($this, btnText);
-    //         GetErrorCode(response.errcode);
+    //         LayerFun(response.errcode);
     //         return;
     //     });
     // });
@@ -160,7 +174,7 @@ $(function () {
     //         $('#email_name').val(data.name);
     //     }
     // }, function (response) {
-    //     GetErrorCode(response.errcode);
+    //     LayerFun(response.errcode);
     //     return;
     // });
 
@@ -177,7 +191,7 @@ $(function () {
     //         }
     //     }, function (response) {
     //         ActiveClick($this, btnText);
-    //         GetErrorCode(response.errcode);
+    //         LayerFun(response.errcode);
     //         return;
     //     });
     // });
@@ -270,7 +284,7 @@ $(function () {
                 SetSwitchStyleSuc(_this);
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -338,7 +352,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('setupFailed');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -361,7 +375,7 @@ $(function () {
                 $('.alreadyAddBaTypeBox').html(li);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -402,7 +416,7 @@ $(function () {
         }, function (response) {
             LayerFun('failedToDelete');
             return;
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -425,7 +439,7 @@ $(function () {
                 $('.alreadyAddCaTypeBox').html(li);
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
 
@@ -465,7 +479,7 @@ $(function () {
         }, function (response) {
             LayerFun('failedToDelete');
             return;
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -474,6 +488,7 @@ $(function () {
         var api_url = '';
         if (option_src == '') {
             LayerFun('pleaseUploadAnImageOfTheSelectedType');
+            return;
         }
         if ($(this).hasClass('ca')) {
             api_url = 'set_ca_channel.php';
@@ -485,7 +500,7 @@ $(function () {
                 }
             }, function (response) {
                 LayerFun('setupFailed');
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
             })
         } else {
             api_url = 'set_ba_bit_type.php';
@@ -497,7 +512,7 @@ $(function () {
                 }
             }, function (response) {
                 LayerFun('setupFailed');
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
             })
         }
     });
@@ -507,8 +522,20 @@ $(function () {
         $('#uploadImgModal').modal('close');
     });
 
+    //get la_id
+    var la_id = "";
+    GetLaId(token, function (response) {
+        if (response.errcode == '0') {
+            la_id = response.la_id;
+            console.log(la_id);
+        }
+    }, function (response) {
+        LayerFun(response.errcode);
+    });
+
     //Upload image
     $('#uploadFile').on('change', function () {
+        console.log(la_id);
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
             // Modify the address attribute of the picture here
@@ -516,7 +543,10 @@ $(function () {
         }
 
         var formData = new FormData($("#uploadForm")[0]);
-        option_src = UpLoadImg(formData).src;
+        formData.append("la_id", la_id);
+        formData.append("id", la_id);
+        option_src = UpLoadImg(formData);
+        console.log(option_src);
     });
 
     //Select an image to display
@@ -533,27 +563,26 @@ $(function () {
     }
 
     //Return image information
-    var url = getRootPath();
-    var config_api_url = '', config_h5_url = '';
-    $.ajax({
-        url: url + "/h5/assets/json/config_url.json",
-        async: false,
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            config_api_url = data.api_url;
-            config_h5_url = data.h5_url;
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-        }
-    });
+    // var url = getRootPath();
+    // var config_api_url = '', config_h5_url = '';
+    // $.ajax({
+    //     url: url + "/h5/assets/json/config_url.json",
+    //     async: false,
+    //     type: "GET",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         config_api_url = data.api_url;
+    //         config_h5_url = data.h5_url;
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //
+    //     }
+    // });
 
     function UpLoadImg(formData) {
-        var objData = new Object();
+        var src = '';
         $.ajax({
-            url: config_api_url + '/api/upload/upload_file.php',
-            header: {"Access-Control-Allow-Origin": "*"},
+            url: 'http://agent_service.fnying.com/upload_file/upload.php',
             type: 'POST',
             data: formData,
             async: false,
@@ -562,19 +591,15 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                if (data.code == '-1') {
-                    LayerFun('imgUploadFail');
-                    return;
+                if (data.errcode == '0') {
+                    src = data.url;
                 }
-                objData.src = data.data.src;
-                objData.file_hash = data.file_hash;
             },
             error: function (response) {
-                LayerFun('imgUploadFail');
-                return;
+                layer.msg(response.msg);
             }
         });
-        return objData;
+        return src;
     }
 
     //init modal

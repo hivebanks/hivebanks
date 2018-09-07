@@ -137,6 +137,6 @@ if($output_array["errcode"] == "0"){
     exit_error();
 
 }else{
-    exit_error('101','邮件发送失败，请重试');
+    exit_error('124','邮件发送失败，请重试');
 }
 

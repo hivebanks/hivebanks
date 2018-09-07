@@ -129,7 +129,7 @@ $data_base['security_level'] = 2;
 $data_base['utime'] = time();
 $data_base['ca_account'] = "hivebanks_" . $email;
 $data_base['ctime'] = date("Y-m-d H:i:s");
-$bind_email = ins_bind_ca_reg_bind_log($data_log_bind);
+
 $url = Config::CA_CONFORM_URL;
 //绑定成功发送验证信息
 //if($bind_email){

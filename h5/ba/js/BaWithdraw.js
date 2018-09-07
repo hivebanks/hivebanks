@@ -29,7 +29,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
     //Get the user account balance, which can be used for the maximum withdrawal amount
     var us_base_amount = '';
@@ -44,7 +44,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //fullWithdrawal
@@ -72,7 +72,7 @@ $(function () {
             })
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //Manually add an address
@@ -98,7 +98,7 @@ $(function () {
                 LayerFun('passwordError');
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
 
@@ -153,7 +153,7 @@ $(function () {
                         window.location.href = 'BaWithdrawInfo.html';
                     }
                 }, function (response) {
-                    GetErrorCode(response.errcode);
+                    LayerFun(response.errcode);
                     return;
                 });
             }
@@ -162,7 +162,7 @@ $(function () {
                 LayerFun('fundPassError');
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
 
@@ -179,7 +179,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('queryCodeFail');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
@@ -194,7 +194,7 @@ $(function () {
                 $('#addAddress').modal('show');
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });

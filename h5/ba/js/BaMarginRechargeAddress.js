@@ -34,7 +34,7 @@ $(function () {
             }
         }, function (response) {
             GetDataFail('addressBox', '3');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -52,7 +52,7 @@ $(function () {
                 GetRechargeFun();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     })
 

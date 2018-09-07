@@ -34,7 +34,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -82,7 +82,7 @@ $(function () {
             }
         }, function (response) {
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             ActiveClick($this, btnText);
         })
     })

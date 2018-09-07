@@ -38,7 +38,7 @@ $(function () {
                 n++;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             GetDataFail('addressBox', '3');
             return;
         });
@@ -72,7 +72,7 @@ $(function () {
                 execI18n();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
@@ -137,7 +137,7 @@ $(function () {
                 }
             },
             error: function (response) {
-                GetErrorCode(response.errcode);
+                LayerFun(response.errcode);
                 return;
             }
         });

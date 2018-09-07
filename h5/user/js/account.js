@@ -53,7 +53,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('modifyFail');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
@@ -65,7 +65,7 @@ $(function () {
 
         }
     }, function (response) {
-        // GetErrorCode(response.errcode);
+        // LayerFun(response.errcode);
     });
 
     //Account change record

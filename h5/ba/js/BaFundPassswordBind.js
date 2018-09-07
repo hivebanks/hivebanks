@@ -23,7 +23,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -72,13 +72,13 @@ $(function () {
         if (DisableClick($this)) return;
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {
             if (response.errcode == '0') {
-                GetErrorCode('bind');
+                LayerFun('bind');
                 ActiveClick($this, btnText);
                 window.location.href = 'BaSecurity.html';
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     })

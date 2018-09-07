@@ -22,7 +22,7 @@ $(function () {
             $('.bankTypeBox').append(li);
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //Select bank card type

@@ -34,7 +34,7 @@ $(function () {
                 window.location.href = 'CaAccount.html';
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 });

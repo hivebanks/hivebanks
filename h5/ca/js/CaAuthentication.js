@@ -104,7 +104,7 @@ $(function () {
                 });
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         });
     }
 
@@ -130,7 +130,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -161,7 +161,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 
@@ -182,21 +182,21 @@ $(function () {
 
     //ID upload binding
     //Get configuration file
-    var url = getRootPath();
-    var config_api_url = '';
-    $.ajax({
-        url: url + "/h5/assets/json/config_url.json",
-        async: false,
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            config_api_url = data.api_url;
-            config_h5_url = data.h5_url;
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-        }
-    });
+    // var url = getRootPath();
+    // var config_api_url = '';
+    // $.ajax({
+    //     url: url + "/h5/assets/json/config_url.json",
+    //     async: false,
+    //     type: "GET",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         config_api_url = data.api_url;
+    //         config_h5_url = data.h5_url;
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //
+    //     }
+    // });
 
     //Return image information
     function UpLoadImg(formData) {
@@ -229,7 +229,7 @@ $(function () {
             la_id = response.la_id;
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     /** Upload picture - front
@@ -275,7 +275,7 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
         })
     });
 

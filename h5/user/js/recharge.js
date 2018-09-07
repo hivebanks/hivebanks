@@ -47,7 +47,7 @@ $(function () {
             $('#baRechargeList').html(li);
         }
     }, function (response){
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -73,7 +73,7 @@ $(function () {
             $('.bit_amount').val(response.recharge_rate);
         }
     }, function (response){
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
     //Enter the recharge amount binding input box

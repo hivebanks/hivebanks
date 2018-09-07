@@ -145,7 +145,7 @@ $(document).ready(function () {
                 $('.emailAuditFail').fadeIn('fast');//not approved
             }
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
@@ -305,7 +305,7 @@ $(document).ready(function () {
             if (response.errcode == '118') {
                 $('.phoneAuditFail').fadeIn('fast');//not approved
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });

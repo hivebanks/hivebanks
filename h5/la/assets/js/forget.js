@@ -19,7 +19,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun('modifyFail');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
 

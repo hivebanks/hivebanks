@@ -57,7 +57,7 @@ $(function () {
         if (response.errcode == '114') {
             window.location.href = 'BaLogin.html';
         }
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -112,7 +112,7 @@ $(function () {
             if (response.errcode == '114') {
                 window.location.href = 'BaLogin.html';
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }

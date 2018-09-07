@@ -87,7 +87,7 @@ $(function () {
                 return;
             }
             LayerFun('setFail');
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -116,7 +116,7 @@ $(function () {
                 window.location.href = 'BaLogin.html';
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }
@@ -176,7 +176,7 @@ $(function () {
                 window.location.href = 'BaLogin.html';
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             LayerFun('setFail');
             return;
         })
@@ -205,7 +205,7 @@ $(function () {
                 window.location.href = 'BaLogin.html';
                 return;
             }
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     }

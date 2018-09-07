@@ -19,6 +19,7 @@ $(function () {
             $('.count_base_recharge').text(response.count_base_recharge);
             $('.count_base_withdraw').text(response.count_base_withdraw);
             SetCookie('ba_account', response.ba_account);
+            SetCookie('ba_id', response.ba_id);
             if(benchmark_type == response.bit_type) {
                 $('.recharge_amount').remove();
                 $('.withdraw_amount').remove();
@@ -44,7 +45,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         if(response.errcode == '114'){
             window.location.href = 'BaLogin.html';
         }
@@ -66,7 +67,7 @@ $(function () {
             })
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -104,7 +105,7 @@ $(function () {
                 return;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         })
     });
@@ -144,7 +145,7 @@ $(function () {
                 n++;
             }
         }, function (response) {
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             GetDataFail('accountChangeTable', '5');
             return;
         })

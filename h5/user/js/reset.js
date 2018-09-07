@@ -83,8 +83,8 @@ $(function () {
             LayerFun('sendSuccess');
         }, function (response) {
             LayerFun('sendFail');
-            GetErrorCode(response.errcode);
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
 

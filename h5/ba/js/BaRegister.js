@@ -13,7 +13,7 @@ $(function () {
             }
         }
     }, function (response) {
-        GetErrorCode(response.errcode);
+        LayerFun(response.errcode);
         return;
     });
 
@@ -129,27 +129,27 @@ $(function () {
             bit_type = $('.emailSelectInput').val();
 
         if (email.length <= 0) {
-            GetErrorCode('emailNotEmpty');
+            LayerFun('emailNotEmpty');
             $('.email_tips').fadeIn();
             return;
         }
         if (bit_type.length <= 0) {
-            GetErrorCode('proxyNotEmpty');
+            LayerFun('proxyNotEmpty');
             $('.emailProxy_tips').fadeIn();
             return;
         }
         if (pass_word.length <= 0) {
-            GetErrorCode('passwordNotEmpty');
+            LayerFun('passwordNotEmpty');
             $('.password_tips').fadeIn();
             return;
         }
         if (againEmailPassword.length <= 0) {
-            GetErrorCode('confirmPasswordNotEmpty');
+            LayerFun('confirmPasswordNotEmpty');
             $('.emailAgainPassword_tips').fadeIn();
             return;
         }
         if(pass_word != againEmailPassword){
-            GetErrorCode('TwoPassword');
+            LayerFun('TwoPassword');
             $('.emailSamePassword_tips').fadeIn();
             return;
         }
@@ -180,7 +180,7 @@ $(function () {
                 return;
             }
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
@@ -264,7 +264,7 @@ $(function () {
     $('.phoneCodeBtn').click(function () {
         var bind_type = '1', $this = $(this), cfm_code = $('.phoneCfmCode').val();
         if (cfm_code.length <= 0) {
-            GetErrorCode('codeNotEmpty');
+            LayerFun('codeNotEmpty');
             $('.emailCode_tips').fadeIn();
             return;
         }
@@ -285,37 +285,37 @@ $(function () {
             pass_word_hash = hex_sha1(pass_word),
             bit_type = $('.phoneSelectInput').val();
         if (cellphone.length <= 0) {
-            GetErrorCode('accountNotEmpty');
+            LayerFun('accountNotEmpty');
             $('.phone_tips').fadeIn();
             return;
         }
         if (pass_word.length <= 0) {
-            GetErrorCode('passwordNotEmpty');
+            LayerFun('passwordNotEmpty');
             $('.phonePassword_tips').fadeIn();
             return;
         }
         if (again_pass_word.length <= 0) {
-            GetErrorCode('confirmPasswordNotEmpty');
+            LayerFun('confirmPasswordNotEmpty');
             $('.phoneAgainPassword_tips').fadeIn();
             return;
         }
         if(pass_word != again_pass_word){
-            GetErrorCode('TwoPassword');
+            LayerFun('TwoPassword');
             $('.phoneSamePassword_tips').fadeIn();
             return;
         }
         if (bit_type.length <= 0) {
-            GetErrorCode('proxyNotEmpty');
+            LayerFun('proxyNotEmpty');
             $('.phoneProxy_tips').fadeIn();
             return;
         }
         if (phoneCfmCode.length <= 0) {
-            GetErrorCode('codeNotEmpty');
+            LayerFun('codeNotEmpty');
             $('.emailCode_tips').fadeIn();
             return;
         }
         if (sms_code.length <= 0) {
-            GetErrorCode('codeNotEmpty');
+            LayerFun('codeNotEmpty');
             $('.phoneCode_tips').fadeIn();
             return;
         }
@@ -344,7 +344,7 @@ $(function () {
                 $('.phoneCode_expired').fadeIn('fast');
             }
             GetImgCode();
-            GetErrorCode(response.errcode);
+            LayerFun(response.errcode);
             return;
         });
     });
