@@ -55,6 +55,16 @@ $la_id = get_la_admin_info()["id"];
 $output_array = send_sms_by_agent_service($cellphone,$code,$la_id);
 // 验证发送短信(SendSms)接口
 if($output_array["errcode"] == "0"){
+    $time_limit = time() + 60 ;
+    $data = array();
+    $data['us_id']  = get_guid();
+    $data['bind_name']  = 'phone_code';
+    $data['bind_info']  = $phone_strict;
+    $data['count_error'] = 0;
+    $data['limt_time']  = $time_limit;
+    $data['bind_type']  = $bind_type;
+    $data['bind_salt']  = $code;
+    $res = ins_user_verification_code($data);
     exit_ok();
 }else{
     exit_error('124','发送失败,请稍后再试');
