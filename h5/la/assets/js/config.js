@@ -522,6 +522,16 @@ $(function () {
         $('#uploadImgModal').modal('close');
     });
 
+    //get la_id
+    var la_id = "";
+    GetLaId(token, function (response) {
+        if (response.errcode == '0') {
+            la_id = response.la_id;
+        }
+    }, function (response) {
+        LayerFun(response.errcode);
+    });
+
     //Upload image
     $('#uploadFile').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
@@ -531,6 +541,7 @@ $(function () {
         }
 
         var formData = new FormData($("#uploadForm")[0]);
+        formData.append("la_id", la_id);
         option_src = UpLoadImg(formData);
     });
 
