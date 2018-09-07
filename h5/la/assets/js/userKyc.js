@@ -16,8 +16,8 @@ $(function () {
                         "</td>"
                 } else if (data[i].bind_type == 'text' && data[i].bind_name == 'idNum') {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
-                    bind_name = "<td><span class='bind_name i18n' name='idNum'>" + data[i].bind_name + "</span></td>";
-                    bind_info = "<td><a class='bind_info'>" + data[i].bind_info + "</a></td>"
+                    bind_name = "<td><span class='i18n' name='idNum'>" + data[i].bind_name + "</span></td>";
+                    bind_info = "<td><a class=''>" + data[i].bind_info + "</a></td>"
                 }else if (data[i].bind_type == 'text' && data[i].bind_name == 'name') {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
                     bind_name = "<td><span class='bind_name i18n' name='name'>" + data[i].bind_name + "</span></td>";
@@ -25,7 +25,11 @@ $(function () {
                 }
                 tr += "<tr class='userKycItem'>" +
                     "<td><span class='us_id'>" + data[i].us_id + "</span></td>" +
-                    "<td style='display: none'><span class='log_id'>" + data[i].log_id + "</span></td>" +
+                    "<td style='display: none'>" +
+                    "<span class='bind_name'>" + data[i].bind_name + "</span>" +
+                    "<span class='bind_info'>" + data[i].bind_info + "</span>" +
+                    "<span class='log_id'>" + data[i].log_id + "</span>" +
+                    "</td>" +
                     bind_type +
                     bind_name +
                     bind_info +
