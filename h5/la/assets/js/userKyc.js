@@ -27,7 +27,6 @@ $(function () {
                     "<td><span class='us_id'>" + data[i].us_id + "</span></td>" +
                     "<td style='display: none'>" +
                     "<span class='bind_name'>" + data[i].bind_name + "</span>" +
-                    "<span class='bind_info'>" + data[i].bind_info + "</span>" +
                     "<span class='log_id'>" + data[i].log_id + "</span>" +
                     "</td>" +
                     bind_type +
