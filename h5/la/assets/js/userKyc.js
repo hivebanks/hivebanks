@@ -20,7 +20,7 @@ $(function () {
                     bind_info = "<td><a class=''>" + data[i].bind_info + "</a></td>"
                 }else if (data[i].bind_type == 'text' && data[i].bind_name == 'name') {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
-                    bind_name = "<td><span class='bind_name i18n' name='name'>" + data[i].bind_name + "</span></td>";
+                    bind_name = "<td><span class='i18n' name='name'>" + data[i].bind_name + "</span></td>";
                     bind_info = "<td><a class='bind_info'>" + data[i].bind_info + "</a></td>"
                 }
                 tr += "<tr class='userKycItem'>" +
