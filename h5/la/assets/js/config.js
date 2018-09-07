@@ -530,7 +530,7 @@ $(function () {
         }
 
         var formData = new FormData($("#uploadForm")[0]);
-        option_src = UpLoadImg(formData).src;
+        option_src = UpLoadImg(formData);
     });
 
     //Select an image to display
@@ -548,26 +548,25 @@ $(function () {
 
     //Return image information
     var url = getRootPath();
-    var config_api_url = '', config_h5_url = '';
-    $.ajax({
-        url: url + "/h5/assets/json/config_url.json",
-        async: false,
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            config_api_url = data.api_url;
-            config_h5_url = data.h5_url;
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-        }
-    });
+    // var config_api_url = '', config_h5_url = '';
+    // $.ajax({
+    //     url: url + "/h5/assets/json/config_url.json",
+    //     async: false,
+    //     type: "GET",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         config_api_url = data.api_url;
+    //         config_h5_url = data.h5_url;
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //
+    //     }
+    // });
 
     function UpLoadImg(formData) {
-        var objData = new Object();
+        var src = '';
         $.ajax({
-            url: config_api_url + '/api/upload/upload_file.php',
-            header: {"Access-Control-Allow-Origin": "*"},
+            url: 'http://agent_service.fnying.com/upload_file/upload.php',
             type: 'POST',
             data: formData,
             async: false,
@@ -576,19 +575,16 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                if (data.code == '-1') {
-                    LayerFun('imgUploadFail');
-                    return;
+                if (data.errcode == '0') {
+                    src = data.url;
                 }
-                objData.src = data.data.src;
-                objData.file_hash = data.file_hash;
             },
             error: function (response) {
                 LayerFun('imgUploadFail');
                 return;
             }
         });
-        return objData;
+        return src;
     }
 
     //init modal
