@@ -543,6 +543,7 @@ $(function () {
         var formData = new FormData($("#uploadForm")[0]);
         formData.append("la_id", la_id);
         option_src = UpLoadImg(formData);
+        console.log(option_src);
     });
 
     //Select an image to display
