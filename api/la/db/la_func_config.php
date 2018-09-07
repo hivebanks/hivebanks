@@ -405,6 +405,11 @@ function is_exist_database()
     $file = '../inc/db_connect.php';
     $content = file($file);
     $length = count($content);
+    $server = '';
+    $user = '';
+    $password = '';
+    $database = '';
+    $schema = '';
     //读取db配置文件，并获取server，user，password，database
     for ($i = 0;$i<$length;$i++)
     {
@@ -414,8 +419,6 @@ function is_exist_database()
             $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $server = $matches[0];
-            else
-                $server = '';
             continue;
         }
 
@@ -424,8 +427,6 @@ function is_exist_database()
             $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $user = $matches[0];
-            else
-                $user = '';
             continue;
         }
 
@@ -434,8 +435,6 @@ function is_exist_database()
             $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $password = $matches[0];
-            else
-                $password = '';
             continue;
         }
 
@@ -444,8 +443,6 @@ function is_exist_database()
             $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $database = $matches[0];
-            else
-                $database = '';
             continue;
         }
 
@@ -454,12 +451,12 @@ function is_exist_database()
             $serverMatched = preg_match("/(?<=').*?(?=')|(?<=\").*?(?=\")/", $content[$i], $matches);
             if(isset($matches[0])&&!empty($matches[0]))
                 $schema = $matches[0];
-            else
-                $schema = '';
             continue;
         }
     }
 
+    if(!$database||!$server||!$password)
+        return false;
 //检查数据库连接情况
     $conn = new mysqli($server, $user, $password);
     if ($conn->connect_error) {
