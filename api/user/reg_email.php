@@ -128,16 +128,16 @@ if ($teltime != 0) {
         $email_used = upd_us_log_bind_info($us_id);
     }
 }
-// $teltime = strtotime($rec['ctime']) +15*60 ;
-//if($teltime > $timestamp ){
-//    //判断是否可以进行注册
-//    if($rec && $rec['bind_info'] == $email){
-//        exit_error('121','待确认，请前往邮箱验证');
-//    }
-//}else{
-//    //把本次的绑定的数据进行无效操作
-//    $email_used = upd_us_log_bind_info($us_id);
-//}
+ $teltime = strtotime($rec['ctime']) +15*60 ;
+if($teltime > $timestamp ){
+    //判断是否可以进行注册
+    if($rec && $rec['bind_info'] == $email){
+        exit_error('121','待确认，请前往邮箱验证');
+    }
+}else{
+    //把本次的绑定的数据进行无效操作
+    $email_used = upd_us_log_bind_info($us_id);
+}
 
 // 基本信息参数设定
 $data_base['us_id'] = $us_id;
