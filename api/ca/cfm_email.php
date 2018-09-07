@@ -52,7 +52,7 @@ $row = get_ca_id_by_variable($variable,$email);
 $rec = get_ca_log_bind_by_variable($variable,$email);
 if($row){
     // 判断是否注册完成
-    if ($row['us_id'] && $row['bind_flag'] == 1) {
+    if ($row['ca_id'] && $row['bind_flag'] == 1) {
         exit_error('105','已注册用户，请登陆！');
     }
 }
@@ -85,9 +85,9 @@ if($now_time < $timestamp)
    $bind_email = ins_bind_ca_reg_bind_info($data_bind);
       $email_used = upd_ca_log_bind_info($ca_id);
       //获取当前绑定数
-      $savf_level = get_bind_acount($us_id);
+      $savf_level = get_bind_acount($ca_id);
       //安全等级提升
-      $upd_us_level = upd_savf_level($us_id,$savf_level);
+      $upd_us_level = upd_savf_level($ca_id,$savf_level);
    if($bind_email && ($email_confirm =='注册')){
        $url_r = Config::H5_CA_URL_R;
        header("Location: ".$url_r);
