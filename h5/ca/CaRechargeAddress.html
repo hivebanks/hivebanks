@@ -78,7 +78,7 @@
             <ol class="breadcrumb">
                 <li><a href="../user/account.html" class="i18n" name="account">Account</a></li>
                 <li><a href="../user/recharge.html" class="i18n" name="recharge">Recharge</a></li>
-                <li class="active i18n" name="rechargeAddress">充值地址</li>
+                <li class="active i18n" name="rechargeAddress">rechargeAddress</li>
             </ol>
         </div>
     </div>
@@ -93,12 +93,20 @@
                     <!--<span class="rechargeType">ICBC</span> <span class="i18n" name="recharge">充值</span>-->
                     <img src="" alt="" class="width-15 rechargeTypeImg">
                 </h3>
-                <h3 class="pcTitle">请将法币充值到以下账号</h3>
+                <h3 class="pcTitle">
+                    <span class="i18n" name="please"></span>
+                    <span class="i18n" name="legalCurrency">legalCurrency</span>
+                    <span class="i18n" name="rechargeAddress"></span>
+                </h3>
                 <h5 class="phoneTitle">
                     <!--<span class="rechargeType">ICBC</span> <span class="i18n" name="recharge">充值</span>-->
                     <img src="" alt="" class="width-15 rechargeTypeImg">
                 </h5>
-                <h5 class="phoneTitle">请将法币充值到以下账号</h5>
+                <h5 class="phoneTitle">
+                    <span class="i18n" name="please"></span>
+                    <span class="i18n" name="legalCurrency">legalCurrency</span>
+                    <span class="i18n" name="rechargeAddress"></span>
+                </h5>
             </div>
         </div>
 
@@ -108,7 +116,7 @@
                     <table class="table table-condensed">
                         <tbody>
                         <tr>
-                            <td>充值数量</td>
+                            <td><span class="i18n" name="rechargeAmount">rechargeAmount</span></td>
                             <td>
                                 <span class="bit_amount"></span>
                                 <span class="bit_type ca_currency">CNY</span>
@@ -117,15 +125,15 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>充值时间</td>
-                            <td>2018/8/8/12：00</td>
+                            <td><span class="i18n" name="rechargeTime">rechargeTime</span></td>
+                            <td><span class="rechargeTime time"></span></td>
                         </tr>
                         <tr>
-                            <td><span>账户名称</span></td>
+                            <td><span class="i18n" name="accountName">accountName</span></td>
                             <td><span class="name"></span></td>
                         </tr>
                         <tr>
-                            <td><span>Bank Card</span></td>
+                            <td><span class="i18n" name="bankCard">Bank Card</span></td>
                             <td>
                                 <span id="foo" class="card_nm"></span>
                                 <a href="javascript:;" data-clipboard-target="#foo" class="margin-left-1 copy_address">copy address</a>
