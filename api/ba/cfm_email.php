@@ -68,7 +68,7 @@ if($row){
 
 // 判断是否注册
 if(!$rec['ba_id'] && ($email_confirm =='注册')){
-  exit_error('1112','This email address is not registered');
+  exit_error('112','This email address is not registered');
 }
 //判断是否可以进行验证
 if($rec['limt_time'] > $now_time){
