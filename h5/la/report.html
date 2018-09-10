@@ -38,63 +38,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand waves-effect waves-dark flex center" href="config.html">
+            <a class="navbar-brand waves-effect waves-dark flex center" href="userList.html">
                 <!--<i class="large material-icons">track_changes</i>-->
                 <img src="assets/img/logo-3.png" alt="" class="width-15 margin-right-5">
                 <strong>HiveBanks</strong>
             </a>
 
-            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48">toc</i></div>
+            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48"></i></div>
         </div>
 
         <ul class="nav navbar-top-links navbar-right">
-            <!--信箱-->
-            <!--<li>-->
-                <!--<a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4">-->
-                    <!--<i class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i>-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--&lt;!&ndash;列表&ndash;&gt;-->
-            <!--<li>-->
-                <!--<a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3">-->
-                    <!--<i class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i>-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--&lt;!&ndash;消息&ndash;&gt;-->
-            <!--<li>-->
-                <!--<a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2">-->
-                    <!--<i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i>-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--语言切换-->
-            <li>
-                <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="language">
-                    <i class="fa fa-user fa-fw"></i> <b class="languageText">English</b> <i
-                        class="material-icons right">arrow_drop_down</i>
-                </a>
-            </li>
-            <!--用户-->
-            <li>
-                <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1">
-                    <i class="fa fa-user fa-fw"></i> <b class="la_name">admin</b> <i class="material-icons right">arrow_drop_down</i>
-                </a>
-            </li>
+            <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                    class="fa fa-user fa-fw"></i> <b class="la_name"></b> <i
+                    class="material-icons right"></i></a></li>
         </ul>
     </nav>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <!--<li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a></li>-->
-        <!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>-->
-        <li><a href="javascript:;" class="logOut"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
-    </ul>
-    <!--语言列表-->
-    <ul id="language" class="dropdown-content">
-        <li class="flex center">
-            <i class="iconfont icon-en"></i>
-            <a href="#" value="en" class="margin-left-5">English</a></li>
-        <li class="flex center">
-            <i class="iconfont icon-ch"></i>
-            <a href="#" value="zh-CN" class="margin-left-5">简体中文</a>
+        <li><a href="javascript:;" class="logOut">
+            <i class="fa fa-sign-out fa-fw"></i>
+            <span class="i18n" name="logout"></span>
+        </a>
         </li>
     </ul>
 
@@ -106,32 +70,32 @@
                 <li>
                     <a href="config.html" class="waves-effect waves-dark">
                         <i class="fa fa-dashboard"></i>
-                        <span class="i18n" name="config">配置</span>
+                        <span class="i18n" name="config"></span>
                     </a>
                 </li>
                 <!--charts-->
                 <li>
                     <a href="report.html" class="active-menu waves-effect waves-dark">
                         <i class="fa fa-area-chart"></i>
-                        <span class="i18n" name="charts">报表</span>
+                        <span class="i18n" name="charts"></span>
                     </a>
                 </li>
                 <!--management-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark">
                         <i class="fa fa-sitemap"></i>
-                        <span class="i18n" name="management">管理</span>
+                        <span class="i18n" name="management"></span>
                         <span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userList.html" class="i18n" name="userList">USER List</a>
+                            <a href="userList.html" class="i18n" name="userList"></a>
                         </li>
                         <li>
-                            <a href="baList.html" class="i18n" name="bitCoinAgencyList">BA List</a>
+                            <a href="baList.html" class="i18n" name="bitCoinAgencyList"></a>
                         </li>
                         <li>
-                            <a href="caList.html" class="i18n" name="cashAgencyList">CA List</a>
+                            <a href="caList.html" class="i18n" name="cashAgencyList"></a>
                         </li>
                     </ul>
                 </li>
@@ -139,67 +103,67 @@
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark">
                         <i class="fa fa-sitemap"></i>
-                        <span class="i18n" name="transaction">交易</span>
+                        <span class="i18n" name="transaction"></span>
                         <span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode">USER 交易记录</a>
+                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode"></a>
                         </li>
                         <li>
-                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord">BA 充值记录</a>
+                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord"></a>
                         </li>
                         <li>
-                            <a href="baWithdrawList.html" class="i18n" name="bitCoinAgencyWithdrawRecord">BA 提现记录</a>
+                            <a href="baWithdrawList.html" class="i18n" name="bitCoinAgencyWithdrawRecord"></a>
                         </li>
                         <li>
-                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord">CA 充值记录</a>
+                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord"></a>
                         </li>
                         <li>
-                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord">CA 提现记录</a>
+                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord"></a>
                         </li>
                     </ul>
                 </li>
                 <!--kyc审核-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark"><i class="fa fa-lock"></i>
-                        <span class="i18n" name="kyc">KYC 审核</span>
+                        <span class="i18n" name="kyc"></span>
                         <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userKyc.html" class="i18n" name="userKyc">User审核列表</a>
+                            <a href="userKyc.html" class="i18n" name="userKyc"></a>
                         </li>
                         <li>
                             <a class="childMenu" name="" href="#!">
-                                <span class="i18n" name="baKyc">Ba审核列表</span>
+                                <span class="i18n" name="baKyc"></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-third-level none">
                                 <li>
-                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">绑定信息审核列表</a>
+                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc"></a>
                                 </li>
                                 <li>
-                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList">注册审核列表</a>
+                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">提现地址审核列表</a>
+                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a class="childMenu" name="" href="#!">
-                                <span class="i18n" name="caKyc">Ca审核列表</span>
+                                <span class="i18n" name="caKyc"></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-third-level none">
                                 <li>
-                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">绑定信息审核列表</a>
+                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc"></a>
                                 </li>
                                 <li>
-                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList">注册审核列表</a>
+                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">提现地址审核列表</a>
+                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
@@ -209,7 +173,7 @@
                 <li>
                     <a href="failureReport.html" class="waves-effect waves-dark">
                         <i class="fa fa-area-chart"></i>
-                        <span class="i18n" name="declarationList">申报列表</span>
+                        <span class="i18n" name="declarationList"></span>
                     </a>
                 </li>
             </ul>
@@ -222,7 +186,7 @@
                 Charts
             </h1>
             <ol class="breadcrumb">
-                <li class="active i18n" name="charts">Charts</li>
+                <li class="active i18n" name="charts"></li>
             </ol>
 
         </div>
@@ -230,7 +194,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="card-action"><h5 class="i18n" name="userStatisticsSheet">用户统计</h5></div>
+                        <div class="card-action"><h5 class="i18n" name="userStatisticsSheet"></h5></div>
                         <div class="card-content">
                             <div id="morris-donut-chart"></div>
                         </div>
@@ -239,7 +203,7 @@
 
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="card-action"><h5 class="i18n" name="assetChangeSheet">资产变动表</h5></div>
+                        <div class="card-action"><h5 class="i18n" name="assetChangeSheet"></h5></div>
                         <div class="card-content">
                             <div id="morris-line-chart"></div>
                         </div>
@@ -250,16 +214,16 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="card-action"><h5 class="i18n" name="assetBalanceSheet">资产平衡表</h5></div>
+                        <div class="card-action"><h5 class="i18n" name="assetBalanceSheet"></h5></div>
                         <div class="card-content">
                             <div id="" class="table-responsive, table-hover">
                                 <table class="bordered striped centered highlight">
                                     <thead>
                                     <tr>
-                                        <th><span class="i18n" name="totalBankAssets">银行总资产</span></th>
-                                        <th><span class="i18n" name="totalUserAssets">用户总资产</span></th>
-                                        <th><span class="i18n" name="totalAssetsOfDigitalCurrencyAgents">数字货币代理商总资产</span></th>
-                                        <th><span class="i18n" name="totalAssetsOfLegalCurrencyAgents">法币代理商总资产</span></th>
+                                        <th><span class="i18n" name="totalBankAssets"></span></th>
+                                        <th><span class="i18n" name="totalUserAssets"></span></th>
+                                        <th><span class="i18n" name="totalAssetsOfDigitalCurrencyAgents"></span></th>
+                                        <th><span class="i18n" name="totalAssetsOfLegalCurrencyAgents"></span></th>
                                     </tr>
                                     </thead>
                                     <tbody id="amount_report"></tbody>
@@ -273,23 +237,23 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
-                        <div class="card-action"><h5 class="i18n" name="statementOfChangesInAssets">资产变动表</h5></div>
+                        <div class="card-action"><h5 class="i18n" name="statementOfChangesInAssets"></h5></div>
                         <div class="card-content">
                             <div id="1" class="table-responsive table-hover">
                                 <table class="bordered striped centered highlight">
                                     <thead>
                                     <tr>
-                                        <th colspan="2"><span class="i18n" name="userAssetChanges">用户资产变动</span></th>
-                                        <th colspan="2"><span class="i18n" name="digitalCurrencyAgentAssetChanges">数字货币代理商资产变动</span></th>
-                                        <th colspan="2"><span class="i18n" name="legalCurrencyAgentAssetChanges">法币代理商资产变动</span></th>
+                                        <th colspan="2"><span class="i18n" name="userAssetChanges"></span></th>
+                                        <th colspan="2"><span class="i18n" name="digitalCurrencyAgentAssetChanges"></span></th>
+                                        <th colspan="2"><span class="i18n" name="legalCurrencyAgentAssetChanges"></span></th>
                                     </tr>
                                     <tr>
-                                        <th><span class="i18n" name="totalRecharge">充值总额</span></th>
-                                        <th><span class="i18n" name="totalWithdrawal">提现总额</span></th>
-                                        <th><span class="i18n" name="totalRecharge">充值总额</span></th>
-                                        <th><span class="i18n" name="totalWithdrawal">提现总额</span></th>
-                                        <th><span class="i18n" name="totalRecharge">充值总额</span></th>
-                                        <th><span class="i18n" name="totalWithdrawal">提现总额</span></th>
+                                        <th><span class="i18n" name="totalRecharge"></span></th>
+                                        <th><span class="i18n" name="totalWithdrawal"></span></th>
+                                        <th><span class="i18n" name="totalRecharge"></span></th>
+                                        <th><span class="i18n" name="totalWithdrawal"></span></th>
+                                        <th><span class="i18n" name="totalRecharge"></span></th>
+                                        <th><span class="i18n" name="totalWithdrawal"></span></th>
                                     </tr>
                                     </thead>
                                     <tbody id="amount_reportInfo"></tbody>
@@ -338,7 +302,7 @@
 
 <!-- morris Js -->
 <script src="assets/js/morris/morris.js"></script>
-<!--<script src="https://cdnjs.com/libraries/chart.js"></script>-->
+
 <script src="assets/js/chart.min.js"></script>
 <!-- layer Js -->
 <script src="assets/js/layer/layer.js"></script>
@@ -351,7 +315,5 @@
 
 <!-- chart Js -->
 <script src="assets/js/report.js"></script>
-
-<!--<script src="assets/js/custom-scripts.js"></script>-->
 </body>
 </html>

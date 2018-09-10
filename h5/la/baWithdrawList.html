@@ -41,50 +41,25 @@
                 <strong>HiveBanks</strong>
             </a>
 
-            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48">toc</i></div>
+            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48"></i></div>
         </div>
 
         <ul class="nav navbar-top-links navbar-right">
-            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i-->
-                    <!--class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i-->
-                    <!--class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i-->
-                    <!--class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!--语言切换-->
-            <li>
-                <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="language">
-                    <i class="fa fa-user fa-fw"></i> <b class="languageText">English</b> <i
-                        class="material-icons right">arrow_drop_down</i>
-                </a>
-            </li>
             <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
-                    class="fa fa-user fa-fw"></i> <b class="la_name">admin</b> <i
-                    class="material-icons right">arrow_drop_down</i></a></li>
+                    class="fa fa-user fa-fw"></i> <b class="la_name"></b> <i
+                    class="material-icons right"></i></a></li>
         </ul>
     </nav>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <!--<li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>-->
-        <!--</li>-->
-        <!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>-->
-        <!--</li>-->
-        <li><a href="javascript:;" logOut><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-        </li>
-    </ul>
-    <!--语言列表-->
-    <ul id="language" class="dropdown-content">
-        <li class="flex center">
-            <i class="iconfont icon-en"></i>
-            <a href="#" value="en" class="margin-left-5">English</a></li>
-        <li class="flex center">
-            <i class="iconfont icon-ch"></i>
-            <a href="#" value="zh-CN" class="margin-left-5">简体中文</a>
+        <li><a href="javascript:;" class="logOut">
+            <i class="fa fa-sign-out fa-fw"></i>
+            <span class="i18n" name="logout"></span>
+        </a>
         </li>
     </ul>
 
     <!--/. NAV left  -->
-    <!--/. NAV Left  -->
     <nav class="navbar-default navbar-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
@@ -92,100 +67,100 @@
                 <li>
                     <a href="config.html" class="waves-effect waves-dark">
                         <i class="fa fa-dashboard"></i>
-                        <span class="i18n" name="config">配置</span>
+                        <span class="i18n" name="config"></span>
                     </a>
                 </li>
                 <!--charts-->
                 <li>
                     <a href="report.html" class="waves-effect waves-dark">
                         <i class="fa fa-area-chart"></i>
-                        <span class="i18n" name="charts">报表</span>
+                        <span class="i18n" name="charts"></span>
                     </a>
                 </li>
                 <!--management-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark">
                         <i class="fa fa-sitemap"></i>
-                        <span class="i18n" name="management">管理</span>
+                        <span class="i18n" name="management"></span>
                         <span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userList.html" class="i18n" name="userList">USER List</a>
+                            <a href="userList.html" class="i18n" name="userList"></a>
                         </li>
                         <li>
-                            <a href="baList.html" class="i18n" name="bitCoinAgencyList">BA List</a>
+                            <a href="baList.html" class="i18n" name="bitCoinAgencyList"></a>
                         </li>
                         <li>
-                            <a href="caList.html" class="i18n" name="cashAgencyList">CA List</a>
+                            <a href="caList.html" class="i18n" name="cashAgencyList"></a>
                         </li>
                     </ul>
                 </li>
                 <!--transaction-->
                 <li>
-                    <a href="javascript:;" class="active-menu waves-effect waves-dark">
+                    <a href="javascript:;" class="waves-effect waves-dark">
                         <i class="fa fa-sitemap"></i>
-                        <span class="i18n" name="transaction">交易</span>
+                        <span class="i18n" name="transaction"></span>
                         <span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode">USER 交易记录</a>
+                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode"></a>
                         </li>
                         <li>
-                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord">BA 充值记录</a>
+                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord"></a>
                         </li>
                         <li>
-                            <a href="baWithdrawList.html" class="active-menu i18n" name="bitCoinAgencyWithdrawRecord">BA 提现记录</a>
+                            <a href="baWithdrawList.html" class="i18n active-menu" name="bitCoinAgencyWithdrawRecord"></a>
                         </li>
                         <li>
-                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord">CA 充值记录</a>
+                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord"></a>
                         </li>
                         <li>
-                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord">CA 提现记录</a>
+                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord"></a>
                         </li>
                     </ul>
                 </li>
                 <!--kyc审核-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark"><i class="fa fa-lock"></i>
-                        <span class="i18n" name="kyc">KYC 审核</span>
+                        <span class="i18n" name="kyc"></span>
                         <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userKyc.html" class="i18n" name="userKyc">User审核列表</a>
+                            <a href="userKyc.html" class="i18n" name="userKyc"></a>
                         </li>
                         <li>
                             <a class="childMenu" name="" href="#!">
-                                <span class="i18n" name="baKyc">Ba审核列表</span>
+                                <span class="i18n" name="baKyc"></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-third-level none">
                                 <li>
-                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">绑定信息审核列表</a>
+                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc"></a>
                                 </li>
                                 <li>
-                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList">注册审核列表</a>
+                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">提现地址审核列表</a>
+                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a class="childMenu" name="" href="#!">
-                                <span class="i18n" name="caKyc">Ca审核列表</span>
+                                <span class="i18n" name="caKyc"></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-third-level none">
                                 <li>
-                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">绑定信息审核列表</a>
+                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc"></a>
                                 </li>
                                 <li>
-                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList">注册审核列表</a>
+                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">提现地址审核列表</a>
+                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
@@ -195,96 +170,96 @@
                 <li>
                     <a href="failureReport.html" class="waves-effect waves-dark">
                         <i class="fa fa-area-chart"></i>
-                        <span class="i18n" name="declarationList">申报列表</span>
+                        <span class="i18n" name="declarationList"></span>
                     </a>
                 </li>
             </ul>
         </div>
-
     </nav>
+
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper">
         <div class="header">
-            <h1 class="page-header i18n" name="bitCoinAgencyWithdrawRecord">BitCoin Agency Withdraw Record</h1>
+            <h1 class="page-header i18n" name="bitCoinAgencyWithdrawRecord"></h1>
             <ol class="breadcrumb">
-                <li><a href="#" class="i18n" name="transaction">Transaction Record</a></li>
-                <li class="active i18n" name="bitCoinAgencyWithdrawRecord">BitCoin Agency Withdraw Record</li>
+                <li><a href="#" class="i18n" name="transaction"></a></li>
+                <li class="active i18n" name="bitCoinAgencyWithdrawRecord"></li>
             </ol>
         </div>
         <div id="page-inner">
             <div class="row card padding-bottom-2">
                 <div class="col-md-12 col-sm-12 card-content">
                     <div class="flex space-between">
-                        <h5 class="i18n" name="filter">按条件进行筛选(以下条件均为可填)</h5>
-                        <button class="btn btn-success btn-sm searchBtn i18n" name="search">搜索</button>
+                        <h5 class="i18n" name="filter"></h5>
+                        <button class="btn btn-success btn-sm searchBtn i18n" name="search"></button>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
                     <form>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="from_time" id="from_time_chg"/>
-                            <label for="from_time_chg" class="i18n" name="startTime">起始时间</label>
+                            <label for="from_time_chg" class="i18n" name="startTime"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="to_time" id="to_time_chg"/>
-                            <label for="to_time_chg" class="i18n" name="deadline">截止时间</label>
+                            <label for="to_time_chg" class="i18n" name="deadline"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="tx_time" id="tx_time_chg"/>
-                            <label for="tx_time_chg" class="i18n" name="transactionHour">交易时间</label>
+                            <label for="tx_time_chg" class="i18n" name="transactionHour"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="qa_id" id="qa_id_chg"/>
-                            <label for="qa_id_chg" class="i18n" name="requestId">请求ID</label>
+                            <label for="qa_id_chg" class="i18n" name="requestId"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="us_id" id="us_id_chg"/>
-                            <label for="us_id_chg" class="i18n" name="requestUserId">请求用户ID</label>
+                            <label for="us_id_chg" class="i18n" name="requestUserId"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="us_account_id" id="us_account_id_chg"/>
-                            <label for="us_account_id_chg" class="i18n" name="userAccountId">用户账号ID</label>
+                            <label for="us_account_id_chg" class="i18n" name="userAccountId"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="asset_id" id="asset_id_chg"/>
-                            <label for="asset_id_chg" class="i18n" name="asset_id">资产ID</label>
+                            <label for="asset_id_chg" class="i18n" name="asset_id"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="ba_account_id" id="ba_account_id_chg"/>
-                            <label for="ba_account_id_chg" class="i18n" name="agentAccountId">代理商账号ID</label>
+                            <label for="ba_account_id_chg" class="i18n" name="agentAccountId"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="tx_hash" id="tx_hash_chg"/>
-                            <label for="tx_hash_chg" class="i18n" name="tx_hash">tradingHash</label>
+                            <label for="tx_hash_chg" class="i18n" name="tx_hash"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="base_amount" id="base_amount_chg"/>
-                            <label for="base_amount_chg" class="i18n" name="cashWithdrawalAmount">提现资产金额</label>
+                            <label for="base_amount_chg" class="i18n" name="cashWithdrawalAmount"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="bit_amount" id="bit_amount_chg"/>
-                            <label for="bit_amount_chg" class="i18n" name="digitalCurrencyAmount">数字货币金额</label>
+                            <label for="bit_amount_chg" class="i18n" name="digitalCurrencyAmount"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="tx_detail" id="tx_detail_chg"/>
-                            <label for="tx_detail_chg" class="i18n" name="transactionDetails">交易详情</label>
+                            <label for="tx_detail_chg" class="i18n" name="transactionDetails"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="tx_fee" id="tx_fee_chg"/>
-                            <label for="tx_fee_chg" class="i18n" name="transactionFees">交易手续费</label>
+                            <label for="tx_fee_chg" class="i18n" name="transactionFees"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="tx_type" id="tx_type_chg"/>
-                            <label for="tx_type_chg" class="i18n" name="transactionType">交易类型</label>
+                            <label for="tx_type_chg" class="i18n" name="transactionType"></label>
                         </div>
 
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="qa_flag" id="qa_flag_chg"/>
-                            <label for="qa_flag_chg" class="i18n" name="orderStatus">订单状态</label>
+                            <label for="qa_flag_chg" class="i18n" name="orderStatus"></label>
                         </div>
                         <div class="col-md-2 col-sm-4">
                             <input type="checkbox" value="ba_id" id="ba_id_chg"/>
-                            <label for="ba_id_chg" class="i18n" name="digitalCurrencyAgentId">数字货币代理商ID</label>
+                            <label for="ba_id_chg" class="i18n" name="digitalCurrencyAgentId"></label>
                         </div>
 
                     </form>
@@ -293,7 +268,7 @@
                 <div class="">
                     <div class="none col-md-3 col-sm-12 from_time">
                         <div class="">
-                            <h5><span class="i18n" name="startingTime">开始时间</span>:</h5>
+                            <h5><span class="i18n" name="startingTime"></span>:</h5>
                             <div class="input-field">
                                 <input id="from_time" type="text" class="validate color-black">
                             </div>
@@ -301,7 +276,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 to_time">
                         <div class="">
-                            <h5><span class="i18n" name="endTime">结束时间</span>:</h5>
+                            <h5><span class="i18n" name="endTime"></span>:</h5>
                             <div class="input-field">
                                 <input id="to_time" type="text" class="validate color-black">
                             </div>
@@ -309,7 +284,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 tx_time">
                         <div class="">
-                            <h5><span class="i18n" name="transactionHour">交易时间</span>:</h5>
+                            <h5><span class="i18n" name="transactionHour"></span>:</h5>
                             <div class="input-field">
                                 <input id="tx_time" type="text" class="validate color-black">
                             </div>
@@ -317,7 +292,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 qa_id">
                         <div class="">
-                            <h5><span class="i18n" name="requestId">请求ID</span>:</h5>
+                            <h5><span class="i18n" name="requestId"></span>:</h5>
                             <div class="input-field">
                                 <input id="qa_id" type="text" class="validate color-black">
                             </div>
@@ -327,7 +302,7 @@
                 <div class="">
                     <div class="none col-md-3 col-sm-12 us_id">
                         <div class="">
-                            <h5><span class="i18n" name="requestUserId">请求用户ID</span>:</h5>
+                            <h5><span class="i18n" name="requestUserId"></span>:</h5>
                             <div class="input-field">
                                 <input id="us_id" type="text" class="validate color-black">
                             </div>
@@ -335,7 +310,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 us_account_id">
                         <div class="">
-                            <h5><span class="i18n" name="userAccountId">用户账户ID</span>:</h5>
+                            <h5><span class="i18n" name="userAccountId"></span>:</h5>
                             <div class="input-field">
                                 <input id="us_account_id" type="text" class="validate color-black">
                             </div>
@@ -343,7 +318,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 asset_id">
                         <div class="">
-                            <h5><span class="i18n" name="asset_id">资产ID</span>:</h5>
+                            <h5><span class="i18n" name="asset_id"></span>:</h5>
                             <div class="input-field">
                                 <input id="asset_id" type="text" class="validate color-black">
                             </div>
@@ -351,7 +326,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 ba_account_id">
                         <div class="">
-                            <h5><span class="i18n" name="agentAccountId">代理商账户ID</span>:</h5>
+                            <h5><span class="i18n" name="agentAccountId"></span>:</h5>
                             <div class="input-field">
                                 <input id="ba_account_id" type="text" class="validate color-black">
                             </div>
@@ -361,7 +336,7 @@
                 <div class="">
                     <div class="none col-md-3 col-sm-12 tx_hash">
                         <div class="">
-                            <h5><span class="i18n" name="tx_hash">tradingHash</span>:</h5>
+                            <h5><span class="i18n" name="tx_hash"></span>:</h5>
                             <div class="input-field">
                                 <input id="tx_hash" type="text" class="validate color-black">
                             </div>
@@ -369,7 +344,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 base_amount">
                         <div class="">
-                            <h5><span class="i18n" name="cashWithdrawalAmount">提现资产金额</span>:</h5>
+                            <h5><span class="i18n" name="cashWithdrawalAmount"></span>:</h5>
                             <div class="input-field">
                                 <input id="base_amount" type="text" class="validate color-black">
                             </div>
@@ -377,7 +352,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 bit_amount">
                         <div class="">
-                            <h5><span class="i18n" name="digitalCurrencyAmount">数字货币金额</span>:</h5>
+                            <h5><span class="i18n" name="digitalCurrencyAmount"></span>:</h5>
                             <div class="input-field">
                                 <input id="bit_amount" type="text" class="validate color-black">
                             </div>
@@ -385,7 +360,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 tx_detail">
                         <div class="">
-                            <h5><span class="i18n" name="transactionDetails">交易详情</span>:</h5>
+                            <h5><span class="i18n" name="transactionDetails"></span>:</h5>
                             <div class="input-field">
                                 <input id="tx_detail" type="text" class="validate color-black">
                             </div>
@@ -395,7 +370,7 @@
                 <div class="">
                     <div class="none col-md-3 col-sm-12 tx_fee">
                         <div class="">
-                            <h5><span class="i18n" name="transactionFees">交易手续费</span>:</h5>
+                            <h5><span class="i18n" name="transactionFees"></span>:</h5>
                             <div class="input-field">
                                 <input id="tx_fee" type="text" class="validate color-black">
                             </div>
@@ -403,7 +378,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 tx_type">
                         <div class="">
-                            <h5><span class="i18n" name="transactionType">交易类型</span>:</h5>
+                            <h5><span class="i18n" name="transactionType"></span>:</h5>
                             <div class="input-field">
                                 <input id="tx_type" type="text" class="validate color-black">
                             </div>
@@ -411,7 +386,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 qa_flag">
                         <div class="">
-                            <h5><span class="i18n" name="orderStatus">订单状态</span>:</h5>
+                            <h5><span class="i18n" name="orderStatus"></span>:</h5>
                             <div class="input-field">
                                 <input id="qa_flag" type="text" class="validate color-black">
                             </div>
@@ -419,7 +394,7 @@
                     </div>
                     <div class="none col-md-3 col-sm-12 ba_id">
                         <div class="">
-                            <h5><span class="i18n" name="digitalCurrencyAgentId">数字货币代理商ID</span>:</h5>
+                            <h5><span class="i18n" name="digitalCurrencyAgentId"></span>:</h5>
                             <div class="input-field">
                                 <input id="ba_id" type="text" class="validate color-black">
                             </div>
@@ -434,19 +409,19 @@
                             <table class="bordered striped centered highlight">
                                 <thead>
                                 <tr>
-                                    <th><span class="i18n" name="ba_id">ba_id</span></th>
-                                    <th><span class="i18n" name="us_id">us_id</span></th>
-                                    <th><span class="i18n" name="asset_id">asset_id</span></th>
-                                    <th><span class="i18n" name="base_amount">base_amount</span></th>
-                                    <th><span class="i18n" name="wi_bit_amount">bit_amount</span></th>
-                                    <th><span class="i18n" name="tx_hash">tx_hash</span></th>
-                                    <th><span class="i18n" name="tx_time">tx_time</span></th>
-                                    <th><span class="i18n" name="qa_flag">qa_flag</span></th>
+                                    <th><span class="i18n" name="ba_id"></span></th>
+                                    <th><span class="i18n" name="us_id"></span></th>
+                                    <th><span class="i18n" name="asset_id"></span></th>
+                                    <th><span class="i18n" name="base_amount"></span></th>
+                                    <th><span class="i18n" name="wi_bit_amount"></span></th>
+                                    <th><span class="i18n" name="tx_hash"></span></th>
+                                    <th><span class="i18n" name="tx_time"></span></th>
+                                    <th><span class="i18n" name="qa_flag"></span></th>
                                 </tr>
                                 </thead>
                                 <tbody id="baWithdraw">
                                 <tr>
-                                    <td colspan="8">正在努力的加载数据，请稍后......</td>
+                                    <td colspan="8"></td>
                                 </tr>
                                 </tbody>
                             </table>

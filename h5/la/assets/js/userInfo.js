@@ -1,8 +1,6 @@
 $(function () {
     $('select').material_select();
-    // var base_currency = GetCookie('base_currency');
-    // $('.base_currency').text(base_currency);
-    //获取user信息
+    //get user info
     var limit = 10, offset = 0, n = 0;
     var us_id = GetQueryString('us_id'), tr = '';
     $('.us_id').text(us_id);
@@ -63,11 +61,6 @@ $(function () {
         LayerFun(response.errcode);
         GetDataEmpty('userBindInfo', '5');
         return;
-        // tr += '<tr>' +
-        //     '<td colspan="5"><span class="color-red">系统异常，请稍后再试</span></td>' +
-        //     '</tr>';
-        // $("#userBindInfo").html(tr);
-        // console.log(response);
     });
 
     //Set time
@@ -110,19 +103,19 @@ $(function () {
 
                     ul += '<ul class="padding-1" style="background: #eeeeee">' +
                         '<li>' +
-                        '<span class="margin-right-1 i18n" name="typeOfPunishment">处罚类型</span>:' +
+                        '<span class="margin-right-1 i18n" name="typeOfPunishment"></span>:' +
                         '<span class="black_type i18n" name="'+ black_type +'"></span>' +
                         '</li>' +
                         '<li>' +
-                        '<span class="margin-right-1 i18n" name="limitedTime">限制时间</span>:' +
+                        '<span class="margin-right-1 i18n" name="limitedTime"></span>:' +
                         '<span class="limit_time">' + data[i].limit_time + '</span>' +
                         '</li>' +
                         '<li>' +
-                        '<span class="margin-right-1 i18n" name="ctime">创建时间</span>:' +
+                        '<span class="margin-right-1 i18n" name="ctime"></span>:' +
                         '<span class="ctime">' + data[i].ctime + '</span>' +
                         '</li>' +
                         '<li>' +
-                        '<span class="margin-right-1 i18n" name="reasonForPunishment">处罚原因</span>:' +
+                        '<span class="margin-right-1 i18n" name="reasonForPunishment"></span>:' +
                         '<span class="black_info">' + data[i].black_info + '</span>' +
                         '</li>' +
                         '</ul>'

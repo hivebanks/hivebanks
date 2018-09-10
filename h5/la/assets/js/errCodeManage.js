@@ -19,11 +19,12 @@ $(function () {
                     "<span class='errorMsg'>"+ data[i].code_value +"</span>" +
                     "<div class='errorMsgBox none flex baseline'>" +
                     "<input type='text'  class='form-control errorMsgInput'>" +
-                    "<button class='confirmModifyErrorMsg btn btn-success btn-sm'>determine</button>" +
+                    "<button class='confirmModifyErrorMsg btn btn-success btn-sm i18n' name='determine'></button>" +
                     "</div>" +
                     "</div>" +
                     "</td>" +
-                    "<td><a href='javascript:;' class='editTableText'>编辑</a><a href='javascript:;' class='none cancelEdit'>cancel</a></td>" +
+                    "<td><a href='javascript:;' class='editTableText i18n' name='edit'></a>" +
+                    "<a href='javascript:;' class='none cancelEdit i18n' name='cancel'></a></td>" +
                     "</tr>";
             });
             $('#errorCodeTable').html(tr);
