@@ -25,7 +25,9 @@ $(function () {
                 }
                 tr += "<tr class='baKycItem'>" +
                     "<td><span class='ba_id'>" + data[i].ba_id + "</span></td>" +
-                    "<td style='display: none'><span class='log_id'>" + data[i].log_id + "</span></td>" +
+                    "<td style='display: none'>" +
+                    "<span class='log_id'>" + data[i].log_id + "</span>" +
+                    "</td>" +
                     bind_type +
                     bind_name +
                     bind_info +
