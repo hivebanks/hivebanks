@@ -26,9 +26,10 @@ $(function () {
                 tr += "<tr class='userKycItem'>" +
                     "<td><span class='us_id'>" + data[i].us_id + "</span></td>" +
                     "<td style='display: none' class='bind_name'>"+ data[i].bind_name +"</td>" +
-                    // "<p class='bind_name'>" + data[i].bind_name + "</p>" +
+                    "<td>" +
+                    "<p class='bind_name'>" + data[i].bind_name + "</p>" +
                     // "<span class='log_id'>" + data[i].log_id + "</span>" +
-                    // "</td>" +
+                    "</td>" +
                     bind_type +
                     bind_name +
                     bind_info +
