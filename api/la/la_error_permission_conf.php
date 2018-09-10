@@ -38,14 +38,13 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
         <textarea style="height:300px" cols="98" rows="15" class="code" readonly="readonly">
 
 { 
-      "api_url" :  "';?><?echo $_REQUEST['au'];echo '",
-      "benchmark_type" : "';?><?echo $_REQUEST['bt'];echo '",
-      "ca_currency" : "'; ?><? echo $_REQUEST['cc'];echo '",
-      "userLanguage" :  "'; ?><? echo $_REQUEST['ul'];echo '",
-      "h5_url" :  "';?><?echo $_REQUEST['hu'];echo '"
+      "api_url" :  "';echo $_REQUEST['au'];echo '",
+      "benchmark_type" : "';echo $_REQUEST['bt'];echo '",
+      "ca_currency" : "';  echo $_REQUEST['cc'];echo '",
+      "userLanguage" :  "'; echo $_REQUEST['ul'];echo '",
+      "h5_url" :  "';echo $_REQUEST['hu'];echo '"
 }
-                ';?>
-        <?php echo '</textarea>
+                ';echo '</textarea>
         <p>在您做完这些之后，点击“继续安装”</p>
         <p class="step"><a href="';url();echo '" class="button button-large">继续安装</a></p>
 </div></section>
