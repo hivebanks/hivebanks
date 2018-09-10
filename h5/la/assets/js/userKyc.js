@@ -57,6 +57,8 @@ $(function () {
         var bind_name = $(this).parents('.userKycItem').find('.bind_name').text();
         var bind_info = $(this).parents('.userKycItem').find('.bind_info').text();
         var log_id = $(this).parents('.userKycItem').find('.log_id').text();
+        console.log(bind_name);
+        return;
 
         ConfirmKycUser(token, us_id, bind_name, bind_info, log_id, function (response) {
             if (response.errcode == '0') {
