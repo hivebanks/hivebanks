@@ -54,7 +54,7 @@ $(function () {
     $(document).on('click', '.passBtn', function () {
         var _this = $(this);
         var us_id = $(this).parents('.userKycItem').find('.us_id').text();
-        var bind_name = $(this).parents('.userKycItem').find('.bind_name').text();
+        var bind_name = $(this).parents('.userKycItem').find('.bind_name');
         var bind_info = $(this).parents('.userKycItem').find('.bind_info').text();
         var log_id = $(this).parents('.userKycItem').find('.log_id').text();
         console.log(bind_name);
