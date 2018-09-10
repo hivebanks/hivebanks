@@ -27,7 +27,7 @@ $(function () {
                     "<td><span class='us_id'>" + data[i].us_id + "</span></td>" +
                     "<td style='display: none'>" +
                     "<span class='bind_name' name="+ data[i].bind_name +"></span>" +
-                    "<span class='log_id'>" + data[i].log_id + "</span>" +
+                    "<span class='log_id' name="+ data[i].log_id +"></span>" +
                     "</td>" +
                     bind_type +
                     bind_name +
@@ -57,9 +57,6 @@ $(function () {
         var bind_name = $(this).parents('.userKycItem').find('.bind_name').attr("name");
         var bind_info = $(this).parents('.userKycItem').find('.bind_info').text();
         var log_id = $(this).parents('.userKycItem').find('.log_id').text();
-        console.log(bind_name);
-        return;
-
         ConfirmKycUser(token, us_id, bind_name, bind_info, log_id, function (response) {
             if (response.errcode == '0') {
                 _this.closest('.userKycItem').remove();
