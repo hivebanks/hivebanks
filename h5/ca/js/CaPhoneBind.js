@@ -30,7 +30,12 @@ $(function () {
             return;
         }
 
-        if ($('.phoneCode').val().length <= 0) {
+        if ($('#phoneCfmCode').val().length <= 0) {
+            LayerFun('codeNotEmpty');
+            return;
+        }
+
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }
