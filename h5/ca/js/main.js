@@ -260,6 +260,6 @@ function ShowLoading(type) {
     }
     if(type == "hide"){
         console.log("hide");
-        spinner.stop();
+        spinner.stop(target);
     }
 }
