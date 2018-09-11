@@ -580,6 +580,7 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
+                console.log(data);
                 if (data.errcode == '0') {
                     src = data.url;
                     console.log(src);
