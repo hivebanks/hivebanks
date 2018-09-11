@@ -258,7 +258,7 @@ function ShowLoading(type) {
     // if(type == "show"){
         spinner.spin(target);
     // }
-    setTimeout(spinner.spin(), 5000);
+    // setTimeout(spinner.spin(), 5000);
     // if(type == "hide"){
     //     spinner.spin();
     // }
