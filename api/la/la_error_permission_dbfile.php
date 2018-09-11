@@ -56,17 +56,7 @@ class DB_COM extends Mysql {
         <p class="step"><a href="';url();echo '" class="button button-large"><span class="i18n" name="installNow"></span> ➡</a></p>
 
  </div></section>
-        <script>
-        (function(){
-        if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
-            var el = document.getElementById(\'wp-config\');
-            el.focus();
-            el.select();
-        }
-        })();
-           
-        </script>
-        
+ 
         </body>
         </html>';
 

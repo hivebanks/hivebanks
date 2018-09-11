@@ -52,18 +52,10 @@ class DB_COM extends Mysql {
 ?>'; echo '</textarea><br/><br/>
         <p class="i18n" name="installTips"></p>
         <p class="step"><a href="';url();echo '" class="button button-large"><span class="i18n" name="installNow"></span> ➡</a>
-
- </div></section>
-        <script>
-        (function(){
-        if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
-            var el = document.getElementById(\'wp-config\');
-            el.focus();
-            el.select();
-        }
-        })();
-           
-        </script>
+        
+         </div>
+         </section>
+ 
         </body>
         </html>';
 

@@ -53,16 +53,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
                 </p>
             </div>
        </section>
-        <script>
-        (function(){
-        if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
-            var el = document.getElementById(\'wp-config\');
-            el.focus();
-            el.select();
-        }
-        })();
-        </script>
-        
+       
         </body>
         </html>';
 
