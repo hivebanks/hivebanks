@@ -258,6 +258,7 @@ function ShowLoading(type) {
         new Spinner(opts).spin(target);
     }
     if(type == "hide"){
+        console.log("hide");
         new Spinner(opts).spin();
     }
 }
