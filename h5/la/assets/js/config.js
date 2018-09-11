@@ -92,9 +92,17 @@ $(function () {
         LayerFun(response.errcode);
     });
 
+    //select input
+    $("input[type='radio']").change(function () {
+        $(this).parent().siblings().removeClass("none");
+        $(this).parents(".configServerItem").siblings().find(".keyBox").addClass("none");
+    });
+
     //set config serve
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
+        var key = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
+        return;
         if(type == false){
             LayerFun("pleaseSelectOpenServer");
             return;
@@ -534,7 +542,6 @@ $(function () {
 
     //Upload image
     $('#uploadFile').on('change', function () {
-        console.log(la_id);
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
             // Modify the address attribute of the picture here
@@ -545,7 +552,6 @@ $(function () {
         formData.append("la_id", la_id);
         formData.append("id", la_id);
         option_src = UpLoadImg(formData);
-        console.log(option_src);
     });
 
     //Select an image to display
@@ -562,6 +568,7 @@ $(function () {
     }
 
     function UpLoadImg(formData) {
+        console.log(formData);
         var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
@@ -575,6 +582,11 @@ $(function () {
                 var data = JSON.parse(response);
                 if (data.errcode == '0') {
                     src = data.url;
+                }
+                if(data.errcode == "1"){
+                    layer.msg('<span class="i18n" name="notOpenUpload"></span>');
+                    execI18n();
+                    return;
                 }
             },
             error: function (response) {
