@@ -102,7 +102,6 @@ $(function () {
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
         var key = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
-        console.log(key);
         return;
         if(type == false){
             LayerFun("pleaseSelectOpenServer");
@@ -569,6 +568,7 @@ $(function () {
     }
 
     function UpLoadImg(formData) {
+        console.log(formData);
         var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',
@@ -582,6 +582,7 @@ $(function () {
                 var data = JSON.parse(response);
                 if (data.errcode == '0') {
                     src = data.url;
+                    console.log(src);
                 }
             },
             error: function (response) {
