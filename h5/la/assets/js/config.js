@@ -100,7 +100,7 @@ $(function () {
     //set config serve
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
-        var key = $("input[type='radio']:checked").parent().siblings().children("input[type='text]").val();
+        var key = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
         console.log(key);
         return;
         if(type == false){
