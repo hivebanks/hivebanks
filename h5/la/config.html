@@ -301,21 +301,16 @@
                             <div>
                                 <div class="configServerItem flex center space-between">
                                     <div class="width-50">
-                                        <p class="width-50">
+                                        <p class="width-30">
                                             <input class="with-gap radioFile" name="group1" type="radio" value="1"
                                                    id="uploadFileInput"/>
                                             <label for="uploadFileInput" class="i18n configServerText" name="uploadFiles"></label>
                                         </p>
                                         <p class="input-field none">
-                                            <input id="key" type="text" class="validate">
-                                            <label for="key">KEY</label>
+                                            <input id="keyFile" type="text" class="validate">
+                                            <label for="keyFile">KEY</label>
                                         </p>
-
                                     </div>
-                                    <!--<div class="input-field col s6">-->
-                                        <!--<input id="key" type="text" class="validate">-->
-                                        <!--<label for="key">KEY</label>-->
-                                    <!--</div>-->
                                     <p>
                                         <span><i class="iconfont icon-gantanhao color-red iconFile"></i></span>
                                         <span class="openStatus noOpenFile i18n" name="noOpen"></span>
@@ -324,11 +319,17 @@
                                     </p>
                                 </div>
                                 <div class="configServerItem flex center space-between">
-                                    <p>
-                                        <input class="with-gap radioSms" name="group1" type="radio" value="2"
-                                               id="smsConfig"/>
-                                        <label for="smsConfig" class="i18n configServerText" name="sms"></label>
-                                    </p>
+                                    <div class="width-50">
+                                        <p class="width-30">
+                                            <input class="with-gap radioSms" name="group1" type="radio" value="2"
+                                                   id="smsConfig"/>
+                                            <label for="smsConfig" class="i18n configServerText" name="sms"></label>
+                                        </p>
+                                        <p class="input-field none">
+                                            <input id="keySms" type="text" class="validate">
+                                            <label for="keySms">KEY</label>
+                                        </p>
+                                    </div>
                                     <p>
                                         <span><i class="iconfont icon-gantanhao color-red iconSms"></i></span>
                                         <span class="openStatus noOpenSms i18n" name="noOpen"></span>
@@ -337,11 +338,17 @@
                                     </p>
                                 </div>
                                 <div class="configServerItem flex center space-between">
-                                    <p>
-                                        <input class="with-gap radioEmail" name="group1" type="radio" value="3"
-                                               id="emailConfig"/>
-                                        <label for="emailConfig" class="i18n configServerText" name="email"></label>
-                                    </p>
+                                    <div class="width-50">
+                                        <p class="width-30">
+                                            <input class="with-gap radioSms" name="group1" type="radio" value="3"
+                                                   id="emailConfig"/>
+                                            <label for="emailConfig" class="i18n configServerText" name="email"></label>
+                                        </p>
+                                        <p class="input-field none">
+                                            <input id="keyEmail" type="text" class="validate">
+                                            <label for="keyEmail">KEY</label>
+                                        </p>
+                                    </div>
                                     <p>
                                         <span><i class="iconfont icon-gantanhao color-red iconEmail"></i></span>
                                         <span class="openStatus noOpenEmail i18n" name="noOpen"></span>
