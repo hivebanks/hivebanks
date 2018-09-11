@@ -51,7 +51,7 @@ class DB_COM extends Mysql {
             
 ?>'; echo '</textarea><br/><br/>
         <p class="i18n" name="installTips"></p>
-        <p class="step"><a href="';url();echo '" class="button button-large"><span class="i18n" name="startNow"></span> ➡</a>
+        <p class="step"><a href="';url();echo '" class="button button-large"><span class="i18n" name="installNow"></span> ➡</a>
 
  </div></section>
         <script>

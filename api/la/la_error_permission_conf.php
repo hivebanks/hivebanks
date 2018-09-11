@@ -48,7 +48,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
                 <p class="i18n" name="installTips"></p>
                 <p class="step">
                     <a href="';url();echo '" class="button button-large">
-                        <span class="i18n" name="startNow"></span> ➡
+                        <span class="i18n" name="installNow"></span> ➡
                     </a>
                 </p>
             </div>
