@@ -24,18 +24,18 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
         </head>
         <body>
         <section>
-        <div class="container">
-            <div class="row margin-top-5">
-                <div class="col-md-12 col-sm-12">
-                    <div class="align-center">
-                        <img src="admin/includes/img/logo-3.png" alt="">
+            <div class="container">
+                <div class="row margin-top-5">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="align-center">
+                            <img src="admin/includes/img/logo-3.png" alt="">
+                        </div>
+                        
                     </div>
-                    
                 </div>
-            </div>
-        <p>抱歉，我不能写入<code>config_url.json</code>文件。</p>
-        <p>您可以手工创建<code>config_url.json</code>文件，并将以下文字粘贴于其中。</p>
-        <textarea style="height:300px" cols="98" rows="15" class="code" readonly="readonly">
+                <p class="i18n" name="sorryForPermissionConfI"></p>
+                    <p class="i18n" name="sorryForPermissionConfII"></p>
+                <textarea style="height:300px" cols="98" rows="15" class="code" readonly="readonly">
 
 { 
       "api_url" :  "';echo $_REQUEST['au'];echo '",
@@ -44,10 +44,15 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
       "userLanguage" :  "'; echo $_REQUEST['ul'];echo '",
       "h5_url" :  "';echo $_REQUEST['hu'];echo '"
 }
-                ';echo '</textarea>
-        <p>在您做完这些之后，点击“继续安装”</p>
-        <p class="step"><a href="';url();echo '" class="button button-large">继续安装</a></p>
-</div></section>
+                    ';echo '</textarea><br/><br/>
+                <p class="i18n" name="installTips"></p>
+                <p class="step">
+                    <a href="';url();echo '" class="button button-large">
+                        <span class="i18n" name="startNow"></span> ➡
+                    </a>
+                </p>
+            </div>
+       </section>
         <script>
         (function(){
         if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
@@ -57,9 +62,7 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
         }
         })();
         </script>
-        <script type=\'text/javascript\' src=\'http://localhost/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4\'></script>
-        <script type=\'text/javascript\' src=\'http://localhost/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1\'></script>
-        <script type=\'text/javascript\' src=\'http://localhost/wordpress/wp-admin/js/language-chooser.min.js?ver=4.9.4\'></script>
+        
         </body>
         </html>';
 

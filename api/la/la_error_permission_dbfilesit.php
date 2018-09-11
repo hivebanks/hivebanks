@@ -30,12 +30,11 @@ echo '<html xmlns="http://www.w3.org/1999/xhtml">
                     <div class="align-center">
                         <img src="admin/includes/img/logo-3.png" alt="">
                     </div>
-                    
                 </div>
             </div>
+            <p class="i18n" name="sorryForPermissionDbExistBegin"></p><code>';echo $_REQUEST['dn'];echo '</code><br/><br/>
+            <p class="i18n" name="sorryForPermissionDbExistEnd"></p>
             
-        <p>抱歉，我不能创建<code>';echo $_REQUEST['dn'];echo '</code>数据库；请手动创建之，或将重命数据库删除。</p>
-        <p>完成以上步骤后请手工创建<code>inc/db_connect.php</code>文件，并将以下文字粘贴于其中。</p>
         <textarea  cols="980" rows="150" style="height:300px" readonly="readonly">
 <?php
 
@@ -50,10 +49,10 @@ class DB_COM extends Mysql {
             
 }
             
-?>'; echo '</textarea>
-        <p>在您做完这些之后，点击“现在安装”</p>
-        <p class="step"><a href="';url();echo '" class="button button-large">现在安装</a>
-<span class="i18n" name="startNow"></span> ➡</p>
+?>'; echo '</textarea><br/><br/>
+        <p class="i18n" name="installTips"></p>
+        <p class="step"><a href="';url();echo '" class="button button-large"><span class="i18n" name="startNow"></span> ➡</a>
+
  </div></section>
         <script>
         (function(){
@@ -65,9 +64,6 @@ class DB_COM extends Mysql {
         })();
            
         </script>
-        <script type=\'text/javascript\' src=\'http://localhost/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4\'></script>
-        <script type=\'text/javascript\' src=\'http://localhost/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1\'></script>
-        <script type=\'text/javascript\' src=\'http://localhost/wordpress/wp-admin/js/language-chooser.min.js?ver=4.9.4\'></script>
         </body>
         </html>';
 
