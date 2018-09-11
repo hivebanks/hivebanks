@@ -254,11 +254,12 @@ function ShowLoading(type) {
         position: 'absolute' // Element positioning
     };
     var target = document.getElementById("mySpin");
+    var spinner = new Spinner(opts);
     if(type == "show"){
-        new Spinner(opts).spin(target);
+        spinner.spin(target);
     }
     if(type == "hide"){
         console.log("hide");
-        new Spinner(opts).spin();
+        spinner.spin();
     }
 }
