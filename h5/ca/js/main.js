@@ -17,10 +17,6 @@ $(function () {
 // Icon link
     var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
     link.appendTo($('head')[0]);
-    var spinLink = $("<link rel='stylesheet' href='../../assets/css/spin.css'>");
-    spinLink.appendTo($('head')[1]);
-    var spinScript = $("<script src='../../assets/js/spin.min.js'></script>");
-    spinScript.appendTo($("head")[2]);
 
 // Password strength verification
     $('#emailPass').keyup(function () {
