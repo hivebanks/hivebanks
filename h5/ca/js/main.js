@@ -232,7 +232,7 @@ function LayerFun(type) {
 }
 
 //loading spin
-var div = $("<div id="+ mySpin +"></div>");
+var div = $("<div id='mySpin'></div>");
 $("body").append(div);
 var opts = {
     lines: 8, // The number of lines to draw
