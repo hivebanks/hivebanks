@@ -83,7 +83,9 @@ label {
 .navbar-side {
     z-index: 0;
 }
-
+.navbar-right{
+    margin-right: 0;
+}
 .panel {
     border-radius: 0px;
 }
