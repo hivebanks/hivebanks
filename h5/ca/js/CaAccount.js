@@ -29,17 +29,19 @@ $(function(){
             return;
         }
         $('#modifyName').modal('hide');
-        ShowLoading();
+        ShowLoading("show");
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
         ModifyNickName(token, ca_account, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun('modifySuccess');
                 $('.ca_account').text(response.ca_account);
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;
