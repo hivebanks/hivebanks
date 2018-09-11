@@ -233,7 +233,6 @@ function LayerFun(type) {
 
 //show loading
 function ShowLoading(type) {
-    console.log(type);
     var opts = {
         lines: 8, // The number of lines to draw
         length: 10, // The length of each line
