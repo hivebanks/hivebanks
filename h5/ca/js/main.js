@@ -233,6 +233,7 @@ function LayerFun(type) {
 
 //show loading
 function ShowLoading(type) {
+    console.log(type);
     var opts = {
         lines: 8, // The number of lines to draw
         length: 10, // The length of each line
@@ -259,7 +260,7 @@ function ShowLoading(type) {
         spinner.spin(target);
     }
     if(type == "hide"){
-        console.log(spinner.stop());
+        console.log("hide");
         spinner.stop();
     }
 }
