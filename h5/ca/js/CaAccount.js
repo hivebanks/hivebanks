@@ -24,7 +24,7 @@ $(function(){
         ShowLoading("show");
     });
     $(".loadingbtn2").click(function () {
-        ShowLoading("hide");
+        hide();
     });
     //change username
     $('.modifyNameBtn').click(function () {
