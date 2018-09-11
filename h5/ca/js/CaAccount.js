@@ -20,7 +20,12 @@ $(function(){
             window.location.href = "CaLogin.html";
         }
     });
-
+    $(".loadingbtn").click(function () {
+        ShowLoading("show");
+    });
+    $(".loadingbtn2").click(function () {
+        ShowLoading("hide");
+    });
     //change username
     $('.modifyNameBtn').click(function () {
         var ca_account = $('#nickName').val();
