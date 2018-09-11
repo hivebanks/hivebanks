@@ -231,6 +231,9 @@ function LayerFun(type) {
     execI18n();
 }
 
+//loading spin
+var div = $("<div id="+ mySpin +"></div>");
+$("body").append(div);
 var opts = {
     lines: 8, // The number of lines to draw
     length: 10, // The length of each line
