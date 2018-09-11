@@ -95,6 +95,7 @@ $(function () {
     //select input
     $("input[type='radio']").change(function () {
         $(this).parent().siblings().removeClass("none");
+        $(this).parents(".configServerItem").siblings().find(".keyBox").addClass("none");
     });
 
     //set config serve
