@@ -29,6 +29,7 @@ $(function(){
             return;
         }
         $('#modifyName').modal('hide');
+        ShowLoading();
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
         ModifyNickName(token, ca_account, function (response) {
