@@ -534,7 +534,6 @@ $(function () {
 
     //Upload image
     $('#uploadFile').on('change', function () {
-        console.log(la_id);
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
             // Modify the address attribute of the picture here
@@ -545,7 +544,6 @@ $(function () {
         formData.append("la_id", la_id);
         formData.append("id", la_id);
         option_src = UpLoadImg(formData);
-        console.log(option_src);
     });
 
     //Select an image to display
