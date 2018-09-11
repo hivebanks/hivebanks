@@ -15,6 +15,7 @@
     <title class="i18n" name="caAccount">Cash Agency Account</title>
 </head>
 <body>
+<div id="mySpin"></div>
 <!-- loading -->
 <iframe src="loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
         scrolling="no"></iframe>
@@ -56,7 +57,6 @@
             <div class="col-md-12 col-sm-12">
                 <div class="row title-row">
                     <div class="col-md-12 col-sm-12">
-                        <div id="mySpin"></div>
                         <h3 class="pcTitle i18n" name="accountTitle">Account Information</h3>
                         <h5 class="phoneTitle i18n" name="accountTitle">Account Information</h5>
                     </div>
@@ -291,7 +291,6 @@
 </div>
 
 <script src="../assets/js/jquery-3.2.1.min.js"></script>
-<!--<script src="../assets/js/spin.min.js"></script>-->
 <script src="language/jquery.i18n.properties.js"></script>
 <script src="language/language.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
@@ -324,7 +323,6 @@
     };
         var target = document.getElementById("mySpin");
         new Spinner(opts).spin(target);
-        // spinner.spin(target);
 </script>
 </body>
 </html>
