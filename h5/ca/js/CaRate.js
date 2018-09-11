@@ -3,17 +3,17 @@ $(function () {
     var token = getCookie('ca_token');
     GetCaAccount();
 
-    //获取信息
+    //get information
     GetCaInformation(token, function (response) {
         if (response.errcode == '0') {
             $('.base_amount').text(response.base_amount);
             $('.lock_amount').text(response.lock_amount);
         }
     }, function (response) {
-        ErrorCode(response.errcode);
+        LayerFun(response.errcode);
     });
 
-    //获取充值提现汇率列表
+    //get recharge withdraw rate list
     function GetRateFun() {
         GetRateList(token, function (response) {
             if (response.errcode == '0') {
@@ -37,12 +37,13 @@ $(function () {
     }
 
     GetRateFun();
-    //选择充值汇率设置和提现汇率设置
+
+    //select recharge rate and withdraw rate
     $(document).on('click', 'input[name=changeRate]', function () {
         $(this).attr('checked', true).parent().siblings().children('input[name=changeRate]').attr('checked', false);
     });
 
-    //确认设置汇率
+    //confirm set rate
     $(document).on('click', '.enableBtn', function () {
         var $this = $(this), btnText = $(this).text();
         var recharge_base_rate = $('.recharge_base_rate').text();
@@ -61,16 +62,18 @@ $(function () {
             ca_channel = $(this).parents('.differentRate').find('.ca_channel').text().toLowerCase();
 
         if (optRateType == 'recharge') {
-            //设置充值汇率
+            //set recharge rate
             if(DisableClick($this)) return;
+            ShowLoading("show");
             SetRechargeRate(token, rate, minAmount, maxAmount, time, level, ca_channel, pass_word_hash, function (response) {
                 if (response.errcode == '0') {
+                    ShowLoading("hide");
                     ActiveClick($this, btnText);
                     LayerFun('setSuccess');
                     return;
-
                 }
             }, function (response) {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun(response.errcode);
                 return;
@@ -79,16 +82,19 @@ $(function () {
         }
 
         if (optRateType == 'withdraw') {
-            //设置提现汇率
+            //set withdraw rate
             if(DisableClick($this)) return;
+            ShowLoading("show");
             SetWithdrawRate(token, rate, minAmount, maxAmount, time, level, ca_channel, pass_word_hash, function (response) {
                 if (response.errcode == '0') {
+                    ShowLoading("hide");
                     ActiveClick($this, btnText);
                     LayerFun('setSuccess');
                     GetRateFun();
                     return;
                 }
             }, function (response) {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun(response.errcode);
                 return;

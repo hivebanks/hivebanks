@@ -37,16 +37,18 @@ $(function () {
 
         var $this = $(this);
         if (DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
-            ActiveClick($this, 'Enable');
             if (response.errcode == '0') {
+                ShowLoading("hide");
+                ActiveClick($this, 'Enable');
                 $('#phone').val('');
                 $('#phoneCode').val('');
-                // $('#password').val('');
                 LayerFun('bindSuccess');
                 window.location.href = 'CaSecurity.html';
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, 'Enable');
             if (response.errcode == '114') {
                 window.location.href = 'login.html';

@@ -233,7 +233,6 @@ function LayerFun(type) {
 
 //loading spin
 var div = $("<div id='mySpin'></div>");
-
 var spinLink = $("<link rel='stylesheet' href='../../assets/css/spin.css'>");
 $("head").append(spinLink);
 $("body").append(div);

@@ -3,11 +3,10 @@ $(function () {
     var token = GetUsCookie('user_token');
     GetUsAccount();
 
-    //获取us_level
+    //get us_level
     var us_level = GetUsCookie('us_level');
 
-    //获取充值渠道
-    // var ca_channel = window.location.search.split('?')[1];
+    //get recharge assets
     var ca_channel = GetQueryString('ca_channel');
     var us_recharge_bit_amount = GetQueryString('us_recharge_bit_amount');
     $('.bit_amount').val(us_recharge_bit_amount);
@@ -15,7 +14,7 @@ $(function () {
     // $('.rechargeType').text(ca_channel);
     $('.rechargeTypeImg').attr("src", "img/" + ca_channel.toLowerCase() + ".png");
 
-    //分配充值ca
+    //distribution recharge ca
     var api_url = 'assign_recharge_ca.php', rate = '', ca_id = '', recharge_max_amount = '', recharge_min_amount = '';
     GetAssignCa(api_url, token, ca_channel, function (response) {
         if (response.errcode == '0') {
@@ -54,8 +53,10 @@ $(function () {
 
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         LockRechargeAmount(token, ca_id, base_amount, bit_amount, ca_channel, us_level, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#lockRecharge').modal('show');
                 readingTime(8);
@@ -63,13 +64,14 @@ $(function () {
                 name = response.lgl_address.name;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;
         })
     });
 
-    //确认阅读规则跳转
+    //Confirm reading rule jump
     $('.ruleBtn').click(function () {
         window.location.href = 'CaRechargeAddress.html?ca_channel=' + ca_channel + '&name=' + name + '&card_nm=' + card_nm + '&bit_amount=' + bit_amount + '&base_amount=' + base_amount;
     });
@@ -82,7 +84,7 @@ $(function () {
         $('.bit_amount_input').val($('.base_amount_input').val() * rate);
     });
 
-    //阅读规则时间倒计时
+    //Reading rule time countdown
     function readingTime(time) {
         var timer = null;
         timer = setInterval(function () {

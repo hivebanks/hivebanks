@@ -3,10 +3,10 @@ $(function () {
     var token = GetUsCookie('user_token');
     GetUsAccount();
 
-    //获取us_level
+    //get us_level
     var us_level = GetUsCookie('us_level');
 
-    // 获取基本信息
+    // get base information
     var us_base_amount = '';
     GetUserBaseInfo(token, function (response) {
         if (response.errcode == '0') {
@@ -29,15 +29,14 @@ $(function () {
         $('.bit_amount_input').val(us_base_amount * rate);
     });
     
-    //获取充值渠道
-    // var ca_channel = window.location.search.split('?')[1];
+    //Get recharge channels
     var ca_channel = GetQueryString('ca_channel');
     var base_amount = GetQueryString('us_ca_withdraw_amount');
     $('.base_amount_input').val(base_amount);
 
     $('.withdrawTypeImg').attr("src", "img/" + ca_channel.toLowerCase() + ".png");
 
-    //分配充值ca
+    //Assign recharge ca
     var api_url = 'assign_withdraw_ca.php', rate = '', ca_id = '', withdraw_max_amount = '', withdraw_min_amount = '';
     GetAssignCa(api_url, token, ca_channel, function (response) {
         if (response.errcode == '0') {
@@ -55,7 +54,7 @@ $(function () {
         LayerFun(response.errcode);
     });
 
-    //获取us_account_id
+    //get us_account_id
     var option = '';
     GetUsAccountId(token, ca_channel, function (response){
         if(response.errcode == '0'){
@@ -94,25 +93,28 @@ $(function () {
         }
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         LockWithdrawAmount(token, ca_id, base_amount, bit_amount, ca_channel, us_level, us_account_id, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#lockWithdraw').modal('show');
                 readingTime(8);
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;
         })
     });
 
-    //确认阅读规则跳转
+    //Confirm reading rule jump
     $('.ruleBtn').click(function () {
         window.location.href = 'CaWithdrawInfo.html';
     });
 
-    //输入框绑定
+    //Input box listener
     $('.base_amount_input').bind('input', 'propertychange', function () {
         $('.bit_amount_input').val($(this).val() * rate);
     });
@@ -120,7 +122,7 @@ $(function () {
         $('.base_amount_input').val($(this).val() / rate);
     });
 
-    //阅读规则时间倒计时
+    //Reading rule time countdown
     function readingTime(time) {
         var timer = null;
         timer = setInterval(function () {

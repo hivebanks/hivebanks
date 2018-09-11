@@ -48,13 +48,16 @@ $(function () {
         //hashFund password binding
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {
             if (response.errcode == '0') {
-                LayerFun('bindSuccess');
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
+                LayerFun('bindSuccess');
                 window.location.href = 'BaSecurity.html';
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

@@ -43,7 +43,7 @@ $(function () {
         return;
     });
 
-    //充值确认处理
+    //recharge confirm process
     var qa_id = '', _this = '';
     $(document).on('click', '.confirmBtn', function () {
         $('#confirmModal').modal('show');
@@ -54,19 +54,20 @@ $(function () {
         var type = '1';
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         RechargeConfirm(token, qa_id, type, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#confirmModal').modal('hide');
                 _this.closest('.rechargePendingList').remove();
                 $('.lock_amount').text(response.lock_amount);
-                layer.msg('<p class="i18n" name="suc_processing">处理成功</p>');
-                execI18n();
+                LayerFun("successfulProcessing");
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
-            layer.msg('<p class="i18n" name="err_processing">处理失败</p>');
-            execI18n();
+            LayerFun("processingFailure");
             LayerFun(response.errcode);
             return;
         })

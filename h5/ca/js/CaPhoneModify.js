@@ -39,13 +39,16 @@ $(function () {
         }
         var $this = $(this).text(), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         TextModify(token, text_type, text, text_hash, pass_word_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun('modifySuccess');
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             GetImgCode();
             LayerFun(response.errcode);

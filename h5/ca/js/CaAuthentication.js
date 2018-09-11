@@ -123,13 +123,20 @@ $(function () {
             LayerFun('pleaseEnterName');
             return;
         }
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
+                ActiveClick($this, btnText);
                 $('#name').val(' ');
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ShowLoading("hide");
+            ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
     });
@@ -153,18 +160,23 @@ $(function () {
             LayerFun('pleaseEnterIdNumber');
             return;
         }
-
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
+                ActiveClick($this, btnText);
                 $('#idNum').val(' ');
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ShowLoading("hide");
+            ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
     });
-
 
     //show ID upload binding
     $('.idPhotoBindBtn').click(function () {
@@ -179,24 +191,6 @@ $(function () {
 
         $('.idPhotoFormBox').fadeToggle('fast');
     });
-
-    //ID upload binding
-    //Get configuration file
-    // var url = getRootPath();
-    // var config_api_url = '';
-    // $.ajax({
-    //     url: url + "/h5/assets/json/config_url.json",
-    //     async: false,
-    //     type: "GET",
-    //     dataType: "json",
-    //     success: function (data) {
-    //         config_api_url = data.api_url;
-    //         config_h5_url = data.h5_url;
-    //     },
-    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
-    //
-    //     }
-    // });
 
     //Return image information
     function UpLoadImg(formData) {
@@ -269,12 +263,19 @@ $(function () {
             file_url = src1 + ',' + src2;
 
         //File binding
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
+                ActiveClick($this, btnText);
+                ShowLoading("hide");
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ActiveClick($this, btnText);
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     });

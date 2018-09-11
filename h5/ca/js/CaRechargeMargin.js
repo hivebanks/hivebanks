@@ -12,8 +12,10 @@ $(function () {
         }
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         RechargeManage(token, base_amount, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun('submitSuccess');
                 $('.rechargeFormRow').hide();
@@ -21,9 +23,9 @@ $(function () {
                 $('.addressInput').val(response.bit_address);
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
-            // LayerFun(response.errcode);
         })
     });
 
