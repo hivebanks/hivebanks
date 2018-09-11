@@ -580,10 +580,13 @@ $(function () {
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                console.log(data);
                 if (data.errcode == '0') {
                     src = data.url;
-                    console.log(src);
+                }
+                if(data.errcode == "1"){
+                    layer.msg('<span class="i18n" name="notOpenUpload"></span>');
+                    execI18n();
+                    return;
                 }
             },
             error: function (response) {
