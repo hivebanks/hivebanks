@@ -291,10 +291,11 @@
 </div>
 
 <script src="../assets/js/jquery-3.2.1.min.js"></script>
+<!--<script src="../assets/js/spin.min.js"></script>-->
 <script src="language/jquery.i18n.properties.js"></script>
 <script src="language/language.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/js/spin.min.js"></script>
+<script src="https://cdn.bootcss.com/spin.js/2.3.2/spin.min.js"></script>
 <script src="../assets/js/pagination.js"></script>
 <script src="../assets/js/layer/layer.js"></script>
 <script src="js/common.js"></script>
@@ -302,10 +303,10 @@
 <script src="js/CaAccount.js"></script>
 <script>
     var opts = {
-        lines: 13, // The number of lines to draw
-        length: 38, // The length of each line
-        width: 17, // The line thickness
-        radius: 45, // The radius of the inner circle
+        lines: 8, // The number of lines to draw
+        length: 10, // The length of each line
+        width: 2, // The line thickness
+        radius: 10, // The radius of the inner circle
         scale: 1, // Scales overall size of the spinner
         corners: 1, // Corner roundness (0..1)
         color: '#ffffff', // CSS color or array of colors
@@ -321,12 +322,9 @@
         shadow: '0 0 1px transparent', // Box-shadow for the lines
         position: 'absolute' // Element positioning
     };
-    $(function () {
-        var target = $("#myspin").get(0);
-        // new Spinner(opts).spin(target);
-        var spinner = new Spinner(opts).spin(target);
+        var target = document.getElementById("mySpin");
+        new Spinner(opts).spin(target);
         // spinner.spin(target);
-    })
 </script>
 </body>
 </html>
