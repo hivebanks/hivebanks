@@ -263,7 +263,7 @@ function ShowLoading(type) {
 
 function hide(){
 
-    var spinner = new Spinner(opts);
+    var spinner = new Spinner();
         console.log("hide");
         spinner.spin();
 }
