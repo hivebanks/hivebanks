@@ -92,6 +92,11 @@ $(function () {
         LayerFun(response.errcode);
     });
 
+    //select input
+    $("input[type='radio']").change(function () {
+        $(this).parent().siblings().removeClass("none");
+    });
+
     //set config serve
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
