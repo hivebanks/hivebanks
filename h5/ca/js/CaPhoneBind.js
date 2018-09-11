@@ -25,7 +25,7 @@ $(function () {
             text = country_code + "-" + phone,
             text_hash = $('#phoneCode').val();
 
-        if (text.length <= 0) {
+        if (phone.length <= 0) {
             LayerFun('phoneNotEmpty');
             return;
         }
