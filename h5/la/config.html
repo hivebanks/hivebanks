@@ -32,50 +32,25 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand waves-effect waves-dark flex center" href="userList.html">
-                <!--<i class="large material-icons">track_changes</i>-->
                 <img src="assets/img/logo-3.png" alt="" class="width-15 margin-right-5">
                 <strong>HiveBanks</strong>
             </a>
 
-            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48">toc</i></div>
+            <div id="sideNav" class="waves-effect waves-dark" href=""><i class="material-icons dp48"></i></div>
         </div>
 
         <ul class="nav navbar-top-links navbar-right">
-            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i-->
-            <!--class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i-->
-            <!--class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!--<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i-->
-            <!--class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>-->
-            <!--语言切换-->
-            <li>
-                <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="language">
-                    <i class="fa fa-user fa-fw"></i> <b class="languageText">English</b> <i
-                        class="material-icons right">arrow_drop_down</i>
-                </a>
-            </li>
             <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
-                    class="fa fa-user fa-fw"></i> <b class="la_name">admin</b> <i
-                    class="material-icons right">arrow_drop_down</i></a></li>
+                    class="fa fa-user fa-fw"></i> <b class="la_name"></b> <i
+                    class="material-icons right">keyboard_arrow_down</i></a></li>
         </ul>
     </nav>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <!--<li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>-->
-        <!--</li>-->
-        <!--<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>-->
-        <!--</li>-->
-        <li><a href="javascript:;" class="logOut"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-        </li>
-    </ul>
-    <!--语言列表-->
-    <ul id="language" class="dropdown-content">
-        <li class="flex center">
-            <i class="iconfont icon-en"></i>
-            <a href="#" value="en" class="margin-left-5">English</a></li>
-        <li class="flex center">
-            <i class="iconfont icon-ch"></i>
-            <a href="#" value="zh-CN" class="margin-left-5">简体中文</a>
+        <li><a href="javascript:;" class="logOut">
+            <i class="fa fa-sign-out fa-fw"></i>
+            <span class="i18n" name="logout"></span>
+        </a>
         </li>
     </ul>
 
@@ -87,111 +62,100 @@
                 <li>
                     <a href="config.html" class="active-menu waves-effect waves-dark">
                         <i class="fa fa-dashboard"></i>
-                        <span class="i18n" name="config">config</span>
+                        <span class="i18n" name="config"></span>
                     </a>
                 </li>
                 <!--charts-->
                 <li>
                     <a href="report.html" class="waves-effect waves-dark">
-                        <i class="fa fa-area-chart"></i>
-                        <span class="i18n" name="charts">charts</span>
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="i18n" name="charts"></span>
                     </a>
                 </li>
                 <!--management-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark">
                         <i class="fa fa-sitemap"></i>
-                        <span class="i18n" name="management">management</span>
+                        <span class="i18n" name="management"></span>
                         <span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userList.html" class="i18n" name="userList">USER List</a>
+                            <a href="userList.html" class="i18n" name="userList"></a>
                         </li>
                         <li>
-                            <a href="baList.html" class="i18n" name="bitCoinAgencyList">BA List</a>
+                            <a href="baList.html" class="i18n" name="bitCoinAgencyList"></a>
                         </li>
                         <li>
-                            <a href="caList.html" class="i18n" name="cashAgencyList">CA List</a>
+                            <a href="caList.html" class="i18n" name="cashAgencyList"></a>
                         </li>
                     </ul>
                 </li>
                 <!--transaction-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark">
-                        <i class="fa fa-ils"></i>
-                        <span class="i18n" name="transaction">transaction</span>
+                        <i class="fa fa-btc"></i>
+                        <span class="i18n" name="transaction"></span>
                         <span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode">USER
-                                TransactionRecode</a>
+                            <a href="userTransferList.html" class="i18n" name="userTransactionRecode"></a>
                         </li>
                         <li>
-                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord">BA
-                                TransactionRecode</a>
+                            <a href="baRechargeList.html" class="i18n" name="bitCoinAgencyRechargeRecord"></a>
                         </li>
                         <li>
-                            <a href="baWithdrawList.html" class="i18n" name="bitCoinAgencyWithdrawRecord">BA
-                                TransactionRecode</a>
+                            <a href="baWithdrawList.html" class="i18n" name="bitCoinAgencyWithdrawRecord"></a>
                         </li>
                         <li>
-                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord">CA
-                                TransactionRecode</a>
+                            <a href="caRechargeList.html" class="i18n" name="cashAgencyRechargeRecord"></a>
                         </li>
                         <li>
-                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord">CA
-                                TransactionRecode</a>
+                            <a href="caWithdrawList.html" class="i18n" name="cashAgencyWithdrawRecord"></a>
                         </li>
                     </ul>
                 </li>
                 <!--kyc审核-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark"><i class="fa fa-lock"></i>
-                        <span class="i18n" name="kyc">KYC</span>
+                        <span class="i18n" name="kyc"></span>
                         <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="userKyc.html" class="i18n" name="userKyc">userKyc</a>
+                            <a href="userKyc.html" class="i18n" name="userKyc"></a>
                         </li>
                         <li>
                             <a class="childMenu" name="" href="#!">
-                                <span class="i18n" name="baKyc">baKyc</span>
+                                <span class="i18n" name="baKyc"></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-third-level none">
                                 <li>
-                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">bing
-                                        info list</a>
+                                    <a href="baBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc"></a>
                                 </li>
                                 <li>
-                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList">register
-                                        list</a>
+                                    <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">withdraw
-                                        address list</a>
+                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a class="childMenu" name="" href="#!">
-                                <span class="i18n" name="caKyc">caKyc</span>
+                                <span class="i18n" name="caKyc"></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-third-level none">
                                 <li>
-                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc">bind
-                                        info kyc list</a>
+                                    <a href="caBindKyc.html" class="waves-effect waves-dark i18n" name="bindKyc"></a>
                                 </li>
                                 <li>
-                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList">register kyc
-                                        list</a>
+                                    <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList">withdraw
-                                        kyc list</a>
+                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
@@ -200,8 +164,8 @@
                 <!--fault Report-->
                 <li>
                     <a href="failureReport.html" class="waves-effect waves-dark">
-                        <i class="fa fa-dashboard"></i>
-                        <span class="i18n" name="declarationList">declarationList</span>
+                        <i class="fa fa-file-text-o"></i>
+                        <span class="i18n" name="declarationList"></span>
                     </a>
                 </li>
             </ul>
@@ -210,12 +174,10 @@
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper">
         <div class="header">
-            <h1 class="page-header i18n" name="config">
-                Config
-            </h1>
+            <h1 class="page-header i18n" name="config"></h1>
             <ol class="breadcrumb">
                 <!--<li><a href="#">Home</a></li>-->
-                <li class="active i18n" name="config">Config</li>
+                <li class="active i18n" name="config"></li>
             </ol>
 
         </div>
@@ -228,14 +190,14 @@
                             <div>
                                 <ul>
                                     <li class="margin-bottom-5">
-                                        <span class="i18n" name="baseCurrencyType">baseCurrencyType</span>
+                                        <span class="i18n" name="baseCurrencyType"></span>
                                         <span>:</span>
                                         <span>
                                             <a href="javascript:;" class="set base_currency"></a>
                                         </span>
                                     </li>
                                     <li class="margin-bottom-5">
-                                        <span class="i18n" name="digitalCurrencyUnit">digitalCurrencyUnit</span>
+                                        <span class="i18n" name="digitalCurrencyUnit"></span>
                                         <span>:</span>
                                         <span>
                                             <a href="javascript:;" class="set unit">
@@ -244,34 +206,33 @@
                                         </span>
                                     </li>
                                     <li class="margin-bottom-5">
-                                        <span class="i18n" name="creationTime">creationTime</span>
+                                        <span class="i18n" name="creationTime"></span>
                                         <span>:</span>
                                         <span>2018/08/08 12:00</span>
                                     </li>
                                     <li class="margin-bottom-5">
-                                        <span class="i18n" name="frontEndAddress">frontEndAddress</span>
+                                        <span class="i18n" name="frontEndAddress"></span>
                                         <span>:</span>
                                         <span class="h5_url"></span>
                                     </li>
                                     <li class="margin-bottom-5">
-                                        <span class="i18n" name="backgroundAddress">backgroundAddress</span>
+                                        <span class="i18n" name="backgroundAddress"></span>
                                         <span>:</span>
                                         <span class="api_url"></span>
                                     </li>
                                     <li class="margin-bottom-5">
-                                        <!--<a href="javascript:;" class="smsInterface">短信接口配置</a>-->
-                                        <a href="errCodeManage.html" class="errCode i18n" name="errorCodeManagement">errorCodeManagement</a>
+                                        <a href="errCodeManage.html" class="errCode i18n" name="errorCodeManagement"></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="input-field">
                                 <input id="api_key" type="text" class="validate" maxlength="8">
-                                <label for="api_key">api_key</label>
+                                <label for="api_key"></label>
                             </div>
                             <div class="align-right">
-                                <span class="i18n" name="current">current</span>:
-                                <span class="api_key_value i18n" name="notSet">notSet</span>
-                                <button class="btn btn-success setApiBtn i18n" name="set">set</button>
+                                <span class="i18n" name="current"></span>:
+                                <span class="api_key_value i18n" name="notSet"></span>
+                                <button class="btn btn-success setApiBtn i18n" name="set"></button>
                             </div>
                         </div>
                     </div>
@@ -279,10 +240,10 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            <h5 class="i18n" name="administratorSettings">administratorSettings</h5>
+                            <h5 class="i18n" name="administratorSettings"></h5>
                             <div>
                                 <div>
-                                    <h5 class="i18n" name="authorityAllocation">authorityAllocation</h5>
+                                    <h5 class="i18n" name="authorityAllocation"></h5>
                                     <div class="flex permission">
                                         <p class="">
                                             <input type="checkbox" name="1" class="filled-in" id="pid_1"
@@ -310,12 +271,12 @@
                                 <div class="form-group">
                                     <div class="input-field">
                                         <input id="name" type="text" class="validate">
-                                        <label for="name" class="i18n" name="actualName">actualName</label>
+                                        <label for="name" class="i18n" name="actualName"></label>
                                     </div>
                                     <div class="input-field">
                                         <input id="userName" type="text" class="validate" autocomplete="false">
                                         <label for="userName" class="i18n"
-                                               name="administratorName">administratorName</label>
+                                               name="administratorName"></label>
                                     </div>
                                     <div class="input-field">
                                         <input id="password" type="password" class="validate" autocomplete="false">
@@ -323,9 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="align-right">
-                                    <button class="permissionBtn btn btn-success btn-sm i18n" name="determine">
-                                        determine
-                                    </button>
+                                    <button class="permissionBtn btn btn-success btn-sm i18n" name="determine"></button>
                                 </div>
                             </div>
                         </div>
@@ -338,145 +297,54 @@
                 <div class="col col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            <h5 class="i18n" name="configServer">配置服务</h5>
+                            <h5 class="i18n" name="configServer"></h5>
                             <div>
                                 <div class="configServerItem flex center space-between">
                                     <p>
                                         <input class="with-gap radioFile" name="group1" type="radio" value="1"
                                                id="uploadFileInput"/>
-                                        <label for="uploadFileInput" class="i18n configServerText" name="uploadFiles">Upload
-                                            File</label>
+                                        <label for="uploadFileInput" class="i18n configServerText" name="uploadFiles"></label>
                                     </p>
                                     <p>
                                         <span><i class="iconfont icon-gantanhao color-red iconFile"></i></span>
-                                        <span class="openStatus noOpenFile i18n" name="noOpen">nonactivated</span>
-                                        <span class="none openStatus alreadyOpenFile i18n" name="alreadyOpen">alreadyOpen</span>
-                                        <span class="none openStatus i18n underReviewFile" name="underReview">underReview</span>
+                                        <span class="openStatus noOpenFile i18n" name="noOpen"></span>
+                                        <span class="none openStatus alreadyOpenFile i18n" name="alreadyOpen"></span>
+                                        <span class="none openStatus i18n underReviewFile" name="underReview"></span>
                                     </p>
                                 </div>
                                 <div class="configServerItem flex center space-between">
                                     <p>
                                         <input class="with-gap radioSms" name="group1" type="radio" value="2"
                                                id="smsConfig"/>
-                                        <label for="smsConfig" class="i18n configServerText" name="sms">SMS</label>
+                                        <label for="smsConfig" class="i18n configServerText" name="sms"></label>
                                     </p>
                                     <p>
                                         <span><i class="iconfont icon-gantanhao color-red iconSms"></i></span>
-                                        <span class="openStatus noOpenSms i18n" name="noOpen">nonactivated</span>
-                                        <span class="none openStatus alreadyOpenSms i18n"
-                                              name="alreadyOpen">alreadyOpen</span>
-                                        <span class="none openStatus i18n underReviewSms"
-                                              name="underReview">underReview</span>
+                                        <span class="openStatus noOpenSms i18n" name="noOpen"></span>
+                                        <span class="none openStatus alreadyOpenSms i18n" name="alreadyOpen"></span>
+                                        <span class="none openStatus i18n underReviewSms" name="underReview"></span>
                                     </p>
                                 </div>
                                 <div class="configServerItem flex center space-between">
                                     <p>
                                         <input class="with-gap radioEmail" name="group1" type="radio" value="3"
                                                id="emailConfig"/>
-                                        <label for="emailConfig" class="i18n configServerText"
-                                               name="email">Email</label>
+                                        <label for="emailConfig" class="i18n configServerText" name="email"></label>
                                     </p>
                                     <p>
                                         <span><i class="iconfont icon-gantanhao color-red iconEmail"></i></span>
-                                        <span class="openStatus noOpenEmail i18n" name="noOpen">nonactivated</span>
-                                        <span class="none openStatus alreadyOpenEmail i18n" name="alreadyOpen">alreadyOpen</span>
-                                        <span class="none openStatus i18n underReviewEmail" name="underReview">underReview</span>
+                                        <span class="openStatus noOpenEmail i18n" name="noOpen"></span>
+                                        <span class="none openStatus alreadyOpenEmail i18n" name="alreadyOpen"></span>
+                                        <span class="none openStatus i18n underReviewEmail" name="underReview"></span>
                                     </p>
                                 </div>
                                 <div class="align-right margin-top-2">
-                                    <button class="uploadFileBtn configServeBtn btn btn-success i18n" name="open">Open
-                                    </button>
+                                    <button class="uploadFileBtn configServeBtn btn btn-success i18n" name="open"></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--<div class="col-md-6 col-sm-12">-->
-                <!--&lt;!&ndash;短信接口&ndash;&gt;-->
-                <!--<div class="card smsInterfaceBox">-->
-                <!--<div class="card-content">-->
-                <!--<div class="flex center space-between">-->
-                <!--<h5 class="i18n" name="smsInterfaceConfiguration">smsInterfaceConfiguration</h5>-->
-                <!--&lt;!&ndash;<a href="javascript:;" class="backBaseInfo">返回</a>&ndash;&gt;-->
-                <!--</div>-->
-                <!--<ul>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>accessKeyId</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="accessKeyId" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>accessKeySecret</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="accessKeySecret" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>SignName</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="SignName" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>TemplateCode</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="TemplateCode" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="align-right">-->
-                <!--<button class="smsInterfaceBtn btn btn-success btn-sm i18n" name="modify">modify</button>-->
-                <!--</li>-->
-                <!--</ul>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-6 col-sm-12">-->
-                <!--&lt;!&ndash;邮箱接口&ndash;&gt;-->
-                <!--<div class="card smsInterfaceBox">-->
-                <!--<div class="card-content">-->
-                <!--<div class="flex center space-between">-->
-                <!--<h5 class="i18n" name="mailboxInterfaceConfiguration">邮箱接口配置</h5>-->
-                <!--&lt;!&ndash;<a href="javascript:;" class="backBaseInfo">返回</a>&ndash;&gt;-->
-                <!--</div>-->
-                <!--<ul>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>Host</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="email_Host" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>Username</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="email_username" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>Password</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="email_password" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>Address</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="email_address" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="margin-bottom-5 flex center">-->
-                <!--<p><span>Name</span>:</p>-->
-                <!--<div class="input-field inline">-->
-                <!--<input id="email_name" type="text" class="validate">-->
-                <!--</div>-->
-                <!--</li>-->
-                <!--<li class="align-right">-->
-                <!--<button class="emailInterfaceBtn btn btn-success btn-sm i18n" name="modify">修改</button>-->
-                <!--</li>-->
-                <!--</ul>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
             </div>
 
             <div class="row">
@@ -489,21 +357,16 @@
                         </div>
                         <div class="card-content">
                             <div class="flex center space-between">
-                                <h5 class="i18n" name="SetAllowedDigitalCurrencyProxyType">设置允许数字货币代理类型</h5>
-                                <a class="card-title activator grey-text text-darken-4 font-size-14 i18n"
-                                   name="viewAdded">
-                                    查看已添加
-                                </a>
+                                <h5 class="i18n" name="SetAllowedDigitalCurrencyProxyType"></h5>
+                                <a class="card-title activator grey-text text-darken-4 font-size-14 i18n" name="viewAdded"></a>
                             </div>
                             <div class="margin-top-5">
                                 <div class="form-group-sm flex">
                                     <div class="input-field">
                                         <input type="text" id="baseBaTypeInput" class="form-control baseBaTypeInput">
-                                        <label for="baseBaTypeInput" class="i18n" name="digitalCurrencyType">数字货币类型(如
-                                            BTC)</label>
+                                        <label for="baseBaTypeInput" class="i18n" name="digitalCurrencyType"></label>
                                     </div>
-                                    <button class="btn btn-success btn-sm baseBaTypeBtn i18n" name="enactment">设定
-                                    </button>
+                                    <button class="btn btn-success btn-sm baseBaTypeBtn i18n" name="enactment"></button>
                                 </div>
                                 <!--列举代理类型-->
                                 <div>
@@ -519,7 +382,7 @@
 
                         <div class="card-reveal">
                             <div class="flex center space-between">
-                                <h5 class="i18n" name="addedDigitalCurrencyProxyType">已添加的数字货币代理类型</h5>
+                                <h5 class="i18n" name="addedDigitalCurrencyProxyType"></h5>
                                 <span class="card-title grey-text text-darken-4">
                                 <i class="material-icons right">close</i>
                             </span>
@@ -541,22 +404,17 @@
                         </div>
                         <div class="card-content">
                             <div class="flex center space-between">
-                                <h5 class="i18n" name="setAllowedCoinAgentType">设置允许法币代理类型</h5>
-                                <a class="card-title activator grey-text text-darken-5 font-size-14 i18n"
-                                   name="viewAdded">
-                                    查看已添加
-                                </a>
+                                <h5 class="i18n" name="setAllowedCoinAgentType"></h5>
+                                <a class="card-title activator grey-text text-darken-5 font-size-14 i18n" name="viewAdded"></a>
                             </div>
                             <div class="margin-top-5">
                                 <div class="form-group-sm flex">
                                     <div class="input-field">
                                         <input id="baseCaTypeInput" type="text"
                                                class="form-control validate baseCaTypeInput">
-                                        <label for="baseCaTypeInput" class="i18n" name="bankAbbreviation">银行简称(如
-                                            ICBC)</label>
+                                        <label for="baseCaTypeInput" class="i18n" name="bankAbbreviation"></label>
                                     </div>
-                                    <button class="btn btn-success btn-sm baseCaTypeBtn i18n" name="enactment">设定
-                                    </button>
+                                    <button class="btn btn-success btn-sm baseCaTypeBtn i18n" name="enactment"></button>
                                 </div>
                                 <!--列举代理类型-->
                                 <div>
@@ -572,14 +430,14 @@
 
                         <div class="card-reveal">
                             <div class="flex center space-between">
-                                <h5 class="i18n" name="addedCurrencyProxyType">已添加的法币代理类型</h5>
+                                <h5 class="i18n" name="addedCurrencyProxyType"></h5>
                                 <span class="card-title grey-text text-darken-5">
-                                <i class="material-icons right">close</i>
+                                <i class="material-icons right"></i>
                             </span>
                             </div>
                             <div>
                                 <ul class="alreadyAddCaTypeBox flex wrap">
-                                    <li><span class="i18n" name="noData">noData</span></li>
+                                    <li><span class="i18n" name="noData"></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -592,67 +450,66 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="card col m12 s12">
                         <div class="card-content">
-                            <h5 class="i18n" name="registrationApplicationManagement">注册申请管理</h5>
+                            <h5 class="i18n" name="registrationApplicationManagement"></h5>
                             <div class="flex space-between">
                                 <div class="">
                                     <div class="switchBox">
-                                        <h5 class="i18n" name="allowDigitalCurrencyAgentRegistration">允许数字货币代理商注册</h5>
+                                        <h5 class="i18n" name="allowDigitalCurrencyAgentRegistration"></h5>
                                         <div class="switch">
                                             <label>
-                                                <span class="bitOff setOff ba_lock_off i18n" name="off">关</span>
+                                                <span class="bitOff setOff ba_lock_off i18n" name="off"></span>
                                                 <input type="checkbox" class="bitRegister ba_lock_input">
                                                 <span class="lever"></span>
-                                                <span class="bitOn setOn ba_lock_on i18n" name="on">开</span>
+                                                <span class="bitOn setOn ba_lock_on i18n" name="on"></span>
                                             </label>
                                         </div>
                                         <div>
                                             <p class="margin-top-5">
-                                                <span class="i18n" name="currentSetting">当前设置</span>:
-                                                <span class="bitWitchText setType ba_lock_text">关</span>
+                                                <span class="i18n" name="currentSetting"></span>:
+                                                <span class="bitWitchText setType ba_lock_text"></span>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="">
                                     <div class="switchBox">
-                                        <h5 class="i18n" name="allowLegalCurrencyAgentsToRegister">允许法币代理商注册</h5>
+                                        <h5 class="i18n" name="allowLegalCurrencyAgentsToRegister"></h5>
                                         <div class="switch">
                                             <label>
-                                                <span class="cashOff setOff ca_lock_off i18n" name="off">关</span>
+                                                <span class="cashOff setOff ca_lock_off i18n" name="off"></span>
                                                 <input type="checkbox" class="cashRegister ca_lock_input">
                                                 <span class="lever"></span>
-                                                <span class="cashOn setOn ca_lock_on i18n" name="on">开</span>
+                                                <span class="cashOn setOn ca_lock_on i18n" name="on"></span>
                                             </label>
                                         </div>
                                         <div>
                                             <p class="margin-top-5">
-                                                <span class="i18n" name="currentSetting">当前设置</span>:
-                                                <span class="cashWitchText setType ca_lock_text">关</span>
+                                                <span class="i18n" name="currentSetting"></span>:
+                                                <span class="cashWitchText setType ca_lock_text"></span>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="">
                                     <div class="switchBox">
-                                        <h5 class="i18n" name="allowUsersToRegister">允许用户注册</h5>
+                                        <h5 class="i18n" name="allowUsersToRegister"></h5>
                                         <div class="switch">
                                             <label>
-                                                <span class="userOff setOff user_lock_off">关</span>
+                                                <span class="userOff setOff user_lock_off"></span>
                                                 <input type="checkbox" class="userRegister user_lock_input">
                                                 <span class="lever"></span>
-                                                <span class="userOn setOn user_lock_on">开</span>
+                                                <span class="userOn setOn user_lock_on"></span>
                                             </label>
                                         </div>
                                         <div>
                                             <p class="margin-top-5">
-                                                <span class="i18n" name="currentSetting">当前设置</span>:
-                                                <span class="userWitchText setType user_lock_text">关</span>
+                                                <span class="i18n" name="currentSetting"></span>:
+                                                <span class="userWitchText setType user_lock_text"></span>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -660,7 +517,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <!--loading-->
 <div class="preloader-wrapper active">
     <div class="spinner-layer spinner-red-only">
@@ -683,14 +540,14 @@
             <div class="col-md-10 col-sm-12">
                 <div class="">
                     <div class=" ">
-                        <h5 class="i18n" name="pleaseUploadAnImageOfTheSelectedType">请上传选择类型的图片</h5>
+                        <h5 class="i18n" name="pleaseUploadAnImageOfTheSelectedType"></h5>
                         <div>
                             <img src="" class="uploadImgSrc width-15" alt="">
                         </div>
                         <form id="uploadForm" method="GET" enctype="multipart/form-data">
                             <div class="file-field input-field">
                                 <div class="btn">
-                                    <span class="i18n" name="file">文件</span>
+                                    <span class="i18n" name="file"></span>
                                     <input type="file" name="file" multiple id="uploadFile">
                                 </div>
                                 <div class="file-path-wrapper">
@@ -701,8 +558,7 @@
                         </form>
                         <div class="align-right">
                             <button class="btn btn-danger btn-sm cancel i18n" name="cancel">cancel</button>
-                            <button class="btn btn-success btn-sm baseBaTypeBtnConfirm i18n" name="determine">determine
-                            </button>
+                            <button class="btn btn-success btn-sm baseBaTypeBtnConfirm i18n" name="determine"></button>
                         </div>
                     </div>
                 </div>

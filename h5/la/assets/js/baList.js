@@ -8,7 +8,7 @@ $(function () {
         if (response.errcode == '0') {
             var data = response.rows, tr = '';
             if (data == false) {
-                GetDataEmpty('baList', '4');
+                GetDataEmpty('baList', '5');
                 return;
             }
             $.each(data, function (i, val) {
@@ -24,7 +24,7 @@ $(function () {
             $('#baList').html(tr);
         }
     }, function (response) {
-        GetDataFail('baList', '4');
+        GetDataFail('baList', '5');
         LayerFun(response.errcode);
         return;
     });

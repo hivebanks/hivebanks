@@ -18,7 +18,7 @@ $(function () {
                     '<td>'+ data[i].base_amount +'</td>' +
                     '<td>'+ data[i].tx_hash +'</td>' +
                     '<td>'+ data[i].tx_time +'</td>' +
-                    '<td><input type="text" class="form-control tradingHash"></td>' +
+                    '<td><input type="text" class="form-control  "></td>' +
                     '<td><span class="i18n" name="processed">processed</span></td>' +
                     '</tr>'
             });

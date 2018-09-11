@@ -527,7 +527,6 @@ $(function () {
     GetLaId(token, function (response) {
         if (response.errcode == '0') {
             la_id = response.la_id;
-            console.log(la_id);
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -561,23 +560,6 @@ $(function () {
         }
         return url;
     }
-
-    //Return image information
-    // var url = getRootPath();
-    // var config_api_url = '', config_h5_url = '';
-    // $.ajax({
-    //     url: url + "/h5/assets/json/config_url.json",
-    //     async: false,
-    //     type: "GET",
-    //     dataType: "json",
-    //     success: function (data) {
-    //         config_api_url = data.api_url;
-    //         config_h5_url = data.h5_url;
-    //     },
-    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
-    //
-    //     }
-    // });
 
     function UpLoadImg(formData) {
         var src = '';
