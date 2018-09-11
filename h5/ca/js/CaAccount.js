@@ -16,8 +16,16 @@ $(function(){
         }
     }, function (response){
         LayerFun(response.errcode);
+        if(response.errcode == "114"){
+            window.location.href = "CaLogin.html";
+        }
     });
-
+    $(".loadingbtn").click(function () {
+        ShowLoading("show");
+    });
+    $(".loadingbtn2").click(function () {
+        ShowLoading("hide");
+    });
     //change username
     $('.modifyNameBtn').click(function () {
         var ca_account = $('#nickName').val();
@@ -26,16 +34,19 @@ $(function(){
             return;
         }
         $('#modifyName').modal('hide');
+        ShowLoading("show");
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
         ModifyNickName(token, ca_account, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun('modifySuccess');
                 $('.ca_account').text(response.ca_account);
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

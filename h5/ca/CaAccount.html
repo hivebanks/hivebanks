@@ -57,6 +57,8 @@
             <div class="col-md-12 col-sm-12">
                 <div class="row title-row">
                     <div class="col-md-12 col-sm-12">
+                        <button class="loadingbtn">loading</button>
+                        <button class="loadingbtn2">loading2</button>
                         <h3 class="pcTitle i18n" name="accountTitle">Account Information</h3>
                         <h5 class="phoneTitle i18n" name="accountTitle">Account Information</h5>
                     </div>
@@ -294,35 +296,12 @@
 <script src="language/jquery.i18n.properties.js"></script>
 <script src="language/language.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
-<script src="https://cdn.bootcss.com/spin.js/2.3.2/spin.min.js"></script>
+<script src="../assets/js/spin.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/spin.js/2.3.2/spin.min.js"></script>-->
 <script src="../assets/js/pagination.js"></script>
 <script src="../assets/js/layer/layer.js"></script>
 <script src="js/common.js"></script>
 <script src="js/main.js"></script>
 <script src="js/CaAccount.js"></script>
-<script>
-    var opts = {
-        lines: 8, // The number of lines to draw
-        length: 10, // The length of each line
-        width: 2, // The line thickness
-        radius: 10, // The radius of the inner circle
-        scale: 1, // Scales overall size of the spinner
-        corners: 1, // Corner roundness (0..1)
-        color: '#ffffff', // CSS color or array of colors
-        fadeColor: 'transparent', // CSS color or array of colors
-        speed: 1, // Rounds per second
-        rotate: 0, // The rotation offset
-        animation: 'spinner-line-fade-quick', // The CSS animation name for the lines
-        direction: 1, // 1: clockwise, -1: counterclockwise
-        zIndex: 2e9, // The z-index (defaults to 2000000000)
-        className: 'spinner', // The CSS class to assign to the spinner
-        top: '50%', // Top position relative to parent
-        left: '50%', // Left position relative to parent
-        shadow: '0 0 1px transparent', // Box-shadow for the lines
-        position: 'absolute' // Element positioning
-    };
-        var target = document.getElementById("mySpin");
-        new Spinner(opts).spin(target);
-</script>
 </body>
 </html>
