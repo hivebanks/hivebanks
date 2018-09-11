@@ -259,7 +259,7 @@ function ShowLoading(type) {
         spinner.spin(target);
     }
     if(type == "hide"){
-        console.log("hide");
+        console.log(spinner.stop());
         spinner.stop();
     }
 }
