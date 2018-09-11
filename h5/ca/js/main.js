@@ -254,16 +254,11 @@ var target = document.getElementById("mySpin");
 var spinner = new Spinner(opts);
 //show loading
 function ShowLoading(type) {
-
     if(type == "show"){
         spinner.spin(target);
     }
-
-}
-
-function hide(){
-
-    
-        console.log("hide");
+    if(type == "hide"){
         spinner.spin();
+    }
+
 }
