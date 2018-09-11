@@ -234,7 +234,8 @@ function LayerFun(type) {
 //loading spin
 var div = $("<div id='mySpin'></div>");
 var script = $("<script src='../../assets/js/spin.min.js'></script>");
-$("body").append(div, script);
+$("body").append(div);
+$("body").append(script);
 var opts = {
     lines: 8, // The number of lines to draw
     length: 10, // The length of each line
