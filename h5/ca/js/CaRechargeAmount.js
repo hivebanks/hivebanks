@@ -53,10 +53,8 @@ $(function () {
 
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
-        ShowLoading("show");
         LockRechargeAmount(token, ca_id, base_amount, bit_amount, ca_channel, us_level, function (response) {
             if (response.errcode == '0') {
-                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#lockRecharge').modal('show');
                 readingTime(8);
@@ -64,7 +62,6 @@ $(function () {
                 name = response.lgl_address.name;
             }
         }, function (response) {
-            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

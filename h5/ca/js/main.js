@@ -267,5 +267,4 @@ function ShowLoading(type) {
     if(type == "hide"){
         spinner.spin();
     }
-
 }

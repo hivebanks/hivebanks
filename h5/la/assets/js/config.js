@@ -101,10 +101,14 @@ $(function () {
     //set config serve
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
-        var key = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
+        var key_code = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
         return;
         if(type == false){
             LayerFun("pleaseSelectOpenServer");
+            return;
+        }
+        if(key_code.length <= 0){
+            LayerFun("pleaseInputKey");
             return;
         }
         if(type == '1'){
@@ -116,7 +120,7 @@ $(function () {
         if (type == '3') {
             url = "http://agent_service.fnying.com/email/set_email_service.php"
         }
-        var data = {"la_id": la_id, "type": type};
+        var data = {"la_id": la_id, "type": type, "key_code": key_code};
         $.post(url, data, function (response){
             if(response.errcode == '0'){
                 LayerFun("submitSuccess");

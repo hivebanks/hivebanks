@@ -93,16 +93,13 @@ $(function () {
         }
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
-        ShowLoading("show");
         LockWithdrawAmount(token, ca_id, base_amount, bit_amount, ca_channel, us_level, us_account_id, function (response) {
             if (response.errcode == '0') {
-                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#lockWithdraw').modal('show');
                 readingTime(8);
             }
         }, function (response) {
-            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

@@ -29,11 +29,11 @@ $(function () {
             LayerFun('phoneNotEmpty');
             return;
         }
-        if ($('#phoneCode').val() == '') {
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }
-        if ($('#password').val() == '') {
+        if ($('#password').val().length <= 0) {
             LayerFun('passwordNotEmpty');
             return;
         }
