@@ -5,6 +5,7 @@ $(function () {
     var token = GetCookie('la_token');
 
     //show ba recharge list
+    var tr = '', ba_id_arr = [], us_id_arr = [], tx_hash_arr = [], qa_flag_span = '';
     function ShowDataFun(rechargeList) {
         $.each(rechargeList, function (i, val) {
             ba_id_arr.push(rechargeList[i].ba_id.substring(0, 10) + '...');
@@ -35,7 +36,6 @@ $(function () {
     }
 
     //Get ba transaction history
-    var tr = '', ba_id_arr = [], us_id_arr = [], tx_hash_arr = [], qa_flag_span = '';
     GetBaTransaction(token, function (response) {
         if (response.errcode == '0') {
             var rechargeList = response.rows.recharge;
@@ -100,9 +100,11 @@ $(function () {
             tx_detail = $('#tx_detail').val(),
             tx_fee = $('#tx_fee').val(), tx_type = $('#tx_type').val(), qa_flag = $('#qa_flag').val(),
             ba_id = $('#ba_id').val();
+        $(".preloader-wrapper").addClass("active");
         SearchBaTransaction(token, from_time, to_time, tx_time, qa_id, us_id, us_account_id, asset_id, ba_account_id, tx_hash,
             base_amount, bit_amount, tx_detail, tx_fee, tx_type, qa_flag, ba_id, function (response) {
                 if (response.errcode == '0') {
+                    $(".preloader-wrapper").removeClass("active");
                     var rechargeList = response.rows.recharge;
                     if (rechargeList == false) {
                         GetDataEmpty('baRecharge', '8');
@@ -111,6 +113,7 @@ $(function () {
                     ShowDataFun(rechargeList);
                 }
             }, function (response) {
+                $(".preloader-wrapper").removeClass("active");
                 LayerFun(response.errcode);
                 GetDataFail('baRecharge', '8');
                 return;

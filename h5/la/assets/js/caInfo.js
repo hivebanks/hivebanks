@@ -85,8 +85,10 @@ $(function () {
             LayerFun('pleaseEnterYourPassword');
             return;
         }
+        $(".preloader-wrapper").addClass("active");
         ReviseCaAmount(token, ca_id, base_amount, pass_word_hash, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 var data = response.rows;
                 $('.base_amount').text(data.base_amount);
                 $('.reviseAmount').hide();
@@ -94,6 +96,7 @@ $(function () {
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun(response.errcode);
             LayerFun('setupFailed');
             return;

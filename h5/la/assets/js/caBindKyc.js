@@ -72,13 +72,16 @@ $(function () {
     $(document).on('click', '.refuseBtn', function () {
         var _this = $(this);
         var log_id = $(this).parents('.caKycItem').find('.log_id').text();
+        $(".preloader-wrapper").addClass("active");
         RefuseKycCa(token, log_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.caKycItem').remove();
                 LayerFun('successfulProcessing');
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;

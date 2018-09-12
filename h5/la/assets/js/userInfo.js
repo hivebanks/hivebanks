@@ -7,14 +7,16 @@ $(function () {
     GetUserInfo(us_id, function (response) {
         if (response.errcode == '0') {
             var data = response.rows, bind_name = '', bind_type = '';
-            if(data == false){GetDataEmpty('userBindInfo', '5')}
+            if (data == false) {
+                GetDataEmpty('userBindInfo', '5')
+            }
             $('.base_amount').text(data.base_amount);
             $('.lock_amount').text(data.lock_amount);
             $('.us_level').text(data.us_level);
             $('.security_level').text(data.security_level);
             $('.ctime').text(data.ctime);
             $.each(data, function (i, val) {
-                if(typeof data[i] != 'object') return;
+                if (typeof data[i] != 'object') return;
 
                 //bind_type
                 if (data[i].bind_type == 'hash') {
@@ -73,7 +75,7 @@ $(function () {
         yearEnd: 2050 //Set the maximum year
     });
 
-    //获取添加的黑名单列表
+    //Get the list of added blacklists
     function GetBlackListFun() {
         var ul = '';
         GetBlackList(us_id, function (response) {
@@ -104,7 +106,7 @@ $(function () {
                     ul += '<ul class="padding-1" style="background: #eeeeee">' +
                         '<li>' +
                         '<span class="margin-right-1 i18n" name="typeOfPunishment"></span>:' +
-                        '<span class="black_type i18n" name="'+ black_type +'"></span>' +
+                        '<span class="black_type i18n" name="' + black_type + '"></span>' +
                         '</li>' +
                         '<li>' +
                         '<span class="margin-right-1 i18n" name="limitedTime"></span>:' +
@@ -127,9 +129,10 @@ $(function () {
             LayerFun(response.errcode);
         })
     }
+
     GetBlackListFun();
 
-    //设置添加黑名单
+    //Set add blacklist
     $('.blacklistBtn').click(function () {
         var limt_time = $('.limt_time').val(),
             black_info = $('.black_info').val(),
@@ -145,13 +148,16 @@ $(function () {
             execI18n();
             return;
         }
+        $(".preloader-wrapper").addClass("active");
         SetBlackList(us_id, type, black_info, limt_time, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 layer.msg('<span class="i18n" name="setSuccessfully"></span>');
                 execI18n();
                 GetBlackListFun();
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             layer.msg('<span class="i18n" name="setupFailed"></span>');
             execI18n();
             LayerFun(response.errcode);

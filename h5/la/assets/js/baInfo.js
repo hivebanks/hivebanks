@@ -8,7 +8,7 @@ $(function () {
     $('.ba_id').text(ba_id);
 
     //Determine whether it is the benchmark ba
-    if(ba_type != base_currency){
+    if (ba_type != base_currency) {
         $('.edit').remove();
         $('.reviseAmount').remove();
     }
@@ -95,8 +95,10 @@ $(function () {
             LayerFun('pleaseEnterYourPassword');
             return;
         }
+        $(".preloader-wrapper").addClass("active");
         ReviseBaAmount(token, ba_id, base_amount, pass_word_hash, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 var data = response.rows;
                 $('.base_amount').text(data.base_amount);
                 $('.reviseAmount').hide();
@@ -104,6 +106,7 @@ $(function () {
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('setupFailed');
             LayerFun(response.errcode);
             return;

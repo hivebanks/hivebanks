@@ -9,14 +9,17 @@ $(function () {
             LayerFun('inputCannotBeEmpty');
             return;
         }
+        $(".preloader-wrapper").addClass("active");
         SetApiKey(token, api_key, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 $('#api_key').val(' ');
                 LayerFun('setSuccessfully');
                 execI18n();
                 $('.api_key_value').text(response.option_value);
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun(response.errcode);
             LayerFun('updateFailed');
             execI18n();
@@ -46,40 +49,41 @@ $(function () {
         if (response.errcode == '0') {
             la_id = response.la_id;
             //get config server
-            var data = {"la_id" : response.la_id}, url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
+            var data = {"la_id": response.la_id},
+                url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
             $.post(url, data, function (_response) {
-                if(_response.errcode == '0'){
+                if (_response.errcode == '0') {
                     var data = _response.rows;
-                    if(data == false){
+                    if (data == false) {
                         return;
                     }
                     $.each(data, function (i, val) {
-                        if(data[i].type == '1' && data[i].status == '1'){
+                        if (data[i].type == '1' && data[i].status == '1') {
                             $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .underReviewFile').remove();
                             $('.alreadyOpenFile').show();
                             $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        }else if(data[i].type == '1' && data[i].status == '0'){
+                        } else if (data[i].type == '1' && data[i].status == '0') {
                             $('.radioFile').attr("disabled", true);
                             $('.noOpenFile, .alreadyOpenFile').remove();
                             $('.underReviewFile').show();
                         }
-                        if(data[i].type == '2' && data[i].status == '1'){
+                        if (data[i].type == '2' && data[i].status == '1') {
                             $('.radioSms').attr("disabled", true);
                             $('.noOpenSms, .underReviewSms').remove();
                             $('.alreadyOpenSms').show();
                             $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        }else if(data[i].type == '2' && data[i].status == '0'){
+                        } else if (data[i].type == '2' && data[i].status == '0') {
                             $('.radioSms').attr("disabled", true);
                             $('.noOpenSms, .alreadyOpenSms').remove();
                             $('.underReviewSms').show();
                         }
-                        if(data[i].type == '3' && data[i].status == '1'){
+                        if (data[i].type == '3' && data[i].status == '1') {
                             $('.radioEmail').attr("disabled", true);
                             $('.noOpenEmail, .underReviewEmail').remove();
                             $('.alreadyOpenEmail').show();
                             $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        }else if(data[i].type == '3' && data[i].status == '0'){
+                        } else if (data[i].type == '3' && data[i].status == '0') {
                             $('.radioEmail').attr("disabled", true);
                             $('.noOpenEmail, .alreadyOpenEmail').remove();
                             $('.underReviewEmail').show();
@@ -102,41 +106,40 @@ $(function () {
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
         var key_code = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
-        console.log(type, key_code);
-        if(type == false){
+        if (type == false) {
             LayerFun("pleaseSelectOpenServer");
             return;
         }
-        if(key_code.length <= 0){
+        if (key_code.length <= 0) {
             LayerFun("pleaseInputKey");
             return;
         }
-        if(type == '1'){
+        if (type == '1') {
             url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php"
         }
-        if(type == '2'){
+        if (type == '2') {
             url = "http://agent_service.fnying.com/sms/set_sms_service.php"
         }
         if (type == '3') {
             url = "http://agent_service.fnying.com/email/set_email_service.php"
         }
         var data = {"la_id": la_id, "type": type, "key_code": key_code};
-        $.post(url, data, function (response){
-            if(response.errcode == '0'){
+        $.post(url, data, function (response) {
+            if (response.errcode == '0') {
                 LayerFun("submitSuccess");
-                if(type == '1'){
+                if (type == '1') {
                     $('.noOpenFile').fadeOut();
                     $('.underReviewFile').fadeIn();
                 }
-                if(type == '2'){
+                if (type == '2') {
                     $('.noOpenSms').fadeOut();
                     $('.underReviewSms').fadeIn();
                 }
-                if(type == '3'){
+                if (type == '3') {
                     $('.noOpenEmail').fadeOut();
                     $('.underReviewEmail').fadeIn();
                 }
-            }else {
+            } else {
                 LayerFun("submitFail");
                 return;
             }
@@ -357,12 +360,15 @@ $(function () {
         });
         var length = pinList.length - 1, pid = pinList.substring(0, length);
         var real_name = $('#name').val(), pass_word_hash = hex_sha1($('#password').val()), user = $('#userName').val();
+        $(".preloader-wrapper").addClass("active");
         SetPermission(token, pid, real_name, pass_word_hash, user, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 LayerFun('setSuccessfully');
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('setupFailed');
             LayerFun(response.errcode);
             return;
@@ -587,7 +593,7 @@ $(function () {
                 if (data.errcode == '0') {
                     src = data.url;
                 }
-                if(data.errcode == "1"){
+                if (data.errcode == "1") {
                     layer.msg('<span class="i18n" name="notOpenUpload"></span>');
                     execI18n();
                     return;

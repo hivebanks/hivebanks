@@ -57,13 +57,16 @@ $(function () {
         var bind_name = $(this).parents('.userKycItem').find('.bind_name').attr("name");
         var bind_info = $(this).parents('.userKycItem').find('.bind_info').text();
         var log_id = $(this).parents('.userKycItem').find('.log_id').attr("name");
+        $(".preloader-wrapper").addClass("active");
         ConfirmKycUser(token, us_id, bind_name, bind_info, log_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.userKycItem').remove();
                 layer.msg('<span class="i18n" name="successfulProcessing"></span>');
                 execI18n();
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             layer.msg('<span class="i18n" name="processingFailure"></span>');
             execI18n();
             LayerFun(response.errcode);
@@ -74,14 +77,16 @@ $(function () {
     $(document).on('click', '.refuseBtn', function () {
         var _this = $(this);
         var log_id = $(this).parents('.userKycItem').find('.log_id').text();
-
+        $(".preloader-wrapper").addClass("active");
         RefuseKycUser(token, log_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.userKycItem').remove();
                 layer.msg('<span class="i18n" name="successfulProcessing"></span>');
                 execI18n();
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             layer.msg('<span class="i18n" name="processingFailure"></span>');
             execI18n();
             LayerFun(response.errcode);
@@ -98,7 +103,7 @@ $(function () {
         $('#lookImgModal').modal('open');
     });
 
-    //初始化modal
+    //init modal
     $('#lookImgModal').modal({
         dismissible: true,
         opacity: .5,
