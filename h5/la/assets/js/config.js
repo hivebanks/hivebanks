@@ -102,7 +102,6 @@ $(function () {
     $('.configServeBtn').click(function () {
         var type = $("input[type='radio']:checked").val(), url = '';
         var key_code = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
-        return;
         if(type == false){
             LayerFun("pleaseSelectOpenServer");
             return;
