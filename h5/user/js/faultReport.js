@@ -100,15 +100,18 @@ $(function () {
             LayerFun('pleaseEnterFaultReportInfo');
             return;
         }
+        ShowLoading("show");
         SubmitFaultReportInfo(token, sub_id, end_type, submit_name, submit_info, function (response) {
             if (response.errcode == '0') {
-                GetFaultReportFun();
+                ShowLoading("hide");
                 LayerFun('submitSuccess');
+                GetFaultReportFun();
                 $('.faultReportInfo').val('');
                 return;
             }
         }, function (response) {
-            if(response.errcode == '0'){
+            ShowLoading("hide");
+            if(response.errcode == '114'){
                 window.location.href = 'login.html';
             }
             LayerFun(response.errcode);

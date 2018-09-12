@@ -701,7 +701,7 @@ function GetDeclareList(token, is_deal, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//受理
+//accept
 function AcceptDeclareInfo(token, log_id, suc_func, error_func) {
     var api_url = 'kyc_feedback_accept.php',
         post_data = {
@@ -711,7 +711,7 @@ function AcceptDeclareInfo(token, log_id, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//处理
+//process
 function ProcessDeclareInfo(token, log_id, deal_info, deal_name, suc_func, error_func) {
     var api_url = 'kyc_feedback_deal.php',
         post_data = {
@@ -723,8 +723,8 @@ function ProcessDeclareInfo(token, log_id, deal_info, deal_name, suc_func, error
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//La配置
-//设置管理员
+//La set
+//set admin
 function SetPermission(token, pid, real_name, pass_word_hash, user, suc_func, error_func) {
     var api_url = 'admin_add.php',
         post_data = {
@@ -737,7 +737,7 @@ function SetPermission(token, pid, real_name, pass_word_hash, user, suc_func, er
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取BA代理类型
+//get ba type
 function GetAgentType(api_url, token, suc_func, error_func) {
     var post_data = {
         'token': token
@@ -745,7 +745,7 @@ function GetAgentType(api_url, token, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func)
 }
 
-//设置BA代理类型
+//set ba type
 function SetAgentType(api_url, token, option_key, option_value, option_src, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -756,7 +756,7 @@ function SetAgentType(api_url, token, option_key, option_value, option_src, suc_
     CallLaConfigApi(api_url, post_data, suc_func, error_func)
 }
 
-//删除BA代理类型DeleteBaType
+//Delete Ba Type
 function DeleteAgentType(api_url, token, option_key, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -765,7 +765,7 @@ function DeleteAgentType(api_url, token, option_key, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func)
 }
 
-//报表
+//report
 function GetAssetsReport(token, suc_func, error_func) {
     var api_url = 'la_report_form.php',
         post_data = {

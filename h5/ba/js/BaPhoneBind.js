@@ -10,7 +10,7 @@ $(function () {
     //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '4', $this = $(this), cfm_code = $('#phoneCfmCode').val();
-        if(cfm_code <= 0){
+        if (cfm_code <= 0) {
             LayerFun('pleaseImgCode');
             return;
         }
@@ -36,15 +36,18 @@ $(function () {
 
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
-            ActiveClick($this, btnText);
             if (response.errcode == '0') {
+                ActiveClick($this, btnText);
+                ShowLoading("show");
                 $('#phone').val('');
                 $('#phoneCode').val('');
                 LayerFun('bindSuccess');
                 window.location.href = 'BaSecurity.html';
             }
         }, function (response) {
+            ShowLoading("show");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

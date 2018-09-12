@@ -4,19 +4,21 @@ $(function () {
     GetUsAccount();
 
     $('.googleEnable').click(function () {
-       var code = $('#code').val();
-       if(code.length <= 0){
-           LayerFun('codeBad');
-           return;
-       }
-
-       GoogleVerify(token, code, function (response) {
-           if(response.errcode == '0'){
-              LayerFun('verifySuccess');
-              window.location.href = 'security.html';
-           }
-       }, function (response) {
-           LayerFun(response.errcode);
-       })
+        var code = $('#code').val();
+        if (code.length <= 0) {
+            LayerFun('codeBad');
+            return;
+        }
+        ShowLoading("show");
+        GoogleVerify(token, code, function (response) {
+            if (response.errcode == '0') {
+                ShowLoading("hide");
+                LayerFun('verifySuccess');
+                window.location.href = 'security.html';
+            }
+        }, function (response) {
+            ShowLoading("hide");
+            LayerFun(response.errcode);
+        })
     });
 });

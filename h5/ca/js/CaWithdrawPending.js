@@ -62,7 +62,7 @@ $(function () {
         _this = $(this);
     });
 
-    //再次确认
+    //again confirm
     $('.againConfirmBtn').click(function () {
         var type = '1';
         var $this = $(this), btnText = $(this).text();

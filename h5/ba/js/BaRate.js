@@ -10,26 +10,15 @@ $(function () {
     GetBasicInformation(token, function (response) {
         $('.base_amount').text(response.base_amount);
         $('.bit_type').text(response.bit_type);
-        if(benchmark_type == response.bit_type) {
+        if (benchmark_type == response.bit_type) {
             $('#rate .container').remove();
         }
     }, function (response) {
-        if(response.errcode == '114'){
+        if (response.errcode == '114') {
             window.location.href = 'BaLogin.html';
             return;
         }
     });
-
-    //设置充值提现汇率
-    // $('.rechargeRateText').text(10);
-    // $('.withdrawRateText').text(0.8);
-    // $('.rechargeRateInput').bind('input porpertychange', function () {
-    //     $('.rechargeShowRate').removeClass('none');
-    //     $('.rechargeRateText').text($(this).val());
-    // });
-    // $('.withdrawRateInput').bind('input porpertychange', function () {
-    //     $('.withdrawRateText').text($(this).val());
-    // });
 
     //Recharge exchange rate setting
     $(".rechargeRateBtn").click(function () {
@@ -41,35 +30,36 @@ $(function () {
             pass_word_hash = hex_sha1($('#rechargePassword').val()),
             is_void = 0;
         var currentTime = CurrentTimeFun();
-        console.log(recharge_rate);
-        if(recharge_rate <= 0 || recharge_rate.length <= 0){
+        if (recharge_rate <= 0 || recharge_rate.length <= 0) {
             LayerFun("pleaseEnterValidRate");
             return;
         }
-        if(recharge_min_amount.length <= 0){
+        if (recharge_min_amount.length <= 0) {
             LayerFun("pleaseEnterMin");
             return;
         }
-        if(recharge_max_amount.length <= 0){
+        if (recharge_max_amount.length <= 0) {
             LayerFun("pleaseEnterMax");
             return;
         }
-        if($('#rechargePassword').val().length <= 0){
+        if ($('#rechargePassword').val().length <= 0) {
             LayerFun('passwordNotEmpty');
             return;
         }
-        if(recharge_us_level.length<=0 || recharge_us_level<=0){
+        if (recharge_us_level.length <= 0 || recharge_us_level <= 0) {
             LayerFun('pleaseEnterVailLevel');
             return;
         }
-        if(Date.parse(limit_time)<=Date.parse(currentTime)){
+        if (Date.parse(limit_time) <= Date.parse(currentTime)) {
             LayerFun("notLessCurrentTime");
             return;
         }
         var _this = $(this), btnText = $(this).text();
-        if(DisableClick(_this)) return;
-        rechargeRate(token, recharge_rate, recharge_min_amount, recharge_max_amount, limit_time, is_void, recharge_us_level,pass_word_hash, function (response) {
-            if(response.errcode == '0'){
+        if (DisableClick(_this)) return;
+        ShowLoading("show");
+        rechargeRate(token, recharge_rate, recharge_min_amount, recharge_max_amount, limit_time, is_void, recharge_us_level, pass_word_hash, function (response) {
+            if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick(_this, btnText);
                 $('.rechargeRateNotSet').hide();
                 LayerFun('setSuccess');
@@ -81,8 +71,9 @@ $(function () {
                 $('#rechargePassword').val("");
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick(_this, btnText);
-            if(response.errcode == '114'){
+            if (response.errcode == '114') {
                 window.location.href = 'BaLogin.html';
                 return;
             }
@@ -93,26 +84,26 @@ $(function () {
     });
 
     //Get recharge rate
-    function GetRechargeRateFun(){
-        GetRechargeRate(token, function (response){
-            if(response.errcode == '0'){
-                if(response.recharge_base_rate){
+    function GetRechargeRateFun() {
+        GetRechargeRate(token, function (response) {
+            if (response.errcode == '0') {
+                if (response.recharge_base_rate) {
                     $('.rechargeShowRate').removeClass('none');
                 }
                 $('.recharge_rate').text(response.recharge_base_rate);
                 $('.recharge_max_amount').text(response.recharge_max_amount);
                 $('.recharge_min_amount').text(response.recharge_min_amount);
                 $('.recharge_set_time').text(response.recharge_limit_time);
-                if(!response.recharge_base_rate){
+                if (!response.recharge_base_rate) {
                     $('.rechargeNotSet').show();
                     $('.currentRechargeRateBox').hide();
-                }else {
+                } else {
                     $('.rechargeNotSet').hide();
                     $('.currentRechargeRateBox').css('display', 'flex');
                 }
             }
-        }, function (response){
-            if(response.errcode == '114'){
+        }, function (response) {
+            if (response.errcode == '114') {
                 window.location.href = 'BaLogin.html';
                 return;
             }
@@ -120,6 +111,7 @@ $(function () {
             return;
         });
     }
+
     GetRechargeRateFun();
 
     //withtraw exchange rate setting
@@ -132,34 +124,36 @@ $(function () {
             pass_word_hash = hex_sha1($('#withdrawPassword').val()),
             is_void = 0;
         var currentTime = CurrentTimeFun();
-        if(withdraw_rate <= 0 || withdraw_rate.length <= 0){
+        if (withdraw_rate <= 0 || withdraw_rate.length <= 0) {
             LayerFun("pleaseEnterValidRate");
             return;
         }
-        if(withdraw_min_amount.length <= 0){
+        if (withdraw_min_amount.length <= 0) {
             LayerFun("pleaseEnterMin");
             return;
         }
-        if(withdraw_max_amount.length <= 0){
+        if (withdraw_max_amount.length <= 0) {
             LayerFun("pleaseEnterMax");
             return;
         }
-        if($('#withdrawPassword').val().length <= 0){
+        if ($('#withdrawPassword').val().length <= 0) {
             LayerFun('passwordNotEmpty');
             return;
         }
-        if(withdraw_us_level.length<=0 || withdraw_us_level<=0){
+        if (withdraw_us_level.length <= 0 || withdraw_us_level <= 0) {
             LayerFun('pleaseEnterVailLevel');
             return;
         }
-        if(Date.parse(limit_time)<=Date.parse(currentTime)){
+        if (Date.parse(limit_time) <= Date.parse(currentTime)) {
             LayerFun("notLessCurrentTime");
             return;
         }
         var _this = $(this), btnText = $(this).text();
-        if(DisableClick(_this)) return;
+        if (DisableClick(_this)) return;
+        ShowLoading("show");
         withdrawRate(token, withdraw_rate, withdraw_min_amount, withdraw_max_amount, limit_time, is_void, withdraw_us_level, pass_word_hash, function (response) {
-            if(response.errcode == '0'){
+            if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick(_this, btnText);
                 $('.withdrawRateNotSet').hide();
                 LayerFun('setSuccess');
@@ -171,8 +165,9 @@ $(function () {
                 $('#withdrawPassword').val("");
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick(_this, btnText);
-            if(response.errcode == '114'){
+            if (response.errcode == '114') {
                 window.location.href = 'BaLogin.html';
                 return;
             }
@@ -183,25 +178,25 @@ $(function () {
     });
 
     //Get the withdrawal rate
-    function GetWithdrawRateFun(){
-        GetWithdrawRate(token, function (response){
-            if(response.errcode == '0'){
-                if(response.withdraw_base_rate){
+    function GetWithdrawRateFun() {
+        GetWithdrawRate(token, function (response) {
+            if (response.errcode == '0') {
+                if (response.withdraw_base_rate) {
                     $('.withdrawShowRate').removeClass('none');
                 }
                 $('.withdraw_max_amount').text(response.withdraw_max_amount);
                 $('.withdraw_min_amount').text(response.withdraw_min_amount);
                 $('.withdraw_set_time').text(response.withdraw_limit_time);
-                if(!response.withdraw_base_rate){
+                if (!response.withdraw_base_rate) {
                     $('.withdrawNotSet').show();
                     $('.currentWithdrawRateBox').hide();
-                }else {
+                } else {
                     $('.withdrawNotSet').hide();
                     $('.currentWithdrawRateBox').css('display', 'flex');
                 }
             }
-        }, function (response){
-            if(response.errcode == '114'){
+        }, function (response) {
+            if (response.errcode == '114') {
                 window.location.href = 'BaLogin.html';
                 return;
             }
@@ -209,6 +204,7 @@ $(function () {
             return;
         });
     }
+
     GetWithdrawRateFun();
 
     //Set time

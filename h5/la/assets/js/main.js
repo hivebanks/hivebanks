@@ -1,5 +1,5 @@
 $(function () {
-    //nav切换样式
+    //nav toggle style
     $('#main-menu .waves-dark').click(function () {
         $(this).addClass('active-menu').parent().siblings().children('a').removeClass('active-menu');
         $(this).siblings('.nav-second-level').slideToggle();
@@ -9,7 +9,7 @@ $(function () {
         $(this).siblings('.nav-third-level').slideToggle('fast');
     });
 
-    //隐藏nav
+    //hide nav
     $(".dropdown-button").dropdown();
     $("#sideNav").click(function () {
         if ($(this).hasClass('closed')) {
@@ -29,7 +29,7 @@ $(function () {
 var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
 link.appendTo($('head')[0]);
 
-//layer提示
+//layer prompt
 function LayerFun(type) {
     layer.msg('<span class="i18n" name="'+ type +'"></span>');
     execI18n();

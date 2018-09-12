@@ -25,25 +25,27 @@ $(function () {
             text_hash = $('#phoneCode').val(),
             text_type = '4',
             pass_word_hash = hex_sha1($('#password').val());
-        if (cellphone == '') {
+        if (cellphone.length <= 0) {
             LayerFun('phoneNotEmpty');
             return;
         }
-        if($('#phoneCode').val() == ''){
+        if($('#phoneCode').val().length <= 0){
             LayerFun('codeNotEmpty');
             return;
         }
-        if ($('#password').val() == '') {
+        if ($('#password').val().length <= 0) {
             LayerFun('passNotEmpty');
             return;
         }
-
+        ShowLoading("show");
         TextModify(token, text_type, text, text_hash, pass_word_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 LayerFun('modifySuccess');
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
             GetImgCode();
         });

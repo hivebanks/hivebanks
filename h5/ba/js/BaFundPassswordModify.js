@@ -26,35 +26,38 @@ $(function () {
             hash = hex_sha1($('#fundPassword').val()),
             password = $('#password').val(),
             pass_word_hash = hex_sha1(password);
-        if ($('#fundPassword').val() == '') {
+        if ($('#fundPassword').val().length <= 0) {
             LayerFun('funPassword');
             return;
         }
 
-        if ($('#phone').val() == '') {
+        if ($('#phone').val().length <= 0) {
             LayerFun('phone');
             return;
         }
 
-        if ($('#phoneCode').val() == '') {
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('phone_code');
             return;
         }
 
-        if (password == '') {
+        if (password.length <= 0) {
             LayerFun('password');
             return;
         }
         //hashFund password binding
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {
             if (response.errcode == '0') {
-                SuccessCode('modify');
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
+                LayerFun("successfullyModified");
                 window.location.href = 'BaSecurity.html';
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

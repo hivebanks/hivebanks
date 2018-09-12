@@ -28,22 +28,22 @@ $(function () {
         if (response.errcode == '0') {
             var data = response.rows, li = '';
 
-            if(data == false){
+            if (data == false) {
                 $('.bitAgentTitle').attr('name', 'noDigitalCurrencyAgent');
                 execI18n();
                 return;
             }
             $.each(data, function (i, val) {
-                li+='<li>' +
-                    '<p><i class="iconfont icon-'+ data[i].bit_type.toUpperCase() +'"></i></p>'+
-                    '<span>'+ data[i].bit_type +'</span>' +
+                li += '<li>' +
+                    '<p><i class="iconfont icon-' + data[i].bit_type.toUpperCase() + '"></i></p>' +
+                    '<span>' + data[i].bit_type + '</span>' +
                     '<div class="mask">' +
                     '<p class="parities">1' +
-                    '<span class="bit_type">'+ data[i].bit_type +'</span>=' +
-                    '<span class="base_rate">'+ data[i].base_rate +'</span>' +
-                    '<span class="base_type">'+ base_type +'</span>' +
+                    '<span class="bit_type">' + data[i].bit_type + '</span>=' +
+                    '<span class="base_rate">' + data[i].base_rate + '</span>' +
+                    '<span class="base_type">' + base_type + '</span>' +
                     '</p>' +
-                    '</div>'+
+                    '</div>' +
                     '</li>'
             });
             $('#baWithdrawList').html(li);
@@ -63,8 +63,12 @@ $(function () {
                     us_bind_type_file = 'file';
                     us_bind_name_idPhoto = 'idPhoto';
                 }
-                if(data[i].bind_name = 'name'){us_bind_type_name = 'name'}
-                if(data[i].bind_name = 'idNum'){us_bind_type_idNum = 'idNum'}
+                if (data[i].bind_name = 'name') {
+                    us_bind_type_name = 'name'
+                }
+                if (data[i].bind_name = 'idNum') {
+                    us_bind_type_idNum = 'idNum'
+                }
             });
         }
     }, function (response) {
@@ -73,7 +77,7 @@ $(function () {
 
     //Click to select cash
     $(document).on('click', '.digital-inner-box li', function () {
-        if (us_bind_type_name != 'name' || us_bind_type_idNum !='idNum' || us_bind_name_idPhoto != 'idPhoto') {
+        if (us_bind_type_name != 'name' || us_bind_type_idNum != 'idNum' || us_bind_name_idPhoto != 'idPhoto') {
             $('#notAuthentication').modal('show');
             return;
         } else {
@@ -85,13 +89,13 @@ $(function () {
 
     //Get the average exchange rate of Ca withdrawal
     var withdraw_rate = '', api_url = 'average_ca_withdraw_rate.php';
-    GetAverageRate(api_url, token, function (response){
-        if(response.errcode == '0'){
+    GetAverageRate(api_url, token, function (response) {
+        if (response.errcode == '0') {
             $('.withdraw_rate').text(response.withdraw_rate);
             withdraw_rate = (response.withdraw_rate);
             $('.bit_amount').val(response.withdraw_rate);
         }
-    }, function (response){
+    }, function (response) {
         LayerFun(response.errcode);
     });
 
@@ -101,9 +105,9 @@ $(function () {
         if (response.errcode == '0') {
             us_base_amount = response.rows.base_amount;
             $('.us_base_amount').text(response.rows.base_amount);
-            if(response.rows.base_amount <= 0){
+            if (response.rows.base_amount <= 0) {
                 $('.insufficientBalance').show().siblings('span').remove();
-            }else {
+            } else {
                 $('.fullWithdrawal').show().siblings('span').remove();
             }
         }
@@ -129,29 +133,29 @@ $(function () {
         $('.base_amount').val(us_base_amount);
         $('.bit_amount').val(us_base_amount * withdraw_rate);
     });
-    
+
     //Ca recharge the next step
-    $('.enableAmount').click(function (){
-        if (us_bind_type_name != 'name' || us_bind_type_idNum !='idNum' || us_bind_name_idPhoto != 'idPhoto') {
+    $('.enableAmount').click(function () {
+        if (us_bind_type_name != 'name' || us_bind_type_idNum != 'idNum' || us_bind_name_idPhoto != 'idPhoto') {
             $('#notAuthentication').modal('show');
             return;
         }
 
-        if($('.base_amount').val().length <= 0){
+        if ($('.base_amount').val().length <= 0) {
             LayerFun('withdrawalAmountNotEmpty');
         }
 
-        if(us_base_amount <= 0){
+        if (us_base_amount <= 0) {
             LayerFun('insufficientBalance');
             return;
         }
         var base_amount = $('.base_amount').val();
-        if(base_amount > us_base_amount){
+        if (base_amount > us_base_amount) {
             LayerFun('insufficientBalance');
             return;
         }
 
-        if(base_amount <= 0){
+        if (base_amount <= 0) {
             LayerFun('pleaseEnterCorrectWithdrawAmount');
             return;
         }
@@ -164,16 +168,16 @@ $(function () {
     AllRecord(token, limit, offset, ba_api_url, function (response) {
         if (response.errcode == '0') {
             var data = response.rows;
-            if(data == false){
+            if (data == false) {
                 GetDataEmpty('baWithdrawCodesTable', '4');
                 return;
             }
             $.each(data, function (i, val) {
-                tr+='<tr>' +
-                    '<td>'+ data[i].transfer_tx_hash +'</td>' +
-                    '<td>'+ data[i].asset_id +'</td>' +
-                    '<td>'+ data[i].base_amount +'</td>' +
-                    '<td>'+ data[i].tx_time +'</td>' +
+                tr += '<tr>' +
+                    '<td>' + data[i].transfer_tx_hash + '</td>' +
+                    '<td>' + data[i].asset_id + '</td>' +
+                    '<td>' + data[i].base_amount + '</td>' +
+                    '<td>' + data[i].tx_time + '</td>' +
                     '</tr>'
             });
         }
@@ -188,16 +192,16 @@ $(function () {
     AllRecord(token, limit, offset, ca_api_url, function (response) {
         if (response.errcode == '0') {
             var data = response.rows;
-            if(data == false){
+            if (data == false) {
                 GetDataEmpty('caWithdrawCodesTable', '4');
                 return;
             }
-            $.each(data,function (i,val){
-                ca_tr += '<tr>'+
-                    '<td title='+ data[i].tx_hash +'>'+ data[i].tx_hash +'</td>'+
-                    '<td>'+data[i].lgl_amount+'</td>'+
-                    '<td>'+data[i].base_amount+'</td>'+
-                    '<td>'+data[i].tx_time+'</td></tr>';
+            $.each(data, function (i, val) {
+                ca_tr += '<tr>' +
+                    '<td title=' + data[i].tx_hash + '>' + data[i].tx_hash + '</td>' +
+                    '<td>' + data[i].lgl_amount + '</td>' +
+                    '<td>' + data[i].base_amount + '</td>' +
+                    '<td>' + data[i].tx_time + '</td></tr>';
             });
             $('.caWithdrawCodesTable').html(ca_tr);
         }

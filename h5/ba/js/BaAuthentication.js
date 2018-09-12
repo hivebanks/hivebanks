@@ -120,17 +120,24 @@ $(function () {
             text = $('#name').val(),
             text_hash = hex_sha1(text);
 
-        if (text == '') {
+        if (text.length <= 0) {
             LayerFun('pleaseEnterName');
             return;
         }
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ActiveClick($this, btnText);
+                ShowLoading("hide");
                 $('#name').val(' ');
                 LayerFun('submittedSuccessfully');
                 GetBindInfo();
             }
         }, function (response) {
+            ActiveClick($this, btnText);
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     });
@@ -149,17 +156,24 @@ $(function () {
             text = $('#idNum').val(),
             text_hash = hex_sha1(text);
 
-        if (text == '') {
+        if (text.length <= 0) {
             LayerFun('pleaseEnterIdNumber');
+            return;
         }
-
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ActiveClick($this, btnText);
+                ShowLoading("hide");
                 $('#idNum').val(' ');
                 LayerFun('submittedSuccessfully');
                 GetBindInfo();
             }
         }, function (response) {
+            ActiveClick($this, btnText);
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     });
@@ -263,13 +277,20 @@ $(function () {
             file_url = src1 + ',' + src2;
 
         //File binding
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
+                ActiveClick($this, btnText);
+                ShowLoading("hide");
                 LayerFun('submittedSuccessfully');
                 GetBindInfo();
             }
 
         }, function (response) {
+            ActiveClick($this, btnText);
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     });

@@ -43,15 +43,18 @@ $(function () {
             LayerFun('pleaseEnterNickname');
             return;
         }
-        $('#modifyName').modal('hide');
+        ShowLoading("show");
         ModifyNickName(token, us_account, function (response) {
             if (response.errcode == '0') {
+                $('#modifyName').modal('hide');
+                ShowLoading("hide");
                 LayerFun('modifySuccess');
                 $('.us_account').text(response.us_account);
                 SetCookie('us_account', response.us_account);
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun('modifyFail');
             LayerFun(response.errcode);
             return;

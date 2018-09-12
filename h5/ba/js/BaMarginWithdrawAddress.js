@@ -2,22 +2,8 @@ $(function () {
 //    //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
-//
-//     GetImgCode();
-//     $('#phone_imgCode').click(function () {
-//         GetImgCode();
-//     });
-//     //Get phone verification code
-//     $('.phoneCodeBtn').click(function () {
-//         var bind_type = '5', $this = $(this), cfm_code = $('#phoneCfmCode').val();
-//         if(cfm_code <= 0){
-//             LayerFun('pleaseImgCode');
-//             return;
-//         }
-//         GetPhoneCodeFun(bind_type, $this, cfm_code);
-//     });
 
-//     //获取充值地址
+//     //get recharge address
     function GetWithdrawFun(){
         var li = '';
         GetMarginWithdrawAddress(token, function (response) {
@@ -55,13 +41,16 @@ $(function () {
             LayerFun('fundPassNotEmpty');
             return;
         }
+        ShowLoading("show");
         AddMarginWithdrawAddress(token, bit_address, fun_pass, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 $('#withdrawAddress').val('');
                 $('#fundPassword').val('');
                 GetWithdrawFun();
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     })

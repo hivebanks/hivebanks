@@ -74,7 +74,7 @@ $(function () {
                 ActiveClick($this, btnText);
                 SetCookie('bit_address',response.bit_address);
                 $('#lockRecharge').modal('show');
-                readingTime(5);
+                readingTime(10);
             }
         }, function(response){
             ActiveClick($this, btnText);
