@@ -3,7 +3,7 @@ $(function () {
     var token = GetCookie('ca_token');
     GetCaAccount();
 
-    //获取添加的类型
+    //Get the added type
     GetAddAgencyType(token, function (response) {
         if (response.errcode == '0') {
             var data = response.rows, li = '';
@@ -26,7 +26,7 @@ $(function () {
         return;
     });
 
-    //删除添加的类型
+    //Delete the added type
     $(document).on('click', '.deleteBtn', function () {
         $(this).parents('.alreadyItem').remove();
     })

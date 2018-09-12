@@ -199,7 +199,7 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-//ca充值保证金la函数
+//Ca recharge margin la function
 function CallLaBase(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/base/';
     post_data = post_data || {};
@@ -357,7 +357,7 @@ function PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code,
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//ca充值保证金
+//ca Recharge deposit
 function RechargeManage(token, base_amount, suc_func, error_func) {
     var api_url = 'ca_recharge_quest.php',
         post_data = {
@@ -398,7 +398,7 @@ function AddMarginWithdrawAddress(token, bit_address, fun_pass, suc_func, error_
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取CA基本信息
+//get ca base information
 function GetCaInformation(token, suc_func, error_func) {
     var api_url = 'mst_info_base.php',
         post_data = {
@@ -407,7 +407,7 @@ function GetCaInformation(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//修改ca昵称
+//Modify ca nickname
 function ModifyNickName(token, ca_account, suc_func, error_func) {
     var api_url = 'alter_ca_account.php',
         post_data = {
@@ -417,7 +417,7 @@ function ModifyNickName(token, ca_account, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 };
 
-//获取CA绑定信息
+//get ca bind information
 function GetCaBindInformation(token, suc_func, error_func) {
     var api_url = 'mst_info_bind.php',
         post_data = {
@@ -426,7 +426,7 @@ function GetCaBindInformation(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-// CA变动记录-登录记录
+// CA Change Record - Login Record
 function AllRecord(token, limit, offset, api_url, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -436,7 +436,7 @@ function AllRecord(token, limit, offset, api_url, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取银行列表
+//get bank list
 function GetBankList(token, suc_func, error_func) {
     var api_url = 'ca_channel_list.php',
         post_data = {
@@ -445,7 +445,7 @@ function GetBankList(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//添加银行
+//add bank
 function AddAgencyType(token, ca_channel, card_nm, name, idNum, pass_word_hash, suc_func, error_func) {
     var api_url = 'ca_asset_account_add.php',
         post_data = {
@@ -459,7 +459,7 @@ function AddAgencyType(token, ca_channel, card_nm, name, idNum, pass_word_hash, 
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取添加的类型
+//get added type
 function GetAddAgencyType(token, suc_func, error_func) {
     var api_url = 'ca_get_asset_account.php',
         post_data = {
@@ -548,7 +548,7 @@ function GoogleVerify(token, code, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取符合充值条件的CA列表
+//Get a list of Cas that meet the withdrawal criteria
 function GetMeetCaList(api_url, token, base_amount, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -557,7 +557,7 @@ function GetMeetCaList(api_url, token, base_amount, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取符合提现条件的CA列表
+//Get a list of Cas that meet the withdrawal criteria
 function GetMeetWithdrawCaList(api_url, token, base_amount, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -566,7 +566,7 @@ function GetMeetWithdrawCaList(api_url, token, base_amount, suc_func, error_func
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//分配充值提现ca
+//Assign recharge cash withdrawal
 function GetAssignCa(api_url, token, ca_channel, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -575,7 +575,7 @@ function GetAssignCa(api_url, token, ca_channel, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//lockRechargeAmount(充值请求)LockWithdrawAmount
+//lockRechargeAmount(Recharge request)
 function LockRechargeAmount(token, ca_id, base_amount, bit_amount, ca_channel, us_level, suc_func, error_func) {
     var api_url = 'us_recharge_quest.php',
         post_data = {
@@ -589,7 +589,7 @@ function LockRechargeAmount(token, ca_id, base_amount, bit_amount, ca_channel, u
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取用户余额
+//Get user balance
 function GetUserBaseInfo(token, suc_func, error_func) {
     var api_url = 'info_base.php',
         post_data = {
@@ -598,7 +598,7 @@ function GetUserBaseInfo(token, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取us_account_id
+//get us_account_id
 function GetUsAccountId(token, ca_channel, suc_func, error_func) {
     var api_url = 'get_specified_bank_card_list.php',
         post_data = {
@@ -608,7 +608,7 @@ function GetUsAccountId(token, ca_channel, suc_func, error_func) {
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
-//锁定提现金额(提现请求)
+//Locked up cash amount (withdrawal request)
 function LockWithdrawAmount(token, ca_id, base_amount, bit_amount, ca_channel, us_level, us_account_id, suc_func, error_func) {
     var api_url = 'us_withdraw_quest.php',
         post_data = {
@@ -623,7 +623,7 @@ function LockWithdrawAmount(token, ca_id, base_amount, bit_amount, ca_channel, u
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取充值提现汇率列表
+//Get a list of top-up exchange rates
 function GetRateList(token, suc_func, error_func) {
     var api_url = 'get_recharge_withdraw_rate.php',
         post_data = {
@@ -632,7 +632,7 @@ function GetRateList(token, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置充值汇率
+//Set up recharge rate
 function SetRechargeRate(token, rate, minAmount, maxAmount, time, level, ca_channel, pass_word_hash, suc_func, error_func) {
     var api_url = 'set_recharge_rate.php',
         post_data = {
@@ -648,7 +648,7 @@ function SetRechargeRate(token, rate, minAmount, maxAmount, time, level, ca_chan
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
-//设置提现汇率
+//Set up withdraw rate
 function SetWithdrawRate(token, rate, minAmount, maxAmount, time, level, ca_channel, pass_word_hash, suc_func, error_func) {
     var api_url = 'set_withdraw_rate.php',
         post_data = {
@@ -664,7 +664,7 @@ function SetWithdrawRate(token, rate, minAmount, maxAmount, time, level, ca_chan
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
-//获取用户充值提现处理列表
+//Get user recharge cash withdrawal processing list
 function GetRechargeWithdrawList(api_url, token, type, suc_func, error_func) {
     var api_url = api_url,
         post_data = {

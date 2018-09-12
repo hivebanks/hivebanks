@@ -271,7 +271,7 @@ function CallTransactionApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-// 调用API查询KYC审核列表函数
+// Call API to query KYC audit list function
 function CallKycApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/kyc/';
     post_data = post_data || {};
@@ -301,7 +301,7 @@ function CallKycApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-//获取us/ba/ca注册权限
+//Get us/ba/ca registration permission
 function GetSwitch(token, suc_func, error_func) {
     var api_url = 'reg_list.php',
         post_data = {
@@ -310,7 +310,7 @@ function GetSwitch(token, suc_func, error_func) {
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置us/ba/ca注册权限
+//Set us/ba/ca registration permission
 function SetSwitch(token, type, status, suc_func, error_func) {
     var api_url = 'reg_switch.php',
         post_data = {
@@ -330,7 +330,7 @@ function GetLaId(token, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取短信接口
+//Get SMS interface
 function GetSmsInterface(token, suc_func, error_func) {
     var api_url = 'get_sms_config.php',
         post_data = {
@@ -339,7 +339,7 @@ function GetSmsInterface(token, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置短信接口
+//Set SMS interface
 function SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, TemplateCode, suc_func, error_func) {
     var api_url = 'set_sms_config.php',
         post_data = {
@@ -352,7 +352,7 @@ function SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, Template
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取邮箱接口
+//Get the mailbox interface
 function GetEmailInterface(token, suc_func, error_func) {
     var api_url = 'get_email_config.php',
         post_data = {
@@ -361,7 +361,7 @@ function GetEmailInterface(token, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置邮箱接口
+//Set the mailbox interface
 function SetEmailInterface(token, Host, Username, Password, address, name, suc_func, error_func) {
     var api_url = 'set_email_config.php',
         post_data = {
@@ -375,7 +375,7 @@ function SetEmailInterface(token, Host, Username, Password, address, name, suc_f
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取错误码列表
+//Get error code list
 function GetErrorList(token, suc_func, error_func) {
     var api_url = 'get_error_code_config.php',
         post_data = {
@@ -384,7 +384,7 @@ function GetErrorList(token, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//修改错误码信息
+//Modify error code information
 function SetErrorMsg(token, code_key, code_value, suc_func, error_func) {
     var api_url = 'set_error_code_config.php',
         post_data = {
@@ -406,7 +406,7 @@ function LaLogin(user, password, pass_word_hash, suc_func, error_func) {
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
-//修改密码
+//change Password
 function ForgetPassword(email, user, suc_func, error_func) {
     var api_url = 'admin_password_reset.php',
         post_data = {
@@ -416,7 +416,7 @@ function ForgetPassword(email, user, suc_func, error_func) {
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
-//配置api_key
+//config api_key
 function SetApiKey(token, api_key, suc_func, error_func) {
     var api_url = 'set_configure_key.php',
         post_data = {
@@ -426,7 +426,7 @@ function SetApiKey(token, api_key, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取la基本信息
+//get la base information
 function GetLaBaseInfo(token, suc_func, error_func) {
     var api_url = 'get_la_base_info.php',
         post_data = {
@@ -435,7 +435,7 @@ function GetLaBaseInfo(token, suc_func, error_func) {
     CallLaInfoApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取user/ba/ca列表
+//Get the list of user/ba/ca
 function GetUserList(token, api_url, limit, offset, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -445,7 +445,7 @@ function GetUserList(token, api_url, limit, offset, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取user信息
+//get user base information
 function GetUserInfo(us_id, suc_func, error_func) {
     var api_url = 'user_list_detail_message.php',
         post_data = {
@@ -454,7 +454,7 @@ function GetUserInfo(us_id, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ba信息
+//get ba base information
 function GetBaInfo(ba_id, suc_func, error_func) {
     var api_url = 'ba_list_detail_message.php',
         post_data = {
@@ -463,7 +463,7 @@ function GetBaInfo(ba_id, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置ba保证金
+//Set ba margin
 function ReviseBaAmount(token, ba_id, base_amount, pass_word_hash, suc_func, error_func) {
     var api_url = 'ba_bail.php',
         post_data = {
@@ -475,7 +475,7 @@ function ReviseBaAmount(token, ba_id, base_amount, pass_word_hash, suc_func, err
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置ca保证金
+//Set ca margin
 function ReviseCaAmount(token, ca_id, base_amount, pass_word_hash, suc_func, error_func) {
     var api_url = 'ca_bail.php',
         post_data = {
@@ -487,7 +487,7 @@ function ReviseCaAmount(token, ca_id, base_amount, pass_word_hash, suc_func, err
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ca信息
+//get ca base information
 function GetCaInfo(ca_id, suc_func, error_func) {
     var api_url = 'ca_list_detail_message.php',
         post_data = {
@@ -496,7 +496,7 @@ function GetCaInfo(ca_id, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//设置user黑名单
+//Set user blacklist
 function SetBlackList(us_id, type, black_info, limt_time, suc_func, error_func) {
     var api_url = 'set_user_black_list.php',
         post_data = {
@@ -508,7 +508,7 @@ function SetBlackList(us_id, type, black_info, limt_time, suc_func, error_func) 
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取黑名单列表
+//get blacklist
 function GetBlackList(us_id, suc_func, error_func) {
     var api_url = 'get_black_list_info.php',
         post_data = {
@@ -517,7 +517,7 @@ function GetBlackList(us_id, suc_func, error_func) {
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ba ALL交易记录
+//Get ba ALL transaction history
 function GetBaTransaction(token, suc_func, error_func) {
     var api_url = 'ba_transaction.php',
         post_data = {
@@ -526,7 +526,7 @@ function GetBaTransaction(token, suc_func, error_func) {
     CallTransactionApi(api_url, post_data, suc_func, error_func);
 }
 
-//筛选ba交易记录
+//Screening ba transaction records
 function SearchBaTransaction(token, from_time, to_time, tx_time, qa_id, us_id, us_account_id, asset_id, ba_account_id, tx_hash,
                              base_amount, bit_amount, tx_detail, tx_fee, tx_type, qa_flag, ba_id, suc_func, error_func) {
     var api_url = 'transaction_select_ba.php',
@@ -540,7 +540,7 @@ function SearchBaTransaction(token, from_time, to_time, tx_time, qa_id, us_id, u
     CallTransactionApi(api_url, post_data, suc_func, error_func);
 }
 
-//筛选ca交易记录
+//Screening ca transaction records
 function SearchCaTransaction(from_time, to_time, tx_time, qa_id, us_id, us_account_id, asset_id, ba_account_id, tx_hash,
                              base_amount, bit_amount, tx_detail, tx_fee, tx_type, qa_flag, ba_id, suc_func, error_func) {
     var api_url = 'transaction_select_ca.php',
@@ -553,7 +553,7 @@ function SearchCaTransaction(from_time, to_time, tx_time, qa_id, us_id, us_accou
     CallTransactionApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ca ALL交易记录
+//Get ca transaction history
 function GetCaTransaction(token, suc_func, error_func) {
     var api_url = 'ca_transaction.php',
         post_data = {
@@ -562,7 +562,7 @@ function GetCaTransaction(token, suc_func, error_func) {
     CallTransactionApi(api_url, post_data, suc_func, error_func);
 }
 
-// user/ba/ca KYC绑定审核列表
+// user/ba/ca KYC Bind audit list
 function KycList(api_url, token, suc_func, error_func) {
     var post_data = {
         'token': token
@@ -570,7 +570,7 @@ function KycList(api_url, token, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//确认绑定审核通过
+//Confirm binding approval
 function ConfirmKycUser(token, us_id, bind_name, bind_info, log_id, suc_func, error_func) {
     var api_url = 'kyc_user_confirm.php';
     var post_data = {
@@ -583,7 +583,7 @@ function ConfirmKycUser(token, us_id, bind_name, bind_info, log_id, suc_func, er
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//绑定审核拒绝
+//Binding audit rejection
 function RefuseKycUser(token, log_id, suc_func, error_func) {
     var api_url = 'kyc_user_refuse.php';
     var post_data = {
@@ -594,7 +594,7 @@ function RefuseKycUser(token, log_id, suc_func, error_func) {
 }
 
 
-//绑定审核拒绝
+//Binding audit rejection
 function RefuseKycCa(token, log_id, suc_func, error_func) {
     var api_url = 'kyc_ca_refuse.php';
     var post_data = {
@@ -605,7 +605,7 @@ function RefuseKycCa(token, log_id, suc_func, error_func) {
 }
 
 
-//ca绑定审核通过
+//Ca binding review passed
 function ConfirmKycCa(token, log_id, suc_func, error_func) {
     var api_url = 'kyc_ca_confirm.php';
     var post_data = {
@@ -616,7 +616,7 @@ function ConfirmKycCa(token, log_id, suc_func, error_func) {
 }
 
 
-//绑定审核拒绝
+//Binding audit rejection
 function RefuseKycBa(token, log_id, suc_func, error_func) {
     var api_url = 'kyc_ba_refuse.php';
     var post_data = {
@@ -627,7 +627,7 @@ function RefuseKycBa(token, log_id, suc_func, error_func) {
 }
 
 
-//ba绑定审核通过
+//Ba binding review passed
 function ConfirmKycBa(token, log_id, suc_func, error_func) {
     var api_url = 'kyc_ba_confirm.php';
     var post_data = {
@@ -637,7 +637,7 @@ function ConfirmKycBa(token, log_id, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取ba/ca注册审核列表
+//Get ba/ca registration review list
 function RegisterKyc(api_url, token, suc_func, error_func) {
     var post_data = {
         'token': token
@@ -645,7 +645,7 @@ function RegisterKyc(api_url, token, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//通过ba/ca注册审核
+//Registered by ba/ca
 function RegisterPass(api_url, token, bind_id, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -654,7 +654,7 @@ function RegisterPass(api_url, token, bind_id, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//拒绝ba/ca注册审核
+//Refuse to register for ba/ca registration
 function RegisterRef(api_url, token, bind_id, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -663,7 +663,7 @@ function RegisterRef(api_url, token, bind_id, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取一般ba/ca提现地址审核列表
+//Get general ba/ca withdrawal address review list
 function GetWithdrawAddressKyc(api_url, token, suc_func, error_func) {
     var post_data = {
         'token': token
@@ -671,7 +671,7 @@ function GetWithdrawAddressKyc(api_url, token, suc_func, error_func) {
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//确认通过-拒绝ba提现地址审核
+//Confirm pass-reject ba withdrawal address review
 function ConfirmBaWithdrawAddress(api_url, token, ba_id, bind_id, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -681,7 +681,7 @@ function ConfirmBaWithdrawAddress(api_url, token, ba_id, bind_id, suc_func, erro
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//确认通过-拒绝ca提现地址审核
+//Confirm pass-reject ca withdrawal address review
 function ConfirmCaWithdrawAddress(api_url, token, ca_id, bind_id, suc_func, error_func) {
     var post_data = {
         'token': token,
@@ -691,7 +691,7 @@ function ConfirmCaWithdrawAddress(api_url, token, ca_id, bind_id, suc_func, erro
     CallKycApi(api_url, post_data, suc_func, error_func);
 }
 
-//获取故障申报列表
+//Get the fault report list
 function GetDeclareList(token, is_deal, suc_func, error_func) {
     var api_url = 'kyc_feedback_list.php',
         post_data = {

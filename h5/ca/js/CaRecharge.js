@@ -5,11 +5,11 @@ $(function () {
     var benchmark_type = GetUsCookie('benchmark_type');
     var ca_currency = GetUsCookie('ca_currency');
 
-    //获取充值金额
+    //Get the recharge amount
     var base_amount = GetQueryString('base_amount');
     var us_recharge_bit_amount = GetQueryString('bit_amount');
 
-    //获取符合充值条件的Ca
+    //Get a list of Cas that meet the withdrawal criteria
     var api_url = 'get_ca_recharge_list_by_amount.php';
     GetMeetCaList(api_url, token, base_amount, function (response){
         if(response.errcode == '0'){
@@ -39,7 +39,7 @@ $(function () {
         return;
     });
 
-    //选择充值方式
+    //Choose recharge method
     $(document).on('click', '.bankItem', function () {
         var ca_channel = $(this).find('img').attr('title');
         window.location.href = 'CaRechargeAmount.html?ca_channel=' + ca_channel + '&us_recharge_bit_amount=' + us_recharge_bit_amount;

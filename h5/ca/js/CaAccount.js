@@ -1,8 +1,8 @@
 $(function(){
-    //获取CA的token
+    //get ca token
     var token = GetCookie('ca_token');
 
-    //获取CA基本信息
+    //get ca base information
     GetCaInformation(token, function (response){
         if(response.errcode == '0'){
             $('.base_amount').text(response.base_amount);

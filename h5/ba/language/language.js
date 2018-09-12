@@ -1,5 +1,5 @@
 /**
- * cookie操作
+ * Cookie operation
  */
 var getCookie = function (name, value, options) {
     if (typeof value != 'undefined') { // name and value given, set cookie
@@ -44,8 +44,8 @@ var getCookie = function (name, value, options) {
 };
 
 /**
- * 获取浏览器语言类型
- * @return {string} 浏览器国家语言
+ * Get browser language type
+ * @return {string} Browser country language
  */
 // var getNavLanguage = function(){
 //     if(navigator.appName == "Netscape"){
@@ -56,22 +56,22 @@ var getCookie = function (name, value, options) {
 // }
 
 /**
- * 设置语言类型： 默认为英文
+ * Set the language type: Default is English
  */
 var i18nLanguage = "";
 
 /*
-设置一下网站支持的语言种类
+Set the language types supported by the website
  */
 var webLanguage = ['en', 'zh-CN'];
 
 /**
- * 执行页面i18n方法
+ * Execute page i18n method
  * @return
  */
 var execI18n = function () {
     /*
-    获取一下资源文件名
+    Get the resource file name
      */
     var optionEle = $("#i18n_pagename");
     if (optionEle.length < 1) {
@@ -82,19 +82,19 @@ var execI18n = function () {
     var sourceName = optionEle.attr('content');
     sourceName = sourceName.split('-');
     /*
-    首先获取用户浏览器设备之前选择过的语言类型
+    First get the language type selected before the user's browser device
      */
     if (getCookie("userLanguage")) {
         i18nLanguage = getCookie("userLanguage");
     } else {
-        // 获取浏览器语言
+        // Get the browser language
         // var navLanguage = getNavLanguage();
         // if (navLanguage) {
-        //     // 判断是否在网站支持语言数组里
+        //     // Determine if it is in the web support language array
         //     var charSize = $.inArray(navLanguage, webLanguage);
         //     if (charSize > -1) {
         //         i18nLanguage = navLanguage;
-        //         // 存到缓存中
+        //         // Save to cache
         //         getCookie("userLanguage",navLanguage);
         //     };
         // } else{
@@ -102,7 +102,7 @@ var execI18n = function () {
         //     return false;
         // }
     }
-    /* 需要引入 i18n 文件*/
+    /* Need to introduce i18n file*/
     if ($.i18n == undefined) {
         console.log("请引入i18n js 文件")
         return false;
@@ -110,20 +110,20 @@ var execI18n = function () {
     ;
 
     /*
-    这里需要进行i18n的翻译
+    Here you need to translate i18n
      */
     jQuery.i18n.properties({
-        name: sourceName, //资源文件名称
-        path: 'language/i18n/' + i18nLanguage + '/', //资源文件路径
-        mode: 'map', //用Map的方式使用资源文件中的值
+        name: sourceName, //Resource file name
+        path: 'language/i18n/' + i18nLanguage + '/', //Resource file path
+        mode: 'map', //Use the value in the resource file as a Map
         language: i18nLanguage,
         checkAvailableLanguages: true,
         async: true,
-        callback: function () {//加载成功后设置显示内容
+        callback: function () {//Set the display content after loading successfully
             var insertEle = $(".i18n");
             // console.log(".i18n 写入中...");
             insertEle.each(function () {
-                // 根据i18n元素的 name 获取内容写入
+                // Get content write based on the name of the i18n element
                 $(this).html($.i18n.prop($(this).attr('name')));
             });
             // console.log("写入完毕");
@@ -143,16 +143,16 @@ var execI18n = function () {
     });
 };
 
-/*页面执行加载执行*/
+/*Page execution load execution*/
 $(function () {
 
-    /*执行I18n翻译*/
+    /*Perform I18n translation*/
     execI18n();
 
-    /*将语言选择默认选中缓存中的值*/
+    /*Set the language selection to the value in the cache by default*/
     $("#language option[value=" + i18nLanguage + "]").prop("selected", true);
 
-    /* 选择语言 */
+    /* Choose a language */
     $("#language").on('change', function () {
         var language = $(this).children('option:selected').val();
         getCookie("userLanguage", language, {

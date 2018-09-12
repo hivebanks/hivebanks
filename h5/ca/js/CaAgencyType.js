@@ -3,7 +3,7 @@ $(function(){
     var token = getCookie('ca_token');
     GetCaAccount();
 
-    //获取银行列表
+    //get bank list
     GetBankList(token, function (response){
         if(response.errcode == '0'){
             var data = response.rows, li = '';
@@ -23,13 +23,13 @@ $(function(){
         LayerFun(response.errcode);
         return;
     });
-    //选择代理类型
+    //Select agent type
     $(document).on('click', '.changePay li', function(){
         $(this).siblings().find('.icon-duihao').hide();
         $(this).find('.icon-duihao').show();
         $('.next').show();
         var imgHtml = $(this).find('img').attr('src');
-        //选择代理方式下一步操作
+        //Select proxy mode next step
         $('.next').click(function(){
             window.location.href = 'CaProxyAuthentication.html?' + encodeURIComponent(imgHtml);
         })

@@ -11,7 +11,7 @@ $(function () {
             if (response.errcode == '0') {
                 var data = response.rows;
                 id = response.security_level.ca_id;
-                //count_error==0审核中 1拒绝
+                //count_error==0review 1refuse
                 $.each(data, function (i, val) {
 
                     //bind name
@@ -234,7 +234,7 @@ $(function () {
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
+            // Modify the address attribute of the picture here
             $("#idPositive").attr("src", objUrl);
         }
 
@@ -248,7 +248,7 @@ $(function () {
     $('#file1').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
+            // Modify the address attribute of the picture here
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);

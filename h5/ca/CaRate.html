@@ -90,9 +90,9 @@
             </div>
         </div>
 
-        <!--不同代理类型设置充值和提现汇率-->
+        <!--Set up recharge and withdrawal rates for different agent types-->
         <div class="row differentRate" v-for="(item, index) in differentBank" v-cloak>
-            <!--不同代理类型-->
+            <!--Different agent types-->
             <div class="col-md-12 col-sm-12">
                 <div class="flex center space-between bankTypeItem">
                     <div class="flex">
@@ -100,97 +100,97 @@
                     </div>
                     <div class="flex justify-center notSet">
                         <p class="font-size-14 margin-right-2 i18n" name="rechargeRateNotSet"
-                           v-if="item.recharge_row.recharge_base_rate == 0">充值汇率未设置</p>
+                           v-if="item.recharge_row.recharge_base_rate == 0">Recharge rate is not set</p>
                         <p class="font-size-14 margin-left-2 i18n" name="withdrawRateNotSet"
-                           v-if="item.withdraw_row.withdraw_base_rate == 0">提现汇率未设置</p>
+                           v-if="item.withdraw_row.withdraw_base_rate == 0">Withdraw rate is not set</p>
                     </div>
-                    <p><a href="javascript:;" class="font-size-14 i18n" name="set">设置</a></p>
+                    <p><a href="javascript:;" class="font-size-14 i18n" name="set">set</a></p>
                 </div>
             </div>
-            <!--当前设置的充值汇率-->
+            <!--Currently set recharge rate-->
             <div class="col-md-6 col-sm-12 padding-2 rateColBox">
 
                 <div class="currentRechargeRateBox" v-if="item.recharge_row.recharge_base_rate != 0">
                     <p class="font-size-14">
-                        <span class="i18n" name="currentRechargeRate">当前设置充值汇率</span>:
+                        <span class="i18n" name="currentRechargeRate">Current setting exchange rate</span>:
                         <span>1</span>
                         <span class="base_type">BTC</span>=
                         <span class="recharge_base_rate">{{item.recharge_row.recharge_base_rate}}</span>
                         <span class="bit_type ca_currency">CNY</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="rechargeMaxAmount">当前设置充值最大额度</span>:
+                        <span class="i18n" name="rechargeMaxAmount">Current setting maximum amount of recharge</span>:
                         <span class="recharge_max_amount">{{item.recharge_row.recharge_max_amount}}</span>
                         <span class="bit_type ca_currency">CNY</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="rechargeMinAmount">当前设置充值最小额度</span>:
+                        <span class="i18n" name="rechargeMinAmount">Current setting minimum amount of recharge</span>:
                         <span class="recharge_min_amount">{{item.recharge_row.recharge_min_amount}}</span>
                         <span class="bit_type ca_currency">CNY</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="effectiveTime">当前设置充值汇率有效期</span>:
+                        <span class="i18n" name="effectiveTime">Currently set the recharge rate valid period</span>:
                         <span class="recharge_set_time">{{item.recharge_row.recharge_set_time}}</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="level">当前设置充值汇率限制等级</span>:
+                        <span class="i18n" name="level">Current set recharge exchange rate restriction level</span>:
                         <span>LV</span>
                         <span class="recharge_us_level">{{item.recharge_row.recharge_us_level}}</span>
                     </p>
                 </div>
                 <div v-else>
-                    <p class="i18n" name="rechargeRateNotSet">充值汇率未设置</p>
+                    <p class="i18n" name="rechargeRateNotSet">Recharge rate is not set</p>
                 </div>
 
-                <!--当前设置的提现汇率-->
+                <!--Current set exchange rate-->
                 <div class="currentWithdrawRateBox margin-top-5" v-if="item.withdraw_row.withdraw_base_rate != 0">
                     <p class="font-size-14">
-                        <span class="i18n" name="currentWithdrawRate">当前设置提现汇率</span>:
+                        <span class="i18n" name="currentWithdrawRate">Current set exchange rate</span>:
                         <span>1</span>
                         <span class="base_type">BTC</span>=
                         <span class="recharge_base_rate">{{item.withdraw_row.withdraw_base_rate}}</span>
                         <span class="bit_type ca_currency">CNY</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="withdrawMaxAmount">当前设置提现最大额度</span>:
+                        <span class="i18n" name="withdrawMaxAmount">Current setting withdrawal maximum amount</span>:
                         <span class="recharge_max_amount">{{item.withdraw_row.withdraw_max_amount}}</span>
                         <span class="bit_type ca_currency">CNY</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="withdrawMinAmount">当前设置提现最小额度</span>:
+                        <span class="i18n" name="withdrawMinAmount">Current setting withdrawal minimum amount</span>:
                         <span class="recharge_min_amount">{{item.withdraw_row.withdraw_min_amount}}</span>
                         <span class="bit_type ca_currency">CNY</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="effectiveTime">当前设置提现汇率有效期</span>:
+                        <span class="i18n" name="effectiveTime">Current set withdrawal rate valid</span>:
                         <span class="recharge_set_time">{{item.withdraw_row.withdraw_set_time}}</span>
                     </p>
                     <p class="font-size-14">
-                        <span class="i18n" name="level">当前设置提现汇率限制等级</span>:
+                        <span class="i18n" name="level">Current setting exchange rate restriction level</span>:
                         <span>LV</span>
                         <span class="recharge_us_level">{{item.withdraw_row.withdraw_us_level}}</span>
                     </p>
                 </div>
                 <div v-else>
-                    <p class="i18n" name="withdrawRateNotSet">提现汇率未设置</p>
+                    <p class="i18n" name="withdrawRateNotSet">Withdraw rate is not set</p>
                 </div>
             </div>
-            <!--设置充值提现汇率表单-->
+            <!--Set up a recharge cash rate form-->
             <div class="col-md-6 col-sm-12 rateForm padding-2">
-                <!--选择充值和提现汇率设置-->
+                <!--Select recharge and withdrawal rate settings-->
                 <div class="margin-bottom-5 setRateType">
                     <span>
                         <input type="radio" name="changeRate" checked value="recharge"><span class="i18n"
-                                                                                             name="rechargeRate">充值汇率设置</span>
+                                                                                             name="rechargeRate">Recharge rate setting</span>
                     </span>
                     <span class="margin-left-5">
-                        <input type="radio" name="changeRate" value="withdraw"><span class="i18n" name="withdrawRate">提现汇率设置</span>
+                        <input type="radio" name="changeRate" value="withdraw"><span class="i18n" name="withdrawRate">Withdraw rate setting</span>
                     </span>
                 </div>
 
                 <div class="setRateForm">
                     <ul>
-                        <!--汇率-->
+                        <!--rate-->
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3">
                                 <p class="font-size-14 flex space-around">
@@ -209,11 +209,11 @@
 
 
                         </li>
-                        <!--最大额度-->
+                        <!--Maximum amount-->
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3">
                                 <p>
-                                    <span class="i18n font-size-14" name="maxLimit">最大额度</span>:
+                                    <span class="i18n font-size-14" name="maxLimit">Maximum amount</span>:
                                 </p>
                             </div>
                             <div class="col-md-9">
@@ -228,7 +228,7 @@
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3 ">
                                 <p>
-                                    <span class="i18n font-size-14" name="minLimit">最小额度</span>:
+                                    <span class="i18n font-size-14" name="minLimit">Minimum amount</span>:
                                 </p>
 
                             </div>
@@ -239,11 +239,11 @@
                                 </div>
                             </div>
                         </li>
-                        <!--密码-->
+                        <!--password-->
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3 ">
                                 <p>
-                                    <span class="i18n font-size-14" name="loginPassword">密码</span>:
+                                    <span class="i18n font-size-14" name="loginPassword">password</span>:
                                 </p>
                             </div>
                             <div class="col-md-9">
@@ -252,11 +252,11 @@
                                 </div>
                             </div>
                         </li>
-                        <!--等级设置-->
+                        <!--Level setting-->
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3">
                                 <p>
-                                    <span class="i18n font-size-14" name="setLevel">等级设置</span>:
+                                    <span class="i18n font-size-14" name="setLevel">Level setting</span>:
                                 </p>
                             </div>
                             <div class="col-md-9">
@@ -270,14 +270,14 @@
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3">
                                 <p>
-                                    <span class="i18n font-size-14" name="deadline">有效期限</span>:
+                                    <span class="i18n font-size-14" name="deadline">Validity period</span>:
                                 </p>
                             </div>
                             <div class="col-md-9">
                                 <input type="text" class="timeInput form-control">
                             </div>
                         </li>
-                        <!--确认设置按钮-->
+                        <!--Confirm setting button-->
                         <li>
                             <button class="btn btn-success i18n enableBtn" name="determine">confirm</button>
                         </li>
