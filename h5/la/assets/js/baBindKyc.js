@@ -51,16 +51,13 @@ $(function () {
     $(document).on('click', '.passBtn', function () {
         var _this = $(this),
             log_id = $(this).parents('.baKycItem').find('.log_id').text();
-        $(".preloader-wrapper").addClass("active");
         ConfirmKycBa(token, log_id, function (response) {
             if (response.errcode == '0') {
-                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.baKycItem').remove();
                 LayerFun('successfulProcessing');
                 return;
             }
         }, function (response) {
-            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;

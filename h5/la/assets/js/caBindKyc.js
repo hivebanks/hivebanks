@@ -23,7 +23,7 @@ $(function () {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
                     bind_name = "<td><span class='bind_name i18n' name='idNum'>" + data[i].bind_name + "</span></td>";
                     bind_info = "<td><a class='bind_info'>" + data[i].bind_info + "</a></td>"
-                }else if (data[i].bind_type == 'text' && data[i].bind_name == 'name') {
+                } else if (data[i].bind_type == 'text' && data[i].bind_name == 'name') {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
                     bind_name = "<td><span class='bind_name i18n' name='name'>" + data[i].bind_name + "</span></td>";
                     bind_info = "<td><a class='bind_info'>" + data[i].bind_info + "</a></td>"
@@ -52,13 +52,16 @@ $(function () {
     //Confirm the approval
     $(document).on('click', '.passBtn', function () {
         var _this = $(this), log_id = $(this).parents('.caKycItem').find('.log_id').text();
+        $(".preloader-wrapper").addClass("active");
         ConfirmKycCa(token, log_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.caKycItem').remove();
                 LayerFun('successfulProcessing');
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;

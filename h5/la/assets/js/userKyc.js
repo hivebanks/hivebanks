@@ -50,7 +50,7 @@ $(function () {
         return;
     });
 
-    //确定审核通过
+    //Confirm the approval
     $(document).on('click', '.passBtn', function () {
         var _this = $(this);
         var us_id = $(this).parents('.userKycItem').find('.us_id').text();
@@ -70,7 +70,7 @@ $(function () {
         })
     });
 
-    //拒绝审核
+    //refuse
     $(document).on('click', '.refuseBtn', function () {
         var _this = $(this);
         var log_id = $(this).parents('.userKycItem').find('.log_id').text();
@@ -88,7 +88,7 @@ $(function () {
         })
     });
 
-    //查看图片
+    //view image
     $(document).on('click', '.look', function () {
         var idPhotoSrc = $(this).parents('.userKycItem').find('.idPhotoSrc').text();
         var idPhotoSrcOne = idPhotoSrc.split(',')[0];
