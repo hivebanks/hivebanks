@@ -53,7 +53,7 @@ curl_close($ch);
 
 //var_dump($output);
 $output_array = json_decode($output,true);
-print_r($output_array);
+
 if($output_array["errcode"] == "0"){
 
     exit_ok();

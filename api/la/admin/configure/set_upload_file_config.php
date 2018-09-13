@@ -49,7 +49,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 $output = curl_exec($ch);
 curl_close($ch);
 
-//var_dump($output);
+var_dump($output);
 $output_array = json_decode($output,true);
 print_r($output_array);
 if($output_array["errcode"] == "0"){
