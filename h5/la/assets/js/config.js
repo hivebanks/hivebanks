@@ -40,6 +40,9 @@ $(function () {
         }
     }, function (response) {
         LayerFun(response.errcode);
+        if(response.errcode =="114"){
+            window.location.href = "login.html";
+        }
         return;
     });
 
@@ -123,8 +126,10 @@ $(function () {
         if (type == '3') {
             url = "http://agent_service.fnying.com/email/set_email_service.php"
         }
+        $(".preloader-wrapper").addClass("active");
         var data = {"la_id": la_id, "type": type, "key_code": key_code};
         $.post(url, data, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             if (response.errcode == '0') {
                 LayerFun("submitSuccess");
                 if (type == '1') {
@@ -140,7 +145,7 @@ $(function () {
                     $('.underReviewEmail').fadeIn();
                 }
             } else {
-                LayerFun("submitFail");
+                layer.msg(response.errmsg);
                 return;
             }
         }, "json")
