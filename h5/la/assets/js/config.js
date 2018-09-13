@@ -40,6 +40,9 @@ $(function () {
         }
     }, function (response) {
         LayerFun(response.errcode);
+        if(response.errcode =="114"){
+            window.location.href = "login.html";
+        }
         return;
     });
 
