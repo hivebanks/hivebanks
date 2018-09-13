@@ -202,6 +202,7 @@ require_once "db/la_admin.php";
 $la_id = get_la_admin_info()["id"];
 print_r(2222);
 $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+print_r(333);
 print_r($output_array);
 if($output_array["errcode"] == "0"){
     $bind_email = ins_bind_user_reg_bind_log($data_log_bind);
