@@ -14,7 +14,6 @@ function get_la_by_user($id){
 function upd_la_admin_key_code($la_id,$key_code) {
     $db = new DB_COM();
     $sql = "UPDATE la_admin SET key_code = '{$key_code}' WHERE id = '{$la_id}'";
-
     $db->query($sql);
     $count = $db->affectedRows($sql);
     return $count;

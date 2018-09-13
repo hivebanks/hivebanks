@@ -1,54 +1,61 @@
 <?php
 require_once "../../../inc/common.php";
-
+require_once "db/la_admin.php";
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
 /*
-========================== 设置短信配置 ==========================
+========================== 设置email信息 ==========================
 GET参数
-    token                   用户token
-    accessKeyId             短信服务商id
-    accessKeySecret         短信服务商密钥
-    SignName                签名
-    TemplateCode            模板编号
+    token             用户token
+    Host               邮箱类型
+    Username           邮箱姓名
+    Password           邮箱密码（授权码，非真实密码）
+    address            邮箱地址
+    name               发送头名称
 返回
   errcode = 0      请求成功
   row             返回配置信息
+
 说明
 */
 
 php_begin();
-$args = array("token",'accessKeyId','accessKeySecret','SignName','TemplateCode');
+$args = array("token",'key_code');
 chk_empty_args('GET', $args);
-$token = get_arg_str('GET', 'token');
-$accessKeyId = get_arg_str('GET', 'accessKeyId');
-$accessKeySecret = get_arg_str('GET', 'accessKeySecret');
-$SignName = get_arg_str('GET', 'SignName');
-$TemplateCode = get_arg_str('GET', 'TemplateCode');
+$token = get_arg_str('GET', 'token','128');
+$key_code = get_arg_str('GET', 'key_code');
+
 $key = Config::TOKEN_KEY;
-// 获取token并解密
-$des = new Des();
-$decryption_code = $des -> decrypt($token, $key);
-$now_time = time();
-$code_conf =  explode(',',$decryption_code);
-// 获取token中的需求信息
-$user = $code_conf[0];
-$timestamp = $code_conf[1];
-if($timestamp < $now_time){
-    exit_error('114','Token timeout please retrieve!');
+
+$la_id = check_token($token);
+
+if ($row["key_code"] != $key_code) {
+    if(!upd_la_admin_key_code($la_id,$key_code))
+        exit_error("156","开通失败");
 }
 
-$data = array();
-$data["accessKeyId"] = $accessKeyId;
-$data["accessKeySecret"] = $accessKeySecret;
-$data["SignName"] = $SignName;
-$data["TemplateCode"] = $TemplateCode;
+$url = "http://agent_service.fnying.com/sms/set_sms_service.php";
+$post_data = array();
+$post_data["key_code"] = $key_code;
 
-file_put_contents('../../../plugin/sms/config.json',json_encode($data));
-$rtn_ary = array();
-$rtn_ary['errcode'] = '0';
-$rtn_ary['errmsg'] = '';
-$rtn_ary['row'] = $data;
-$rtn_str = json_encode($rtn_ary);
-php_end($rtn_str);
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+$output = curl_exec($ch);
+curl_close($ch);
+
+//var_dump($output);
+$output_array = json_decode($output,true);
+print_r($output_array);
+if($output_array["errcode"] == "0"){
+
+    exit_ok();
+}else{
+    exit_error("166","提交失败");
+}
+exit_ok();

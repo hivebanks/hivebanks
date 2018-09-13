@@ -30,14 +30,12 @@ $key = Config::TOKEN_KEY;
 
 $la_id = check_token($token);
 
-$row = get_la_by_user($la_id);
 if ($row["key_code"] != $key_code) {
     if(!upd_la_admin_key_code($la_id,$key_code))
         exit_error("156","开通失败");
 }
 
-
-$url = "http://agent_service.fnying.com/email/set_email_service.php";
+$url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php";
 $post_data = array();
 $post_data["key_code"] = $key_code;
 
