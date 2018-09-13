@@ -71,6 +71,9 @@ GET参数
 
 */
 
+print_r(111);
+die;
+
 php_begin();
 $args = array('email', 'pass_word_hash', 'pass_word');
 chk_empty_args('GET', $args);
