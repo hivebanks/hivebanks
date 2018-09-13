@@ -202,12 +202,15 @@ $(function () {
         var $this = $(this), cfm_code = $("#addressPhoneCode").val(), bind_type = '5', phoneArr = phone_bind_info.split('-'),
             country_code = phoneArr[0], cellphone = phoneArr[1];
         setTime($this);
+        ShowLoading("show");
         GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 LayerFun('sendSuc');
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             GetImgCode();
             LayerFun(response.errcode);
             return;
@@ -217,13 +220,16 @@ $(function () {
     $('.enablePhoneBtn').click(function () {
         var sms_code = $('#smsCode').val(), phone_info = phone_bind_info.split('-'),
             country_code = phone_info[0], cellphone = phone_info[1];
+        ShowLoading("show");
         CfmPhone(sms_code, country_code, cellphone, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 LayerFun('verifySuccess');
                 $('#smsPhoneCode').modal('hide');
                 $('#addAddress').modal('show');
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
             return;
         })
