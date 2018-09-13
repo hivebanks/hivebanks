@@ -92,7 +92,7 @@ $.ajax({
     }
 });
 
-// 调用API LA配置函数
+// Call the API LA configuration function
 function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/configure/';
     post_data = post_data || {};
@@ -122,7 +122,7 @@ function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-// 调用API LA函数
+// Call the API LA function
 function CallLaInfoApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/';
     post_data = post_data || {};
@@ -152,7 +152,7 @@ function CallLaInfoApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-// 调用API 报表函数
+// Call the API report function
 function CallReportApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/report_form/';
     post_data = post_data || {};
@@ -182,7 +182,7 @@ function CallReportApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-// 调用API管理函数
+// Call API management function
 function CallApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/manage/';
     post_data = post_data || {};
@@ -212,7 +212,7 @@ function CallApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-// 调用API Admin函数
+// Call the API Admin function
 function CallLaAdminApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/admin/';
     post_data = post_data || {};
@@ -242,7 +242,7 @@ function CallLaAdminApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
-// 调用API查询交易共通函数
+// Call API query transaction common function
 function CallTransactionApi(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/la/admin/transaction/';
     post_data = post_data || {};
@@ -782,7 +782,7 @@ function OpenEmail(token, key_code, suc_func, error_func) {
             'token': token,
             'key_code': key_code
         };
-    CallLaAdminApi(api_url, post_data, suc_func, error_func);
+    CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
 /**
