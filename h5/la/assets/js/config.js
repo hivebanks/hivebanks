@@ -123,7 +123,8 @@ $(function () {
             OpenUploadFile(token, key_code, function (response) {
                 if (response.errcode == "0") {
                     $('.noOpenFile').fadeOut();
-                    $('.underReviewFile').fadeIn();
+                    $('.alreadyOpenFile').fadeIn();
+                    $(".radioFile").attr("disabled", true);
                 }
             }, function (response) {
                 layer.msg(response.errmsg);
@@ -133,7 +134,8 @@ $(function () {
             OpenSms(token, key_code, function (response) {
                 if (response.errcode == "0") {
                     $('.noOpenSms').fadeOut();
-                    $('.underReviewSms').fadeIn();
+                    $('.alreadyOpenSms').fadeIn();
+                    $(".radioSms").attr("disabled", true);
                 }
             }, function (response) {
                 layer.msg(response.errmsg);
@@ -143,7 +145,8 @@ $(function () {
             OpenEmail(token, key_code, function (response) {
                 if (response.errcode == "0") {
                     $('.noOpenEmail').fadeOut();
-                    $('.underReviewEmail').fadeIn();
+                    $('.alreadyOpenEmail').fadeIn();
+                    $(".radioEmail").attr("disabled", true);
                 }
             }, function (response) {
                 layer.msg(response.errmsg);

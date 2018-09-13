@@ -230,9 +230,6 @@ function EmailList() {
     return emailList;
 }
 
-// var url = getRootPath();
-
-
 //Popup message
 function LayerFun(type) {
     if(type == "114"){
