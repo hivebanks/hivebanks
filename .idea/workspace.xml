@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ba/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaReset.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaReset.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/user/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/reset.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/reset.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="50" column="14" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="14" />
+            <state relative-caret-position="282">
+              <caret line="434" column="13" lean-forward="true" selection-start-line="434" selection-start-column="13" selection-end-line="434" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/la/assets/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="325" column="19" selection-start-line="325" selection-start-column="19" selection-end-line="325" selection-end-column="19" />
+            <state relative-caret-position="414">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -36,6 +39,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>DelCookie</find>
+      <find>DelCookie('token');</find>
       <find>getla</find>
     </findStrings>
   </component>
@@ -56,9 +61,14 @@
         <option value="$PROJECT_DIR$/api/user/cfm_email.php" />
         <option value="$PROJECT_DIR$/api/ca/mst_reg_email.php" />
         <option value="$PROJECT_DIR$/api/inc/config.php" />
-        <option value="$PROJECT_DIR$/h5/la/assets/js/config.js" />
-        <option value="$PROJECT_DIR$/h5/user/js/common.js" />
         <option value="$PROJECT_DIR$/h5/la/assets/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/reset.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaReset.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/config.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/common.js" />
       </list>
     </option>
   </component>
@@ -89,17 +99,6 @@
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
@@ -214,7 +213,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33211000" />
+    <option name="totallyTimeSpent" value="34069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -261,42 +260,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/ba/rst_pw_email.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ba/db/ba_log_bind.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/cfm_phone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ba/cfm_email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1710">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/la/admin/kyc/kyc_ba_reg_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="48" column="19" lean-forward="true" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ca/db/ca_log_bind.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2553">
-          <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/ca/cfm_email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1955">
@@ -479,24 +442,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/js/common.js">
+    <entry file="file://$PROJECT_DIR$/h5/user/js/reset.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        <state relative-caret-position="627">
+          <caret line="144" column="52" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
+    <entry file="file://$PROJECT_DIR$/h5/user/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="14" />
+        <state relative-caret-position="125">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaReset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="246" column="54" selection-start-line="246" selection-start-column="54" selection-end-line="246" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="17" />
+          <folding>
+            <element signature="e#611#2833#0" />
+            <element signature="e#2875#5098#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#EmailList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="231" column="44" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+          <folding>
+            <element signature="e#607#2829#0" />
+            <element signature="e#2871#5094#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/la/assets/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="325" column="19" selection-start-line="325" selection-start-column="19" selection-end-line="325" selection-end-column="19" />
+        <state relative-caret-position="414">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="434" column="13" lean-forward="true" selection-start-line="434" selection-start-column="13" selection-end-line="434" selection-end-column="13" />
         </state>
       </provider>
     </entry>

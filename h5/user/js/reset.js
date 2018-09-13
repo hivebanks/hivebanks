@@ -125,8 +125,6 @@ $(function () {
                 $('.emailcfmCode').val('');
                 $('.emailPassword').val('');
                 LayerFun('modifySuccess');
-                DelCookie('token');
-                window.location.href = 'login.html';
             }
 
         }, function (response) {
@@ -141,6 +139,10 @@ $(function () {
                 LayerFun('accountOrCodeFail');
                 execI18n();
                 return;
+            }
+            if(response.errcode == "114"){
+                DelCookie('token');
+                window.location.href = 'login.html';
             }
         })
     });
@@ -257,8 +259,6 @@ $(function () {
                 $('.phoneSmsCode').val('');
                 $('.phonePassword').val('');
                 LayerFun('modifySuccess');
-                DelCookie('token');
-                window.location.href = 'login.html';
             }
 
         }, function (response) {
@@ -266,6 +266,10 @@ $(function () {
             LayerFun('modifyFail');
             if (response.errcode == '120') {
                 $('.noPhonelTips').fadeIn('fast');
+            }
+            if(response.errcode == "114"){
+                DelCookie('user_token');
+                window.location.href = 'login.html';
             }
         });
     });
