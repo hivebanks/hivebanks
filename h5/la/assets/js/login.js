@@ -3,6 +3,10 @@ $(function () {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
         if (arr != null) return unescape(arr[2]);
     }
+    var login_la_token = GetLoginCookie("la_token");
+    if(login_la_token){
+        window.location.href = "config.html";
+    }
     $('.loginBtn').click(function () {
         var la_token = GetLoginCookie('la_token');
         var _this = $(this), _text = $(this).text();
