@@ -4,6 +4,14 @@ $(function () {
     var us_level = GetUsCookie('us_level');
     GetUsAccount();
 
+    //get img code
+    GetImgCode();
+
+    //Switch graphic verification code
+    $('#phone_imgCode').click(function () {
+        GetImgCode();
+    });
+
     //Get parameters
     var bit_type = GetUsCookie('wi_bit_type');
 
