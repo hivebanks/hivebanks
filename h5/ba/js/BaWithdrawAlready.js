@@ -23,7 +23,7 @@ $(function(){
                     '<td><span>' + data[i].asset_id + '</span>/<span>' + base_type + '</span></td>' +
                     '<td><span>' + data[i].bit_address + '</span></td>' +
                     '<td><span>' + data[i].tx_time + '</span></td>' +
-                    '<td><span class="i18n" name="tx_hash">' + data[i].tx_time + '</span></td>' +
+                    '<td><span class="i18n" name="tradingHash">' + data[i].tx_time + '</span></td>' +
                     '<td><span class="i18n" name="processed">processed</span></td>' +
                     '</tr>'
             });
