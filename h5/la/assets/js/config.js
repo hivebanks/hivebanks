@@ -40,7 +40,7 @@ $(function () {
         }
     }, function (response) {
         LayerFun(response.errcode);
-        if(response.errcode =="114"){
+        if (response.errcode == "114") {
             DelCookie("la_token");
             window.location.href = "login.html";
         }
@@ -120,49 +120,35 @@ $(function () {
         }
 
         if (type == '1') {
-            OpenUploadFile(token,key_code, function (response) {
-                console.log(response);
+            OpenUploadFile(token, key_code, function (response) {
+                if (response.errcode == "0") {
+                    $('.noOpenFile').fadeOut();
+                    $('.underReviewFile').fadeIn();
+                }
             }, function (response) {
                 layer.msg(response.errmsg);
             });
         }
         if (type == '2') {
-            OpenSms(token,key_code, function (response) {
-                console.log(response);
+            OpenSms(token, key_code, function (response) {
+                if (response.errcode == "0") {
+                    $('.noOpenSms').fadeOut();
+                    $('.underReviewSms').fadeIn();
+                }
             }, function (response) {
                 layer.msg(response.errmsg);
             });
         }
         if (type == '3') {
-            OpenEmail(token,key_code, function (response) {
-                console.log(response);
+            OpenEmail(token, key_code, function (response) {
+                if (response.errcode == "0") {
+                    $('.noOpenEmail').fadeOut();
+                    $('.underReviewEmail').fadeIn();
+                }
             }, function (response) {
                 layer.msg(response.errmsg);
             });
         }
-        // $(".preloader-wrapper").addClass("active");
-        // var data = {"la_id": la_id, "type": type, "key_code": key_code};
-        // $.post(url, data, function (response) {
-        //     $(".preloader-wrapper").removeClass("active");
-        //     if (response.errcode == '0') {
-        //         LayerFun("submitSuccess");
-        //         if (type == '1') {
-        //             $('.noOpenFile').fadeOut();
-        //             $('.underReviewFile').fadeIn();
-        //         }
-        //         if (type == '2') {
-        //             $('.noOpenSms').fadeOut();
-        //             $('.underReviewSms').fadeIn();
-        //         }
-        //         if (type == '3') {
-        //             $('.noOpenEmail').fadeOut();
-        //             $('.underReviewEmail').fadeIn();
-        //         }
-        //     } else {
-        //         layer.msg(response.errmsg);
-        //         return;
-        //     }
-        // }, "json")
     });
 
     //Get SMS interface
@@ -275,7 +261,7 @@ $(function () {
             });
         }
     }, function (response) {
-        if(response.errcode =="114"){
+        if (response.errcode == "114") {
             DelCookie("la_token");
             window.location.href = "login.html";
         }
@@ -416,7 +402,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun(response.errcode);
-            if(response.errcode == "114"){
+            if (response.errcode == "114") {
                 DelCookie("la_token");
                 window.location.href = "login.html";
             }
@@ -484,7 +470,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun(response.errcode);
-            if(response.errcode == "114"){
+            if (response.errcode == "114") {
                 DelCookie("la_token");
                 window.location.href = "login.html";
             }

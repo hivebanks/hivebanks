@@ -22,9 +22,13 @@ function GetCookie(name) {
 function GetUsCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
-    if (arr == null) {
+    if (arr == null && name == "user_token") {
+        DelCookie('user_token');
         window.location.href = '../user/login.html';
         return;
+    }else {
+        DelCookie('ba_token');
+        window.location.href = 'BaLogin.html';
     }
 }
 
@@ -40,10 +44,8 @@ function DelCookie(name) {
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
-    console.log(r);
     if (r != null) return unescape(r[2]);
     return null;
-    // console.log(r);
 }
 
 // Email format check

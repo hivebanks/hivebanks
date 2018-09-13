@@ -235,6 +235,10 @@ function EmailList() {
 
 //Popup message
 function LayerFun(type) {
+    if(type == "114"){
+        window.location.href = "login.html";
+        return;
+    }
     layer.msg('<span class="i18n" name="' + type + '"></span>');
     execI18n();
     return;
