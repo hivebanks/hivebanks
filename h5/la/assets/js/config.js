@@ -120,6 +120,8 @@ $(function () {
             return;
         }
 
+
+        
         // if (type == '1') {
         //     url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php"
         // }
