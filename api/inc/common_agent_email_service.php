@@ -22,7 +22,7 @@ function send_email_by_agent_service($email,$title,$body,$la_id){
     $output = curl_exec($ch);
     curl_close($ch);
     print_r($output);
-    $output_array = json_decode($output, true);
+    $output_array = json_decode($output);
     print_r($output_array);
     return $output_array;
 }
