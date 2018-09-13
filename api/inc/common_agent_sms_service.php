@@ -20,6 +20,5 @@ function send_sms_by_agent_service($cellphone,$code,$key_code){
     $output = curl_exec($ch);
     curl_close($ch);
     $output_array = json_decode($output, true);
-
     return $output_array;
 }
