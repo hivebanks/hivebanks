@@ -41,6 +41,7 @@ $(function () {
     }, function (response) {
         LayerFun(response.errcode);
         if(response.errcode =="114"){
+            DelCookie("la_token");
             window.location.href = "login.html";
         }
         return;
@@ -262,6 +263,7 @@ $(function () {
         }
     }, function (response) {
         if(response.errcode =="114"){
+            DelCookie("la_token");
             window.location.href = "login.html";
         }
     });
@@ -402,6 +404,7 @@ $(function () {
         }, function (response) {
             LayerFun(response.errcode);
             if(response.errcode == "114"){
+                DelCookie("la_token");
                 window.location.href = "login.html";
             }
             return;
@@ -469,6 +472,7 @@ $(function () {
         }, function (response) {
             LayerFun(response.errcode);
             if(response.errcode == "114"){
+                DelCookie("la_token");
                 window.location.href = "login.html";
             }
         });
