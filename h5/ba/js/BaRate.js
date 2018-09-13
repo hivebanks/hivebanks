@@ -12,7 +12,9 @@ $(function () {
         $('.bit_type').text(response.bit_type);
         if (benchmark_type == response.bit_type) {
             $('.baseBaNone').remove();
-            $('.baseAgents').removeClass("none");
+            $('.baseAgentsRow').removeClass("none");
+        }else {
+            $('.baseAgentsRow').remove();
         }
     }, function (response) {
         if (response.errcode == '114') {
