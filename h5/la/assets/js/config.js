@@ -1,7 +1,6 @@
 $(function () {
     //Get token
     var token = GetCookie('la_token');
-    window.location.href = "login.html";
 
     // Config url
     $('.setApiBtn').click(function () {
