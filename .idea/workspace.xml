@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +38,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaWithdrawInfo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaWithdrawInfo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+            <state relative-caret-position="207">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaWithdrawPending.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaWithdrawAlready.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -51,8 +68,8 @@
       <file leaf-file-name="BaWithdrawInfo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="115" column="76" selection-start-line="115" selection-start-column="76" selection-end-line="115" selection-end-column="76" />
+            <state relative-caret-position="353">
+              <caret line="112" column="55" selection-start-line="112" selection-start-column="55" selection-end-line="112" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -147,6 +164,9 @@
         <option value="$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties" />
         <option value="$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties" />
         <option value="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawInfo.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js" />
       </list>
     </option>
   </component>
@@ -293,7 +313,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40621000" />
+    <option name="totallyTimeSpent" value="40904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -339,12 +359,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/user/log_ba_recharge.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/log_ba_withdraw.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/user/log_ca_withdraw.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -667,15 +681,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="115" column="76" selection-start-line="115" selection-start-column="76" selection-end-line="115" selection-end-column="76" />
+        <state relative-caret-position="353">
+          <caret line="112" column="55" selection-start-line="112" selection-start-column="55" selection-end-line="112" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        <state relative-caret-position="207">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
         </state>
       </provider>
     </entry>

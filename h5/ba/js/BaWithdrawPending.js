@@ -91,8 +91,10 @@ $(function () {
         var type = '1';
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         WithdrawConfirm(token, qa_id, type, transfer_tx_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#confirmModal').modal('hide');
                 _this.closest('.withdrawPendingList').remove();
@@ -101,6 +103,7 @@ $(function () {
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun('err_processing');
             LayerFun(response.errcode);
