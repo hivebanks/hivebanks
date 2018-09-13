@@ -27,8 +27,11 @@ function send_email_by_agent_service($email,$title,$body,$la_id){
     curl_close($ch);
     print_r($output);
     print_r(777);
-    $output_array = json_decode($output,true);
+
+    $str = '{"errcode":"0","errmsg":"Please verify email as soon as possible!"}';
+    $output_array = json_decode($str,true);
     print_r(888);
     print_r($output_array);
+    print_r(999);
     return $output_array;
 }
