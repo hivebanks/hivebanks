@@ -189,7 +189,7 @@ $data_base['us_account'] = "hivebanks_" . $email;
 //$bind_email = ins_bind_user_reg_bind_log($data_log_bind);
 
 $url = Config::CONFORM_URL;
-print_r(11111);
+
 //绑定成功发送验证信息
 //if($bind_email){
 $timestamp += 15 * 60;
@@ -200,9 +200,9 @@ $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 require_once "db/la_admin.php";
 $la_id = get_la_admin_info()["id"];
-print_r(2222);
+
 $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
-print_r(333);
+
 print_r($output_array);
 
 if($output_array["errcode"] == "0"){
