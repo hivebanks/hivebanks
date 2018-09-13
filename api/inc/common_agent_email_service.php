@@ -12,7 +12,7 @@ function send_email_by_agent_service($email,$title,$body,$la_id){
     $post_data["email"] = $email;
     $post_data["title"] = $title;
     $post_data['body'] = $body;
-    $post_data["la_id"] = $la_id;
+    $post_data["key_code"] = $la_id;
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);
