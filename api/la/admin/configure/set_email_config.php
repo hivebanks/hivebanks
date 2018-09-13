@@ -54,6 +54,6 @@ if($output_array["errcode"] == "0"){
 
     exit_ok();
 }else{
-    exit_error("1","提交失败");
+    exit_error("166","提交失败");
 }
 exit_ok();
