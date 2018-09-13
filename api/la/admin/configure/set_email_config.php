@@ -23,7 +23,7 @@ GET参数
 php_begin();
 $args = array("token",'key_code');
 chk_empty_args('GET', $args);
-$token = get_arg_str('GET', 'token');
+$token = get_arg_str('GET', 'token','128');
 $key_code = get_arg_str('GET', 'key_code');
 
 $key = Config::TOKEN_KEY;
