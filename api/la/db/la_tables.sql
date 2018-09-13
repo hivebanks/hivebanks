@@ -25,6 +25,7 @@ CREATE TABLE `la_admin` (
   `last_login_city` varchar(255) DEFAULT NULL COMMENT '最后一次登陆成功城市',
   `last_login_time` bigint(20) DEFAULT NULL COMMENT '最后一次登陆成功时间',
   `ctime` bigint(20) DEFAULT NULL COMMENT '创建时间',
+  `key_code` varchar(64) DEFAULT NULL COMMENT '第三方服务key_code',
   PRIMARY KEY (`user`,`id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员表';
 
