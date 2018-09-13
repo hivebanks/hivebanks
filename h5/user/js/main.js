@@ -233,6 +233,7 @@ function EmailList() {
 //Popup message
 function LayerFun(type) {
     if(type == "114"){
+        DelCookie("user_token");
         window.location.href = "login.html";
         return;
     }

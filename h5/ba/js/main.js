@@ -231,6 +231,7 @@ function EmailList() {
 //layer prompt
 function LayerFun(type) {
     if(type == "114"){
+        DelCookie("ba_token");
         window.location.href = "login.html";
         return;
     }
