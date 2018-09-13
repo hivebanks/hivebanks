@@ -203,7 +203,7 @@ $(function () {
             country_code = phoneArr[0], cellphone = phoneArr[1];
         setTime($this);
         ShowLoading("show");
-        GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
+        GetUserPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
             if (response.errcode == '0') {
                 ShowLoading("hide");
                 LayerFun('sendSuc');

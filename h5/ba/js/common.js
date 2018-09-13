@@ -324,6 +324,18 @@ function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, er
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }
+
+//Get user phone verification code
+function GetUserPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func){
+    var api_url = 'sms_send.php',
+        post_data = {
+            'cellphone':cellphone,
+            'country_code':country_code,
+            'bind_type':bind_type,
+            'cfm_code':cfm_code
+        };
+    CallUserApi(api_url, post_data, suc_func, error_func);
+}
 //email login
 function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_email.php',
