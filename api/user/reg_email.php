@@ -200,6 +200,7 @@ $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 require_once "db/la_admin.php";
 $la_id = get_la_admin_info()["id"];
+print_r(2222);
 $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
 print_r($output_array);
 if($output_array["errcode"] == "0"){
