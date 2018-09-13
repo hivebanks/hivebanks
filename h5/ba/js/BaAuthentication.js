@@ -262,8 +262,8 @@ $(function () {
         ShowLoading("show");
         FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
-                ActiveClick($this, btnText);
                 ShowLoading("hide");
+                ActiveClick($this, btnText);
                 LayerFun('submittedSuccessfully');
                 GetBindInfo();
             }
