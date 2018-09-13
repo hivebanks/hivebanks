@@ -15,7 +15,6 @@ $(function () {
         LayerFun(response.errcode);
         return;
     });
-
     GetImgCode();
 
     $('#phone_imgCode').click(function () {
