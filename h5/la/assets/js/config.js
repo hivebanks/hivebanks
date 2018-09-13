@@ -48,9 +48,10 @@ $(function () {
     });
 
     //get key_code
+    var key_code = "";
     GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
-            console.log(response);
+            key_code = response.key_code;
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -109,71 +110,6 @@ $(function () {
             });
         }
     });
-
-    //Get SMS interface
-    // GetSmsInterface(token, function (response) {
-    //     if (response.errcode == '0') {
-    //         var data = response.row;
-    //         $('#accessKeyId').val(data.accessKeyId);
-    //         $('#accessKeySecret').val(data.accessKeySecret);
-    //         $('#SignName').val(data.SignName);
-    //         $('#TemplateCode').val(data.TemplateCode);
-    //     }
-    // }, function (response) {
-    //     LayerFun(response.errcode);
-    //     return;
-    // });
-
-    //Configure SMS interface
-    // $('.smsInterfaceBtn').click(function () {
-    //     var accessKeyId = $('#accessKeyId').val(), accessKeySecret = $('#accessKeySecret').val(),
-    //         SignName = $('#SignName').val(), TemplateCode = $('#TemplateCode').val();
-    //     var $this = $(this), btnText = $(this).text();
-    //     if (DisableClick($this)) return;
-    //     SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, TemplateCode, function (response) {
-    //         if (response.errcode == '0') {
-    //             LayerFun('successfullyModified');
-    //             ActiveClick($this, btnText);
-    //         }
-    //     }, function (response) {
-    //         ActiveClick($this, btnText);
-    //         LayerFun(response.errcode);
-    //         return;
-    //     });
-    // });
-
-    //Get the mailbox interface configuration information
-    // GetEmailInterface(token, function (response) {
-    //     if (response.errcode == '0') {
-    //         var data = response.row;
-    //         $('#email_Host').val(data.Host);
-    //         $('#email_username').val(data.Username);
-    //         $('#email_password').val(data.Password);
-    //         $('#email_address').val(data.address);
-    //         $('#email_name').val(data.name);
-    //     }
-    // }, function (response) {
-    //     LayerFun(response.errcode);
-    //     return;
-    // });
-
-    //Configure the mailbox interface
-    // $('.emailInterfaceBtn').click(function () {
-    //     var Host = $('#email_Host').val(), Username = $('#email_username').val(),
-    //         Password = $('#email_password').val(), address = $('#email_address').val(), name = $('#email_name').val();
-    //     var $this = $(this), btnText = $(this).text();
-    //     if (DisableClick($this)) return;
-    //     SetEmailInterface(token, Host, Username, Password, address, name, function (response) {
-    //         if (response.errcode == '0') {
-    //             LayerFun('successfullyModified');
-    //             ActiveClick($this, btnText);
-    //         }
-    //     }, function (response) {
-    //         ActiveClick($this, btnText);
-    //         LayerFun(response.errcode);
-    //         return;
-    //     });
-    // });
 
     //Get registration permission display
     function optionName(option_name, _switch) {
@@ -516,14 +452,14 @@ $(function () {
     });
 
     //get la_id
-    var la_id = "";
-    GetLaId(token, function (response) {
-        if (response.errcode == '0') {
-            la_id = response.la_id;
-        }
-    }, function (response) {
-        LayerFun(response.errcode);
-    });
+    // var la_id = "";
+    // GetLaId(token, function (response) {
+    //     if (response.errcode == '0') {
+    //         la_id = response.la_id;
+    //     }
+    // }, function (response) {
+    //     LayerFun(response.errcode);
+    // });
 
     //Upload image
     $('#uploadFile').on('change', function () {
@@ -534,8 +470,7 @@ $(function () {
         }
 
         var formData = new FormData($("#uploadForm")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", la_id);
+        formData.append("key_code", key_code);
         option_src = UpLoadImg(formData);
     });
 
