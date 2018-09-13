@@ -126,8 +126,8 @@ $(function () {
         $(".preloader-wrapper").addClass("active");
         var data = {"la_id": la_id, "type": type, "key_code": key_code};
         $.post(url, data, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             if (response.errcode == '0') {
-                $(".preloader-wrapper").removeClass("active");
                 LayerFun("submitSuccess");
                 if (type == '1') {
                     $('.noOpenFile').fadeOut();
@@ -142,7 +142,6 @@ $(function () {
                     $('.underReviewEmail').fadeIn();
                 }
             } else {
-                $(".preloader-wrapper").removeClass("active");
                 layer.msg(response.errmsg);
                 return;
             }
