@@ -272,8 +272,8 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            ActiveClick($this, btnText);
             ShowLoading("hide");
+            ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
     });
