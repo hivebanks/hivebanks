@@ -30,6 +30,7 @@ $key = Config::TOKEN_KEY;
 
 $la_id = check_token($token);
 $row = get_la_by_user($la_id);
+$row["key_code"]
 if ($row["key_code"] != $key_code) {
     if(!upd_la_admin_key_code($la_id,$key_code))
         exit_error("156","开通失败");
