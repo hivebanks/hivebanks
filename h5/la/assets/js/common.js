@@ -323,8 +323,8 @@ function SetSwitch(token, type, status, suc_func, error_func) {
 }
 
 //get la_id
-function GetLaId(token, suc_func, error_func) {
-    var api_url = 'get_la_admin_info.php',
+function GetKeyCode(token, suc_func, error_func) {
+    var api_url = 'get_key_code.php',
         post_data = {
             'token': token
         };
