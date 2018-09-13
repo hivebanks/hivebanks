@@ -26,12 +26,12 @@ function send_email_by_agent_service($email,$title,$body,$la_id){
     $output = curl_exec($ch);
     curl_close($ch);
 
-    print_r(777);
+//    print_r(777);
 
     var_dump($output);
     $output_array = json_decode($output,true);
-    print_r(888);
-    print_r($output_array);
-    print_r(999);
+//    print_r(888);
+//    print_r($output_array);
+//    print_r(999);
     return $output_array;
 }
