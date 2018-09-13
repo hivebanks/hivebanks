@@ -159,8 +159,9 @@ $encryption_code = $ba_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 
 require_once "db/la_admin.php";
-$la_id = get_la_admin_info()["id"];
-$output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+$key_code = get_la_admin_info()["key_code"];
+
+$output_array = send_email_by_agent_service($email,$title,$body,$key_code);
 
 if($output_array["errcode"] == "0"){
     $bind_email = ins_bind_ba_reg_bind_log($data_log_bind);

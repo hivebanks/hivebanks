@@ -215,7 +215,8 @@ function email_password($password,$email,$title = 'LA密码重置')
 
     $body = '您的新密码为：'.$password.'。请妥善保管！';
     require_once "../db/la_admin.php";
-    $la_id = get_la_admin_info()["id"];
-    $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+    $key_code = get_la_admin_info()["key_code"];
+
+    $output_array = send_email_by_agent_service($email,$title,$body,$key_code);
     return $output_array;
 }

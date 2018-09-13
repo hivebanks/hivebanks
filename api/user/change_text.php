@@ -110,8 +110,9 @@ if ($text_type == 'email') {
     $body .= urlencode($des->encrypt($encryption_code, $key));
 
     require_once "db/la_admin.php";
-    $la_id = get_la_admin_info()["id"];
-    $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+    $key_code = get_la_admin_info()["key_code"];
+
+    $output_array = send_email_by_agent_service($email,$title,$body,$key_code);
 
     if ($output_array["errcode"] == "0") {
         exit_ok('Please verify email as soon as possible!');

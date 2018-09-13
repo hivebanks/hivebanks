@@ -6,14 +6,14 @@
  * Time: 下午4:06
  */
 
-function send_email_by_agent_service($email,$title,$body,$la_id){
+function send_email_by_agent_service($email,$title,$body,$key_code){
 
     $url = "http://agent_service.fnying.com/email/send_email.php";
     $post_data = array();
     $post_data["email"] = $email;
     $post_data["title"] = $title;
     $post_data['body'] = $body;
-    $post_data["key_code"] = $la_id;
+    $post_data["key_code"] = $key_code;
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);

@@ -199,9 +199,9 @@ $body = $url . "?cfm_hash=";
 $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 require_once "db/la_admin.php";
-$la_id = get_la_admin_info()["id"];
+$key_code = get_la_admin_info()["key_code"];
 
-$output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+$output_array = send_email_by_agent_service($email,$title,$body,$key_code);
 
 //print_r($output_array);
 

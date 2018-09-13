@@ -6,12 +6,12 @@
  * Time: 下午4:06
  */
 
-function send_sms_by_agent_service($cellphone,$code,$la_id){
+function send_sms_by_agent_service($cellphone,$code,$key_code){
     $url = "http://agent_service.fnying.com/sms/sms_send.php";
     $post_data = array();
     $post_data["cellphone"] = $cellphone;
     $post_data["code"] = $code;
-    $post_data["la_id"] = $la_id;
+    $post_data["key_code"] = $key_code;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

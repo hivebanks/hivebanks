@@ -50,8 +50,8 @@ if($phone_code_last_time['limt_time'] > time())
 
 require_once "db/la_admin.php";
 require_once "../inc/common_agent_sms_service.php";
-$la_id = get_la_admin_info()["id"];
-$output_array = send_sms_by_agent_service($cellphone,$code,$la_id);
+$key_code = get_la_admin_info()["key_code"];
+$output_array = send_sms_by_agent_service($cellphone,$code,$key_code);
 // 验证发送短信(SendSms)接口
 if($output_array["errcode"] == "0"){
     $time_limit = time() + 60 ;
