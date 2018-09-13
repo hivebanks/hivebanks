@@ -37,7 +37,7 @@ if(!upd_la_admin_key_code($la_id,$key_code))
 $url = "http://agent_service.fnying.com/email/set_email_service.php";
 $post_data = array();
 $post_data["key_code"] = $key_code;
-$post_data["type"] = "email";
+
 
 $ch = curl_init();
 
@@ -48,8 +48,9 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 $output = curl_exec($ch);
 curl_close($ch);
 
-//    var_dump($output);
+var_dump($output);
 $output_array = json_decode($output,true);
+print_r($output_array);
 if($output_array["errcode"] == "0"){
 
     exit_ok();
