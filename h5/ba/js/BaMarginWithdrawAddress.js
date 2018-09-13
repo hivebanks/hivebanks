@@ -2,22 +2,8 @@ $(function () {
 //    //get token
     var token = GetCookie('ba_token');
     GetBaAccount();
-//
-//     GetImgCode();
-//     $('#phone_imgCode').click(function () {
-//         GetImgCode();
-//     });
-//     //Get phone verification code
-//     $('.phoneCodeBtn').click(function () {
-//         var bind_type = '5', $this = $(this), cfm_code = $('#phoneCfmCode').val();
-//         if(cfm_code <= 0){
-//             LayerFun('pleaseImgCode');
-//             return;
-//         }
-//         GetPhoneCodeFun(bind_type, $this, cfm_code);
-//     });
 
-//     //获取充值地址
+//     //get recharge address
     function GetWithdrawFun(){
         var li = '';
         GetMarginWithdrawAddress(token, function (response) {
@@ -25,11 +11,11 @@ $(function () {
                 var data = response.rows;
                 $.each(data, function (i, val) {
                     if(data[i].bind_flag == '1'){
-                        li+='<li class="flex center space-between"><span>'+ data[i].bind_info +'</span><span class="i18n font-size-14" name="examinationPassed">审核通过</span></li>'
+                        li+='<li class="flex center space-between"><span>'+ data[i].bind_info +'</span><span class="i18n font-size-14" name="examinationPassed"></span></li>'
                     }else if(data[i].bind_flag == '2'){
-                        li+='<li class="flex center space-between"><span>'+ data[i].bind_info +'</span><span class="i18n font-size-14 ty-color" name="auditFailed">审核未通过</span></li>'
+                        li+='<li class="flex center space-between"><span>'+ data[i].bind_info +'</span><span class="i18n font-size-14 ty-color" name="auditFailed"></span></li>'
                     }else {
-                        li+='<li class="flex center space-between"><span>'+ data[i].bind_info +'</span><span class="i18n font-size-14" name="underReview">审核中</span></li>'
+                        li+='<li class="flex center space-between"><span>'+ data[i].bind_info +'</span><span class="i18n font-size-14" name="underReview"></span></li>'
                     }
 
                 });
@@ -55,13 +41,16 @@ $(function () {
             LayerFun('fundPassNotEmpty');
             return;
         }
+        ShowLoading("show");
         AddMarginWithdrawAddress(token, bit_address, fun_pass, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 $('#withdrawAddress').val('');
                 $('#fundPassword').val('');
                 GetWithdrawFun();
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     })

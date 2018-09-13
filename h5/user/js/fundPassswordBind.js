@@ -48,32 +48,34 @@ $(function () {
             hash = hex_sha1($('#fundPassword').val()),
             password = $('#password').val(),
             pass_word_hash = hex_sha1(password);
-        if ($('#fundPassword').val() == '') {
+        if ($('#fundPassword').val().length <= 0) {
             LayerFun('funPassNotEmpty');
             return;
         }
 
-        if ($('#phone').val() == '') {
+        if ($('#phone').val().length <= 0) {
             LayerFun('phoneNotEmpty');
             return;
         }
 
-        if ($('#phoneCode').val() == '') {
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }
 
-        if (password == '') {
+        if (password.length <= 0) {
             LayerFun('passNotEmpty');
             return;
         }
         //hashFund password binding
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, function (response) {
             if (response.errcode == '0') {
-                LayerFun('bindSuccess');
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
+                LayerFun('bindSuccess');
                 if (wi_funPass !== 'wi_funPass') {
                     window.location.href = 'security.html';
                 } else {
@@ -81,9 +83,10 @@ $(function () {
                 }
             }
         }, function (response) {
+            ShowLoading("hide");
+            ActiveClick($this, btnText);
             GetImgCode();
             LayerFun(response.errcode);
-            ActiveClick($this, btnText);
         })
     })
 });

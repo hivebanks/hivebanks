@@ -96,15 +96,19 @@ $(function () {
             LayerFun('pleaseEnterNickname');
             return;
         }
-        $('#modifyName').modal('hide');
+        ShowLoading("show");
         ModifyNickName(token, ba_account, function (response) {
             if (response.errcode == '0') {
+                $('#modifyName').modal('hide');
+                ShowLoading("hide");
                 LayerFun('successfullyModified');
                 $('.ba_account').text(response.ba_account);
                 SetCookie('ba_account', response.ba_account);
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
+            $('#modifyName').modal('hide');
             LayerFun(response.errcode);
             return;
         })

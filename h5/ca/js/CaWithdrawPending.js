@@ -62,22 +62,25 @@ $(function () {
         _this = $(this);
     });
 
-    //再次确认
+    //again confirm
     $('.againConfirmBtn').click(function () {
         var type = '1';
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         WithdrawConfirm(token, qa_id, type, transfer_tx_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#confirmModal').modal('hide');
                 _this.closest('.withdrawPendingList').remove();
                 $('.lock_amount').text(response.lock_amount);
-                LayerFun('suc_processing');
+                LayerFun("successfulProcessing");
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
-            LayerFun(response.errcode);
+            LayerFun("processingFailure");
             return;
         })
     })

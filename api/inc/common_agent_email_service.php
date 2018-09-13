@@ -7,12 +7,13 @@
  */
 
 function send_email_by_agent_service($email,$title,$body,$la_id){
+
     $url = "http://agent_service.fnying.com/email/send_email.php";
     $post_data = array();
     $post_data["email"] = $email;
     $post_data["title"] = $title;
     $post_data['body'] = $body;
-    $post_data["la_id"] = $la_id;
+    $post_data["key_code"] = $la_id;
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -21,7 +22,13 @@ function send_email_by_agent_service($email,$title,$body,$la_id){
     curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
     $output = curl_exec($ch);
     curl_close($ch);
-    $output_array = json_decode($output, true);
+
+
+
+//    var_dump($output);
+    $output_array = json_decode($output,true);
+
+//    print_r($output_array);
 
     return $output_array;
 }

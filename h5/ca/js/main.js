@@ -231,6 +231,11 @@ function LayerFun(type) {
     execI18n();
 }
 
+//loading spin
+var div = $("<div id='mySpin'></div>");
+var spinLink = $("<link rel='stylesheet' href='../assets/css/spin.css'>");
+$("head").append(spinLink);
+$("body").append(div);
 var opts = {
     lines: 8, // The number of lines to draw
     length: 10, // The length of each line
@@ -262,5 +267,4 @@ function ShowLoading(type) {
     if(type == "hide"){
         spinner.spin();
     }
-
 }

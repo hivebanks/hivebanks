@@ -33,13 +33,15 @@ $(function () {
             LayerFun('pleaseEnterPassword');
             return;
         }
-
+        ShowLoading("show");
         AddBank(token, cash_channel, cash_type, cash_address, name, idNum, pass_word_hash, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 LayerFun('addBankSuccessfully');
                 window.location.href = 'manageBankList.html';
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     })

@@ -29,23 +29,26 @@ $(function () {
             LayerFun('phoneNotEmpty');
             return;
         }
-        if ($('#phoneCode').val() == '') {
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }
-        if ($('#password').val() == '') {
+        if ($('#password').val().length <= 0) {
             LayerFun('passwordNotEmpty');
             return;
         }
         var $this = $(this).text(), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         TextModify(token, text_type, text, text_hash, pass_word_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun('modifySuccess');
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             GetImgCode();
             LayerFun(response.errcode);

@@ -11,7 +11,7 @@ $(function () {
             if (response.errcode == '0') {
                 var data = response.rows;
                 id = response.security_level.ca_id;
-                //count_error==0审核中 1拒绝
+                //count_error==0review 1refuse
                 $.each(data, function (i, val) {
 
                     //bind name
@@ -123,13 +123,20 @@ $(function () {
             LayerFun('pleaseEnterName');
             return;
         }
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
+                ActiveClick($this, btnText);
                 $('#name').val(' ');
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ShowLoading("hide");
+            ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
     });
@@ -153,18 +160,23 @@ $(function () {
             LayerFun('pleaseEnterIdNumber');
             return;
         }
-
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
+                ActiveClick($this, btnText);
                 $('#idNum').val(' ');
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ShowLoading("hide");
+            ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
     });
-
 
     //show ID upload binding
     $('.idPhotoBindBtn').click(function () {
@@ -179,24 +191,6 @@ $(function () {
 
         $('.idPhotoFormBox').fadeToggle('fast');
     });
-
-    //ID upload binding
-    //Get configuration file
-    // var url = getRootPath();
-    // var config_api_url = '';
-    // $.ajax({
-    //     url: url + "/h5/assets/json/config_url.json",
-    //     async: false,
-    //     type: "GET",
-    //     dataType: "json",
-    //     success: function (data) {
-    //         config_api_url = data.api_url;
-    //         config_h5_url = data.h5_url;
-    //     },
-    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
-    //
-    //     }
-    // });
 
     //Return image information
     function UpLoadImg(formData) {
@@ -240,7 +234,7 @@ $(function () {
     $('#file0').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
+            // Modify the address attribute of the picture here
             $("#idPositive").attr("src", objUrl);
         }
 
@@ -254,7 +248,7 @@ $(function () {
     $('#file1').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
         if (objUrl) {
-            // 在这里修改图片的地址属性
+            // Modify the address attribute of the picture here
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
@@ -269,12 +263,19 @@ $(function () {
             file_url = src1 + ',' + src2;
 
         //File binding
+        var $this = $(this), btnText = $(this).text();
+        if(DisableClick($this)) return;
+        ShowLoading("show");
         FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
+                ActiveClick($this, btnText);
+                ShowLoading("hide");
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ActiveClick($this, btnText);
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     });

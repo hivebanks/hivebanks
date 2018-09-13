@@ -50,13 +50,16 @@ $(function () {
         var type = '1', qa_id = $(this).parents('.marginRechargeItem').find('.qa_id').text();
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         MarginRechargeConfirm(token, type, qa_id, function (response) {
             if(response.errcode == '0'){
-                LayerFun("suc_processing");
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
+                LayerFun("suc_processing");
                 $this.closest('.marginRechargeItem').remove();
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun("err_processing");
         })

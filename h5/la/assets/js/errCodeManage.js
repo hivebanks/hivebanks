@@ -2,7 +2,7 @@ $(function () {
     //get token
     var token = GetCookie('la_token');
 
-    //获取错误码列表
+    //error code list
     var tr = '';
     GetErrorList(token, function (response) {
         if(response.errcode == '0'){
@@ -34,7 +34,7 @@ $(function () {
         return;
     });
 
-   //编辑错误信息
+   //edit error code
    $(document).on('click', '.editTableText', function () {
        $(this).parents('.errorItem').siblings().find('.errorMsgBox').addClass('none');
        $(this).siblings('.cancelEdit').fadeIn('fast');
@@ -43,7 +43,7 @@ $(function () {
        $(this).parents('.errorItem').find('.errorMsgInput').val($(this).parents('.errorItem').find('.errorMsg').text());
    });
 
-   //确认修改错误信息
+   //confirm modify error information
     $(document).on('click', '.confirmModifyErrorMsg', function () {
        var code_key = $(this).parents('.errorItem').find('.code_key').text(),
         code_value = $(this).prev('.errorMsgInput').val(), _this = $(this);
@@ -63,7 +63,7 @@ $(function () {
 
     });
 
-    //取消修改
+    //cancel modify
     $(document).on('click', '.cancelEdit', function () {
         $(this).fadeOut('fast');
         $(this).parents('.errorItem').find('.errorMsg').fadeIn('fast');

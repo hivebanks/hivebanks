@@ -10,3 +10,11 @@ function get_la_by_user($id){
     $db->query($sql);
     return $count = $db->affectedRows();
 }
+
+function upd_la_admin_key_code($la_id,$key_code) {
+    $db = new DB_COM();
+    $sql = "UPDATE la_admin SET key_code = '{$key_code}' WHERE la_id = '{$la_id}'";
+    $db->query($sql);
+    $count = $db->affectedRows($sql);
+    return $count;
+}

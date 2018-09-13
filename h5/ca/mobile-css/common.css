@@ -344,6 +344,13 @@ textarea::-ms-input-placeholder
 .navbar-brand>img{
     height: unset;
 }
+.container>.navbar-header{
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+.navbar-toggle{
+    margin-right: 0;
+}
 .personal{
     position: relative;
 }

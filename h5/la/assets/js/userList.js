@@ -2,7 +2,7 @@ $(function () {
     //get token
     var token = GetCookie('la_token');
 
-    //获取user列表
+    //get user list
     var api_url = 'user_list.php', limit = 10, offset = 0, n = 0;
     GetUserList(token, api_url, limit, offset, function (response) {
         if(response.errcode == '0'){
@@ -29,7 +29,7 @@ $(function () {
         LayerFun(response.errcode);
     });
 
-    //跳转用户详情信息
+    //Jump user details
     $(document).on('click', '.us_id', function () {
         var us_id = $(this).text();
         window.location.href = 'userInfo.html?us_id=' + us_id;

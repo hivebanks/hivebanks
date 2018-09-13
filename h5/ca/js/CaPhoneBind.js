@@ -25,28 +25,35 @@ $(function () {
             text = country_code + "-" + phone,
             text_hash = $('#phoneCode').val();
 
-        if (text == '') {
+        if (phone.length <= 0) {
             LayerFun('phoneNotEmpty');
             return;
         }
 
-        if ($('.phoneCode').val() == '') {
+        if ($('#phoneCfmCode').val().length <= 0) {
+            LayerFun('codeNotEmpty');
+            return;
+        }
+
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }
 
         var $this = $(this);
         if (DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
-            ActiveClick($this, 'Enable');
             if (response.errcode == '0') {
+                ShowLoading("hide");
+                ActiveClick($this, 'Enable');
                 $('#phone').val('');
                 $('#phoneCode').val('');
-                // $('#password').val('');
                 LayerFun('bindSuccess');
                 window.location.href = 'CaSecurity.html';
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, 'Enable');
             if (response.errcode == '114') {
                 window.location.href = 'login.html';

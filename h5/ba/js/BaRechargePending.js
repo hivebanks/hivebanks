@@ -16,7 +16,7 @@ $(function () {
         return;
     });
     //Get a list of user refill pending orders
-    var api_url = 'log_us_recharge.php', type = '1', tr = '', bit_address = [], tx_hash = [];
+    var api_url = 'log_us_recharge.php', type = '1', tr = '';
     RechargeWithdrawCodeQuery(token, api_url, type, function (response) {
         if (response.errcode == '0') {
             var data = response.rows;
@@ -58,8 +58,10 @@ $(function () {
     $('.againConfirmBtn').click(function () {
         var type = '1', $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         RechargeConfirm(token, qa_id, type, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#confirmModal').modal('hide');
                 _this.closest('.rechargePendingList').remove();
@@ -68,6 +70,7 @@ $(function () {
                 return;
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

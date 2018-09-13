@@ -104,7 +104,7 @@ $(function () {
             $('.emailAgainPassword_tips').fadeIn();
             return;
         }
-        if(pass_word != againEmailPassword){
+        if (pass_word != againEmailPassword) {
             LayerFun('TwoPassword');
             $('.emailSamePassword_tips').fadeIn();
             return;
@@ -257,7 +257,7 @@ $(function () {
             $('.phoneCode_tips').fadeIn();
             return;
         }
-        if(pass_word != again_pass_word){
+        if (pass_word != again_pass_word) {
             LayerFun('TwoPassword');
             $('.phoneSamePassword_tips').fadeIn();
             return;
@@ -281,7 +281,7 @@ $(function () {
             }
         }, function (response) {
             ActiveClick($this, btnText);
-            if(response.errcode == '100'){
+            if (response.errcode == '100') {
                 $('.phoneErrorTips').fadeIn('fast');
             }
             if (response.errcode == 105) {

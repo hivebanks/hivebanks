@@ -18,7 +18,7 @@ $(function () {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
                     bind_name = "<td><span class='bind_name i18n' name='idNum'>" + data[i].bind_name + "</span></td>";
                     bind_info = "<td><a class='bind_info'>" + data[i].bind_info + "</a></td>"
-                }else if (data[i].bind_type == 'text' && data[i].bind_name == 'name') {
+                } else if (data[i].bind_type == 'text' && data[i].bind_name == 'name') {
                     bind_type = "<td><span class='i18n' name='textBind'></span></td>";
                     bind_name = "<td><span class='bind_name i18n' name='name'>" + data[i].bind_name + "</span></td>";
                     bind_info = "<td><a class='bind_info'>" + data[i].bind_info + "</a></td>"
@@ -44,21 +44,26 @@ $(function () {
             GetDataEmpty('baKyc', '5');
         }
         LayerFun(response.errcode);
+        if(response.errcode == "114"){
+            DelCookie("la_token");
+            window.location.href = "login.html";
+        }
         return;
     });
 
     //Confirm the approval
     $(document).on('click', '.passBtn', function () {
-        var _this = $(this),
-            log_id = $(this).parents('.baKycItem').find('.log_id').text();
-
+        var _this = $(this), log_id = $(this).parents('.baKycItem').find('.log_id').text();
+        $(".preloader-wrapper").addClass("active");
         ConfirmKycBa(token, log_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.baKycItem').remove();
                 LayerFun('successfulProcessing');
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;
@@ -69,13 +74,16 @@ $(function () {
     $(document).on('click', '.refuseBtn', function () {
         var _this = $(this);
         var log_id = $(this).parents('.baKycItem').find('.log_id').text();
+        $(".preloader-wrapper").addClass("active");
         RefuseKycBa(token, log_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 _this.closest('.baKycItem').remove();
                 LayerFun('successfulProcessing');
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;

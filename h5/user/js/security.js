@@ -11,7 +11,7 @@ $(function () {
             // Security Level
             $.each(data, function (i, val) {
                 //Whether the phone is bound
-                if(data[i].bind_name == 'cellphone' && data[i].bind_flag == '1'){
+                if (data[i].bind_name == 'cellphone' && data[i].bind_flag == '1') {
                     cellphone = 'cellphone';
                     $('.phoneTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.phoneBind').fadeOut('fast');
@@ -20,7 +20,7 @@ $(function () {
                 }
 
                 //Whether the email is bound
-                if(data[i].bind_name == 'email' && data[i].bind_flag == '1'){
+                if (data[i].bind_name == 'email' && data[i].bind_flag == '1') {
                     $('.emailTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.emailBind').fadeOut('fast');
                     $('.emailModify').fadeIn('fast');
@@ -28,7 +28,7 @@ $(function () {
                 }
 
                 //Whether google is certified
-                if(data[i].bind_name == 'GoogleAuthenticator' && data[i].bind_flag == '1'){
+                if (data[i].bind_name == 'GoogleAuthenticator' && data[i].bind_flag == '1') {
                     $('.googleTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.googleBind').fadeOut('fast');
                     // $('.fileModify').fadeIn('fast');
@@ -36,7 +36,7 @@ $(function () {
                 }
 
                 //Whether the password hash is bound
-                if(data[i].bind_name == 'pass_hash' && data[i].bind_flag == '1'){
+                if (data[i].bind_name == 'pass_hash' && data[i].bind_flag == '1') {
                     $('.fundPasswordTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.fundPasswordBind').fadeOut('fast');
                     $('.fundPasswordModify').fadeIn('fast');
@@ -44,7 +44,7 @@ $(function () {
                 }
 
                 //Whether identity authentication is bound
-                if(data[i].bind_name == 'idPhoto' && data[i].bind_flag == '1'){
+                if (data[i].bind_name == 'idPhoto' && data[i].bind_flag == '1') {
                     $('.authenticationTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.authenticationBind').fadeOut('fast');
                     // $('.authenticationModify').fadeIn('fast');
@@ -54,63 +54,65 @@ $(function () {
         }
     }, function (response) {
         layer.msg(response.errcode);
-        if(response.errcode == '114'){
+        if (response.errcode == '114') {
             window.location.href = 'login.html';
         }
     });
 
     //return fundPasswordBind
     $('.fundPasswordBind').click(function () {
-       if(cellphone != 'cellphone') {
-           $('#goBindCellPhone').modal('show');
-           return;
-       }else {
-           window.location.href = 'fundPasswordBind.html';
-       }
+        if (cellphone != 'cellphone') {
+            $('#goBindCellPhone').modal('show');
+            return;
+        } else {
+            window.location.href = 'fundPasswordBind.html';
+        }
     });
 
     //return fundPasswordModify
     $('.fundPasswordModify').click(function () {
-       if(cellphone != 'cellphone') {
-           $('#goBindCellPhone').modal('show');
-           return;
-       }else {
-           window.location.href = 'fundPasswordModify.html';
-       }
+        if (cellphone != 'cellphone') {
+            $('#goBindCellPhone').modal('show');
+            return;
+        } else {
+            window.location.href = 'fundPasswordModify.html';
+        }
     });
 
     // Login record query
     var login_api_url = 'log_login.php', limit = 10, offset = 0, n = 0;
 
-    function GetLoginCode(token, limit, offset, login_api_url){
+    function GetLoginCode(token, limit, offset, login_api_url) {
         var tr = '', pageCount = '';
         AllRecord(token, limit, offset, login_api_url, function (response) {
             if (response.errcode == '0') {
                 var data = response.rows;
-                if(data.length <= 0){
+                if (data.length <= 0) {
                     $('.eg').hide();
                 }
                 pageCount = Math.ceil(response.total / limit);
                 $('.totalPage').text(pageCount);
-                for(var i=0; i<data.length; i++){
-                    tr+='<tr>' +
-                        '<td class="i18n" name="'+ data[i].lgn_type +'">'+ data[i].lgn_type.substr(0, 20) + '...' +'</td>' +
-                        '<td>'+ data[i].ctime +'</td>' +
-                        '<td>'+ data[i].us_ip +'</td>' +
-                        '<td>'+ data[i].ip_area +'</td>' +
+                for (var i = 0; i < data.length; i++) {
+                    tr += '<tr>' +
+                        '<td class="i18n" name="' + data[i].lgn_type + '">' + data[i].lgn_type.substr(0, 20) + '...' + '</td>' +
+                        '<td>' + data[i].ctime + '</td>' +
+                        '<td>' + data[i].us_ip + '</td>' +
+                        '<td>' + data[i].ip_area + '</td>' +
                         '</tr>';
-                };
+                }
+
                 $('#loginCode').html(tr);
                 execI18n();
-                if(n==0){
+                if (n == 0) {
                     Page(pageCount);
                 }
                 n++;
-            };
+            }
+
         }, function (response) {
             execI18n();
             layer.msg(response.errcode);
-            if(response.errcode == '114'){
+            if (response.errcode == '114') {
                 window.location.href = 'login.html';
             }
         });
@@ -118,7 +120,7 @@ $(function () {
     GetLoginCode(token, limit, offset, login_api_url);
 
 //    Pagination
-    function Page(pageCount){
+    function Page(pageCount) {
         $('.login_log_code').pagination({
             pageCount: pageCount,
             callback: function (api) {

@@ -42,13 +42,16 @@ $(function () {
     $(document).on('click', '.registerSucBtn', function () {
         var api_url = 'kyc_ba_reg_confirm.php', _this = $(this);
         var bind_id = $(this).parent().children('.bind_id').text();
+        $(".preloader-wrapper").addClass("active");
         RegisterPass(api_url, token, bind_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 LayerFun('successfulProcessing');
                 _this.closest('.registerItem').remove();
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;
@@ -59,13 +62,16 @@ $(function () {
     $(document).on('click', '.registerRefBtn', function () {
         var api_url = 'kyc_ba_reg_refuse.php', _this = $(this);
         var bind_id = $(this).parent().children('.bind_id').text();
+        $(".preloader-wrapper").addClass("active");
         RegisterRef(api_url, token, bind_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 LayerFun('successfulProcessing');
                 _this.closest('.registerItem').remove();
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun('processingFailure');
             LayerFun(response.errcode);
             return;

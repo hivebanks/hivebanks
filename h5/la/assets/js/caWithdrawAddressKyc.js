@@ -44,13 +44,16 @@ $(function () {
         var ca_id = $(this).parents('.withdrawAddressItem').find('.ca_id').text();
         var bind_id = $(this).parents('.withdrawAddressItem').find('.bind_id').text();
         var api_url = 'kyc_la_ca_address_confirm.php';
+        $(".preloader-wrapper").addClass("active");
         ConfirmCaWithdrawAddress(api_url, token, ca_id, bind_id, function (response) {
             if (response.errcode == '0') {
+                $(".preloader-wrapper").removeClass("active");
                 LayerFun('successfulProcessing');
                 _this.closest('.withdrawAddressItem').remove();
                 return;
             }
         }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
             LayerFun(response.errcode);
             return;
         })

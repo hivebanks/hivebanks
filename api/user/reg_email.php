@@ -71,6 +71,7 @@ GET参数
 
 */
 
+
 php_begin();
 $args = array('email', 'pass_word_hash', 'pass_word');
 chk_empty_args('GET', $args);
@@ -199,7 +200,10 @@ $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .= urlencode($des->encrypt($encryption_code, $key));
 require_once "db/la_admin.php";
 $la_id = get_la_admin_info()["id"];
+
 $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+
+//print_r($output_array);
 
 if($output_array["errcode"] == "0"){
     $bind_email = ins_bind_user_reg_bind_log($data_log_bind);

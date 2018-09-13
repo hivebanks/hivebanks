@@ -101,7 +101,6 @@ $(function () {
             LayerFun(response.errcode);
             return;
         })
-
     });
 
     //Click to lock the amount of cash

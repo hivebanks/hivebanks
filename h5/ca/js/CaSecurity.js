@@ -1,5 +1,5 @@
 $(function () {
-    // 获取CA绑定信息
+    // get ca bind information
     var token = GetCookie('ca_token'), cellphone = '';
     GetCaAccount();
     GetCaBindInformation(token, function (response) {

@@ -74,7 +74,7 @@ $(function () {
                 ActiveClick($this, btnText);
                 SetCookie('bit_address',response.bit_address);
                 $('#lockRecharge').modal('show');
-                readingTime(5);
+                readingTime(10);
             }
         }, function(response){
             ActiveClick($this, btnText);
@@ -86,7 +86,7 @@ $(function () {
         window.location.href = 'BaRechargeAddress.html?bit_type='+bit_type;
     });
 
-    //阅读规则时间倒计时
+    //Reading rule time countdown
     function readingTime(time) {
         var timer = null;
         timer = setInterval(function () {

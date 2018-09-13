@@ -63,15 +63,19 @@ $(function () {
         var bit_address = $('.addressInput').val().trim(), is_void = '1';
         if (bit_address.length <= 0) {
             LayerFun('pleaseEnterAddress');
+            return;
         }
+        ShowLoading("show");
         AddAddress(token, bit_address, is_void, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 $('.addressInput').val('');
                 GetAddress(token, limit, offset);
                 layer.msg('<p class="addAddressSuccess i18n" name="addAddressSuccess">addAddressSuccess</p>');
                 execI18n();
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
             return;
         });

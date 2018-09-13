@@ -18,7 +18,7 @@ $(function () {
         return fmt;
     };
 
-    //获取资产平衡报表
+    //Get Asset Balance Report
     function GetAssetsReportFun() {
         var sum_la_base_amount = '', sum_us_base_amount = '', sum_ba_base_amount = '', sum_ca_base_amount = '',
             ba_register_count, ca_register_count, us_register_count, tr = '';

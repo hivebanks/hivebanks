@@ -13,7 +13,7 @@ $(function () {
     $('.name').text(decodeURIComponent(name).substring(start + 5, end));
     $('.rechargeTypeImg').attr("src", "img/" + ca_channel.toLowerCase() + ".png");
 
-    //复制充值地址
+    //copy recharge address
     $('.copy_address').click(function () {
         new ClipboardJS('.copy_address');
         LayerFun('copySuccess');

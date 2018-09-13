@@ -46,12 +46,15 @@ $(function () {
             LayerFun('addressNotEmpty');
             return;
         }
+        ShowLoading("show");
         AddMarginRechargeAddress(token, bit_address, function (response) {
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 $('.rechargeMarginAddress').val('');
                 GetRechargeFun();
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
         })
     })
