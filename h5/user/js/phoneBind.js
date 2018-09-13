@@ -33,7 +33,7 @@ $(function () {
             return;
         }
 
-        if ($('.phoneCode').val().length <= 0) {
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }

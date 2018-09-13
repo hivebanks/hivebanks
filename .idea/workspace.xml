@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/user/js/recharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/recharge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/register.js" afterDir="false" />
-    </list>
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +35,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
@@ -50,8 +47,26 @@
       <file leaf-file-name="recharge.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="190" column="58" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="58" />
+            <state relative-caret-position="455">
+              <caret line="192" column="46" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phoneBind.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/phoneBind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/account.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="243" column="25" selection-start-line="243" selection-start-column="25" selection-end-line="243" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -116,6 +131,7 @@
         <option value="$PROJECT_DIR$/h5/ba/BaRecharge.html" />
         <option value="$PROJECT_DIR$/h5/user/js/register.js" />
         <option value="$PROJECT_DIR$/h5/user/js/recharge.js" />
+        <option value="$PROJECT_DIR$/h5/user/recharge.html" />
       </list>
     </option>
   </component>
@@ -262,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37828000" />
+    <option name="totallyTimeSpent" value="38186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -308,15 +324,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/plugin/bind/GoogleAuthenticator/GoogleAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/bit_address_add.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/bnd_file.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/user/bnd_Google.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -603,17 +610,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="190" column="58" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="117" column="47" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/addBankAddress.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="243" column="25" selection-start-line="243" selection-start-column="25" selection-end-line="243" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="192" column="46" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/phoneBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="25" />
         </state>
       </provider>
     </entry>
