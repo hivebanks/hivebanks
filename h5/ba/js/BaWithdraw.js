@@ -4,6 +4,14 @@ $(function () {
     var us_level = GetUsCookie('us_level');
     GetUsAccount();
 
+    //get img code
+    GetImgCode();
+
+    //Switch graphic verification code
+    $('#phone_imgCode').click(function () {
+        GetImgCode();
+    });
+
     //Get parameters
     var bit_type = GetUsCookie('wi_bit_type');
 
@@ -168,16 +176,42 @@ $(function () {
     });
 
     //Get phone verification code
+    function setTime($this) {
+        var countdown = 60;
+        $('.sixty').text(countdown).fadeIn('fast').css('color', '#fff');
+        $('.getCodeText').attr('name', 'sixty');
+        $this.attr("disabled", true);
+        execI18n();
+        var timer = null;
+        timer = setInterval(function () {
+            if (countdown != 0) {
+                countdown--;
+                $('.sixty').text(countdown);
+            } else {
+                clearInterval(timer);
+                $this.attr("disabled", false);
+                $('.sixty').fadeOut('fast');
+                $('.getCodeText').attr('name', 'getCode');
+                execI18n();
+                return;
+            }
+        }, 1000);
+    }
+
     $('.phoneCodeBtn').click(function () {
-        var bind_type = '5', phoneArr = phone_bind_info.split('-'),
+        var $this = $(this), cfm_code = $("#addressPhoneCode").val(), bind_type = '5', phoneArr = phone_bind_info.split('-'),
             country_code = phoneArr[0], cellphone = phoneArr[1];
-        BaGetPhoneCode(cellphone, country_code, bind_type, function (response) {
+        setTime($this);
+        ShowLoading("show");
+        GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
             if (response.errcode == '0') {
-                LayerFun('queryCodeSuccess');
+                ShowLoading("hide");
+                LayerFun('sendSuc');
                 return;
             }
         }, function (response) {
-            LayerFun('queryCodeFail');
+            ShowLoading("hide");
+            GetImgCode();
             LayerFun(response.errcode);
             return;
         });
@@ -186,13 +220,16 @@ $(function () {
     $('.enablePhoneBtn').click(function () {
         var sms_code = $('#smsCode').val(), phone_info = phone_bind_info.split('-'),
             country_code = phone_info[0], cellphone = phone_info[1];
+        ShowLoading("show");
         CfmPhone(sms_code, country_code, cellphone, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 LayerFun('verifySuccess');
                 $('#smsPhoneCode').modal('hide');
                 $('#addAddress').modal('show');
             }
         }, function (response) {
+            ShowLoading("hide");
             LayerFun(response.errcode);
             return;
         })

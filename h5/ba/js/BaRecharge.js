@@ -23,14 +23,18 @@ $(function () {
             max_amount = response.max_amount;
             $('.recharge_max_amount').text(max_amount);
             $('.recharge_min_amount').text(min_amount);
-            $('.recharge_ctime').text(response.set_time);
             $('.bit_amount').val(response.min_amount);
             if(base_rate <= 0){
                 $('.base_amount').val(0);
             }else {
                 $('.base_amount').val((response.min_amount) / base_rate);
             }
-
+            if(response.set_time == "无限制"){
+                $(".recharge_ctime").addClass("i18n").attr("name", "unlimited");
+                execI18n();
+            }else {
+                $('.recharge_ctime').text(response.set_time);
+            }
         }
 
     }, function (response) {
@@ -69,14 +73,17 @@ $(function () {
         //Lock judgment
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, function (response){//锁定
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 SetCookie('bit_address',response.bit_address);
                 $('#lockRecharge').modal('show');
                 readingTime(10);
             }
         }, function(response){
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;

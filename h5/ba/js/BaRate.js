@@ -11,7 +11,10 @@ $(function () {
         $('.base_amount').text(response.base_amount);
         $('.bit_type').text(response.bit_type);
         if (benchmark_type == response.bit_type) {
-            $('#rate .container').remove();
+            $('.baseBaNone').remove();
+            $('.baseAgentsRow').removeClass("none");
+        }else {
+            $('.baseAgentsRow').remove();
         }
     }, function (response) {
         if (response.errcode == '114') {

@@ -115,6 +115,7 @@ $(function () {
                     '<td><span>' + data[i].tx_time + '</span></td>' +
                     '</tr>'
             });
+            $("#baRechargeCodeTable").html(tr);
         }
     }, function (response) {
         GetDataFail('baRechargeCodeTable', '4');
