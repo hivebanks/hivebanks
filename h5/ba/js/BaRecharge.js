@@ -73,14 +73,17 @@ $(function () {
         //Lock judgment
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
+        ShowLoading("show");
         LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, function (response){//锁定
             if(response.errcode == '0'){
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 SetCookie('bit_address',response.bit_address);
                 $('#lockRecharge').modal('show');
                 readingTime(10);
             }
         }, function(response){
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;
