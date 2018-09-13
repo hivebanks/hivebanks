@@ -13,11 +13,9 @@ function GetCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
     if (arr == null && name == "user_token") {
-        DelCookie('user_token');
         window.location.href = '../user/login.html';
         return;
     }else {
-        DelCookie('ba_token');
         window.location.href = 'BaLogin.html';
         return;
     }

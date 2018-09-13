@@ -23,11 +23,9 @@ function GetUsCookie(name) {
     if (arr != null) return unescape(arr[2]);
 
     if (arr == null && name == "user_token") {
-        DelCookie('user_token');
         window.location.href = '../user/login.html';
         return;
     }else {
-        DelCookie('ca_token');
         window.location.href = 'CaLogin.html';
     }
 }
