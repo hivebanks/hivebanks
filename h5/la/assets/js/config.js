@@ -128,7 +128,7 @@ $(function () {
             url = "http://agent_service.fnying.com/email/set_email_service.php"
         }
         $(".preloader-wrapper").addClass("active");
-        var data = {"la_id": la_id, "type": type, "key_code": key_code};
+        var data = {"token": token, "key_code": key_code};
         $.post(url, data, function (response) {
             $(".preloader-wrapper").removeClass("active");
             if (response.errcode == '0') {

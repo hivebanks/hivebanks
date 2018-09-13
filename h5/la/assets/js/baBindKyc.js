@@ -44,6 +44,10 @@ $(function () {
             GetDataEmpty('baKyc', '5');
         }
         LayerFun(response.errcode);
+        if(response.errcode == "114"){
+            DelCookie("la_token");
+            window.location.href = "login.html";
+        }
         return;
     });
 
