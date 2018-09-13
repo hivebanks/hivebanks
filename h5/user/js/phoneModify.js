@@ -42,6 +42,7 @@ $(function () {
             if (response.errcode == '0') {
                 ShowLoading("hide");
                 LayerFun('modifySuccess');
+                window.location.href = "security.html";
                 return;
             }
         }, function (response) {
