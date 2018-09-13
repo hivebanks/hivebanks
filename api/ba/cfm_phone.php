@@ -22,7 +22,6 @@ GET参数
 */
 
 php_begin();
-die(1);
 $args = array('country_code', 'sms_code', 'cellphone');
 chk_empty_args('GET', $args);
 
@@ -59,7 +58,6 @@ if(!$rec){
 $rec = get_ba_log_bind_by_variable($variable,$cellphone_num);
 // 基本信息参数整理
 //判断信息是否在规定时间内
-var_dump((strtotime($rec['ctime']) + 5*60));var_dump($rec['limt_time']);die;
 if((strtotime($rec['ctime']) + 5*60) < $now_time){
     exit_error('111','信息过期，请重试！');
 }
