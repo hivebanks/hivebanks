@@ -203,19 +203,19 @@ $la_id = get_la_admin_info()["id"];
 
 $output_array = send_email_by_agent_service($email,$title,$body,$la_id);
 
-print_r($output_array);
+//print_r($output_array);
 
-//if($output_array["errcode"] == "0"){
-//    $bind_email = ins_bind_user_reg_bind_log($data_log_bind);
-//    $ret = ins_base_user_reg_base_info($data_base);
-//    $bind_pass = ins_bind_user_reg_bind_info($data_bind_pass);
-//    if ($bind_email && $ret && $bind_pass) {
-//        exit_ok('Please verify email as soon as possible!');
-//    } else {
-//        exit_error('101', 'Create failed! Please try again!');
-//    }
-//
-//
-//}else{
-//    exit_error('124', '邮件发送失败请稍后重试！');
-//}
+if($output_array["errcode"] == "0"){
+    $bind_email = ins_bind_user_reg_bind_log($data_log_bind);
+    $ret = ins_base_user_reg_base_info($data_base);
+    $bind_pass = ins_bind_user_reg_bind_info($data_bind_pass);
+    if ($bind_email && $ret && $bind_pass) {
+        exit_ok('Please verify email as soon as possible!');
+    } else {
+        exit_error('101', 'Create failed! Please try again!');
+    }
+
+
+}else{
+    exit_error('124', '邮件发送失败请稍后重试！');
+}
