@@ -203,6 +203,36 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
+// Call the API LA configuration function
+function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
+    var api_site = config_api_url + '/api/la/admin/configure/';
+    post_data = post_data || {};
+    suc_func = suc_func || function () {
+    };
+    error_func = error_func || function () {
+    };
+    $.ajax({
+        url: api_site + api_url,
+        dataType: "jsonp",
+        data: post_data,
+        success: function (response) {
+            // API return failed
+            if (response.errcode != 0) {
+                error_func(response);
+            } else {
+                // Successfully process data
+                suc_func(response);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            // API error exception
+            var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
+            // Exception handling
+            error_func(response);
+        }
+    });
+}
+
 //General ba recharge margin la function
 function CallLaBase(api_url, post_data, suc_func, error_func) {
     var api_site = config_api_url + '/api/base/';
@@ -853,6 +883,15 @@ function CfmPhone(sms_code, country_code, cellphone, suc_func, error_func) {
             'cellphone': cellphone
         };
     CallUserApi(api_url, post_data, suc_func, error_func);
+}
+
+//get key code
+function GetKeyCode(token, suc_func, error_func) {
+    var api_url = 'get_key_code.php',
+        post_data = {
+            'token': token
+        };
+    CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
 /**

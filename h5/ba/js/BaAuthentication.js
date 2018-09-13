@@ -191,24 +191,6 @@ $(function () {
         $('.idPhotoFormBox').fadeToggle('fast');
     });
 
-    //ID upload binding
-    //Get configuration file
-    var url = getRootPath();
-    var config_api_url = '';
-    $.ajax({
-        url: url + "/h5/assets/json/config_url.json",
-        async: false,
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            config_api_url = data.api_url;
-            config_h5_url = data.h5_url;
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-
-        }
-    });
-
     //Return image information
     function UpLoadImg(formData) {
         var src = '';
@@ -233,11 +215,11 @@ $(function () {
         return src;
     }
 
-    //get la_id
-    var la_id = "";
-    GetLaId(token, function (response) {
+    //get key_code
+    var key_code = "";
+    GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
-            la_id = response.la_id;
+            key_code = response.key_code;
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -255,8 +237,7 @@ $(function () {
         }
 
         var formData = new FormData($("#form0")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", id);
+        formData.append("key_code", key_code);
         src1 = UpLoadImg(formData);
     });
     //Upload back
@@ -266,8 +247,7 @@ $(function () {
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", id);
+        formData.append("key_code", key_code);
         src2 = UpLoadImg(formData);
     });
 

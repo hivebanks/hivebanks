@@ -451,16 +451,6 @@ $(function () {
         $('#uploadImgModal').modal('close');
     });
 
-    //get la_id
-    // var la_id = "";
-    // GetLaId(token, function (response) {
-    //     if (response.errcode == '0') {
-    //         la_id = response.la_id;
-    //     }
-    // }, function (response) {
-    //     LayerFun(response.errcode);
-    // });
-
     //Upload image
     $('#uploadFile').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
@@ -488,7 +478,6 @@ $(function () {
     }
 
     function UpLoadImg(formData) {
-        console.log(formData);
         var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',

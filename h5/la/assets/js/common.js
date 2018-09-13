@@ -321,7 +321,7 @@ function SetSwitch(token, type, status, suc_func, error_func) {
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
-//get la_id
+//get key code
 function GetKeyCode(token, suc_func, error_func) {
     var api_url = 'get_key_code.php',
         post_data = {
