@@ -47,54 +47,10 @@ $(function () {
         return;
     });
 
-    //get la_id
-    var la_id = '';
-    GetLaId(token, function (response) {
+    //get key_code
+    GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
-            la_id = response.la_id;
-            //get config server
-            var data = {"la_id": response.la_id},
-                url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
-            $.post(url, data, function (_response) {
-                if (_response.errcode == '0') {
-                    var data = _response.rows;
-                    if (data == false) {
-                        return;
-                    }
-                    $.each(data, function (i, val) {
-                        if (data[i].type == '1' && data[i].status == '1') {
-                            $('.radioFile').attr("disabled", true);
-                            $('.noOpenFile, .underReviewFile').remove();
-                            $('.alreadyOpenFile').show();
-                            $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        } else if (data[i].type == '1' && data[i].status == '0') {
-                            $('.radioFile').attr("disabled", true);
-                            $('.noOpenFile, .alreadyOpenFile').remove();
-                            $('.underReviewFile').show();
-                        }
-                        if (data[i].type == '2' && data[i].status == '1') {
-                            $('.radioSms').attr("disabled", true);
-                            $('.noOpenSms, .underReviewSms').remove();
-                            $('.alreadyOpenSms').show();
-                            $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        } else if (data[i].type == '2' && data[i].status == '0') {
-                            $('.radioSms').attr("disabled", true);
-                            $('.noOpenSms, .alreadyOpenSms').remove();
-                            $('.underReviewSms').show();
-                        }
-                        if (data[i].type == '3' && data[i].status == '1') {
-                            $('.radioEmail').attr("disabled", true);
-                            $('.noOpenEmail, .underReviewEmail').remove();
-                            $('.alreadyOpenEmail').show();
-                            $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        } else if (data[i].type == '3' && data[i].status == '0') {
-                            $('.radioEmail').attr("disabled", true);
-                            $('.noOpenEmail, .alreadyOpenEmail').remove();
-                            $('.underReviewEmail').show();
-                        }
-                    })
-                }
-            }, "json");
+            console.log(response);
         }
     }, function (response) {
         LayerFun(response.errcode);
