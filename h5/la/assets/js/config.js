@@ -108,48 +108,54 @@ $(function () {
 
     //set config serve
     $('.configServeBtn').click(function () {
-        var type = $("input[type='radio']:checked").val(), url = '';
-        var key_code = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
-        if (type == false) {
-            LayerFun("pleaseSelectOpenServer");
-            return;
-        }
-        if (key_code.length <= 0) {
-            LayerFun("pleaseInputKey");
-            return;
-        }
-        if (type == '1') {
-            url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php"
-        }
-        if (type == '2') {
-            url = "http://agent_service.fnying.com/sms/set_sms_service.php"
-        }
-        if (type == '3') {
-            url = "http://agent_service.fnying.com/email/set_email_service.php"
-        }
-        $(".preloader-wrapper").addClass("active");
-        var data = {"token": token, "key_code": key_code};
-        $.post(url, data, function (response) {
-            $(".preloader-wrapper").removeClass("active");
-            if (response.errcode == '0') {
-                LayerFun("submitSuccess");
-                if (type == '1') {
-                    $('.noOpenFile').fadeOut();
-                    $('.underReviewFile').fadeIn();
-                }
-                if (type == '2') {
-                    $('.noOpenSms').fadeOut();
-                    $('.underReviewSms').fadeIn();
-                }
-                if (type == '3') {
-                    $('.noOpenEmail').fadeOut();
-                    $('.underReviewEmail').fadeIn();
-                }
-            } else {
-                layer.msg(response.errmsg);
-                return;
-            }
-        }, "json")
+        var key_code = $("#keyEmail").val();
+        OpenEmail(token,key_code, function (response) {
+            console.log(response);
+        }, function (response) {
+            layer.msg(response.errmsg);
+        })
+        // var type = $("input[type='radio']:checked").val(), url = '';
+        // var key_code = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
+        // if (type == false) {
+        //     LayerFun("pleaseSelectOpenServer");
+        //     return;
+        // }
+        // if (key_code.length <= 0) {
+        //     LayerFun("pleaseInputKey");
+        //     return;
+        // }
+        // if (type == '1') {
+        //     url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php"
+        // }
+        // if (type == '2') {
+        //     url = "http://agent_service.fnying.com/sms/set_sms_service.php"
+        // }
+        // if (type == '3') {
+        //     url = "http://agent_service.fnying.com/email/set_email_service.php"
+        // }
+        // $(".preloader-wrapper").addClass("active");
+        // var data = {"la_id": la_id, "type": type, "key_code": key_code};
+        // $.post(url, data, function (response) {
+        //     $(".preloader-wrapper").removeClass("active");
+        //     if (response.errcode == '0') {
+        //         LayerFun("submitSuccess");
+        //         if (type == '1') {
+        //             $('.noOpenFile').fadeOut();
+        //             $('.underReviewFile').fadeIn();
+        //         }
+        //         if (type == '2') {
+        //             $('.noOpenSms').fadeOut();
+        //             $('.underReviewSms').fadeIn();
+        //         }
+        //         if (type == '3') {
+        //             $('.noOpenEmail').fadeOut();
+        //             $('.underReviewEmail').fadeIn();
+        //         }
+        //     } else {
+        //         layer.msg(response.errmsg);
+        //         return;
+        //     }
+        // }, "json")
     });
 
     //Get SMS interface

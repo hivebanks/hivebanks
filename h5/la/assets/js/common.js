@@ -775,6 +775,16 @@ function GetAssetsReport(token, suc_func, error_func) {
     CallReportApi(api_url, post_data, suc_func, error_func);
 }
 
+//open email server
+function OpenEmail(token, key_code, suc_func, error_func) {
+    var api_url = 'set_email_config.php',
+        post_data = {
+            'token': token,
+            'key_code': key_code
+        };
+    CallLaAdminApi(api_url, post_data, suc_func, error_func);
+}
+
 /**
  * Disable button
  * @param $this Button object
