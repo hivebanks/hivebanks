@@ -25,7 +25,7 @@ function send_email_by_agent_service($email,$title,$body,$la_id){
 
 
 
-    var_dump($output);
+//    var_dump($output);
     $output_array = json_decode($output,true);
 
 //    print_r($output_array);
