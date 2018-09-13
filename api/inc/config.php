@@ -45,14 +45,14 @@ class Config
 
   const CA_CONFORM_URL = SYSTEM_URL.'/ca/cfm_email.php';
 //用户绑定注册邮箱
-  const H5_US_URL_R = H5_URL.'/h5/user/registerSuccess.html';
-  const H5_US_URL_B = H5_URL.'/h5/user/bindSuccess.html';
+  const H5_US_URL_R = H5_URL.'/user/registerSuccess.html';
+  const H5_US_URL_B = H5_URL.'/user/bindSuccess.html';
   //用户绑定注册邮箱
-  const H5_BA_URL_R = H5_URL.'/h5/ba/BaRegisterSuccess.html';
-  const H5_BA_URL_B = H5_URL.'/h5/ba/BaBindSuccess.html';
+  const H5_BA_URL_R = H5_URL.'/ba/BaRegisterSuccess.html';
+  const H5_BA_URL_B = H5_URL.'/ba/BaBindSuccess.html';
 //用户绑定注册邮箱
-  const H5_CA_URL_R = H5_URL.'/h5/ca/CaRegisterSuccess.html';
-  const H5_CA_URL_B = H5_URL.'/h5/ca/CaBindSuccess.html';
+  const H5_CA_URL_R = H5_URL.'/ca/CaRegisterSuccess.html';
+  const H5_CA_URL_B = H5_URL.'/ca/CaBindSuccess.html';
 
     //文件上传url
   const CONFORM_URL_file= SYSTEM_URL;
