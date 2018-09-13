@@ -189,7 +189,7 @@ $data_base['us_account'] = "hivebanks_" . $email;
 //$bind_email = ins_bind_user_reg_bind_log($data_log_bind);
 
 $url = Config::CONFORM_URL;
-
+print_r(11111);
 //绑定成功发送验证信息
 //if($bind_email){
 $timestamp += 15 * 60;
