@@ -8,7 +8,8 @@ function get_la_by_user($id){
     $db = new DB_COM();
     $sql = "select * from la_admin where id='{$id}' ";
     $db->query($sql);
-    return $count = $db->affectedRows();
+    $row = $db->fetchRow();
+    return $row;
 }
 
 function upd_la_admin_key_code($la_id,$key_code) {
