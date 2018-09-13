@@ -95,13 +95,16 @@ $(function () {
     //Confirm add address
     $('.addAddressBtn').click(function () {
         var bit_address = $('.bit_address').val(), pass_word_hash = hex_sha1($('#password').val());
+        ShowLoading("show");
         ConfirmAddAddress(token, bit_type, bit_address, pass_word_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 LayerFun('addAddressSuccess');
                 $('#addAddress').modal('hide');
                 $('.withdrawAddressInput').val(response.rows);
             }
         }, function (response) {
+            ShowLoading("hide");
             if (response.errcode == '120') {
                 LayerFun('passwordError');
                 return;
