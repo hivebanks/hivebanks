@@ -22,6 +22,7 @@ GET参数
 */
 
 php_begin();
+die(1);
 $args = array('country_code', 'sms_code', 'cellphone');
 chk_empty_args('GET', $args);
 
