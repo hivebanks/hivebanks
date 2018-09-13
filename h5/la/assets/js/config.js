@@ -40,61 +40,18 @@ $(function () {
         }
     }, function (response) {
         LayerFun(response.errcode);
-        if(response.errcode =="114"){
+        if (response.errcode == "114") {
             DelCookie("la_token");
             window.location.href = "login.html";
         }
         return;
     });
 
-    //get la_id
-    var la_id = '';
-    GetLaId(token, function (response) {
+    //get key_code
+    var key_code = "";
+    GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
-            la_id = response.la_id;
-            //get config server
-            var data = {"la_id": response.la_id},
-                url = "http://agent_service.fnying.com/upload_file/get_config_service.php";
-            $.post(url, data, function (_response) {
-                if (_response.errcode == '0') {
-                    var data = _response.rows;
-                    if (data == false) {
-                        return;
-                    }
-                    $.each(data, function (i, val) {
-                        if (data[i].type == '1' && data[i].status == '1') {
-                            $('.radioFile').attr("disabled", true);
-                            $('.noOpenFile, .underReviewFile').remove();
-                            $('.alreadyOpenFile').show();
-                            $('.iconFile').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        } else if (data[i].type == '1' && data[i].status == '0') {
-                            $('.radioFile').attr("disabled", true);
-                            $('.noOpenFile, .alreadyOpenFile').remove();
-                            $('.underReviewFile').show();
-                        }
-                        if (data[i].type == '2' && data[i].status == '1') {
-                            $('.radioSms').attr("disabled", true);
-                            $('.noOpenSms, .underReviewSms').remove();
-                            $('.alreadyOpenSms').show();
-                            $('.iconSms').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        } else if (data[i].type == '2' && data[i].status == '0') {
-                            $('.radioSms').attr("disabled", true);
-                            $('.noOpenSms, .alreadyOpenSms').remove();
-                            $('.underReviewSms').show();
-                        }
-                        if (data[i].type == '3' && data[i].status == '1') {
-                            $('.radioEmail').attr("disabled", true);
-                            $('.noOpenEmail, .underReviewEmail').remove();
-                            $('.alreadyOpenEmail').show();
-                            $('.iconEmail').removeClass("icon-gantanhao color-red").addClass("icon-duihao color-green");
-                        } else if (data[i].type == '3' && data[i].status == '0') {
-                            $('.radioEmail').attr("disabled", true);
-                            $('.noOpenEmail, .alreadyOpenEmail').remove();
-                            $('.underReviewEmail').show();
-                        }
-                    })
-                }
-            }, "json");
+            key_code = response.key_code;
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -120,115 +77,39 @@ $(function () {
         }
 
         if (type == '1') {
-            OpenUploadFile(token,key_code, function (response) {
-                console.log(response);
+            OpenUploadFile(token, key_code, function (response) {
+                if (response.errcode == "0") {
+                    $('.noOpenFile').fadeOut();
+                    $('.alreadyOpenFile').fadeIn();
+                    $(".radioFile").attr("disabled", true);
+                }
             }, function (response) {
                 layer.msg(response.errmsg);
             });
         }
         if (type == '2') {
-            OpenSms(token,key_code, function (response) {
-                console.log(response);
+            OpenSms(token, key_code, function (response) {
+                if (response.errcode == "0") {
+                    $('.noOpenSms').fadeOut();
+                    $('.alreadyOpenSms').fadeIn();
+                    $(".radioSms").attr("disabled", true);
+                }
             }, function (response) {
                 layer.msg(response.errmsg);
             });
         }
         if (type == '3') {
-            OpenEmail(token,key_code, function (response) {
-                console.log(response);
+            OpenEmail(token, key_code, function (response) {
+                if (response.errcode == "0") {
+                    $('.noOpenEmail').fadeOut();
+                    $('.alreadyOpenEmail').fadeIn();
+                    $(".radioEmail").attr("disabled", true);
+                }
             }, function (response) {
                 layer.msg(response.errmsg);
             });
         }
-        // $(".preloader-wrapper").addClass("active");
-        // var data = {"la_id": la_id, "type": type, "key_code": key_code};
-        // $.post(url, data, function (response) {
-        //     $(".preloader-wrapper").removeClass("active");
-        //     if (response.errcode == '0') {
-        //         LayerFun("submitSuccess");
-        //         if (type == '1') {
-        //             $('.noOpenFile').fadeOut();
-        //             $('.underReviewFile').fadeIn();
-        //         }
-        //         if (type == '2') {
-        //             $('.noOpenSms').fadeOut();
-        //             $('.underReviewSms').fadeIn();
-        //         }
-        //         if (type == '3') {
-        //             $('.noOpenEmail').fadeOut();
-        //             $('.underReviewEmail').fadeIn();
-        //         }
-        //     } else {
-        //         layer.msg(response.errmsg);
-        //         return;
-        //     }
-        // }, "json")
     });
-
-    //Get SMS interface
-    // GetSmsInterface(token, function (response) {
-    //     if (response.errcode == '0') {
-    //         var data = response.row;
-    //         $('#accessKeyId').val(data.accessKeyId);
-    //         $('#accessKeySecret').val(data.accessKeySecret);
-    //         $('#SignName').val(data.SignName);
-    //         $('#TemplateCode').val(data.TemplateCode);
-    //     }
-    // }, function (response) {
-    //     LayerFun(response.errcode);
-    //     return;
-    // });
-
-    //Configure SMS interface
-    // $('.smsInterfaceBtn').click(function () {
-    //     var accessKeyId = $('#accessKeyId').val(), accessKeySecret = $('#accessKeySecret').val(),
-    //         SignName = $('#SignName').val(), TemplateCode = $('#TemplateCode').val();
-    //     var $this = $(this), btnText = $(this).text();
-    //     if (DisableClick($this)) return;
-    //     SetSmsInterface(token, accessKeyId, accessKeySecret, SignName, TemplateCode, function (response) {
-    //         if (response.errcode == '0') {
-    //             LayerFun('successfullyModified');
-    //             ActiveClick($this, btnText);
-    //         }
-    //     }, function (response) {
-    //         ActiveClick($this, btnText);
-    //         LayerFun(response.errcode);
-    //         return;
-    //     });
-    // });
-
-    //Get the mailbox interface configuration information
-    // GetEmailInterface(token, function (response) {
-    //     if (response.errcode == '0') {
-    //         var data = response.row;
-    //         $('#email_Host').val(data.Host);
-    //         $('#email_username').val(data.Username);
-    //         $('#email_password').val(data.Password);
-    //         $('#email_address').val(data.address);
-    //         $('#email_name').val(data.name);
-    //     }
-    // }, function (response) {
-    //     LayerFun(response.errcode);
-    //     return;
-    // });
-
-    //Configure the mailbox interface
-    // $('.emailInterfaceBtn').click(function () {
-    //     var Host = $('#email_Host').val(), Username = $('#email_username').val(),
-    //         Password = $('#email_password').val(), address = $('#email_address').val(), name = $('#email_name').val();
-    //     var $this = $(this), btnText = $(this).text();
-    //     if (DisableClick($this)) return;
-    //     SetEmailInterface(token, Host, Username, Password, address, name, function (response) {
-    //         if (response.errcode == '0') {
-    //             LayerFun('successfullyModified');
-    //             ActiveClick($this, btnText);
-    //         }
-    //     }, function (response) {
-    //         ActiveClick($this, btnText);
-    //         LayerFun(response.errcode);
-    //         return;
-    //     });
-    // });
 
     //Get registration permission display
     function optionName(option_name, _switch) {
@@ -275,7 +156,7 @@ $(function () {
             });
         }
     }, function (response) {
-        if(response.errcode =="114"){
+        if (response.errcode == "114") {
             DelCookie("la_token");
             window.location.href = "login.html";
         }
@@ -416,7 +297,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun(response.errcode);
-            if(response.errcode == "114"){
+            if (response.errcode == "114") {
                 DelCookie("la_token");
                 window.location.href = "login.html";
             }
@@ -484,7 +365,7 @@ $(function () {
             }
         }, function (response) {
             LayerFun(response.errcode);
-            if(response.errcode == "114"){
+            if (response.errcode == "114") {
                 DelCookie("la_token");
                 window.location.href = "login.html";
             }
@@ -570,16 +451,6 @@ $(function () {
         $('#uploadImgModal').modal('close');
     });
 
-    //get la_id
-    var la_id = "";
-    GetLaId(token, function (response) {
-        if (response.errcode == '0') {
-            la_id = response.la_id;
-        }
-    }, function (response) {
-        LayerFun(response.errcode);
-    });
-
     //Upload image
     $('#uploadFile').on('change', function () {
         var objUrl = getObjectURL(this.files[0]);
@@ -589,8 +460,7 @@ $(function () {
         }
 
         var formData = new FormData($("#uploadForm")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", la_id);
+        formData.append("key_code", key_code);
         option_src = UpLoadImg(formData);
     });
 
@@ -608,7 +478,6 @@ $(function () {
     }
 
     function UpLoadImg(formData) {
-        console.log(formData);
         var src = '';
         $.ajax({
             url: 'http://agent_service.fnying.com/upload_file/upload.php',

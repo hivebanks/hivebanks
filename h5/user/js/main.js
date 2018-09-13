@@ -96,11 +96,7 @@ $(function () {
 //Logout to clear cookies
     $('.logout').click(function () {
         DelCookie('user_token');
-        DelCookie('us_id');
-        DelCookie('us_level');
-        DelCookie('re_bit_type');
-        DelCookie('bit_address');
-        window.location.href = '../index.html'
+        window.location.href = '../index.html';
     });
 
 // scroll Up
@@ -230,11 +226,13 @@ function EmailList() {
     return emailList;
 }
 
-// var url = getRootPath();
-
-
 //Popup message
 function LayerFun(type) {
+    if(type == "114"){
+        DelCookie("user_token");
+        window.location.href = "login.html";
+        return;
+    }
     layer.msg('<span class="i18n" name="' + type + '"></span>');
     execI18n();
     return;

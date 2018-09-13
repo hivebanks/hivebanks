@@ -13,7 +13,6 @@ function GetCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
     if (arr != null) return unescape(arr[2]);
     if (arr == null) {
-        DelCookie("la_token");
         window.location.href = 'login.html';
         return null;
     }
@@ -322,9 +321,9 @@ function SetSwitch(token, type, status, suc_func, error_func) {
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
 }
 
-//get la_id
-function GetLaId(token, suc_func, error_func) {
-    var api_url = 'get_la_admin_info.php',
+//get key code
+function GetKeyCode(token, suc_func, error_func) {
+    var api_url = 'get_key_code.php',
         post_data = {
             'token': token
         };

@@ -163,14 +163,17 @@ $(function () {
         }
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 $('#idNum').val(' ');
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
@@ -215,11 +218,11 @@ $(function () {
         return src;
     }
 
-    //get la_id
-    var la_id = "";
-    GetLaId(token, function (response) {
-        if(response.errcode == '0'){
-            la_id = response.la_id;
+    //get key_code
+    var key_code = "";
+    GetKeyCode(token, function (response) {
+        if (response.errcode == '0') {
+            key_code = response.key_code;
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -238,8 +241,7 @@ $(function () {
         }
 
         var formData = new FormData($("#form0")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", id);
+        formData.append("key_code", key_code);
         src1 = UpLoadImg(formData);
     });
     //Upload back
@@ -250,8 +252,7 @@ $(function () {
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", id);
+        formData.append("key_code", key_code);
         src2 = UpLoadImg(formData);
     });
 
@@ -262,13 +263,16 @@ $(function () {
         //bind file
         var $this = $(this), btnText = $(this).text();
         if(DisableClick($this)) return;
+        ShowLoading("show");
         FileBind(token, file_type, file_url, function (response) {
             if (response.errcode == '0') {
+                ShowLoading("hide");
                 ActiveClick($this, btnText);
                 LayerFun('submitSuccess');
                 GetBindInfo();
             }
         }, function (response) {
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })

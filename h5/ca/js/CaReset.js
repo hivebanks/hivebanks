@@ -116,7 +116,7 @@ $(function () {
                 $('.emailcfmCode').val('');
                 $('.emailPassword').val('');
                 LayerFun('modifySuccess');
-                DelCookie('token');
+                DelCookie('ca_token');
                 window.location.href = 'CaLogin.html';
             }
 
@@ -243,7 +243,7 @@ $(function () {
                 $('.phonecfmCode').val('');
                 $('.phonePassword').val('');
                 LayerFun('modifySuccess');
-                DelCookie('token');
+                DelCookie('ca_token');
                 window.location.href = 'CaLogin.html';
             }
 

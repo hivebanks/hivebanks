@@ -69,8 +69,9 @@ $title = '邮箱验证';
 $body = "您的验证码是:".$salt ."，如果非本人操作无需理会！";
 
 require_once "db/la_admin.php";
-$la_id = get_la_admin_info()["id"];
-$output_array = send_email_by_agent_service($email,$title,$body,$la_id);
+$key_code = get_la_admin_info()["key_code"];
+
+$output_array = send_email_by_agent_service($email,$title,$body,$key_code);
 
 if($output_array["errcode"] == "0"){
     $time_limit = time() + 60 ;

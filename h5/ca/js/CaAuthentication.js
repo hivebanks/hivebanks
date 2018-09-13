@@ -216,11 +216,11 @@ $(function () {
         return src;
     }
 
-    //get la_id
-    var la_id = "";
-    GetLaId(token, function (response) {
+    //get key_code
+    var key_code = "";
+    GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
-            la_id = response.la_id;
+            key_code = response.key_code;
         }
     }, function (response) {
         LayerFun(response.errcode);
@@ -239,8 +239,7 @@ $(function () {
         }
 
         var formData = new FormData($("#form0")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", id);
+        formData.append("key_code", key_code);
         src1 = UpLoadImg(formData);
     });
 
@@ -252,8 +251,7 @@ $(function () {
             $("#idNegative").attr("src", objUrl);
         }
         var formData = new FormData($("#form1")[0]);
-        formData.append("la_id", la_id);
-        formData.append("id", id);
+        formData.append("key_code", key_code);
         src2 = UpLoadImg(formData);
     });
 
@@ -274,8 +272,8 @@ $(function () {
                 GetBindInfo();
             }
         }, function (response) {
-            ActiveClick($this, btnText);
             ShowLoading("hide");
+            ActiveClick($this, btnText);
             LayerFun(response.errcode);
         })
     });
