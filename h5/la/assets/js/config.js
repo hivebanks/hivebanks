@@ -1,6 +1,7 @@
 $(function () {
     //Get token
     var token = GetCookie('la_token');
+    window.location.href = "login.html";
 
     // Config url
     $('.setApiBtn').click(function () {
@@ -30,7 +31,6 @@ $(function () {
     //Get la base information
     GetLaBaseInfo(token, function (response) {
         if (response.errcode == '0') {
-            window.location.href = "login.html";
             var data = response.row;
             $('.base_currency').text(data.base_currency);
             SetCookie('base_currency', data.base_currency);
