@@ -30,7 +30,7 @@ $key = Config::TOKEN_KEY;
 
 $la_id = check_token($token);
 
-print_r(22);
+
 if(!upd_la_admin_key_code($la_id,$key_code))
     exit_error("156","开通失败");
 
@@ -38,7 +38,7 @@ $url = "http://agent_service.fnying.com/email/set_email_service.php";
 $post_data = array();
 $post_data["key_code"] = $key_code;
 
-print_r(111);
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -47,10 +47,10 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 $output = curl_exec($ch);
 curl_close($ch);
-print_r(33);
-var_dump($output);
+
+
 $output_array = json_decode($output,true);
-print_r($output_array);
+
 if($output_array["errcode"] == "0"){
 
     exit_ok();
