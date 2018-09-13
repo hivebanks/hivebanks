@@ -241,7 +241,9 @@
 <script src="js/common.js"></script>
 <script src="js/phoneModify.js"></script>
 <script type="text/javascript">
-$("#phone").intlTelInput();
+    $("#phone").intlTelInput({
+        separateDialCode: true,
+    });
 </script>
 </body>
 </html>
