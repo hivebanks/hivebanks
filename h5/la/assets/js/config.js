@@ -41,6 +41,7 @@ $(function () {
     }, function (response) {
         LayerFun(response.errcode);
         if(response.errcode =="114"){
+            DelCookie("la_token");
             window.location.href = "login.html";
         }
         return;
@@ -261,7 +262,10 @@ $(function () {
             });
         }
     }, function (response) {
-
+        if(response.errcode =="114"){
+            DelCookie("la_token");
+            window.location.href = "login.html";
+        }
     });
 
     //ba/ca/us Registration permission opened successfully (closed failure) function
@@ -399,6 +403,10 @@ $(function () {
             }
         }, function (response) {
             LayerFun(response.errcode);
+            if(response.errcode == "114"){
+                DelCookie("la_token");
+                window.location.href = "login.html";
+            }
             return;
         });
     }
@@ -463,6 +471,10 @@ $(function () {
             }
         }, function (response) {
             LayerFun(response.errcode);
+            if(response.errcode == "114"){
+                DelCookie("la_token");
+                window.location.href = "login.html";
+            }
         });
     }
 
