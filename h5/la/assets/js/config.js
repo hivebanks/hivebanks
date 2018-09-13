@@ -108,7 +108,6 @@ $(function () {
 
     //set config serve
     $('.configServeBtn').click(function () {
-        // var key_code = $("#keyEmail").val();
         var type = $("input[type='radio']:checked").val(), url = '';
         var key_code = $("input[type='radio']:checked").parent().siblings().children("input[type='text']").val();
         if (type == false) {
@@ -120,21 +119,26 @@ $(function () {
             return;
         }
 
-
-
-        // if (type == '1') {
-        //     url = "http://agent_service.fnying.com/upload_file/set_upload_file_service.php"
-        // }
-        // if (type == '2') {
-        //     url = "http://agent_service.fnying.com/sms/set_sms_service.php"
-        // }
+        if (type == '1') {
+            OpenUploadFile(token,key_code, function (response) {
+                console.log(response);
+            }, function (response) {
+                layer.msg(response.errmsg);
+            });
+        }
+        if (type == '2') {
+            OpenSms(token,key_code, function (response) {
+                console.log(response);
+            }, function (response) {
+                layer.msg(response.errmsg);
+            });
+        }
         if (type == '3') {
             OpenEmail(token,key_code, function (response) {
                 console.log(response);
             }, function (response) {
                 layer.msg(response.errmsg);
             });
-            // url = "http://agent_service.fnying.com/email/set_email_service.php"
         }
         // $(".preloader-wrapper").addClass("active");
         // var data = {"la_id": la_id, "type": type, "key_code": key_code};

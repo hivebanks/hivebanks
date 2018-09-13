@@ -775,9 +775,28 @@ function GetAssetsReport(token, suc_func, error_func) {
     CallReportApi(api_url, post_data, suc_func, error_func);
 }
 
+//open upload file server
+function OpenUploadFile(token, key_code, suc_func, error_func) {
+    var api_url = 'set_upload_file_config.php',
+        post_data = {
+            'token': token,
+            'key_code': key_code
+        };
+    CallLaConfigApi(api_url, post_data, suc_func, error_func);
+}
 //open email server
 function OpenEmail(token, key_code, suc_func, error_func) {
     var api_url = 'set_email_config.php',
+        post_data = {
+            'token': token,
+            'key_code': key_code
+        };
+    CallLaConfigApi(api_url, post_data, suc_func, error_func);
+}
+
+//open sms server
+function OpenSms(token, key_code, suc_func, error_func) {
+    var api_url = 'set_sms_config.php',
         post_data = {
             'token': token,
             'key_code': key_code
