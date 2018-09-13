@@ -176,16 +176,39 @@ $(function () {
     });
 
     //Get phone verification code
+    function setTime($this) {
+        var countdown = 60;
+        $('.sixty').text(countdown).fadeIn('fast').css('color', '#fff');
+        $('.getCodeText').attr('name', 'sixty');
+        $this.attr("disabled", true);
+        execI18n();
+        var timer = null;
+        timer = setInterval(function () {
+            if (countdown != 0) {
+                countdown--;
+                $('.sixty').text(countdown);
+            } else {
+                clearInterval(timer);
+                $this.attr("disabled", false);
+                $('.sixty').fadeOut('fast');
+                $('.getCodeText').attr('name', 'getCode');
+                execI18n();
+                return;
+            }
+        }, 1000);
+    }
+
     $('.phoneCodeBtn').click(function () {
-        var bind_type = '5', phoneArr = phone_bind_info.split('-'),
+        var $this = $(this), cfm_code = $("#addressPhoneCode").val(), bind_type = '5', phoneArr = phone_bind_info.split('-'),
             country_code = phoneArr[0], cellphone = phoneArr[1];
-        BaGetPhoneCode(cellphone, country_code, bind_type, function (response) {
+        setTime($this);
+        GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
             if (response.errcode == '0') {
-                LayerFun('queryCodeSuccess');
+                LayerFun('sendSuc');
                 return;
             }
         }, function (response) {
-            LayerFun('queryCodeFail');
+            GetImgCode();
             LayerFun(response.errcode);
             return;
         });
