@@ -197,7 +197,8 @@ $title = '邮箱验证链接';
 $des = new Des();
 $body = $url . "?cfm_hash=";
 $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
-$body .= urlencode($des->encrypt($encryption_code, $key));
+$body .= "欢迎注册HIVEBANKS项目用户，复制下方链接在浏览器中打开完成注册".urlencode($des->encrypt($encryption_code, $key))."此为系统邮件，请勿回复
+请保管好您的邮箱，避免账号被他人盗用";
 require_once "db/la_admin.php";
 $key_code = get_la_admin_info()["key_code"];
 
