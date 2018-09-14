@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaSecurity.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaSecurity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/ca/js/CaSecurity.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaSecurity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,8 +58,8 @@
       <file leaf-file-name="CaSecurity.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ca/CaSecurity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="311" column="21" lean-forward="true" selection-start-line="311" selection-start-column="21" selection-end-line="311" selection-end-column="21" />
+            <state relative-caret-position="264">
+              <caret line="128" column="91" selection-start-line="128" selection-start-column="75" selection-end-line="128" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -87,8 +85,8 @@
       <file leaf-file-name="CaSecurity.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/ca/js/CaSecurity.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state relative-caret-position="276">
+              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -97,7 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DelCookie('token');</find>
       <find>function GetCookie(name)</find>
       <find>if (arr != null) return unescape(arr[2]);</find>
       <find>GetLaId</find>
@@ -127,6 +124,7 @@
       <find>交易</find>
       <find>phoneTime</find>
       <find>成功</find>
+      <find>fundPasswordBind</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -293,12 +291,12 @@
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
-      <workItem from="1536907331342" duration="3092000" />
+      <workItem from="1536907331342" duration="3248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54216000" />
+    <option name="totallyTimeSpent" value="54372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -580,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaSecurity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="311" column="21" lean-forward="true" selection-start-line="311" selection-start-column="21" selection-end-line="311" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/BaSecurity.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -601,10 +592,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaSecurity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="128" column="91" selection-start-line="128" selection-start-column="75" selection-end-line="128" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaSecurity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        <state relative-caret-position="276">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
         </state>
       </provider>
     </entry>

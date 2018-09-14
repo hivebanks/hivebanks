@@ -63,8 +63,8 @@ $(function () {
         return;
     });
 
-    //前往Fund password binding
-    $('.fundPasswordBind, .fundPasswordModify').click(function () {
+    //Fund password binding
+    $('.fundPasswordBind').click(function () {
         if (cellphone != 'cellphone') {
             $('#goBindCellPhone').modal('show');
             return;
