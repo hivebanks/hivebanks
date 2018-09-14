@@ -528,7 +528,7 @@ textarea::-ms-input-placeholder
 /*.phoneRegisterBox,.phoneLoginBox,.phoneResetBox{*/
     /*display: none;*/
 /*}*/
-.emailRegisterBox,.emailLoginBox,.phoneResetBox{
+.emailRegisterBox,.emailLoginBox,.emailResetBox{
     display: none;
 }
 .country{
