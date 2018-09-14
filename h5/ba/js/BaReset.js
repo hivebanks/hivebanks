@@ -191,8 +191,13 @@ $(function () {
     //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '3', $this = $(this), cfm_code = $('.phoneCfmCode').val();
+        if($(".phone").val().length <= 0){
+            $('.phone_tips').fadeIn().siblings('span').hide();
+            LayerFun('phoneNotEmpty');
+            return;
+        }
         if ($('.phoneCfmCode').val().length <= 0) {
-            $('.phoneCode_tips').fadeIn('fast');
+            $('.phoneImgCode_tips').fadeIn('fast');
             return;
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);
