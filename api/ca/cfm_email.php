@@ -106,9 +106,13 @@ $salt = rand(100000,999999);
 $title = '邮箱验证链接';
 $des = new Des();
 $now_time +=15*60;
-$body = $url . "?cfm_hash=";
-$encryption_code = $ca_id.','.$email.',' . $now_time  .$salt;
-$body .=urlencode($des -> encrypt($encryption_code, $key));
+
+
+$body ="<h3>亲爱的用户：</h3>当您收到这封邮件时，说明您的注册邮箱是有效的。邮箱通过有效验证后，您的账户安全将更有保障。点击此处激活账户 , 如果链接无法点击，请复制并打开以下网址：<br>". $url . "?cfm_hash=";
+$encryption_code = $ca_id . ',' . $email . ',' . $now_time . ',' . $salt;
+$body .=  urlencode($des->encrypt($encryption_code, $key))."<br><span>此为系统邮件，请勿回复
+请保管好您的邮箱，避免账号被他人盗用</span>";
+
 require_once "db/la_admin.php";
 $key_code = get_la_admin_info()["key_code"];
 
