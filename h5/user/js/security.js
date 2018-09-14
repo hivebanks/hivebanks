@@ -16,7 +16,7 @@ $(function () {
                     $('.phoneTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.phoneBind').fadeOut('fast');
                     $('.phoneModify').fadeIn('fast');
-                    // $(".phoneInfo").removeClass("i18n").text($(this)[0].bind_info);
+                    $(".phoneInfo").text($(this)[0].bind_info);
                     $('.phoneIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
