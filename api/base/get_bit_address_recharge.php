@@ -32,7 +32,7 @@ $ba_id = check_token($token);
 // 通过id获取用户基本信息
 $rows = get_ba_recharge_bit_account_info($ba_id);
 $new_rows = array();
-foreach ($row as $rows){
+foreach ($rows as $row){
     $row["utime"] = date("Y-m-d H:i:s",$row["utime"]);
 
     $new_rows[] = $row;
