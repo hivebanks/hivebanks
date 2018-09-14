@@ -31,11 +31,16 @@ $token = get_arg_str('GET', 'token', 128);
 $ba_id = check_token($token);
 // 通过id获取用户基本信息
 $rows = get_ba_recharge_bit_account_info($ba_id);
+$new_rows = array();
+foreach ($row as $rows){
+    $row["utime"] = date("Y-m-d H:i:s",$row["utime"]);
 
+    $new_rows[] = $row;
+}
 $rtn_ary = array();
 $rtn_ary['errcode'] = '0';
 $rtn_ary['errmsg'] = '';
-$rtn_ary["rows"] = $rows;
+$rtn_ary["rows"] = $new_rows;
 
 $rtn_str = json_encode($rtn_ary);
 php_end($rtn_str);

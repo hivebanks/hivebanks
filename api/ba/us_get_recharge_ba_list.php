@@ -36,6 +36,8 @@ if(get_base_ba_list(BASE_CURRENCY)){
     $row_newp["bit_type"] = BASE_CURRENCY;
     array_push($new_rows,$row_newp);
 }
+
+
 $rtn_ary = array();
 $rtn_ary['errcode'] = '0';
 $rtn_ary['errmsg'] = '';
