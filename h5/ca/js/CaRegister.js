@@ -218,9 +218,14 @@ $(function () {
     //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '1', $this = $(this), cfm_code = $('.phoneCfmCode').val();
+        if($(".phone").val().length <= 0){
+            $('.phone_tips').fadeIn().siblings('span').hide();
+            LayerFun('phoneNotEmpty');
+            return;
+        }
         if (cfm_code.length <= 0) {
-            LayerFun('pleaseImgCode');
             $('.phoneImgCode_tips').fadeIn();
+            LayerFun('pleaseImgCode');
             return;
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);

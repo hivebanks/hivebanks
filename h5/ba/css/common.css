@@ -873,7 +873,10 @@ section.footer {
 }
 /*phoneRegisterBox-phoneLoginBox-phoneResetBox*/
 
-.phoneRegisterBox,.phoneLoginBox,.phoneResetBox{
+/*.phoneRegisterBox,.phoneLoginBox,.phoneResetBox{*/
+    /*display: none;*/
+/*}*/
+.emailRegisterBox,.emailLoginBox,.emailResetBox{
     display: none;
 }
 .country{

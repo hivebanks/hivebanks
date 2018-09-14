@@ -161,12 +161,15 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         // LayerFun('phone');
         return;
     }
+    ShowLoading("show");
     setTime($this);
     GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
         if (response.errcode == '0') {
+            ShowLoading("hide");
             LayerFun('sendSuccess');
         }
     }, function (response) {
+        ShowLoading("hide");
         LayerFun(response.errcode);
         clearInterval(timer);
         $this.attr("disabled", false);

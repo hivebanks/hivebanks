@@ -53,12 +53,14 @@
                     </div>
                     <div class="loginToggleBox">
                         <ul class="flex center space-around">
-                            <li class="active loginToggle emailLogin">
-                                <i class="iconfont icon-youxiang"></i>
-                                <span class="emailLoginTitle i18n" name="emailLoginTitle">Email Login</span></li>
-                            <li class="loginToggle phoneLogin">
+                            <li class="active loginToggle phoneLogin">
                                 <i class="iconfont icon-shouji"></i>
-                                <span class="phoneLoginTitle i18n" name="phoneLoginTitle">Phone Login</span></li>
+                                <span class="phoneLoginTitle i18n" name="phoneLoginTitle">Phone Login</span>
+                            </li>
+                            <li class="loginToggle emailLogin">
+                                <i class="iconfont icon-youxiang"></i>
+                                <span class="emailLoginTitle i18n" name="emailLoginTitle">Email Login</span>
+                            </li>
                         </ul>
                     </div>
                     <!-- email login -->
@@ -79,14 +81,15 @@
                                 </span>
                             </li>
 
-                            <!--phone code-->
+                            <!--code-->
                             <li>
                                 <input type="password" class="emailPassword form-control i18n-input"
                                        name="emailPassword" value="" selectname="passwordInput"
                                        selectattr="placeholder">
                                 <span class='ty-color input_tips password_tips i18n'
                                       name="passwordNotEmpty">* Password Can Not Be Blank</span>
-                                <span class='ty-color input_tips errorPass_tips i18n' name="loginFailed">* Login Failed</span>
+                                <span class='ty-color input_tips errorPass_tips i18n'
+                                      name="loginFailed">* Login Failed</span>
                             </li>
 
                             <!--Captcha-->
@@ -109,7 +112,8 @@
                     <div class="phoneLoginBox form-inner-content fadeInRight">
                         <ul class="mess-ul">
                             <li class="countryCodeBox">
-                                <input type="tel" maxlength="11" class="form-control phone i18n-input" name="phone" id="phone" value=""
+                                <input type="tel" maxlength="11" class="form-control phone i18n-input" name="phone"
+                                       id="phone" value=""
                                        selectname="phoneInput" selectattr="placeholder">
                                 <span class='ty-color input_tips phone_tips i18n' name="accountNotEmpty">* Account Cannot Be Empty</span>
                                 <span class='ty-color input_tips phoneErrorTips i18n' name="phoneBad">* Bad Cell Phone Format</span>
@@ -161,8 +165,10 @@
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h3 class="pcTitle i18n" name="goEmailVerify">Please go to email for verification</h3>
-                                    <h5 class="phoneTitle i18n" name="goEmailVerify">Please go to email for verification</h5>
+                                    <h3 class="pcTitle i18n" name="goEmailVerify">Please go to email for
+                                        verification</h3>
+                                    <h5 class="phoneTitle i18n" name="goEmailVerify">Please go to email for
+                                        verification</h5>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-success i18n" name="cancel"
