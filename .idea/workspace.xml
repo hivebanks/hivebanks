@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaReset.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaReset.html" afterDir="false" />
-    </list>
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,20 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaLogin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/BaLogin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="232" column="7" lean-forward="true" selection-start-line="232" selection-start-column="7" selection-end-line="232" selection-end-column="7" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaRegister.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ba/BaRegister.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,18 +72,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaReset.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaReset.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ba/js/BaReset.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-4356" />
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CaLogin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaLogin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="137" column="33" lean-forward="true" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaRegister.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaRegister.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaReset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaReset.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="177" column="21" selection-start-line="177" selection-start-column="21" selection-end-line="177" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaReset.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaReset.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="87" column="15" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="877" column="1" selection-start-line="877" selection-start-column="1" selection-end-line="877" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ba/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="875" column="35" selection-start-line="875" selection-start-column="35" selection-end-line="875" selection-end-column="35" />
+            <state relative-caret-position="335">
+              <caret line="878" lean-forward="true" selection-start-line="878" selection-end-line="878" />
             </state>
           </provider>
         </entry>
@@ -108,7 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GetLaId</find>
       <find>getla</find>
       <find>get key</find>
       <find>key</find>
@@ -138,7 +169,11 @@
       <find>fundPasswordBind</find>
       <find>phoneRegisterBox</find>
       <find>phoneLoginBox</find>
+      <find>密码重置(邮箱)</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,14 +181,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/la/assets/js/report.js" />
-        <option value="$PROJECT_DIR$/h5/ca/js/CaAccount.js" />
-        <option value="$PROJECT_DIR$/h5/la/assets/js/common.js" />
         <option value="$PROJECT_DIR$/h5/user/js/main.js" />
         <option value="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" />
         <option value="$PROJECT_DIR$/h5/ba/BaRecharge.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaRechargeAmount.html" />
-        <option value="$PROJECT_DIR$/h5/ca/css/common.css" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaRecharge.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js" />
@@ -197,6 +228,10 @@
         <option value="$PROJECT_DIR$/h5/ba/BaLogin.html" />
         <option value="$PROJECT_DIR$/h5/ba/BaRegister.html" />
         <option value="$PROJECT_DIR$/h5/ba/BaReset.html" />
+        <option value="$PROJECT_DIR$/h5/ca/css/common.css" />
+        <option value="$PROJECT_DIR$/h5/ca/CaRegister.html" />
+        <option value="$PROJECT_DIR$/h5/ca/CaReset.html" />
+        <option value="$PROJECT_DIR$/h5/ca/CaLogin.html" />
       </list>
     </option>
   </component>
@@ -239,6 +274,12 @@
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="ba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="ca" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -291,27 +332,28 @@
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
-      <workItem from="1536907331342" duration="4705000" />
+      <workItem from="1536907331342" duration="4991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55829000" />
+    <option name="totallyTimeSpent" value="56115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26466382" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26466382" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -320,7 +362,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,21 +371,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaAuthentication.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaEmailBind.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaEmailModify.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaFundPasswordModify.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaGoogleBind.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaGoogleVerification.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -593,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="875" column="35" selection-start-line="875" selection-start-column="35" selection-end-line="875" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/BaLogin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
@@ -643,9 +662,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="878" lean-forward="true" selection-start-line="878" selection-end-line="878" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="877" column="1" selection-start-line="877" selection-start-column="1" selection-end-line="877" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaRegister.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaReset.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4356" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="137" column="33" lean-forward="true" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaReset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="177" column="21" selection-start-line="177" selection-start-column="21" selection-end-line="177" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaReset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="87" column="15" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="15" />
+        </state>
       </provider>
     </entry>
   </component>

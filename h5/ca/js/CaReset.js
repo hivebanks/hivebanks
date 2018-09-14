@@ -85,7 +85,7 @@ $(function () {
         }
 
     });
-    // 密码重置(邮箱)
+    // Password reset (mailbox)
     $('.emailResetBtn').click(function () {
         var email = $('.email').val(),
             cfm_code = $('.emailcfmCode').val(),
@@ -160,7 +160,7 @@ $(function () {
         }
     });
 
-    //手机验证码
+    //phone code
     $('.phoneSmsCode').focus(function () {
         $(this).siblings('span').hide();
     });
@@ -191,13 +191,18 @@ $(function () {
     //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '3', $this = $(this), cfm_code = $('.phoneCfmCode').val();
+        if($(".phone").val().length <= 0){
+            $('.phone_tips').fadeIn().siblings('span').hide();
+            LayerFun('phoneNotEmpty');
+            return;
+        }
         if ($('.phoneCfmCode').val().length <= 0) {
             $('.phoneCode_tips').fadeIn('fast');
             return;
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
-    // 密码重置(手机)
+    // Password reset (mobile phone)
     $('.phoneResetBtn').click(function () {
         // Get country code
         var country_code = $('.selected-dial-code').text().split("+")[1];
