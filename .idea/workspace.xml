@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/api/user/reg_email.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/reg_email.php" afterDir="false" />
-    </list>
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +38,11 @@
       <file leaf-file-name="reg_email.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="198" column="65" selection-start-line="198" selection-start-column="65" selection-end-line="198" selection-end-column="65" />
+            <state relative-caret-position="255">
+              <caret line="200" column="121" selection-start-line="200" selection-start-column="68" selection-end-line="200" selection-end-column="121" />
               <folding>
-                <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,8 +204,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-29" />
-    <option name="y" value="73" />
+    <option name="x" value="-10" />
+    <option name="y" value="108" />
     <option name="width" value="1920" />
     <option name="height" value="835" />
   </component>
@@ -284,15 +283,15 @@
       <workItem from="1536831037757" duration="288000" />
       <workItem from="1536895954212" duration="1595000" />
       <workItem from="1536901017578" duration="2800000" />
-      <workItem from="1536904494374" duration="635000" />
+      <workItem from="1536904494374" duration="878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49774000" />
+    <option name="totallyTimeSpent" value="50017000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-23" y="59" width="1536" height="668" extended-state="0" />
+    <frame x="-8" y="87" width="1536" height="668" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25913396" />
@@ -544,10 +543,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="198" column="65" selection-start-line="198" selection-start-column="65" selection-end-line="198" selection-end-column="65" />
+        <state relative-caret-position="255">
+          <caret line="200" column="121" selection-start-line="200" selection-start-column="68" selection-end-line="200" selection-end-column="121" />
           <folding>
-            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
