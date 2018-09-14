@@ -221,6 +221,7 @@ $(function () {
         if($(".phone").val().length <= 0){
             $('.phone_tips').fadeIn().siblings('span').hide();
             LayerFun('phoneNotEmpty');
+            return;
         }
         if (cfm_code.length <= 0) {
             $('.phoneImgCode_tips').fadeIn();
