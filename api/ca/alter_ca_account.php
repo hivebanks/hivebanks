@@ -1,4 +1,5 @@
 <?php
+
 require_once '../inc/common.php';
 require_once  'db/ca_base.php';
 
