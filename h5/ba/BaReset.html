@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta id="i18n_pagename" content="index-common">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title class="i18n" name="resetPassword">Reset Password</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/intlTelInput.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)" href="mobile-css/common.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)" href="mobile-css/BaReset.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)"
+          href="mobile-css/common.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:767px)"
+          href="mobile-css/BaReset.css">
     <link rel="stylesheet" href="css/BaReset.css">
 </head>
 <body>
@@ -53,14 +56,14 @@
             <div class="col-md-6 col-md-offset-3 col-sm-12">
                 <div class="form-box">
                     <div class="resetToggleBox">
+                        <li class="active resetToggle phoneReset">
+                            <i class="iconfont icon-shouji"></i>
+                            <span class="phoneResetTitle i18n" name="phoneResetTitle">Reset(Phone)</span>
+                        </li>
                         <ul class="flex center space-around">
-                            <li class="active resetToggle emailReset">
+                            <li class="resetToggle emailReset">
                                 <i class="iconfont icon-youxiang"></i>
                                 <span class="emailResetTitle i18n" name="emailResetTitle">Reset(Email)</span>
-                            </li>
-                            <li class="resetToggle phoneReset">
-                                <i class="iconfont icon-shouji"></i>
-                                <span class="phoneResetTitle i18n" name="phoneResetTitle">Reset(Phone)</span>
                             </li>
                         </ul>
                     </div>
@@ -68,29 +71,36 @@
                     <div class="emailResetBox form-inner-content fadeInRight">
                         <ul class="mess-ul">
                             <li>
-                                <input type="email" class="form-control email i18n-input" name="email" value="" selectname="emailInput" selectattr="placeholder">
+                                <input type="email" class="form-control email i18n-input" name="email" value=""
+                                       selectname="emailInput" selectattr="placeholder">
                                 <span class='ty-color input_tips email_tips i18n' name="emailNotEmpty">* E-mail Can Not Be Empty</span>
                                 <span class='ty-color input_tips emailErrorTips i18n' name="emailBad">* Bad Mailbox Format</span>
                                 <span class='ty-color input_tips noEmailTips i18n' name="userNotExist">* User Does Not Exist</span>
                             </li>
                             <li class="flex">
-                                <input type="text" class="form-control emailCfmCode i18n-input" name="emailcfmCode" value="" selectname="cfmCodeInput" selectattr="placeholder">
+                                <input type="text" class="form-control emailCfmCode i18n-input" name="emailcfmCode"
+                                       value="" selectname="cfmCodeInput" selectattr="placeholder">
                                 <span class='ty-color input_tips emailCode_tips i18n' name="codeNotEmpty">* Verification Code Must Be Filled</span>
-                                <button class="btn btn-success btn-sm emailCodeBtn i18n" name="getCode">Get Code</button>
+                                <button class="btn btn-success btn-sm emailCodeBtn i18n" name="getCode">Get Code
+                                </button>
                             </li>
                             <li>
-                                <input type="password" class="form-control emailPassword i18n-input" name="emailPassword" value="" selectname="newPasswordInput" selectattr="placeholder">
+                                <input type="password" class="form-control emailPassword i18n-input"
+                                       name="emailPassword" value="" selectname="newPasswordInput"
+                                       selectattr="placeholder">
                                 <span class='ty-color input_tips password_tips i18n' name="passwordNotEmpty">* Password Can Not Be Blank</span>
                                 <span class='ty-color input_tips errEmailPass_tips i18n' name="PasswordStructure">* 8-16 Bits are composed of letters (case-sensitive),numbers,symbols</span>
                             </li>
                         </ul>
-                        <a href="javascript:;" class="btn btn-lg btn-success register emailResetBtn login i18n" name="reset">Reset</a>
+                        <a href="javascript:;" class="btn btn-lg btn-success register emailResetBtn login i18n"
+                           name="reset">Reset</a>
                     </div>
                     <!-- phone reset -->
                     <div class="phoneResetBox form-inner-content fadeInRight">
                         <ul class="mess-ul">
                             <li>
-                                <input type="tel" class="form-control phone" name="phone" id="phone" value="" selectname="phoneInput" selectattr="placeholder">
+                                <input type="tel" class="form-control phone" name="phone" id="phone" value=""
+                                       selectname="phoneInput" selectattr="placeholder">
                                 <span class='ty-color input_tips phone_tips i18n' name="accountNotEmpty">* Account Cannot Be Empty</span>
                                 <span class='ty-color input_tips phoneErrorTips i18n' name="phoneBad">* Bad Cell Phone Format</span>
                                 <span class='ty-color input_tips noPhonelTips i18n' name="userNotExist">* User Does Not Exist</span>
@@ -106,19 +116,23 @@
                                       name="codeBad">* Verification Code Error, Please Re-enter</span>
                             </li>
                             <li class="flex">
-                                <input type="text" class="form-control i18n-input phoneSmsCode" name="cfmCode" value="" selectname="cfmCodeInput" selectattr="placeholder">
+                                <input type="text" class="form-control i18n-input phoneSmsCode" name="cfmCode" value=""
+                                       selectname="cfmCodeInput" selectattr="placeholder">
                                 <span class='ty-color input_tips phoneCode_tips i18n' name="codeNotEmpty">* Verification Code Must Be Filled</span>
                                 <button class="btn btn-success btn-sm phoneCodeBtn"><span class="sixty"></span>&nbsp;&nbsp;
                                     <span class="getCodeText i18n" name="getCode">Get Code</span>
                                 </button>
                             </li>
                             <li>
-                                <input type="password" class="form-control i18n-input phonePassword" name="phonePassword" value="" selectname="newPasswordInput" selectattr="placeholder">
+                                <input type="password" class="form-control i18n-input phonePassword"
+                                       name="phonePassword" value="" selectname="newPasswordInput"
+                                       selectattr="placeholder">
                                 <span class='ty-color input_tips PhonePassword_tips i18n' name="passwordNotEmpty">* Password Can Not Be Blank</span>
                                 <span class='ty-color input_tips errPhonePass_tips i18n' name="PasswordStructure">* 8-16 Bits are composed of letters (case-sensitive),numbers,symbols</span>
                             </li>
                         </ul>
-                        <a href="javascript:;" class="btn btn-lg btn-success register phoneResetBtn login i18n" name="reset">Reset</a>
+                        <a href="javascript:;" class="btn btn-lg btn-success register phoneResetBtn login i18n"
+                           name="reset">Reset</a>
                     </div>
                 </div>
             </div>
@@ -156,9 +170,9 @@
                     <i class="iconfont icon-weixin"></i>
                     <div>
                         <!--<select autocomplete="off" id="language" style="background:transparent;color:#fff">-->
-                            <!--<option value="en">English</option>-->
-                            <!--<option value="zh-CN">中文简体</option>-->
-                            <!--&lt;!&ndash; <option value="zh-TW">中文繁體</option> &ndash;&gt;-->
+                        <!--<option value="en">English</option>-->
+                        <!--<option value="zh-CN">中文简体</option>-->
+                        <!--&lt;!&ndash; <option value="zh-TW">中文繁體</option> &ndash;&gt;-->
                         <!--</select>-->
                         <select class="form-control input-sm" id="language">
                             <option value="en">English</option>
