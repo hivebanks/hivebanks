@@ -99,10 +99,10 @@ $(function () {
         timer = setInterval(function () {
             if (time != 0) {
                 time--;
-                $('.ruleBtn').text(time + 's').attr('disabled', true);
+                $('.ruleBtn').text(time + 's');
             } else {
                 clearInterval(timer);
-                $('.ruleBtn').attr('disabled', false);
+                $('.ruleBtn').removeClass('disabled');
                 execI18n();
             }
         }, 1000);
