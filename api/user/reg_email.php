@@ -205,7 +205,7 @@ $body .=  urlencode($des->encrypt($encryption_code, $key))."
 <h3>安全提示</h3>
 <span>*不要把您的密码以及本链接告诉任何人！</span><br>
 <span>*开启二次验证（谷歌验证或短信验证)！</span><br>
-<span>如果此活动不是您本人操作，请您尽快联系风赢客服。 </span><br>
+<span>如果此活动不是您本人操作，请您尽快联系客服人员。 </span><br>
 <span>此为系统邮件，请勿回复
 请保管好您的邮箱，避免账号被他人盗用</span>
 ";
