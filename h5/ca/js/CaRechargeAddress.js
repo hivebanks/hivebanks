@@ -1,5 +1,6 @@
 $(function () {
     GetUsCookie("user_token");
+    GetUsAccount();
     var ca_channel = GetQueryString('ca_channel'),
         card_nm = GetQueryString('card_nm'),
         bit_amount = GetQueryString('bit_amount'),

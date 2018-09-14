@@ -113,11 +113,6 @@ $(function () {
     });
 });
 
-//GetUsAccount
-function GetUsAccount (){
-    var us_account = GetCookie('us_account');
-    $(".us_account").text(us_account);
-}
 //GetCaAccount
 function GetCaAccount (){
     var ca_account = GetCookie('ca_account');
