@@ -525,7 +525,10 @@ textarea::-ms-input-placeholder
 }
 /*phoneRegisterBox-phoneLoginBox-phoneResetBox*/
 
-.phoneRegisterBox,.phoneLoginBox,.phoneResetBox{
+/*.phoneRegisterBox,.phoneLoginBox,.phoneResetBox{*/
+    /*display: none;*/
+/*}*/
+.phoneRegisterBox,.emailLoginBox,.phoneResetBox{
     display: none;
 }
 .country{
