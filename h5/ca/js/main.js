@@ -175,6 +175,10 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         LayerFun(response.errcode);
         clearInterval(timer);
         $this.attr("disabled", false);
+        $('.sixty').fadeOut('fast');
+        $('.getCodeText').attr('name', 'getCode');
+        execI18n();
+        return;
     });
 };
 
