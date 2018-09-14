@@ -55,10 +55,6 @@ a span {
     box-sizing: border-box;
 }
 
-.ruleBtn[disabled='disabled']{
-    color: #ffffff;
-}
-
 p {
     margin: 0;
 }
