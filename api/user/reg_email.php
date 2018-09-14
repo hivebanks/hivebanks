@@ -196,7 +196,7 @@ $timestamp += 15 * 60;
 $title = '邮箱验证链接';
 $des = new Des();
 $body ="<h3>亲爱的用户：</h3>当您收到这封邮件时，说明您的注册邮箱是有效的。<br>
-邮箱通过有效验证后，您的账户安全将更有保障。点击此处激活账户 , 如果链接无法点击，请复制并打开以下网址：<br>". $url . "?cfm_hash=";
+邮箱通过有效验证后，您的账户安全将更有保障。<br>点击此处激活账户 , 如果链接无法点击，请复制并打开以下网址：<br>&nbsp;". $url . "?cfm_hash=";
 $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .=  urlencode($des->encrypt($encryption_code, $key))."<br><br><span style='color: red;font-weight: 800'>安全提示</span><br>
 <span>*不要把您的密码以及本链接告诉任何人！</span><br>
