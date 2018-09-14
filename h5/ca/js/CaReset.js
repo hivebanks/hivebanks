@@ -197,7 +197,7 @@ $(function () {
             return;
         }
         if ($('.phoneCfmCode').val().length <= 0) {
-            $('.phoneCode_tips').fadeIn('fast');
+            $('.phoneImgCode_tips').fadeIn('fast');
             return;
         }
         GetPhoneCodeFun(bind_type, $this, cfm_code);
@@ -219,7 +219,7 @@ $(function () {
 
         if (cfm_code == '') {
             $('.phoneImgCode_tips').fadeIn().siblings('span').hide();
-            LayerFun('codeNotEmpty');
+            LayerFun('phoneImgCode_tips');
             return;
         }
         if (sms_code == '') {
