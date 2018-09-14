@@ -1,4 +1,5 @@
 <?php
+
 class Des
 {
     private static function pkcs5_pad($text, $block_size)

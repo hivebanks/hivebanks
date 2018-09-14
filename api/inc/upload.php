@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 require_once "common.php";
 require_once "es_imagecls.php";
 //namespace Aliyun;

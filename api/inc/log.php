@@ -1,4 +1,5 @@
 <?php
+
 // 日志处理
 class LogFileHandler
 {

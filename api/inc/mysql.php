@@ -1,4 +1,5 @@
 <?php
+
 class Mysql {
 
   protected $server = '';

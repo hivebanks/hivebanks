@@ -1,5 +1,6 @@
 <?php
 
+
 require_once('mysql.php');
 require_once('db_connect.php');
 require_once('config_db_bind.php');
