@@ -17,6 +17,7 @@ $(function () {
                     $('.phoneTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.phoneBind').fadeOut('fast');
                     $('.phoneModify').fadeIn('fast');
+                    $(".phoneInfo").text($(this)[0].bind_info);
                     $('.phoneIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
@@ -25,6 +26,7 @@ $(function () {
                     $('.emailTime').removeClass('i18n').text($(this)[0].ctime).addClass('isTime');
                     $('.emailBind').fadeOut('fast');
                     $('.emailModify').fadeIn('fast');
+                    $(".emailInfo").text($(this)[0].bind_info);
                     $('.emailIcon').addClass('greenIcon icon-duihao').removeClass('symbol icon-gantanhao');
                 }
 
