@@ -1,4 +1,5 @@
 <?php
+
 require_once "../../../inc/common.php";
 require_once "db/la_admin.php";
 header("cache-control:no-cache,must-revalidate");
