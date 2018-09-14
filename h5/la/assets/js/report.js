@@ -128,7 +128,8 @@ $(function () {
     }
 
     //折线图
-        var dataChart = [{ y: '2018', u: sum_us_base_amount,  b: sum_ba_base_amount, c: sum_ca_base_amount}];
+    var user = 2000, ba = 3000, ca = 4000;
+        var dataChart = [{ y: '2018', u: user,  b: ba, c: ca}];
     function LineFun(dataChart){
         Morris.Line({
             element: 'morris-line-chart',
