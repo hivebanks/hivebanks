@@ -1,4 +1,5 @@
 <?php
+
 require_once '../inc/common.php';
 require_once 'db/us_asset_bit_account.php';
 require_once '../inc/judge_format.php';
