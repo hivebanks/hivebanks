@@ -158,6 +158,7 @@ function fmoney(s, n) {
 };
 
 //Get phone verification code
+var timer = null;
 function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     //Get country code
     var country_code = $('.selected-dial-code').text().split("+")[1];
@@ -172,8 +173,13 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
             return;
         }
     }, function (response) {
-        GetImgCode();
         LayerFun(response.errcode);
+        clearInterval(timer);
+        $this.attr("disabled", false);
+        $('.sixty').fadeOut('fast');
+        $('.getCodeText').attr('name', 'getCode');
+        GetImgCode();
+        execI18n();
         return;
     });
 };
@@ -184,7 +190,6 @@ function setTime($this) {
     $('.getCodeText').attr('name', 'sixty');
     $this.attr("disabled", true);
     execI18n();
-    var timer = null;
     timer = setInterval(function () {
         if (countdown != 0) {
             countdown--;

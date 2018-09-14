@@ -178,6 +178,7 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         $('.sixty').fadeOut('fast');
         $('.getCodeText').attr('name', 'getCode');
         execI18n();
+        GetImgCode();
         return;
     });
 };
