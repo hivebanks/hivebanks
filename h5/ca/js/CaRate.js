@@ -70,6 +70,7 @@ $(function () {
                     ShowLoading("hide");
                     ActiveClick($this, btnText);
                     LayerFun('setSuccess');
+                    GetRateFun();
                     return;
                 }
             }, function (response) {

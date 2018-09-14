@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaRate.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaRate.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +37,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CaProxyAuthentication.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CaProxyAuthentication.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaRate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaRate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="349" column="21" selection-start-line="349" selection-start-column="21" selection-end-line="349" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaRate.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
+              <folding>
+                <element signature="e#162#334#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +95,7 @@
       <find>url</find>
       <find>ruleBtn</find>
       <find>rul</find>
+      <find>input-group</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,9 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/ca/sms_send.php" />
-        <option value="$PROJECT_DIR$/api/la/admin/configure/set_error_code_config.php" />
-        <option value="$PROJECT_DIR$/api/ba/cfm_email.php" />
         <option value="$PROJECT_DIR$/api/ba/mst_reg_email.php" />
         <option value="$PROJECT_DIR$/api/ca/cfm_email.php" />
         <option value="$PROJECT_DIR$/api/user/cfm_email.php" />
@@ -131,6 +152,9 @@
         <option value="$PROJECT_DIR$/h5/ba/css/common.css" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaRecharge.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js" />
+        <option value="$PROJECT_DIR$/h5/ca/CaRate.html" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaRate.js" />
       </list>
     </option>
   </component>
@@ -240,12 +264,12 @@
       <workItem from="1536809004158" duration="633000" />
       <workItem from="1536831037757" duration="288000" />
       <workItem from="1536895954212" duration="1595000" />
-      <workItem from="1536901017578" duration="1790000" />
+      <workItem from="1536901017578" duration="2095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48111000" />
+    <option name="totallyTimeSpent" value="48416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -257,7 +281,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2553648" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -279,16 +303,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/la/caRechargeList.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaAuthentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="264" column="21" lean-forward="true" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaAuthentication.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -633,8 +647,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaRate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="349" column="21" selection-start-line="349" selection-start-column="21" selection-end-line="349" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#162#334#0" />
+          </folding>
         </state>
       </provider>
     </entry>
