@@ -1,4 +1,5 @@
 <?php
+
 require_once "db/la_black_list.php";
 require_once "../../../inc/common.php";
 
