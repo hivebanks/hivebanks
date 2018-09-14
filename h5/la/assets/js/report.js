@@ -151,9 +151,7 @@ $(function () {
             pointFillColors: ['#ffffff'],
             pointStrokeColors: ['black'],
             lineColors: ['green', 'red', 'blue']
-
         });
     }
-
     // LineFun(dataChart);
 });
