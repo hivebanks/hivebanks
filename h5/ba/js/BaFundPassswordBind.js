@@ -75,7 +75,7 @@ $(function () {
             if (response.errcode == '0') {
                 ActiveClick($this, btnText);
                 ShowLoading("hide");
-                LayerFun('bind');
+                LayerFun('bindSuccess');
                 window.location.href = 'BaSecurity.html';
             }
         }, function (response) {
