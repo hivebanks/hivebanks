@@ -62,7 +62,7 @@ $(function () {
         getOpenServerData = {"key_code": key_code};
     $.get(getOpenServerUrl, getOpenServerData, function (response) {
         console.log(response);
-    }, "json");
+    }, "jsonp");
     // GetOpenServer(key_code, function (response) {
     //     if(response.errcode == "0"){
     //         console.log(response);
