@@ -9,7 +9,7 @@ $(function () {
                 $('.enablePending').attr('name', 'enablePending');
                 execI18n();
             }
-            $('.tradingHash').text(data[0].tx_hash);
+            $('.tx_hash').text(data[0].tx_hash);
             $('.caWithdrawAmount').text(data[0].lgl_amount);
             $('.handlingFee').text(data[0].tx_fee);
             $('.time').text(data[0].tx_time);

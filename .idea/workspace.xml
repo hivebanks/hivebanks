@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/api/user/reg_email.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/reg_email.php" afterDir="false" />
-    </list>
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,70 +35,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reg_email.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
+      <file leaf-file-name="CaWithdrawAmount.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaWithdrawAmount.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
+            <state relative-caret-position="525">
+              <caret line="133" column="73" selection-start-line="133" selection-start-column="73" selection-end-line="133" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaWithdrawAmount.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaWithdrawAmount.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-575">
+              <caret line="166" column="49" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="123" selection-start-line="123" selection-end-line="123" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="243" column="16" selection-start-line="243" selection-end-line="243" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="125" selection-start-line="125" selection-end-line="125" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="248" column="16" selection-start-line="248" selection-end-line="248" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaProxyAuthentication.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaRate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaRate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8004">
+              <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaRate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#162#334#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="mst_reg_email.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/ba/mst_reg_email.php">
+      <file leaf-file-name="BaMarginRechargeAddress.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3611">
-              <caret line="157" selection-start-line="157" selection-end-line="160" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mst_reg_email.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/ca/mst_reg_email.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3519">
-              <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cfm_email.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/ca/cfm_email.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2622">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cfm_email.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/ba/cfm_email.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2875">
-              <caret line="125" selection-start-line="125" selection-end-line="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cfm_email_preform.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/ba/cfm_email_preform.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="23" selection-start-line="2" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="667">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -142,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/ca/cfm_email.php" />
-        <option value="$PROJECT_DIR$/api/user/cfm_email.php" />
         <option value="$PROJECT_DIR$/api/ca/mst_reg_email.php" />
         <option value="$PROJECT_DIR$/api/inc/config.php" />
         <option value="$PROJECT_DIR$/h5/user/js/reset.js" />
@@ -193,6 +214,8 @@
         <option value="$PROJECT_DIR$/h5/ca/js/CaRate.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js" />
         <option value="$PROJECT_DIR$/api/user/reg_email.php" />
+        <option value="$PROJECT_DIR$/h5/ca/CaWithdrawAmount.html" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawAmount.js" />
       </list>
     </option>
   </component>
@@ -205,7 +228,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="-10" />
     <option name="y" value="108" />
     <option name="width" value="1920" />
@@ -217,6 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,7 +263,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -290,31 +313,42 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50270000" />
+    <option name="totallyTimeSpent" value="50274000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="87" width="1536" height="668" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25913396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25894135" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25913396" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +472,7 @@
     <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
-          <caret line="190" column="19" selection-start-line="190" selection-end-line="190" selection-end-column="19" />
+          <caret line="125" selection-start-line="125" selection-end-line="125" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -458,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="145" column="11" selection-start-line="145" selection-end-line="145" selection-end-column="11" />
+        <state relative-caret-position="272">
+          <caret line="123" selection-start-line="123" selection-end-line="123" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -547,10 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,15 +677,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="276">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/CaRate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="349" column="21" selection-start-line="349" selection-start-column="21" selection-end-line="349" selection-end-column="21" />
+        <state relative-caret-position="8004">
+          <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -663,12 +693,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#162#334#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
+        <state relative-caret-position="667">
           <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
         </state>
       </provider>
