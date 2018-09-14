@@ -33,7 +33,7 @@ $(function () {
                     '<td><span>' + data[i].tx_time + '</span></td>' +
                     '<td>' +
                     '<a class="btn btn-success btn-sm confirmBtn">' +
-                    '<span class="i18n" name="confirmations">Confirmations</span>' +
+                    '<span class="i18n" name="handle">handle</span>' +
                     '</a>' +
                     '<span class="qa_id none">' + data[i].qa_id + '</span>' +
                     '</td>' +
