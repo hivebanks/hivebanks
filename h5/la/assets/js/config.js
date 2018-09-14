@@ -68,7 +68,8 @@ $(function () {
                 if(data.email_service == "1" && data.flag == "1"){
                     $(".noOpenEmail").remove();
                     $(".alreadyOpenEmail").removeClass("none");
-                    $(".iconEmail").removeClass("icon-gantanhao, color-red").addClass("icon-duihao, color-green");
+                    $(".iconEmail").removeClass("color-red").addClass("color-green");
+                    $(".iconEmail").removeClass("icon-gantanhao").addClass("icon-duihao");
                 }
             }
         }, "jsonp");
