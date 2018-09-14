@@ -202,7 +202,7 @@ $body ="<h3>亲爱的用户：</h3>当您收到这封邮件时，说明您的注
 $encryption_code = $us_id . ',' . $email . ',' . $timestamp . ',' . $salt;
 $body .=  urlencode($des->encrypt($encryption_code, $key))."
 <br>
-<p style='color: red;font-weight: 800'>安全提示</p><br>
+<h3>安全提示</h3>
 <span>*不要把您的密码以及本链接告诉任何人！</span><br>
 <span>*开启二次验证（谷歌验证或短信验证)！</span><br>
 <span>如果此活动不是您本人操作，请您尽快联系风赢客服。 </span><br>
