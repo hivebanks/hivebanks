@@ -1,4 +1,5 @@
 <?php
+
 require_once '../inc/common.php';
 require_once 'db/ca_rate_setting.php';
 require_once 'db/ca_asset_account.php';
