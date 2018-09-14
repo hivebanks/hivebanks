@@ -60,13 +60,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaReset.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/BaReset.html">
+      <file leaf-file-name="CaRegister.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRegister.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="200" column="21" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
+            <state relative-caret-position="-2205">
               <folding>
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +93,8 @@
       <file leaf-file-name="CaRegister.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ca/CaRegister.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            <state relative-caret-position="479">
+              <caret line="250" column="22" selection-start-line="250" selection-start-column="22" selection-end-line="250" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -109,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaReset.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CaReset.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ca/js/CaReset.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="87" column="15" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="15" />
+            <state relative-caret-position="311">
+              <caret line="221" column="39" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -149,7 +148,6 @@
       <find>recharge_ctime</find>
       <find>baRechargeCodeTable</find>
       <find>验证码</find>
-      <find>phoneCodeBtn</find>
       <find>enablePhoneBtn</find>
       <find>selected-dial-code</find>
       <find>withdrawAddress</find>
@@ -170,6 +168,7 @@
       <find>phoneRegisterBox</find>
       <find>phoneLoginBox</find>
       <find>密码重置(邮箱)</find>
+      <find>phoneCodeBtn</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -181,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
         <option value="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" />
         <option value="$PROJECT_DIR$/h5/ba/BaRecharge.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaRechargeAmount.html" />
@@ -232,6 +230,7 @@
         <option value="$PROJECT_DIR$/h5/ca/CaRegister.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaReset.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaLogin.html" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaReset.js" />
       </list>
     </option>
   </component>
@@ -332,12 +331,12 @@
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
-      <workItem from="1536907331342" duration="4991000" />
+      <workItem from="1536907331342" duration="5286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56115000" />
+    <option name="totallyTimeSpent" value="56410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -371,9 +370,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaGoogleVerification.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaLogin.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -676,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaRegister.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaReset.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4356" />
@@ -707,8 +696,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaReset.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="87" column="15" lean-forward="true" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="15" />
+        <state relative-caret-position="311">
+          <caret line="221" column="39" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaRegister.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="250" column="22" selection-start-line="250" selection-start-column="22" selection-end-line="250" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRegister.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2205">
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
