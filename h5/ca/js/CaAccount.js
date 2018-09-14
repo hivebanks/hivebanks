@@ -8,9 +8,13 @@ $(function(){
             $('.base_amount').text(response.base_amount);
             $('.ca_account').text(response.ca_account);
             $('.lock_amount').text(response.lock_amount);
-            $('.security_level').text(response.security_level);
             $('.count_recharge').text(response.count_recharge);
             $('.count_withdraw').text(response.count_withdraw);
+            if(response.security_level == null){
+                $('.security_level').text("0");
+            }else {
+                $('.security_level').text(response.security_level);
+            }
             SetCookie('ca_account', response.ca_account);
             SetCookie('ca_id', response.ca_id);
         }
