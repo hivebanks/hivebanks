@@ -58,9 +58,9 @@ $(function () {
     });
 
     //get open server
-    var getOpenServerUrl= "http://agent_service.fnying.com/action/get_common_config.php",
-        getOpenServerData = {"key_code" : key_code};
-    $.post(getOpenServerUrl,getOpenServerData, function (response) {
+    var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
+        getOpenServerData = {"key_code": key_code};
+    $.post(getOpenServerUrl, getOpenServerData, function (response) {
         console.log(response);
     }, "json");
     // GetOpenServer(key_code, function (response) {
