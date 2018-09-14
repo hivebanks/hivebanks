@@ -57,6 +57,20 @@ $(function () {
         LayerFun(response.errcode);
     });
 
+    //get open server
+    var getOpenServerUrl= "http://agent_service.fnying.com/action/get_common_config.php",
+        getOpenServerData = {"key_code" : key_code};
+    $.post(getOpenServerUrl,getOpenServerData, function (response) {
+        console.log(response);
+    }, "json");
+    // GetOpenServer(key_code, function (response) {
+    //     if(response.errcode == "0"){
+    //         console.log(response);
+    //     }
+    // }, function (response) {
+    //     layer.msg(response.errmsg);
+    // });
+
     //select input
     $("input[type='radio']").change(function () {
         $(this).parent().siblings().removeClass("none");
