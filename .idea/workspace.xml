@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js" afterDir="false" />
-    </list>
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -286,12 +284,12 @@
       <workItem from="1536809004158" duration="633000" />
       <workItem from="1536831037757" duration="288000" />
       <workItem from="1536895954212" duration="1595000" />
-      <workItem from="1536901017578" duration="2594000" />
+      <workItem from="1536901017578" duration="2800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48915000" />
+    <option name="totallyTimeSpent" value="49121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
