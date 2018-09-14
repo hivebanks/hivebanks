@@ -38,8 +38,8 @@
       <file leaf-file-name="reg_email.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="198" column="21" lean-forward="true" selection-start-line="198" selection-start-column="21" selection-end-line="198" selection-end-column="21" />
+            <state relative-caret-position="255">
+              <caret line="206" column="25" lean-forward="true" selection-start-line="206" selection-start-column="25" selection-end-line="206" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -187,10 +187,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="803" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -273,7 +272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44602000" />
+    <option name="totallyTimeSpent" value="44637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="314" y="66" width="1188" height="580" extended-state="0" />
