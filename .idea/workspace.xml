@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/config.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +36,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="85" column="131" selection-start-line="85" selection-start-column="131" selection-end-line="85" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -66,6 +78,7 @@
       <find>handle</find>
       <find>confirmations</find>
       <find>处理</find>
+      <find>交易</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,8 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/ba/js/BaAuthentication.js" />
-        <option value="$PROJECT_DIR$/h5/ca/js/CaAuthentication.js" />
         <option value="$PROJECT_DIR$/api/inc/common_agent_sms_service.php" />
         <option value="$PROJECT_DIR$/h5/ba/css/BaRate.css" />
         <option value="$PROJECT_DIR$/h5/ba/BaRate.html" />
@@ -95,7 +106,6 @@
         <option value="$PROJECT_DIR$/h5/ca/js/CaAccount.js" />
         <option value="$PROJECT_DIR$/h5/la/errCodeManage.html" />
         <option value="$PROJECT_DIR$/h5/la/assets/js/common.js" />
-        <option value="$PROJECT_DIR$/h5/la/assets/js/config.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/main.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/main.js" />
         <option value="$PROJECT_DIR$/h5/user/js/main.js" />
@@ -114,7 +124,6 @@
         <option value="$PROJECT_DIR$/h5/ca/CaWithdrawAmount.html" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawAmount.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawInfo.js" />
-        <option value="$PROJECT_DIR$/h5/ca/CaWithdrawInfo.html" />
         <option value="$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties" />
         <option value="$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js" />
@@ -125,6 +134,10 @@
         <option value="$PROJECT_DIR$/h5/ba/js/BaMarginRechargePending.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaRechargePending.js" />
+        <option value="$PROJECT_DIR$/h5/ca/CaWithdrawInfo.html" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawAlready.js" />
+        <option value="$PROJECT_DIR$/h5/ca/CaWithdrawAlready.html" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/config.js" />
       </list>
     </option>
   </component>
@@ -149,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,66 +179,27 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ba" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ba" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ba" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ba" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ba" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ba" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-              <item name="zh-CN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ca" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="ca" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -272,16 +247,18 @@
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
+      <workItem from="1536907331342" duration="555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51124000" />
+    <option name="totallyTimeSpent" value="51679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26180258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2653791" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -309,20 +286,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/user/phoneBind.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="217" column="48" lean-forward="true" selection-start-line="217" selection-start-column="48" selection-end-line="217" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/phoneModify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="244" column="31" lean-forward="true" selection-start-line="244" selection-start-column="31" selection-end-line="244" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/phoneModify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -405,13 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/la/admin/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -423,20 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="171" column="21" lean-forward="true" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="180" column="21" lean-forward="true" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -569,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaWithdrawInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="126" column="65" selection-start-line="126" selection-start-column="65" selection-end-line="126" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/CaRechargePending.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -586,24 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="264" column="6" selection-start-line="264" selection-end-line="264" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
           <caret line="269" column="6" selection-start-line="269" selection-end-line="269" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -656,6 +577,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaWithdrawInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaWithdrawAlready.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="165" column="11" selection-start-line="165" selection-end-line="165" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaWithdrawAlready.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="88" column="81" selection-start-line="88" selection-start-column="81" selection-end-line="88" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="180" column="21" lean-forward="true" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="85" column="131" selection-start-line="85" selection-start-column="131" selection-end-line="85" selection-end-column="131" />
         </state>
       </provider>
     </entry>
