@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/report.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,8 +83,8 @@
       <file leaf-file-name="report.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/la/assets/js/report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="236">
+              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -193,6 +193,7 @@
         <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/report.js" />
       </list>
     </option>
   </component>
@@ -301,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41393000" />
+    <option name="totallyTimeSpent" value="41810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -696,8 +697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/la/assets/js/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="236">
+          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
         </state>
       </provider>
     </entry>
