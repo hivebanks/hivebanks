@@ -93,7 +93,7 @@ $(function () {
                 $('.ruleBtn').text(time + 's').css("color", "#ffffff");
             } else {
                 clearInterval(timer);
-                $('.ruleBtn').attr('disabled', false).css("color", "#82ca9c");
+                $('.ruleBtn').attr('disabled', false);
                 execI18n();
             }
         }, 1000);
