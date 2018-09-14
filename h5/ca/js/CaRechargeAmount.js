@@ -73,7 +73,7 @@ $(function () {
         window.location.href = 'CaRechargeAddress.html?ca_channel=' + ca_channel + '&name=' + name + '&card_nm=' + card_nm + '&bit_amount=' + bit_amount + '&base_amount=' + base_amount;
     });
 
-    //输入框绑定
+    //input
     $('.bit_amount_input').bind('input', 'propertychange', function () {
         $('.base_amount_input').val($('.bit_amount_input').val() / rate);
     });

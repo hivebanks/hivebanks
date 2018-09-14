@@ -19,9 +19,11 @@ $(function () {
     };
 
     //Get Asset Balance Report
+    var sum_la_base_amount = '', sum_us_base_amount = '', sum_ba_base_amount = '', sum_ca_base_amount = '',
+        ba_register_count, ca_register_count, us_register_count, tr = '';
     function GetAssetsReportFun() {
-        var sum_la_base_amount = '', sum_us_base_amount = '', sum_ba_base_amount = '', sum_ca_base_amount = '',
-            ba_register_count, ca_register_count, us_register_count, tr = '';
+        // var sum_la_base_amount = '', sum_us_base_amount = '', sum_ba_base_amount = '', sum_ca_base_amount = '',
+        //     ba_register_count, ca_register_count, us_register_count, tr = '';
         GetAssetsReport(token, function (response) {
             if(response.errcode == '0' ){
                 var data = response.rows;
@@ -126,7 +128,7 @@ $(function () {
     }
 
     //折线图
-        var dataChart = [{ y: '2016', u: 500, b: 9000, c: 5000},{ y: '2017', u: 1065,  b: 60000, c: 5000},{ y: '2018', u: 1500,  b: 30000, c: 8000}];
+        var dataChart = [{ y: '2018', u: sum_us_base_amount,  b: sum_ba_base_amount, c: sum_ca_base_amount}];
     function LineFun(dataChart){
         Morris.Line({
             element: 'morris-line-chart',
