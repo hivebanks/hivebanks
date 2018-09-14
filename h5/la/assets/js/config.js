@@ -70,18 +70,21 @@ $(function () {
                     $(".alreadyOpenEmail").removeClass("none");
                     $(".iconEmail").removeClass("color-red").addClass("color-green");
                     $(".iconEmail").removeClass("icon-gantanhao").addClass("icon-duihao");
+                    $(".radioEmail").attr("disabled", true);
                 }
                 if(data.sms_service == "1" && data.flag == "1"){
                     $(".noOpenSms").remove();
                     $(".alreadyOpenSms").removeClass("none");
                     $(".iconSms").removeClass("color-red").addClass("color-green");
                     $(".iconSms").removeClass("icon-gantanhao").addClass("icon-duihao");
+                    $(".radioSms").attr("disabled", true);
                 }
                 if(data.upload_file_service == "1" && data.flag == "1"){
                     $(".noOpenFile").remove();
                     $(".alreadyOpenFile").removeClass("none");
                     $(".iconFile").removeClass("color-red").addClass("color-green");
                     $(".iconFile").removeClass("icon-gantanhao").addClass("icon-duihao");
+                    $(".radioFile").attr("disabled", true);
                 }
                 if(data.email_service == "1" && data.sms_service == "1" &&
                     data.upload_file_service == "1" && data.flag == "1"){
