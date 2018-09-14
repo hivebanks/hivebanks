@@ -102,7 +102,7 @@ $(function () {
                 $('.ruleBtn').text(time + 's');
             } else {
                 clearInterval(timer);
-                $('.ruleBtn').removeClass('disabled');
+                $('.ruleBtn').removeClass('disabled', false);
                 execI18n();
             }
         }, 1000);
