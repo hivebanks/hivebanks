@@ -74,7 +74,7 @@ $(function () {
         var $this = $(this), btnText = $this.text();
         if (DisableClick($this)) return;
         ShowLoading("show");
-        LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, function (response){//锁定
+        LockAmount(token, ba_id, base_amount, bit_amount, bit_type, us_level, function (response){//lock
             if(response.errcode == '0'){
                 ShowLoading("hide");
                 ActiveClick($this, btnText);
