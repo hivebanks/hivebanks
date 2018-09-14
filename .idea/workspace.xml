@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaMarginRechargePending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaMarginRechargePending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaMarginWithdrawPending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaMarginWithdrawPending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaRechargePending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaRechargePending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaRechargePending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaRechargePending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties" afterDir="false" />
-    </list>
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,98 +34,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CaWithdrawPending.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CaRechargePending.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRechargePending.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="210" column="6" selection-start-line="210" selection-end-line="210" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaMarginWithdrawPending.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginWithdrawPending.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaMarginRechargePending.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginRechargePending.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaWithdrawPending.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaRechargePending.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRechargePending.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_en.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="210" column="6" selection-start-line="210" selection-end-line="210" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="264" column="6" selection-start-line="264" selection-end-line="264" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_en.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="269" column="6" selection-start-line="269" selection-end-line="269" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -239,7 +137,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-10" />
     <option name="y" value="108" />
     <option name="width" value="1920" />
@@ -373,12 +271,12 @@
       <workItem from="1536895954212" duration="1595000" />
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
-      <workItem from="1536905834926" duration="828000" />
+      <workItem from="1536905834926" duration="850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51102000" />
+    <option name="totallyTimeSpent" value="51124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -756,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRechargePending.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+        <state relative-caret-position="272">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
         </state>
       </provider>
     </entry>

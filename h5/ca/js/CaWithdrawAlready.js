@@ -21,8 +21,8 @@ $(function(){
                     '<td><span>' + benchmark_type + '</span>/<span>'+ ca_currency +'</span></td>' +
                     // '<td><span>' + data[i].bit_address + '</span></td>' +
                     '<td><span>' + data[i].tx_time + '</span></td>' +
-                    '<td><input type="text" class="form-control tx_hash"></td>' +
-                    '<td><span class="i18n" name="processed">已处理</span></td>' +
+                    '<td><span>'+ data[i].tx_hash +'</span></td>' +
+                    '<td><span class="i18n" name="processed"></span></td>' +
                     '</tr>'
             });
             $('#withdrawPendingTable').html(tr);
