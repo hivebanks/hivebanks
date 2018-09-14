@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaRate.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaRate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaRate.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CaRate.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
@@ -63,6 +63,15 @@
               <folding>
                 <element signature="e#162#334#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaMarginRechargeAddress.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -104,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/ba/mst_reg_email.php" />
         <option value="$PROJECT_DIR$/api/ca/cfm_email.php" />
         <option value="$PROJECT_DIR$/api/user/cfm_email.php" />
         <option value="$PROJECT_DIR$/api/ca/mst_reg_email.php" />
@@ -155,6 +163,7 @@
         <option value="$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js" />
         <option value="$PROJECT_DIR$/h5/ca/CaRate.html" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaRate.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js" />
       </list>
     </option>
   </component>
@@ -189,6 +198,19 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="ba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="ba" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
@@ -264,12 +286,12 @@
       <workItem from="1536809004158" duration="633000" />
       <workItem from="1536831037757" duration="288000" />
       <workItem from="1536895954212" duration="1595000" />
-      <workItem from="1536901017578" duration="2364000" />
+      <workItem from="1536901017578" duration="2594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48685000" />
+    <option name="totallyTimeSpent" value="48915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -281,7 +303,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2553648" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -303,13 +325,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaAuthentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="274" column="32" selection-start-line="274" selection-start-column="32" selection-end-line="274" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/user/sms_send.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -666,6 +681,13 @@
           <folding>
             <element signature="e#162#334#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginRechargeAddress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
         </state>
       </provider>
     </entry>

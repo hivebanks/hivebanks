@@ -27,7 +27,7 @@ $(function () {
                     tr += '<tr>' +
                         '<td>'+ data[i].bit_address +'</td>' +
                         '<td>'+ bind_agent_id +'</td>' +
-                        '<td></td>' +
+                        '<td>'+ utime +'</td>' +
                         '</tr>';
                     $('#addressBox').html(tr);
                 });
