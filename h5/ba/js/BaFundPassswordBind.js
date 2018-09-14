@@ -35,7 +35,6 @@ $(function () {
             LayerFun('pleaseImgCode');
             return;
         }
-        ShowLoading("show");
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
