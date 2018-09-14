@@ -52,17 +52,22 @@ $(function () {
     GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
             key_code = response.key_code;
+            var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
+                getOpenServerData = {"key_code": key_code};
+            $.get(getOpenServerUrl, getOpenServerData, function (response) {
+                console.log(response);
+            }, "jsonp");
         }
     }, function (response) {
         LayerFun(response.errcode);
     });
 
     //get open server
-    var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
-        getOpenServerData = {"key_code": key_code};
-    $.get(getOpenServerUrl, getOpenServerData, function (response) {
-        console.log(response);
-    }, "jsonp");
+    // var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
+    //     getOpenServerData = {"key_code": key_code};
+    // $.get(getOpenServerUrl, getOpenServerData, function (response) {
+    //     console.log(response);
+    // }, "jsonp");
     // GetOpenServer(key_code, function (response) {
     //     if(response.errcode == "0"){
     //         console.log(response);
