@@ -1,30 +1,99 @@
-以亚马逊EC2实例为例的安装教程：
+Amazon server configuration tutorial
+1：Connect to the server remotely using the tools or the server's official website and switch to root
+2：Download the script to unzip and run the following command
+Get the server Generated. Pem file (AWS->EC2-> key pair -> create key pair to create new key pair
+The new key pair only needs to enter a name and the server will automatically generate the.pem file ）， Then download to the local computer and run the file path of the command ssh-i. pem (for example, my file directory: C:\Users, syc\. SSH \ Banks. Pem) server username @server IP directly login 
+sudo su (Get root authority)
+wget -O /hivebanks.tar http://doc.fnying.com/environment/hivebanks.tar && tar xvf /hivebanks.tar -C /（Download and unzip the script）
+. /loading_system.sh（Run the script）
+3：The configuration script information is as follows
+#!/bin/bash
 
-1：点击亚马逊购买流程了解详细注册购买流程
-2：登录进入亚马逊首页
-AWS->EC2->实例->启动实例 进入服务器资源配置界面
-步骤 1 选择一个适合的镜像，或者进入社区进行购买
+apt-get -y update
+# installation nginx
+apt-get -y install nginx
 
-步骤 2 选择一个适合的实例类型（该步骤完成以后可以直接审核启动，或者继续进行配置）
+# installation php
+apt-get -y update
+apt-get -y install software-properties-common
+add-apt-repository --yes ppa:ondrej/php
+apt-get -y update
+apt-get -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-xml php5.6-fpm
 
-步骤 3 进行实例信息进行配置（该步骤完成以后可以直接审核启动，或者继续进行配置）
+# installation  mysql
+DEBIAN_FRONTEND=noninteractive apt install -y mysql-server
 
+# installation git
+apt-get -y install git
 
+# installation jq
+apt-get -y install jq
 
-步骤 4 存储添加以及配置（该步骤完成以后可以直接审核启动，或者继续进行配置）
+#change mysqld.cnf
+sed -i "s/bind-address/#bind-address/g" /etc/mysql/mysql.conf.d/mysqld.cnf
+#restart mysql
+service mysql restart
 
+# change on session
+sed -i "s/session.auto_start = 0/session.auto_start = 1/g" /etc/php/5.6/fpm/php.ini
+#restartphp-fpm
+service php5.6-fpm restart
 
-步骤 5 标签添加，详细信息可以点击了解更多进行查看（该步骤完成以后可以直接审核启动，或者继续进行配置）
+# Create a file
+mkdir /alidata
+mkdir /alidata/www
+mkdir /alidata/log
+mkdir /alidata/log/nginx
+mkdir /alidata/log/hivebanks
+mkdir /alidata/www/hivebanks
+mkdir /alidata/www/h5_hivebanks
+sudo git clone https://github.com/ly-iOSer/hivebanks.git /alidata/www/hivebanks/
+sudo git clone https://github.com/ly-iOSer/h5_hivebanks.git /alidata/www/h5_hivebanks/
 
-步骤 6 配置安全组，需求配置信息如下。
+#phpCreate profile
+php /create_hivebanks_conf.php
+php /create_h5_hivebanks_conf.php
 
-步骤 7 审核启动，查看配置信息是否正确，点击确认进行启动
+# The domain name configuration
+#api_url=`cat config_url.txt | jq -r '.api_url'`
+#sed -i "s/example.com/$api_url/g" /create_hivebanks_conf.php
+#h5_url=`cat config_url.txt | jq -r '.h5_url'`
+#sed -i "s/example.com/$h5_url/g" /create_h5_hivebanks_conf.php
 
-注意：每个步骤均可跳过，如若进行手动配置，进行配置前查看服务器的最低配置要求，否则实例可能不能满足系统要求。（如若默认不满足，请进行手动配置）
-3：安全组的配置以及创建
-AWS->EC2->安全组 进入服务器安全组信息界面，查看所有安全组信息，以及创建新的安全组
+read -t 300 -p " Please enter the interface address (no http://):" api_url
+sed -i "s/example.com/$api_url/g" /etc/nginx/conf.d/hivebanks.conf
 
-创建新的安全组，主要是进行安全组的规则配置。
+read -t 300 -p " Please enter the front-end address (no http://):" h5_url
+sed -i "s/example.com/$h5_url/g" /etc/nginx/conf.d/h5_hivebanks.conf
 
-注意：一般仅需要配置出站信息即可。
-亚马逊服务器购买配置教程介绍到此结束。感谢您的使用！
+# Restart the nginx
+service nginx restart
+
+# Execute mysql to grant remote connections
+read -t 300 -p " Please enter the database password (root):" mysqlpassword
+sed -i "s/123456/$mysqlpassword/g" /set_mysql.php
+php /set_mysql.php
+
+# Give file permissions
+chown -R www-data:www-data /alidata
+chown -R www-data:www-data /alidata/www/hivebanks
+chown -R www-data:www-data /alidata/www/h5_hivebanks
+
+# Delete the file
+rm -rf /t.tar
+rm -r /loading_system.sh
+rm -r /create_hivebanks_conf.php
+rm -r /create_h5_hivebanks_conf.php
+rm -r /set_mysql.php
+
+echo " Congratulations, installed successfully..."
+
+echo " Address of the interface:"$api_url
+echo " The front-end address:"$h5_url
+echo " Database user name:"root
+echo " Database password:"$mysqlpassword
+
+You can also download the server configuration script
+The configuration process will show the following fragment, and fill in the interface address and database password according to the prompt. Configuration is done.
+Note: the database password and interface address must be filled in, otherwise the LA creation may fail. The steps to resolve the domain name to the current server are not covered. The domain name written here is truly accessible.
+The introduction to AWS server configuration ends here. Thank you for your use!
