@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/api/user/reg_email.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/reg_email.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1729153182">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="reg_email.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/user/reg_email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="198" column="12" selection-start-line="198" selection-start-column="12" selection-end-line="198" selection-end-column="12" />
+              <folding>
+                <element signature="e#20#26#0" expanded="true" />
+                <element signature="e#26#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order_ca_withdraw_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/order_ca_withdraw_list.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="sms_send.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/sms_send.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="us_channel_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/us_channel_list.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="wallet_address.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/wallet_address.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="rst_pw_phone.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/rst_pw_phone.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="config_db_bind.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/inc/config_db_bind.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/inc/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1357">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>DelCookie</find>
+      <find>DelCookie('token');</find>
+      <find>function GetCookie(name)</find>
+      <find>if (arr != null) return unescape(arr[2]);</find>
+      <find>GetLaId</find>
+      <find>getla</find>
+      <find>get key</find>
+      <find>key</find>
+      <find>id=&quot;rate&quot;</find>
+      <find>baseAgents</find>
+      <find>rate</find>
+      <find>recharge_ctime</find>
+      <find>baRechargeCodeTable</find>
+      <find>验证码</find>
+      <find>phoneCodeBtn</find>
+      <find>enablePhoneBtn</find>
+      <find>selected-dial-code</find>
+      <find>withdrawAddress</find>
+      <find>hash</find>
+      <find>getcook</find>
+      <find>get open</find>
+      <find>url</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/api/ca/us_recharge_quest.php" />
+        <option value="$PROJECT_DIR$/api/user/send_email_test.php" />
+        <option value="$PROJECT_DIR$/api/ca/sms_send.php" />
+        <option value="$PROJECT_DIR$/api/la/admin/configure/set_error_code_config.php" />
+        <option value="$PROJECT_DIR$/api/ba/cfm_email.php" />
+        <option value="$PROJECT_DIR$/api/ba/mst_reg_email.php" />
+        <option value="$PROJECT_DIR$/api/ca/cfm_email.php" />
+        <option value="$PROJECT_DIR$/api/user/cfm_email.php" />
+        <option value="$PROJECT_DIR$/api/ca/mst_reg_email.php" />
+        <option value="$PROJECT_DIR$/api/inc/config.php" />
+        <option value="$PROJECT_DIR$/h5/user/js/reset.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaReset.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/authentication.js" />
+        <option value="$PROJECT_DIR$/h5/la/baRechargeList.html" />
+        <option value="$PROJECT_DIR$/h5/la/baRegisterKyc.html" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaAuthentication.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaAuthentication.js" />
+        <option value="$PROJECT_DIR$/api/inc/common_agent_sms_service.php" />
+        <option value="$PROJECT_DIR$/h5/ba/css/BaRate.css" />
+        <option value="$PROJECT_DIR$/h5/ba/BaRate.html" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaRate.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaRecharge.js" />
+        <option value="$PROJECT_DIR$/h5/ba/BaRecharge.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/register.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/recharge.js" />
+        <option value="$PROJECT_DIR$/h5/user/recharge.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/phoneBind.js" />
+        <option value="$PROJECT_DIR$/h5/ba/BaWithdraw.html" />
+        <option value="$PROJECT_DIR$/h5/ba/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/user/phoneModify.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/phoneModify.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdraw.js" />
+        <option value="$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties" />
+        <option value="$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties" />
+        <option value="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawInfo.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/report.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaAccount.js" />
+        <option value="$PROJECT_DIR$/h5/la/errCodeManage.html" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/config.js" />
+        <option value="$PROJECT_DIR$/api/user/reg_email.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536832943091" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
+      <created>1535698033077</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535698033077</updated>
+      <workItem from="1535698034382" duration="8535000" />
+      <workItem from="1536043003323" duration="926000" />
+      <workItem from="1536044059599" duration="11869000" />
+      <workItem from="1536125821679" duration="1362000" />
+      <workItem from="1536197473730" duration="5685000" />
+      <workItem from="1536283890774" duration="10312000" />
+      <workItem from="1536301900218" duration="5932000" />
+      <workItem from="1536568490998" duration="2608000" />
+      <workItem from="1536633022672" duration="1226000" />
+      <workItem from="1536715345701" duration="3716000" />
+      <workItem from="1536809004158" duration="633000" />
+      <workItem from="1536831037757" duration="288000" />
+      <workItem from="1536895954212" duration="630000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="45267000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1536" height="864" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25169146" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/h5/user/js/reset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="144" column="52" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaReset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="246" column="54" selection-start-line="246" selection-start-column="54" selection-end-line="246" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="231" column="44" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/emailBind.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="594" column="1" lean-forward="true" selection-start-line="594" selection-start-column="1" selection-end-line="594" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="209" column="6" lean-forward="true" selection-start-line="209" selection-start-column="6" selection-end-line="209" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/baRechargeList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4439">
+          <caret line="193" column="55" selection-start-line="193" selection-start-column="55" selection-end-line="193" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/baRegisterKyc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4784">
+          <caret line="208" column="6" selection-start-line="208" selection-start-column="6" selection-end-line="208" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/caRechargeList.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaAuthentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="264" column="21" lean-forward="true" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaAuthentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="274" column="32" selection-start-line="274" selection-start-column="32" selection-end-line="274" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/sms_send.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/inc/common_agent_sms_service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/css/BaRate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaRate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="292" column="37" selection-start-line="292" selection-start-column="24" selection-end-line="292" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRecharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1180">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaRecharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="154" column="102" selection-start-line="154" selection-start-column="102" selection-end-line="154" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="117" column="47" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/addBankAddress.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="243" column="25" selection-start-line="243" selection-start-column="25" selection-end-line="243" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="192" column="46" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaWithdraw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="286" column="64" lean-forward="true" selection-start-line="286" selection-start-column="64" selection-end-line="286" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="334" column="23" selection-start-line="334" selection-start-column="23" selection-end-line="334" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/phoneBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/phoneBind.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="217" column="48" lean-forward="true" selection-start-line="217" selection-start-column="48" selection-end-line="217" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/phoneModify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="244" column="31" lean-forward="true" selection-start-line="244" selection-start-column="31" selection-end-line="244" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/phoneModify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdraw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/en/index_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="190" column="19" selection-start-line="190" selection-end-line="190" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="112" column="55" selection-start-line="112" selection-start-column="55" selection-end-line="112" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawPending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="145" column="11" selection-start-line="145" selection-end-line="145" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdrawAlready.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRecharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRechargeAmount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="103" column="65" lean-forward="true" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaAccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaMarginRechargePending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-764" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/errCodeManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/language/language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/baBindKyc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/errCodeManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="774" column="1" selection-start-line="774" selection-start-column="1" selection-end-line="774" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
