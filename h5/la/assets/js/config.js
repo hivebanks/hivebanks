@@ -65,26 +65,26 @@ $(function () {
         $.get(getOpenServerUrl, getOpenServerData, function (response) {
             if(response.errcode == "0"){
                 var data = response.rows[0];
-                if(data.email_service == "1" && data[i].flag == "1"){
+                if(data.email_service == "1" && data.flag == "1"){
                     $(".noOpenEmail").remove();
                     $(".alreadyOpenEmail").removeClass("none");
                     $(".iconEmail").removeClass("color-red").addClass("color-green");
                     $(".iconEmail").removeClass("icon-gantanhao").addClass("icon-duihao");
                 }
-                if(data.sms_service == "1" && data[i].flag == "1"){
+                if(data.sms_service == "1" && data.flag == "1"){
                     $(".noOpenSms").remove();
                     $(".alreadyOpenSms").removeClass("none");
                     $(".iconSms").removeClass("color-red").addClass("color-green");
                     $(".iconSms").removeClass("icon-gantanhao").addClass("icon-duihao");
                 }
-                if(data.upload_file_service == "1" && data[i].flag == "1"){
+                if(data.upload_file_service == "1" && data.flag == "1"){
                     $(".noOpenFile").remove();
                     $(".alreadyOpenFile").removeClass("none");
                     $(".iconFile").removeClass("color-red").addClass("color-green");
                     $(".iconFile").removeClass("icon-gantanhao").addClass("icon-duihao");
                 }
-                if(data.email_service == "1" && data[i].sms_service == "1" &&
-                    data[i].upload_file_service == "1" && data[i].flag == "1"){
+                if(data.email_service == "1" && data.sms_service == "1" &&
+                    data.upload_file_service == "1" && data.flag == "1"){
                     $(".configServeBtn").remove();
                 }
             }
