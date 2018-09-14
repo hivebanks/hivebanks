@@ -5,10 +5,7 @@
  * Date: 2018/7/29
  * Time: 下午7:57
  */
-ini_set("display_errors", "On");
-error_reporting(E_ALL | E_STRICT);
-//require_once '../../inc/db_connect.php';
-//
+
 /*
  * 执行建表语句
  */

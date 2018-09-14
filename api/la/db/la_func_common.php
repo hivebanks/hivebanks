@@ -25,7 +25,7 @@ function la_user_check($token)
     if($timestamp < $now_time){
         exit_error('114','Token timeout please retrieve!');
     }
-//var_dump($code_conf);die;
+
 //判断la是否存在
     $row = get_la_by_user($user);
     if(!$row){
