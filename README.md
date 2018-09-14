@@ -66,6 +66,7 @@ sed -i "s/example.com/$api_url/g" /etc/nginx/conf.d/hivebanks.conf
 read -t 300 -p " Please enter the front-end address (no http://):" h5_url
 sed -i "s/example.com/$h5_url/g" /etc/nginx/conf.d/h5_hivebanks.conf
 
+
 # Restart the nginx
 service nginx restart
 
