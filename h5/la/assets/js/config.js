@@ -52,22 +52,27 @@ $(function () {
     GetKeyCode(token, function (response) {
         if (response.errcode == '0') {
             key_code = response.key_code;
-            var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
-                getOpenServerData = {"key_code": key_code};
-            $.get(getOpenServerUrl, getOpenServerData, function (response) {
-                console.log(response);
-            }, "jsonp");
+            GetOpenServerFun(key_code);
         }
     }, function (response) {
         LayerFun(response.errcode);
     });
 
     //get open server
-    // var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
-    //     getOpenServerData = {"key_code": key_code};
-    // $.get(getOpenServerUrl, getOpenServerData, function (response) {
-    //     console.log(response);
-    // }, "jsonp");
+    function GetOpenServerFun(key_code) {
+        var getOpenServerUrl = "http://agent_service.fnying.com/action/get_common_config.php",
+            getOpenServerData = {"key_code": key_code};
+        $.get(getOpenServerUrl, getOpenServerData, function (response) {
+            if(response.errcode == "0"){
+                var data = response.rows[0];
+                if(data.email_service == "1" && data.flag == "1"){
+                    $(".noOpenEmail").remove();
+                    $(".alreadyOpenEmail").removeClass("none");
+                    $(".iconEmail").removeClass("icon-gantanhao, color-red").addClass("icon-duihao, color-green");
+                }
+            }
+        }, "jsonp");
+    }
     // GetOpenServer(key_code, function (response) {
     //     if(response.errcode == "0"){
     //         console.log(response);
