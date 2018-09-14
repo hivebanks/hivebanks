@@ -59,6 +59,9 @@ $(function () {
     GetUsAccountId(token, ca_channel, function (response){
         if(response.errcode == '0'){
             var data = response.rows;
+            if(data == false){
+
+            }
             $.each(data, function (i, val) {
                 option+='<option value ="'+ data[i].account_id +'">'+ data[i].lgl_address.lgl_address +'</option>';
             });
