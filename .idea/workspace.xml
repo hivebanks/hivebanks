@@ -58,8 +58,8 @@
       <file leaf-file-name="CaRate.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="253">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#162#334#0" />
               </folding>
@@ -264,12 +264,12 @@
       <workItem from="1536809004158" duration="633000" />
       <workItem from="1536831037757" duration="288000" />
       <workItem from="1536895954212" duration="1595000" />
-      <workItem from="1536901017578" duration="2095000" />
+      <workItem from="1536901017578" duration="2364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48416000" />
+    <option name="totallyTimeSpent" value="48685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -661,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="253">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#162#334#0" />
           </folding>

@@ -14,7 +14,6 @@ $(function () {
     });
 
     //get recharge withdraw rate list
-    // function GetRateFun() {
         GetRateList(token, function (response) {
             if (response.errcode == '0') {
                 var data = response.rows;
@@ -34,8 +33,6 @@ $(function () {
         }, function (response) {
             LayerFun(response.errcode);
         });
-    // }
-    // GetRateFun();
 
     //select recharge rate and withdraw rate
     $(document).on('click', 'input[name=changeRate]', function () {
@@ -69,7 +66,6 @@ $(function () {
                     ShowLoading("hide");
                     ActiveClick($this, btnText);
                     LayerFun('setSuccess');
-                    // GetRateFun();
                     location.reload();
                     return;
                 }
@@ -91,7 +87,7 @@ $(function () {
                     ShowLoading("hide");
                     ActiveClick($this, btnText);
                     LayerFun('setSuccess');
-                    GetRateFun();
+                    location.reload();
                     return;
                 }
             }, function (response) {
