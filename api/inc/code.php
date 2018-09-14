@@ -1,4 +1,5 @@
 <?php
+
   //11>设置session,必须处于脚本最顶部
   session_start();
   
