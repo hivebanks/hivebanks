@@ -128,10 +128,10 @@ $(function () {
         timer = setInterval(function () {
             if (time != 0) {
                 time--;
-                $('.ruleBtn').text(time + 's');
+                $('.ruleBtn').text(time + 's').css("color", "#ffffff");
             } else {
                 clearInterval(timer);
-                $('.ruleBtn').attr('disabled', false);
+                $('.ruleBtn').attr('disabled', false).css("color", "unset");
                 execI18n();
             }
         }, 1000);
