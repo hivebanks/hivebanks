@@ -271,7 +271,7 @@ Button
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
     outline: unset;
 }
-.btn[disabled='disabled']{
+.ruleBtn[disabled='disabled']{
     color: #ffffff;
 }
 .btn_100{
