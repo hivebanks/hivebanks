@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/h5/user/icon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/recharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/recharge.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +42,25 @@
       <file leaf-file-name="recharge.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="289" column="21" lean-forward="true" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
+            <state relative-caret-position="548">
+              <caret line="287" column="18" selection-start-line="287" selection-start-column="18" selection-end-line="287" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="e#611#2833#0" />
+                <element signature="e#2875#5098#0" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -61,15 +79,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="640">
               <caret line="912" column="1" selection-start-line="912" selection-start-column="1" selection-end-line="912" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icon.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/user/icon.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -126,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawAmount.js" />
-        <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawInfo.js" />
         <option value="$PROJECT_DIR$/h5/ca/language/i18n/zh-CN/index_zh-CN.properties" />
         <option value="$PROJECT_DIR$/h5/ca/language/i18n/en/index_en.properties" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawPending.js" />
@@ -174,9 +181,11 @@
         <option value="$PROJECT_DIR$/h5/ba/js/BaLogin.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaReset.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaRegister.js" />
-        <option value="$PROJECT_DIR$/h5/user/js/recharge.js" />
         <option value="$PROJECT_DIR$/h5/user/css/common.css" />
         <option value="$PROJECT_DIR$/h5/user/icon.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/recharge.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
       </list>
     </option>
   </component>
@@ -213,6 +222,27 @@
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
@@ -272,12 +302,12 @@
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
-      <workItem from="1536907331342" duration="7695000" />
+      <workItem from="1536907331342" duration="8249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58819000" />
+    <option name="totallyTimeSpent" value="59373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -289,7 +319,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26466382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -311,20 +341,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ba/BaRecharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="251" column="22" selection-start-line="251" selection-start-column="22" selection-end-line="251" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/BaRechargeAddress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="191" column="26" lean-forward="true" selection-start-line="191" selection-start-column="26" selection-end-line="191" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRechargeAddress.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -669,20 +685,6 @@
     <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRecharge.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="289" column="21" lean-forward="true" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -690,10 +692,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="287" column="18" selection-start-line="287" selection-start-column="18" selection-end-line="287" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/icon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="115">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#611#2833#0" />
+            <element signature="e#2875#5098#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
