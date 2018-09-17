@@ -15,8 +15,8 @@ $(function () {
     $(".time").text(time);
 
 // Icon link
-    var link_icon_js = $('<script src="//at.alicdn.com/t/font_626151_unhf9sd8sf.js"></script>');
-    link_icon_js.appendTo($('head')[0]);
+    var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
+    link.appendTo($('head')[0]);
 
 // Password strength verification
     $('#emailPass').keyup(function () {
