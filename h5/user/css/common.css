@@ -911,3 +911,11 @@ select#language{
     /*-moz-appearance:none;*/
     /*-webkit-appearance:none;*/
 }
+@font-face {
+    font-family: 'iconfont';  /* project id 626151 */
+    src: url('//at.alicdn.com/t/font_626151_unhf9sd8sf.eot');
+    src: url('//at.alicdn.com/t/font_626151_unhf9sd8sf.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_626151_unhf9sd8sf.woff') format('woff'),
+    url('//at.alicdn.com/t/font_626151_unhf9sd8sf.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_626151_unhf9sd8sf.svg#iconfont') format('svg');
+}
