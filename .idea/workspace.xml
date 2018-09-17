@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/h5/user/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/common.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +40,17 @@
       <file leaf-file-name="recharge.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            <state relative-caret-position="594">
+              <caret line="289" column="21" lean-forward="true" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -47,8 +58,8 @@
       <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/user/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="920" column="1" selection-start-line="920" selection-start-column="1" selection-end-line="920" selection-end-column="1" />
+            <state relative-caret-position="640">
+              <caret line="912" column="1" selection-start-line="912" selection-start-column="1" selection-end-line="912" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -98,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/user/reg_email.php" />
         <option value="$PROJECT_DIR$/h5/ca/CaWithdrawAmount.html" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawAmount.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaWithdrawInfo.js" />
@@ -148,6 +158,7 @@
         <option value="$PROJECT_DIR$/h5/ba/js/BaLogin.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaReset.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/BaRegister.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/recharge.js" />
         <option value="$PROJECT_DIR$/h5/user/css/common.css" />
       </list>
     </option>
@@ -243,12 +254,12 @@
       <workItem from="1536901017578" duration="2800000" />
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
-      <workItem from="1536907331342" duration="7251000" />
+      <workItem from="1536907331342" duration="7461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58375000" />
+    <option name="totallyTimeSpent" value="58585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -282,9 +293,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaProxyAuthentication.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRecharge.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -648,15 +656,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        <state relative-caret-position="594">
+          <caret line="289" column="21" lean-forward="true" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="920" column="1" selection-start-line="920" selection-start-column="1" selection-end-line="920" selection-end-column="1" />
+        <state relative-caret-position="640">
+          <caret line="912" column="1" selection-start-line="912" selection-start-column="1" selection-end-line="912" selection-end-column="1" />
         </state>
       </provider>
     </entry>
