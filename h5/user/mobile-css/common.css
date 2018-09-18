@@ -656,7 +656,7 @@ section.footer{
 }
 .left-row{
     border-bottom: 1px solid #999999;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
 }
 .footerTL>ul{
     flex-wrap:wrap;
@@ -672,13 +672,8 @@ section.footer{
 .footerTL li a:hover{
     color: #4CC2E4;
 }
-.footerTR i{
-    margin:0 1%;
-    font-size: 18px;
-}
-.footerTR i:hover{
-    color: #ffffff;
-    cursor: pointer;
+.footerIconBox {
+    text-align: left;
 }
 .hint{
     margin-top: 2rem;

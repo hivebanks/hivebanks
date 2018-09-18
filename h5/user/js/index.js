@@ -34,6 +34,13 @@ $(function () {
             window.location.href = 'ca/CaLogin.html';
         }
     });
+    $('.usLogin').click(function () {
+        if (user_token || login_us) {
+            window.location.href = 'user/account.html';
+        }else {
+            window.location.href = 'user/login.html';
+        }
+    });
 
     $('.toAccountBtn').click(function () {
         if (login_us || user_token) {

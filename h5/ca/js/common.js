@@ -795,3 +795,4 @@ window.onload = function () {
         loading.parentNode.removeChild(loading);
     }
 };
+$('[data-toggle="tooltip"]').tooltip()

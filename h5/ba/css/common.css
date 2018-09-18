@@ -707,7 +707,7 @@ section.footer {
 
 .left-row {
     border-bottom: 1px solid #999999;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
 }
 
 .footerTL li {
@@ -723,22 +723,27 @@ section.footer {
     color: #82ca9c;
 }
 
-/*.footerTR{
-    text-align: right;
-}*/
-.footerTR i {
-    margin: 0 1%;
-    font-size: 14px;
+.footerIconBox {
+    width:50%;
 }
 
-.footerTR i:hover {
+.footerIconBox a{
+    color: #b9c4ce;
+    margin: 0 1%;
+}
+
+.footerIconBox i {
+    margin: 0 1%;
+    font-size: 1.5rem;
+}
+
+.footerIconBox i:hover {
     color: #82ca9c;
     cursor: pointer;
 }
 
 .footer-copyright {
-    padding: 2rem 0 0 0;
-    color: #999;
+    color: #b9c4ce;
     text-align: center;
 }
 

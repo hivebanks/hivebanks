@@ -63,7 +63,7 @@ var i18nLanguage = "";
 /*
 Set the language types supported by the website
  */
-var webLanguage = ['en', 'zh-CN'];
+var webLanguage = ['en', 'zh-CN', 'ja'];
 
 /**
  * Execute page i18n method
