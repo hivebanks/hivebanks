@@ -30,7 +30,7 @@ var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd
 link.appendTo($('head')[0]);
 
 //cnt.js
-var cnt = $("<script src='../../assets/js/cnt.js'></script>");
+var cnt = $("<script src='../assets/js/cnt.js'></script>");
 cnt.appendTo($("head"));
 
 //layer prompt

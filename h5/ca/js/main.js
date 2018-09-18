@@ -19,7 +19,7 @@ $(function () {
     link.appendTo($('head')[0]);
 
     //cnt.js
-    var cnt = $("<script src='../../assets/js/cnt.js'></script>");
+    var cnt = $("<script src='../assets/js/cnt.js'></script>");
     cnt.appendTo($("head"));
 
 // Password strength verification
