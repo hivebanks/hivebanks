@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,20 +37,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="account.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/user/account.html">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="345" column="87" selection-start-line="345" selection-start-column="79" selection-end-line="345" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/user/language/i18n/zh-CN/index_zh-CN.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="315" column="8" selection-start-line="315" selection-end-line="315" selection-end-column="8" />
+            <state relative-caret-position="277">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+              <folding>
+                <element signature="e#611#2833#0" />
+                <element signature="e#2875#5098#0" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,9 +154,9 @@
         <option value="$PROJECT_DIR$/h5/user/js/recharge.js" />
         <option value="$PROJECT_DIR$/h5/la/assets/js/main.js" />
         <option value="$PROJECT_DIR$/h5/user/css/common.css" />
-        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
         <option value="$PROJECT_DIR$/h5/user/recharge.html" />
         <option value="$PROJECT_DIR$/h5/user/account.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
       </list>
     </option>
   </component>
@@ -203,24 +204,7 @@
               <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-              <item name="i18n" type="462c0819:PsiDirectoryNode" />
-              <item name="zh-CN" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -276,12 +260,12 @@
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
       <workItem from="1536907331342" duration="9229000" />
-      <workItem from="1537196946602" duration="403000" />
+      <workItem from="1537196946602" duration="595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60756000" />
+    <option name="totallyTimeSpent" value="60948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -315,9 +299,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaWithdraw.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ba/BaWithdrawAlready.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -394,6 +375,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="168" column="24" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
+          <folding>
+            <element signature="e#603#2825#0" />
+            <element signature="e#2867#5090#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -638,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2166">
@@ -659,6 +641,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="345" column="87" selection-start-line="345" selection-start-column="79" selection-end-line="345" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/language/i18n/zh-CN/index_zh-CN.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -666,10 +655,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/account.html">
+    <entry file="file://$PROJECT_DIR$/h5/assets/js/cnt.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="345" column="87" selection-start-line="345" selection-start-column="79" selection-end-line="345" selection-end-column="87" />
+        <state relative-caret-position="277">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="e#611#2833#0" />
+            <element signature="e#2875#5098#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

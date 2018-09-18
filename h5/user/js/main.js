@@ -20,6 +20,7 @@ $(function () {
 
     //cnt.js
     var cnt = $("<script src='../../assets/js/cnt.js'></script>");
+    cnt.appendTo($("head"));
 
 // Password strength verification
     $('#emailPass').keyup(function () {
