@@ -18,6 +18,10 @@ $(function () {
     var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
     link.appendTo($('head')[0]);
 
+    //cnt.js
+    var cnt = $("<script src='../../assets/js/cnt.js'></script>");
+    cnt.appendTo($("head"));
+
 // Password strength verification
     $('#emailPass').keyup(function () {
         $('.email-pw-strength').css('display', 'block');

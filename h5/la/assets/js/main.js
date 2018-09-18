@@ -29,13 +29,17 @@ $(function () {
 var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
 link.appendTo($('head')[0]);
 
+//cnt.js
+var cnt = $("<script src='../../assets/js/cnt.js'></script>");
+cnt.appendTo($("head"));
+
 //layer prompt
 function LayerFun(type) {
-    if(type == "114"){
+    if (type == "114") {
         window.location.href = "login.html";
         return;
     }
-    layer.msg('<span class="i18n" name="'+ type +'"></span>');
+    layer.msg('<span class="i18n" name="' + type + '"></span>');
     execI18n();
 }
 
@@ -51,12 +55,13 @@ window.onload = function () {
 
 function GetLaNameCookie(name) {
     var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
-    if (arr != null){
+    if (arr != null) {
         return unescape(arr[2]);
-    }else {
+    } else {
         return null;
     }
 }
+
 $('.la_name').text(GetLaNameCookie('la_name'));
 
 //email address
@@ -91,7 +96,7 @@ function EmailList() {
 function GetDataEmpty(element, num) {
     var tr = '';
     tr = '<tr>' +
-        '<td colspan="'+ num +'" style="line-height: unset!important;"><i class="iconfont icon-noData" style="font-size: 10rem"></i></td>' +
+        '<td colspan="' + num + '" style="line-height: unset!important;"><i class="iconfont icon-noData" style="font-size: 10rem"></i></td>' +
         '</tr>';
     $('#' + element).html(tr);
     return;
@@ -101,7 +106,7 @@ function GetDataEmpty(element, num) {
 function GetDataFail(element, num) {
     var tr = '';
     tr = '<tr>' +
-        '<td colspan="'+ num +'" style="line-height: unset!important;"><i class="iconfont icon-loadFai" style="font-size: 10rem"></i></td>' +
+        '<td colspan="' + num + '" style="line-height: unset!important;"><i class="iconfont icon-loadFai" style="font-size: 10rem"></i></td>' +
         '</tr>';
     $('#' + element).html(tr);
 }

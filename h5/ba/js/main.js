@@ -18,6 +18,10 @@ $(function () {
     var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
     link.appendTo($('head')[0]);
 
+    //cnt.js
+    var cnt = $("<script src='../../assets/js/cnt.js'></script>");
+    cnt.appendTo($("head"));
+
 // Password strength verification
     $('#emailPass').keyup(function () {
         $('.email-pw-strength').css('display', 'block');
@@ -159,6 +163,7 @@ function fmoney(s, n) {
 
 //Get phone verification code
 var timer = null;
+
 function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     //Get country code
     var country_code = $('.selected-dial-code').text().split("+")[1];
@@ -238,7 +243,7 @@ function EmailList() {
 
 //layer prompt
 function LayerFun(type) {
-    if(type == "114"){
+    if (type == "114") {
         DelCookie("ba_token");
         window.location.href = "login.html";
         return;
@@ -277,10 +282,10 @@ var spinner = new Spinner(opts);
 
 //show loading
 function ShowLoading(type) {
-    if(type == "show"){
+    if (type == "show") {
         spinner.spin(target);
     }
-    if(type == "hide"){
+    if (type == "hide") {
         spinner.spin();
     }
 }
