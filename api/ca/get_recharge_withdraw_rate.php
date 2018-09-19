@@ -51,7 +51,8 @@ foreach ($rows as $row){
     $rtn_recharge_row['recharge_min_amount'] = floatval($recharge_row['min_amount']) * $recharge_row['base_rate'] / get_la_base_unit();
     $rtn_recharge_row['recharge_max_amount'] = floatval($recharge_row['max_amount']) * $recharge_row['base_rate'] / get_la_base_unit();
     $rtn_recharge_row['recharge_us_level'] = $recharge_row['us_level'];
-    $rtn_recharge_row['recharge_set_time'] = date('Y-m-d H:i', $recharge_row['set_time']);
+//    $rtn_recharge_row['recharge_set_time'] = date('Y-m-d H:i', $recharge_row['set_time']);
+    $rtn_recharge_row['recharge_set_time'] = $recharge_row['limit_time'];
     $rtn_recharge_row['recharge_ca_channel'] = $recharge_row['ca_channel'];
     $rtn_recharge_row['recharge_base_rate'] = floatval($recharge_row['base_rate']);
     $news_row['recharge_row'] = $rtn_recharge_row;
@@ -63,7 +64,8 @@ foreach ($rows as $row){
         $rtn_withdraw_row['withdraw_max_amount'] = floatval($withdraw_row['max_amount'] * $recharge_row['base_rate'] / get_la_base_unit());
     }
     $rtn_withdraw_row['withdraw_us_level'] = $withdraw_row['us_level'];
-    $rtn_withdraw_row['withdraw_set_time'] = date('Y-m-d H:i', $withdraw_row['set_time']);
+//    $rtn_withdraw_row['withdraw_set_time'] = date('Y-m-d H:i', $withdraw_row['set_time']);
+    $rtn_withdraw_row['withdraw_set_time'] = $withdraw_row['limit_time'];
     $rtn_withdraw_row['withdraw_ca_channel'] = $withdraw_row['ca_channel'];
     $rtn_withdraw_row['withdraw_base_rate'] = floatval($withdraw_row['base_rate']);
     $new_row['ca_channel'] = $row['ca_channel'];
