@@ -40,14 +40,14 @@ $(function () {
         TextBind(token, text_type, text, text_hash, function (response) {
             if (response.errcode == '0') {
                 ActiveClick($this, btnText);
-                ShowLoading("show");
+                ShowLoading("hide");
                 $('#phone').val('');
                 $('#phoneCode').val('');
                 LayerFun('bindSuccess');
                 window.location.href = 'BaSecurity.html';
             }
         }, function (response) {
-            ShowLoading("show");
+            ShowLoading("hide");
             ActiveClick($this, btnText);
             LayerFun(response.errcode);
             return;
