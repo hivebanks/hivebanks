@@ -118,7 +118,7 @@ $(function () {
 });
 
 //GetCaAccount
-function GetCaAccount (){
+function GetCaAccount() {
     var ca_account = GetCookie('ca_account');
     $(".ca_account").text(ca_account);
 }
@@ -127,7 +127,7 @@ function GetCaAccount (){
 function GetDataEmpty(element, num) {
     var tr = '';
     tr = '<tr>' +
-        '<td colspan="'+ num +'" style="line-height: unset!important;"><i class="iconfont icon-noData" style="font-size: 10rem"></i></td>' +
+        '<td colspan="' + num + '" style="line-height: unset!important;"><i class="iconfont icon-noData" style="font-size: 10rem"></i></td>' +
         '</tr>';
     $('#' + element).html(tr);
     return;
@@ -137,7 +137,7 @@ function GetDataEmpty(element, num) {
 function GetDataFail(element, num) {
     var tr = '';
     tr = '<tr>' +
-        '<td colspan="'+ num +'" style="line-height: unset!important;"><i class="iconfont icon-loadFai" style="font-size: 10rem"></i></td>' +
+        '<td colspan="' + num + '" style="line-height: unset!important;"><i class="iconfont icon-loadFai" style="font-size: 10rem"></i></td>' +
         '</tr>';
     $('#' + element).html(tr);
 }
@@ -157,6 +157,7 @@ function fmoney(s, n) {
 
 //Get phone verification code
 var timer = null;
+
 function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     //Get country code
     var country_code = $('.selected-dial-code').text().split("+")[1];
@@ -166,7 +167,6 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         return;
     }
     ShowLoading("show");
-    setTime($this);
     GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
         if (response.errcode == '0') {
             ShowLoading("hide");
@@ -178,29 +178,27 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         clearInterval(timer);
         $this.attr("disabled", false);
         $('.sixty').fadeOut('fast');
-        $('.getCodeText').attr('name', 'getCode');
-        execI18n();
+        $('.getCodeText').fadeIn("fast");
         GetImgCode();
         return;
     });
 };
 
+var countdown = 60;
+
 function setTime($this) {
-    var countdown = 60;
-    $('.sixty').text(countdown).fadeIn('fast').css('color', '#fff');
-    $('.getCodeText').attr('name', 'sixty');
+    $('.sixty').text(countdown + "s").fadeIn('fast').css('color', '#fff');
+    $('.getCodeText').fadeOut("fast");
     $this.attr("disabled", true);
-    execI18n();
     timer = setInterval(function () {
         if (countdown != 0) {
             countdown--;
-            $('.sixty').text(countdown);
+            $('.sixty').text(countdown + "s");
         } else {
             clearInterval(timer);
             $this.attr("disabled", false);
             $('.sixty').fadeOut('fast');
-            $('.getCodeText').attr('name', 'getCode');
-            execI18n();
+            $('.getCodeText').fadeIn("fast");
             return;
         }
     }, 1000);
@@ -236,12 +234,12 @@ function EmailList() {
 
 //layer
 function LayerFun(type) {
-    if(type == "114"){
+    if (type == "114") {
         DelCookie("ca_token");
         window.location.href = "login.html";
         return;
     }
-    layer.msg('<span class="i18n" name="'+ type +'"></span>');
+    layer.msg('<span class="i18n" name="' + type + '"></span>');
     execI18n();
 }
 
@@ -275,10 +273,10 @@ var spinner = new Spinner(opts);
 
 //show loading
 function ShowLoading(type) {
-    if(type == "show"){
+    if (type == "show") {
         spinner.spin(target);
     }
-    if(type == "hide"){
+    if (type == "hide") {
         spinner.spin();
     }
 }

@@ -7,12 +7,13 @@ $(function () {
     GetImgCode();
 
     //Get phone verification code
-    $('.phoneCodeBtn').click(function(){
+    $('.phoneCodeBtn').click(function () {
         var bind_type = '2', $this = $(this), cfm_code = $('#phoneCfmCode').val();
-        if(cfm_code <= 0){
+        if (cfm_code <= 0) {
             LayerFun('pleaseImgCode');
             return;
         }
+        setTime($this);
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
@@ -29,7 +30,7 @@ $(function () {
             LayerFun('phoneNotEmpty');
             return;
         }
-        if($('#phoneCode').val().length <= 0){
+        if ($('#phoneCode').val().length <= 0) {
             LayerFun('codeNotEmpty');
             return;
         }
