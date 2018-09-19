@@ -13,9 +13,7 @@ $(function () {
             LayerFun('pleaseImgCode');
             return;
         }
-        var timer = setInterval(function () {
-            setTime($this, timer);
-        }, 1000);
+            setTime($this);
 
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });

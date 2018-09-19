@@ -156,7 +156,7 @@ function fmoney(s, n) {
 };
 
 //Get phone verification code
-// var timer = null;
+var timer = null;
 
 function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     //Get country code
@@ -184,27 +184,28 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
     });
 };
 
+var countdown = 60;
+
 function setTime($this, timer) {
-    var countdown = 60;
     $('.sixty').text(countdown + "s").fadeIn('fast').css('color', '#fff');
     // $('.getCodeText').attr('name', 'sixty');
     $('.getCodeText').fadeOut();
     $this.attr("disabled", true);
     // execI18n();
-    // timer = setInterval(function () {
-    if (countdown <= 0) {
-        countdown--;
-        $('.sixty').text(countdown + "s");
-    } else {
-        clearInterval(timer);
-        $this.attr("disabled", false);
-        $('.sixty').fadeOut('fast');
-        $('.getCodeText').fadeIn();
-        // $('.getCodeText').attr('name', 'getCode');
-        execI18n();
-        return;
-    }
-    // }, 1000);
+    timer = setInterval(function () {
+        if (countdown >= 0) {
+            countdown--;
+            $('.sixty').text(countdown + "s");
+        } else {
+            clearInterval(timer);
+            $this.attr("disabled", false);
+            $('.sixty').fadeOut('fast');
+            $('.getCodeText').fadeIn();
+            // $('.getCodeText').attr('name', 'getCode');
+            execI18n();
+            return;
+        }
+    }, 1000);
 }
 
 //email address
