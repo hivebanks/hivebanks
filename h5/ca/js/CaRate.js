@@ -56,7 +56,8 @@ $(function () {
             password = $(this).parent().siblings().find('.password').val(),
             pass_word_hash = hex_sha1(password),
             ca_channel = $(this).parents('.differentRate').find('.ca_channel').text().toLowerCase();
-
+            console.log(time);
+            return;
         if (optRateType == 'recharge') {
             //set recharge rate
             if(DisableClick($this)) return;
