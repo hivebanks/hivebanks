@@ -192,7 +192,7 @@ function setTime($this, timer) {
     $this.attr("disabled", true);
     // execI18n();
     // timer = setInterval(function () {
-    if (countdown >= 0) {
+    if (countdown <= 0) {
         countdown--;
         $('.sixty').text(countdown + "s");
     } else {
