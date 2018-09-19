@@ -177,7 +177,8 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         GetImgCode();
         LayerFun(response.errcode);
         $('.sixty').fadeOut('fast');
-        $('.getCodeText').attr('name', 'getCode');
+        $('.getCodeText').fadeIn();
+        // $('.getCodeText').attr('name', 'getCode');
         execI18n();
         return;
     });
@@ -185,19 +186,21 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
 
 function setTime($this) {
     var countdown = 60;
-    $('.sixty').text(countdown).fadeIn('fast').css('color', '#fff');
-    $('.getCodeText').attr('name', 'sixty');
+    $('.sixty').text(countdown + "s").fadeIn('fast').css('color', '#fff');
+    // $('.getCodeText').attr('name', 'sixty');
+    $('.getCodeText').fadeOut();
     $this.attr("disabled", true);
-    execI18n();
+    // execI18n();
     timer = setInterval(function () {
-        if (countdown != 0) {
+        if (countdown >= 0) {
             countdown--;
-            $('.sixty').text(countdown);
+            $('.sixty').text(countdown + "s");
         } else {
             clearInterval(timer);
             $this.attr("disabled", false);
             $('.sixty').fadeOut('fast');
-            $('.getCodeText').attr('name', 'getCode');
+            $('.getCodeText').fadeIn();
+            // $('.getCodeText').attr('name', 'getCode');
             execI18n();
             return;
         }
