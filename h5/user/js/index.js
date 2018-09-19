@@ -7,7 +7,7 @@ $(function () {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
         if (arr != null) {
             return unescape(arr[2]);
-        }else {
+        } else {
             return null;
         }
     }
@@ -23,21 +23,21 @@ $(function () {
     $('.baLogin').click(function () {
         if (ba_token || login_ba) {
             window.location.href = 'ba/BaAccount.html';
-            }else {
+        } else {
             window.location.href = 'ba/BaLogin.html';
         }
     });
     $('.caLogin').click(function () {
         if (ca_token || login_ca) {
             window.location.href = 'ca/CaAccount.html';
-        }else {
+        } else {
             window.location.href = 'ca/CaLogin.html';
         }
     });
     $('.usLogin').click(function () {
         if (user_token || login_us) {
             window.location.href = 'user/account.html';
-        }else {
+        } else {
             window.location.href = 'user/login.html';
         }
     });
@@ -53,20 +53,21 @@ $(function () {
             window.location.href = 'ca/CaAccount.html';
         }
     });
-    var smokyBG = $('#smoky-bg').waterpipe({
-        gradientStart: '#51ff00',
-        gradientEnd: '#001eff',
-        smokeOpacity: 0.1,
-        smokeSize: 100,
-        numCircles: 1,
-        maxMaxRad: 'auto',
-        minMaxRad: 'auto',
-        minRadFactor: 0,
-        iterations: 8,
-        drawsPerFrame: 10,
-        lineWidth: 2,
-        speed: 10,
-        bgColorInner: "#111",
-        bgColorOuter: "#000"
-    });
+
+    // var smokyBG = $('#smoky-bg').waterpipe({
+    //     gradientStart: '#51ff00',
+    //     gradientEnd: '#001eff',
+    //     smokeOpacity: 0.1,
+    //     smokeSize: 100,
+    //     numCircles: 1,
+    //     maxMaxRad: 'auto',
+    //     minMaxRad: 'auto',
+    //     minRadFactor: 0,
+    //     iterations: 8,
+    //     drawsPerFrame: 10,
+    //     lineWidth: 2,
+    //     speed: 10,
+    //     bgColorInner: "#111",
+    //     bgColorOuter: "#000"
+    // });
 });
