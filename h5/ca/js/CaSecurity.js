@@ -69,7 +69,7 @@ $(function () {
             $('#goBindCellPhone').modal('show');
             return;
         } else {
-            window.location.href = 'BaFundPasswordBind.html';
+            window.location.href = 'CaFundPasswordBind.html';
         }
     });
     $('.fundPasswordModify').click(function () {
@@ -77,7 +77,7 @@ $(function () {
             $('#goBindCellPhone').modal('show');
             return;
         } else {
-            window.location.href = 'BaFundPasswordModify.html';
+            window.location.href = 'CaFundPasswordModify.html';
         }
     });
 

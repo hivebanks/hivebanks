@@ -2,132 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/logo-joybtc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/ba/language/i18n/ja/common.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/ba/language/i18n/ja/common_ja.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/ba/language/i18n/ja/index.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/ba/language/i18n/ja/index_ja.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/language/i18n/ja/common.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/language/i18n/ja/common_ja.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/language/i18n/ja/index.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/language/i18n/ja/index_ja.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-TW/common.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/ja/common.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-TW/common_zh-TW.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-TW/common_zh.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/ja/index_ja.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-TW/index.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/ja/index.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-TW/index_zh-TW.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-TW/index_zh.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaAccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaAddressInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaAddressInformation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaAuthentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaAuthentication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaEmailBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaEmailBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaEmailModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaEmailModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaFundPasswordBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaFundPasswordBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaFundPasswordModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaFundPasswordModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaGoogleBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaGoogleBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaGoogleVerification.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaGoogleVerification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaMarginRechargeAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaMarginRechargeAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaMarginRechargeAlready.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaMarginRechargeAlready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaMarginRechargePending.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaMarginRechargePending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaMarginWithdrawAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaMarginWithdrawAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaMarginWithdrawAlready.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaMarginWithdrawAlready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaMarginWithdrawPending.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaMarginWithdrawPending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaPhoneBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaPhoneBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaPhoneModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaPhoneModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRate.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRecharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRecharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRechargeAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRechargeAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRechargeAlready.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRechargeAlready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRechargeMargin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRechargeMargin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRechargePending.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRechargePending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaRegister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaReset.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaReset.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaSecurity.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaSecurity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaWithdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaWithdraw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaWithdrawAlready.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaWithdrawAlready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaWithdrawInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaWithdrawMargin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaWithdrawMargin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/BaWithdrawPending.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/BaWithdrawPending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/language/i18n/en/common_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/mobile-css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/mobile-css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaAccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaAgencyType.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaAgencyType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaAuthentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaAuthentication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaEmailBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaEmailBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaEmailModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaEmailModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaFundPasswordBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaFundPasswordBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaFundPasswordModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaFundPasswordModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaGoogleBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaGoogleBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaGoogleVerification.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaGoogleVerification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaLookAgencyType.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaLookAgencyType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaMarginWithdrawAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaMarginWithdrawAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaPhoneBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaPhoneBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaPhoneModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaPhoneModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaProxyAuthentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaProxyAuthentication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRate.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRecharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRecharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRechargeAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRechargeAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRechargeAlready.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRechargeAlready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRechargeAmount.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRechargeAmount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRechargeMargin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRechargeMargin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRechargePending.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRechargePending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaRegister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaReset.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaReset.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaSecurity.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaSecurity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaWithdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaWithdraw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaWithdrawAlready.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaWithdrawAlready.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaWithdrawAmount.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaWithdrawAmount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaWithdrawInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaWithdrawInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaWithdrawMargin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaWithdrawMargin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/CaWithdrawPending.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/CaWithdrawPending.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/language/i18n/en/common_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/mobile-css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/mobile-css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/addBankAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/addBankAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/addBankInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/addBankInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/addBitAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/addBitAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/authentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/authentication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/emailBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/emailBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/emailModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/emailModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/faultReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/faultReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/fundPasswordBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/fundPasswordBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/fundPasswordModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/fundPasswordModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/googleBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/googleBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/googleVerification.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/googleVerification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/language/i18n/en/common_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-CN/common_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/language/i18n/zh-CN/common_zh-CN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-TW/common.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-TW/common_zh-TW.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-TW/common_zh.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-TW/index.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-TW/index_zh-TW.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/language/i18n/zh-TW/index_zh.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/manageBankList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/manageBankList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/mobile-css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/mobile-css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/phoneBind.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/phoneBind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/phoneModify.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/phoneModify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/recharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/reset.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/security.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/security.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/transfer.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/transfer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/withdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/withdraw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaSecurity.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaSecurity.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -162,6 +38,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="166" column="5" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="5" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BaAccount.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ba/BaAccount.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -176,42 +67,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="148">
               <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ca/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="797" column="38" selection-start-line="797" selection-start-column="38" selection-end-line="797" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/user/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="643" column="38" selection-start-line="643" selection-start-column="38" selection-end-line="643" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ba/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="955" column="38" selection-start-line="955" selection-start-column="38" selection-end-line="955" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -243,11 +98,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/ca/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="712" selection-start-line="712" selection-end-line="712" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaFundPasswordBind.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/CaFundPasswordBind.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="182" column="34" lean-forward="true" selection-start-line="182" selection-start-column="34" selection-end-line="182" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaSecurity.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaSecurity.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-671">
+              <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaFundPasswordBind.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/ca/js/CaFundPasswordBind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-421">
+              <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -263,8 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>url</find>
-      <find>ruleBtn</find>
       <find>rul</find>
       <find>input-group</find>
       <find>handle</find>
@@ -293,6 +173,8 @@
       <find>.left-row</find>
       <find>.footerIconBox</find>
       <find>\&lt;div class\=\&quot;col\-md\-7 col\-sm\-12\&quot;\&gt;\n                \&lt;div class\=\&quot;footerTL\&quot;\&gt;\n                    \&lt;ul class\=\&quot;flex center\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;javascript\:\;\&quot; class\=\&quot;i18n usLogin\&quot; name\=\&quot;user\&quot;\&gt;user\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;javascript\:\;\&quot; class\=\&quot;i18n caLogin\&quot; name\=\&quot;cashAgency\&quot;\&gt;Cash Agency\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;javascript\:\;\&quot; class\=\&quot;i18n baLogin\&quot; name\=\&quot;bitcoinAgency\&quot;\&gt;Bitcoin Agency\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;</find>
+      <find>fundPasswordE</find>
+      <find>fundPasswordEnable</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -306,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/ba/BaReset.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaRegister.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaReset.html" />
         <option value="$PROJECT_DIR$/h5/ca/CaLogin.html" />
@@ -357,6 +238,7 @@
         <option value="$PROJECT_DIR$/h5/ca/CaRechargeAddress.html" />
         <option value="$PROJECT_DIR$/h5/user/css/common.css" />
         <option value="$PROJECT_DIR$/h5/ca/css/common.css" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaSecurity.js" />
       </list>
     </option>
   </component>
@@ -405,6 +287,19 @@
               <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="ca" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="ca" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
@@ -481,15 +376,16 @@
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
       <workItem from="1536907331342" duration="9229000" />
-      <workItem from="1537196946602" duration="14839000" />
+      <workItem from="1537196946602" duration="15682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75192000" />
+    <option name="totallyTimeSpent" value="76035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -519,39 +415,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/user/icon.html" />
-    <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2166">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/assets/js/cnt.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#607#2829#0" />
-            <element signature="e#2871#5094#0" />
-            <element signature="e#5159#5244#0" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -808,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaAgencyType.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/ca/CaRechargeAddress.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -840,6 +698,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="712" selection-start-line="712" selection-end-line="712" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="166" column="5" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaAgencyType.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaFundPasswordBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-421">
+          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaFundPasswordBind.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="182" column="34" lean-forward="true" selection-start-line="182" selection-start-column="34" selection-end-line="182" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaSecurity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-671">
+          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
         </state>
       </provider>
     </entry>
