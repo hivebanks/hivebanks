@@ -14,25 +14,25 @@ $(function () {
     });
 
     //get recharge withdraw rate list
-        GetRateList(token, function (response) {
-            if (response.errcode == '0') {
-                var data = response.rows;
-                var recharge_base_rate = [];
-                $.each(data, function (i, val) {
-                    recharge_base_rate.push(data[i].recharge_row.recharge_base_rate);
-                });
-                new Vue({
-                    el: '.content',
-                    data: {
-                        differentBank: data,
-                        recharge_base_rate: recharge_base_rate,
-                        bl: true
-                    }
-                })
-            }
-        }, function (response) {
-            LayerFun(response.errcode);
-        });
+    GetRateList(token, function (response) {
+        if (response.errcode == '0') {
+            var data = response.rows;
+            var recharge_base_rate = [];
+            $.each(data, function (i, val) {
+                recharge_base_rate.push(data[i].recharge_row.recharge_base_rate);
+            });
+            new Vue({
+                el: '.content',
+                data: {
+                    differentBank: data,
+                    recharge_base_rate: recharge_base_rate,
+                    bl: true
+                }
+            })
+        }
+    }, function (response) {
+        LayerFun(response.errcode);
+    });
 
     //select recharge rate and withdraw rate
     $(document).on('click', 'input[name=changeRate]', function () {
@@ -56,11 +56,10 @@ $(function () {
             password = $(this).parent().siblings().find('.password').val(),
             pass_word_hash = hex_sha1(password),
             ca_channel = $(this).parents('.differentRate').find('.ca_channel').text().toLowerCase();
-            console.log(time);
-            return;
+
         if (optRateType == 'recharge') {
             //set recharge rate
-            if(DisableClick($this)) return;
+            if (DisableClick($this)) return;
             ShowLoading("show");
             SetRechargeRate(token, rate, minAmount, maxAmount, time, level, ca_channel, pass_word_hash, function (response) {
                 if (response.errcode == '0') {
@@ -81,7 +80,7 @@ $(function () {
 
         if (optRateType == 'withdraw') {
             //set withdraw rate
-            if(DisableClick($this)) return;
+            if (DisableClick($this)) return;
             ShowLoading("show");
             SetWithdrawRate(token, rate, minAmount, maxAmount, time, level, ca_channel, pass_word_hash, function (response) {
                 if (response.errcode == '0') {
