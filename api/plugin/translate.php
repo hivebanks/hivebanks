@@ -29,9 +29,9 @@ foreach ($data as $k => $v){
 
                 //处理待翻译文字，如果有特殊符号，则依次翻译并写入文件
 
-                $appid='20180918000208656';
-                $salt='1435660288';
-                $key = '02UG9OVCKZUtoBxhYJAB';
+                $appid='*';
+                $salt='*';
+                $key = '*';
                 $q = $data;
                 $sign = md5($appid.$q.$salt.$key);
 
