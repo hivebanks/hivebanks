@@ -221,10 +221,11 @@ $(function () {
             return;
         }
         if (cfm_code.length <= 0) {
-            GetPhoneCodeFun('codeNotEmpty');
+            LayerFun('codeNotEmpty');
             $('.phoneCode_tips').fadeIn();
             return;
         }
+        setTime($this);
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
     /**

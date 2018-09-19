@@ -172,7 +172,6 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         return;
     }
     ShowLoading("show");
-    setTime($this);
     GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
         if (response.errcode == '0') {
             ShowLoading("hide");
@@ -185,29 +184,27 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         clearInterval(timer);
         $this.attr("disabled", false);
         $('.sixty').fadeOut('fast');
-        $('.getCodeText').attr('name', 'getCode');
+        $('.getCodeText').fadeIn("fast");
         GetImgCode();
-        execI18n();
         return;
     });
 };
 
+var countdown = 60;
+
 function setTime($this) {
-    var countdown = 60;
-    $('.sixty').text(countdown).fadeIn('fast').css('color', '#fff');
-    $('.getCodeText').attr('name', 'sixty');
+    $('.sixty').text(countdown + "s").fadeIn('fast').css('color', '#fff');
+    $('.getCodeText').fadeOut();
     $this.attr("disabled", true);
-    execI18n();
     timer = setInterval(function () {
         if (countdown != 0) {
             countdown--;
-            $('.sixty').text(countdown);
+            $('.sixty').text(countdown + "s");
         } else {
             clearInterval(timer);
             $this.attr("disabled", false);
             $('.sixty').fadeOut('fast');
-            $('.getCodeText').attr('name', 'getCode');
-            execI18n();
+            $('.getCodeText').fadeOut();
             return;
         }
     }, 1000);

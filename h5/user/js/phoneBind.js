@@ -20,6 +20,7 @@ $(function () {
             LayerFun('pleaseImgCode');
             return;
         }
+        setTime($this);
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 

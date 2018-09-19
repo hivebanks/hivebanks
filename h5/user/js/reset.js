@@ -215,6 +215,7 @@ $(function () {
             $('.phoneImgCode_tips').fadeIn('fast');
             return;
         }
+        setTime($this);
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
     // Password reset (mobile phone)

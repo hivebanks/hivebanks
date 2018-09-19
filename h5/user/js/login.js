@@ -3,6 +3,7 @@ $(document).ready(function () {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
         if (arr != null) return unescape(arr[2]);
     }
+
     //Get graphic verification code
     GetImgCode();
     //Switch verification code
@@ -103,7 +104,7 @@ $(document).ready(function () {
             LayerFun('passwordNotEmpty');
             return;
         }
-        if(user_token){
+        if (user_token) {
             LayerFun('noMoreAccount');
             return;
         }
@@ -223,7 +224,7 @@ $(document).ready(function () {
     //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
-        if($(".phone").val().length <= 0){
+        if ($(".phone").val().length <= 0) {
             $('.phone_tips').fadeIn().siblings('span').hide();
             LayerFun('phoneNotEmpty');
             return;
@@ -232,6 +233,7 @@ $(document).ready(function () {
             $('.phoneImgCode_tips').fadeIn('fast');
             return;
         }
+        setTime($this);
         GetPhoneCodeFun(bind_type, $this, cfm_code);
     });
 
@@ -251,7 +253,7 @@ $(document).ready(function () {
             sms_code = $("#phoneSmsCode").val(),
             phonePassword = $(".phonePassword").val(),
             pass_word_hash = hex_sha1(phonePassword);
-        if(cellphone.length <= 0){
+        if (cellphone.length <= 0) {
             LayerFun('phoneNotEmpty');
             $('.phone_tips').fadeIn().siblings('span').hide();
             return;
@@ -272,7 +274,7 @@ $(document).ready(function () {
             $('.Phonepassword_tips').fadeIn().siblings('span').hide();
             return;
         }
-        if(user_token){
+        if (user_token) {
             LayerFun('noMoreAccount');
             return;
         }
