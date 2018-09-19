@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaFundPassswordBind.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaFundPassswordBind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaFundPassswordModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaFundPassswordModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaPhoneBind.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaPhoneBind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaPhoneModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaPhoneModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaReset.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaReset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/BaWithdrawMargin.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/BaWithdrawMargin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaFundPasswordBind.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaFundPasswordBind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaFundPasswordModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaFundPasswordModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaPhoneBind.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaPhoneBind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaPhoneModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaPhoneModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaReset.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaReset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/CaWithdrawMargin.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/CaWithdrawMargin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/fundPassswordBind.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/fundPassswordBind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/fundPassswordModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/fundPassswordModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/phoneBind.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/phoneBind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/phoneModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/phoneModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/reset.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/reset.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,26 +37,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="169" selection-start-line="169" selection-end-line="169" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="502">
+              <caret line="229" column="19" lean-forward="true" selection-start-line="229" selection-start-column="19" selection-end-line="229" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="160" column="9" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+            <state relative-caret-position="643">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
               <folding>
                 <element signature="e#718#2940#0" />
                 <element signature="e#2982#5205#0" />
@@ -95,32 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/user/js/register.js">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="222" column="35" lean-forward="true" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/ba/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="198" selection-start-line="198" selection-end-line="198" />
-              <folding>
-                <element signature="e#710#2932#0" />
-                <element signature="e#2974#5197#0" />
-                <element signature="e#3384#3779#0" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="370">
+              <caret line="235" column="12" selection-start-line="235" selection-start-column="12" selection-end-line="235" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -221,7 +168,6 @@
         <option value="$PROJECT_DIR$/h5/user/login.html" />
         <option value="$PROJECT_DIR$/h5/user/js/phoneModify.js" />
         <option value="$PROJECT_DIR$/h5/user/js/login.js" />
-        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
         <option value="$PROJECT_DIR$/h5/user/js/fundPassswordBind.js" />
         <option value="$PROJECT_DIR$/h5/user/js/fundPassswordModify.js" />
         <option value="$PROJECT_DIR$/h5/user/js/phoneBind.js" />
@@ -230,6 +176,7 @@
         <option value="$PROJECT_DIR$/h5/ca/js/CaFundPasswordModify.js" />
         <option value="$PROJECT_DIR$/h5/user/js/register.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
       </list>
     </option>
   </component>
@@ -356,12 +303,12 @@
       <workItem from="1536905834926" duration="850000" />
       <workItem from="1536907331342" duration="9229000" />
       <workItem from="1537196946602" duration="19458000" />
-      <workItem from="1537332335645" duration="1634000" />
+      <workItem from="1537332335645" duration="2145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81445000" />
+    <option name="totallyTimeSpent" value="81956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -635,20 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="138" column="70" selection-start-line="138" selection-start-column="70" selection-end-line="138" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="235" column="10" selection-start-line="235" selection-start-column="10" selection-end-line="235" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/fundPassswordModify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -717,25 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="160" column="9" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
-          <folding>
-            <element signature="e#718#2940#0" />
-            <element signature="e#2982#5205#0" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
-          <caret line="222" column="35" lean-forward="true" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
+          <caret line="222" column="35" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
           </folding>
@@ -745,11 +663,40 @@
     <entry file="file://$PROJECT_DIR$/h5/ba/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
+          <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
           <folding>
             <element signature="e#710#2932#0" />
             <element signature="e#2974#5197#0" />
             <element signature="e#3384#3779#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="229" column="19" lean-forward="true" selection-start-line="229" selection-start-column="19" selection-end-line="229" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="235" column="12" selection-start-line="235" selection-start-column="12" selection-end-line="235" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="e#718#2940#0" />
+            <element signature="e#2982#5205#0" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
