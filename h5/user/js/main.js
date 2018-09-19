@@ -166,7 +166,7 @@ function GetPhoneCodeFun(bind_type, $this, cfm_code) {
         LayerFun('phoneNotEmpty');
         return;
     }
-    setTime($this);
+    // setTime($this);
     GetPhoneCode(cellphone, country_code, bind_type, cfm_code, function (response) {
         if (response.errcode == '0') {
             LayerFun('sendSuccess');

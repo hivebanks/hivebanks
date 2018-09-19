@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/h5/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/phoneModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/phoneModify.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
+            <state relative-caret-position="210">
+              <caret line="165" column="32" lean-forward="true" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
               <folding>
                 <element signature="e#718#2940#0" />
                 <element signature="e#2982#5205#0" />
@@ -66,7 +64,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="phoneModify.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/phoneModify.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="234" column="20" lean-forward="true" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phoneModify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/phoneModify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/user/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -129,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/ca/js/CaReset.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaRegister.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/CaLogin.js" />
         <option value="$PROJECT_DIR$/h5/user/js/login.js" />
@@ -180,6 +195,7 @@
         <option value="$PROJECT_DIR$/h5/test.html" />
         <option value="$PROJECT_DIR$/h5/user/login.html" />
         <option value="$PROJECT_DIR$/h5/user/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/phoneModify.js" />
       </list>
     </option>
   </component>
@@ -291,12 +307,12 @@
       <workItem from="1536904494374" duration="1131000" />
       <workItem from="1536905834926" duration="850000" />
       <workItem from="1536907331342" duration="9229000" />
-      <workItem from="1537196946602" duration="17106000" />
+      <workItem from="1537196946602" duration="17464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77459000" />
+    <option name="totallyTimeSpent" value="77817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -330,19 +346,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/assets/language/language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/ja/common.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/ja/common_zh-TW.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/ja/index.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -627,10 +630,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="138" column="70" lean-forward="true" selection-start-line="138" selection-start-column="70" selection-end-line="138" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/phoneBind.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/phoneModify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="234" column="20" lean-forward="true" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/phoneModify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="165" column="32" lean-forward="true" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
           <folding>
             <element signature="e#718#2940#0" />
             <element signature="e#2982#5205#0" />
@@ -639,13 +666,6 @@
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="138" column="70" lean-forward="true" selection-start-line="138" selection-start-column="70" selection-end-line="138" selection-end-column="70" />
         </state>
       </provider>
     </entry>
