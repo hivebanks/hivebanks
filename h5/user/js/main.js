@@ -15,7 +15,7 @@ $(function () {
     $(".time").text(time);
 
 // Icon link
-    var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">');
+    var link = $('<link rel="stylesheet" href="//at.alicdn.com/t/font_626151_31e2mobvpdu.css">');
     link.appendTo($('head')[0]);
 
     //cnt.js

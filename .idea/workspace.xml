@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/bg_team.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/more_news_001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/more_news_002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/more_news_003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_002.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/user/css/news.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/user/js/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/user/mobile-css/news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ba/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/ca/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/css/recharge.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/recharge.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/js/withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/withdraw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/recharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/user/withdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/withdraw.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1729153182">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/news.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_zh-CN.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_ja.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recharge.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="607">
+              <caret line="282" column="20" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="withdraw.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/withdraw.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/user/css/news.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="691">
+              <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/user/js/news.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>phoneTime</find>
+      <find>成功</find>
+      <find>fundPasswordBind</find>
+      <find>phoneRegisterBox</find>
+      <find>phoneLoginBox</find>
+      <find>密码重置(邮箱)</find>
+      <find>phoneCodeBtn</find>
+      <find>nickName</find>
+      <find>en</find>
+      <find>zh-cn</find>
+      <find>baRate</find>
+      <find>rate</find>
+      <find>©2017-2018 Fc.com All Rights Reserved</find>
+      <find>logo.png</find>
+      <find>sections footer</find>
+      <find>\&lt;section class\=\&quot;sections footer\&quot;\&gt;\n    \&lt;div class\=\&quot;container\&quot;\&gt;\n\n        \&lt;div class\=\&quot;row left\-row\&quot;\&gt;\n            \&lt;div class\=\&quot;col\-md\-7 col\-sm\-12\&quot;\&gt;\n                \&lt;div class\=\&quot;footerTL\&quot;\&gt;\n                    \&lt;ul class\=\&quot;flex center\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\/\&quot; class\=\&quot;i18n\&quot; name\=\&quot;introduction\&quot;\&gt;Introduction\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\/\&quot; class\=\&quot;i18n\&quot; name\=\&quot;cashAgency\&quot;\&gt;Cash Agency\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\/\&quot; class\=\&quot;i18n\&quot; name\=\&quot;bitcoinAgency\&quot;\&gt;Bitcoin Agency\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\/\&quot; class\=\&quot;i18n\&quot; name\=\&quot;partners\&quot;\&gt;Partners\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\/\&quot; class\=\&quot;i18n\&quot; name\=\&quot;about\&quot;\&gt;About\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\/\&quot; class\=\&quot;i18n\&quot; name\=\&quot;contact\&quot;\&gt;Contact\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;faultReport\.html\&quot; class\=\&quot;i18n\&quot; name\=\&quot;failureReport\&quot;\&gt;fault report\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;\n            \&lt;div class\=\&quot;col\-md\-5 col\-sm\-12\&quot;\&gt;\n                \&lt;div class\=\&quot;footerTR flex space\-between center\&quot;\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-twitter\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-facebook\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-reddit\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-telegram\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-instagram\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-medium\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-weibo\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-qq\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-weixin\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;div\&gt;\n                        \&lt;select class\=\&quot;form\-control input\-sm\&quot; id\=\&quot;language\&quot;\&gt;\n                            \&lt;option value\=\&quot;en\&quot;\&gt;English\&lt;\/option\&gt;\n                            \&lt;option value\=\&quot;zh\-CN\&quot;\&gt;中文简体\&lt;\/option\&gt;\n                            \&lt;\!\-\-\&lt;option value\=\&quot;ja\&quot;\&gt;Japanese\&lt;\/option\&gt;\-\-\&gt;\n                        \&lt;\/select\&gt;\n                    \&lt;\/div\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;\n        \&lt;\/div\&gt;\n        \&lt;div class\=\&quot;row footer\-copyright\&quot;\&gt;\n            \&lt;p class\=\&quot;i18n\&quot; name\=\&quot;allRightsReserved\&quot;\&gt;\©2018\-2019 joybtc\.com All Rights Reserved\&lt;\/p\&gt;\n        \&lt;\/div\&gt;\n    \&lt;\/div\&gt;\n\&lt;\/section\&gt;</find>
+      <find>footerIconBox</find>
+      <find>footer</find>
+      <find>\&lt;i class\=\&quot;iconfont icon\-twitter\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-facebook\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-reddit\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-telegram\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-instagram\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-medium\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-weibo\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-qq\&quot;\&gt;\&lt;\/i\&gt;\n                    \&lt;i class\=\&quot;iconfont icon\-weixin\&quot;\&gt;\&lt;\/i\&gt;</find>
+      <find>.left-row</find>
+      <find>.footerIconBox</find>
+      <find>\&lt;div class\=\&quot;col\-md\-7 col\-sm\-12\&quot;\&gt;\n                \&lt;div class\=\&quot;footerTL\&quot;\&gt;\n                    \&lt;ul class\=\&quot;flex center\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;javascript\:\;\&quot; class\=\&quot;i18n usLogin\&quot; name\=\&quot;user\&quot;\&gt;user\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;javascript\:\;\&quot; class\=\&quot;i18n caLogin\&quot; name\=\&quot;cashAgency\&quot;\&gt;Cash Agency\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;javascript\:\;\&quot; class\=\&quot;i18n baLogin\&quot; name\=\&quot;bitcoinAgency\&quot;\&gt;Bitcoin Agency\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;</find>
+      <find>fundPasswordE</find>
+      <find>fundPasswordEnable</find>
+      <find>\&lt;button class\=\&quot;btn btn\-success phoneCodeBtn margin\-left\-2\&quot;\&gt;\n                                        \&lt;span class\=\&quot;sixty\&quot;\&gt;60\&lt;\/span\&gt;\&amp;nbsp\;\&amp;nbsp\;\n                                        \&lt;span class\=\&quot;getCodeText i18n\&quot; name\=\&quot;getCode\&quot;\&gt;Get Code\&lt;\/span\&gt;\n                                    \&lt;\/button\&gt;</find>
+      <find>GetPhoneCodeFun(bind_type, $this, cfm_code);</find>
+      <find>GetPhoneCodeFun</find>
+      <find>rubberBand</find>
+      <find>more</find>
+      <find>icon</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>©2018-2019 joybtc.com All Rights Reserved</replace>
+      <replace>logo-joybtc.png</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/h5/ba/language/i18n/ja/index_ja.properties" />
+        <option value="$PROJECT_DIR$/h5/user/language/i18n/en/common_en.properties" />
+        <option value="$PROJECT_DIR$/h5/user/language/i18n/zh-CN/common_zh-CN.properties" />
+        <option value="$PROJECT_DIR$/h5/user/language/i18n/ja/common_ja.properties" />
+        <option value="$PROJECT_DIR$/h5/user/language/i18n/ja/index_ja.properties" />
+        <option value="$PROJECT_DIR$/h5/user/account.html" />
+        <option value="$PROJECT_DIR$/h5/user/addBankAddress.html" />
+        <option value="$PROJECT_DIR$/h5/user/mobile-css/common.css" />
+        <option value="$PROJECT_DIR$/h5/ca/mobile-css/common.css" />
+        <option value="$PROJECT_DIR$/h5/ba/mobile-css/common.css" />
+        <option value="$PROJECT_DIR$/h5/user/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/ba/css/common.css" />
+        <option value="$PROJECT_DIR$/h5/ba/BaAccount.html" />
+        <option value="$PROJECT_DIR$/h5/ca/CaRechargeAddress.html" />
+        <option value="$PROJECT_DIR$/h5/ca/css/common.css" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaSecurity.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/BaPhoneBind.js" />
+        <option value="$PROJECT_DIR$/h5/test.html" />
+        <option value="$PROJECT_DIR$/h5/user/login.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/phoneModify.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/login.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/fundPassswordBind.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/fundPassswordModify.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/phoneBind.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaFundPasswordBind.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaFundPasswordModify.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/register.js" />
+        <option value="$PROJECT_DIR$/h5/ba/BaSecurity.html" />
+        <option value="$PROJECT_DIR$/h5/user/language/i18n/zh-CN/index_zh-CN.properties" />
+        <option value="$PROJECT_DIR$/h5/ca/js/CaRate.js" />
+        <option value="$PROJECT_DIR$/h5/user/mobile-css/index.css" />
+        <option value="$PROJECT_DIR$/h5/user/css/index.css" />
+        <option value="$PROJECT_DIR$/h5/index.html" />
+        <option value="$PROJECT_DIR$/h5/user/mobile-css/cews.css" />
+        <option value="$PROJECT_DIR$/h5/user/css/common.css" />
+        <option value="$PROJECT_DIR$/h5/user/css/recharge.css" />
+        <option value="$PROJECT_DIR$/h5/user/recharge.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/ba/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/ca/js/main.js" />
+        <option value="$PROJECT_DIR$/h5/user/withdraw.html" />
+        <option value="$PROJECT_DIR$/h5/user/js/withdraw.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/index.js" />
+        <option value="$PROJECT_DIR$/h5/user/js/news.js" />
+        <option value="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" />
+        <option value="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" />
+        <option value="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" />
+        <option value="$PROJECT_DIR$/h5/news.html" />
+        <option value="$PROJECT_DIR$/h5/user/css/news.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="13" />
+    <option name="y" value="34" />
+    <option name="width" value="1440" />
+    <option name="height" value="794" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+              <item name="ja" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+              <item name="zh-CN" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536832943091" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/h5/assets/img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/h5/assets/img" />
+      <recent name="$PROJECT_DIR$/h5/user/img" />
+      <recent name="$PROJECT_DIR$/h5" />
+      <recent name="$PROJECT_DIR$/h5/ba/language/i18n" />
+      <recent name="$PROJECT_DIR$/h5/user/language/i18n" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="" />
+      <created>1535698033077</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535698033077</updated>
+      <workItem from="1535698034382" duration="8535000" />
+      <workItem from="1536043003323" duration="926000" />
+      <workItem from="1536044059599" duration="11869000" />
+      <workItem from="1536125821679" duration="1362000" />
+      <workItem from="1536197473730" duration="5685000" />
+      <workItem from="1536283890774" duration="10312000" />
+      <workItem from="1536301900218" duration="5932000" />
+      <workItem from="1536568490998" duration="2608000" />
+      <workItem from="1536633022672" duration="1226000" />
+      <workItem from="1536715345701" duration="3716000" />
+      <workItem from="1536809004158" duration="633000" />
+      <workItem from="1536831037757" duration="288000" />
+      <workItem from="1536895954212" duration="1595000" />
+      <workItem from="1536901017578" duration="2800000" />
+      <workItem from="1536904494374" duration="1131000" />
+      <workItem from="1536905834926" duration="850000" />
+      <workItem from="1536907331342" duration="9229000" />
+      <workItem from="1537196946602" duration="19458000" />
+      <workItem from="1537332335645" duration="19407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="99218000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26466382" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="797" column="38" selection-start-line="797" selection-start-column="38" selection-end-line="797" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="955" column="38" selection-start-line="955" selection-start-column="38" selection-end-line="955" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaAccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="344" column="12" selection-start-line="344" selection-start-column="12" selection-end-line="344" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaRechargeAddress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="726" selection-start-line="726" selection-end-line="726" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="712" selection-start-line="712" selection-end-line="712" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaAgencyType.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaFundPasswordBind.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="182" column="34" lean-forward="true" selection-start-line="182" selection-start-column="34" selection-end-line="182" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaPhoneModify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaPhoneBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaSecurity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="119" column="11" lean-forward="true" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/phoneBind.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/phoneModify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="146" column="45" lean-forward="true" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/fundPassswordModify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/googleBind.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/googleVerification.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/phoneBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/phoneModify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/fundPassswordBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaFundPasswordModify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaFundPasswordBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="222" column="35" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="229" column="19" lean-forward="true" selection-start-line="229" selection-start-column="19" selection-end-line="229" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="235" column="12" selection-start-line="235" selection-start-column="12" selection-end-line="235" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/BaSecurity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1299">
+          <caret line="311" column="7" lean-forward="true" selection-start-line="311" selection-start-column="7" selection-end-line="311" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaRate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="35" column="62" lean-forward="true" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaRate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1085">
+          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/CaRate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/mobile-css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" selection-start-line="9" selection-start-column="2" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/mobile-css/news.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="256" column="18" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="1125" column="15" lean-forward="true" selection-start-line="1125" selection-start-column="15" selection-end-line="1125" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/css/recharge.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ca/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/ba/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+          <folding>
+            <element signature="e#710#2932#0" />
+            <element signature="e#2974#5197#0" />
+            <element signature="e#3384#3779#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+          <folding>
+            <element signature="e#718#2940#0" />
+            <element signature="e#2982#5205#0" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/recharge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/withdraw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/withdraw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="282" column="20" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/css/news.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
