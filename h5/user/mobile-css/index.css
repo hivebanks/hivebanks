@@ -7,9 +7,9 @@ section.banner {
     position: relative;
 }
 
-.banner-row h1, .banner-row .create_btn {
-    position: absolute;
-}
+/*.banner-row h1, .banner-row .create_btn {*/
+    /*position: absolute;*/
+/*}*/
 
 .banner-row h1 {
     background: linear-gradient(to right, #82ca9c, #ffffff, #eecf7c);
@@ -22,13 +22,13 @@ section.banner {
 }
 
 .create_btn {
-    font-size: 20px;
-    top: 30%;
-    left: 17%;
-    margin-left: -75px;
+    /*top: 30%;*/
+    /*left: 17%;*/
+    /*margin-left: -75px;*/
     background: transparent;
     border: 1px solid #4CC2E4;
     color: #fff;
+    font-size: 16px;
 }
 
 .create_btn:hover {
@@ -51,11 +51,11 @@ section.banner {
 }
 
 .create_btn {
-    top: 22%!important;
-    left: 25%!important;;
-    margin-left: -75px!important;
-    background: transparent!important;
-    border: 1px solid #4CC2E4!important;
-    color: #fff!important;
-    font-size: 16px!important;
+    /*top: 22%!important;*/
+    /*left: 25%!important;;*/
+    /*margin-left: -75px!important;*/
+    /*background: transparent!important;*/
+    /*border: 1px solid #4CC2E4!important;*/
+    /*color: #fff!important;*/
+    /*font-size: 16px!important;*/
 }
