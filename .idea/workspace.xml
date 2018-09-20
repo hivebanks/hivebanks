@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/bg_team.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/more_news_001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/more_news_002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/more_news_003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_002.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/assets/img/news_004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/css/news.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/js/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/user/mobile-css/news.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ba/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ba/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/ca/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/ca/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/css/recharge.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/css/recharge.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/js/withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/js/withdraw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/recharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/recharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/user/withdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/user/withdraw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/assets/img/news_002.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/h5/assets/img/news_002.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,8 +40,8 @@
       <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+            <state relative-caret-position="-521">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -118,8 +94,8 @@
       <file leaf-file-name="news.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/h5/user/css/news.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+            <state relative-caret-position="2304">
+              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -259,8 +235,8 @@
         <option value="$PROJECT_DIR$/h5/assets/language/i18n/zh-CN/common_zh-CN.properties" />
         <option value="$PROJECT_DIR$/h5/assets/language/i18n/en/common_en.properties" />
         <option value="$PROJECT_DIR$/h5/assets/language/i18n/ja/common_ja.properties" />
-        <option value="$PROJECT_DIR$/h5/news.html" />
         <option value="$PROJECT_DIR$/h5/user/css/news.css" />
+        <option value="$PROJECT_DIR$/h5/news.html" />
       </list>
     </option>
   </component>
@@ -412,12 +388,12 @@
       <workItem from="1536905834926" duration="850000" />
       <workItem from="1536907331342" duration="9229000" />
       <workItem from="1537196946602" duration="19458000" />
-      <workItem from="1537332335645" duration="19407000" />
+      <workItem from="1537332335645" duration="19724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99218000" />
+    <option name="totallyTimeSpent" value="99535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -429,7 +405,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26466382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
@@ -803,15 +779,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+        <state relative-caret-position="-521">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/css/news.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+        <state relative-caret-position="2304">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
         </state>
       </provider>
     </entry>
