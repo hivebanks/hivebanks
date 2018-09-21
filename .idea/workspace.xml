@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42350331-2e04-446e-a0db-5ef0af07cd45" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/h5/la/assets/css/pressReleases.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/la/assets/js/pressReleases.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/la/pressReleases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/la/assets/js/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/js/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/la/assets/language/i18n/en/index_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/language/i18n/en/index_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/la/baBindKyc.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/baBindKyc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/la/baInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/baInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/la/baList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/la/baList.html" afterDir="false" />
@@ -58,11 +66,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/la/config.html">
+      <file leaf-file-name="pressReleases.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/la/pressReleases.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="38" column="108" lean-forward="true" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="108" />
+            <state relative-caret-position="159">
+              <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
+              <folding>
+                <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_zh-CN.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="209" column="13" selection-start-line="209" selection-end-line="209" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/en/index_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="215" column="22" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baBindKyc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/la/baBindKyc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="130" column="80" selection-start-line="130" selection-start-column="69" selection-end-line="130" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -80,15 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fundPasswordBind</find>
-      <find>phoneRegisterBox</find>
-      <find>phoneLoginBox</find>
-      <find>密码重置(邮箱)</find>
-      <find>phoneCodeBtn</find>
-      <find>nickName</find>
-      <find>en</find>
-      <find>zh-cn</find>
-      <find>baRate</find>
       <find>rate</find>
       <find>©2017-2018 Fc.com All Rights Reserved</find>
       <find>logo.png</find>
@@ -110,6 +139,15 @@
       <find>icon</find>
       <find>material-icons dp48</find>
       <find>&lt;i class=&quot;material-icons dp48&quot;&gt;&lt;/i&gt;</find>
+      <find>删除</find>
+      <find>delete</find>
+      <find>preloader-wrapper</find>
+      <find>提交</find>
+      <find>submit</find>
+      <find>active</find>
+      <find>active-</find>
+      <find>\&lt;li\&gt;\n                    \&lt;a href\=\&quot;failureReport\.html\&quot; class\=\&quot;waves\-effect waves\-dark\&quot;\&gt;\n                        \&lt;i class\=\&quot;fa fa\-file\-text\-o\&quot;\&gt;\&lt;\/i\&gt;\n                        \&lt;span class\=\&quot;i18n\&quot; name\=\&quot;declarationList\&quot;\&gt;\&lt;\/span\&gt;\n                    \&lt;\/a\&gt;\n                \&lt;\/li\&gt;</find>
+      <find>&lt;!--fault Report--&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -124,16 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/user/language/i18n/en/common_en.properties" />
-        <option value="$PROJECT_DIR$/h5/user/language/i18n/zh-CN/common_zh-CN.properties" />
-        <option value="$PROJECT_DIR$/h5/user/language/i18n/ja/common_ja.properties" />
-        <option value="$PROJECT_DIR$/h5/user/language/i18n/ja/index_ja.properties" />
-        <option value="$PROJECT_DIR$/h5/user/account.html" />
-        <option value="$PROJECT_DIR$/h5/user/addBankAddress.html" />
-        <option value="$PROJECT_DIR$/h5/user/mobile-css/common.css" />
-        <option value="$PROJECT_DIR$/h5/ca/mobile-css/common.css" />
-        <option value="$PROJECT_DIR$/h5/ba/mobile-css/common.css" />
-        <option value="$PROJECT_DIR$/h5/user/js/common.js" />
         <option value="$PROJECT_DIR$/h5/ba/js/common.js" />
         <option value="$PROJECT_DIR$/h5/ca/js/common.js" />
         <option value="$PROJECT_DIR$/h5/ba/css/common.css" />
@@ -175,6 +203,16 @@
         <option value="$PROJECT_DIR$/h5/user/css/news.css" />
         <option value="$PROJECT_DIR$/h5/news.html" />
         <option value="$PROJECT_DIR$/h5/la/config.html" />
+        <option value="$PROJECT_DIR$/h5/la/assets/css/publishNews.css" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/publishNews.js" />
+        <option value="$PROJECT_DIR$/h5/la/publishNews.html" />
+        <option value="$PROJECT_DIR$/h5/la/assets/css/pressReleases.css" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/config.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/common.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/js/pressReleases.js" />
+        <option value="$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties" />
+        <option value="$PROJECT_DIR$/h5/la/assets/language/i18n/en/index_en.properties" />
+        <option value="$PROJECT_DIR$/h5/la/pressReleases.html" />
       </list>
     </option>
   </component>
@@ -188,10 +226,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="324" />
-    <option name="y" value="42" />
     <option name="width" value="1440" />
-    <option name="height" value="794" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -218,6 +254,50 @@
               <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="la" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+              <item name="en" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hivebanks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hivebanks" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="la" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+              <item name="zh-CN" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -239,11 +319,11 @@
       <recent name="$PROJECT_DIR$/h5/assets/img" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/h5/la" />
       <recent name="$PROJECT_DIR$/h5/assets/img" />
       <recent name="$PROJECT_DIR$/h5/user/img" />
       <recent name="$PROJECT_DIR$/h5" />
       <recent name="$PROJECT_DIR$/h5/ba/language/i18n" />
-      <recent name="$PROJECT_DIR$/h5/user/language/i18n" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,15 +366,16 @@
       <workItem from="1536905834926" duration="850000" />
       <workItem from="1536907331342" duration="9229000" />
       <workItem from="1537196946602" duration="19458000" />
-      <workItem from="1537332335645" duration="20396000" />
+      <workItem from="1537332335645" duration="28933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100207000" />
+    <option name="totallyTimeSpent" value="108744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -324,77 +405,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/ba/BaAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="344" column="12" selection-start-line="344" selection-start-column="12" selection-end-line="344" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaRechargeAddress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="726" selection-start-line="726" selection-end-line="726" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="712" selection-start-line="712" selection-end-line="712" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaAgencyType.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/CaFundPasswordBind.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="182" column="34" lean-forward="true" selection-start-line="182" selection-start-column="34" selection-end-line="182" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaPhoneModify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ba/js/BaPhoneBind.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/ca/js/CaSecurity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="119" column="11" lean-forward="true" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/user/phoneBind.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/user/phoneModify.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -684,8 +694,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/la/config.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="38" column="108" lean-forward="true" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="108" />
+        <state relative-caret-position="132">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/common_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/css/pressReleases.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="806" column="14" lean-forward="true" selection-start-line="806" selection-start-column="14" selection-end-line="806" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/js/pressReleases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/user/js/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="290" column="19" lean-forward="true" selection-start-line="290" selection-start-column="19" selection-end-line="290" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/baBindKyc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="130" column="80" selection-start-line="130" selection-start-column="69" selection-end-line="130" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/en/index_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="215" column="22" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/assets/language/i18n/zh-CN/index_zh-CN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="209" column="13" selection-start-line="209" selection-end-line="209" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/la/pressReleases.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

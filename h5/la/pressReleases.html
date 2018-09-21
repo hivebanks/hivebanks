@@ -7,19 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>HiveBanks</title>
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection"/>
     <!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="assets/css/common.css" rel="stylesheet"/>
+    <!--config css-->
+    <link rel="stylesheet" href="assets/css/pressReleases.css">
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <!-- common Styles-->
-    <link href="assets/css/common.css" rel="stylesheet"/>
-    <link href="assets/css/failureReport.css" rel="stylesheet"/>
-    <link rel="stylesheet" media="only screen and (max-width:767px)" href="assets/css/common_mobile.css">
+
 </head>
 <body>
 <div id="wrapper">
@@ -32,7 +32,6 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand waves-effect waves-dark flex center" href="userList.html">
-                <!--<i class="large material-icons">track_changes</i>-->
                 <img src="assets/img/logo-3.png" alt="" class="width-15 margin-right-5">
                 <strong>HiveBanks</strong>
             </a>
@@ -43,7 +42,7 @@
         <ul class="nav navbar-top-links navbar-right">
             <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
                     class="fa fa-user fa-fw"></i> <b class="la_name"></b> <i
-                    class="material-icons right"></i></a></li>
+                    class="material-icons right">keyboard_arrow_down</i></a></li>
         </ul>
     </nav>
     <!-- Dropdown Structure -->
@@ -95,7 +94,7 @@
                 <!--transaction-->
                 <li>
                     <a href="javascript:;" class="waves-effect waves-dark">
-                        <i class="fa fa-sitemap"></i>
+                        <i class="fa fa-btc"></i>
                         <span class="i18n" name="transaction"></span>
                         <span
                                 class="fa arrow"></span></a>
@@ -139,7 +138,8 @@
                                     <a href="baRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="baWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
+                                    <a href="baWithdrawAddressKyc.html" class="i18n"
+                                       name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
@@ -156,7 +156,8 @@
                                     <a href="caRegisterKyc.html" class="i18n" name="registrationReviewList"></a>
                                 </li>
                                 <li>
-                                    <a href="caWithdrawAddressKyc.html" class="i18n" name="withdrawAddressReviewList"></a>
+                                    <a href="caWithdrawAddressKyc.html" class="i18n"
+                                       name="withdrawAddressReviewList"></a>
                                 </li>
                             </ul>
                         </li>
@@ -164,14 +165,14 @@
                 </li>
                 <!--fault Report-->
                 <li>
-                    <a href="failureReport.html" class="active-menu waves-effect waves-dark">
-                        <i class="fa  fa-file-text-o"></i>
+                    <a href="failureReport.html" class="waves-effect waves-dark">
+                        <i class="fa fa-file-text-o"></i>
                         <span class="i18n" name="declarationList"></span>
                     </a>
                 </li>
                 <!--news-->
                 <li>
-                    <a href="pressReleases.html" class="waves-effect waves-dark">
+                    <a href="pressReleases.html" class="active-menu waves-effect waves-dark">
                         <i class="fa fa-plus"></i>
                         <span class="i18n" name="pressReleases"></span>
                     </a>
@@ -182,67 +183,41 @@
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper">
         <div class="header">
-            <h1 class="page-header i18n" name="declarationList"></h1>
+            <h1 class="page-header i18n" name="pressReleases"></h1>
             <ol class="breadcrumb">
-                <li><a href="#" class="i18n" name="declare"></a></li>
-                <li class="active i18n" name="declarationList"></li>
+                <li class="active i18n" name="pressReleases"></li>
             </ol>
-
         </div>
         <div id="page-inner">
+
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div class="flex center">
-                            <button class="i18n btn btn-success btn-sm unprocessed activeBtn" name="unprocessed"></button>
-                            <button class="i18n btn btn-success btn-sm processed margin-left-2" name="processed"></button>
-                    </div>
-                    <div class="card">
-                        <div class="card-content table-responsive">
-                            <div class="faultBox"></div>
+                    <div class="card baseInfoBox">
+                        <div class="card-content">
+                            <div class="input-field">
+                                <input id="newsTitle" type="text" class="validate">
+                                <label for="newsTitle" class="i18n" name="newsTitle"></label>
+                            </div>
+                            <div class="input-field">
+                                <textarea id="newsContent" class="materialize-textarea"></textarea>
+                                <label for="newsContent" class="i18n" name="newsContent"></label>
+                            </div>
+                            <div>
+                                <form action="#" id="fileForm">
+                                    <h1>+</h1>
+                                    <input type="file" id="fileInput">
+                                    <p class="text-center i18n" name="selectImg"></p>
+                                </form>
+                            </div>
+                            <div class="showImgBox margin-top-2"></div>
+                            <div class="text-right">
+                                <button class="btn btn-success fileBtn i18n" name="submit"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div id="processModal" class="modal modal-fixed-footer">
-    <div class="modal-content">
-        <h4 class="i18n" name="processingInformation"></h4>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="analysisInfo" class="materialize-textarea"></textarea>
-                        <label for="analysisInfo" class="i18n" name="analysisInfo"></label>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="processInfo" class="deal_info materialize-textarea"></textarea>
-                        <label for="processInfo" class="i18n" name="processInfo"></label>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="deal_name" type="text" class="deal_name validate">
-                        <label for="deal_name" class="i18n" name="deal_name"></label>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <a href="javascript:;" class="modal-action modal-close waves-effect waves-green btn-flat i18n confirmProcessBtn" name="determine"></a>
     </div>
 </div>
 
@@ -260,32 +235,71 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Structure -->
+<div id="uploadImgModal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="row uploadImgRow">
+            <div class="col-md-10 col-sm-12">
+                <div class="">
+                    <div class=" ">
+                        <h5 class="i18n" name="pleaseUploadAnImageOfTheSelectedType"></h5>
+                        <div>
+                            <img src="" class="uploadImgSrc width-15" alt="">
+                        </div>
+                        <form id="uploadForm" method="GET" enctype="multipart/form-data">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span class="i18n" name="file"></span>
+                                    <input type="file" name="file" multiple id="uploadFile">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text"
+                                           selectname="pleaseUploadAnImageOfTheSelectedType" selectattr="placeholder">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="align-right">
+                            <button class="btn btn-danger btn-sm cancel i18n" name="cancel">cancel</button>
+                            <button class="btn btn-success btn-sm baseBaTypeBtnConfirm i18n" name="determine"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- JS Scripts-->
 <!-- jQuery Js -->
-<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
 
 <!-- Bootstrap Js -->
 <script src="assets/js/bootstrap.min.js"></script>
+
+<!--language-->
+<script src="assets/language/jquery.i18n.properties.js"></script>
+<script src="assets/language/language.js"></script>
 
 <script src="assets/materialize/js/materialize.min.js"></script>
 
 <!-- Metis Menu Js -->
 <script src="assets/js/jquery.metisMenu.js"></script>
 
-<!--layer-->
+<!-- layer Js -->
 <script src="assets/js/layer/layer.js"></script>
 
-<!--language-->
-<script src="assets/language/jquery.i18n.properties.js"></script>
-<script src="assets/language/language.js"></script>
+<!-- sha Js -->
+<script src="assets/js/sha.js"></script>
 
-<!--common-->
+<!-- common Js -->
 <script src="assets/js/common.js"></script>
 
 <!-- Custom Js -->
 <script src="assets/js/main.js"></script>
 
-<!--baRecharge.js-->
-<script src="assets/js/failureReport.js"></script>
+<!-- config Js -->
+<script src="assets/js/pressReleases.js"></script>
 </body>
 </html>

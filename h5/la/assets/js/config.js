@@ -93,13 +93,6 @@ $(function () {
             }
         }, "jsonp");
     }
-    // GetOpenServer(key_code, function (response) {
-    //     if(response.errcode == "0"){
-    //         console.log(response);
-    //     }
-    // }, function (response) {
-    //     layer.msg(response.errmsg);
-    // });
 
     //select input
     $("input[type='radio']").change(function () {

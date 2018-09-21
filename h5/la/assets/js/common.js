@@ -803,6 +803,11 @@ function OpenSms(token, key_code, suc_func, error_func) {
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
 }
 
+//upload news
+function UploadNews(newsTitle, newsContent, imgList, suc_func, error_func) {
+    return "0";
+}
+
 /**
  * Disable button
  * @param $this Button object
