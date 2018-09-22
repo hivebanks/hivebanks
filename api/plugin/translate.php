@@ -11,7 +11,7 @@ set_time_limit(0);
 
 //读取properties文件
 $n = 0;
-$data = file('index_ja.properties');
+$data = file('index.properties');
 foreach ($data as $k => $v){
     $dbMatched = preg_match("/=/",$v,$matches);
     if($matches){
