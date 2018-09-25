@@ -10,30 +10,13 @@ require_once "../inc/common.php";
 
 php_begin();
 $rows = get_recharge_quest();
-var_dump($rows);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+foreach ($rows as $request) {
+    echo $request['base_amount'];
+    echo $request['tx_hash'];
+}
 
 
 
@@ -44,7 +27,7 @@ var_dump($rows);
 function get_recharge_quest()
 {
     $db = new DB_COM();
-    $sql = "SELECT * FROM us_ba_recharge_request where qa_flag = 1";
+    $sql = "SELECT * FROM us_ba_recharge_request where qa_flag = 0";
     $db->query($sql);
     $rows = $db->fetchAll();
 
