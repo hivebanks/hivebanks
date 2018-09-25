@@ -32,7 +32,7 @@ function creat_us_log_login_fail($row)
 // 参数: us_id          用户id
 // 返回: count          删除的行数
 //======================================
-function delect_us_log_login_fail($us_id)
+function delete_us_log_login_fail($us_id)
 {
   $db = new DB_COM();
   $sql = "DELETE  FROM us_log_login_fail WHERE us_id = '{$us_id}'";

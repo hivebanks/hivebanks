@@ -1,7 +1,6 @@
 <?php
 /**
- * header home
+ * header hivebanks
  */
-
 header("Location: /h5");
 exit;

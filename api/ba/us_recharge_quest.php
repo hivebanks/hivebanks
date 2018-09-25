@@ -65,6 +65,7 @@ $data["base_amount"] = $base_amount * get_la_base_unit();
 $data["bit_amount"] = $bit_amount;
 $data["tx_time"] = time();
 $data["asset_id"] = $bit_type;
+
 //从地址db里获取account_id
 //if ($bit_type != BASE_CURRENCY){
     $bit_address_row = get_ba_bit_account_ba_id($ba_id, $us_id);
