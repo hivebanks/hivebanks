@@ -105,7 +105,7 @@ $(document).ready(function () {
             LayerFun('passwordNotEmpty');
             return;
         }
-        if(ba_token){
+        if (ba_token) {
             LayerFun('noMoreAccount');
             return;
         }
@@ -175,11 +175,11 @@ $(document).ready(function () {
     });
     $('#phone').blur(function () {
         var phone = $('#phone').val();
-        if(phone.length <= 0){
+        if (phone.length <= 0) {
             $('.phone_tips').fadeIn('fast').siblings('span').fadeOut('fast');
-        }else if(isNaN(phone)){
+        } else if (isNaN(phone)) {
             $('.phoneErrorTips').fadeIn('fast').siblings('span').fadeOut('fast');
-        }else {
+        } else {
             $('.phone_tips').fadeOut('fast');
             $('.phoneErrorTips').fadeOut('fast');
             $('.phoneAuditFail').fadeOut('fast');
@@ -189,9 +189,9 @@ $(document).ready(function () {
     //phone password
     $('.phonePassword').blur(function () {
         var phonePassword = $('.phonePassword').val();
-        if(phonePassword.length <= 0){
+        if (phonePassword.length <= 0) {
             $('.phonePassword_tips').fadeIn('fast');
-        }else {
+        } else {
             $('.phonePassword_tips').fadeOut('fast');
         }
     });
@@ -203,39 +203,39 @@ $(document).ready(function () {
     });
     $('.phoneCfmCode').blur(function () {
         var phoneCfmCode = $('.phoneCfmCode').val();
-        if(phoneCfmCode.length <= 0){
+        if (phoneCfmCode.length <= 0) {
             $('.phoneImgCode_tips').fadeIn('fast').siblings('span').fadeOut('fast');
-        }else {
+        } else {
             $('.phoneImgCode_tips').fadeOut('fast');
             $('.errPhoneImgCode_tips').fadeOut('fast');
         }
     });
 
     //phone phoneSmsCode
-    $('#phoneSmsCode').blur(function () {
-        var phoneSmsCode = $('#phoneSmsCode').val();
-        if(phoneSmsCode.length <= 0){
-            $('.phoneSmsCode_tips').fadeIn('fast');
-        }else {
-            $('.phoneSmsCode_tips').fadeOut('fast');
-        }
-    });
+    // $('#phoneSmsCode').blur(function () {
+    //     var phoneSmsCode = $('#phoneSmsCode').val();
+    //     if(phoneSmsCode.length <= 0){
+    //         $('.phoneSmsCode_tips').fadeIn('fast');
+    //     }else {
+    //         $('.phoneSmsCode_tips').fadeOut('fast');
+    //     }
+    // });
 
     //Get phone verification code
-    $('.phoneCodeBtn').click(function () {
-        var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
-        if($(".phone").val().length <= 0){
-            $('.phone_tips').fadeIn().siblings('span').hide();
-            LayerFun('phoneNotEmpty');
-            return;
-        }
-        if ($('.phoneCfmCode').val().length <= 0) {
-            $('.phoneImgCode_tips').fadeIn('fast');
-            return;
-        }
-        setTime($this);
-        GetPhoneCodeFun(bind_type, $this, cfm_code);
-    });
+    // $('.phoneCodeBtn').click(function () {
+    //     var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
+    //     if($(".phone").val().length <= 0){
+    //         $('.phone_tips').fadeIn().siblings('span').hide();
+    //         LayerFun('phoneNotEmpty');
+    //         return;
+    //     }
+    //     if ($('.phoneCfmCode').val().length <= 0) {
+    //         $('.phoneImgCode_tips').fadeIn('fast');
+    //         return;
+    //     }
+    //     setTime($this);
+    //     GetPhoneCodeFun(bind_type, $this, cfm_code);
+    // });
     // ========Log in with phone========
     $('.phoneCanvas').click(function () {//click switch verification code
         GetImgCode();
@@ -248,7 +248,7 @@ $(document).ready(function () {
         // Get user input
         var cellphone = $(".phone").val(),
             cfm_code = $(".phoneCfmCode").val(),
-            sms_code = $("#phoneSmsCode").val(),
+            // sms_code = $("#phoneSmsCode").val(),
             phonePassword = $(".phonePassword").val(),
             pass_word_hash = hex_sha1(phonePassword);
 
@@ -274,13 +274,13 @@ $(document).ready(function () {
             LayerFun('PasswordStructure');
             return;
         }
-        if(ba_token){
+        if (ba_token) {
             LayerFun('noMoreAccount');
             return;
         }
         var $this = $(this), _text = $(this).text();
         if (DisableClick($this)) return;
-        PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code, function (response) {
+        PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, function (response) {
             ActiveClick($this, _text);
             if (response.errcode == '0') {
                 $('.phone').val('');
@@ -310,7 +310,6 @@ $(document).ready(function () {
             if (response.errcode == '139') {
                 $('.errPhoneImgCode_tips').fadeIn('fast');//Graphic verification code error
             }
-
             LayerFun(response.errcode);
             return;
         });

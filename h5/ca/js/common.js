@@ -378,13 +378,12 @@ function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, er
 }
 
 //Mobile phone login processing
-function PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code, suc_func, error_func) {
+function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_phone.php',
         post_data = {
             'country_code': country_code,
             'cellphone': cellphone,
             'pass_word_hash': pass_word_hash,
-            'sms_code': sms_code,
             'cfm_code': cfm_code
         };
     CallApi(api_url, post_data, suc_func, error_func);
