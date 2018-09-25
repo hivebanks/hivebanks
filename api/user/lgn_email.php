@@ -88,16 +88,16 @@ if (!$check_pass) {
     } else {
         $row_fail['us_id'] = $row['us_id'];
         $row_fail['us_ip'] = ip2long(get_ip());
-        $row_fail['lgn_type'] = 'eamil';
+        $row_fail['lgn_type'] = 'email';
         $row_fail['count_error'] = 1;
         $row_fail['limt_time'] = $timestamp + pow(2, $row_fail['count_error']);
         $row_fail['ctime'] = date('Y-m-d H:i:s');
-        $creat_log_fail = creat_us_log_login_fail($row_fail);
+        $create_log_fail = creat_us_log_login_fail($row_fail);
         exit_error('116', pow(2, $row_fail['count_error']));
     }
 }
 // 登陆密码正确删除log_fail表中该用户的所有数据
-$delect_us_log_fail = delect_us_log_login_fail($row['us_id']);
+$delete_us_log_fail = delect_us_log_login_fail($row['us_id']);
 // 生成token
 $timestamp += 2 * 60 * 60;
 $des = new Des();

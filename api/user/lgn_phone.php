@@ -117,7 +117,7 @@ if ($sms_code == "123456"){
     }
 
 // 登陆密码正确删除log_fail表中该用户的所有数据
-    $delect_us_log_fail = delect_us_log_login_fail($row['us_id']);
+    $delete_us_log_fail = delete_us_log_login_fail($row['us_id']);
 }
 $timestamp += 2*60*60;
 $des = new Des();
