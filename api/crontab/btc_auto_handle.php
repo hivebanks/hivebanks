@@ -16,7 +16,9 @@ $rows = get_recharge_quest();
 foreach ($rows as $request) {
     echo $request['base_amount'] . "\n";
 
-    echo $request['tx_hash'] . "\n";
+    echo $request['tx_detail'] . "\n";
+
+
 }
 
 
