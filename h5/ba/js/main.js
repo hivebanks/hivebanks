@@ -245,7 +245,7 @@ function LayerFun(type) {
         window.location.href = "login.html";
         return;
     }
-    layer.msg("<span class='i18n' name='" + type + "'></span>", {time:6000});
+    layer.msg("<span class='i18n' name='" + type + "'></span>", {time:10000});
     execI18n();
 }
 
