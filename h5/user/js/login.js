@@ -250,7 +250,7 @@ $(document).ready(function () {
         // Get user input
         var cellphone = $("#phone").val(),
             cfm_code = $(".phoneCfmCode").val(),
-            sms_code = $("#phoneSmsCode").val(),
+            // sms_code = $("#phoneSmsCode").val(),
             phonePassword = $(".phonePassword").val(),
             pass_word_hash = hex_sha1(phonePassword);
         if (cellphone.length <= 0) {
@@ -263,11 +263,11 @@ $(document).ready(function () {
             $('.phoneImgCode_tips').fadeIn().siblings('span').hide();
             return;
         }
-        if (sms_code.length <= 0) {
-            LayerFun('codeNotEmpty');
-            $('.phoneCode_tips').fadeIn();
-            return;
-        }
+        // if (sms_code.length <= 0) {
+        //     LayerFun('codeNotEmpty');
+        //     $('.phoneCode_tips').fadeIn();
+        //     return;
+        // }
 
         if (phonePassword.length <= 0) {
             LayerFun('passwordNotEmpty');
@@ -281,12 +281,12 @@ $(document).ready(function () {
 
         var $this = $(this), _text = $(this).text();
         if (DisableClick($this)) return;
-        PhoneLogin(country_code, cellphone, pass_word_hash, sms_code, cfm_code, function (response) {
+        PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, function (response) {
             ActiveClick($this, _text);
             if (response.errcode == '0') {
                 $('#phone').val('');
                 $('.phoneCfmCode').val('');
-                $('#phoneSmsCode').val('');
+                // $('#phoneSmsCode').val('');
                 $('.phonePassword').val('');
                 var token = response.token;
                 SetCookie('user_token', token);
