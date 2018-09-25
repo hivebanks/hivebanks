@@ -25,7 +25,7 @@ function GetUsCookie(name) {
     if (arr == null && name == "user_token") {
         window.location.href = '../user/login.html';
         return;
-    }else {
+    } else {
         window.location.href = 'CaLogin.html';
     }
 }
@@ -64,14 +64,15 @@ function getRootPath() {
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
     return localhostPath;
 }
+
 var url = getRootPath();
 
 //Get failed error code prompt
 function GetErrorCode(code) {
-    $.getJSON( url+"/h5/assets/json/errcode.json", function (response){
-        $.each(response, function (i, val){
-            if(response[i].code == code){
-                layer.msg('<p class="i18n" name="'+ code +'">'+ response[i].code_value +'</p>');
+    $.getJSON(url + "/h5/assets/json/errcode.json", function (response) {
+        $.each(response, function (i, val) {
+            if (response[i].code == code) {
+                layer.msg('<p class="i18n" name="' + code + '">' + response[i].code_value + '</p>');
                 execI18n();
             }
         })
@@ -81,7 +82,7 @@ function GetErrorCode(code) {
 //Get configuration file
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: url+"/h5/assets/json/config_url.json",
+    url: url + "/h5/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
@@ -94,9 +95,9 @@ $.ajax({
         $('.ca_currency').text(ca_currency);
         SetCookie('ca_currency', ca_currency);
         SetCookie('benchmark_type', benchmark_type);
-        if(!userLanguage){
+        if (!userLanguage) {
             SetCookie('userLanguage', data.userLanguage);
-        }else {
+        } else {
             return;
         }
     },
@@ -266,7 +267,7 @@ function CallLaBase(api_url, post_data, suc_func, error_func) {
 function RegisterSwitch(type, suc_func, error_func) {
     var api_url = 'reg_lock.php',
         post_data = {
-            'type' : type
+            'type': type
         };
     CallLaApi(api_url, post_data, suc_func, error_func);
 }
@@ -378,13 +379,14 @@ function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, er
 }
 
 //Mobile phone login processing
-function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, suc_func, error_func) {
+function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, sms_code, suc_func, error_func) {
     var api_url = 'lgn_phone.php',
         post_data = {
             'country_code': country_code,
             'cellphone': cellphone,
             'pass_word_hash': pass_word_hash,
-            'cfm_code': cfm_code
+            'cfm_code': cfm_code,
+            'sms_code': sms_code
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }

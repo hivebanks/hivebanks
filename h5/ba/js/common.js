@@ -15,7 +15,7 @@ function GetCookie(name) {
     if (arr == null && name == "user_token") {
         window.location.href = '../user/login.html';
         return;
-    }else {
+    } else {
         window.location.href = 'BaLogin.html';
         return;
     }
@@ -29,7 +29,7 @@ function GetUsCookie(name) {
         DelCookie('user_token');
         window.location.href = '../user/login.html';
         return;
-    }else {
+    } else {
         DelCookie('ba_token');
         window.location.href = 'BaLogin.html';
     }
@@ -69,14 +69,15 @@ function getRootPath() {
     var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
     return localhostPath;
 }
+
 var url = getRootPath();
 
 //Get failed error code prompt
 function GetErrorCode(code) {
-    $.getJSON( url+"/h5/assets/json/errcode.json", function (response){
-        $.each(response, function (i, val){
-            if(response[i].code == code){
-                layer.msg('<p class="i18n" name="'+ code +'">'+ response[i].code_value +'</p>');
+    $.getJSON(url + "/h5/assets/json/errcode.json", function (response) {
+        $.each(response, function (i, val) {
+            if (response[i].code == code) {
+                layer.msg('<p class="i18n" name="' + code + '">' + response[i].code_value + '</p>');
                 execI18n();
             }
         })
@@ -86,7 +87,7 @@ function GetErrorCode(code) {
 //Get configuration file
 var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLanguage');
 $.ajax({
-    url: url+"/h5/assets/json/config_url.json",
+    url: url + "/h5/assets/json/config_url.json",
     async: false,
     type: "GET",
     dataType: "json",
@@ -97,9 +98,9 @@ $.ajax({
         var ca_currency = data.ca_currency.toUpperCase();
         $('.base_type').text(benchmark_type);
         SetCookie('benchmark_type', benchmark_type);
-        if(!userLanguage){
+        if (!userLanguage) {
             SetCookie('userLanguage', data.userLanguage);
-        }else {
+        } else {
             return;
         }
     },
@@ -273,9 +274,7 @@ function GetImgCode() {
 //Get proxy type
 function GetAgentMode(suc_func, error_func) {
     var api_url = 'get_ba_bit_type.php',
-        post_data = {
-
-        };
+        post_data = {};
     CallApi(api_url, post_data, suc_func, error_func)
 }
 
@@ -283,7 +282,7 @@ function GetAgentMode(suc_func, error_func) {
 function RegisterSwitch(type, suc_func, error_func) {
     var api_url = 'reg_lock.php',
         post_data = {
-            'type' : type
+            'type': type
         };
     CallLaApi(api_url, post_data, suc_func, error_func);
 }
@@ -313,29 +312,31 @@ function PhoneRegister(country_code, cellphone, bit_type, pass_word, pass_word_h
         };
     CallApi(api_url, post_data, suc_func, error_func);
 };
+
 //Get phone verification code
-function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func){
+function GetPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func) {
     var api_url = 'sms_send.php',
         post_data = {
-            'cellphone':cellphone,
-            'country_code':country_code,
-            'bind_type':bind_type,
-            'cfm_code':cfm_code
+            'cellphone': cellphone,
+            'country_code': country_code,
+            'bind_type': bind_type,
+            'cfm_code': cfm_code
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
 //Get user phone verification code
-function GetUserPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func){
+function GetUserPhoneCode(cellphone, country_code, bind_type, cfm_code, suc_func, error_func) {
     var api_url = 'sms_send.php',
         post_data = {
-            'cellphone':cellphone,
-            'country_code':country_code,
-            'bind_type':bind_type,
-            'cfm_code':cfm_code
+            'cellphone': cellphone,
+            'country_code': country_code,
+            'bind_type': bind_type,
+            'cfm_code': cfm_code
         };
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
+
 //email login
 function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
     var api_url = 'lgn_email.php',
@@ -348,13 +349,14 @@ function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
 }
 
 //Log in with phone
-function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, suc_func, error_func) {
+function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, sms_code, suc_func, error_func) {
     var api_url = 'lgn_phone.php',
         post_data = {
             'country_code': country_code,
             'cellphone': cellphone,
             'pass_word_hash': pass_word_hash,
-            'cfm_code': cfm_code
+            'cfm_code': cfm_code,
+            'sms_code': sms_code
         };
     CallApi(api_url, post_data, suc_func, error_func);
 };
@@ -363,7 +365,7 @@ function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, suc_func,
 function GetEmailCode(email, suc_func, error_func) {
     var api_url = 'cfm_email_preform.php',
         post_data = {
-            'email' : email
+            'email': email
         };
     CallApi(api_url, post_data, suc_func, error_func)
 }
@@ -444,8 +446,8 @@ function GetBindInformation(token, suc_func, error_func) {
 function GoogleBind(token, email, suc_func, error_func) {
     var api_url = 'bnd_Google.php',
         post_data = {
-            'token' : token,
-            'email' : email
+            'token': token,
+            'email': email
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }
@@ -454,8 +456,8 @@ function GoogleBind(token, email, suc_func, error_func) {
 function GoogleVerify(token, code, suc_func, error_func) {
     var api_url = 'cfm_Google.php',
         post_data = {
-            'token' : token,
-            'code' : code
+            'token': token,
+            'code': code
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }
@@ -502,19 +504,20 @@ function FileBind(token, file_type, file_url, suc_func, error_func) {
             'token': token,
             'file_type': file_type,
             'file_url': file_url
-    };
+        };
     CallApi(api_url, post_data, suc_func, error_func);
 }
+
 //hash binding
 function Hash(token, hash_type, hash, pass_word_hash, phone, phoneCode, suc_func, error_func) {
     var api_url = 'bnd_hash.php',
         post_data = {
-            'token':token,
-            'hash':hash,
-            'phone':phone,
-            'phoneCode':phoneCode,
-            'hash_type':hash_type,
-            'pass_word_hash':pass_word_hash
+            'token': token,
+            'hash': hash,
+            'phone': phone,
+            'phoneCode': phoneCode,
+            'hash_type': hash_type,
+            'pass_word_hash': pass_word_hash
         };
     CallApi(api_url, post_data, suc_func, error_func);
 };
@@ -543,9 +546,9 @@ function GetMarginAddress(token, suc_func, error_func) {
 function AddMarginRechargeAddress(token, bit_address, suc_func, error_func) {
     var api_url = 'bit_address_recharge_add.php',
         post_data = {
-        'token': token,
-        'bit_address': bit_address
-    };
+            'token': token,
+            'bit_address': bit_address
+        };
     CallLaBase(api_url, post_data, suc_func, error_func);
 }
 
@@ -857,12 +860,12 @@ function CheckUserBindInfo(token, suc_func, error_func) {
 //userAdd withdrawal address
 function ConfirmAddAddress(token, bit_type, bit_address, pass_word_hash, suc_func, error_func) {
     var api_url = 'bit_address_add.php',
-    post_data = {
-        'token': token,
-        'bit_type': bit_type,
-        'bit_address': bit_address,
-        'pass_word_hash': pass_word_hash
-    };
+        post_data = {
+            'token': token,
+            'bit_type': bit_type,
+            'bit_address': bit_address,
+            'pass_word_hash': pass_word_hash
+        };
     CallUserApi(api_url, post_data, suc_func, error_func);
 }
 
