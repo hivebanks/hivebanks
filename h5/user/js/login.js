@@ -212,30 +212,30 @@ $(document).ready(function () {
     });
 
     //phone phoneSmsCode
-    $('#phoneSmsCode').blur(function () {
-        var phoneSmsCode = $('#phoneSmsCode').val();
-        if (phoneSmsCode.length <= 0) {
-            $('.phoneSmsCode_tips').fadeIn('fast');
-        } else {
-            $('.phoneSmsCode_tips').fadeOut('fast');
-        }
-    });
+    // $('#phoneSmsCode').blur(function () {
+    //     var phoneSmsCode = $('#phoneSmsCode').val();
+    //     if (phoneSmsCode.length <= 0) {
+    //         $('.phoneSmsCode_tips').fadeIn('fast');
+    //     } else {
+    //         $('.phoneSmsCode_tips').fadeOut('fast');
+    //     }
+    // });
 
     //Get phone verification code
-    $('.phoneCodeBtn').click(function () {
-        var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
-        if ($(".phone").val().length <= 0) {
-            $('.phone_tips').fadeIn().siblings('span').hide();
-            LayerFun('phoneNotEmpty');
-            return;
-        }
-        if ($('.phoneCfmCode').val().length <= 0) {
-            $('.phoneImgCode_tips').fadeIn('fast');
-            return;
-        }
-        setTime($this);
-        GetPhoneCodeFun(bind_type, $this, cfm_code);
-    });
+    // $('.phoneCodeBtn').click(function () {
+    //     var bind_type = '2', $this = $(this), cfm_code = $('.phoneCfmCode').val();
+    //     if ($(".phone").val().length <= 0) {
+    //         $('.phone_tips').fadeIn().siblings('span').hide();
+    //         LayerFun('phoneNotEmpty');
+    //         return;
+    //     }
+    //     if ($('.phoneCfmCode').val().length <= 0) {
+    //         $('.phoneImgCode_tips').fadeIn('fast');
+    //         return;
+    //     }
+    //     setTime($this);
+    //     GetPhoneCodeFun(bind_type, $this, cfm_code);
+    // });
 
     // ========Log in with phone========
     $('.phoneCanvas').click(function () {//click switch verification code
