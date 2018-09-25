@@ -9,9 +9,9 @@ header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
 /*
-========================== 用户充值记录 ==========================
+========================== ba处理用户充值请求 ==========================
 GET参数
-  token           用户TOKEN
+  token           ba用户的TOKEN
   type            充值类型
 返回
 total           总记录数
