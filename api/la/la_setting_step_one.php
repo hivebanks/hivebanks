@@ -43,6 +43,7 @@ echo '<!DOCTYPE html>
             <div class="flex end">
                         <p class="languageText" id="en">English</p>
                         <p class="languageText margin-left-2" id="zh-CN">简体中文</p>
+                        <p class="languageText margin-left-2" id="ja">Japanese</p>
 </div>
  
 </div>

@@ -63,7 +63,7 @@ var i18nLanguage = "en";
 /*
 设置一下网站支持的语言种类
  */
-var webLanguage = ['en', 'zh-CN'];
+var webLanguage = ['en', 'zh-CN', 'ja'];
 
 /**
  * 执行页面i18n方法
@@ -156,7 +156,7 @@ $(function () {
     $(".languageText").on("click", function (){
         $(this).addClass("languageActive").siblings().removeClass("languageActive");
         var language = $(this).attr("id");
-        console.log(language);
+        // console.log(language);
         getCookie("userLanguage",language,{
                     expires: 30,
                     path:'/'
