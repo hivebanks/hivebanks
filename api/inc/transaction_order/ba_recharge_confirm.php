@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: liangyi
- * Date: 2018/8/8
- * Time: 上午11:32
- */
 require_once 'db/com_base_balance.php';
 function recharge_confirm($rows)
 {
@@ -45,7 +39,7 @@ function recharge_confirm($rows)
         exit_error('134',"订单异常，金额不对,联系管理员");
     }
 
-    //更新ba的该订单的loc_amount
+    //更新ba的该订单的lock_amount
     $sql = "UPDATE ba_base SET lock_amount = '{$new_lock_amount}' WHERE ba_id = '{$rows["ba_id"]}'";
     $db->query($sql);
     if (!$db->affectedRows($sql)) {

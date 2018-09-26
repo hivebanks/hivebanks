@@ -8,8 +8,7 @@ require_once '../../ba/db/la_base.php';
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
-/*
- * ==========================ba得到用户充值请求api=========================
+/* * ==========================ba得到用户充值请求api=========================
  * GET参数：
  * id               id
  * apikey           ba用户的api key
@@ -32,7 +31,7 @@ php_begin();
 $args = array('ba_id','key');
 chk_empty_args('GET', $args);
 
-//
+//得到参数
 $id = get_arg_str('GET', 'ba_id', 128);
 $type = get_arg_str('GET', 'type');
 $key = get_arg_str('GET', 'key');
