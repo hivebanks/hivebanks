@@ -10,6 +10,7 @@ header("Content-Type:application/json;charset=utf-8");
 
 /*
 ========================== ba处理用户充值请求 ==========================
+注释：得到用户请求充值列表
 GET参数
   token           ba用户的TOKEN
   type            充值类型
