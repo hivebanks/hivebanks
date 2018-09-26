@@ -18,7 +18,7 @@ function get_recharge_quest_block_txhash($ba_id) {
 
 function sel_recharge_info($tx_hash) {
     $db = new DB_COM();
-    $sql = "SELECT * FROM us_ba_recharge_requeset WHERE tx_hash = '{$tx_hash}'";
+    $sql = "SELECT * FROM us_ba_recharge_request WHERE tx_hash = '{$tx_hash}'";
     $db->query($sql);
     $row = $db->fetchRow();
     return $row;
