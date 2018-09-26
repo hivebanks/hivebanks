@@ -8,5 +8,7 @@ header("Content-Type:application/json;charset=utf-8");
 $all_blcok_tx_hash = get_recharge_quest_block_txhash("5B26B745-FC8B-573F-EEB4-D8F05FAF0CD6");
 
 
+foreach ($all_blcok_tx_hash as $hash) {
+    var_dump($hash["block_tx_hash"]);
+}
 
-var_dump($all_blcok_tx_hash);

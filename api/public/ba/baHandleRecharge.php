@@ -27,8 +27,14 @@ $key = get_arg_str('key');
 
 
 //验证blockhash 是否存在
-$all_blcok_tx_hash = get_recharge_quest_block_txhash("5B26B745-FC8B-573F-EEB4-D8F05FAF0CD6");
+$all_block_tx_hash = get_recharge_quest_block_txhash("5B26B745-FC8B-573F-EEB4-D8F05FAF0CD6");
+foreach($all_block_tx_hash as $hash) {
+    var_dump();
+    if($hash["block_tx_hash"] == $tx_hash) {
+        exit_error("166", "已经存在的交易哈希，检查是否两次充值");
+    }
+}
 
 
 
-var_dump($all_blcok_tx_hash);
+var_dump($all_block_tx_hash);
