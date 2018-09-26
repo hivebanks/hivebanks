@@ -27,14 +27,28 @@ $key = get_arg_str('key');
 
 
 //验证blockhash 是否存在
-$all_block_tx_hash = get_recharge_quest_block_txhash("5B26B745-FC8B-573F-EEB4-D8F05FAF0CD6");
+$all_block_tx_hash = get_recharge_quest_block_txhash($id);
 foreach($all_block_tx_hash as $hash) {
-    var_dump();
     if($hash["block_tx_hash"] == $tx_hash) {
         exit_error("166", "已经存在的交易哈希，检查是否两次充值");
     }
 }
 
+$row = sel_us_recharge_info($tx_hash);
+if(!$row) {
+    exit_error(1, "该订单不存在");
+}
+if($row["qa_flag"] == 1 || $row["qa_flag"] == 2) {
+    exit_error(1, "该订单已处理");
+} elseif ($row["qa_flag"] ==3) {
+    exit_error(1, "该订单已经被拒绝");
+}
 
 
-var_dump($all_block_tx_hash);
+
+
+
+//将确认结果写入到数据库
+
+
+

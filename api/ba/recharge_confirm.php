@@ -16,7 +16,7 @@ header("Content-Type:application/json;charset=utf-8");
 GET参数
    token           用户TOKEN
    qa_id           请求ID
-   type            type  1:同意，2：拒绝
+   type            type  1:同意，2.自动处理  3：拒绝
 返回
   errcode = 0     请求成功
 说明
@@ -36,8 +36,8 @@ $ba_id = check_token($token);
 
 if ($type == '1') {
     $qa_flag = "1";
-}elseif ($type == '2'){
-    $qa_flag = "2";
+}elseif ($type == '3'){
+    $qa_flag = "3";
 }else {
     exit_error(1,"非法参数");
 }
