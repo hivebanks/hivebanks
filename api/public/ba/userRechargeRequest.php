@@ -14,17 +14,19 @@ header("Content-Type:application/json;charset=utf-8");
  *  返回：
  *total           总记录数
  *rows          记录数组
- *asset_id            充值资产ID
+ *asset_id            充值资产
  *qa_id               请求ID
  *us_id               用户ID
  *bit_address         数字货币充值地址
  *bit_amount          数组货币金额
  *base_amount         充值资产金额
- *tx_hash             交易HASH
  *tx_time             请求时间戳
  *说明
  */
 
 
 php_begin();
-$args = array('token', );
+$args = array('ba_id','key', );
+chk_empty_args('GET', $args);
+
+//
