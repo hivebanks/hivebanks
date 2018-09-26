@@ -41,7 +41,7 @@ $key = get_arg_str('GET', 'key');
 
 //获取
 if($type=='1') {
-    $row = get_ba_recharge_request_ba_id($id, '0');
+    $rows = get_ba_recharge_request_ba_id($id, '0');
 } else{
     exit_error(1, "非法参数");
 }
