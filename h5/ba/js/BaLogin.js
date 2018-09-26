@@ -265,7 +265,7 @@ $(document).ready(function () {
         }
 
         if(sms_code.length <= 0){
-            LayerFun("phoneSmsCode_tips");
+            LayerFun("codeNotEmpty");
             return;
         }
 

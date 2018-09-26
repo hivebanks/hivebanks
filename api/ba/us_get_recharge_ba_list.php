@@ -8,7 +8,8 @@ header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
 /*
-========================== 用户请求充值列表(文件名待确认) ==========================
+========================== 用户请求充值列表(文件名待确认) =========================
+注释：用户请求充值，获取对应的用户列表
 GET参数
   token           请求的用户token
 返回

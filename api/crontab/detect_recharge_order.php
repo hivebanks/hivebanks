@@ -14,6 +14,7 @@ GET参数
 */
 
 php_begin();
+echo "hello world";
 $args = array('token',"qa_id");
 chk_empty_args('GET', $args);
 $token = get_arg_str('GET', 'token', 128);
