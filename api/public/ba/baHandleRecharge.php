@@ -19,7 +19,7 @@ chk_empty_args('GET', $args);
 $id = get_arg_str('GET', 'ba_id', 128);
 $tx_hash = get_arg_str('GET', 'tx_hash');
 $block_tx_hash = get_arg_str('GET', 'block_tx_hash');
-$key = get_arg_str('key');
+$key = get_arg_str('GET','key');
 
 
 //TODO: 验证key

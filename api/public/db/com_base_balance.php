@@ -86,7 +86,7 @@ function ba_get_recharge_prev_hash($ba_id)
  * 参数：      ba_id
  * 返回：      hash_id
  */
-function ba_get_withdraw_pre_hash($ba_id)
+function ba_get_withdraw_prev_hash($ba_id)
 {
     $db = new DB_COM();
     $sql = "SELECT hash_id FROM com_base_balance WHERE credit_id='{$ba_id}' and tx_type = 'ba_out' ORDER BY ctime DESC LIMIT 1";
