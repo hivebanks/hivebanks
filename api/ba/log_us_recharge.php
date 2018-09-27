@@ -40,18 +40,18 @@ $type = get_arg_str('GET', 'type');
 $ba_id = check_token($token);
 //获取充值列表基本信息
 if ($type == '1') {
-    $row = get_ba_recharge_request_ba_id($ba_id,'0');
+    $rows = get_ba_recharge_request_ba_id($ba_id,'0');
 }elseif ($type == '2') {
-    $row = get_ba_recharge_request_ba_id($ba_id,'1');
+    $rows = get_ba_recharge_request_ba_id($ba_id,'1');
 }elseif ($type == '3'){
-    $row = get_ba_recharge_request_ba_id($ba_id,'2');
+    $rows = get_ba_recharge_request_ba_id($ba_id,'2');
 }else {
     exit_error(1,"非法参数");
 }
 
 
 $new_rows = array();
-foreach ($row as $for_row) {
+foreach ($rows as $for_row) {
     $new_row["asset_id"] = $for_row["asset_id"];
     $new_row["bit_amount"] = floatval($for_row["bit_amount"]);
     $new_row["base_amount"] = floatval($for_row["base_amount"] / get_la_base_unit());
