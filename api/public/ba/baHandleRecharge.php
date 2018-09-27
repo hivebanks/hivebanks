@@ -48,7 +48,7 @@ if($row["qa_flag"] == 1 || $row["qa_flag"] == 2) {
 auto_recharge_confirm($row, $block_tx_hash);
 $json = array();
 $json['errcode'] = '0';
-$json['errmsg'] = '自动处理成功了';
+$json['errmsg'] = '';
 $json['base_amount'] = get_ba_base_info($id)["base_amount"] / BASE_UNIT;
 $json['lock_amount'] = get_ba_base_info($id)["lock_amount"] / BASE_UNIT;
 
