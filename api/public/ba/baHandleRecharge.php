@@ -4,6 +4,7 @@ require_once '../../inc/common.php';
 require_once '../../ba/db/us_ba_recharge_request.php';
 require_once '../../ba/db/ba_asset_account.php';
 require_once '../../ba/db/la_base.php';
+require_once '../../ba/db/ba_base.php';
 require_once '../db/us_ba_request_recharge.php';
 
 header("cache-control:no-cache,must-revalidate");
