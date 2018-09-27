@@ -49,8 +49,8 @@ auto_recharge_confirm($row, $block_tx_hash);
 $json = array();
 $json['errcode'] = '0';
 $json['errmsg'] = '自动处理成功了';
-$json['base_amount'] = get_ba_base_info($ba_id)["base_amount"] / BASE_UNIT;
-$json['lock_amount'] = get_ba_base_info($ba_id)["lock_amount"] / BASE_UNIT;
+$json['base_amount'] = get_ba_base_info($id)["base_amount"] / BASE_UNIT;
+$json['lock_amount'] = get_ba_base_info($id)["lock_amount"] / BASE_UNIT;
 
 $json = json_encode($json);
 
