@@ -44,11 +44,17 @@ if($row["qa_flag"] == 1 || $row["qa_flag"] == 2) {
     exit_error(1, "该订单已经被拒绝");
 }
 
+auto_recharge_confirm($row);
+$json = array();
+$json['errcode'] = '0';
+$json['errmsg'] = '自动处理成功了';
+$json['base_amount'] = get_ba_base_info($ba_id)["base_amount"] / BASE_UNIT;
+$json['lock_amount'] = get_ba_base_info($ba_id)["lock_amount"] / BASE_UNIT;
 
+$json = json_encode($json);
 
+php_end($json);
 
-
-//将确认结果写入到数据库
 
 
 
