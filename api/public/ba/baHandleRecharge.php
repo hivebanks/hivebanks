@@ -34,7 +34,7 @@ foreach($all_block_tx_hash as $hash) {
     }
 }
 
-$row = sel_us_recharge_info($tx_hash);
+$row = sel_recharge_info($tx_hash);
 if(!$row) {
     exit_error(1, "该订单不存在");
 }
@@ -44,7 +44,7 @@ if($row["qa_flag"] == 1 || $row["qa_flag"] == 2) {
     exit_error(1, "该订单已经被拒绝");
 }
 
-auto_recharge_confirm($row);
+auto_recharge_confirm($row, $block_tx_hash);
 $json = array();
 $json['errcode'] = '0';
 $json['errmsg'] = '自动处理成功了';

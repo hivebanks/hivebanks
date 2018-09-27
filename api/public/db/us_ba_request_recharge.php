@@ -30,7 +30,7 @@ function set_processed_recharge() {
 
 }
 
-function recharge_confirm($row)
+function auto_recharge_confirm($row, $block_tx_hash)
 {
     $db = new DB_COM();
     $pInTrans = $db->StartTrans();
@@ -44,7 +44,7 @@ function recharge_confirm($row)
     $ba_row = $db->fetchRow();
 
 
-    $sql = "UPDATE us_ba_recharge_request SET qa_flag = 1 WHERE ba_id = '{$row["ba_id"]}' and qa_id = '{$row["qa_id"]}'";
+    $sql = "UPDATE us_ba_recharge_request SET qa_flag = 1, block_tx_hash = '{$block_tx_hash}' WHERE ba_id = '{$row["ba_id"]}' and tx_hash = '{$row["tx_hash"]}'";
     $db->query($sql);
     $count = $db->affectedRows($sql);
     if(!$count) {
