@@ -104,7 +104,7 @@ function auto_recharge_confirm($row, $block_tx_hash)
 
 
     $sql = $db->sqlInsert("com_base_balance", $com_balance_us);
-    if($db->query($sql)) {
+    if(!$db->query($sql)) {
         $db->Rollback($pInTrans);
         exit_error("132", "transaction Failed");
     }
