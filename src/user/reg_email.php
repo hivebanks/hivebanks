@@ -101,18 +101,21 @@ if ($score <= 3) {
 if (us_can_reg_or_not()["option_value"] != 1)
     exit_error("120", "当前la未开通注册");
 
+
+// 用户基本信息数组
+$data_base = array();
+
 if($invit_code) {
     $icc = invite_code_check($invit_code);
     if (!$icc)
         exit_error('215', '邀请码错误');
+    $data_base['invite_code'] = $invit_code;
 }
 
 // 创建用户us_id
 $us_id = get_guid();
 // 创建用户bind_id
 $bind_id = get_guid();
-// 用户基本信息数组
-$data_base = array();
 // 用户绑定信息数组
 $data_log_bind = array();
 $variable = 'email';
@@ -151,7 +154,6 @@ if($teltime > $timestamp ){
 
 // 基本信息参数设定
 $data_base['us_id'] = $us_id;
-$data_base['invite_code'] = $invit_code;
 
 
 // 绑定参数设定
