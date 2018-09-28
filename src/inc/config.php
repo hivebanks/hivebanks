@@ -8,7 +8,7 @@ require_once('config_db_bind.php');
 $config = get_token_key();
 define('KEY', $config['option_value']);
 $url_config = get_la_base_url();
-define('SYSTEM_URL', $url_config['api_url']."/api");
+define('SYSTEM_URL', $url_config['api_url']."/src");
 define('H5_URL', $url_config['h5_url']);
 
 define('BASE_UNIT', get_base_unit());
