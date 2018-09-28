@@ -20,7 +20,7 @@ function upd_lock_ba_base_amount_info($ba_id,$qa_flag,$qa_id) {
 // 函数: 根据状态，获取us_ba_recharge_request基本信息
 // 参数: ba_id                      用户ba_id
 //      qa_flag                    订单状态
-// 返回: row                        基本信息数组
+// 返回: rows                        基本信息数组
 //         asset_id                 充值资产ID
 //         bit_amount               数字货币金额
 //         base_amount              充值资产金额

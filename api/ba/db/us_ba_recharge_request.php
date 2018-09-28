@@ -25,6 +25,32 @@ function sel_recharge_info($tx_hash) {
 }
 
 
+/*
+ * 函数：根据充值状态，获取用户充值信息列表us_ba_recharge_request中的项目
+ * 参数: ba_id                用户ba_id
+ *      qa_flag                 订单状态
+ * 返回： rows                 所有满足条件的充值订单
+ *          asset_id                 充值资产ID
+ *         bit_amount               数字货币金额
+ *         base_amount              充值资产金额
+ *         tx_time                  请求时间戳
+ *         tx_hash                  交易HASH
+ *         us_id                    用户ID
+ *         qa_id                    请求ID
+ *         ba_id                    代理商ID
+ *         tx_detail                交易明细（JSON）
+ *          ba_account_id            代理商账号ID（Hash）
+ */
+function get_ba_recharge_request($ba_id, $qa_flag) {
+    $db = new DB_COM();
+    $sql = "SELECT * FROM us_ba_recharge_request WHERE ba_id='{$ba_id}' AND qa_flag = '{$qa_flag}'";
+    $db->query($sql);
+    $rows = $db->fetchAll();
+    return $rows;
+}
+
+
+
 
 function set_processed_recharge() {
 

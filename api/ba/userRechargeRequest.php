@@ -1,7 +1,7 @@
 <?php
 
 require_once '../inc/common.php';
-require_once 'db/us_ba_request_recharge.php';
+require_once 'db/us_ba_recharge_request.php';
 //require_once '../../ba/db/ba_asset_account.php';
 
 header("cache-control:no-cache,must-revalidate");
@@ -39,7 +39,7 @@ $key = get_arg_str('GET', 'key');
 
 //获取
 if($type=='1') {
-    $rows = get_ba_recharge_request_ba_id($id, '0');
+    $rows = get_ba_recharge_request($id, '0');
 } else{
     exit_error(1, "非法参数");
 }
