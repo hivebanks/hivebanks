@@ -4,6 +4,7 @@ require_once '../inc/common.php';
 require_once 'db/us_ba_recharge_request.php';
 require_once 'db/ba_asset_account.php';
 require_once 'db/us_ba_recharge_request.php';
+require_once 'db/ba_base.php';
 
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");

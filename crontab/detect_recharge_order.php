@@ -14,25 +14,25 @@ GET参数
 */
 
 php_begin();
-echo "hello world";
-$args = array('token',"qa_id");
-chk_empty_args('GET', $args);
-$token = get_arg_str('GET', 'token', 128);
-$qa_id =  get_arg_str('GET', 'qa_id');
-$key = Config::TOKEN_KEY;
+
+//$args = array('token',"qa_id");
+//chk_empty_args('GET', $args);
+//$token = get_arg_str('GET', 'token', 128);
+//$qa_id =  get_arg_str('GET', 'qa_id');
+//$key = Config::TOKEN_KEY;
 // 获取token并解密
-$des = new Des();
-$decryption_code = $des -> decrypt($token, $key);
-$now_time = time();
-$code_conf =  explode(',',$decryption_code);
+//$des = new Des();
+//$decryption_code = $des -> decrypt($token, $key);
+//$now_time = time();
+//$code_conf =  explode(',',$decryption_code);
 // 获取token中的需求信息
-$ca_id = $code_conf[0];
-$timestamp = $code_conf[1];
-if($timestamp < $now_time){
-    exit_error('114','Token timeout please retrieve!');
-}
-$recharge_row = sel_recharge_ba_base_amount_info($qa_id);
-$tx_detail = json_decode($recharge_row["tx_detail"]);
+//$ca_id = $code_conf[0];
+//$timestamp = $code_conf[1];
+//if($timestamp < $now_time){
+//    exit_error('114','Token timeout please retrieve!');
+//}
+//$recharge_row = sel_recharge_ba_base_amount_info($qa_id);
+//$tx_detail = json_decode($recharge_row["tx_detail"]);
 
 $url = "https://chain.api.btc.com/v3/address/15urYnyeJe3gwbGJ74wcX89Tz7ZtsFDVew/tx";
 

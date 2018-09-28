@@ -1,15 +1,7 @@
 <?php
 
-require_once "../inc/common.php";
 
 
-/*
- *===============================得到所有要充值的=================
- *
- */
-
-php_begin();
-$rows = get_recharge_quest();
 
 
 
