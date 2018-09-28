@@ -2,7 +2,7 @@
 
 require_once '../inc/common.php';
 require_once 'db/us_ba_recharge_request.php';
-//require_once '../../ba/db/ba_asset_account.php';
+require_once 'db/ba_asset_account.php';
 
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
@@ -52,7 +52,7 @@ foreach ($rows as $row) {
     $recharge_row['tx_time'] = date('Y-m-d H:i:s', $row["tx_time"]);
     $recharge_row['tx_hash'] = $row['tx_hash'];
     $recharge_row['us_id'] = $row['us_id'];
-    $recharge_row['bit_address'] = get_ba_asset_account_ba_id($row["ba_account_id"]);
+    $recharge_row['bit_address'] = get_user_recharge_address($row["ba_account_id"]);
     $recharge_quests[] = $recharge_row;
 }
 $json = array();

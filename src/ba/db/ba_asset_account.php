@@ -145,7 +145,7 @@ function get_ba_asset_bit_account($ba_id, $page_size, $page_num)
     return $rows;
 }
 //======================================
-// 函数: 根绝id，查询地址
+// 函数：根据ba分配用户地址时的account_id，来查询该用户的充值地址
 // 参数: account_id                账号ID
 // 返回: bit_address               地址
 //======================================
