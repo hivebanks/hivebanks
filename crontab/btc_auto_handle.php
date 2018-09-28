@@ -1,6 +1,6 @@
 <?php
 
-$data = file_put_contents("key.json");
+$data = file_get_contents("key.json");
 $json = json_decode($data, true);
 var_dump($json);
 
