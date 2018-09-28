@@ -70,7 +70,7 @@ function auto_recharge_confirm($row, $block_tx_hash)
     $ba_row = $db->fetchRow();
 
 
-    $sql = "UPDATE us_ba_recharge_request SET qa_flag = 1, block_tx_hash = '{$block_tx_hash}' WHERE ba_id = '{$row["ba_id"]}' and tx_hash = '{$row["tx_hash"]}'";
+    $sql = "UPDATE us_ba_recharge_request SET qa_flag = 2, block_tx_hash = '{$block_tx_hash}' WHERE ba_id = '{$row["ba_id"]}' and tx_hash = '{$row["tx_hash"]}'";
     $db->query($sql);
     $count = $db->affectedRows($sql);
     if(!$count) {
