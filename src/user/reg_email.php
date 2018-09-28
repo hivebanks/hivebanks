@@ -100,6 +100,13 @@ if ($score <= 3) {
 }
 if (us_can_reg_or_not()["option_value"] != 1)
     exit_error("120", "当前la未开通注册");
+
+if($invit_code) {
+    $icc = invite_code_check($invit_code);
+    if (!$icc)
+        exit_error('215', '邀请码错误');
+}
+
 // 创建用户us_id
 $us_id = get_guid();
 // 创建用户bind_id
