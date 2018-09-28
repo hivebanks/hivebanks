@@ -11,15 +11,7 @@ CREATE TABLE `la_base` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-CREATE TABLE `us_log_invite` (
-  `invite_id` char(36) CHARACTER SET ascii NOT NULL COMMENT '邀请id',
-  `us_nm` char(10) CHARACTER SET ascii NOT NULL COMMENT '邀请码',
-  `us_id_origin` char(36) CHARACTER SET ascii NOT NULL COMMENT '邀请人id',
-  `us_id_child` char(36) CHARACTER SET ascii NOT NULL COMMENT '被邀请人id',
-  `time_reg_action` bigint(20) DEFAULT '0' COMMENT '注册时间',
-  `time_reg_success` bigint(20) DEFAULT '0' COMMENT '注册成功时间',
-  PRIMARY KEY (`invite_id`) USING BTREE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户邀请表';
+
 
 DROP TABLE IF EXISTS `la_admin`;
 CREATE TABLE `la_admin` (
