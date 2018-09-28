@@ -274,7 +274,7 @@ function RegisterSwitch(type, suc_func, error_func) {
 
 //Get graphic verification code
 function GetImgCode() {
-    var src = config_api_url + '/api/inc/code.php';
+    var src = config_api_url + '/src/inc/code.php';
     $('#email_imgCode').attr("src", src);
     $('#phone_imgCode').attr("src", src);
 }

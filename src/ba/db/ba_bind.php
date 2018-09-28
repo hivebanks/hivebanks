@@ -90,13 +90,13 @@ function check_pass($ba_id,$pass_word_hash,$variable)
 // 参数: us_id               用户id
 // 返回: count               绑定数
 //======================================
-function get_bind_acount($ba_id)
+function get_bind_account($ba_id)
 {
     $db = new DB_COM();
     $sql = "SELECT * FROM ba_bind WHERE ba_id = '{$ba_id}' AND bind_flag = 1";
     $db->query($sql);
-    $acount = $db ->affectedRows();
-    return $acount;
+    $account = $db ->affectedRows();
+    return $account;
 }
 
 //======================================

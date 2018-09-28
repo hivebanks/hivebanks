@@ -96,7 +96,7 @@ var config_api_url = '', config_h5_url = '', userLanguage = getCookie('userLangu
 
 // Call API common function
 function CallApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/user/';
+    var api_site = config_api_url + '/src/user/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -126,7 +126,7 @@ function CallApi(api_url, post_data, suc_func, error_func) {
 
 // Call Ba API common function
 function CallBaApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/ba/';
+    var api_site = config_api_url + '/src/ba/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -156,7 +156,7 @@ function CallBaApi(api_url, post_data, suc_func, error_func) {
 
 // Call Ca API common function
 function CallCaApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/ca/';
+    var api_site = config_api_url + '/src/ca/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -186,7 +186,7 @@ function CallCaApi(api_url, post_data, suc_func, error_func) {
 
 // Call the la API registration function
 function CallLaApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/la/admin/admin/';
+    var api_site = config_api_url + '/src/la/admin/admin/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -216,7 +216,7 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
 
 // Call the API LA configuration function
 function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/la/admin/configure/';
+    var api_site = config_api_url + '/src/la/admin/configure/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -255,7 +255,7 @@ function RegisterSwitch(type, suc_func, error_func) {
 
 //Get graphic verification code
 function GetImgCode() {
-    var src = config_api_url + '/api/inc/code.php';
+    var src = config_api_url + '/src/inc/code.php';
     $('#email_imgCode').attr("src", src);
     $('#phone_imgCode').attr("src", src);
 }
