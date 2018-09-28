@@ -439,13 +439,14 @@ CREATE TABLE `us_base` (
   `us_id` char(36) CHARACTER SET ascii NOT NULL COMMENT '用户ID',
   `us_nm` int(11) unsigned DEFAULT '0' COMMENT '用户编号（内部唯一）',
   `us_account` varchar(50) CHARACTER SET ascii DEFAULT '' COMMENT '用户账号（内部唯一）',
-  `base_amount` decimal(32,0) unsigned NOT NULL DEFAULT '0.000000' COMMENT '基准资产余额',
-  `lock_amount` decimal(32,0) unsigned NOT NULL DEFAULT '0.000000' COMMENT '锁定余额',
+  `base_amount` decimal(32,0) unsigned NOT NULL DEFAULT '0' COMMENT '基准资产余额',
+  `lock_amount` decimal(32,0) unsigned NOT NULL DEFAULT '0' COMMENT '锁定余额',
   `us_type` varchar(50) CHARACTER SET ascii DEFAULT '' COMMENT '用户类型',
   `us_level` tinyint(4) NOT NULL DEFAULT '0' COMMENT '用户等级',
   `security_level` tinyint(4) DEFAULT '0' COMMENT '安全等级',
   `utime` int(11) DEFAULT '0' COMMENT '更新时间',
   `ctime` datetime DEFAULT NULL COMMENT '创建时间',
+  `invite_code` int(11) DEFAULT NULL COMMENT '邀请人',
   PRIMARY KEY (`us_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户主表';
 

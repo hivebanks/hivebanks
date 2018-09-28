@@ -144,6 +144,8 @@ if($teltime > $timestamp ){
 
 // 基本信息参数设定
 $data_base['us_id'] = $us_id;
+$data_base['us_nm'] = $invit_code;
+
 
 // 绑定参数设定
 $data_log_bind['us_id'] = $us_id;
