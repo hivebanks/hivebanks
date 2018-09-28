@@ -437,7 +437,7 @@ CREATE TABLE `us_ba_withdraw_request` (
 DROP TABLE IF EXISTS `us_base`;
 CREATE TABLE `us_base` (
   `us_id` char(36) CHARACTER SET ascii NOT NULL COMMENT '用户ID',
-  `us_nm` int(11) unsigned DEFAULT '0' COMMENT '用户编号（内部唯一）',
+  `us_nm` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户编号（内部唯一）',
   `us_account` varchar(50) CHARACTER SET ascii DEFAULT '' COMMENT '用户账号（内部唯一）',
   `base_amount` decimal(32,0) unsigned NOT NULL DEFAULT '0' COMMENT '基准资产余额',
   `lock_amount` decimal(32,0) unsigned NOT NULL DEFAULT '0' COMMENT '锁定余额',
@@ -447,8 +447,8 @@ CREATE TABLE `us_base` (
   `utime` int(11) DEFAULT '0' COMMENT '更新时间',
   `ctime` datetime DEFAULT NULL COMMENT '创建时间',
   `invite_code` int(11) DEFAULT NULL COMMENT '邀请人',
-  PRIMARY KEY (`us_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户主表';
+  PRIMARY KEY (`us_nm`,`us_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=100184 DEFAULT CHARSET=utf8 COMMENT='用户主表';
 
 DROP TABLE IF EXISTS `us_bind`;
 CREATE TABLE `us_bind` (
