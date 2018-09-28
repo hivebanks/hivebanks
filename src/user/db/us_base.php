@@ -8,7 +8,7 @@
 function invite_code_check($invite_check){
 
     $db = new DB_COM();
-    $sql = "select us_nm from us_base where us_um={$invite_check}";
+    $sql = "select us_nm from us_base where us_nm={$invite_check}";
     $db->query($sql);
     if($db->fetchRow())
         return true;
