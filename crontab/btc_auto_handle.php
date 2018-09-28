@@ -1,6 +1,14 @@
 <?php
 
-echo "test";
+$json = file_put_contents("key.json");
+$json = json_decode($json, true);
+
+$ba_id = $json["ba_id"];
+$key = $json["key"];
+
+var_dump($ba_id);
+var_dump($key);
+
 
 
 
