@@ -29,6 +29,7 @@ CREATE TABLE `la_admin` (
   PRIMARY KEY (`user`,`id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员表';
 
+
 DROP TABLE IF EXISTS `com_feedback`;
 CREATE TABLE `com_feedback` (
   `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '日志ID',
