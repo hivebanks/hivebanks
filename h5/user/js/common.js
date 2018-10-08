@@ -287,24 +287,22 @@ function PhoneRegister(country_code, cellphone, sms_code, pass_word, pass_word_h
 }
 
 //Mailbox login processing
-function EmailLogin(email, pass_word_hash, cfm_code, suc_func, error_func) {
+function EmailLogin(email, pass_word_hash, suc_func, error_func) {
     var api_url = 'lgn_email.php',
         post_data = {
             'email': email,
-            'pass_word_hash': pass_word_hash,
-            'cfm_code': cfm_code
-        };
+            'pass_word_hash': pass_word_hash
+    };
     CallApi(api_url, post_data, suc_func, error_func);
 }
 
 //Mobile phone login processing
-function PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, suc_func, error_func) {
+function PhoneLogin(country_code, cellphone, pass_word_hash, suc_func, error_func) {
     var api_url = 'lgn_phone.php',
         post_data = {
             'country_code': country_code,
             'cellphone': cellphone,
-            'pass_word_hash': pass_word_hash,
-            'cfm_code': cfm_code
+            'pass_word_hash': pass_word_hash
         };
     CallApi(api_url, post_data, suc_func, error_func);
 }

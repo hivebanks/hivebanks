@@ -20,19 +20,19 @@ $(document).ready(function () {
         $(".phoneLoginBox").fadeOut();
         $(".emailLoginBox").fadeIn();
         $('.phonePassword').removeClass('.pass');
-        GetImgCode();
+        // GetImgCode();
     });
     // Switch phone login
     $(".phoneLogin").click(function () {
         $(".emailLoginBox").fadeOut();
         $(".phoneLoginBox").fadeIn();
         $('.emailPassword').removeClass('.pass');
-        GetImgCode();
+        // GetImgCode();
     });
     // ========email login========
-    $('.emailCanvas').click(function () {//Click to replace the verification code
-        GetImgCode();
-    });
+    // $('.emailCanvas').click(function () {//Click to replace the verification code
+    //     GetImgCode();
+    // });
 
     // Email form change judgment
     //email judgment
@@ -66,19 +66,19 @@ $(document).ready(function () {
     });
 
     //email emailCfmCode
-    $('.emailCfmCode').focus(function () {
-        $('.emailImgCode_tips').fadeOut('fast');
-        $('.errEmailImgCode_tips').fadeOut('fast');
-    });
-    $('.emailCfmCode').blur(function () {
-        var emailCfmCode = $('.emailCfmCode').val();//Get mailbox content
-        if (emailCfmCode.length <= 0) {//Is it empty?
-            $('.emailImgCode_tips').fadeIn('fast').siblings('span').fadeOut('fast');
-        } else {
-            $('.emailImgCode_tips').fadeOut('fast');
-            $('.errEmailImgCode_tips').fadeOut('fast');
-        }
-    });
+    // $('.emailCfmCode').focus(function () {
+    //     $('.emailImgCode_tips').fadeOut('fast');
+    //     $('.errEmailImgCode_tips').fadeOut('fast');
+    // });
+    // $('.emailCfmCode').blur(function () {
+    //     var emailCfmCode = $('.emailCfmCode').val();//Get mailbox content
+    //     if (emailCfmCode.length <= 0) {//Is it empty?
+    //         $('.emailImgCode_tips').fadeIn('fast').siblings('span').fadeOut('fast');
+    //     } else {
+    //         $('.emailImgCode_tips').fadeOut('fast');
+    //         $('.errEmailImgCode_tips').fadeOut('fast');
+    //     }
+    // });
 
     // email submit judgment
     var _email = '', emailList = '';
@@ -86,8 +86,8 @@ $(document).ready(function () {
         var user_token = GetLoginCookie('user_token');
         var email = $(".email").val(),
             emailPassword = $(".emailPassword").val(),
-            pass_word_hash = hex_sha1(emailPassword),
-            cfm_code = $(".emailCfmCode").val();
+            pass_word_hash = hex_sha1(emailPassword);
+            // cfm_code = $(".emailCfmCode").val();
 
         if (email.length <= 0) {
             $('.email_tips').fadeIn().siblings('span').fadeOut();
@@ -113,7 +113,7 @@ $(document).ready(function () {
         emailList = EmailList();
         var $this = $(this), _text = $(this).text();
         if (DisableClick($this)) return;
-        EmailLogin(email, pass_word_hash, cfm_code, function (response) {
+        EmailLogin(email, pass_word_hash, function (response) {
             ActiveClick($this, _text);
             if (response.errcode == '0') {
                 $('.email').val('');
@@ -145,7 +145,7 @@ $(document).ready(function () {
             if (response.errcode == '118') {
                 $('.emailAuditFail').fadeIn('fast');//not approved
             }
-            GetImgCode();
+            // GetImgCode();
             LayerFun(response.errcode);
             return;
         });
@@ -163,7 +163,7 @@ $(document).ready(function () {
         $('.emailLoginBox').fadeOut('fast');
         $('.phoneLogin,.phoneLoginBox').addClass('active');
     }
-    GetImgCode();
+    // GetImgCode();
 
     //PhoneForm Input Monitor
     //phone
@@ -197,19 +197,19 @@ $(document).ready(function () {
     });
 
     //phone phoneCfmCode
-    $('.phoneCfmCode').focus(function () {
-        $('.phoneImgCode_tips').fadeOut('fast');
-        $('.errPhoneImgCode_tips').fadeOut('fast');
-    });
-    $('.phoneCfmCode').blur(function () {
-        var phoneCfmCode = $('.phoneCfmCode').val();
-        if (phoneCfmCode.length <= 0) {
-            $('.phoneImgCode_tips').fadeIn('fast').siblings('span').fadeOut('fast');
-        } else {
-            $('.phoneImgCode_tips').fadeOut('fast');
-            $('.errPhoneImgCode_tips').fadeOut('fast');
-        }
-    });
+    // $('.phoneCfmCode').focus(function () {
+    //     $('.phoneImgCode_tips').fadeOut('fast');
+    //     $('.errPhoneImgCode_tips').fadeOut('fast');
+    // });
+    // $('.phoneCfmCode').blur(function () {
+    //     var phoneCfmCode = $('.phoneCfmCode').val();
+    //     if (phoneCfmCode.length <= 0) {
+    //         $('.phoneImgCode_tips').fadeIn('fast').siblings('span').fadeOut('fast');
+    //     } else {
+    //         $('.phoneImgCode_tips').fadeOut('fast');
+    //         $('.errPhoneImgCode_tips').fadeOut('fast');
+    //     }
+    // });
 
     //phone phoneSmsCode
     // $('#phoneSmsCode').blur(function () {
@@ -249,7 +249,7 @@ $(document).ready(function () {
 
         // Get user input
         var cellphone = $("#phone").val(),
-            cfm_code = $(".phoneCfmCode").val(),
+            // cfm_code = $(".phoneCfmCode").val(),
             // sms_code = $("#phoneSmsCode").val(),
             phonePassword = $(".phonePassword").val(),
             pass_word_hash = hex_sha1(phonePassword);
@@ -258,11 +258,11 @@ $(document).ready(function () {
             $('.phone_tips').fadeIn().siblings('span').hide();
             return;
         }
-        if (cfm_code.length <= 0) {
-            LayerFun('codeNotEmpty');
-            $('.phoneImgCode_tips').fadeIn().siblings('span').hide();
-            return;
-        }
+        // if (cfm_code.length <= 0) {
+        //     LayerFun('codeNotEmpty');
+        //     $('.phoneImgCode_tips').fadeIn().siblings('span').hide();
+        //     return;
+        // }
         // if (sms_code.length <= 0) {
         //     LayerFun('codeNotEmpty');
         //     $('.phoneCode_tips').fadeIn();
@@ -281,7 +281,7 @@ $(document).ready(function () {
 
         var $this = $(this), _text = $(this).text();
         if (DisableClick($this)) return;
-        PhoneLogin(country_code, cellphone, pass_word_hash, cfm_code, function (response) {
+        PhoneLogin(country_code, cellphone, pass_word_hash, function (response) {
             ActiveClick($this, _text);
             if (response.errcode == '0') {
                 $('#phone').val('');
@@ -293,7 +293,7 @@ $(document).ready(function () {
                 window.location.href = 'account.html';
             }
         }, function (response) {
-            GetImgCode();
+            // GetImgCode();
             ActiveClick($this, _text);
             if (response.errcode == '116') {//Login Failed
                 $('.phoneLoginError').fadeIn('fast');
