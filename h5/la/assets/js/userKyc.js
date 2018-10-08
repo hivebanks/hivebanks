@@ -76,7 +76,7 @@ $(function () {
     //refuse
     $(document).on('click', '.refuseBtn', function () {
         var _this = $(this);
-        var log_id = $(this).parents('.userKycItem').find('.log_id').text();
+        var log_id = $(this).parents('.userKycItem').find('.log_id').attr("name");
         $(".preloader-wrapper").addClass("active");
         RefuseKycUser(token, log_id, function (response) {
             if (response.errcode == '0') {
