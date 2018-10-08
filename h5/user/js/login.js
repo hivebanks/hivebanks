@@ -5,11 +5,11 @@ $(document).ready(function () {
     }
 
     //Get graphic verification code
-    GetImgCode();
+    // GetImgCode();
     //Switch verification code
-    $('#email_imgCode, #phone_imgCode').click(function () {
-        GetImgCode();
-    });
+    // $('#email_imgCode, #phone_imgCode').click(function () {
+    //     GetImgCode();
+    // });
 
     // Switch mailbox and phone login styles
     $(".loginToggle").click(function () {
