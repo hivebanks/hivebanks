@@ -1,0 +1,10 @@
+.leftNewsTitle.activeNews {
+    background: #021f4e;
+    color: #fff;
+    padding: 5%;
+    border-radius: 5px;
+}
+
+.leftNewsTitle {
+    margin-bottom: 5%;
+}
