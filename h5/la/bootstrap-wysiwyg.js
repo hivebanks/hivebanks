@@ -60,6 +60,7 @@
                 layer.msg(data.errmsg);
             }
         });
+        console.log(loader.promise())
         return loader.promise();
     };
     $.fn.cleanHtml = function () {
