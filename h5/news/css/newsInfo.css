@@ -6,5 +6,24 @@
 }
 
 .leftNewsTitle {
-    margin-bottom: 5%;
+    margin-bottom: 15%;
+    cursor: pointer;
+}
+
+h1.title{
+    font-size: 32px;
+}
+
+.contentInfo_text{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contentInfo_time{
+    color: #4f6d8c;
+}
+
+.newsInfo_row{
+    border-top: 1px solid #eeeeee;
+    padding-top: 2%;
 }

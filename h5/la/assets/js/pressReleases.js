@@ -1,4 +1,17 @@
 $(function () {
+    // $('#summernote').summernote({
+    //     height:400,
+    //     maxHeight:500,
+    //     // airMode: true
+    //     callbacks: {
+    //         onImageUpload: function(files) {
+    //             // 上传图片到服务器并且插入图片到编辑框
+    //         }
+    //     }
+    //
+    // });
+
+
     $("#fileInput").change(function () {
         var file = this.files[0];
         var src = getObjectURL(file);
@@ -18,9 +31,6 @@ $(function () {
         var newsTitle = $("#newsTitle").val();
         var newsContent = $("#newsContent").val();
         var imgList = $(".showImgItem").children("img");
-        console.log("标题：" + newsTitle);
-        console.log("内容：" + newsContent);
-        console.log("图片：" + imgList);
         if (newsTitle.length <= 0) {
             LayerFun("pleaseInputTitle");
             return;
