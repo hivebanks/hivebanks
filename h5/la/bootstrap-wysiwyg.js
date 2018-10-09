@@ -40,10 +40,26 @@
         fReader.onprogress = loader.notify;
         fReader.readAsDataURL(fileInfo);
 
-        var form = new FormData();
-        form.append("key_code", key_code);
-        form.append("file", fileInfo);
-        console.log(form);
+        var formData = new FormData();
+        formData.append("key_code", key_code);
+        formData.append("file", fileInfo);
+        console.log(formData);
+        $.ajax({
+            url: 'http://agent_service.fnying.com/upload_file/upload.php',
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                var data = JSON.parse(response);
+                layer.msg(data.errmsg);
+            },
+            error: function (response) {
+                layer.msg(data.errmsg);
+            }
+        });
         return loader.promise();
     };
     $.fn.cleanHtml = function () {
