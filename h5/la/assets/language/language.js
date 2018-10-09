@@ -75,7 +75,7 @@ var execI18n = function () {
      */
     var optionEle = $("#i18n_pagename");
     if (optionEle.length < 1) {
-        console.log("未找到页面名称元素，请在页面写入\n <meta id=\"i18n_pagename\" content=\"页面名(对应语言包的语言文件名)\">");
+        // console.log("未找到页面名称元素，请在页面写入\n <meta id=\"i18n_pagename\" content=\"页面名(对应语言包的语言文件名)\">");
         return false;
     }
 
