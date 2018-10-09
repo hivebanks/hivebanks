@@ -71,10 +71,14 @@
 }
 
 /*modal*/
-@media (min-width: 768px){
+.modal {
+    background-color: unset !important;
+}
+
+@media (min-width: 768px) {
     .modal-dialog {
-        position: unset!important;
-        width: unset!important;
-        margin: unset!important;
+        position: unset !important;
+        width: unset !important;
+        margin: unset !important;
     }
 }
