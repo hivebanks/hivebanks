@@ -12,6 +12,7 @@ require_once "../../../inc/common.php";
 require_once "db/la_news.php";
 require_once "../manage/db/la_admin.php";
 require_once "../../db/la_func_common.php";
+require_once "../../../inc/common.php";
 
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
@@ -23,6 +24,7 @@ chk_empty_args('GET', $args);
 $data = array();
 // 用户token
 $token = get_arg_str('GET', 'token', 128);
+$data['news_id']  = get_guid();
 $data['title']  = get_arg_str('GET', 'title', 128);
 $data['content']  = get_arg_str('GET', 'content', 128);
 $data['author']  = get_arg_str('GET', 'author', 128);
