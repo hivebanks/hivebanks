@@ -60,7 +60,7 @@
                 layer.msg(data.errmsg);
             }
         });
-        console.log(loader.promise())
+        console.log(loader.promise());
         return loader.promise();
     };
     $.fn.cleanHtml = function () {
@@ -134,6 +134,7 @@
                 $.each(files, function (idx, fileInfo) {
                     if (/^image\//.test(fileInfo.type)) {
                         $.when(readFileIntoDataUrl(fileInfo)).done(function (dataUrl) {
+                            console.log(dataUrl);
                             execCommand('insertimage', dataUrl);
                         }).fail(function (e) {
                             options.fileUploadError("file-reader", e);
