@@ -1,20 +1,6 @@
 /* http://github.com/mindmup/bootstrap-wysiwyg */
 /*global jQuery, $, FileReader*/
 /*jslint browser:true*/
-// $(function () {
-// //Get token
-// var token = GetCookie('la_token');
-// //get key_code
-// var key_code = "";
-// GetKeyCode(token, function (response) {
-//     if (response.errcode == '0') {
-//         key_code = response.key_code;
-//     }
-// }, function (response) {
-//     LayerFun(response.errcode);
-// });
-// })
-
 (function ($) {
     'use strict';
     //Get token
@@ -40,6 +26,7 @@
         fReader.onprogress = loader.notify;
         fReader.readAsDataURL(fileInfo);
 
+        var src = "";
         var formData = new FormData();
         formData.append("key_code", key_code);
         formData.append("file", fileInfo);
@@ -54,14 +41,18 @@
             processData: false,
             success: function (response) {
                 var data = JSON.parse(response);
-                layer.msg(data.errmsg);
+                // layer.msg(data.errmsg);
+                if (data.errcode == '0') {
+                    src = data.url;
+                }
             },
             error: function (response) {
                 layer.msg(data.errmsg);
             }
         });
         console.log(loader.promise());
-        return loader.promise();
+        // return loader.promise();
+        return src;
     };
     $.fn.cleanHtml = function () {
         var html = $(this).html();
