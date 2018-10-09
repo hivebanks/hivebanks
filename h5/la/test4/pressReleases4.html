@@ -293,7 +293,8 @@
                         processData: false,
                         contentType: false,
                         success: function (data) {
-                            $('.summernote').summernote('insertImage', data, 'img');
+                            var response = JSON.parse(data), url = response.url;
+                            $('.summernote').summernote('insertImage', url, 'img');
                             console.log(JSON.parse(data));
                         }
                     });
