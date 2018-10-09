@@ -277,10 +277,12 @@
         GetKeyCode(token, function (response) {
             if (response.errcode == '0') {
                 key_code = response.key_code;
+                console.log(key_code);
             }
         }, function (response) {
             LayerFun(response.errcode);
         });
+        console.log(key_code);
 
         function sendFile(files, editor, welEditable) {
             var data = new FormData();
