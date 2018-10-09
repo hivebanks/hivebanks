@@ -294,7 +294,7 @@
                         contentType: false,
                         success: function (data) {
                             $('#summernote').summernote('insertImage', data, 'img');
-                            console.log(data);
+                            console.log(JSON.parse(data));
                         }
                     });
                 }
