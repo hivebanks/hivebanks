@@ -20,9 +20,9 @@
     var readFileIntoDataUrl = function (fileInfo) {
 
         var loader = $.Deferred(),
-        	fReader = new FileReader();
+            fReader = new FileReader();
         fReader.onload = function (e) {
-        	loader.resolve(e.target.result);
+            loader.resolve(e.target.result);
         };
         fReader.onerror = loader.reject;
         fReader.onprogress = loader.notify;
