@@ -4,8 +4,8 @@
 (function ($) {
     'use strict';
     //Get token
-    // var token = GetCookie('la_token');
-    var token = "y4ZlT/GeUFqSDreW6bKbnwLQPswr1BqMWfSWvUhgfraWM+CfxlgAUxSbxDG0ldvAPCxc2kFSqt9IqAwMN6qLIw%3D%3D";
+    var token = GetCookie('la_token');
+    // var token = "y4ZlT/GeUFqSDreW6bKbnwLQPswr1BqMWfSWvUhgfraWM+CfxlgAUxSbxDG0ldvAPCxc2kFSqt9IqAwMN6qLIw%3D%3D";
     //get key_code
     var key_code = "";
     GetKeyCode(token, function (response) {
@@ -125,7 +125,7 @@
                 $.each(files, function (idx, fileInfo) {
                     if (/^image\//.test(fileInfo.type)) {
                         $.when(readFileIntoDataUrl(fileInfo)).done(function (src) {
-                            console.log(src);
+                            // console.log(src);dataUrl
                             execCommand('insertimage', src);
                         }).fail(function (e) {
                             options.fileUploadError("file-reader", e);
