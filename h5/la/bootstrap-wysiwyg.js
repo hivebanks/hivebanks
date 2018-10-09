@@ -3,20 +3,21 @@
 /*jslint browser:true*/
 (function ($) {
     'use strict';
-    //Get token
-    var token = GetCookie('la_token');
+
     // var token = "y4ZlT/GeUFqSDreW6bKbnwLQPswr1BqMWfSWvUhgfraWM+CfxlgAUxSbxDG0ldvAPCxc2kFSqt9IqAwMN6qLIw%3D%3D";
-    //get key_code
-    var key_code = "";
-    GetKeyCode(token, function (response) {
-        if (response.errcode == '0') {
-            key_code = response.key_code;
-        }
-    }, function (response) {
-        LayerFun(response.errcode);
-    });
 
     var readFileIntoDataUrl = function (fileInfo) {
+        //Get token
+        var token = GetCookie('la_token');
+        //get key_code
+        var key_code = "";
+        GetKeyCode(token, function (response) {
+            if (response.errcode == '0') {
+                key_code = response.key_code;
+            }
+        }, function (response) {
+            LayerFun(response.errcode);
+        });
         var loader = $.Deferred(),
         	fReader = new FileReader();
         fReader.onload = function (e) {
