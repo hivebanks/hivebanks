@@ -124,9 +124,9 @@
                 editor.focus();
                 $.each(files, function (idx, fileInfo) {
                     if (/^image\//.test(fileInfo.type)) {
-                        $.when(readFileIntoDataUrl(fileInfo)).done(function (dataUrl) {
-                            console.log(dataUrl);
-                            execCommand('insertimage', dataUrl);
+                        $.when(readFileIntoDataUrl(fileInfo)).done(function (src) {
+                            console.log(src);
+                            execCommand('insertimage', src);
                         }).fail(function (e) {
                             options.fileUploadError("file-reader", e);
                         });
