@@ -9,6 +9,13 @@
 
 
 
+require_once "../../../inc/common.php";
+require_once "db/la_news.php";
+require_once "../manage/db/la_admin.php";
+
+header("cache-control:no-cache,must-revalidate");
+header("Content-Type:application/json;charset=utf-8");
+
 php_begin();
 $args = array("token");
 chk_empty_args('GET', $args);
