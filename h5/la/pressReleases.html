@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8"/>
     <meta id="i18n_pagename" content="index-common">
@@ -192,9 +193,17 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            <div class="summernote">请输入新闻内容</div>
+                            <div class="">
+                                <p>新闻标题</p>
+                                <input id="news_title" type="text">
+                            </div>
+                            <div class="summernote"></div>
+                            <div class="">
+                                <p>作者</p>
+                                <input id="author" type="text">
+                            </div>
                             <div>
-                                <button class="btn btn-success getContentBtn i18n" name="distribute">发布</button>
+                                <button class="btn btn-success distributeBtn i18n" name="distribute"></button>
                             </div>
                         </div>
                     </div>

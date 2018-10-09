@@ -36,7 +36,19 @@ $(function () {
         },
     });
 
-    $(".getContentBtn").click(function () {
+    $(".distributeBtn").click(function () {
         console.log($(".summernote").summernote("code"));
+        var content = $(".summernote").summernote("code");
+        $(".preloader-wrapper").addClass("active");
+        Distribute(token, content, function (response) {
+            if(response.errcode == "0"){
+                $(".preloader-wrapper").removeClass("active");
+            }
+
+        }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
+            LayerFun("publishingFailed");
+        })
+
     })
 });
