@@ -91,8 +91,10 @@
                     <ul>
                         <li>
                             <span class="i18n" name="currentRechargeRate">Current Recharge Rate</span>:&nbsp;&nbsp;
-                            <span>1<span>BTC</span>=<span class="recharge_rate">10</span><span
-                                    class="bit_type"></span></span>
+                            <span>1<span class="bit_type"></span>=
+                                <span class="recharge_rate">10</span>
+                                <span class="base_type">BTC</span>
+                            </span>
                         </li>
                         <li>
                             <span class="i18n" name="effectiveTime">Effective Time</span>:&nbsp;&nbsp;
@@ -121,13 +123,14 @@
                     <div class="startRate margin-bottom-5">
                         <div class="flex center form-group form-group-sm">
                             <div class="defaultRate flex center">
-                                <p class="margin-right-15">1<span class="base_type"></span></p>
+                                <p class="margin-right-15">1<span class="input-group-addon bit_type"></span></p>
                                 <span><i class="iconfont icon-transfer"></i></span>
                             </div>
                             <div class="input-group">
                                 <input type="text" class="form-control inputRateVal rechargeRateInput"
                                        placeholder="Please input Number">
-                                <span class="input-group-addon bit_type"></span>
+                                <!--<span class="input-group-addon bit_type"></span>-->
+                                <span class="input-group-addon base_type"></span>
                             </div>
                         </div>
                     </div>
@@ -188,8 +191,8 @@
                     <ul>
                         <li>
                             <span class="i18n" name="currentWithdrawRate">Current Withdraw Rate</span>:&nbsp;&nbsp;
-                            <span>1<span class="bit_type"></span>=<span class="withdraw_rate">0.001</span><span
-                                    class="base_type"></span></span>
+                            <span>1<span class="bit_type"></span>=<span class="withdraw_rate">0.001</span>
+                                <span class="base_type"></span></span>
                         </li>
                         <li>
                             <span class="i18n" name="effectiveTime">Effective Time</span>:&nbsp;&nbsp;
@@ -200,12 +203,12 @@
                         <li>
                             <span class="i18n" name="withdrawMaxAmount">Maximum Withdrawal Amount</span>:&nbsp;&nbsp;
                             <span class="withdraw_max_amount"></span>
-                            <span class="bit_type"></span>
+                            <span class="base_type"></span>
                         </li>
                         <li>
                             <span class="i18n" name="withdrawMinAmount">Minimum Withdrawal Amount</span>:&nbsp;&nbsp;
                             <span class="withdraw_min_amount"></span>
-                            <span class="bit_type"></span>
+                            <span class="base_type"></span>
                         </li>
                     </ul>
                 </div>
