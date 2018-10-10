@@ -29,7 +29,7 @@ la_user_check($token);
 
 $news = news_detail($news_id);
 if($news){
-
+    
     $rtn_ary = array();
     $rtn_ary['errcode'] = '0';
     $rtn_ary['errmsg'] = '';
