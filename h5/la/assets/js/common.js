@@ -865,6 +865,16 @@ function DeleteNews(token, news_id, suc_func, error_func) {
     CallNewsApi(api_url, post_data, suc_func, error_func);
 }
 
+//get news detail
+function GetNewsDetail(token, news_id, suc_func, error_func) {
+    var api_url = 'news_detail.php',
+        post_data = {
+            'token': token,
+            'news_id': news_id
+        };
+    CallNewsApi(api_url, post_data, suc_func, error_func);
+}
+
 /**
  * Disable button
  * @param $this Button object
