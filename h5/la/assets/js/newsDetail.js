@@ -3,7 +3,6 @@ $(function () {
     var token =GetCookie("la_token");
 
    var news_id = GetQueryString("news_id");
-   console.log(news_id);
 
    //get news detail
     GetNewsDetail(token, news_id, function (response) {
