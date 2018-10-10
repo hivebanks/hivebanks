@@ -18,6 +18,7 @@ $(function () {
                     "<td><span>" + data[i].author + "</span></td>" +
                     "<td><span>" + data[i].ctime + "</span></td>" +
                     "<td>" +
+                    "<span class='news_id none'>"+ data[i].news_id +"</span>" +
                     "<button class='btn btn-success modifyNewsBtn i18n' name='modify'>modify</button>" +
                     "<button class='btn btn-danger deleteNewsBtn i18n' name='delete'>delete</button>" +
                     "</td>" +
