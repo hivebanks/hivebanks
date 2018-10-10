@@ -846,6 +846,15 @@ function Distribute(token, title, content, author, suc_func, error_func) {
     CallNewsApi(api_url, post_data, suc_func, error_func);
 }
 
+//get news list
+function GetNewsList(token, suc_func, error_func) {
+    var api_url = 'news_list.php',
+        post_data = {
+            'token': token
+        };
+    CallNewsApi(api_url, post_data, suc_func, error_func);
+}
+
 /**
  * Disable button
  * @param $this Button object
