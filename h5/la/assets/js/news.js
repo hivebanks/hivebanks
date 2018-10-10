@@ -7,11 +7,27 @@ $(function () {
     GetNewsList(token, function (response) {
         if (response.errcode == "0") {
             $(".preloader-wrapper").removeClass("active");
-            console.log(response);
+            var data = response.rows, tr = "";
+            if (data == null) {
+                GetDataEmpty("newsList", "4");
+                return;
+            }
+            $.each(data, function (i, val) {
+                tr += "<tr>" +
+                    "<td><span>" + data.title + "</span></td>" +
+                    "<td><span>" + data.content + "</span></td>" +
+                    "<td><span>" + data.ctime + "</span></td>" +
+                    "<td>" +
+                    "<button class='btn btn-success modifyNewsBtn i18n' name='modify'>modify</button>" +
+                    "<button class='btn btn-danger deleteNewsBtn i18n' name='delete'>delete</button>" +
+                    "</td>" +
+                    "</tr>"
+            })
         }
 
     }, function (response) {
         $(".preloader-wrapper").removeClass("active");
+        GetDataFail("newsList", "4");
         LayerFun(response.errcode);
     })
 
