@@ -34,7 +34,7 @@ if($news){
     $rtn_ary['errcode'] = '0';
     $rtn_ary['errmsg'] = '';
     $rtn_ary['rows'] = $news;
-    $rtn_str = json_encode($rtn_ary);var_dump($rtn_str);die;
+    $rtn_str = json_encode($rtn_ary,1);var_dump($rtn_str);die;
     die($rtn_str);
 }
 
