@@ -119,7 +119,7 @@ $(function () {
                 $(".preloader-wrapper").removeClass("active");
                 LayerFun("submitSuccess");
                 setTimeout(function () {
-                    window.location.href = "newsDetail.html?news_id" + news_id;
+                    window.location.href = "newsDetail.html?news_id=" + news_id;
                 }, 2000);
             }
 
