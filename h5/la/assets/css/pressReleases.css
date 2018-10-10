@@ -70,6 +70,14 @@
     height: 100%;
 }
 
+.news_title {
+    display: inline-block;
+}
+
+.to_news_list {
+    float: right;
+}
+
 /*modal*/
 .modal {
     background-color: unset !important;
