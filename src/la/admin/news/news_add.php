@@ -26,7 +26,7 @@ $data = array();
 $token = get_arg_str('GET', 'token', 128);
 $data['news_id']  = get_guid();
 $data['title']  = get_arg_str('GET', 'title', 128);
-$data['content']  = get_arg_str('GET', 'content', 128);
+$data['content']  = get_arg_str('GET', 'content', 999999999);
 $data['author']  = get_arg_str('GET', 'author', 128);
 
 la_user_check($token);
