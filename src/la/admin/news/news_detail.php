@@ -30,12 +30,13 @@ la_user_check($token);
 $news = news_detail($news_id);
 if($news){
 
-    $rtn_ary = array();
-    $rtn_ary['errcode'] = '0';
-    $rtn_ary['errmsg'] = '';
-    $rtn_ary['rows'] = $news;
-    $rtn_str = json_encode($rtn_ary,1);var_dump($rtn_str);die;
-    die($rtn_str);
+//    $rtn_ary = array();
+//    $rtn_ary['errcode'] = '0';
+//    $rtn_ary['errmsg'] = '';
+//    $rtn_ary['rows'] = $news;
+//    $rtn_str = json_encode($rtn_ary);
+//    php_end($rtn_str);
+    exit_ok($news);
 }
 
 exit_error('-1','获取新闻详情失败');
