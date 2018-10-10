@@ -5,7 +5,7 @@ $(function () {
    var news_id = GetQueryString("news_id");
 
    //get news detail
-   //  GetNewsDetail(token, news_id, function (response) {
+    GetNewsDetail(token, news_id, function (response) {
    //      if(response.errcode == "0"){
    //          console.log(response);
    //          var data = response.rows;
@@ -14,5 +14,5 @@ $(function () {
    //      }
    //  }, function (response) {
    //      LayerFun("acquisitionFailed");
-   //  })
+    })
 });
