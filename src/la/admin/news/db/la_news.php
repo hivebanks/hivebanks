@@ -50,7 +50,7 @@ function news_edit($data){
  */
 function news_delete($news_id){
 
-    
+
     $utime = time();
     $db = new DB_COM();
     $sql = "UPDATE la_news SET utime = '{$utime}',status=0 where news_id = '{$news_id}' ";

@@ -27,6 +27,14 @@ $token = get_arg_str('GET', 'token', 128);
 la_user_check($token);
 
 $list = news_list();
-if($list)
-    exit_ok($list);
+if($list){
+
+    $rtn_ary = array();
+    $rtn_ary['errcode'] = '0';
+    $rtn_ary['errmsg'] = '';
+    $rtn_ary['rows'] = $list;
+    $rtn_str = json_encode($rtn_ary);
+    php_end($rtn_str);
+}
+
 exit_error('-1','获取新闻列表失败');
