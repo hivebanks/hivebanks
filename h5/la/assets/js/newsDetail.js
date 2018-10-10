@@ -5,14 +5,14 @@ $(function () {
    var news_id = GetQueryString("news_id");
 
    //get news detail
-    GetNewsDetail(token, news_id, function (response) {
-        if(response.errcode == "0"){
-            console.log(response);
-            var data = response.rows;
-            $(".newsTitle").text(data[0].title);
-            $(".newsContent").html(data[0].content);
-        }
-    }, function (response) {
-        LayerFun("acquisitionFailed");
-    })
+   //  GetNewsDetail(token, news_id, function (response) {
+   //      if(response.errcode == "0"){
+   //          console.log(response);
+   //          var data = response.rows;
+   //          $(".newsTitle").text(data[0].title);
+   //          $(".newsContent").html(data[0].content);
+   //      }
+   //  }, function (response) {
+   //      LayerFun("acquisitionFailed");
+   //  })
 });
