@@ -2,7 +2,6 @@ $(function () {
     //get token
     var token = GetCookie("la_token");
 
-    function GetNewsListFun() {
         //get news list
         $(".preloader-wrapper").addClass("active");
         GetNewsList(token, function (response) {
@@ -34,8 +33,6 @@ $(function () {
             GetDataFail("newsList", "4");
             LayerFun(response.errcode);
         });
-    }
-    GetNewsListFun();
 
     //delete news
     $(document).on("click", ".deleteNewsBtn", function () {
@@ -46,9 +43,6 @@ $(function () {
                 $(".preloader-wrapper").removeClass("active");
                 LayerFun("successfullyDeleted");
                 _this.closest(".newsItem").remove();
-                setTimeout(function () {
-                    GetNewsListFun();
-                },1000);
 
             }
         }, function (response) {
