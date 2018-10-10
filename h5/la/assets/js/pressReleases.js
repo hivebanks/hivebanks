@@ -56,7 +56,10 @@ $(function () {
         Distribute(token, title, content, author, function (response) {
             if (response.errcode == "0") {
                 $(".preloader-wrapper").removeClass("active");
-                window.location.href = "news.html";
+                LayerFun("submitSuccess");
+                setTimeout(function () {
+                    window.location.href = "news.html";
+                },1000);
             }
 
         }, function (response) {
