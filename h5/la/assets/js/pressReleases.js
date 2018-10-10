@@ -1,6 +1,16 @@
 $(function () {
     //Get token
     var token = GetCookie('la_token');
+
+    //get url this_news_id
+    var news_id = GetQueryString("this_news_id");
+    if(news_id){
+        $(".distributeBtn").remove();
+        $(".modifyBtn").removeClass("none");
+    }else {
+        $(".modifyBtn").remove()
+    }
+
     //get key_code
     var key_code = "";
     GetKeyCode(token, function (response) {
@@ -11,6 +21,7 @@ $(function () {
         LayerFun(response.errcode);
     });
 
+    //content
     $('.summernote').summernote({
         height: 200,
         tabsize: 2,
@@ -39,6 +50,7 @@ $(function () {
         },
     });
 
+    //distribute
     $(".distributeBtn").click(function () {
         var title = $("#title").val(),
             content = $(".summernote").summernote("code"),
