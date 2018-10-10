@@ -4,11 +4,20 @@ $(function () {
 
     //get url this_news_id
     var news_id = GetQueryString("this_news_id");
-    if(news_id){
+    if (!news_id) {
+        $(".modifyBtn").remove();
+    } else {
         $(".distributeBtn").remove();
         $(".modifyBtn").removeClass("none");
-    }else {
-        $(".modifyBtn").remove()
+
+        //call api news detail
+        GetNewsDetail(token, news_id, function (response) {
+            if (response.errcode == "0") {
+                console.log(response);
+            }
+        }, function (response) {
+            LayerFun(response.errcode);
+        })
     }
 
     //get key_code
