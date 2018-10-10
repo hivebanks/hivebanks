@@ -40,6 +40,18 @@ $(function () {
         var title = $("#title").val(),
             content = $(".summernote").summernote("code"),
             author = $("#author").val();
+        if (title.length <= 0) {
+            LayerFun("pleaseInputNewsTitle");
+            return;
+        }
+        if (content.length <= 0) {
+            LayerFun("pleaseInputNewsContent");
+            return;
+        }
+        if (author.length <= 0) {
+            LayerFun("pleaseInputNewsAuthor");
+            return;
+        }
         $(".preloader-wrapper").addClass("active");
         Distribute(token, title, content, author, function (response) {
             if (response.errcode == "0") {
