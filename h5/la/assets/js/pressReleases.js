@@ -37,12 +37,14 @@ $(function () {
     });
 
     $(".distributeBtn").click(function () {
-        console.log($(".summernote").summernote("code"));
-        var content = $(".summernote").summernote("code");
+        var title = $("#title").val(),
+            content = $(".summernote").summernote("code"),
+            author = $("#author").val();
         $(".preloader-wrapper").addClass("active");
-        Distribute(token, content, function (response) {
-            if(response.errcode == "0"){
+        Distribute(token, title, content, author, function (response) {
+            if (response.errcode == "0") {
                 $(".preloader-wrapper").removeClass("active");
+                window.location.href = "news.html";
             }
 
         }, function (response) {
