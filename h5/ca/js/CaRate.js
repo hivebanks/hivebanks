@@ -37,6 +37,13 @@ $(function () {
     //select recharge rate and withdraw rate
     $(document).on('click', 'input[name=changeRate]', function () {
         $(this).attr('checked', true).parent().siblings().children('input[name=changeRate]').attr('checked', false);
+        if ($(this).attr("checked", true) && $(this).attr("value") == "withdraw") {
+            $(".withdrawShowAddon").removeClass("none");
+            $(".rechargeShowAddon").addClass("none");
+        }else {
+            $(".withdrawShowAddon").addClass("none");
+            $(".rechargeShowAddon").removeClass("none");
+        }
     });
 
     //confirm set rate

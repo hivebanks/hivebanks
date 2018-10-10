@@ -113,9 +113,9 @@
                     <p class="font-size-14">
                         <span class="i18n" name="currentRechargeRate">Current setting exchange rate</span>:
                         <span>1</span>
-                        <span class="base_type">BTC</span>=
+                        <span class="bit_type ca_currency">CNY</span>=
                         <span class="recharge_base_rate">{{item.recharge_row.recharge_base_rate}}</span>
-                        <span class="bit_type ca_currency">CNY</span>
+                        <span class="base_type">BTC</span>
                     </p>
                     <p class="font-size-14">
                         <span class="i18n" name="rechargeMaxAmount">Current setting maximum amount of recharge</span>:
@@ -146,19 +146,21 @@
                     <p class="font-size-14">
                         <span class="i18n" name="currentWithdrawRate">Current set exchange rate</span>:
                         <span>1</span>
-                        <span class="base_type">BTC</span>=
+                        <span class="bit_type ca_currency">CNY</span>=
                         <span class="recharge_base_rate">{{item.withdraw_row.withdraw_base_rate}}</span>
-                        <span class="bit_type ca_currency">CNY</span>
+                        <span class="base_type">BTC</span>
                     </p>
                     <p class="font-size-14">
                         <span class="i18n" name="withdrawMaxAmount">Current setting withdrawal maximum amount</span>:
                         <span class="recharge_max_amount">{{item.withdraw_row.withdraw_max_amount}}</span>
-                        <span class="bit_type ca_currency">CNY</span>
+                        <!--<span class="bit_type ca_currency">CNY</span>-->
+                        <span class="base_type">BTC</span>
                     </p>
                     <p class="font-size-14">
                         <span class="i18n" name="withdrawMinAmount">Current setting withdrawal minimum amount</span>:
                         <span class="recharge_min_amount">{{item.withdraw_row.withdraw_min_amount}}</span>
-                        <span class="bit_type ca_currency">CNY</span>
+                        <!--<span class="bit_type ca_currency">CNY</span>-->
+                        <span class="base_type">BTC</span>
                     </p>
                     <p class="font-size-14">
                         <span class="i18n" name="effectiveTime">Current set withdrawal rate valid</span>:
@@ -194,7 +196,7 @@
                             <div class="col-md-3">
                                 <p class="font-size-14 flex space-around">
                                     <span>
-                                        1<span class="base_type"></span>
+                                        1<span class="bit_type ca_currency">CNY</span>
                                     </span>
                                     <span><i class="iconfont icon-transfer"></i></span>
                                 </p>
@@ -202,7 +204,8 @@
                             <div class="col-md-9">
                                 <div class="input-group rateInput">
                                     <input type="text" class="form-control inputRateVal rate">
-                                    <span class="input-group-addon ca_currency"></span>
+                                    <!--<span class="input-group-addon ca_currency"></span>-->
+                                    <span class="base_type"></span>
                                 </div>
                             </div>
 
@@ -218,12 +221,13 @@
                             <div class="col-md-9">
                                 <div class="input-group">
                                     <input type="text" class="form-control inputRateVal maxAmount">
-                                    <span class="input-group-addon ca_currency"></span>
+                                    <span class="input-group-addon ca_currency rechargeShowAddon"></span>
+                                    <span class="input-group-addon base_type none withdrawShowAddon"></span>
                                 </div>
                             </div>
 
                         </li>
-                        <!--最小额度-->
+                        <!--Minimum amount-->
                         <li class="flex center margin-bottom-2">
                             <div class="col-md-3 ">
                                 <p>
@@ -234,7 +238,8 @@
                             <div class="col-md-9">
                                 <div class="input-group">
                                     <input type="text" class="form-control inputRateVal minAmount">
-                                    <span class="input-group-addon ca_currency"></span>
+                                    <span class="input-group-addon ca_currency rechargeShowAddon"></span>
+                                    <span class="input-group-addon base_type none withdrawShowAddon"></span>
                                 </div>
                             </div>
                         </li>
@@ -294,10 +299,14 @@
             <div class="col-md-12 col-sm-12">
                 <div class="footerTR flex space-between center">
                     <div class="footerIconBox">
-                        <a href="https://twitter.com/Hivebanks "  data-toggle="tooltip" data-placement="top" title="hivebanks"><i class="iconfont icon-twitter"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Telegram：windwin"><i class="iconfont icon-telegram"></i></a>
-                        <a href="https://weibo.com/joybtc" data-toggle="tooltip" data-placement="top" title="joybtc.com"><i class="iconfont icon-weibo"></i></a>
-                        <a href="https://twitter.com/Hivebanks" data-toggle="tooltip" data-placement="top" title="Hivebanks"><i class="iconfont icon-weixin"></i></a>
+                        <a href="https://twitter.com/Hivebanks " data-toggle="tooltip" data-placement="top"
+                           title="hivebanks"><i class="iconfont icon-twitter"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="Telegram：windwin"><i
+                                class="iconfont icon-telegram"></i></a>
+                        <a href="https://weibo.com/joybtc" data-toggle="tooltip" data-placement="top"
+                           title="joybtc.com"><i class="iconfont icon-weibo"></i></a>
+                        <a href="https://twitter.com/Hivebanks" data-toggle="tooltip" data-placement="top"
+                           title="Hivebanks"><i class="iconfont icon-weixin"></i></a>
                     </div>
                     <div>
                         <select class="form-control input-sm" id="language">
