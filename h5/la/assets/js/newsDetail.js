@@ -9,6 +9,9 @@ $(function () {
     GetNewsDetail(token, news_id, function (response) {
         if(response.errcode == "0"){
             console.log(response);
+            var data = response.rows;
+            $(".newsTitle").text(data[0].title);
+            $(".newsContent").text(data[0].content);
         }
     }, function (response) {
         LayerFun("acquisitionFailed");
