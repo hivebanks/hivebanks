@@ -35,7 +35,7 @@ if($news){
     $rtn_ary['errmsg'] = '';
     $rtn_ary['rows'] = $news;
     $rtn_str = json_encode($rtn_ary);
-    php_end($rtn_str);
+    die($rtn_str);
 }
 
 exit_error('-1','获取新闻详情失败');
