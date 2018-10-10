@@ -846,6 +846,19 @@ function Distribute(token, title, content, author, suc_func, error_func) {
     CallNewsApi(api_url, post_data, suc_func, error_func);
 }
 
+//modify news
+function ModifyNews(token, title, content, author, news_id, suc_func, error_func) {
+    var api_url = 'news_edit.php',
+        post_data = {
+            'token': token,
+            'title': title,
+            'content': content,
+            'author': author,
+            'news_id': news_id
+        };
+    CallNewsApi(api_url, post_data, suc_func, error_func);
+}
+
 //get news list
 function GetNewsList(token, suc_func, error_func) {
     var api_url = 'news_list.php',

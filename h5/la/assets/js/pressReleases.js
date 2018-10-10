@@ -13,7 +13,6 @@ $(function () {
         //call api news detail
         GetNewsDetail(token, news_id, function (response) {
             if (response.errcode == "0") {
-                console.log(response);
                 var data = response.rows;
                 $("#title").val(data[0].title);
                 $(".summernote").summernote("code", data[0].content);
@@ -87,6 +86,40 @@ $(function () {
                 LayerFun("submitSuccess");
                 setTimeout(function () {
                     window.location.href = "news.html";
+                }, 2000);
+            }
+
+        }, function (response) {
+            $(".preloader-wrapper").removeClass("active");
+            LayerFun("publishingFailed");
+        })
+
+    });
+
+    //modify
+    $(".modifyBtn").click(function () {
+        var title = $("#title").val(),
+            content = $(".summernote").summernote("code"),
+            author = $("#author").val();
+        if (title.length <= 0) {
+            LayerFun("pleaseInputNewsTitle");
+            return;
+        }
+        if (content.length <= 0) {
+            LayerFun("pleaseInputNewsContent");
+            return;
+        }
+        if (author.length <= 0) {
+            LayerFun("pleaseInputNewsAuthor");
+            return;
+        }
+        $(".preloader-wrapper").addClass("active");
+        ModifyNews(token, title, content, author, news_id, function (response) {
+            if (response.errcode == "0") {
+                $(".preloader-wrapper").removeClass("active");
+                LayerFun("submitSuccess");
+                setTimeout(function () {
+                    window.location.href = "newsDetail.html?news_id" + news_id;
                 }, 2000);
             }
 
