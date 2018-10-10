@@ -27,7 +27,7 @@ $news_id = get_arg_str('GET', 'news_id', 128);
 
 la_user_check($token);
 
-$news = news_detail($news_id);var_dump($news);die;
+$news = news_detail($news_id);
 if($news){
 
     $rtn_ary = array();
