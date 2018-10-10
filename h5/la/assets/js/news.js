@@ -13,6 +13,8 @@ $(function () {
                 return;
             }
             $.each(data, function (i, val) {
+                console.log(data);
+                console.log(data.title);
                 tr += "<tr>" +
                     "<td><span>" + data.title + "</span></td>" +
                     "<td><span>" + data.content + "</span></td>" +
