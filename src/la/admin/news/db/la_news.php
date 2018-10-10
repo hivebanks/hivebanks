@@ -13,8 +13,8 @@
  */
 function news_add($data){
 
-    $data['ctime'] = time();
-    $data['utime'] = time();
+    $data['ctime'] = date('Y-m-d H:i:s',time());
+    $data['utime'] = date('Y-m-d H:i:s',time());
     $db = new DB_COM();
     $sql = $db->sqlInsert('la_news', $data);
     $q_id = $db->query($sql);
@@ -35,7 +35,7 @@ function news_edit($data){
     $author = $data['author'];
     $news_id = $data['news_id'];
 
-    $utime = time();
+    $utime = date('Y-m-d H:i:s',time());
     $db = new DB_COM();
     $sql = "UPDATE la_news SET utime = '{$utime}',title = '{$title}', content = '{$content}',author = '{$author}'  where news_id = '{$news_id}' ";
     $db->query($sql);
@@ -51,7 +51,7 @@ function news_edit($data){
 function news_delete($news_id){
 
 
-    $utime = time();
+    $utime = date('Y-m-d H:i:s',time());
     $db = new DB_COM();
     $sql = "UPDATE la_news SET utime = '{$utime}',status=0 where news_id = '{$news_id}' ";
     $db->query($sql);
