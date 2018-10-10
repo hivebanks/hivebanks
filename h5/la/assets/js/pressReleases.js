@@ -59,7 +59,7 @@ $(function () {
                 LayerFun("submitSuccess");
                 setTimeout(function () {
                     window.location.href = "news.html";
-                },1000);
+                },3000);
             }
 
         }, function (response) {
