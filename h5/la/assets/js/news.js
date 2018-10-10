@@ -15,7 +15,6 @@ $(function () {
             $.each(data, function (i, val) {
                 tr += "<tr>" +
                     "<td><span>" + data[i].title + "</span></td>" +
-                    "<td><span>" + data[i].content + "</span></td>" +
                     "<td><span>" + data[i].author + "</span></td>" +
                     "<td><span>" + data[i].ctime + "</span></td>" +
                     "<td>" +
