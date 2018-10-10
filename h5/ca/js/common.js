@@ -109,7 +109,7 @@ $.ajax({
 // Call API common function
 function CallApi(api_url, post_data, suc_func, error_func) {
 
-    var api_site = config_api_url + '/api/ca/';
+    var api_site = config_api_url + '/src/ca/';
 
     post_data = post_data || {};
     suc_func = suc_func || function () {
@@ -142,7 +142,7 @@ function CallApi(api_url, post_data, suc_func, error_func) {
 // Call the USER API common function
 function CallUserApi(api_url, post_data, suc_func, error_func) {
 
-    var api_site = config_api_url + '/api/user/';
+    var api_site = config_api_url + '/src/user/';
 
     post_data = post_data || {};
     suc_func = suc_func || function () {
@@ -175,7 +175,7 @@ function CallUserApi(api_url, post_data, suc_func, error_func) {
 
 // Call the la API registration function
 function CallLaApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/la/admin/admin/';
+    var api_site = config_api_url + '/src/la/admin/admin/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -205,7 +205,7 @@ function CallLaApi(api_url, post_data, suc_func, error_func) {
 
 // Call the API LA configuration function
 function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/la/admin/configure/';
+    var api_site = config_api_url + '/src/la/admin/configure/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
@@ -235,7 +235,7 @@ function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
 
 //Ca recharge margin la function
 function CallLaBase(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/api/base/';
+    var api_site = config_api_url + '/src/base/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
