@@ -14,6 +14,10 @@ $(function () {
         GetNewsDetail(token, news_id, function (response) {
             if (response.errcode == "0") {
                 console.log(response);
+                var data = response.rows;
+                $("#title").val(data[0].title);
+                $(".summernote").summernote("code", data[0].content);
+                $("#author").val(data[0].author);
             }
         }, function (response) {
             LayerFun(response.errcode);
