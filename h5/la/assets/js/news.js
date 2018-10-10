@@ -14,7 +14,7 @@ $(function () {
             }
             $.each(data, function (i, val) {
                 tr += "<tr class='newsItem'>" +
-                    "<td><a href='newsDetail.html?"+ data[i].news_id +"' class='newsTitleClick'>" + data[i].title + "</a></td>" +
+                    "<td><a href='newsDetail.html?news_id="+ data[i].news_id +"' class='newsTitleClick'>" + data[i].title + "</a></td>" +
                     "<td><span>" + data[i].author + "</span></td>" +
                     "<td><span>" + data[i].ctime + "</span></td>" +
                     "<td>" +
