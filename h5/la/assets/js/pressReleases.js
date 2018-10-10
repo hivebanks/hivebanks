@@ -30,6 +30,9 @@ $(function () {
                     success: function (data) {
                         var response = JSON.parse(data), url = response.url;
                         $('.summernote').summernote('insertImage', url, 'img');
+                    },
+                    error: function (data) {
+                        console.log(data);
                     }
                 });
             }
@@ -59,7 +62,7 @@ $(function () {
                 LayerFun("submitSuccess");
                 setTimeout(function () {
                     window.location.href = "news.html";
-                },3000);
+                }, 2000);
             }
 
         }, function (response) {
