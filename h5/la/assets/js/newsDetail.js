@@ -11,7 +11,7 @@ $(function () {
             console.log(response);
             var data = response.rows;
             $(".newsTitle").text(data[0].title);
-            $(".newsContent").text(data[0].content);
+            $(".newsContent").html(data[0].content);
         }
     }, function (response) {
         LayerFun("acquisitionFailed");
