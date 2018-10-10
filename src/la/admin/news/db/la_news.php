@@ -48,9 +48,9 @@ function news_edit($data){
  * @return int
  * la后台删除新闻
  */
-function news_delete($data){
+function news_delete($news_id){
 
-    $news_id = $data['news_id'];
+    
     $utime = time();
     $db = new DB_COM();
     $sql = "UPDATE la_news SET utime = '{$utime}',status=0 where news_id = '{$news_id}' ";
