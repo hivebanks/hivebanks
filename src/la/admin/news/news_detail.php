@@ -30,11 +30,11 @@ la_user_check($token);
 $news = news_detail($news_id);
 if($news){
 
+    unset($news[0]['content']);
     $rtn_ary = array();
     $rtn_ary['errcode'] = '0';
     $rtn_ary['errmsg'] = '';
     $rtn_ary['rows'] = $news;
-    unset($news[0]['content']);
     $rtn_str = json_encode($rtn_ary);var_dump($rtn_ary);die;
 
     php_end($rtn_str);
