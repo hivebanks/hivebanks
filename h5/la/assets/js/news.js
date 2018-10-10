@@ -46,7 +46,10 @@ $(function () {
                 $(".preloader-wrapper").removeClass("active");
                 LayerFun("successfullyDeleted");
                 _this.closest(".newsItem").remove();
-                GetNewsListFun();
+                setTimeout(function () {
+                    GetNewsListFun();
+                },1000);
+
             }
         }, function (response) {
             $(".preloader-wrapper").removeClass("active");
