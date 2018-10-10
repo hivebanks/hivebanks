@@ -13,12 +13,10 @@ $(function () {
                 return;
             }
             $.each(data, function (i, val) {
-                console.log(data);
-                console.log(data.title);
                 tr += "<tr>" +
-                    "<td><span>" + data.title + "</span></td>" +
-                    "<td><span>" + data.content + "</span></td>" +
-                    "<td><span>" + data.ctime + "</span></td>" +
+                    "<td><span>" + data[i].title + "</span></td>" +
+                    "<td><span>" + data[i].content + "</span></td>" +
+                    "<td><span>" + data[i].ctime + "</span></td>" +
                     "<td>" +
                     "<button class='btn btn-success modifyNewsBtn i18n' name='modify'>modify</button>" +
                     "<button class='btn btn-danger deleteNewsBtn i18n' name='delete'>delete</button>" +
