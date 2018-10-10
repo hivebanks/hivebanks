@@ -16,6 +16,7 @@ $(function () {
                 tr += "<tr>" +
                     "<td><span>" + data[i].title + "</span></td>" +
                     "<td><span>" + data[i].content + "</span></td>" +
+                    "<td><span>" + data[i].author + "</span></td>" +
                     "<td><span>" + data[i].ctime + "</span></td>" +
                     "<td>" +
                     "<button class='btn btn-success modifyNewsBtn i18n' name='modify'>modify</button>" +
