@@ -22,7 +22,9 @@ $(function () {
                     "<button class='btn btn-danger deleteNewsBtn i18n' name='delete'>delete</button>" +
                     "</td>" +
                     "</tr>"
-            })
+            });
+            $("#newsList").html(tr);
+            execI18n();
         }
 
     }, function (response) {
