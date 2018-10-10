@@ -66,7 +66,7 @@ function news_delete($news_id){
  */
 function news_list(){
     $db = new DB_COM();
-    $sql = "select title,ctime from la_news where status = 1 order by ctime desc";
+    $sql = "select title,ctime,news_id from la_news where status = 1 order by ctime desc";
     $db->query($sql);
     $rows = $db->fetchAll();
     return $rows;
