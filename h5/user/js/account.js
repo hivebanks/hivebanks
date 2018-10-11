@@ -123,8 +123,8 @@ $(function () {
 
     //copy invite address
     $('.copy_invite_address').click(function(){
-        // new ClipboardJS('.copy_invite_address');
-        new ClipboardJS('.copy_address');
+        new ClipboardJS('.copy_invite_address');
+        // new ClipboardJS('.copy_address');
         layer.msg("copy success")
         // LayerFun('copySuccess');
     })
