@@ -11,9 +11,9 @@ $(function () {
         if (response.errcode == "0") {
             console.log(response);
             var data = response.rows;
-            $(".title").text(data.title);
-            $(".author").text(data.author);
-            $(".news_content").text(data.content);
+            $(".title").text(data[0].title);
+            $(".author").text(data[0].author);
+            $(".news_content").text(data[0].content);
         }
     }, function (response) {
         return;
