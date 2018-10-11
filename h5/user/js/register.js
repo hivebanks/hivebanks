@@ -1,10 +1,11 @@
 $(function () {
     //get invite
     var str = window.location.search.split("=")[1];
-    var invite = window.atob(str);
-    if (invite) {
+    if(str){
+        var invite = window.atob(str);
         $(".emailInvitCode,.phoneInvitCode").val(invite);
     }
+    
     //Whether to allow registration
     var type = 'us';
     RegisterSwitch(type, function (response) {
