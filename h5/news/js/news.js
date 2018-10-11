@@ -46,8 +46,8 @@ $(function () {
             var li = "";
             $.each(data, function (i, val) {
                 li+="<li>" +
-                    "<a href='newsInfo.html?news_id='"+ data[0].news_id +">"+ data[0].title +"</a>" +
-                    "<p class='news_time font-size-14'><span>"+ data[0].ctime +"</span><span>"+ data[0].author +"</span></p>" +
+                    "<a href='newsInfo.html?news_id='"+ data[i].news_id +">"+ data[i].title +"</a>" +
+                    "<p class='news_time font-size-14'><span>"+ data[i].ctime +"</span><span>"+ data[i].author +"</span></p>" +
                     "</li>"
             });
             $(".news_list_item").html(li);
