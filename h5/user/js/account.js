@@ -125,6 +125,7 @@ $(function () {
     $('.copy_invite_address').click(function(){
         // new ClipboardJS('.copy_invite_address');
         new ClipboardJS('.copy_address');
-        LayerFun('copySuccess');
+        layer.msg("copy success")
+        // LayerFun('copySuccess');
     })
 });
