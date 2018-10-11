@@ -9,7 +9,6 @@ $(function () {
     //get news info
     GetNewsInfo(news_id, function (response) {
         if (response.errcode == "0") {
-            console.log(response);
             var data = response.rows;
             $(".title").text(data[0].title);
             $(".ctime").text(data[0].ctime);
@@ -26,7 +25,7 @@ $(function () {
             var data = response.rows;
             var li = "";
             $.each(data, function (i, val) {
-                li += "<li class='leftNewsTitle activeNews'>"+ data[i].title +"</li>"
+                li += "<li class='leftNewsTitle'>"+ data[i].title +"</li>"
             });
             $(".newsInfo_nav").html(li);
 

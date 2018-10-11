@@ -6,8 +6,9 @@
 }
 
 .leftNewsTitle {
-    margin-bottom: 15%;
     cursor: pointer;
+    padding: 3%;
+
 }
 
 h1.title{
