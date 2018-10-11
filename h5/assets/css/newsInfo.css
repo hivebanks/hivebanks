@@ -1,8 +1,6 @@
 .leftNewsTitle.activeNews, .leftNewsTitle:hover {
     background: #021f4e;
     color: #fff;
-    padding: 5%;
-    border-radius: 5px;
 }
 
 .leftNewsTitle {
@@ -11,6 +9,7 @@
     white-space: nowrap;
     cursor: pointer;
     padding: 3%;
+    border-radius: 5px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
