@@ -13,7 +13,7 @@ $(function () {
             var data = response.rows;
             $(".title").text(data[0].title);
             $(".author").text(data[0].author);
-            $(".news_content").text(data[0].content);
+            $(".news_content").html(data[0].content);
         }
     }, function (response) {
         return;
