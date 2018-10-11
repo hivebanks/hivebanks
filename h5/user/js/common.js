@@ -244,6 +244,36 @@ function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
     });
 }
 
+// Call the API news function
+function CallNewsApi(api_url, post_data, suc_func, error_func) {
+    var api_site = config_api_url + '/src/news/';
+    post_data = post_data || {};
+    suc_func = suc_func || function () {
+    };
+    error_func = error_func || function () {
+    };
+    $.ajax({
+        url: api_site + api_url,
+        dataType: "jsonp",
+        data: post_data,
+        success: function (response) {
+            // API return failed
+            if (response.errcode != 0) {
+                error_func(response);
+            } else {
+                // Successfully process data
+                suc_func(response);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            // API error exception
+            var response = {"errcode": -1, "errmsg": '系统异常，请稍候再试'};
+            // Exception handling
+            error_func(response);
+        }
+    });
+}
+
 //Check if registration is allowed
 function RegisterSwitch(type, suc_func, error_func) {
     var api_url = 'reg_lock.php',
@@ -591,6 +621,22 @@ function GetKeyCode(token, suc_func, error_func) {
             'token': token
         };
     CallLaConfigApi(api_url, post_data, suc_func, error_func);
+}
+
+//get news list
+function Get_News_List(suc_func, error_func) {
+    var api_url = 'news_list.php',
+        post_data = {};
+    CallNewsApi(api_url, post_data, suc_func, error_func);
+}
+
+//get news info
+function GetNewsInfo(news_id, suc_func, error_func) {
+    var api_url = 'news_detail.php',
+        post_data = {
+        "news_id" : news_id
+        };
+    CallNewsApi(api_url, post_data, suc_func, error_func);
 }
 
 /**

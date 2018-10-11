@@ -1,0 +1,36 @@
+.leftNewsTitle.activeNews, .leftNewsTitle:hover {
+    background: #021f4e;
+    color: #fff;
+}
+
+.leftNewsTitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 3%;
+    border-radius: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 400;
+    border-bottom: 1px dashed #9e9e9e;
+}
+
+h1.title {
+    font-size: 32px;
+}
+
+.contentInfo_text {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contentInfo_time {
+    color: #4f6d8c;
+}
+
+.newsInfo_row {
+    border-top: 1px solid #eeeeee;
+    padding-top: 2%;
+}

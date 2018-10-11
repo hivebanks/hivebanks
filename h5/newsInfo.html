@@ -7,16 +7,16 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>newsInfo</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../user/css/common.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user/css/common.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">
-    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="../user/mobile-css/common.css">
-    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="mobile-css/newsInfo.css">
-    <link rel="stylesheet" href="css/newsInfo.css">
+    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="user/mobile-css/common.css">
+    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="news/mobile-css/newsInfo.css">
+    <link rel="stylesheet" href="assets/css/newsInfo.css">
 </head>
 <body>
 <!-- loading -->
-<iframe src="../user/loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0"
+<iframe src="user/loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0"
         marginwidth="0"
         scrolling="no"></iframe>
 <!--nav-->
@@ -29,8 +29,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/img/logo-joybtc.png" alt="">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo-joybtc.png" alt="">
             </a>
         </div>
 
@@ -52,8 +52,9 @@
             <!--label-->
             <div class="col-md-12">
                 <ol class="breadcrumb">
-                    <li><a href="../index.html" class="i18n" name="index">首页</a></li>
-                    <li class="active i18n" name="news">news</li>
+                    <li><a href="index.html" class="i18n" name="index">首页</a></li>
+                    <li><a href="news.html" class="i18n" name="news">news</a></li>
+                    <li class="active i18n" name="newsInfo">新闻详情</li>
                 </ol>
             </div>
         </div>
@@ -61,50 +62,51 @@
         <!--content-->
         <div class="row newsInfo_row">
             <!--left content title-->
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div>
-                    <ul>
-                        <li class="leftNewsTitle activeNews">Hivebanks项目正式开源发布会暨CCVT项目预告</li>
-                        <li class="leftNewsTitle">项目成员展示</li>
-                        <li class="leftNewsTitle">ccvt token 发行</li>
+                    <ul class="newsInfo_nav">
+                        <!--<li class="leftNewsTitle activeNews">Hivebanks项目正式开源发布会暨CCVT项目预告</li>-->
+                        <!--<li class="leftNewsTitle">项目成员展示</li>-->
+                        <!--<li class="leftNewsTitle">ccvt token 发行</li>-->
                     </ul>
                 </div>
             </div>
             <!--right content info-->
             <div class="col-md-8">
                 <div class="contentInfo">
-                    <h1 class="title font-weight-400">Hivebanks项目正式开源发布会暨CCVT项目预告</h1>
+                    <h1 class="title font-weight-400"></h1>
                     <div>
                         <p class="font-size-14 contentInfo_time">
                             <span>作者</span>:
-                            <span>kangkang</span>
+                            <span class="author"></span>
                         </p>
                         <p class="font-size-14 contentInfo_time">
                             <span>更新于</span>:
-                            <span class="font-weight-400">2018/10/08</span>
+                            <span class="font-weight-400 ctime"></span>
                         </p>
                     </div>
-                    <p class="contentInfo_text font-weight-400">
-                        本次活动我们正式宣布Hivebanks项目实现代码开源，同时通过现场的操作演示，让前来参加活动的朋友们能够更加全面的体验到我们的项目，体会Hivebanks能够为我们的生活带来的安全与便捷、以及它为各行各业带来的巨大改变。
-                        活动在下午2点半正式开始，首先由袁浩先生做了Hivebanks项目的简单介绍，以及我们的项目整体发展规划，和我们现在所处的阶段。同时重点对目前的数字货币的主流保管方式，交易所和钱包，与Hiveebanks进行了对比。通过对比可以更明显的看出Hivebanks项目的先进性。
-                        3点钟我们和现场观众一起倒计时，共同见证HiveBanks 正式开源上线这一激动人心的时刻。
-                    </p>
-                    <div>
-                        <img src="../assets/img/news_001.jpg" alt="" class="margin-bottom-5">
-                        <img src="../assets/img/news_002.jpg" alt="">
-                    </div>
+                    <div class="news_content"></div>
+                    <!--<p class="contentInfo_text font-weight-400">-->
+                        <!--本次活动我们正式宣布Hivebanks项目实现代码开源，同时通过现场的操作演示，让前来参加活动的朋友们能够更加全面的体验到我们的项目，体会Hivebanks能够为我们的生活带来的安全与便捷、以及它为各行各业带来的巨大改变。-->
+                        <!--活动在下午2点半正式开始，首先由袁浩先生做了Hivebanks项目的简单介绍，以及我们的项目整体发展规划，和我们现在所处的阶段。同时重点对目前的数字货币的主流保管方式，交易所和钱包，与Hiveebanks进行了对比。通过对比可以更明显的看出Hivebanks项目的先进性。-->
+                        <!--3点钟我们和现场观众一起倒计时，共同见证HiveBanks 正式开源上线这一激动人心的时刻。-->
+                    <!--</p>-->
+                    <!--<div>-->
+                        <!--<img src="assets/img/news_001.jpg" alt="" class="margin-bottom-5">-->
+                        <!--<img src="assets/img/news_002.jpg" alt="">-->
+                    <!--</div>-->
                 </div>
             </div>
-            <div class="col-md-2">
-                <div>
-                    <h3>相关推荐</h3>
-                    <ul>
-                        <li>第一篇</li>
-                        <li>第二篇</li>
-                        <li>第三篇</li>
-                    </ul>
-                </div>
-            </div>
+            <!--<div class="col-md-2">-->
+                <!--<div>-->
+                    <!--<h3>相关推荐</h3>-->
+                    <!--<ul>-->
+                        <!--<li>第一篇</li>-->
+                        <!--<li>第二篇</li>-->
+                        <!--<li>第三篇</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </section>
@@ -144,14 +146,14 @@
 <div class="scrollup">
     <a href="#"><i class="iconfont icon-top"></i></a>
 </div>
-<script src="../assets/js/jquery-3.2.1.min.js"></script>
-<script src="../assets/language/jquery.i18n.properties.js"></script>
-<script src="../assets/language/language.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/language/jquery.i18n.properties.js"></script>
+<script src="assets/language/language.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <!--<script src="assets/js/waterpipe.js"></script>-->
-<script src="../assets/js/layer/layer.js"></script>
-<script src="../assets/js/cnt.js"></script>
-<script src="../user/js/common.js"></script>
-<script src="js/newsInfo.js"></script>
+<script src="assets/js/layer/layer.js"></script>
+<script src="assets/js/cnt.js"></script>
+<script src="user/js/common.js"></script>
+<script src="assets/js/newsInfo.js"></script>
 </body>
 </html>

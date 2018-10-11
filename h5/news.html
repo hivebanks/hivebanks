@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta id="i18n_pagename" content="index-common">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title class="index i18n" name="index">Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title class="i18n" name="news">news</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="user/css/common.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">
     <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="user/mobile-css/common.css">
-    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="assets/mobile-css/index.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <!--<link rel="stylesheet" media="only screen and (max-device-width:767px)" href="news/mobile-css/news.css">-->
+    <link rel="stylesheet" href="assets/css/news.css">
+    <!--<script src="//at.alicdn.com/t/font_626151_31e2mobvpdu.js"></script>-->
 </head>
+<style>
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+</style>
 <body>
 <!-- loading -->
 <iframe src="user/loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0"
@@ -38,38 +47,37 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="javascript:;" class="i18n caLogin font-weight-400" name="ca_enter"></a></li>
                 <li><a href="javascript:;" class="i18n baLogin font-weight-400" name="ba_enter"></a></li>
-                <!--<li><a href="user/login.html" class="i18n usLogin" name="user">User</a></li>-->
-                <li class="accountNone"><a href="javascript:;" class="i18n toAccountBtn alreadyLogin" name="account">Account</a></li>
+                <li><a href="javascript:;" class="i18n usLogin font-weight-400" name="us_enter"></a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<section class="banner">
-    <div class="container-fluid">
-        <div class="row banner-row hero">
-            <div class="smoky" id="smoky-bg">
-                <!--<img src="assets/img/index_banner.jpg" alt="">-->
-                <canvas>Your browser does not support HTML5 canvas.</canvas>
-            </div>
-            <!--<img src="assets/img/banner.png" alt="">-->
-            <div class="container textBox">
-                <h1 class="rubberBand">
-                    <p class="i18n" name="joybtcText">JOYBTC 是HiveBanks国内专用DEOM</p>
-                    <strong class="i18n" name="indexTitle">Hivebanks Your Side To Digital Asset Investment Experts</strong>
-                </h1>
-                <a href="user/register.html" class="btn a-btn create_btn fadeInLeft i18n" name="creatNewAccount">Creating New Accounts</a>
-                <a href="user/login.html" class="btn a-btn create_btn fadeInLeft i18n" name="login">Login</a>
-            </div>
-            <div id="down">
-                <span class="down_one down"></span>
-                <span class="down_two down"></span>
-                <a href="news.html" class="i18n moreInformation font-size-14" name="moreInformation">更多咨询</a>
+<!--news-->
+<section id="news" class="content">
+    <div class="container">
+        <div class="row">
+            <!--<div class="col-md-3">-->
+                <!--<ul class="news_nav">-->
+                    <!--<li><span class="right_icon">👉</span><a href="#" class="news_active">项目发布会</a></li>-->
+                    <!--<li><span class="right_icon none">👉</span><a href="#">项目发布会</a></li>-->
+                    <!--<li><span class="right_icon none">👉</span><a href="#">项目发布会</a></li>-->
+                    <!--<li><span class="right_icon none">👉</span><a href="#">项目发布会</a></li>-->
+
+                <!--</ul>-->
+            <!--</div>-->
+            <div class="col-md-12">
+                <div class="news_list">
+                    <h3 class="font-weight-400">新闻动态</h3>
+                    <ul class="news_list_item">
+
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
-
 <!--footer-->
 <section class="sections footer">
     <div class="container">
@@ -77,10 +85,14 @@
             <div class="col-md-12 col-sm-12">
                 <div class="footerTR flex space-between center">
                     <div class="footerIconBox">
-                        <a href="https://twitter.com/Hivebanks "  data-toggle="tooltip" data-placement="top" title="hivebanks"><i class="iconfont icon-twitter"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Telegram：windwin"><i class="iconfont icon-telegram"></i></a>
-                        <a href="https://weibo.com/joybtc" data-toggle="tooltip" data-placement="top" title="joybtc.com"><i class="iconfont icon-weibo"></i></a>
-                        <a href="https://twitter.com/Hivebanks" data-toggle="tooltip" data-placement="top" title="Hivebanks"><i class="iconfont icon-weixin"></i></a>
+                        <a href="https://twitter.com/Hivebanks " data-toggle="tooltip" data-placement="top"
+                           title="hivebanks"><i class="iconfont icon-twitter"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="Telegram：windwin"><i
+                                class="iconfont icon-telegram"></i></a>
+                        <a href="https://weibo.com/joybtc" data-toggle="tooltip" data-placement="top"
+                           title="joybtc.com"><i class="iconfont icon-weibo"></i></a>
+                        <a href="https://twitter.com/Hivebanks" data-toggle="tooltip" data-placement="top"
+                           title="Hivebanks"><i class="iconfont icon-weixin"></i></a>
                     </div>
                     <div>
                         <select class="form-control input-sm" id="language">
@@ -105,10 +117,10 @@
 <script src="assets/language/jquery.i18n.properties.js"></script>
 <script src="assets/language/language.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waterpipe.js"></script>
+<!--<script src="../assets/js/waterpipe.js"></script>-->
 <script src="assets/js/layer/layer.js"></script>
 <script src="assets/js/cnt.js"></script>
 <script src="user/js/common.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="assets/js/news.js"></script>
 </body>
 </html>

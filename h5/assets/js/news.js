@@ -34,20 +34,21 @@ $(function () {
         }
     });
 
-    var smokyBG = $('#smoky-bg').waterpipe({
-        gradientStart: '#51ff00',
-        gradientEnd: '#001eff',
-        smokeOpacity: 0.1,
-        smokeSize: 100,
-        numCircles: 1,
-        maxMaxRad: 'auto',
-        minMaxRad: 'auto',
-        minRadFactor: 0,
-        iterations: 8,
-        drawsPerFrame: 10,
-        lineWidth: 2,
-        speed: 10,
-        bgColorInner: "#111",
-        bgColorOuter: "#000"
-    });
+    //get news list
+    Get_News_List(function (response) {
+        if (response.errcode == "0") {
+            var data = response.rows;
+            var li = "";
+            $.each(data, function (i, val) {
+                li += "<li>" +
+                    "<a href='newsInfo.html?news_id=" + data[i].news_id + "'>" + data[i].title + "</a>" +
+                    "<p class='news_time font-size-14'><span>" + data[i].utime + "</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>" + data[i].author + "</span></p>" +
+                    "</li>"
+            });
+            $(".news_list_item").html(li);
+
+        }
+    }, function (response) {
+        return;
+    })
 });

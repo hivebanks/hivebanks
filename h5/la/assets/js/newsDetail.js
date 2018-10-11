@@ -9,7 +9,7 @@ $(function () {
         if (response.errcode == "0") {
             var data = response.rows;
             $(".newsTitle").text(data[0].title);
-            $(".time").text(data[0].ctime);
+            $(".time").text(data[0].utime);
             $(".author").text(data[0].author);
             $(".newsContent").html(data[0].content);
         }
