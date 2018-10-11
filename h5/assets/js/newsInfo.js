@@ -1,4 +1,56 @@
 $(function () {
+    function GetIndexCookie(name) {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != null) {
+            return unescape(arr[2]);
+        } else {
+            return null;
+        }
+    }
+
+    var user_token = GetIndexCookie('user_token');
+    var ba_token = GetIndexCookie('ba_token');
+    var ca_token = GetIndexCookie('ca_token');
+
+    if (user_token) {
+        $('.create_btn, .usLogin').remove();
+        $('.accountNone').removeClass('accountNone');
+    }
+    $('.baLogin').click(function () {
+        if (ba_token) {
+            window.location.href = 'ba/BaAccount.html';
+        } else {
+            window.location.href = 'ba/BaLogin.html';
+        }
+    });
+    $('.caLogin').click(function () {
+        if (ca_token) {
+            window.location.href = 'ca/CaAccount.html';
+        } else {
+            window.location.href = 'ca/CaLogin.html';
+        }
+    });
+    $('.usLogin').click(function () {
+        if (user_token) {
+            window.location.href = 'user/account.html';
+        } else {
+            window.location.href = 'user/login.html';
+        }
+    });
+
+    $('.toAccountBtn').click(function () {
+        if (user_token) {
+            window.location.href = 'user/account.html';
+        }
+        if (ba_token) {
+            window.location.href = 'ba/BaAccount.html';
+        }
+        if (ca_token) {
+            window.location.href = 'ca/CaAccount.html';
+        }
+    });
+
+    //click toggle
     $(document).on("click", ".leftNewsTitle", function () {
         $(this).addClass("activeNews").siblings(".leftNewsTitle").removeClass("activeNews");
     });
