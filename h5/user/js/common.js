@@ -246,7 +246,7 @@ function CallLaConfigApi(api_url, post_data, suc_func, error_func) {
 
 // Call the API news function
 function CallNewsApi(api_url, post_data, suc_func, error_func) {
-    var api_site = config_api_url + '/src/news';
+    var api_site = config_api_url + '/src/news/';
     post_data = post_data || {};
     suc_func = suc_func || function () {
     };
