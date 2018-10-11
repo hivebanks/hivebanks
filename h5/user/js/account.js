@@ -128,6 +128,7 @@ $(function () {
     console.log(url);
     console.log(encodeURIComponent("12321321321"));
     console.log(encodeURI("12321321321"));
+    console.log(escape("12321321321"));
     //copy invite address
     $('.copy_invite_address').click(function () {
         new ClipboardJS('.copy_invite_address');
