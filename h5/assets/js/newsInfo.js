@@ -12,6 +12,7 @@ $(function () {
             console.log(response);
             var data = response.rows;
             $(".title").text(data[0].title);
+            $(".ctime").text(data[0].ctime);
             $(".author").text(data[0].author);
             $(".news_content").html(data[0].content);
         }
