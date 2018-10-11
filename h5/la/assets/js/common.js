@@ -311,7 +311,8 @@ function CallNewsApi(api_url, post_data, suc_func, error_func) {
     };
     $.ajax({
         url: api_site + api_url,
-        dataType: "jsonp",
+        type: "post",
+        // dataType: "jsonp",
         data: post_data,
         success: function (response) {
             // API return failed
