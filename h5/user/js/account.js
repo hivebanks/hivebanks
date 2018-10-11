@@ -120,4 +120,11 @@ $(function () {
             }
         });
     }
+
+    //copy invite address
+    $('.copy_invite_address').click(function(){
+        console.log("copy")
+        new ClipboardJS('.copy_address');
+        LayerFun('copySuccess');
+    })
 });

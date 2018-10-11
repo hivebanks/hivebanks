@@ -132,7 +132,8 @@
                             <li class='flex center space-between font-weight-400'>
                                 <div><span class='i18n' name='invitationCode'>Invitation code</span>:</div>
                                 <div class='level flex center'>
-                                    <span class='us_nm'></span>
+                                    <span class='us_nm'>123213</span>
+                                    <button class="btn btn-success margin-left-5 i18n" name="invite" data-toggle="modal" data-target="#invite"></button>
                                 </div>
                             </li>
                             <li class='flex center space-between font-weight-400'>
@@ -342,6 +343,28 @@
     </div>
 </div>
 
+<!--modal invite-->
+<div class="modal fade" id="invite" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title i18n" name="inviteNewUsers" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="flex">
+                    <input type="text" id="copy_invite_address" readonly value="123123" class="form-control">
+                    <button data-clipboard-target="#copy_invite_address" class="btn btn-success copy_invite_address margin-left-2 i18n" name="copyAddress">copy address</button>
+                </div>
+                <div>
+                    <p class="font-size-14 i18n" name="copyInviteTo"></p>
+                    <p class="font-size-14"><span class="i18n" name="registerSuccessAfter"></span><span class="font-weight-400">50 CCVT</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--Back to top-->
 <div class="scrollup">
     <a href="#"><i class="iconfont icon-top"></i></a>
@@ -355,6 +378,7 @@
 <script src="language/jquery.i18n.properties.js"></script>
 <script src="language/language.js"></script>
 <script src="../assets/js/pagination.js"></script>
+<script src="../assets/js/clipboard.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/main.js"></script>
 <script src="js/account.js"></script>
