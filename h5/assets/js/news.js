@@ -9,6 +9,7 @@ $(function () {
     }
 
     if (user_token) {
+        $('.usLogin').remove();
         $('.accountNone').removeClass('accountNone');
     }
 
