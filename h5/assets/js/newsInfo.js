@@ -25,7 +25,7 @@ $(function () {
             var data = response.rows;
             var li = "";
             $.each(data, function (i, val) {
-                li += "<li class='leftNewsTitle'>"+ data[i].title +"</li>"
+                li += "<li class='leftNewsTitle' title='"+ data[i].title +"'>"+ data[i].title +"</li>"
             });
             $(".newsInfo_nav").html(li);
 

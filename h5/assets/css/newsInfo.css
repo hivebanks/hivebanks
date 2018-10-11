@@ -8,7 +8,9 @@
 .leftNewsTitle {
     cursor: pointer;
     padding: 3%;
-
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 h1.title{
