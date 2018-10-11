@@ -46,8 +46,7 @@ $(function () {
             var li = "";
             $.each(data, function (i, val) {
                 li+="<li>" +
-                    "<a href='newsInfo.html?news_id='"+ data[0].title +"></a>" +
-                    "<span class='news_id none'>"+ data[0].news_id +"</span>" +
+                    "<a href='newsInfo.html?news_id='"+ data[0].news_id +">"+ data[0].title +"</a>" +
                     "<p class='news_time font-size-14'><span>"+ data[0].ctime +"</span><span>"+ data[0].author +"</span></p>" +
                     "</li>"
             });
