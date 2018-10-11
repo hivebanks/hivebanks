@@ -3,7 +3,7 @@ $(function () {
     var token = GetCookie('user_token');
 
     // Basic user information
-    var base_amount = '';
+    var base_amount = '', invite = "";
     UserInformation(token, function (response) {
         if (response.errcode == '0') {
             var data = response.rows;
@@ -14,6 +14,7 @@ $(function () {
             base_amount = data.base_amount;
             $(".us_account").text(data.us_account);
             $(".us_nm").text(data.us_nm);
+            invite = data.us_nm;
             $('.ctime').text(data.ctime);
             $('.us_account').text(data.us_account);
             $('.availableBalance').text(data.base_amount);
@@ -121,11 +122,12 @@ $(function () {
         });
     }
 
+    //invite
+    // $(".inviteInput").val(""+ invite);
+    console.log(getRootPath());
     //copy invite address
-    $('.copy_invite_address').click(function(){
+    $('.copy_invite_address').click(function () {
         new ClipboardJS('.copy_invite_address');
-        // new ClipboardJS('.copy_address');
         layer.msg("copy success")
-        // LayerFun('copySuccess');
     })
 });
