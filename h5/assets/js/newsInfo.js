@@ -6,7 +6,7 @@ $(function () {
     //get news_id
     var news_id = GetQueryString("news_id");
 
-    //get news list
+    //get news info
     GetNewsInfo(news_id, function (response) {
         if (response.errcode == "0") {
             console.log(response);
@@ -15,6 +15,21 @@ $(function () {
             $(".ctime").text(data[0].ctime);
             $(".author").text(data[0].author);
             $(".news_content").html(data[0].content);
+        }
+    }, function (response) {
+        return;
+    });
+
+    //get news list
+    Get_News_List(function (response) {
+        if (response.errcode == "0") {
+            var data = response.rows;
+            var li = "";
+            $.each(data, function (i, val) {
+                li += "<li class='leftNewsTitle activeNews'>"+ data[0].title +"</li>"
+            });
+            $(".newsInfo_nav").html(li);
+
         }
     }, function (response) {
         return;
