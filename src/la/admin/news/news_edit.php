@@ -19,14 +19,14 @@ header("Content-Type:application/json;charset=utf-8");
 
 php_begin();
 $args = array("token","title","content","author","news_id");
-chk_empty_args('GET', $args);
+chk_empty_args('POST', $args);
 $data = array();
 // 用户token
-$token = get_arg_str('GET', 'token', 128);
-$data['title'] = get_arg_str('GET', 'title', 128);
-$data['content'] =  get_arg_str('GET', 'content', 9999999);
-$data['author'] = get_arg_str('GET', 'author', 128);
-$data['news_id'] = get_arg_str('GET', 'news_id', 128);
+$token = get_arg_str('POST', 'token', 128);
+$data['title'] = get_arg_str('POST', 'title', 128);
+$data['content'] =  get_arg_str('POST', 'content', 9999999);
+$data['author'] = get_arg_str('POST', 'author', 128);
+$data['news_id'] = get_arg_str('POST', 'news_id', 128);
 
 la_user_check($token);
 

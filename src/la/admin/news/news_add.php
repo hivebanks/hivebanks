@@ -19,6 +19,7 @@ header("Content-Type:application/json;charset=utf-8");
 
 
 php_begin();
+
 $args = array("token","title","content","author");
 chk_empty_args('POST', $args);
 $data = array();

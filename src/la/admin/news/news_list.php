@@ -19,10 +19,10 @@ header("Content-Type:application/json;charset=utf-8");
 
 php_begin();
 $args = array("token");
-chk_empty_args('GET', $args);
+chk_empty_args('POST', $args);
 $data = array();
 // 用户token
-$token = get_arg_str('GET', 'token', 128);
+$token = get_arg_str('POST', 'token', 128);
 
 la_user_check($token);
 
