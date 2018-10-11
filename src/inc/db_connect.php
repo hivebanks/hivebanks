@@ -1,12 +1,12 @@
 
+<?php
+
 /**
  * Created by PhpStorm.
  * User: pool
  * Date: 2018/9/25
  * Time: 下午1:26
  */
-
-<?php
 class DB_COM extends Mysql {
     public $schema = 'windwin';
     protected $server = '18.219.136.69';
