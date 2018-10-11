@@ -36,8 +36,23 @@ $(function () {
 
     //get news list
     Get_News_List(function (response) {
-        if(response.errcode == "0"){
+        if (response.errcode == "0") {
             console.log(response.rows);
+            var data = response.rows;
+            // <li>
+            //     <a href="#">项目的介绍以及后续项目的跟进</a>
+            //         <p class="news_time font-size-14"><span>2018/10/11</span><span>风赢</span></p>
+            //     </li>
+            var li = "";
+            $.each(data, function (i, val) {
+                li+="<li>" +
+                    "<a href='newsInfo.html?news_id='"+ data[0].title +"></a>" +
+                    "<span class='news_id none'>"+ data[0].news_id +"</span>" +
+                    "<p class='news_time font-size-14'><span>"+ data[0].ctime +"</span><span>"+ data[0].author +"</span></p>" +
+                    "</li>"
+            });
+            $(".news_list_item").html(li);
+
         }
     }, function (response) {
         // LayerFun(response.errcode);
