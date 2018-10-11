@@ -9,7 +9,11 @@ $(function () {
     //get news list
     GetNewsInfo(news_id, function (response) {
         if (response.errcode == "0") {
-            console.log(response)
+            console.log(response);
+            var data = response.rows;
+            $(".title").text(data.title);
+            $(".author").text(data.author);
+            $(".news_content").text(data.content);
         }
     }, function (response) {
         return;
