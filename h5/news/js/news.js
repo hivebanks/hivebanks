@@ -40,7 +40,7 @@ $(function () {
             console.log(response.rows);
         }
     }, function (response) {
-        LayerFun(response.errcode);
+        // LayerFun(response.errcode);
     })
 
     // var smokyBG = $('#smoky-bg').waterpipe({
