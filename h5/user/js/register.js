@@ -1,4 +1,7 @@
 $(function () {
+    //get invite
+    var invite = window.location.search;
+    console.log(invite);
     //Whether to allow registration
     var type = 'us';
     RegisterSwitch(type, function (response) {

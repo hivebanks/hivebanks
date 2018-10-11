@@ -124,7 +124,7 @@ $(function () {
     //invite
     var url = getRootPath() + "/h5/user/register.html?invite=" + window.btoa($(".us_nm").text());
     $(".inviteInput").val(url);
-    
+
     //copy invite address
     $('.copy_invite_address').click(function () {
         new ClipboardJS('.copy_invite_address');
