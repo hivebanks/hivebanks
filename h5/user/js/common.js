@@ -625,7 +625,7 @@ function GetKeyCode(token, suc_func, error_func) {
 
 //get news list
 function Get_News_List(suc_func, error_func) {
-    var api_url = 'get_key_code.php',
+    var api_url = 'news_list.php',
         post_data = {};
     CallNewsApi(api_url, post_data, suc_func, error_func);
 }
