@@ -5,7 +5,7 @@ $(function () {
         var invite = window.atob(str);
         $(".emailInvitCode,.phoneInvitCode").val(invite);
     }
-    
+
     //Whether to allow registration
     var type = 'us';
     RegisterSwitch(type, function (response) {
