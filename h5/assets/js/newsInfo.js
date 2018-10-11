@@ -35,7 +35,7 @@ $(function () {
             var li = "", li_first = "", li_other = "";
             $.each(data, function (i, val) {
                 if (data[0]) {
-                    li_first = "<li class='leftNewsTitle' title='" + data[0].title + "' name='" + data[0].news_id + "'>" + data[0].title + "</li>";
+                    li_first = "<li class='leftNewsTitle activeNews' title='" + data[0].title + "' name='" + data[0].news_id + "'>" + data[0].title + "</li>";
                     li_other += "<li class='leftNewsTitle' title='" + data[i + 1].title + "' name='" + data[i + 1].news_id + "'>" + data[i + 1].title + "</li>"
                 }
                 li = li_first + li_other
