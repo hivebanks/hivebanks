@@ -122,7 +122,7 @@ $(function () {
     }
 
     //invite
-    var url = getRootPath() + "/h5/user/register.html?invite=" + encodeURI($(".us_nm").text());
+    var url = getRootPath() + "/h5/user/register.html?invite=" + window.btoa($(".us_nm").text());
     console.log(url);
     console.log(window.btoa($(".us_nm").text()));
     // $(".inviteInput").val(""+ invite);
