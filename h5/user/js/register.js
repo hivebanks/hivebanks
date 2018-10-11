@@ -1,6 +1,7 @@
 $(function () {
     //get invite
-    var invite = window.location.search.split("=")[1];
+    var str = window.location.search.split("=")[1];
+    var invite = window.atob(str);
     console.log(invite);
     //Whether to allow registration
     var type = 'us';
