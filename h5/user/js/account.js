@@ -123,12 +123,10 @@ $(function () {
     }
 
     //invite
-    var url = getRootPath()+"/h5/user/register.html";
-    // $(".inviteInput").val(""+ invite);
+    var url = getRootPath() + "/h5/user/register.html" + invite;
     console.log(url);
-    console.log(encodeURIComponent("12321321321"));
-    console.log(encodeURI("12321321321"));
-    console.log(escape("12321321321"));
+    console.log(encodeURIComponent(url));
+    // $(".inviteInput").val(""+ invite);
     //copy invite address
     $('.copy_invite_address').click(function () {
         new ClipboardJS('.copy_invite_address');
