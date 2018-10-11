@@ -3,7 +3,7 @@ $(function () {
     var token = GetCookie('user_token');
 
     // Basic user information
-    var base_amount = '', invite = "";
+    var base_amount = '';
     UserInformation(token, function (response) {
         if (response.errcode == '0') {
             var data = response.rows;
@@ -14,7 +14,6 @@ $(function () {
             base_amount = data.base_amount;
             $(".us_account").text(data.us_account);
             $(".us_nm").text(data.us_nm);
-            invite = data.us_nm;
             $('.ctime').text(data.ctime);
             $('.us_account').text(data.us_account);
             $('.availableBalance').text(data.base_amount);
@@ -123,7 +122,7 @@ $(function () {
     }
 
     //invite
-    var url = getRootPath() + "/h5/user/register.html" + invite;
+    var url = getRootPath() + "/h5/user/register.html" + $(".us_nm").text();
     console.log(url);
     console.log(encodeURIComponent(url));
     // $(".inviteInput").val(""+ invite);
