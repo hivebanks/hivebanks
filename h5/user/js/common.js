@@ -630,6 +630,15 @@ function Get_News_List(suc_func, error_func) {
     CallNewsApi(api_url, post_data, suc_func, error_func);
 }
 
+//get news info
+function GetNewsInfo(news_id, suc_func, error_func) {
+    var api_url = 'news_detail.php',
+        post_data = {
+        "news_id" : news_id
+        };
+    CallNewsApi(api_url, post_data, suc_func, error_func);
+}
+
 /**
  * Disable button
  * @param $this Button object

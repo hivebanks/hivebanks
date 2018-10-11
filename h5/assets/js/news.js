@@ -37,7 +37,6 @@ $(function () {
     //get news list
     Get_News_List(function (response) {
         if (response.errcode == "0") {
-            console.log(response.rows);
             var data = response.rows;
             var li = "";
             $.each(data, function (i, val) {
