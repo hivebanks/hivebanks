@@ -123,8 +123,9 @@ $(function () {
     }
 
     //invite
+    var url = getRootPath()+"/h5/user/register.html";
     // $(".inviteInput").val(""+ invite);
-    console.log(getRootPath());
+    console.log(url);
     //copy invite address
     $('.copy_invite_address').click(function () {
         new ClipboardJS('.copy_invite_address');
