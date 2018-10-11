@@ -12,7 +12,7 @@ $(function () {
             if (response.errcode == "0") {
                 var data = response.rows;
                 $(".title").text(data[0].title);
-                $(".ctime").text(data[0].ctime);
+                $(".ctime").text(data[0].utime);
                 $(".author").text(data[0].author);
                 $(".news_content").html(data[0].content);
             }
