@@ -12,9 +12,9 @@ section.banner {
 /*}*/
 
 .banner-row h1 {
-    background: linear-gradient(to right, #82ca9c, #ffffff, #eecf7c);
-    -webkit-background-clip: text;
-    color: transparent;
+    /*background: linear-gradient(to right, #82ca9c, #ffffff, #eecf7c);*/
+    /*-webkit-background-clip: text;*/
+    color: #ffffff;
     font-size: 36px;
     top: 15%;
     left: 40%;
