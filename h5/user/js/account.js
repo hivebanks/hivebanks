@@ -132,14 +132,17 @@ $(function () {
             height: 200
         });
 
+        //get canvas qr
+        var qrctx = $("#qrcode canvas")[0];
+
         //canvas invite img
-        // var canvas = $("#qrcode canvas")[0];
         var canvas = $("#inviteImg")[0];
         var content = canvas.getContext("2d");
         var qrImg = new Image();
         qrImg.src = "img/inviteImg.jpg";
         qrImg.onload = function () {
             content.drawImage(this, 0, 0, 568, 886);
+            content.drawImage(qrctx, 50, 50, 160, 160);
         };
     });
 
