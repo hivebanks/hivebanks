@@ -133,8 +133,7 @@ $(function () {
         });
         console.log($("#qrcode").html());
         //canvas invite img
-        var canvas = $("#inviteImg");
-        var content = canvas.getContext("2d");
+        var content = $("#inviteImg").get(0).getContext("2d");
         content.drawImage($("#qrcode").html(), 20, 20, 160, 160);
     });
 
