@@ -129,7 +129,7 @@ $(function () {
         $('#qrcode').qrcode({
             text: url,
             width: 750,
-            height: 1156
+            height: 881
         });
         // console.log($("#qrcode").html());
         //canvas invite img
