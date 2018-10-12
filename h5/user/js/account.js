@@ -128,8 +128,8 @@ $(function () {
 
         $('#qrcode').qrcode({
             text: url,
-            width: 200,
-            height: 200
+            width: 570,
+            height: 870
         });
         // console.log($("#qrcode").html());
         //canvas invite img
