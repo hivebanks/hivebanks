@@ -133,8 +133,11 @@ $(function () {
         });
         console.log($("#qrcode").html());
         //canvas invite img
-        var content = $("#inviteImg").get(0).getContext("2d");
-        content.drawImage($("#qrcode").html(), 20, 20, 160, 160);
+        var canvas = $("#qrcode canvas")[0];
+        // var content = $("#inviteImg").get(0).getContext("2d");
+        var content = canvas.getContext("2d");
+        console.log(canvas.toDataURL("image/png"));
+        // content.drawImage($("#qrcode").html(), 20, 20, 160, 160);
     });
 
     //copy invite address

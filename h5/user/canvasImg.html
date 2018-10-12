@@ -27,7 +27,8 @@
     change.onchange = function (event) {
         var file = event.target.files[0];
         var url = window.URL.createObjectURL(file);
-        img1.src = url
+        img1.src = url;
+        console.log(img1);
     };
     change2.onchange = function (event) {
         var file = event.target.files[0];
