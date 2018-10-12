@@ -141,7 +141,7 @@ $(function () {
         qrImg.src = "img/inviteImg.jpg";
         // qrImg.src = canvas.toDataURL("image/png");
         qrImg.onload = function () {
-            content.drawImage(this, 0, 0);
+            content.drawImage(this, 0, 0,568,886);
         };
         console.log(qrImg);
         // content.drawImage($("#qrcode").html(), 20, 20, 160, 160);
