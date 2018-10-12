@@ -141,7 +141,7 @@ $(function () {
         var qrImg = new Image();
         qrImg.src = "img/inviteImg.jpg";
         qrImg.onload = function () {
-            content.drawImage(this, 0, 0);
+            content.drawImage(this, 0, 0, 568, 886);
             content.drawImage(qrctx, 80, 630, 160, 160);
         };
     });
