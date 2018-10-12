@@ -1,6 +1,6 @@
 $(function () {
     // token
-    // var token = GetCookie('user_token');
+    var token = GetCookie('user_token');
 
     // Basic user information
     var base_amount = '';
