@@ -89,4 +89,8 @@
         width: unset !important;
         margin: unset !important;
     }
+    #page-inner {
+        margin: 0;
+        padding: 0;
+    }
 }
