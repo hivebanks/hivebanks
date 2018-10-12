@@ -119,11 +119,11 @@ i.iconfont.icon-anquanshezhi, i.iconfont.icon-yinhangqia, i.iconfont.icon-alipay
     position: relative;
 }
 
-#inviteImg {
-    width: 160px;
-    height: 160px;
-    background: red;
-    position: absolute;
-    bottom: 10.5%;
-    left: 14.5%;
-}
+/*#inviteImg {*/
+    /*width: 160px;*/
+    /*height: 160px;*/
+    /*background: red;*/
+    /*position: absolute;*/
+    /*bottom: 10.5%;*/
+    /*left: 14.5%;*/
+/*}*/
