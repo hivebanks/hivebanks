@@ -131,13 +131,14 @@ $(function () {
             width: 200,
             height: 200
         });
-        console.log($("#qrcode").html());
+        // console.log($("#qrcode").html());
         //canvas invite img
         var canvas = $("#qrcode canvas")[0];
         // var content = $("#inviteImg").get(0).getContext("2d");
         var content = canvas.getContext("2d");
         var qrImg = new Image();
-        qrImg.src = "https://gss0.bdstatic.com/7LsWdDW5_xN3otebn9fN2DJv/doc/pic/item/d0c8a786c9177f3eb8c21d8479cf3bc79e3d5641.jpg";
+        // qrImg.src = "https://gss0.bdstatic.com/7LsWdDW5_xN3otebn9fN2DJv/doc/pic/item/d0c8a786c9177f3eb8c21d8479cf3bc79e3d5641.jpg";
+        qrImg.src = "../img/inviteImg.jpeg";
         // qrImg.src = canvas.toDataURL("image/png");
         qrImg.onload = function () {
             content.drawImage(this, 0, 0);
