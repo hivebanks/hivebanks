@@ -89,10 +89,4 @@
         width: unset !important;
         margin: unset !important;
     }
-
-    #page-wrapper #page-inner {
-        margin: 0 !important;
-        padding: 0 !important;
-        background: red;
-    }
 }
