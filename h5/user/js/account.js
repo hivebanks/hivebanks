@@ -127,16 +127,18 @@ $(function () {
         $(".inviteInput").val(url);
 
         $('#qrcode').qrcode({
-            text:url,
-            width:200,
-            height:200
+            text: url,
+            width: 200,
+            height: 200
         });
         console.log($("#qrcode").html());
         //canvas invite img
         var canvas = $("#qrcode canvas")[0];
         // var content = $("#inviteImg").get(0).getContext("2d");
         var content = canvas.getContext("2d");
-        console.log(canvas.toDataURL("image/png"));
+        var qrImg = new Image();
+        qrImg.src = canvas.toDataURL("image/png");
+        console.log(qrImg);
         // content.drawImage($("#qrcode").html(), 20, 20, 160, 160);
     });
 
