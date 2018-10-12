@@ -1224,12 +1224,12 @@ tr {
         top: 69px;
         box-shadow: none;
     }
-    #page-wrapper {
-        padding: 0;
-        margin: 0;
+    /*#page-wrapper {*/
+        /*padding: 0;*/
+        /*margin: 0;*/
         /*min-height: 600px;*/
         /*background: #ececec;*/
-    }
+    /*}*/
 }
 
 /*table*/
