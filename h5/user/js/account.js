@@ -125,6 +125,11 @@ $(function () {
     $(".inviteBtn").click(function () {
         var url = getRootPath() + "/h5/user/register.html?invite=" + window.btoa($(".us_nm").text());
         $(".inviteInput").val(url);
+        $('#qrcode').qrcode({
+            text:url,
+            width:200,
+            height:200
+        });
     });
 
 
@@ -132,5 +137,5 @@ $(function () {
     $('.copy_invite_address').click(function () {
         new ClipboardJS('.copy_invite_address');
         layer.msg("copy success")
-    })
+    });
 });
