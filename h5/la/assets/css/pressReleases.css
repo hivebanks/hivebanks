@@ -90,8 +90,8 @@
         margin: unset !important;
     }
 
-    #page-inner {
-        margin: 0!important;
-        padding: 0!important;
+    #page-wrapper #page-inner {
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
