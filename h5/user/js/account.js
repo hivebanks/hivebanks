@@ -137,7 +137,11 @@ $(function () {
         // var content = $("#inviteImg").get(0).getContext("2d");
         var content = canvas.getContext("2d");
         var qrImg = new Image();
-        qrImg.src = canvas.toDataURL("image/png");
+        qrImg.src = "../img/inviteImg.jpeg";
+        // qrImg.src = canvas.toDataURL("image/png");
+        qrImg.onload = function () {
+            canvas.drawImage(this, 0, 0);
+        };
         console.log(qrImg);
         // content.drawImage($("#qrcode").html(), 20, 20, 160, 160);
     });
