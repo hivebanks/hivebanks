@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+第一张图片：<input type="file" name="file" id="change">
+第二张图片：<input type="file" name="file2" id="change2">
+<canvas id="myCanvas" width="600" height="900"></canvas>
+<button id="btn">生成图片</button>
+<a href="" id="download" download="测试图片.png">点我下载</a>
+</body>
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var btn = document.getElementById('btn');
+    var change = document.getElementById('change');
+    var change2 = document.getElementById('change2');
+    var download = document.getElementById('download');
+    var img1 = new Image();
+    var img2 = new Image();
+    //处理跨域
+    img1.crossOrigin = 'anonymous';
+    img2.crossOrigin = 'anonymous';
+
+    change.onchange = function (event) {
+        var file = event.target.files[0];
+        var url = window.URL.createObjectURL(file);
+        img1.src = url;
+        console.log(img1);
+    };
+    change2.onchange = function (event) {
+        var file = event.target.files[0];
+        var url = window.URL.createObjectURL(file);
+        img2.src = url
+    };
+    img1.onload = function () {
+        context.drawImage(img1, 10, 10, 600, 900)
+    };
+    img2.onload = function () {
+        context.drawImage(img2, 100, 650, 160, 160)
+    };
+    btn.onclick = function () {
+        var img = convertCanvasToImage(canvas);
+        var arr = img.src.split(',');
+        var mime = arr[0].match(/:(.*?);/)[1];
+        var bstr = atob(arr[1]);
+        var n = bstr.length;
+        var u8arr = new Uint8Array(n);
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        var blob = new Blob([u8arr], {type: mime})
+
+    };
+    //下载图片
+    download.onclick = function (blob) {
+        var img = convertCanvasToImage(canvas);
+        download.href = img.src
+    };
+
+    function convertCanvasToImage(canvas) {
+        var image = new Image();
+        image.src = canvas.toDataURL("image/png");
+        return image;
+    }
+
+</script>
+</html>

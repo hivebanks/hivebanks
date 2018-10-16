@@ -120,4 +120,35 @@ $(function () {
             }
         });
     }
+
+    //invite
+    $(".inviteBtn").click(function () {
+        var url = getRootPath() + "/h5/user/register.html?invite=" + window.btoa($(".us_nm").text());
+        $(".inviteInput").val(url);
+
+        $('#qrcode').qrcode({
+            text: url,
+            width: 200,
+            height: 200
+        });
+
+        //get canvas qr
+        var qrctx = $("#qrcode canvas")[0];
+
+        //canvas invite img
+        var canvas = $("#inviteImg")[0];
+        var content = canvas.getContext("2d");
+        var qrImg = new Image();
+        qrImg.src = "img/inviteImg.png";
+        qrImg.onload = function () {
+            content.drawImage(this, 0, 0, 568, 886);
+            content.drawImage(qrctx, 80, 630, 160, 160);
+        };
+    });
+
+    //copy invite address
+    $('.copy_invite_address').click(function () {
+        new ClipboardJS('.copy_invite_address');
+        layer.msg("copy success")
+    })
 });

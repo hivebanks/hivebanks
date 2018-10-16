@@ -1,4 +1,11 @@
 $(function () {
+    //get invite
+    var str = window.location.search.split("=")[1];
+    if(str){
+        var invite = window.atob(str);
+        $(".emailInvitCode,.phoneInvitCode").val(invite);
+    }
+
     //Whether to allow registration
     var type = 'us';
     RegisterSwitch(type, function (response) {
@@ -215,7 +222,7 @@ $(function () {
     //Get phone verification code
     $('.phoneCodeBtn').click(function () {
         var bind_type = '1', $this = $(this), cfm_code = $('.phoneCfmCode').val();
-        if($(".phone").val().length <= 0){
+        if ($(".phone").val().length <= 0) {
             $('.phone_tips').fadeIn().siblings('span').hide();
             LayerFun('phoneNotEmpty');
             return;

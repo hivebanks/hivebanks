@@ -4,7 +4,8 @@ $(function () {
 
     //Get ca transaction history
     var tr = '', ca_id_arr = [], us_id_arr = [], tx_hash_arr = [], qa_flag_span = '';
-    function ShowDataFun (rechargeList){
+
+    function ShowDataFun(rechargeList) {
         $.each(rechargeList, function (i, val) {
             ca_id_arr.push(rechargeList[i].ca_id.substring(0, 10) + '...');
             us_id_arr.push(rechargeList[i].us_id.substring(0, 10) + '...');
@@ -26,12 +27,14 @@ $(function () {
                 // '<td><span class="bit_amount">'+ rechargeList[i].bit_amount +'</span></td>' +
                 '<td><span class="tx_hash" title="' + rechargeList[i].tx_hash + '">' + tx_hash_arr[i] + '</span></td>' +
                 '<td><span class="tx_time">' + rechargeList[i].tx_time + '</span></td>' +
-                '<td><span class="qa_flag">' + qa_flag_text + '</span></td>' +
+                '<td>' + qa_flag_span + '</td>' +
+                // '<td><span class="qa_flag">' + qa_flag_text + '</span></td>' +
                 '</tr>'
         });
         $('#caRecharge').html(tr);
         execI18n();
     }
+
     GetCaTransaction(token, function (response) {
         if (response.errcode == '0') {
             var rechargeList = response.rows.recharge;
@@ -48,7 +51,7 @@ $(function () {
 
     //Jump ba details
     $(document).on('click', '.ca_id', function () {
-        var ba_id = $(this).attr('title');
+        var ca_id = $(this).attr('title');
         window.location.href = 'caInfo.html?ba_id=' + ca_id;
     });
     //Jump user details

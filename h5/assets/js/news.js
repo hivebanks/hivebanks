@@ -8,6 +8,11 @@ $(function () {
         }
     }
 
+    if (user_token) {
+        $('.usLogin').remove();
+        $('.accountNone').removeClass('accountNone');
+    }
+
     var user_token = GetIndexCookie('user_token');
     var ba_token = GetIndexCookie('ba_token');
     var ca_token = GetIndexCookie('ca_token');
