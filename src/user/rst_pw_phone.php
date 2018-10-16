@@ -3,6 +3,7 @@
 require_once '../inc/common.php';
 require_once 'db/us_base.php';
 require_once 'db/us_bind.php';
+require_once 'db/us_log_bind.php';
 
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
@@ -54,7 +55,7 @@ if((strtotime($rec['ctime']) + 15*60) < time()){
 
 if(empty($rec) || $rec['bind_salt'] != $sms_code || $rec['bind_info']!= $cellphone_num)
     exit_error('110','验证码不正确，请重试');
-if(($rec['limt_time'] + 29*60) < $now_time)
+if(($rec['limt_time'] + 29*60) < time())
     exit_error("111","验证超时");
 
 //已使用的验证码消除使用权限
