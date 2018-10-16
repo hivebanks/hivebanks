@@ -46,8 +46,8 @@ if($phone_code_num_limit>40)
 $phone_code_last_time = get_us_log_bind_by_variable('phone_code',$phone_strict);
 
 //判断是否在限制时间范围内
-if($phone_code_last_time['limt_time'] > time())
-    exit_error('116',$phone_code_last_time['limt_time'] - time());
+if($phone_code_last_time['limit_time'] < time())
+    exit_error('116',$phone_code_last_time['limit_time'] - time());
 
 
 require_once "db/la_admin.php";

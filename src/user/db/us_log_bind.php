@@ -1,10 +1,10 @@
-<?php
+ <?php
 
 //======================================
 // 函数: 获取当前用户最新的一条数据
 // 参数: variable        绑定名
 //       account         账号
-// 返回: row              信息数组 
+// cf
 //======================================
 function  get_us_log_bind_by_variable($variable , $account)
 {
@@ -60,7 +60,7 @@ function user_phone_code_limit_check($phone)
     $one_day = 86400;
     $time_flag = time()-$one_day-60;
     $db = new DB_COM();
-    $sql = "SELECT * FROM us_log_bind WHERE bind_info = '{$phone}' and bind_name='phone_code'  and limt_time>$time_flag";
+    $sql = "SELECT * FROM us_log_bind WHERE bind_info = '{$phone}' and bind_name='phone_code'  and limit_time>$time_flag";
     $db -> query($sql);
     $count = $db -> affectedRows();
     return $count;
