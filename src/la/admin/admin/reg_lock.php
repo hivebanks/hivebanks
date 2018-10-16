@@ -14,7 +14,7 @@ GET参数
     errcode = 0      请求成功
     option_name      选项名称
     option_value     选项值
-说明
+说明a
 */
 
 php_begin();

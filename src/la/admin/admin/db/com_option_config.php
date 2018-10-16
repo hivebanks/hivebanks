@@ -22,11 +22,8 @@ function www_reg_permission($type){
             $sql =  "select option_name ,option_value as is_open from com_option_config where option_name = 'user_lock'";
             break;
         default:
-
             break;
     }
-
-
     $db->query($sql);
     return $db->fetchAll();
 }
