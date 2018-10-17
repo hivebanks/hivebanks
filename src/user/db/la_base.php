@@ -10,6 +10,6 @@ function get_la_base_unit()
     $db = new DB_COM();
     $sql = "SELECT unit FROM la_base limit 1";
     $db->query($sql);
-    $rows = $db->fetchRow();
-    return $rows["unit"];
+    $row = $db->fetchRow();
+    return $row["unit"];
 }

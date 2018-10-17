@@ -42,3 +42,4 @@ $rtn_ary['errmsg'] = '';
 $rtn_ary['rows'] =$row;
 $rtn_str = json_encode($rtn_ary);
 php_end($rtn_str);
+
