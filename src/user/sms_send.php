@@ -49,7 +49,6 @@ $phone_code_last_time = get_us_log_bind_by_variable('phone_code',$phone_strict);
 if($phone_code_last_time['limit_time'] < time())
     exit_error('116',$phone_code_last_time['limit_time'] - time());
 
-
 require_once "db/la_admin.php";
 require_once "../inc/common_agent_sms_service.php";
 $key_code = get_la_admin_info()["key_code"];
@@ -62,7 +61,7 @@ if($output_array["errcode"] == "0"){
     $data['bind_name']  = 'phone_code';
     $data['bind_info']  = $phone_strict;
     $data['count_error'] = 0;
-    $data['limt_time']  = $time_limit;
+    $data['limit_time']  = $time_limit;
     $data['bind_type']  = $bind_type;
     $data['bind_salt']  = $code;
     $res = ins_user_verification_code($data);
@@ -70,3 +69,5 @@ if($output_array["errcode"] == "0"){
 }else{
     exit_error('124','发送失败,请稍后再试');
 }
+
+
