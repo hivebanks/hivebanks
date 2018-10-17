@@ -65,15 +65,15 @@ if(empty($row['us_id']) || $row['bind_flag'] == 9){
 $row_f = get_row_by_us_id($row['us_id']);
 if($row_f){
   $count_error = $row_f['count_error'];
-  $limit_time = $row_f['limit_time'];
-  if($limit_time > $timestamp){
-    $time_difference = $limit_time - $timestamp;
+  $limt_time = $row_f['limt_time'];
+  if($limt_time > $timestamp){
+    $time_difference = $limt_time - $timestamp;
     exit_error('122',$time_difference);
     }
 }
 
 // 判断密码是否正确
-$check_pass = checkc_pass($row['us_id'],$pass_word_hash,$pass);
+$check_pass = check_pass($row['us_id'],$pass_word_hash,$pass);
 if(!$check_pass){
  // 是否存在失败数据，并对失败数据进行记录
   if($row_f){
