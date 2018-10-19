@@ -104,7 +104,7 @@ $(function () {
                     NDG = setInterval(data.gift_row[1].NDG),
                     NDBG = setInterval(data.gift_row[2].NDBG),
                     NDAG = setInterval(data.gift_row[3].NDAG);
-                var math = new math();
+                var math = new Math();
                 var  G = math.add(IG,NDG,NDBG,NDAG);
 
 
