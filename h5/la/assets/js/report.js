@@ -100,12 +100,12 @@ $(function () {
                 $('#amount_reportInfo').html(trInfo);
 
                 var trGift = '';
-                var G = (data.gift_row[0].IG),
-                    IG = (data.gift_row[1].NDG),
+                var G = (data.gift_row[0].t),
+                    IG = (data.gift_row[1].IG),
                     NDG = (data.gift_row[1].NDG),
                     NDBG = (data.gift_row[2].NDBG),
                     NDAG = (data.gift_row[3].NDAG);
-                
+
 
 
                 trGift += '<tr>' +
