@@ -22,7 +22,7 @@ password           原始密码
 */
 
 php_begin();
-$args = array('user', 'password','pass_word_hash');
+$args = array('user', 'pass_word_hash');
 chk_empty_args('GET', $args);
 
 // 密钥
