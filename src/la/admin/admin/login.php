@@ -7,8 +7,8 @@ require_once "../../../plugin/ip_service/get_ip.php";
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
-ini_set("display_errors", "On");
-error_reporting(E_ALL | E_STRICT);
+#ini_set("display_errors", "On");
+#error_reporting(E_ALL | E_STRICT);
 /*
 ========================== 用户登陆 ==========================
 GET参数
@@ -22,7 +22,7 @@ password           原始密码
 */
 
 php_begin();
-$args = array('user', 'password','pass_word_hash');
+$args = array('user', 'pass_word_hash');
 chk_empty_args('GET', $args);
 
 // 密钥
