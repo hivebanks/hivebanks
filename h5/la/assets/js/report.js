@@ -103,8 +103,8 @@ $(function () {
                 var IG = data.gift_row[0].IG,
                     NDG = data.gift_row[1].NDG,
                     NDBG = data.gift_row[2].NDBG,
-                    NDAG = data.gift_row[3].NDAG,
-                    G = IG+NDG+NDBG+NDAG;
+                    NDAG = data.gift_row[3].NDAG;
+                var   G = IG+NDG+NDBG+NDAG;
 
 
 
