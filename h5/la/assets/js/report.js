@@ -102,9 +102,9 @@ $(function () {
                 var trGift = '';
                 var G = (data.gift_row[0].t),
                     IG = (data.gift_row[1].IG),
-                    NDG = (data.gift_row[1].NDG),
-                    NDBG = (data.gift_row[2].NDBG),
-                    NDAG = (data.gift_row[3].NDAG);
+                    NDG = (data.gift_row[2].NDG),
+                    NDBG = (data.gift_row[3].NDBG),
+                    NDAG = (data.gift_row[4].NDAG);
 
 
 
