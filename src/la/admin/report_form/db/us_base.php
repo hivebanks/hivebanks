@@ -49,7 +49,7 @@ function get_us_sum_register_amout_info($begin_limit_time,$end_limit_time)
 function gift_data(){
     $db = new DB_COM();
     $data = array();
-    $sql_invite = "SELECT count(us_id)*50 as IG FROM us_base where invite_code!=0";
+    $sql_invite = "SELECT count(us_id)*50 as IG FROM us_base where invite_code!='0'";
     $db->query($sql_invite);
     $rows_invite = $db->fetchRow();
 
