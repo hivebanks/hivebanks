@@ -100,10 +100,10 @@ $(function () {
                 $('#amount_reportInfo').html(trInfo);
 
                 var trGift = '';
-                var IG = setInterval(data.gift_row[0].IG),
-                    NDG = setInterval(data.gift_row[1].NDG),
-                    NDBG = setInterval(data.gift_row[2].NDBG),
-                    NDAG = setInterval(data.gift_row[3].NDAG);
+                var IG = (data.gift_row[0].IG),
+                    NDG = (data.gift_row[1].NDG),
+                    NDBG = (data.gift_row[2].NDBG),
+                    NDAG = (data.gift_row[3].NDAG);
 
                 var  G = IG+NDG+NDBG+NDAG;
 
