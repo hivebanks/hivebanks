@@ -10,6 +10,6 @@ function get_la_base()
     $db = new DB_COM();
     $sql = "SELECT * FROM la_base limit 1";
     $db->query($sql);
-    $rows = $db->fetchRow();
-    return $rows;
+    $row = $db->fetchRow();
+    return $row;
 }
