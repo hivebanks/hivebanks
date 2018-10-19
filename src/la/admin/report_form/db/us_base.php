@@ -49,7 +49,7 @@ function get_us_sum_register_amout_info($begin_limit_time,$end_limit_time)
 function gift_data(){
     $db = new DB_COM();
     $data = array();
-    $sql_invite = "SELECT count(us_id)*50 as IG FROM us_base where invite_code!='0'";
+    $sql_invite = "SELECT count(us_id)*50 as IG FROM us_base where invite_code!=0";
     $db->query($sql_invite);
     $rows_invite = $db->fetchRow();
 
@@ -65,10 +65,10 @@ function gift_data(){
     $db->query($sql_national_day_after);
     $rows_national_day_after = $db->fetchRow();
 
-    $data['IG'] = $rows_invite;
-    $data['NDG'] = $rows_national_day;
-    $data['NDBG'] = $rows_national_day_before;
-    $data['NDAG'] = $rows_national_day_after;
+    $data[] = $rows_invite;
+    $data[] = $rows_national_day;
+    $data[] = $rows_national_day_before;
+    $data[] = $rows_national_day_after;
     return $data;
 
 }

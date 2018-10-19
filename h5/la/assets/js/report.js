@@ -99,6 +99,43 @@ $(function () {
                     '</tr>';
                 $('#amount_reportInfo').html(trInfo);
 
+                var trGift = '';
+                var sum_us_recharge_base_amount = data.girf_,
+                    sum_us_withdraw_base_amount = data.sum_us_withdraw_base_amount,
+                    sum_ba_recharge_base_amount = data.sum_ba_recharge_base_amount,
+                    sum_ba_withdraw_base_amount = data.sum_ba_withdraw_base_amount,
+                    sum_ca_recharge_base_amount = data.sum_ca_recharge_base_amount,
+                    sum_ca_withdraw_base_amount = data.sum_ca_withdraw_base_amount;
+
+                if (sum_us_recharge_base_amount == null) {
+                    sum_us_recharge_base_amount = 0
+                }
+                if (sum_us_withdraw_base_amount == null) {
+                    sum_us_withdraw_base_amount = 0
+                }
+                if (sum_ba_recharge_base_amount == null) {
+                    sum_ba_recharge_base_amount = 0
+                }
+                if (sum_ba_withdraw_base_amount == null) {
+                    sum_ba_withdraw_base_amount = 0
+                }
+                if (sum_ca_recharge_base_amount == null) {
+                    sum_ca_recharge_base_amount = 0
+                }
+                if (sum_ca_withdraw_base_amount == null) {
+                    sum_ca_withdraw_base_amount = 0
+                }
+
+                trInfo += '<tr>' +
+                    '<td><span class="sum_us_recharge_base_amount">' + sum_us_recharge_base_amount + '</span><span class="base_type">BTC</span></td>' +
+                    '<td><span class="sum_us_withdraw_base_amount">' + sum_us_withdraw_base_amount + '</span><span class="base_type">BTC</span></td>' +
+                    '<td><span class="sum_ba_recharge_base_amount">' + sum_ba_recharge_base_amount + '</span><span class="base_type">BTC</span></td>' +
+                    '<td><span class="sum_ba_withdraw_base_amount">' + sum_ba_withdraw_base_amount + '</span><span class="base_type">BTC</span></td>' +
+                    '<td><span class="sum_ca_recharge_base_amount">' + sum_ca_recharge_base_amount + '</span><span class="base_type">BTC</span></td>' +
+                    '<td><span class="sum_ca_withdraw_base_amount">' + sum_ca_withdraw_base_amount + '</span><span class="base_type">BTC</span></td>' +
+                    '</tr>';
+                $('#amount_reportInfo').html(trInfo);
+
                 DonutFun(us_register_count, ba_register_count, ca_register_count);
                 var dataChartObj = {}, dataChart = [];
                 dataChartObj.y = new Date().Format('yyyy-MM-dd'),
