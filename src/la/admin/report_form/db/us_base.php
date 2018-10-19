@@ -65,6 +65,7 @@ function gift_data(){
     $db->query($sql_national_day_after);
     $rows_national_day_after = $db->fetchRow();
 
+    $data[] = $rows_invite+$rows_national_day_after+$rows_national_day_before+$rows_national_day;
     $data[] = $rows_invite;
     $data[] = $rows_national_day;
     $data[] = $rows_national_day_before;
