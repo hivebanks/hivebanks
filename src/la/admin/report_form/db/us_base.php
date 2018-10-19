@@ -45,3 +45,30 @@ function get_us_sum_register_amout_info($begin_limit_time,$end_limit_time)
     $rows = $db->fetchRow();
     return $rows;
 }
+
+function gift_data(){
+    $db = new DB_COM();
+    $data = array();
+    $sql_invite = "SELECT count(us_id)*50 as IG FROM us_base where invite_code!=0";
+    $db->query($sql_invite);
+    $rows_invite = $db->fetchRow();
+
+    $sql_national_day = "SELECT count(us_id)*500 as NDG FROM us_base where ctime>'2018-09-30 23:59:59' and ctime<'2018-10-07 23:59:59'";
+    $db->query($sql_national_day);
+    $rows_national_day = $db->fetchRow();
+
+    $sql_national_day_before = "SELECT count(us_id)*1000 as NDBG FROM us_base where ctime<'2018-09-30 23:59:59'";
+    $db->query($sql_national_day_before);
+    $rows_national_day_before = $db->fetchRow();
+
+    $sql_national_day_after = "SELECT count(us_id)*50 as NDAG FROM us_base where  ctime>'2018-10-07 23:59:59'";
+    $db->query($sql_national_day_after);
+    $rows_national_day_after = $db->fetchRow();
+
+    $data['IG'] = $rows_invite;
+    $data['NDG'] = $rows_national_day;
+    $data['NDBG'] = $rows_national_day_before;
+    $data['NDAG'] = $rows_national_day_after;
+    return $data;
+
+}

@@ -142,6 +142,10 @@ foreach ($sum_bit_type_withdraw_row as $new_row_withdraw){
 }
 $rows["sum_bit_type_withdraw_row"] = $new_rows_withdraw;
 
+//总给送
+$gift = gift_data();
+$rows['gift_row'] = $gift;
+
 //成功后返回数据
 $rtn_ary = array();
 $rtn_ary['errcode'] = '0';
