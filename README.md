@@ -1,3 +1,4 @@
+yangyangyang
 Amazon server configuration tutorial
 1：Connect to the server remotely using the tools or the server's official website and switch to root
 2：Download the script to unzip and run the following command
