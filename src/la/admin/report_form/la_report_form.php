@@ -4,6 +4,7 @@ require_once "../../../inc/common.php";
 require_once "db/us_base.php";
 require_once "db/ba_base.php";
 require_once "db/ca_base.php";
+require_once "db/la_base.php";
 require_once "db/us_ba_recharge_request.php";
 require_once "db/us_ba_withdraw_request.php";
 require_once "db/us_ca_withdraw_request.php";
@@ -50,27 +51,29 @@ if(!$row){
 $begin_limit_time =  get_arg_str('GET', 'begin_limit_time');
 $end_limit_time =  get_arg_str('GET', 'end_limit_time');
 
+//得到基本单位
+$unit = get_la_base_unit()['unit'];
+
 //$begin_limit_time = $begin_limit_time ? $begin_limit_time : 0;
 //$end_limit_time = $end_limit_time ? $end_limit_time : 0;
 $rows = array();
 //user的总帐
 $row = get_us_sum_amout_info();
-$rows["sum_us_base_amount"] =  $row['sum(base_amount)'];
-$rows["sum_us_lock_amount"] =  $row['sum(lock_amount)'];
+$rows["sum_us_base_amount"] =  $row['sum(base_amount)'] / $unit;
+$rows["sum_us_lock_amount"] =  $row['sum(lock_amount)'] / $unit; 
 
 //ba的总账
 $row = get_ba_sum_amout_info();
-$rows["sum_ba_base_amount"] =  $row['sum(base_amount)'];
-$rows["sum_ba_lock_amount"] =  $row['sum(lock_amount)'];
+$rows["sum_ba_base_amount"] =  $row['sum(base_amount)'] / $unit;
+$rows["sum_ba_lock_amount"] =  $row['sum(lock_amount)'] / $unit;
 
 //ca的总账
 $row = get_ca_sum_amout_info();
-$rows["sum_ca_base_amount"] =  $row['sum(base_amount)'];
-$rows["sum_ca_lock_amount"] =  $row['sum(lock_amount)'];
+$rows["sum_ca_base_amount"] =  $row['sum(base_amount)'] / $unit;
+$rows["sum_ca_lock_amount"] =  $row['sum(lock_amount)'] / $unit;
 
 
 $rows["sum_ba_recharge_base_amount"] = get_ba_sum_us_ba_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
-
 $rows["sum_ba_withdraw_base_amount"] = get_ba_sum_us_ba_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
 $rows["sum_ca_recharge_base_amount"] = get_sum_us_ca_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
 $rows["sum_ca_withdraw_base_amount"] = get_sum_us_ca_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
