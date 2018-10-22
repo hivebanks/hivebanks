@@ -73,12 +73,12 @@ $rows["sum_ca_base_amount"] =  $row['sum(base_amount)'] / $unit;
 $rows["sum_ca_lock_amount"] =  $row['sum(lock_amount)'] / $unit;
 
 
-$rows["sum_ba_recharge_base_amount"] = get_ba_sum_us_ba_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
-$rows["sum_ba_withdraw_base_amount"] = get_ba_sum_us_ba_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
-$rows["sum_ca_recharge_base_amount"] = get_sum_us_ca_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
-$rows["sum_ca_withdraw_base_amount"] = get_sum_us_ca_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
-$rows["sum_us_recharge_base_amount"] = get_ba_sum_us_ba_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] + get_sum_us_ca_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
-$rows["sum_us_withdraw_base_amount"] = get_ba_sum_us_ba_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] + get_sum_us_ca_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
+$rows["sum_ba_recharge_base_amount"] = get_ba_sum_us_ba_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] / $unit;
+$rows["sum_ba_withdraw_base_amount"] = get_ba_sum_us_ba_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] / $unit;
+$rows["sum_ca_recharge_base_amount"] = get_sum_us_ca_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] / $unit;
+$rows["sum_ca_withdraw_base_amount"] = get_sum_us_ca_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] / $unit;
+$rows["sum_us_recharge_base_amount"] = get_ba_sum_us_ba_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"]  / $unit + get_sum_us_ca_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] / $unit;
+$rows["sum_us_withdraw_base_amount"] = get_ba_sum_us_ba_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"]  / $unit + get_sum_us_ca_withdraw_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"] / $unit;
 $rows["ba_register_count"] = get_ba_sum_register_amout_info($begin_limit_time,$end_limit_time)["count(*)"];
 $rows["us_register_count"] = get_us_sum_register_amout_info($begin_limit_time,$end_limit_time)["count(*)"];
 $rows["ca_register_count"] = get_ca_sum_register_amout_info($begin_limit_time,$end_limit_time)["count(*)"];
