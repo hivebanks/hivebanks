@@ -27,7 +27,7 @@ $(function () {
             return;
         }
         if(DisableClick(_this)) return;
-        LaLogin(user, password, pass_word_hash, function (response) {
+        LaLogin(user, pass_word_hash, function (response) {
             if(response.errcode == '0'){
                 ActiveClick(_this, _text);
                 LayerFun('loginSuccessful');

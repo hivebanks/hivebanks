@@ -427,11 +427,10 @@ function SetErrorMsg(token, code_key, code_value, suc_func, error_func) {
 }
 
 //LA_LOGIN
-function LaLogin(user, password, pass_word_hash, suc_func, error_func) {
+function LaLogin(user, pass_word_hash, suc_func, error_func) {
     var api_url = 'login.php',
         post_data = {
             'user': user,
-            'password': password,
             'pass_word_hash': pass_word_hash
         };
     CallLaAdminApi(api_url, post_data, suc_func, error_func);
