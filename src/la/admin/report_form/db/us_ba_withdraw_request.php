@@ -28,8 +28,8 @@ function get_ba_sum_us_ba_withdraw_request_info($begin_limit_time,$end_limit_tim
     $db = new DB_COM();
 //    $sql = "SELECT sum(base_amount) FROM us_ba_withdraw_request where tx_time >= '{$begin_limit_time}' and tx_time <= '{$end_limit_time}'";
     $db->query($sql);
-    $rows = $db->fetchRow();
-    return $rows;
+    $row = $db->fetchRow();
+    return $row;
 }
 //======================================
 // 获取ba下的us的提现总和
