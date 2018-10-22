@@ -10,8 +10,6 @@ require_once "db/us_ca_withdraw_request.php";
 require_once "db/us_ca_recharge_request.php";
 require_once  "db/la_admin.php";
 
-header("cache-control:no-cache,must-revalidate");
-header("Content-Type:application/json;charset=utf-8");
 
 /*
 ========================== 统计报表 ==========================
@@ -48,27 +46,28 @@ if(!$row){
     exit_error('112','用户不存在');
 }
 
+//TODO:添上时间限制
 $begin_limit_time =  get_arg_str('GET', 'begin_limit_time');
 $end_limit_time =  get_arg_str('GET', 'end_limit_time');
 
 //$begin_limit_time = $begin_limit_time ? $begin_limit_time : 0;
 //$end_limit_time = $end_limit_time ? $end_limit_time : 0;
 $rows = array();
+//user的总帐
 $row = get_us_sum_amout_info();
-foreach ($row as $new_row){
-    $rows["sum_us_base_amount"] =  $new_row['sum(base_amount)'];
-    $rows["sum_us_lock_amount"] =  $new_row['sum(lock_amount)'];
-}
+$rows["sum_us_base_amount"] =  $new_row['sum(base_amount)'];
+$rows["sum_us_lock_amount"] =  $new_row['sum(lock_amount)'];
+
+//ba的总账
 $row = get_ba_sum_amout_info();
-foreach ($row as $new_row){
-    $rows["sum_ba_base_amount"] =  $new_row['sum(base_amount)'];
-    $rows["sum_ba_lock_amount"] =  $new_row['sum(lock_amount)'];
-}
+$rows["sum_ba_base_amount"] =  $new_row['sum(base_amount)'];
+$rows["sum_ba_lock_amount"] =  $new_row['sum(lock_amount)'];
+
+//ca的总账
 $row = get_ca_sum_amout_info();
-foreach ($row as $new_row){
-    $rows["sum_ca_base_amount"] =  $new_row['sum(base_amount)'];
-    $rows["sum_ca_lock_amount"] =  $new_row['sum(lock_amount)'];
-}
+$rows["sum_ca_base_amount"] =  $new_row['sum(base_amount)'];
+$rows["sum_ca_lock_amount"] =  $new_row['sum(lock_amount)'];
+
 
 $rows["sum_ba_recharge_base_amount"] = get_ba_sum_us_ba_recharge_request_info($begin_limit_time,$end_limit_time)["sum(base_amount)"];
 

@@ -13,8 +13,8 @@ function get_ba_sum_amout_info()
     $sql = "SELECT sum(base_amount),sum(lock_amount) FROM ba_base";
 //    echo $sql;
     $db->query($sql);
-    $rows = $db->fetchAll();
-    return $rows;
+    $row = $db->fetchRow();
+    return $row;
 }
 //======================================
 // 获取注册ba数量
