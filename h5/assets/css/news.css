@@ -36,9 +36,9 @@
 }
 
 
-/*.accountNone {*/
-/*display: none !important;*/
-/*}*/
+.accountNone {
+display: none !important;
+}
 
 /*.news {*/
 /*width: 50%;*/
