@@ -105,7 +105,7 @@ $(function () {
                     NDG = (data.gift_row[2].NDG),
                     NDBG = (data.gift_row[3].NDBG),
                     NDAG = (data.gift_row[4].NDAG);
-                var giftRegister = NDG + NDBG + NDAG;
+                var giftRegister = Number(NDG) + Number(NDBG) + Number(NDAG);
 
 
 
