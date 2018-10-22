@@ -12,7 +12,7 @@ function get_us_sum_amout_info()
     $db = new DB_COM();
     $sql = "SELECT sum(base_amount),sum(lock_amount) FROM us_base";
     $db->query($sql);
-    $row = $db->fetchAll();
+    $row = $db->fetchRow();
     return $row;
 }
 //======================================

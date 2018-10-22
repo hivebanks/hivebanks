@@ -12,8 +12,8 @@ function get_ca_sum_amout_info()
     $db = new DB_COM();
     $sql = "SELECT sum(base_amount),sum(lock_amount) FROM ca_base";
     $db->query($sql);
-    $rows = $db->fetchAll();
-    return $rows;
+    $row = $db->fetchRow();
+    return $row;
 }
 //======================================
 // 获取注册ca数量
