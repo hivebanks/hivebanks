@@ -46,7 +46,14 @@ function get_us_sum_register_amout_info($begin_limit_time,$end_limit_time)
     return $rows;
 }
 
-function gift_data(){
+/**
+ * @return array
+ * ccvt赠送情况
+ * IG:邀请总数
+ * NDAG:国庆之后送出
+ * NDBG:国庆之前送出
+ * NDG:国庆节送出
+ */function gift_data(){
     $db = new DB_COM();
     $data = array();
     $sql_invite = "SELECT count(us_id)*50 as IG FROM us_base where invite_code!=0";
