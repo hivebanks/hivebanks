@@ -144,6 +144,7 @@ $(function () {
         qrImg.onload = function () {
             content.drawImage(this, 0, 0, 568, 886);
             content.drawImage(qrctx, 80, 630, 160, 160);
+            console.log(canvas.toDataURL("image/png"));
             // localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
             // canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
             // window.location.href=image; // it will save locally
@@ -158,7 +159,7 @@ $(function () {
             // console.log(a.download);
             // a.dispatchEvent(event);
         };
-        console.log(canvas.toDataURL("image/png"));
+
         // $(".downloadImg").click(function () {
         //     var image = canvas.toDataURL("image/png");
         //     window.location.href=image; // it will save locally
