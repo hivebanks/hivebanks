@@ -145,8 +145,18 @@ $(function () {
             content.drawImage(this, 0, 0, 568, 886);
             content.drawImage(qrctx, 80, 630, 160, 160);
             // localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
-            canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            // canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
             // window.location.href=image; // it will save locally
+
+            var a = document.createElement("a");
+            // 生成一个a元素
+            var event = new MouseEvent("click");
+            // 创建一个单击事件
+            a.href =url;
+            a.download = name || "photo";
+            // 设置图片名称    a.href = url; // 将生成的URL设置为a.href属性
+            console.log(a.download);
+            a.dispatchEvent(event);
         };
     });
 
