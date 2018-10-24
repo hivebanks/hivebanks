@@ -158,10 +158,11 @@ $(function () {
             // console.log(a.download);
             // a.dispatchEvent(event);
         };
-        $(".downloadImg").click(function () {
-            var image = canvas.toDataURL("image/png");
-            window.location.href=image; // it will save locally
-        });
+        console.log(canvas.toDataURL("image/png"));
+        // $(".downloadImg").click(function () {
+        //     var image = canvas.toDataURL("image/png");
+        //     window.location.href=image; // it will save locally
+        // });
     });
 
 
