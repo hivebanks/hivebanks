@@ -148,17 +148,22 @@ $(function () {
             // canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
             // window.location.href=image; // it will save locally
 
-            var a = document.createElement("a");
-            // 生成一个a元素
-            var event = new MouseEvent("click");
-            // 创建一个单击事件
-            a.href =url;
-            a.download = name || "photo";
-            // 设置图片名称    a.href = url; // 将生成的URL设置为a.href属性
-            console.log(a.download);
-            a.dispatchEvent(event);
+            // var a = document.createElement("a");
+            // // 生成一个a元素
+            // var event = new MouseEvent("click");
+            // // 创建一个单击事件
+            // a.href =url;
+            // a.download = name || "photo";
+            // // 设置图片名称    a.href = url; // 将生成的URL设置为a.href属性
+            // console.log(a.download);
+            // a.dispatchEvent(event);
         };
+        $(".downloadImg").click(function () {
+            var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            window.location.href=image; // it will save locally
+        });
     });
+
 
     //copy invite address
     $('.copy_invite_address').click(function () {
