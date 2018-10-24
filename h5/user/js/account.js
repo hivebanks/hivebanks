@@ -144,7 +144,9 @@ $(function () {
         qrImg.onload = function () {
             content.drawImage(this, 0, 0, 568, 886);
             content.drawImage(qrctx, 80, 630, 160, 160);
-            localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
+            // localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
+            var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            window.location.href=image; // it will save locally
         };
     });
 
