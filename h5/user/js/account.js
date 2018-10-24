@@ -146,7 +146,7 @@ $(function () {
             content.drawImage(qrctx, 80, 630, 160, 160);
             var base64 = canvas.toDataURL("image/png");
             $("#base64Img").attr("src", base64);
-            $(".inviteImgBox").remove();
+            $(".inviteImgBox, #qrcode").remove();
         };
     });
 
