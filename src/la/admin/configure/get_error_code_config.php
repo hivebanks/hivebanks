@@ -32,7 +32,7 @@ $timestamp = $code_conf[1];
 if($timestamp < $now_time){
     exit_error('114','Token timeout please retrieve!');
 }
-$dir_path = dirname(dirname(dirname(dirname(dirname(__FILE__)))))."/h5_hivebanks/";
+$dir_path = dirname(dirname(dirname(dirname(dirname(__FILE__)))))."/h5/";
 $json = file_get_contents($dir_path.'assets/json/errcode.json');
 $arr = json_decode($json,true);
 
