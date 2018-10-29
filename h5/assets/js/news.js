@@ -41,6 +41,7 @@ $(function () {
 
     //get news list
     Get_News_List(function (response) {
+        console.log(response);
         if (response.errcode == "0") {
             var data = response.rows;
             var li = "";
