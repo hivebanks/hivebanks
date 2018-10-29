@@ -1,5 +1,4 @@
 $(function () {
-    console.log("666");
     function GetIndexCookie(name) {
         var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
         if (arr != null) {
@@ -42,7 +41,6 @@ $(function () {
 
     //get news list
     Get_News_List(function (response) {
-        console.log(response);
         if (response.errcode == "0") {
             var data = response.rows;
             var li = "";
@@ -56,6 +54,9 @@ $(function () {
 
         }
     }, function (response) {
-        console.log(response);
+        if(response.errcode == "-1"){
+            $(".news_list_item").html("<li class='i18n' name='noNews'></li>");
+            execI18n();
+        }
     })
 });
