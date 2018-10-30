@@ -26,3 +26,5 @@ function get_la_base_unit()
     $rows = $db->fetchRow();
     return $rows["unit"];
 }
+
+

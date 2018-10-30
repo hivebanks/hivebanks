@@ -221,3 +221,21 @@ function email_password($password,$email,$title = 'LA密码重置')
     $output_array = send_email_by_agent_service($email,$title,$body,$key_code);
     return $output_array;
 }
+
+function get_la_admin_info()
+{
+    $db = new DB_COM();
+    $sql = "SELECT * FROM la_admin  limit 1";
+    $db->query($sql);
+    $row = $db->fetchRow();
+    return $row;
+}
+
+
+function upd_la_admin_key_code($la_id,$key_code) {
+    $db = new DB_COM();
+    $sql = "UPDATE la_admin SET key_code = '{$key_code}' WHERE id = '{$la_id}'";
+    $db->query($sql);
+    $count = $db->affectedRows($sql);
+    return $count;
+}
