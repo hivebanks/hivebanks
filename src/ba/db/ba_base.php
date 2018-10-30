@@ -50,7 +50,7 @@ function upd_ba_base_amount_info($ba_id,$base_amount) {
 //======================================
 // 函数: 插入ba_base ba用户基本信息
 // 参数: data_base             用户基本信息数组
-//        base_amount         用户id
+//        base_amount         用户i
 //        lock_amount         用户可用余额
 //        ba_level            用户锁定余额
 //        security_level      用户安全等级

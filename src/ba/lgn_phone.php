@@ -45,6 +45,9 @@ $cellphone_num = $country_code .'-'. $cellphone;
 // 加盐加密
 $salt = rand(10000000, 99999999); 
 
+if ($cfm_code != $_SESSION["authcode"])
+    exit_error("139","图形验证码有误");
+
 //获取当前时间戳
 $timestamp = time() + 2*60*60;
 // 记录数组
