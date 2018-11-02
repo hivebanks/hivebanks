@@ -8,7 +8,7 @@
  */
 
 require_once 'db/la_func_config.php';
-install_check_steps();
+//install_check_steps();
 
 echo '<!DOCTYPE html>
 <html lang="en">

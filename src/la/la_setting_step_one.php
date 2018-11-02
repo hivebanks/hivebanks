@@ -7,7 +7,7 @@
  * Time: 下午6:32
  */
 require_once 'db/la_func_config.php';
-install_check_steps();
+//install_check_steps();
 
 //                            <li>➡更改la_db/la_db_connect.php中的数据库配置选项</li>
 //                            <li>➡安装完成删除drop_me_after_installing.php</li>
