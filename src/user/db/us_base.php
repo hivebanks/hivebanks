@@ -121,6 +121,12 @@ function chexk_us_exit($us_id)
 function  upd_us_accout($us_id,$us_account)
 {
     $db = new DB_COM();
+    $sql = "select * from us_base WHERE us_account='{$us_account}'AND us_id!='{$us_id}' limit 1";
+    $db->query($sql);
+    $row = $db->fetchRow();
+    if ($row){
+        return false;
+    }
     $sql = "UPDATE us_base SET us_account = '{$us_account}' WHERE us_id = '{$us_id}'";
     $id = $db -> query($sql);
     return $id;
