@@ -6,6 +6,7 @@ require_once 'db/us_bind.php';
 require_once 'db/us_base.php';
 require_once 'db/us_log_bind.php';
 require_once '../inc/judge_format.php';
+ini_set("display_errors", "on");
 header("cache-control:no-cache,must-revalidate");
 header("Content-Type:application/json;charset=utf-8");
 
@@ -93,12 +94,13 @@ if ($text_type == 'email') {
     $des = new Des();
     $body = $url . "?cfm_hash=";
     $encryption_code = $us_id . ',' . $text . ',' . $timestamp . ',' . 'email' . ',' . $salt;
-    $body .= urlencode($des->encrypt($encryption_code, $key));
+    $body .= urlencode($des->encrypt($encryption_code, KEY));
 
     require_once "db/la_admin.php";
     $key_code = get_la_admin_info()["key_code"];
 
-    $output_array = send_email_by_agent_service($email,$title,$body,$key_code);
+//    $output_array = send_email_by_agent_service($email,$title,$body,$key_code);
+    $output_array = send_email_by_agent_service($text,$title,$body,$key_code);///=====FZG 20190116 1655
 
     if ($output_array["errcode"] == "0") {
         exit_ok('Please verify email as soon as possible!');
@@ -184,12 +186,15 @@ if ($text_type == 'ipAddre') {
     //判断是否为ip
     $ret = isip($text);
     $text = ip2long($text);
-    if (!ret) {
+    if (!$ret) {
         exit_error('100', '输入信息格式不正确');
     }
 }
 // 绑内容是否存在
-$ret_bind = check_bind_info($data_bind);
+$ret_bind = 0;
+if($data_bind['bind_name']!='name') {//允许重名
+    $ret_bind = check_bind_info($data_bind);
+}
 if ($ret_bind) {
     exit_error('105', 'The binding already exists please try again！');
 }
