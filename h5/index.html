@@ -1,117 +1,357 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>CCVT:Communication creates values</title>
     <meta id="i18n_pagename" content="index-common">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title class="index i18n" name="index">Index</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="user/css/common.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_626151_unhf9sd8sf.css">
-    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="user/mobile-css/common.css">
-    <link rel="stylesheet" media="only screen and (max-device-width:767px)" href="assets/mobile-css/index.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="keywords" content="CCVT, ccvt, hivebanks cctv"/>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138340621-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138340621-1');
+    </script>
 </head>
+<style>
+    .float_qr_box{
+        cursor: pointer;
+    }
+</style>
 <body>
 <!-- loading -->
 <iframe src="user/loading.html" class="loading" width="100%" height="100%" frameborder="0" marginheight="0"
-        marginwidth="0"
-        scrolling="no"></iframe>
-<!--nav-->
-<nav class="navbar navbar-default">
-    <div class="container">
+        marginwidth="0" scrolling="no"></iframe>
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/img/logo-joybtc.png" alt="">
+            <a class="navbar-brand page-scroll logoText" href="javascript:;">
+                <img src="assets/img/ccvt_logo.png" alt="">
             </a>
         </div>
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="javascript:;" class="i18n caLogin font-weight-400" name="ca_enter"></a></li>
-                <li><a href="javascript:;" class="i18n baLogin font-weight-400" name="ba_enter"></a></li>
-                <!--<li><a href="user/login.html" class="i18n usLogin" name="user">User</a></li>-->
-                <li class="accountNone"><a href="javascript:;" class="i18n toAccountBtn alreadyLogin" name="account">Account</a></li>
+                <li><a href="javascript:;" target="_blank" class="to_doc i18n font-weight-400"
+                       name="doc"></a></li>
+                <!--<li><a href="honor/honor.html" class="i18n contract font-weight-400" name="gloryLeaderBoard"></a></li>-->
+                <li><a href="donation/index.html" class=" contract font-weight-400" name="">捐赠榜</a></li>
+
+                <!--<li><a href="javascript:;" class="i18n caLogin font-weight-400" name="ca_enter"></a></li>-->
+                <!--<li><a href="javascript:;" class="i18n baLogin font-weight-400" name="ba_enter"></a></li>-->
+                <li><a href="user/login.html" class="i18n usLogin font-weight-400" name="login"></a></li>
+                <!--<li><a href="user/register.html" class="i18n usRegister font-weight-400" name="register"></a></li>-->
+                <li><a href="http://bot.fnying.com" class="i18n usRegister font-weight-400" name="register"></a></li>
+                <li class="accountNone"><a href="javascript:;" class="i18n toAccountBtn alreadyLogin" name="account">Account</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        <span id="language">中文简体</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:;" class="toggleLanguage" title="zh-CN">简体中文</a></li>
+                        <li><a href="javascript:;" class="toggleLanguage" title="en">English</a></li>
+                        <li><a href="javascript:;" class="toggleLanguage" title="ja">Japanese</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-
-<section class="banner">
-    <div class="container-fluid">
-        <div class="row banner-row hero">
-            <div class="smoky" id="smoky-bg">
-                <!--<img src="assets/img/index_banner.jpg" alt="">-->
-                <canvas>Your browser does not support HTML5 canvas.</canvas>
+<header id="first">
+    <!--<div class="row">-->
+    <div class="latestNews">
+        <div class="newsTitleBox">
+            <div class="latestNewsBox">
+                <img src="assets/img/latestNews.svg" alt="">
             </div>
-            <!--<img src="assets/img/banner.png" alt="">-->
-            <div class="container textBox">
-                <h1 class="rubberBand">
-                    <p class="i18n" name="joybtcText">JOYBTC 是HiveBanks国内专用DEOM</p>
-                    <strong class="i18n" name="indexTitle">Hivebanks Your Side To Digital Asset Investment Experts</strong>
-                </h1>
-                <a href="user/register.html" class="btn a-btn create_btn fadeInLeft i18n" name="creatNewAccount">Creating New Accounts</a>
-                <a href="user/login.html" class="btn a-btn create_btn fadeInLeft i18n" name="login">Login</a>
-            </div>
-            <div id="down">
-                <span class="down_one down"></span>
-                <span class="down_two down"></span>
-                <a href="news.html" class="i18n moreInformation font-size-14" name="moreInformation">更多咨询</a>
-            </div>
+            <span>最新动态:</span>
+        </div>
+        <ul class="latestNewsText"></ul>
+    </div>
+    <!--</div>-->
+    <div class="mask"></div>
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive title i18n" name="communicationCreatesValue">沟通创造价值</h1>
+            <h4 class="title">COMMUNICATION CREATES VALUE</h4>
+            <hr>
+        </div>
+        <div class="web_none phone_show">
+            <a href="user/login.html" class="btn btn-success phone_show_btn i18n" name="login">登录</a>
+            <a href="http://bot.fnying.com" class="btn btn-info phone_show_btn i18n" name="register">注册</a>
+            <!--<a href="user/register.html" class="btn btn-info phone_show_btn i18n" name="register">注册</a>-->
         </div>
     </div>
-</section>
+</header>
 
-<!--footer-->
-<section class="sections footer">
+<section class="bg-primary" id="one">
     <div class="container">
-        <div class="row left-row">
-            <div class="col-md-12 col-sm-12">
-                <div class="footerTR flex space-between center">
-                    <div class="footerIconBox">
-                        <a href="https://twitter.com/Hivebanks "  data-toggle="tooltip" data-placement="top" title="hivebanks"><i class="iconfont icon-twitter"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Telegram：windwin"><i class="iconfont icon-telegram"></i></a>
-                        <a href="https://weibo.com/joybtc" data-toggle="tooltip" data-placement="top" title="joybtc.com"><i class="iconfont icon-weibo"></i></a>
-                        <a href="https://twitter.com/Hivebanks" data-toggle="tooltip" data-placement="top" title="Hivebanks"><i class="iconfont icon-weixin"></i></a>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                <h2 class="margin-top-0 text-primary wow fadeIn i18n" name="blockValue">基于区块链的价值传递</h2>
+                <br>
+                <p class="text-faded wow fadeIn i18n" name="ccvtText">CCVT是一种基于以太坊的erc20 token,
+                    他的固定发行量为100亿，以递减的方式投放到各大社交平台，激励那些通过讨论来产生价值的人们。</p>
+            </div>
+        </div>
+        <div class="row margin-top-5">
+            <div class="col-md-3">
+                <div class="text-center svgBox wow slideInUp">
+                    <div class="svgImgBox wow fadeInLeft"><img src="assets/img/001.svg" alt=""></div>
+                    <div class="svgText wow fadeInLeft">
+                        <p class="i18n" name="ccvtTextOne">智能聊天机器人（AI）的实现，组织大家的聊天和分配相应的激励。</p>
                     </div>
-                    <div>
-                        <select class="form-control input-sm" id="language">
-                            <option value="en">English</option>
-                            <option value="zh-CN">中文简体</option>
-                            <option value="ja">Japanese</option>
-                        </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center svgBox wow slideInUp">
+                    <div class="svgImgBox wow fadeInLeft"><img src="assets/img/002.svg" alt=""></div>
+                    <div class="svgText wow fadeInLeft">
+                        <p class="i18n" name="ccvtTextTwo">CCVT在以太坊主链的发行，发行量100亿，按阶段投放。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center svgBox wow slideInDown">
+                    <div class="svgImgBox wow fadeInLeft"><img src="assets/img/003.svg" alt=""></div>
+                    <div class="svgText wow fadeInLeft">
+                        <p class="i18n" name="ccvtTextThree">CCVT hivebanks的建立是用户能够在hivebanks上实现token的存储和兑换。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center svgBox wow slideInDown">
+                    <div class="svgImgBox wow fadeInRight"><img src="assets/img/004.svg" alt=""></div>
+                    <div class="svgText wow fadeInRight">
+                        <p class="i18n" name="ccvtTextFour">海外用户群的拓展，包括facebook和telegram，并在二级市场流通。</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row footer-copyright">
-            <span>
-                <span class="i18n" name="allRightsReserved">©2018-2019 Powered by</span>
-                <a href="http://www.hivebanks.com">hivebanks</a>
-            </span>
+    </div>
+</section>
+<section id="two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="margin-top-0 text-primary wow slideOutUp">Why CCVT?</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                <div class="row flex align-itmes-center space-between whyBox wow slideInLeft">
+                    <div class="shyTextBox text-left">
+                        <h3 class="i18n" name="communication">沟通</h3>
+                        <p class="font-size-14 i18n" name="communicationText">
+                            21世记，社交平台高度发达，更多的人选择在社交平台上沟通，结交朋友，确无法在互联网上被价值肯定。</p>
+                    </div>
+                    <div class="whySvgIconBox">
+                        <img src="assets/img/goutong.svg" alt="">
+                    </div>
+                </div>
+                <div class="row flex align-itmes-center space-between whyBox wow slideInLeft">
+                    <div class="shyTextBox text-left">
+                        <h3 class="i18n" name="idea">想法</h3>
+                        <p class="font-size-14 i18n" name="ideaText">在聊天中，大家不断创造出新的想法，这些想法便是价值的由来。</p>
+                    </div>
+                    <div class="whySvgIconBox">
+                        <img src="assets/img/xiangfa.svg" alt="">
+                    </div>
+                </div>
+                <div class="row flex align-itmes-center space-between whyBox wow slideInLeft">
+                    <div class="shyTextBox text-left">
+                        <h3 class="i18n" name="excitation">激励</h3>
+                        <p class="font-size-14 i18n" name="excitationText">聊天中人们会获得群助手的奖励，并且获得认可者奖励的CCVT。</p>
+                    </div>
+                    <div class="whySvgIconBox">
+                        <img src="assets/img/jili.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                <div class="row flex align-itmes-center space-between whyBox wow slideInRight">
+                    <div class="shyTextBox text-left">
+                        <h3 class="i18n" name="recognition">认可</h3>
+                        <p class="font-size-14 i18n" name="recognitionText">
+                            社交平台的存在加快了信息的传递，却无法进行价值的传递，让认可成了空头支票，因而越发需要一种价值被认可的方式。</p>
+                    </div>
+                    <div class="whySvgIconBox">
+                        <img src="assets/img/renke.svg" alt="">
+                    </div>
+                </div>
+                <div class="row flex align-itmes-center space-between whyBox wow slideInRight">
+                    <div class="shyTextBox text-left">
+                        <h3 class="i18n" name="value">价值</h3>
+                        <p class="font-size-14 i18n" name="valueText">
+                            价值的肯定来自于大家的认可，再被认可后如何得到相应的价值，CCVT的存在将作为一种价值媒介，使聊天真正创造出价值。</p>
+                    </div>
+                    <div class="whySvgIconBox">
+                        <img src="assets/img/jiazhi.svg" alt="">
+                    </div>
+                </div>
+                <div class="row flex align-itmes-center space-between whyBox wow slideInRight">
+                    <div class="shyTextBox text-left">
+                        <h3 class="i18n" name="absorb">吸纳</h3>
+                        <p class="font-size-14 i18n" name="absorbText">
+                            21世记，社交平台高度发达，更多的人选择在社交平台上沟通，结交朋友，确无法在互联网上被价值肯定。在交流中，人们创造了价值，并收获到了CCVT形式的激励，更多的人愿意加入到其中，从而吸纳到新人。</p>
+                    </div>
+                    <div class="whySvgIconBox">
+                        <img src="assets/img/xina.svg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<!--Back to top-->
+<!--</section>-->
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2 class="text-primary wow fadeIn i18n" name="finalBlueprint">最终蓝图</h2>
+            <hr class="primary">
+            <div class="mapImgBox wow fadeInRight">
+                <img data-src="assets/img/map.png" src="assets/img/low_img/low_map.png" alt="">
+            </div>
+            <div class="roundBox">
+                <ul class="roundUl flex align-itmes-center space-between">
+                    <li class="round round_border j wow slideInLeft"></li>
+                    <li class="round round_border u wow slideInLeft"></li>
+                    <li class="round round_border e wow slideInLeft"></li>
+                    <li class="round round_border r wow slideInLeft"></li>
+                    <li class="round c wow slideInLeft"></li>
+                </ul>
+                <div class="flex space-between">
+                    <div class="countryInfo j wow slideInRight">
+                        <h5 class="i18n" name="japan">Japan</h5>
+                        <p class="i18n" name="japanText">区块链的老牌强国</p>
+                    </div>
+                    <div class="countryInfo u wow slideInRight">
+                        <h5 class="i18n" name="usa">USA</h5>
+                        <p class="i18n" name="usaText">CCVT流通最频繁的国度</p>
+                    </div>
+                    <div class="countryInfo e wow slideInRight">
+                        <h5 class="i18n" name="egypt">Egypt</h5>
+                        <p class="i18n" name="egyptText">通信大国</p>
+                    </div>
+                    <div class="countryInfo r wow slideInRight">
+                        <h5 class="i18n" name="russia">Russia</h5>
+                        <p class="i18n" name="russiaText">亚欧大国，区块链的大市场。</p>
+                    </div>
+                    <div class="countryInfo c wow slideInRight">
+                        <h5 class="i18n" name="china">China</h5>
+                        <p class="i18n" name="chinaText">CCVT的发源地和最大市场</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<section id="last">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="margin-top-0 wow fadeIn text-primary i18n" name="countUs">Count Us</h2>
+                <hr class="primary">
+                <!--<p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>-->
+            </div>
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <form class="contact-form row">
+                    <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control i18n-input" selectname="name" selectattr="placeholder">
+                    </div>
+                    <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control i18n-input" selectname="email" selectattr="placeholder">
+                    </div>
+                    <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control i18n-input" selectname="phone" selectattr="placeholder">
+                    </div>
+                    <div class="col-md-12">
+                        <label></label>
+                        <textarea class="form-control i18n-input" selectname="content" selectattr="placeholder"
+                                  rows="9"></textarea>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4">
+                        <label></label>
+                        <button type="button" data-toggle="modal" data-target="#alertModal"
+                                class="btn btn-primary btn-block btn-lg">
+                            <span class="i18n" name="submit">Submit</span>
+                            <i class="ion-android-arrow-forward"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <span>
+                <span class="i18n" name="version">©2018-2019 Powered by</span>
+                <a href="http://hivebanks.com">hivebanks</a>
+            </span>
+        </div>
+    </div>
+</footer>
+<div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" id="galleryImage" class="img-responsive"/>
+                <p>
+                    <br/>
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i
+                            class="ion-android-close"></i></button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="scrollup">
     <a href="#"><i class="iconfont icon-top"></i></a>
 </div>
+
+<!--float qr-->
+<div class="float_qr_box">
+    <div class="float_qr_close">X</div>
+    <div class="float_qrImg_box">
+        <div class="float_qr_open">⬅</div>
+        <img src="assets/img/select_domain.png" alt="">
+        <p class="float_qr_text">扫一扫 加入矿池<br>开始聊天挖矿吧</p>
+    </div>
+</div>
+<!--scripts loaded here -->
 <script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/cnt.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/browserRedirect.js"></script>
 <script src="assets/language/jquery.i18n.properties.js"></script>
 <script src="assets/language/language.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waterpipe.js"></script>
-<script src="assets/js/layer/layer.js"></script>
-<script src="assets/js/cnt.js"></script>
 <script src="user/js/common.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="user/js/index.js"></script>
 </body>
 </html>
