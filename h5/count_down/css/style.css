@@ -1,0 +1,25 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+canvas {
+    background-color: black;
+}
+
+#three-container {
+    display: none;
+}
+
+.dg.ac {
+    display: none;
+}

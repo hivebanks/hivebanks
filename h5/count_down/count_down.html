@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上链倒计时</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <link rel="shortcut icon" href="../favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+        background: #000000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .count_down_text {
+        color: #ffffff;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 4rem;
+    }
+
+    .count_box {
+        position: absolute;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+        left: 50%;
+        margin-left: -40%;
+        height: 16rem;
+        top: 50%;
+        margin-top: -8rem;
+    }
+
+    .count_box h1 {
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        padding: 0 2%;
+        display: table-cell;
+        font-size: 12rem;
+        margin: 0;
+        text-align: center;
+        /*width: 240px;*/
+        transition: all 2s;
+        text-shadow: 1px 1px rgba(197, 223, 248, 0.8), 2px 2px rgba(197, 223, 248, 0.8), 3px 3px rgba(197, 223, 248, 0.8), 4px 4px rgba(197, 223, 248, 0.8), 5px 5px rgba(197, 223, 248, 0.8);
+    }
+
+    .seconds.active {
+        animation: 1s seconds_move linear infinite;
+    }
+
+    @keyframes seconds_move {
+        0% {
+            transform: scale(0.3);
+            /*transform: rotateX(0deg);*/
+        }
+        50% {
+            transform: scale(0.6);
+            /*transform: rotateX(180deg);*/
+        }
+        100% {
+            transform: scale(1.2);
+            /*transform: rotateX(360deg);*/
+        }
+    }
+
+    h2 {
+        font-size: 10rem;
+        text-shadow: -1px -1px rgba(197, 223, 248, 0.8), -2px -2px rgba(197, 223, 248, 0.8), -3px -3px rgba(197, 223, 248, 0.8), -4px -4px rgba(197, 223, 248, 0.8), -5px -5px rgba(197, 223, 248, 0.8);
+    }
+
+    h2.active {
+        transition: all 5s;
+        animation: 5s h2_move linear infinite;
+    }
+
+    @keyframes h2_move {
+        0% {
+            color: #ffffff;
+            transform: rotateX(0deg);
+            /*transform: rotate(0deg);*/
+            /*transform: scale(0.3);*/
+        }
+        30% {
+            color: #d9ffd6;
+            transform: rotateX(180deg);
+            /*transform: rotate(45deg);*/
+            /*transform: scale(0.6);*/
+        }
+        60% {
+            color: #ffe0d3;
+            transform: rotateX(360deg);
+            /*transform: rotate(90deg);*/
+            /*transform: scale(1);*/
+        }
+        90% {
+            color: #c9d1ff;
+            transform: rotateX(180deg);
+            /*transform: rotate(180deg);*/
+            /*transform: scale(0.6);*/
+        }
+        100% {
+            color: #ffffff;
+            transform: rotateX(0deg);
+            /*transform: rotate(360deg);*/
+            /*transform: scale(0.3);*/
+        }
+    }
+
+    /*动画*/
+    .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .particule {
+        position: absolute;
+    }
+
+    #three-container {
+        display: none;
+    }
+</style>
+<body id="first_box">
+<h1 class="count_down_text">CCVT第四次解锁倒计时</h1>
+<div class="count_box">
+    <h1 class="days"></h1>
+    <h1 class="hours"></h1>
+    <h1 class="minutes"></h1>
+    <h1 class="seconds"></h1>
+    <h2 class="text_h2"></h2>
+    <h2 class="text_h3"></h2>
+</div>
+<canvas id="three-container"></canvas>
+
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src='js/dat.gui.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+<script>
+    let count_timer = "";
+
+    //倒计时
+    function TimeDown(endDateStr) {
+        //结束时间
+        let endDate = new Date(endDateStr);
+        //当前时间
+        let nowDate = new Date();
+        //相差的总秒数
+        let totalSeconds = parseInt((endDate - nowDate) / 1000);
+        //天数
+        let days = Math.floor(totalSeconds / (60 * 60 * 24));
+        //取模（余数）
+        let modulo = totalSeconds % (60 * 60 * 24);
+        //小时数
+        let hours = Math.floor(modulo / (60 * 60));
+        modulo = modulo % (60 * 60);
+        //分钟
+        let minutes = Math.floor(modulo / 60);
+        modulo = modulo % (60);
+        //秒
+        let seconds = modulo % 60;
+
+        // 倒计时60s
+        if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 60) {
+
+            $(".days, .hours,.minutes").remove();
+            $(".count_box").css("justify-content", "center");
+            $(".seconds").css({"font-size": "20rem", "border": "unset"})
+        }
+
+        // 倒计时30s
+        if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 30) {
+            $(".count_down_text").text("第四次解锁即将成功");
+            $(".days, .hours,.minutes").remove();
+            $(".count_box").css("justify-content", "center");
+            $(".seconds").css({"font-size": "25rem", "border": "unset"})
+        }
+
+        // 倒计时10s
+        if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 10) {
+            $(".days, .hours,.minutes").remove();
+            $(".count_box").css("justify-content", "center");
+            $(".seconds").css({"font-size": "30rem", "border": "unset"}).addClass("active");
+        }
+
+        if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) {
+            clearInterval(count_timer);//清楚定时器
+            let bool = oneMinCountDown();//判断是否过了一分钟误差
+            if (bool) {
+                //已经升级成功直接跳转排名
+                window.location.href = "../glory/threeUp/index.html?ok=ok";
+            } else {
+                twoSuccess();//显示二次升级成功
+            }
+        }
+
+        if (days < 10) {
+            $(".days").text("0" + days);
+        } else if (days <= 0) {
+            $(".days").text("00");
+            $(".hours").text("00");
+            $(".minutes").text("00");
+            $(".seconds").text("00");
+        } else {
+            $(".days").text(days);
+        }
+        if (hours < 10) {
+            $(".hours").text("0" + hours);
+        } else {
+            $(".hours").text(hours);
+        }
+        if (minutes < 10) {
+            $(".minutes").text("0" + minutes);
+        } else {
+            $(".minutes").text(minutes);
+        }
+        if (seconds < 10) {
+            $(".seconds").text("0" + seconds);
+        } else {
+            $(".seconds").text(seconds);
+        }
+    }
+
+    count_timer = setInterval(function () {
+        TimeDown("2019-2-22 20:00");//setTime
+        // TimeDown("2018-12-28 16:26");
+    }, 1000);
+
+    //二次解锁成功
+    function twoSuccess() {
+        let i = 0, str = "第四次解锁成功";
+        $("h1").remove();
+        let textTimer = setInterval(function () {
+            if ($(".text_h2").text() == str) {
+                clearInterval(textTimer);
+                $(".text_h2").addClass("active");
+                $("#three-container").css("display", "block");
+                TwoUp();
+            }
+            $(".text_h2").text(str.substring(0, i));
+            i++;
+        }, 400);
+    }
+
+    //即将进行二次荣耀等级升级
+    function TwoUp() {
+        setTimeout(function () {
+            $(".text_h2").remove();
+            $(".text_h3").css("font-size", "6rem").text("即将进行第四次荣耀等级升级");
+            JumpUp();
+        }, 3000);
+    }
+
+    //跳转升级页面
+    function JumpUp() {
+        setTimeout(function () {
+            window.location.href = "../glory/glory_up/glory_up.html";
+        }, 3000);
+    }
+
+    //一分钟//
+    function oneMinCountDown() {
+        let one_end_time = new Date("2019-2-22 20:01");//setTime
+        let one_now_time = new Date();
+        let curr_num = parseInt((one_end_time - one_now_time) / 1000);
+
+        console.log(curr_num);
+        if (curr_num <= 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+</script>
+</html>
